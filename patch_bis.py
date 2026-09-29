@@ -1,0 +1,10 @@
+from pathlib import Path
+p=Path('bisenet_remote.py')
+s=p.read_text(encoding='utf-8')
+s=s.replace("                 in_channels=3,\n                 pretrained=None):", "                 in_channels=3,\n                 pretrained=None,\n                 context_type='none'):")
+s=s.replace("        self.sb = SemanticBranch(in_channels, sb_channels)", "        self.sb = SemanticBranch(in_channels, sb_channels, context_type=context_type)")
+s=s.replace("    def __init__(self, in_channels, feature_channels):\n        super().__init__()", "    def __init__(self, in_channels, feature_channels, context_type='none'):\n        super().__init__()")
+s=s.replace("        self.ce = ContextEmbeddingBlock(C5, C5)\n\n    def forward(self, x):", "        self.ce = ContextEmbeddingBlock(C5, C5)\n        # Optional context modules are official PaddleSeg implementations.\n        if context_type == 'ppm':\n            self.context = layers.PPModule(C5, C5, (1, 2, 3, 6), True, False)\n        elif context_type == 'aspp':\n            self.context = layers.ASPPModule((1, 6, 12, 18), C5, C5, False, use_sep_conv=True, image_pooling=True)\n        else:\n            self.context = nn.Identity()\n\n    def forward(self, x):")
+s=s.replace("        fm = self.ce(stage5_4)\n        return stage2, stage3, stage4, stage5_4, fm", "        fm = self.context(self.ce(stage5_4))\n        return stage2, stage3, stage4, stage5_4, fm")
+p.write_text(s,encoding='utf-8')
+print('patched',len(s))

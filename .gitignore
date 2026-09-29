@@ -1,0 +1,52 @@
+# Local environments and generated caches
+envs/
+**/.venv/
+**/__pycache__/
+**/.pytest_cache/
+*.py[cod]
+
+# Local datasets, downloaded references, and temporary workspaces
+data/
+tmp/
+external/
+DeepCrack  、CFD  CrackForest  、S2T-Crack/
+*.zip
+*.7z
+*.rar
+*.tar
+*.tar.gz
+*.pdf
+*.doc
+*.docx
+
+# PaddleSeg local datasets, downloaded weights, and build outputs
+PaddleSeg-release-2.8/dataset/
+PaddleSeg-release-2.8/pretrained/
+PaddleSeg-release-2.8/output/
+PaddleSeg-release-2.8/_tmp/
+PaddleSeg-release-2.8/dist/
+PaddleSeg-release-2.8/*.egg-info/
+PaddleSeg-release-2.8/*.png
+PaddleSeg-release-2.8/*.jpg
+PaddleSeg-release-2.8/*.jpeg
+
+# Experiment checkpoints and model artifacts
+experiments/**/iter_*/
+experiments/**/best_model/
+*.pdparams
+*.pdopt
+*.pdstates
+*.pth
+*.pt
+*.ckpt
+*.onnx
+
+# One-off remote administration scripts (some contain local credentials)
+/tmp_*.py
+/tmp_*.yml
+
+# Editor and OS files
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db

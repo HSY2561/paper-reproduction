@@ -1,0 +1,10 @@
+{
+  "scsegamba_test_mIoU": 0.7627679944303565,
+  "ocrnet_test_mIoU": 0.776,
+  "hrsegnet_test_mIoU": 0.7473,
+  "hrsegnet_best": "/hy-tmp/crack_project/experiments/hrsegnet_b32_crack500/best_model/model.pdparams",
+  "train_exit": 0,
+  "test_exit": 0,
+  "test_log": "/hy-tmp/crack_project/logs/hrsegnet_b32_test_20260924.log",
+  "note": "Supervisor observed a partial SCSegamba JSON before final write and recorded -1; corrected after final unified JSON was available."
+}

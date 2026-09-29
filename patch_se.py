@@ -1,0 +1,11 @@
+from pathlib import Path
+p=Path('bisenet_remote.py')
+s=p.read_text(encoding='utf-8')
+s=s.replace('from paddleseg.models import layers\n', 'from paddleseg.models import layers\nfrom paddleseg.models.backbones.mobilenetv3 import SEModule\n')
+s=s.replace("                 pretrained=None,\n                 context_type='none'):", "                 pretrained=None,\n                 context_type='none',\n                 attention_type='none'):")
+s=s.replace("self.sb = SemanticBranch(in_channels, sb_channels, context_type=context_type)", "self.sb = SemanticBranch(in_channels, sb_channels, context_type=context_type, attention_type=attention_type)")
+s=s.replace("def __init__(self, in_channels, feature_channels, context_type='none'):\n        super().__init__()\n        C1, C3, C4, C5 = feature_channels", "def __init__(self, in_channels, feature_channels, context_type='none', attention_type='none'):\n        super().__init__()\n        C1, C3, C4, C5 = feature_channels")
+s=s.replace("        else:\n            self.context = nn.Identity()\n\n    def forward(self, x):", "        else:\n            self.context = nn.Identity()\n        if attention_type == 'se':\n            self.attention = SEModule(C5, reduction=8)\n        else:\n            self.attention = nn.Identity()\n\n    def forward(self, x):")
+s=s.replace("        fm = self.context(self.ce(stage5_4))", "        fm = self.attention(self.context(self.ce(stage5_4)))")
+p.write_text(s,encoding='utf-8')
+print('patched se')

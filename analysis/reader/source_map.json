@@ -1,0 +1,37 @@
+{
+  "paper": {
+    "title": "Integrated on-site inspection and repair wall-climbing robot of concrete cracks",
+    "doi": "10.1016/j.autcon.2026.107006",
+    "pages": 14,
+    "source_format": "pdf-text"
+  },
+  "blocks": [
+    {"id": "S001", "page": 1, "type": "abstract", "function": "problem_and_solution", "confidence": "high"},
+    {"id": "S002", "page": 1, "type": "abstract", "function": "system_and_results", "confidence": "high"},
+    {"id": "S003", "page": 2, "type": "body", "function": "research_gap", "confidence": "high"},
+    {"id": "S004", "page": 2, "type": "body", "function": "contribution", "nearby": ["F001"], "confidence": "high"},
+    {"id": "S005", "page": 6, "type": "body", "function": "baseline", "confidence": "high"},
+    {"id": "S006", "page": 6, "type": "body", "function": "method", "nearby": ["F002"], "confidence": "high"},
+    {"id": "S007", "page": 6, "type": "body", "function": "loss", "confidence": "high"},
+    {"id": "S008", "page": "6-7", "type": "body", "function": "training_setup", "confidence": "high"},
+    {"id": "S009", "page": 7, "type": "body", "function": "ablation_result", "confidence": "high"},
+    {"id": "S010", "page": "7-8", "type": "body", "function": "benchmark_result", "confidence": "high"},
+    {"id": "S011", "page": "8-9", "type": "body", "function": "task_generation", "nearby": ["F003"], "confidence": "high"},
+    {"id": "S012", "page": 9, "type": "body", "function": "system_setup", "confidence": "high"},
+    {"id": "S013", "page": "10-11", "type": "body", "function": "measurement_result", "confidence": "high"},
+    {"id": "S014", "page": "11-12", "type": "body", "function": "repair_result", "confidence": "high"},
+    {"id": "S015", "page": 13, "type": "body", "function": "limitations", "confidence": "high"},
+    {"id": "F001", "page": 3, "type": "figure", "asset": "assets/fig1_ioir_workflow.png", "caption_id": "C001", "confidence": "high"},
+    {"id": "F002", "page": 7, "type": "figure", "asset": "assets/fig8_hrsegnet_architecture.png", "caption_id": "C002", "confidence": "high"},
+    {"id": "F003", "page": 8, "type": "figure", "asset": "assets/fig10_task_generation.png", "caption_id": "C003", "confidence": "high"}
+  ],
+  "glossary": {
+    "IOIR": "Integrated On-site Inspection and Repair",
+    "ASPP": "Atrous Spatial Pyramid Pooling",
+    "OHEM-CE": "online hard example mining cross-entropy",
+    "CR": "coverage rate",
+    "UR": "underfill rate",
+    "OR": "overflow ratio",
+    "CUI": "coverage uniformity index"
+  }
+}

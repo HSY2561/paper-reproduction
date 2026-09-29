@@ -1,0 +1,74 @@
+# 训练迭代次数和批大小
+batch_size: 8
+iters: 18000
+
+# --- 数据集配置 (已适配您的裂缝数据集) ---
+train_dataset:
+  type: Dataset
+  dataset_root: data/
+  train_path: data/train.txt
+  num_classes: 2
+  mode: train
+  transforms:
+    # 采用 HrSegNet 中的数据增强策略，更适合语义分割
+    - type: ResizeStepScaling
+      min_scale_factor: 0.5
+      max_scale_factor: 2.0
+      scale_step_size: 0.25
+    - type: RandomPaddingCrop
+      crop_size: [720, 720]
+    - type: RandomHorizontalFlip
+    - type: RandomDistort
+      brightness_range: 0.5
+      contrast_range: 0.5
+      saturation_range: 0.5
+    - type: Normalize
+
+val_dataset:
+  type: Dataset
+  dataset_root: data/
+  val_path: data/val.txt
+  num_classes: 2
+  mode: val
+  transforms:
+    # 验证集仅使用归一化
+    - type: Normalize
+
+# --- 模型配置 ---
+model:
+  type: MaskFormer
+  num_classes: 2
+  backbone:
+    # 您可以选择不同的骨干网络, 例如 SwinTransformer_tiny/small/base
+    # 预训练模型会自动下载，无需手动设置 pretrained 参数
+    type: SwinTransformer_tiny_patch4_window7_224
+    pretrained: D:/Project/Python/PaddleSeg-release-2.8/pretrained/maskformer.pdparams
+
+# --- 优化器 (采用适合 Transformer 的 AdamW) ---
+optimizer:
+  type: AdamW
+  learning_rate: 0.0001 # 针对 AdamW 调整了学习率
+  weight_decay: 0.0001
+  beta1: 0.9
+  beta2: 0.999
+
+# --- 学习率策略 (采用多项式衰减并带有预热) ---
+lr_scheduler:
+  type: PolynomialDecay
+  learning_rate: 0.0001 # 与优化器中的学习率保持一致
+  end_lr: 0.0
+  power: 0.9
+  warmup_iters: 1500
+  warmup_start_lr: 1.0e-6
+
+# --- 损失函数 (针对语义分割任务优化) ---
+loss:
+  types:
+    # 组合使用交叉熵和 Dice 损失，对分割任务更有效
+    - type: CrossEntropyLoss
+    - type: DiceLoss
+  coef: [1, 0.4] # 可以调整两种损失的权重
+
+# 日志与模型保存配置
+log_iters: 100
+save_interval: 1000

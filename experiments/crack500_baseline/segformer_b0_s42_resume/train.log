@@ -1,0 +1,190 @@
+[2026/09/21 23:53:27] INFO: 
+------------Environment Information-------------
+platform: Windows-10-10.0.26200-SP0
+Python: 3.10.21 | packaged by Anaconda, Inc. | (main, Aug 27 2026, 14:35:39) [MSC v.1942 64 bit (AMD64)]
+Paddle compiled with cuda: True
+NVCC: Not Available
+cudnn: 90.9
+GPUs used: 1
+CUDA_VISIBLE_DEVICES: None
+GPU: ['GPU 0: NVIDIA GeForce']
+PaddleSeg: 0.0.0.dev0
+PaddlePaddle: 3.2.2
+OpenCV: 5.0.0
+------------------------------------------------
+[2026/09/21 23:53:27] INFO: 
+---------------Config Information---------------
+batch_size: 4
+iters: 18000
+train_dataset:
+  dataset_root: D:/Crack500_data_u8
+  mode: train
+  num_classes: 2
+  train_path: D:/Crack500_data_u8/train.txt
+  transforms:
+  - max_scale_factor: 2.0
+    min_scale_factor: 0.5
+    scale_step_size: 0.25
+    type: ResizeStepScaling
+  - crop_size:
+    - 400
+    - 400
+    type: RandomPaddingCrop
+  - type: RandomHorizontalFlip
+  - brightness_range: 0.5
+    contrast_range: 0.5
+    saturation_range: 0.5
+    type: RandomDistort
+  - type: Normalize
+  type: Dataset
+val_dataset:
+  dataset_root: D:/Crack500_data_u8
+  mode: val
+  num_classes: 2
+  transforms:
+  - type: Normalize
+  type: Dataset
+  val_path: D:/Crack500_data_u8/val.txt
+optimizer:
+  beta1: 0.9
+  beta2: 0.999
+  type: AdamW
+  weight_decay: 0.01
+lr_scheduler:
+  learning_rate: 6.0e-05
+  power: 1
+  type: PolynomialDecay
+loss:
+  coef:
+  - 1
+  types:
+  - type: CrossEntropyLoss
+model:
+  backbone:
+    pretrained: https://bj.bcebos.com/paddleseg/dygraph/backbone/mix_vision_transformer_b0.tar.gz
+    type: MixVisionTransformer_B0
+  embedding_dim: 256
+  num_classes: 2
+  type: SegFormer
+------------------------------------------------
+
+[2026/09/21 23:53:27] INFO: Set device: gpu
+[2026/09/21 23:53:27] INFO: Use the following config to build model
+model:
+  backbone:
+    pretrained: https://bj.bcebos.com/paddleseg/dygraph/backbone/mix_vision_transformer_b0.tar.gz
+    type: MixVisionTransformer_B0
+  embedding_dim: 256
+  num_classes: 2
+  type: SegFormer
+[2026/09/21 23:53:27] INFO: Loading pretrained model from https://bj.bcebos.com/paddleseg/dygraph/backbone/mix_vision_transformer_b0.tar.gz
+[2026/09/21 23:53:27] INFO: There are 176/176 variables loaded into MixVisionTransformer.
+[2026/09/21 23:53:27] INFO: Use the following config to build train_dataset
+train_dataset:
+  dataset_root: D:/Crack500_data_u8
+  mode: train
+  num_classes: 2
+  train_path: D:/Crack500_data_u8/train.txt
+  transforms:
+  - max_scale_factor: 2.0
+    min_scale_factor: 0.5
+    scale_step_size: 0.25
+    type: ResizeStepScaling
+  - crop_size:
+    - 400
+    - 400
+    type: RandomPaddingCrop
+  - type: RandomHorizontalFlip
+  - brightness_range: 0.5
+    contrast_range: 0.5
+    saturation_range: 0.5
+    type: RandomDistort
+  - type: Normalize
+  type: Dataset
+[2026/09/21 23:53:27] INFO: Use the following config to build val_dataset
+val_dataset:
+  dataset_root: D:/Crack500_data_u8
+  mode: val
+  num_classes: 2
+  transforms:
+  - type: Normalize
+  type: Dataset
+  val_path: D:/Crack500_data_u8/val.txt
+[2026/09/21 23:53:27] INFO: Use the following config to build optimizer
+optimizer:
+  beta1: 0.9
+  beta2: 0.999
+  type: AdamW
+  weight_decay: 0.01
+[2026/09/21 23:53:27] INFO: Use the following config to build loss
+loss:
+  coef:
+  - 1
+  types:
+  - type: CrossEntropyLoss
+[2026/09/21 23:53:27] INFO: Resume model from D:\ÂÛÎÄ¸´ÏÖ\experiments\crack500_baseline\segformer_b0_s42\iter_9000
+[2026/09/21 23:53:34] INFO: [TRAIN] epoch: 20, iter: 9100/18000, loss: 0.0677, lr: 0.000080, batch_cost: 0.0687, reader_cost: 0.00110, ips: 58.2259 samples/sec, max_mem_reserved: 1236 MB, max_mem_allocated: 1066 MB | ETA 00:10:11
+[2026/09/21 23:53:40] INFO: [TRAIN] epoch: 20, iter: 9200/18000, loss: 0.0701, lr: 0.000080, batch_cost: 0.0579, reader_cost: 0.00078, ips: 69.1126 samples/sec, max_mem_reserved: 1236 MB, max_mem_allocated: 1066 MB | ETA 00:08:29
+[2026/09/21 23:53:46] INFO: [TRAIN] epoch: 20, iter: 9300/18000, loss: 0.0639, lr: 0.000081, batch_cost: 0.0594, reader_cost: 0.00429, ips: 67.3725 samples/sec, max_mem_reserved: 1236 MB, max_mem_allocated: 1066 MB | ETA 00:08:36
+[2026/09/21 23:53:52] INFO: [TRAIN] epoch: 20, iter: 9400/18000, loss: 0.0760, lr: 0.000081, batch_cost: 0.0585, reader_cost: 0.00169, ips: 68.3844 samples/sec, max_mem_reserved: 1236 MB, max_mem_allocated: 1066 MB | ETA 00:08:23
+[2026/09/21 23:53:58] INFO: [TRAIN] epoch: 21, iter: 9500/18000, loss: 0.0753, lr: 0.000081, batch_cost: 0.0575, reader_cost: 0.00173, ips: 69.6148 samples/sec, max_mem_reserved: 1236 MB, max_mem_allocated: 1066 MB | ETA 00:08:08
+[2026/09/21 23:54:03] INFO: [TRAIN] epoch: 21, iter: 9600/18000, loss: 0.0720, lr: 0.000081, batch_cost: 0.0585, reader_cost: 0.00270, ips: 68.3451 samples/sec, max_mem_reserved: 1236 MB, max_mem_allocated: 1066 MB | ETA 00:08:11
+[2026/09/21 23:54:09] INFO: [TRAIN] epoch: 21, iter: 9700/18000, loss: 0.0690, lr: 0.000082, batch_cost: 0.0577, reader_cost: 0.00288, ips: 69.3242 samples/sec, max_mem_reserved: 1236 MB, max_mem_allocated: 1066 MB | ETA 00:07:58
+[2026/09/21 23:54:15] INFO: [TRAIN] epoch: 21, iter: 9800/18000, loss: 0.0644, lr: 0.000082, batch_cost: 0.0582, reader_cost: 0.00233, ips: 68.6938 samples/sec, max_mem_reserved: 1236 MB, max_mem_allocated: 1066 MB | ETA 00:07:57
+[2026/09/21 23:54:21] INFO: [TRAIN] epoch: 21, iter: 9900/18000, loss: 0.0689, lr: 0.000082, batch_cost: 0.0572, reader_cost: 0.00049, ips: 69.9386 samples/sec, max_mem_reserved: 1236 MB, max_mem_allocated: 1066 MB | ETA 00:07:43
+[2026/09/21 23:54:26] INFO: [TRAIN] epoch: 22, iter: 10000/18000, loss: 0.0624, lr: 0.000082, batch_cost: 0.0576, reader_cost: 0.00132, ips: 69.4659 samples/sec, max_mem_reserved: 1236 MB, max_mem_allocated: 1066 MB | ETA 00:07:40
+[2026/09/21 23:54:32] INFO: [TRAIN] epoch: 22, iter: 10100/18000, loss: 0.0694, lr: 0.000082, batch_cost: 0.0583, reader_cost: 0.00010, ips: 68.6660 samples/sec, max_mem_reserved: 1236 MB, max_mem_allocated: 1066 MB | ETA 00:07:40
+[2026/09/21 23:54:38] INFO: [TRAIN] epoch: 22, iter: 10200/18000, loss: 0.0869, lr: 0.000083, batch_cost: 0.0588, reader_cost: 0.00013, ips: 68.0265 samples/sec, max_mem_reserved: 1236 MB, max_mem_allocated: 1066 MB | ETA 00:07:38
+[2026/09/21 23:54:44] INFO: [TRAIN] epoch: 22, iter: 10300/18000, loss: 0.0775, lr: 0.000083, batch_cost: 0.0570, reader_cost: 0.00010, ips: 70.1986 samples/sec, max_mem_reserved: 1236 MB, max_mem_allocated: 1066 MB | ETA 00:07:18
+[2026/09/21 23:54:49] INFO: [TRAIN] epoch: 22, iter: 10400/18000, loss: 0.0750, lr: 0.000083, batch_cost: 0.0560, reader_cost: 0.00009, ips: 71.4138 samples/sec, max_mem_reserved: 1236 MB, max_mem_allocated: 1066 MB | ETA 00:07:05
+[2026/09/21 23:54:55] INFO: [TRAIN] epoch: 23, iter: 10500/18000, loss: 0.0755, lr: 0.000083, batch_cost: 0.0565, reader_cost: 0.00064, ips: 70.7507 samples/sec, max_mem_reserved: 1236 MB, max_mem_allocated: 1066 MB | ETA 00:07:04
+[2026/09/21 23:55:01] INFO: [TRAIN] epoch: 23, iter: 10600/18000, loss: 0.0722, lr: 0.000084, batch_cost: 0.0558, reader_cost: 0.00013, ips: 71.6519 samples/sec, max_mem_reserved: 1236 MB, max_mem_allocated: 1066 MB | ETA 00:06:53
+[2026/09/21 23:55:06] INFO: [TRAIN] epoch: 23, iter: 10700/18000, loss: 0.0649, lr: 0.000084, batch_cost: 0.0565, reader_cost: 0.00009, ips: 70.8113 samples/sec, max_mem_reserved: 1236 MB, max_mem_allocated: 1066 MB | ETA 00:06:52
+[2026/09/21 23:55:12] INFO: [TRAIN] epoch: 23, iter: 10800/18000, loss: 0.0677, lr: 0.000084, batch_cost: 0.0571, reader_cost: 0.00006, ips: 70.0709 samples/sec, max_mem_reserved: 1236 MB, max_mem_allocated: 1066 MB | ETA 00:06:51
+[2026/09/21 23:55:18] INFO: [TRAIN] epoch: 23, iter: 10900/18000, loss: 0.0716, lr: 0.000084, batch_cost: 0.0570, reader_cost: 0.00066, ips: 70.1745 samples/sec, max_mem_reserved: 1236 MB, max_mem_allocated: 1066 MB | ETA 00:06:44
+[2026/09/21 23:55:23] INFO: [TRAIN] epoch: 24, iter: 11000/18000, loss: 0.0713, lr: 0.000084, batch_cost: 0.0535, reader_cost: 0.00061, ips: 74.7643 samples/sec, max_mem_reserved: 1236 MB, max_mem_allocated: 1066 MB | ETA 00:06:14
+[2026/09/21 23:55:28] INFO: [TRAIN] epoch: 24, iter: 11100/18000, loss: 0.0703, lr: 0.000085, batch_cost: 0.0514, reader_cost: 0.00013, ips: 77.8748 samples/sec, max_mem_reserved: 1236 MB, max_mem_allocated: 1066 MB | ETA 00:05:54
+[2026/09/21 23:55:33] INFO: [TRAIN] epoch: 24, iter: 11200/18000, loss: 0.0694, lr: 0.000085, batch_cost: 0.0515, reader_cost: 0.00008, ips: 77.6802 samples/sec, max_mem_reserved: 1236 MB, max_mem_allocated: 1066 MB | ETA 00:05:50
+[2026/09/21 23:55:39] INFO: [TRAIN] epoch: 24, iter: 11300/18000, loss: 0.0735, lr: 0.000085, batch_cost: 0.0527, reader_cost: 0.00005, ips: 75.8939 samples/sec, max_mem_reserved: 1236 MB, max_mem_allocated: 1066 MB | ETA 00:05:53
+[2026/09/21 23:55:44] INFO: [TRAIN] epoch: 25, iter: 11400/18000, loss: 0.0651, lr: 0.000085, batch_cost: 0.0519, reader_cost: 0.00061, ips: 77.0331 samples/sec, max_mem_reserved: 1236 MB, max_mem_allocated: 1066 MB | ETA 00:05:42
+[2026/09/21 23:55:49] INFO: [TRAIN] epoch: 25, iter: 11500/18000, loss: 0.0609, lr: 0.000086, batch_cost: 0.0521, reader_cost: 0.00009, ips: 76.8418 samples/sec, max_mem_reserved: 1236 MB, max_mem_allocated: 1066 MB | ETA 00:05:38
+[2026/09/21 23:55:54] INFO: [TRAIN] epoch: 25, iter: 11600/18000, loss: 0.0851, lr: 0.000086, batch_cost: 0.0516, reader_cost: 0.00005, ips: 77.5210 samples/sec, max_mem_reserved: 1236 MB, max_mem_allocated: 1066 MB | ETA 00:05:30
+[2026/09/21 23:55:59] INFO: [TRAIN] epoch: 25, iter: 11700/18000, loss: 0.0638, lr: 0.000086, batch_cost: 0.0519, reader_cost: 0.00012, ips: 77.0849 samples/sec, max_mem_reserved: 1236 MB, max_mem_allocated: 1066 MB | ETA 00:05:26
+[2026/09/21 23:56:05] INFO: [TRAIN] epoch: 25, iter: 11800/18000, loss: 0.0647, lr: 0.000086, batch_cost: 0.0526, reader_cost: 0.00008, ips: 76.1037 samples/sec, max_mem_reserved: 1236 MB, max_mem_allocated: 1066 MB | ETA 00:05:25
+[2026/09/21 23:56:10] INFO: [TRAIN] epoch: 26, iter: 11900/18000, loss: 0.0718, lr: 0.000086, batch_cost: 0.0520, reader_cost: 0.00060, ips: 76.8676 samples/sec, max_mem_reserved: 1236 MB, max_mem_allocated: 1066 MB | ETA 00:05:17
+[2026/09/21 23:56:15] INFO: [TRAIN] epoch: 26, iter: 12000/18000, loss: 0.0676, lr: 0.000087, batch_cost: 0.0523, reader_cost: 0.00008, ips: 76.5293 samples/sec, max_mem_reserved: 1236 MB, max_mem_allocated: 1066 MB | ETA 00:05:13
+[2026/09/21 23:56:15] INFO: Start evaluating (total_samples: 348, total_iters: 348)...
+[2026/09/21 23:56:20] INFO: [EVAL] #Images: 348 mIoU: 0.8212 Acc: 0.9783 Kappa: 0.7874 Dice: 0.8937
+[2026/09/21 23:56:20] INFO: [EVAL] Class IoU: 
+[0.9773 0.6651]
+[2026/09/21 23:56:20] INFO: [EVAL] Class Precision: 
+[0.9859 0.8384]
+[2026/09/21 23:56:20] INFO: [EVAL] Class Recall: 
+[0.9912 0.7629]
+[2026/09/21 23:56:20] INFO: [EVAL] The model with the best validation mIoU (0.8212) was saved at iter 12000.
+[2026/09/21 23:56:25] INFO: [TRAIN] epoch: 26, iter: 12100/18000, loss: 0.0621, lr: 0.000087, batch_cost: 0.0522, reader_cost: 0.00012, ips: 76.5907 samples/sec, max_mem_reserved: 1236 MB, max_mem_allocated: 1066 MB | ETA 00:05:08
+[2026/09/21 23:56:30] INFO: [TRAIN] epoch: 26, iter: 12200/18000, loss: 0.0655, lr: 0.000087, batch_cost: 0.0528, reader_cost: 0.00006, ips: 75.7693 samples/sec, max_mem_reserved: 1236 MB, max_mem_allocated: 1066 MB | ETA 00:05:06
+[2026/09/21 23:56:36] INFO: [TRAIN] epoch: 26, iter: 12300/18000, loss: 0.0758, lr: 0.000087, batch_cost: 0.0528, reader_cost: 0.00011, ips: 75.7809 samples/sec, max_mem_reserved: 1236 MB, max_mem_allocated: 1066 MB | ETA 00:05:00
+[2026/09/21 23:56:41] INFO: [TRAIN] epoch: 27, iter: 12400/18000, loss: 0.0662, lr: 0.000088, batch_cost: 0.0529, reader_cost: 0.00056, ips: 75.5562 samples/sec, max_mem_reserved: 1236 MB, max_mem_allocated: 1066 MB | ETA 00:04:56
+[2026/09/21 23:56:46] INFO: [TRAIN] epoch: 27, iter: 12500/18000, loss: 0.0715, lr: 0.000088, batch_cost: 0.0525, reader_cost: 0.00012, ips: 76.1732 samples/sec, max_mem_reserved: 1236 MB, max_mem_allocated: 1066 MB | ETA 00:04:48
+[2026/09/21 23:56:51] INFO: [TRAIN] epoch: 27, iter: 12600/18000, loss: 0.0671, lr: 0.000088, batch_cost: 0.0514, reader_cost: 0.00016, ips: 77.8078 samples/sec, max_mem_reserved: 1236 MB, max_mem_allocated: 1066 MB | ETA 00:04:37
+[2026/09/21 23:56:56] INFO: [TRAIN] epoch: 27, iter: 12700/18000, loss: 0.0717, lr: 0.000088, batch_cost: 0.0518, reader_cost: 0.00012, ips: 77.1961 samples/sec, max_mem_reserved: 1236 MB, max_mem_allocated: 1066 MB | ETA 00:04:34
+[2026/09/21 23:57:02] INFO: [TRAIN] epoch: 28, iter: 12800/18000, loss: 0.0618, lr: 0.000088, batch_cost: 0.0513, reader_cost: 0.00047, ips: 78.0342 samples/sec, max_mem_reserved: 1236 MB, max_mem_allocated: 1066 MB | ETA 00:04:26
+[2026/09/21 23:57:07] INFO: [TRAIN] epoch: 28, iter: 12900/18000, loss: 0.0632, lr: 0.000089, batch_cost: 0.0523, reader_cost: 0.00011, ips: 76.5111 samples/sec, max_mem_reserved: 1236 MB, max_mem_allocated: 1066 MB | ETA 00:04:26
+[2026/09/21 23:57:12] INFO: [TRAIN] epoch: 28, iter: 13000/18000, loss: 0.0732, lr: 0.000089, batch_cost: 0.0488, reader_cost: 0.00012, ips: 81.9472 samples/sec, max_mem_reserved: 1236 MB, max_mem_allocated: 1066 MB | ETA 00:04:04
+[2026/09/21 23:57:17] INFO: [TRAIN] epoch: 28, iter: 13100/18000, loss: 0.0628, lr: 0.000089, batch_cost: 0.0485, reader_cost: 0.00011, ips: 82.4956 samples/sec, max_mem_reserved: 1236 MB, max_mem_allocated: 1066 MB | ETA 00:03:57
+[2026/09/21 23:57:21] INFO: [TRAIN] epoch: 28, iter: 13200/18000, loss: 0.0681, lr: 0.000089, batch_cost: 0.0478, reader_cost: 0.00009, ips: 83.7521 samples/sec, max_mem_reserved: 1236 MB, max_mem_allocated: 1066 MB | ETA 00:03:49
+[2026/09/21 23:57:26] INFO: [TRAIN] epoch: 29, iter: 13300/18000, loss: 0.0718, lr: 0.000090, batch_cost: 0.0496, reader_cost: 0.00148, ips: 80.6723 samples/sec, max_mem_reserved: 1236 MB, max_mem_allocated: 1066 MB | ETA 00:03:53
+[2026/09/21 23:57:31] INFO: [TRAIN] epoch: 29, iter: 13400/18000, loss: 0.0689, lr: 0.000090, batch_cost: 0.0483, reader_cost: 0.00009, ips: 82.8469 samples/sec, max_mem_reserved: 1236 MB, max_mem_allocated: 1066 MB | ETA 00:03:42
+[2026/09/21 23:57:36] INFO: [TRAIN] epoch: 29, iter: 13500/18000, loss: 0.0736, lr: 0.000090, batch_cost: 0.0493, reader_cost: 0.00006, ips: 81.1974 samples/sec, max_mem_reserved: 1236 MB, max_mem_allocated: 1066 MB | ETA 00:03:41
+[2026/09/21 23:57:41] INFO: [TRAIN] epoch: 29, iter: 13600/18000, loss: 0.0696, lr: 0.000090, batch_cost: 0.0507, reader_cost: 0.00015, ips: 78.9647 samples/sec, max_mem_reserved: 1236 MB, max_mem_allocated: 1066 MB | ETA 00:03:42
+[2026/09/21 23:57:46] INFO: [TRAIN] epoch: 29, iter: 13700/18000, loss: 0.0605, lr: 0.000090, batch_cost: 0.0509, reader_cost: 0.00010, ips: 78.6363 samples/sec, max_mem_reserved: 1236 MB, max_mem_allocated: 1066 MB | ETA 00:03:38
+[2026/09/21 23:57:51] INFO: [TRAIN] epoch: 30, iter: 13800/18000, loss: 0.0679, lr: 0.000091, batch_cost: 0.0496, reader_cost: 0.00118, ips: 80.6608 samples/sec, max_mem_reserved: 1236 MB, max_mem_allocated: 1066 MB | ETA 00:03:28
+[2026/09/21 23:57:56] INFO: [TRAIN] epoch: 30, iter: 13900/18000, loss: 0.0605, lr: 0.000091, batch_cost: 0.0493, reader_cost: 0.00068, ips: 81.0810 samples/sec, max_mem_reserved: 1236 MB, max_mem_allocated: 1066 MB | ETA 00:03:22
+[2026/09/21 23:58:01] INFO: [TRAIN] epoch: 30, iter: 14000/18000, loss: 0.0593, lr: 0.000091, batch_cost: 0.0496, reader_cost: 0.00057, ips: 80.6819 samples/sec, max_mem_reserved: 1236 MB, max_mem_allocated: 1066 MB | ETA 00:03:18
+[2026/09/21 23:58:06] INFO: [TRAIN] epoch: 30, iter: 14100/18000, loss: 0.0645, lr: 0.000091, batch_cost: 0.0491, reader_cost: 0.00010, ips: 81.5244 samples/sec, max_mem_reserved: 1236 MB, max_mem_allocated: 1066 MB | ETA 00:03:11
+[2026/09/21 23:58:11] INFO: [TRAIN] epoch: 30, iter: 14200/18000, loss: 0.0652, lr: 0.000092, batch_cost: 0.0505, reader_cost: 0.00013, ips: 79.2019 samples/sec, max_mem_reserved: 1236 MB, max_mem_allocated: 1066 MB | ETA 00:03:11
+[2026/09/21 23:58:17] INFO: [TRAIN] epoch: 31, iter: 14300/18000, loss: 0.0684, lr: 0.000092, batch_cost: 0.0631, reader_cost: 0.00175, ips: 63.4129 samples/sec, max_mem_reserved: 1236 MB, max_mem_allocated: 1066 MB | ETA 00:03:53
+[2026/09/21 23:58:24] INFO: [TRAIN] epoch: 31, iter: 14400/18000, loss: 0.0648, lr: 0.000092, batch_cost: 0.0630, reader_cost: 0.00193, ips: 63.5347 samples/sec, max_mem_reserved: 1236 MB, max_mem_allocated: 1066 MB | ETA 00:03:46
+[2026/09/21 23:58:30] INFO: [TRAIN] epoch: 31, iter: 14500/18000, loss: 0.0723, lr: 0.000092, batch_cost: 0.0630, reader_cost: 0.00122, ips: 63.4452 samples/sec, max_mem_reserved: 1236 MB, max_mem_allocated: 1066 MB | ETA 00:03:40
+[2026/09/21 23:58:35] INFO: [TRAIN] epoch: 31, iter: 14600/18000, loss: 0.0626, lr: 0.000092, batch_cost: 0.0509, reader_cost: 0.00028, ips: 78.5682 samples/sec, max_mem_reserved: 1236 MB, max_mem_allocated: 1066 MB | ETA 00:02:53

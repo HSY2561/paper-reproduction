@@ -1,0 +1,65 @@
+# 训练迭代次数和批大小
+batch_size: 8
+iters: 18000
+
+# -------------------- 模型配置修改点 --------------------
+model:
+  type: SegFormer
+  backbone:
+    type: MixVisionTransformer_B0
+    # 注意：请确保你的预训练模型路径正确
+    pretrained: "D:/Project/Python/PaddleSeg-release-2.8/pretrained/mix_vision_transformer_b0/mix_vision_transformer_b0/model.pdparams"
+  embedding_dim: 256
+  num_classes: 2 # 修改点：根据新数据集，将类别数从 3 改为 2
+
+# -------------------- 优化器和学习率配置 (保留SegFormer的设置) --------------------
+optimizer:
+  type: AdamW
+  beta1: 0.9
+  beta2: 0.999
+  weight_decay: 0.01
+
+lr_scheduler:
+  type: PolynomialDecay
+  learning_rate: 0.00006 # SegFormer 默认学习率
+  power: 1
+
+# -------------------- 损失函数配置 (保留SegFormer的设置) --------------------
+loss:
+  types:
+    - type: CrossEntropyLoss
+      ignore_index: 255
+  coef: [1]
+
+# -------------------- 数据集配置 (从 hrsegnetb16_asppdelite.yml 引用) --------------------
+train_dataset:
+  type: Dataset
+  dataset_root: data
+  train_path: data/train.txt
+  num_classes: 2
+  mode: train
+  transforms:
+    - type: ResizeStepScaling
+      min_scale_factor: 0.5
+      max_scale_factor: 2.0
+      scale_step_size: 0.25
+    - type: RandomPaddingCrop
+      crop_size: [720, 720] # 修改点：定义了模型的输入尺寸
+    - type: RandomHorizontalFlip
+    - type: RandomDistort
+      brightness_range: 0.5
+      contrast_range: 0.5
+      saturation_range: 0.5
+    - type: Normalize
+
+val_dataset:
+  type: Dataset
+  dataset_root: data
+  val_path: data/val.txt
+  num_classes: 2
+  mode: val
+  transforms:
+    # 修改点：为保证验证时尺寸一致，这里添加一个Resize
+    - type: Resize
+      target_size: [720, 720]
+    - type: Normalize

@@ -1,0 +1,69 @@
+# 训练迭代次数和批大小
+batch_size: 8
+iters: 18000
+
+# 训练集配置
+train_dataset:
+  type: Dataset
+  dataset_root: data
+  train_path: data/train.txt
+  num_classes: 2
+  mode: train
+  transforms:
+    - type: ResizeStepScaling
+      min_scale_factor: 0.5
+      max_scale_factor: 2.0
+      scale_step_size: 0.25
+    - type: RandomPaddingCrop
+      crop_size: [720, 720] # 注意：这里的裁剪尺寸会影响最终进入模型的图片大小
+    - type: RandomHorizontalFlip
+    - type: RandomDistort
+      brightness_range: 0.5
+      contrast_range: 0.5
+      saturation_range: 0.5
+    - type: Normalize
+
+# 验证集配置
+val_dataset:
+  type: Dataset
+  dataset_root: data
+  val_path: data/val.txt
+  num_classes: 2
+  mode: val
+  transforms:
+    - type: Normalize
+
+# -------------------- 模型配置修改点 --------------------
+model:
+  type: HrSegNet_Lite            # 1. 修改为新的、轻量化的模型类名
+  num_classes: 2
+
+  # 2. 以下是影响模型大小的关键参数，您可以调整它们
+  base: 16                    # 编码器基础通道数，可以尝试降低到48或32
+  aspp_rates: [1, 6, 12, 18]     # 保持不变，以确保大感受野
+  aspp_out_channels: 64          # 从256降低到128
+  decoder_channels: 64            # 解码器内部通道数，从256大幅降低到64
+# ---------------------------------------------------------
+
+# 优化器
+optimizer:
+  type: SGD
+  momentum: 0.9
+  weight_decay: 0.0005
+
+# 损失函数
+loss:
+  types:
+    - type: OhemCrossEntropyLoss
+    - type: OhemCrossEntropyLoss
+    - type: OhemCrossEntropyLoss
+  coef: [1, 0.5, 0.5]
+
+# 学习率调度器
+lr_scheduler:
+  type: PolynomialDecay
+  learning_rate: 0.01
+  end_lr: 0.0
+  power: 0.9
+  warmup_iters: 1000
+  warmup_start_lr: 1.0e-5

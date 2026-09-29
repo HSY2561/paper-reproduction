@@ -1,0 +1,58 @@
+batch_size: 8
+iters: 18000
+model:
+  type: SegFormer
+  backbone:
+    type: MixVisionTransformer_B0
+    pretrained: pretrained/mix_vision_transformer_b0/mix_vision_transformer_b0/model.pdparams
+  embedding_dim: 256
+  num_classes: 2
+optimizer:
+  type: AdamW
+  beta1: 0.9
+  beta2: 0.999
+  weight_decay: 0.01
+lr_scheduler:
+  type: PolynomialDecay
+  learning_rate: 6.0e-05
+  power: 1
+loss:
+  types:
+  - type: CrossEntropyLoss
+    ignore_index: 255
+  coef:
+  - 1
+train_dataset:
+  type: Dataset
+  dataset_root: dataset/Crack500_kaggle
+  train_path: dataset/Crack500_kaggle/train.txt
+  num_classes: 2
+  mode: train
+  transforms:
+  - type: ResizeStepScaling
+    min_scale_factor: 0.5
+    max_scale_factor: 2.0
+    scale_step_size: 0.25
+  - type: RandomPaddingCrop
+    crop_size:
+    - 720
+    - 720
+  - type: RandomHorizontalFlip
+  - type: RandomDistort
+    brightness_range: 0.5
+    contrast_range: 0.5
+    saturation_range: 0.5
+  - type: Normalize
+val_dataset:
+  type: Dataset
+  dataset_root: dataset/Crack500_kaggle
+  val_path: dataset/Crack500_kaggle/val.txt
+  num_classes: 2
+  mode: val
+  transforms:
+  - type: Resize
+    target_size:
+    - 720
+    - 720
+  - type: Normalize
+save_dir: ./output/offline_experiments_torch/crack500_kaggle/segformer_b0

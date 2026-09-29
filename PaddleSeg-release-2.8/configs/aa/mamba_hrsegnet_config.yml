@@ -1,0 +1,58 @@
+batch_size: 8
+iters: 18000
+val_interval: 160
+# log_iters: 90
+save_dir: .output/mambahrsegnetb16_exp1_adamw
+
+train_dataset:
+  type: Dataset
+  dataset_root: data
+  train_path: data/train.txt
+  num_classes: 2
+  mode: train
+  transforms:
+    - type: ResizeStepScaling
+      min_scale_factor: 0.5
+      max_scale_factor: 2.0
+      scale_step_size: 0.25
+    - type: RandomPaddingCrop
+      crop_size: [400, 400]
+    - type: RandomHorizontalFlip
+    - type: RandomDistort
+      brightness_range: 0.5
+      contrast_range: 0.5
+      saturation_range: 0.5
+    - type: Normalize
+
+val_dataset:
+  type: Dataset
+  dataset_root: data
+  val_path: data/val.txt
+  num_classes: 2
+  mode: val
+  transforms:
+    - type: Normalize
+
+model:
+  type: MambaHrSegNet
+
+# --- 核心改动 ---
+optimizer:
+  type: AdamW
+  weight_decay: 0.05
+
+lr_scheduler:
+  type: PolynomialDecay
+  learning_rate: 0.0001  # 关键: 使用一个保守的学习率
+  end_lr: 0
+  power: 0.9
+  warmup_iters: 1500
+  warmup_start_lr: 1.0e-6
+
+loss:
+  types:
+    - type: OhemCrossEntropyLoss
+    - type: OhemCrossEntropyLoss
+    - type: OhemCrossEntropyLoss
+  coef: [1, 0.5, 0.5]
+

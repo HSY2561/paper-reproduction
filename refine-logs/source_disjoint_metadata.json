@@ -1,0 +1,32 @@
+{
+  "seed": 20260924,
+  "group_rule": "date_time for YYYYMMDD_HHMMSS; otherwise stem before last two crop coordinates",
+  "source_group_count": 442,
+  "row_count": 6736,
+  "group_counts": {
+    "train": 272,
+    "val": 62,
+    "test": 108
+  },
+  "sample_counts": {
+    "train": 4714,
+    "val": 674,
+    "test": 1348
+  },
+  "cross_split_groups": [],
+  "manifest_row_counts": {
+    "train": 4714,
+    "val": 674,
+    "test": 1348
+  },
+  "unique_image_file_counts": {
+    "train": 4706,
+    "val": 674,
+    "test": 1348
+  },
+  "duplicate_manifest_rows": {
+    "train": 8,
+    "val": 0,
+    "test": 0
+  }
+}

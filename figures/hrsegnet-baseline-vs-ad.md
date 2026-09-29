@@ -1,0 +1,38 @@
+# HrSegNet 基线与 HrSegNet-B32-AD
+
+下图根据仓库中的 `hrsegnet_b32.py` 与 `hrsegnet_b64_asppde.py` 重绘；原始 HrSegNet 作者图见 `analysis/reader/assets/hrsegnet_original_architecture.png`。
+
+```mermaid
+flowchart LR
+    input[RGB 输入] --> stem[Stem: 两次 stride=2<br/>输出 1/4 分辨率]
+    stem --> block1[HrSeg Block 1<br/>高分辨率 + 语义引导]
+    block1 --> block2[HrSeg Block 2<br/>高分辨率 + 语义引导]
+    block2 --> block3[HrSeg Block 3<br/>高分辨率 + 语义引导]
+
+    block1 -. 训练期辅助头 .-> aux1[Aux Head 1]
+    block2 -. 训练期辅助头 .-> aux2[Aux Head 2]
+    aux1 -. 0.5 L_aux1 .-> loss[总损失<br/>Lmain + 0.5 Laux1 + 0.5 Laux2]
+    aux2 -. 0.5 L_aux2 .-> loss
+
+    block3 --> basehead[基线 Head<br/>BN-ReLU-反卷积-1x1]
+    basehead --> out1[裂缝/背景 logits]
+
+    block3 --> aspp[ASPP<br/>1x1 + 空洞率 1/6/12/18<br/>+ 全局池化]
+    block2 --> low[低层投影<br/>1x1 -> 48 通道]
+    aspp --> up[上采样到低层尺寸]
+    up --> concat[Concat]
+    low --> concat
+    concat --> decoder[轻量 Decoder<br/>3x3 Conv-BN-ReLU<br/>64 通道 + Dropout]
+    decoder --> adhead[AD Head<br/>BN-ReLU-反卷积-1x1]
+    adhead --> out2[裂缝/背景 logits]
+
+    classDef input fill:#E8F5E9,stroke:#2E7D32,color:#111;
+    classDef encoder fill:#E3F2FD,stroke:#1565C0,color:#111;
+    classDef fusion fill:#F3E5F5,stroke:#6A1B9A,color:#111;
+    classDef output fill:#FFF3E0,stroke:#EF6C00,color:#111;
+    class input input;
+    class stem,block1,block2,block3 encoder;
+    class aspp,low,up,concat,decoder fusion;
+    class basehead,adhead,out1,out2,aux1,aux2,loss output;
+```
+
