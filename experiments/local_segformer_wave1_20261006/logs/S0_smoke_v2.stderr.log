@@ -1,0 +1,10 @@
+WARNING: Logging before InitGoogleLogging() is written to STDERR
+W1007 00:30:27.867715 52948 gpu_resources.cc:116] Please NOTE: device: 0, GPU Compute Capability: 12.0, Driver API Version: 13.2, Runtime API Version: 12.9
+C:\venv_bisenet\Lib\site-packages\paddle\nn\layer\norm.py:885: UserWarning: When training, we now always track global mean and variance.
+  warnings.warn(
+
+1/2 [==============>...............] - ETA: 0s - batch_cost: 0.1263 - reader cost: 0.0327
+2/2 [==============================] - 0s 69ms/step - batch_cost: 0.0689 - reader cost: 0.0169
+
+1/2 [==============>...............] - ETA: 0s - batch_cost: 0.0499 - reader cost: 0.0389
+2/2 [==============================] - 0s 45ms/step - batch_cost: 0.0453 - reader cost: 0.0320

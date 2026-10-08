@@ -1,0 +1,20 @@
+{
+  "created_at": "2026-10-07T09:58:00+08:00",
+  "gpu": "RTX5060",
+  "data_root": "C:\\Users\\user\\algolab_data",
+  "splits": {
+    "train": {
+      "pairs": 1896,
+      "sha256": "f7362ad5b271d2e86fbb0193139f29440d6fead74a634ee67e8424b8501fb1df"
+    },
+    "val": {
+      "pairs": 348,
+      "sha256": "e497ed9275f4d14227e9a7bbc703012cef3d14e54f53a8317560ff080c6ed1f6"
+    },
+    "test": {
+      "pairs": 1124,
+      "sha256": "5538a75cca6089d4bb9977c3a422a646f3588cebf2b8b800a79ee07ef99d76c6"
+    }
+  },
+  "test_used": false
+}

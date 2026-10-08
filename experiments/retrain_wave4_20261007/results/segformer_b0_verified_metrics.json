@@ -1,0 +1,25 @@
+{
+  "model": "segformer_b0",
+  "images": 1124,
+  "split": "Crack500 test",
+  "confusion_matrix": [
+    [
+      240591323,
+      3900909
+    ],
+    [
+      3988840,
+      10488528
+    ]
+  ],
+  "mIoU": 0.7694752771365169,
+  "crackIoU": 0.5707024657425721,
+  "precision": 0.7289046819552426,
+  "recall": 0.7244775431556344,
+  "F1": 0.7266843698150869,
+  "empty_predictions": 8,
+  "zero_overlap_images": 11,
+  "checkpoint": "C:\\retrain_wave4\\checkpoints\\segformer_b0\\model.pdparams",
+  "checkpoint_sha256": "07f6048e0a6de174a2c3ca1915df4bcd635565a706d978288fba946ef240f2d5",
+  "test_used": true
+}

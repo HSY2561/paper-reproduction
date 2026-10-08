@@ -1,0 +1,236 @@
+[2026/10/07 10:03:00] INFO: 
+------------Environment Information-------------
+platform: Windows-11-10.0.26200-SP0
+Python: 3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]
+Paddle compiled with cuda: True
+NVCC: Build cuda_13.4.r13.4/compiler.38657139_0
+cudnn: 90.9
+GPUs used: 1
+CUDA_VISIBLE_DEVICES: None
+GPU: ['GPU 0: NVIDIA GeForce']
+PaddleSeg: 0.0.0.dev0
+PaddlePaddle: 3.4.0
+OpenCV: 4.11.0
+------------------------------------------------
+[2026/10/07 10:03:00] INFO: 
+---------------Config Information---------------
+batch_size: 4
+iters: 20
+train_dataset:
+  dataset_root: C:/Users/user/algolab_data
+  mode: train
+  num_classes: 2
+  train_path: C:/Users/user/algolab_data/train.txt
+  transforms:
+  - max_scale_factor: 1.25
+    min_scale_factor: 0.75
+    scale_step_size: 0.25
+    type: ResizeStepScaling
+  - crop_size:
+    - 400
+    - 400
+    type: RandomPaddingCrop
+  - type: RandomHorizontalFlip
+  - brightness_range: 0.5
+    contrast_range: 0.5
+    saturation_range: 0.5
+    type: RandomDistort
+  - type: Normalize
+  type: Dataset
+val_dataset:
+  dataset_root: C:/Users/user/algolab_data
+  mode: val
+  num_classes: 2
+  transforms:
+  - type: Normalize
+  type: Dataset
+  val_path: C:/Users/user/algolab_data/val.txt
+optimizer:
+  beta1: 0.9
+  beta2: 0.999
+  type: AdamW
+  weight_decay: 0.01
+lr_scheduler:
+  end_lr: 0.0
+  learning_rate: 6.0e-05
+  power: 1
+  type: PolynomialDecay
+loss:
+  coef:
+  - 1
+  - 1
+  - 1
+  - 1
+  - 1
+  types:
+  - coef:
+    - 0.8
+    - 0.2
+    losses:
+    - min_kept: 65000
+      type: OhemCrossEntropyLoss
+    - type: DiceLoss
+    type: MixedLoss
+  - coef:
+    - 0.8
+    - 0.2
+    losses:
+    - min_kept: 65000
+      type: OhemCrossEntropyLoss
+    - type: DiceLoss
+    type: MixedLoss
+  - coef:
+    - 0.8
+    - 0.2
+    losses:
+    - min_kept: 65000
+      type: OhemCrossEntropyLoss
+    - type: DiceLoss
+    type: MixedLoss
+  - coef:
+    - 0.8
+    - 0.2
+    losses:
+    - min_kept: 65000
+      type: OhemCrossEntropyLoss
+    - type: DiceLoss
+    type: MixedLoss
+  - coef:
+    - 0.8
+    - 0.2
+    losses:
+    - min_kept: 65000
+      type: OhemCrossEntropyLoss
+    - type: DiceLoss
+    type: MixedLoss
+model:
+  context_type: none
+  num_classes: 2
+  shape_stream: false
+  type: BiSeNetV2
+------------------------------------------------
+
+[2026/10/07 10:03:00] INFO: Set device: gpu
+[2026/10/07 10:03:00] INFO: Use the following config to build model
+model:
+  context_type: none
+  num_classes: 2
+  shape_stream: false
+  type: BiSeNetV2
+[2026/10/07 10:03:00] INFO: Use the following config to build train_dataset
+train_dataset:
+  dataset_root: C:/Users/user/algolab_data
+  mode: train
+  num_classes: 2
+  train_path: C:/Users/user/algolab_data/train.txt
+  transforms:
+  - max_scale_factor: 1.25
+    min_scale_factor: 0.75
+    scale_step_size: 0.25
+    type: ResizeStepScaling
+  - crop_size:
+    - 400
+    - 400
+    type: RandomPaddingCrop
+  - type: RandomHorizontalFlip
+  - brightness_range: 0.5
+    contrast_range: 0.5
+    saturation_range: 0.5
+    type: RandomDistort
+  - type: Normalize
+  type: Dataset
+[2026/10/07 10:03:00] INFO: Use the following config to build val_dataset
+val_dataset:
+  dataset_root: C:/Users/user/algolab_data
+  mode: val
+  num_classes: 2
+  transforms:
+  - type: Normalize
+  type: Dataset
+  val_path: C:/Users/user/algolab_data/val.txt
+[2026/10/07 10:03:00] INFO: Use the following config to build optimizer
+optimizer:
+  beta1: 0.9
+  beta2: 0.999
+  type: AdamW
+  weight_decay: 0.01
+[2026/10/07 10:03:00] INFO: Use the following config to build loss
+loss:
+  coef:
+  - 1
+  - 1
+  - 1
+  - 1
+  - 1
+  types:
+  - coef:
+    - 0.8
+    - 0.2
+    losses:
+    - min_kept: 65000
+      type: OhemCrossEntropyLoss
+    - type: DiceLoss
+    type: MixedLoss
+  - coef:
+    - 0.8
+    - 0.2
+    losses:
+    - min_kept: 65000
+      type: OhemCrossEntropyLoss
+    - type: DiceLoss
+    type: MixedLoss
+  - coef:
+    - 0.8
+    - 0.2
+    losses:
+    - min_kept: 65000
+      type: OhemCrossEntropyLoss
+    - type: DiceLoss
+    type: MixedLoss
+  - coef:
+    - 0.8
+    - 0.2
+    losses:
+    - min_kept: 65000
+      type: OhemCrossEntropyLoss
+    - type: DiceLoss
+    type: MixedLoss
+  - coef:
+    - 0.8
+    - 0.2
+    losses:
+    - min_kept: 65000
+      type: OhemCrossEntropyLoss
+    - type: DiceLoss
+    type: MixedLoss
+[2026/10/07 10:03:02] INFO: [TRAIN] epoch: 1, iter: 10/20, loss: 3.6770, lr: 0.000033, batch_cost: 0.1652, reader_cost: 0.00806, ips: 24.2134 samples/sec, max_mem_reserved: 922 MB, max_mem_allocated: 673 MB | ETA 00:00:01
+[2026/10/07 10:03:03] INFO: [TRAIN] epoch: 1, iter: 20/20, loss: 3.6001, lr: 0.000003, batch_cost: 0.0697, reader_cost: 0.00016, ips: 57.3742 samples/sec, max_mem_reserved: 922 MB, max_mem_allocated: 673 MB | ETA 00:00:00
+[2026/10/07 10:03:03] INFO: Start evaluating (total_samples: 348, total_iters: 348)...
+[2026/10/07 10:03:07] INFO: [EVAL] #Images: 348 mIoU: 0.4053 Acc: 0.7361 Kappa: 0.0628 Dice: 0.4966
+[2026/10/07 10:03:07] INFO: [EVAL] Class IoU: 
+[0.7299 0.0807]
+[2026/10/07 10:03:07] INFO: [EVAL] Class Precision: 
+[0.9554 0.0913]
+[2026/10/07 10:03:07] INFO: [EVAL] Class Recall: 
+[0.7556 0.4102]
+[2026/10/07 10:03:07] INFO: Start evaluating (total_samples: 348, total_iters: 348)...
+[2026/10/07 10:03:12] INFO: [EVAL] #Images: 348 mIoU: 0.4450 Acc: 0.7854 Kappa: 0.1207 Dice: 0.5376
+[2026/10/07 10:03:12] INFO: [EVAL] Class IoU: 
+[0.7795 0.1106]
+[2026/10/07 10:03:12] INFO: [EVAL] Class Precision: 
+[0.9622 0.1261]
+[2026/10/07 10:03:12] INFO: [EVAL] Class Recall: 
+[0.8041 0.4724]
+[2026/10/07 10:03:12] INFO: [EVAL] The model with the best validation mIoU (0.4053) was saved at iter 20.
+[2026/10/07 10:03:12] INFO: [EVAL] The EMA model with the best validation mIoU (0.4450) was saved at iter 20.
+<class 'paddle.nn.layer.conv.Conv2D'>'s flops has been counted
+<class 'paddle.nn.layer.norm.BatchNorm2D'>'s flops has been counted
+<class 'paddle.nn.layer.activation.ReLU'>'s flops has been counted
+Cannot find suitable count function for <class 'paddle.nn.layer.pooling.MaxPool2D'>. Treat it as zero FLOPs.
+<class 'paddle.nn.layer.pooling.AdaptiveAvgPool2D'>'s flops has been counted
+Cannot find suitable count function for <class 'paddleseg.models.layers.wrap_functions.Add'>. Treat it as zero FLOPs.
+Cannot find suitable count function for <class 'paddle.nn.layer.common.Identity'>. Treat it as zero FLOPs.
+<class 'paddle.nn.layer.pooling.AvgPool2D'>'s flops has been counted
+Cannot find suitable count function for <class 'paddle.nn.layer.activation.Sigmoid'>. Treat it as zero FLOPs.
+<class 'paddle.nn.layer.common.Dropout'>'s flops has been counted
+Total Flops: 4934732616     Total Params: 2328346

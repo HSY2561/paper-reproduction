@@ -1,0 +1,58 @@
+{
+  "selected_type": "ema",
+  "best_states": {
+    "regular": {
+      "mIoU": 0.8085413275976565,
+      "Acc": 0.9762106089378179,
+      "iter": 13000,
+      "weight": "C:\\Users\\user\\绠楁硶瀹為獙\\local_run\\experiments\\bisenetv2_lrfix_clean_20260928\\best_model\\model.pdparams"
+    },
+    "ema": {
+      "mIoU": 0.8107941296103464,
+      "Acc": 0.9762594849944133,
+      "iter": 12000,
+      "weight": "C:\\Users\\user\\绠楁硶瀹為獙\\local_run\\experiments\\bisenetv2_lrfix_clean_20260928\\ema_best_model\\ema_model.pdparams"
+    }
+  },
+  "selection_split": "val",
+  "sha256": "815284e6ea09a3a612c331933c89bf1c02347359dcf3415743beb00c5fe4963f",
+  "checkpoint": "C:\\Users\\user\\算法实验\\local_run\\checkpoints\\bisenetv2_lrfix_clean_20260928\\model.pdparams",
+  "test_evaluated": false,
+  "training_complete": true,
+  "process_exit_code": null,
+  "exit_code_note": "Detached process exit code was not retained; completion verified from log, final checkpoint and process absence.",
+  "original_recorded_checkpoint": "C:\\Users\\user\\绠楁硶瀹為獙\\local_run\\checkpoints\\bisenetv2_lrfix_clean_20260928\\model.pdparams",
+  "reused_as": "C0",
+  "new_training_started": false,
+  "metrics": {
+    "images": 348,
+    "confusion_matrix": [
+      [
+        76115866,
+        870879
+      ],
+      [
+        1066208,
+        3541191
+      ]
+    ],
+    "mIoU": 0.8107941296103464,
+    "crack_IoU": 0.6464058596515182,
+    "precision": 0.8026144190821995,
+    "recall": 0.7685878735486117,
+    "F1": 0.7852327005059833,
+    "empty_predictions": [
+      "20160318_181632_641_721",
+      "20160326_141808_641_1",
+      "20160326_141808_641_361",
+      "20160326_141808_641_721",
+      "20160326_142521_1281_1",
+      "20160326_142521_1281_1081",
+      "20160326_142521_1281_721",
+      "20160326_142745_1281_361",
+      "20160329_103807_721_1281",
+      "20160402_151054_1_721"
+    ],
+    "test_used": false
+  }
+}

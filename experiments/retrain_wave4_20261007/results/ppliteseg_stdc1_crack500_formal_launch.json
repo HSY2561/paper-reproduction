@@ -1,0 +1,17 @@
+{
+  "model": "PP-LiteSeg-STDC1",
+  "phase": "formal_training",
+  "pid": 23568,
+  "started_at": "2026-10-08T12:16:06.5854166+08:00",
+  "config": "D:\\论文复现\\experiments\\retrain_wave4_20261007\\configs\\ppliteseg_stdc1_crack500_formal.yml",
+  "source": "D:\\论文复现\\experiments\\retrain_wave4_20261007\\src\\PaddleSeg-2.10.0",
+  "python": "C:\\venv_bisenet\\Scripts\\python.exe",
+  "output": "D:\\论文复现\\experiments\\retrain_wave4_20261007\\training\\ppliteseg_stdc1_crack500_formal",
+  "stdout": "D:\\论文复现\\experiments\\retrain_wave4_20261007\\logs\\ppliteseg_stdc1_crack500_formal_train.stdout.log",
+  "stderr": "D:\\论文复现\\experiments\\retrain_wave4_20261007\\logs\\ppliteseg_stdc1_crack500_formal_train.stderr.log",
+  "iters": 18000,
+  "batch_size": 4,
+  "seed": 42,
+  "test_used": false,
+  "keep_checkpoint_max": 2
+}

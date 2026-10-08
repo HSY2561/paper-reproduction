@@ -1,0 +1,580 @@
+{
+  "created_at": "2026-10-01T16:11:59.6327560+08:00",
+  "protocol": {
+    "gpu": "RTX5060",
+    "data": "C:\\Users\\user\\algolab_data",
+    "train": 1896,
+    "val": 348,
+    "test": 1124,
+    "iters": 18000,
+    "batch": 4,
+    "fp32": true,
+    "ema_selection": true,
+    "test_used_after_val": true
+  },
+  "validation": {
+    "C0": {
+      "selected_type": "ema",
+      "best_states": {
+        "regular": {
+          "mIoU": 0.8085413275976565,
+          "Acc": 0.9762106089378179,
+          "iter": 13000,
+          "weight": "C:\\Users\\user\\绠楁硶瀹為獙\\local_run\\experiments\\bisenetv2_lrfix_clean_20260928\\best_model\\model.pdparams"
+        },
+        "ema": {
+          "mIoU": 0.8107941296103464,
+          "Acc": 0.9762594849944133,
+          "iter": 12000,
+          "weight": "C:\\Users\\user\\绠楁硶瀹為獙\\local_run\\experiments\\bisenetv2_lrfix_clean_20260928\\ema_best_model\\ema_model.pdparams"
+        }
+      },
+      "selection_split": "val",
+      "sha256": "815284e6ea09a3a612c331933c89bf1c02347359dcf3415743beb00c5fe4963f",
+      "checkpoint": "C:\\Users\\user\\算法实验\\local_run\\checkpoints\\bisenetv2_lrfix_clean_20260928\\model.pdparams",
+      "test_evaluated": false,
+      "training_complete": true,
+      "process_exit_code": null,
+      "exit_code_note": "Detached process exit code was not retained; completion verified from log, final checkpoint and process absence.",
+      "original_recorded_checkpoint": "C:\\Users\\user\\绠楁硶瀹為獙\\local_run\\checkpoints\\bisenetv2_lrfix_clean_20260928\\model.pdparams",
+      "reused_as": "C0",
+      "new_training_started": false,
+      "metrics": {
+        "images": 348,
+        "confusion_matrix": [
+          [
+            76115866,
+            870879
+          ],
+          [
+            1066208,
+            3541191
+          ]
+        ],
+        "mIoU": 0.8107941296103464,
+        "crack_IoU": 0.6464058596515182,
+        "precision": 0.8026144190821995,
+        "recall": 0.7685878735486117,
+        "F1": 0.7852327005059833,
+        "empty_predictions": [
+          "20160318_181632_641_721",
+          "20160326_141808_641_1",
+          "20160326_141808_641_361",
+          "20160326_141808_641_721",
+          "20160326_142521_1281_1",
+          "20160326_142521_1281_1081",
+          "20160326_142521_1281_721",
+          "20160326_142745_1281_361",
+          "20160329_103807_721_1281",
+          "20160402_151054_1_721"
+        ],
+        "test_used": false
+      }
+    },
+    "C4": {
+      "variant": "C4_inputcrop",
+      "images": 348,
+      "confusion_matrix": [
+        [
+          76199656,
+          787089
+        ],
+        [
+          1074751,
+          3532648
+        ]
+      ],
+      "mIoU": 0.8155057898310621,
+      "crack_IoU": 0.6548625189267266,
+      "precision": 0.8177923794897699,
+      "recall": 0.7667336820622656,
+      "F1": 0.7914403902886661,
+      "boundary_precision": 0.45168746041944985,
+      "boundary_recall": 0.3864516078015839,
+      "boundary_F1": 0.41653074512659993,
+      "boundary_counts_pm_pn_gm_gn": [
+        195428,
+        432662,
+        195485,
+        505846
+      ],
+      "empty_predictions": [
+        "20160222_115224_641_1081",
+        "20160316_143547_641_721",
+        "20160318_181632_641_721",
+        "20160326_141808_641_721",
+        "20160326_142521_1281_1081",
+        "20160326_142521_1281_721",
+        "20160326_142521_641_1081",
+        "20160326_142745_1281_361",
+        "20160402_151054_1_721"
+      ],
+      "test_used": false,
+      "official_val_exit_code": 0,
+      "data_files_verified_before": 4488,
+      "data_files_verified_after": 4488,
+      "selected_checkpoint_sha256": "8bf6ea85dab203036a05b06e9b6f489ca08cbdf75e47084da9d0dd3db99e4555",
+      "worst_10": [
+        {
+          "image": "20160222_080850_1921_1",
+          "tn": 218874,
+          "fp": 10453,
+          "fn": 1073,
+          "tp": 0,
+          "IoU": 0.0,
+          "pred_crack_pixels": 10453,
+          "gt_crack_pixels": 1073,
+          "boundary_pred_match": 0,
+          "boundary_pred_total": 694,
+          "boundary_gt_match": 0,
+          "boundary_gt_total": 297
+        },
+        {
+          "image": "20160222_115224_641_1081",
+          "tn": 228689,
+          "fp": 0,
+          "fn": 1711,
+          "tp": 0,
+          "IoU": 0.0,
+          "pred_crack_pixels": 0,
+          "gt_crack_pixels": 1711,
+          "boundary_pred_match": 0,
+          "boundary_pred_total": 0,
+          "boundary_gt_match": 0,
+          "boundary_gt_total": 839
+        },
+        {
+          "image": "20160302_155857_1281_721",
+          "tn": 229179,
+          "fp": 4,
+          "fn": 1217,
+          "tp": 0,
+          "IoU": 0.0,
+          "pred_crack_pixels": 4,
+          "gt_crack_pixels": 1217,
+          "boundary_pred_match": 0,
+          "boundary_pred_total": 4,
+          "boundary_gt_match": 0,
+          "boundary_gt_total": 240
+        },
+        {
+          "image": "20160316_143547_641_721",
+          "tn": 229322,
+          "fp": 0,
+          "fn": 1078,
+          "tp": 0,
+          "IoU": 0.0,
+          "pred_crack_pixels": 0,
+          "gt_crack_pixels": 1078,
+          "boundary_pred_match": 0,
+          "boundary_pred_total": 0,
+          "boundary_gt_match": 0,
+          "boundary_gt_total": 317
+        },
+        {
+          "image": "20160318_181632_641_721",
+          "tn": 229230,
+          "fp": 0,
+          "fn": 1170,
+          "tp": 0,
+          "IoU": 0.0,
+          "pred_crack_pixels": 0,
+          "gt_crack_pixels": 1170,
+          "boundary_pred_match": 0,
+          "boundary_pred_total": 0,
+          "boundary_gt_match": 0,
+          "boundary_gt_total": 346
+        },
+        {
+          "image": "20160326_141808_1281_1",
+          "tn": 225707,
+          "fp": 193,
+          "fn": 4500,
+          "tp": 0,
+          "IoU": 0.0,
+          "pred_crack_pixels": 193,
+          "gt_crack_pixels": 4500,
+          "boundary_pred_match": 0,
+          "boundary_pred_total": 111,
+          "boundary_gt_match": 0,
+          "boundary_gt_total": 646
+        },
+        {
+          "image": "20160326_141808_641_721",
+          "tn": 223447,
+          "fp": 0,
+          "fn": 6953,
+          "tp": 0,
+          "IoU": 0.0,
+          "pred_crack_pixels": 0,
+          "gt_crack_pixels": 6953,
+          "boundary_pred_match": 0,
+          "boundary_pred_total": 0,
+          "boundary_gt_match": 0,
+          "boundary_gt_total": 972
+        },
+        {
+          "image": "20160326_142521_1281_1",
+          "tn": 217077,
+          "fp": 11,
+          "fn": 13312,
+          "tp": 0,
+          "IoU": 0.0,
+          "pred_crack_pixels": 11,
+          "gt_crack_pixels": 13312,
+          "boundary_pred_match": 0,
+          "boundary_pred_total": 11,
+          "boundary_gt_match": 0,
+          "boundary_gt_total": 919
+        },
+        {
+          "image": "20160326_142521_1281_1081",
+          "tn": 227114,
+          "fp": 0,
+          "fn": 3286,
+          "tp": 0,
+          "IoU": 0.0,
+          "pred_crack_pixels": 0,
+          "gt_crack_pixels": 3286,
+          "boundary_pred_match": 0,
+          "boundary_pred_total": 0,
+          "boundary_gt_match": 0,
+          "boundary_gt_total": 647
+        },
+        {
+          "image": "20160326_142521_1281_721",
+          "tn": 219289,
+          "fp": 0,
+          "fn": 11111,
+          "tp": 0,
+          "IoU": 0.0,
+          "pred_crack_pixels": 0,
+          "gt_crack_pixels": 11111,
+          "boundary_pred_match": 0,
+          "boundary_pred_total": 0,
+          "boundary_gt_match": 0,
+          "boundary_gt_total": 969
+        }
+      ],
+      "background_IoU": 0.9761490607353976,
+      "deltas_vs_C0": {
+        "mIoU": 0.004711660220715785,
+        "crack_IoU": 0.008456659275208445,
+        "precision": 0.015177960407570357,
+        "recall": -0.001854191486346135,
+        "F1": 0.006207689782682824,
+        "boundary_F1": 0.021384477729914253
+      },
+      "gates": {
+        "crack_IoU_gain_at_least_0.005": true,
+        "F1_gain_at_least_0.003": true,
+        "recall_drop_at_most_0.005": true
+      },
+      "passed": true
+    },
+    "C4_seed43": {
+      "n": 348,
+      "confusion_matrix": [
+        [
+          76181346,
+          805399
+        ],
+        [
+          1057241,
+          3550158
+        ]
+      ],
+      "mIoU": 0.8160078423424186,
+      "crackIoU": 0.6558822257915408,
+      "precision": 0.8150870256088946,
+      "recall": 0.7705340909263556,
+      "f1": 0.7921846319450859,
+      "boundary_counts": [
+        171528,
+        407153,
+        170476,
+        471716
+      ],
+      "boundary_f1": 0.3890494496851198,
+      "empty_predictions": 4,
+      "test_used": false,
+      "boundary_precision": 0.4212863469015333,
+      "boundary_recall": 0.36139541588582963,
+      "deltas_vs_C0": {
+        "mIoU": 0.005213712732072273,
+        "crackIoU": 0.009476366140022563,
+        "precision": 0.012472606526695018,
+        "recall": 0.0019462173777439196,
+        "f1": 0.006951931439102665,
+        "boundary_f1": -0.006096817711565894
+      },
+      "gates": {
+        "crack_IoU_gain_at_least_0.005": true,
+        "F1_gain_at_least_0.003": true,
+        "recall_drop_at_most_0.005": true
+      },
+      "passed": true
+    },
+    "C4_seed44": {
+      "n": 348,
+      "confusion_matrix": [
+        [
+          76235766,
+          750979
+        ],
+        [
+          1125647,
+          3481752
+        ]
+      ],
+      "mIoU": 0.8128762687001669,
+      "crackIoU": 0.6497772273624594,
+      "precision": 0.8225781416300729,
+      "recall": 0.7556871024193911,
+      "f1": 0.787715112786803,
+      "boundary_counts": [
+        171417,
+        405320,
+        170419,
+        471716
+      ],
+      "boundary_f1": 0.3896733430229039,
+      "empty_predictions": 9,
+      "test_used": false,
+      "boundary_precision": 0.4229176946610086,
+      "boundary_recall": 0.36127458046790867,
+      "deltas_vs_C0": {
+        "mIoU": 0.0020821390898205783,
+        "crackIoU": 0.0033713677109411533,
+        "precision": 0.019963722547873375,
+        "recall": -0.012900771129220612,
+        "f1": 0.0024824122808196902,
+        "boundary_f1": -0.005472924373781773
+      },
+      "gates": {
+        "crack_IoU_gain_at_least_0.005": false,
+        "F1_gain_at_least_0.003": false,
+        "recall_drop_at_most_0.005": false
+      },
+      "passed": false
+    },
+    "SegFormer_B0": {
+      "n": 348,
+      "confusion_matrix": [
+        [
+          76176759,
+          809986
+        ],
+        [
+          945884,
+          3661515
+        ]
+      ],
+      "mIoU": 0.8266758766844756,
+      "crackIoU": 0.675882367599866,
+      "precision": 0.8188559054330973,
+      "recall": 0.7947032588234707,
+      "f1": 0.8065988170373063,
+      "boundary_counts": [
+        185925,
+        423235,
+        184120,
+        471716
+      ],
+      "boundary_f1": 0.41336167440446886,
+      "empty_predictions": 5,
+      "test_used": false,
+      "boundary_precision": 0.4392949543397876,
+      "boundary_recall": 0.3903195990808029
+    },
+    "OCRNet_HRNetW18": {
+      "n": 348,
+      "confusion_matrix": [
+        [
+          76007963,
+          978782
+        ],
+        [
+          909471,
+          3697928
+        ]
+      ],
+      "mIoU": 0.818868604364795,
+      "crackIoU": 0.6619778342305772,
+      "precision": 0.7907114189248424,
+      "recall": 0.802606416331644,
+      "f1": 0.7966145162664505,
+      "boundary_counts": [
+        175574,
+        175373,
+        429553,
+        471716
+      ],
+      "boundary_f1": 0.5605215074715544,
+      "empty_predictions": 8,
+      "test_used": false
+    }
+  },
+  "test": {
+    "C0": {
+      "images": 1124,
+      "confusion_matrix": [
+        [
+          240872911,
+          3619321
+        ],
+        [
+          4602074,
+          9875294
+        ]
+      ],
+      "mIoU": 0.7563455132658026,
+      "crackIoU": 0.5456961767978662,
+      "precision": 0.7317951642192089,
+      "recall": 0.6821194294432524,
+      "f1": 0.706084656207606,
+      "boundary_counts_pm_pn_gm_gn": [
+        469763,
+        1331725,
+        467308,
+        1682267
+      ],
+      "boundary_precision": 0.3527477519758208,
+      "boundary_recall": 0.27778467983976385,
+      "boundary_F1": 0.31081009128951154,
+      "empty_predictions": 34,
+      "test_used": true
+    },
+    "C4": {
+      "images": 1124,
+      "confusion_matrix": [
+        [
+          240916471,
+          3575761
+        ],
+        [
+          4439860,
+          10037508
+        ]
+      ],
+      "mIoU": 0.7618991060304185,
+      "crackIoU": 0.5559982427422969,
+      "precision": 0.737332671528051,
+      "recall": 0.6933240904009624,
+      "f1": 0.7146515046988788,
+      "boundary_counts_pm_pn_gm_gn": [
+        511887,
+        1411869,
+        509611,
+        1682267
+      ],
+      "boundary_precision": 0.36255984089175414,
+      "boundary_recall": 0.3029311042777395,
+      "boundary_F1": 0.33007407167689673,
+      "empty_predictions": 25,
+      "test_used": true
+    },
+    "SegFormer_B0": {
+      "images": 1124,
+      "confusion_matrix": [
+        [
+          240481531,
+          4010701
+        ],
+        [
+          3812040,
+          10665328
+        ]
+      ],
+      "mIoU": 0.7726857986542603,
+      "crackIoU": 0.5768762546267001,
+      "precision": 0.7267175609969154,
+      "recall": 0.7366897076871984,
+      "f1": 0.7316696575702654,
+      "boundary_counts_pm_pn_gm_gn": [
+        562738,
+        1541168,
+        556112,
+        1682267
+      ],
+      "boundary_precision": 0.3651373503732234,
+      "boundary_recall": 0.33057297087798787,
+      "boundary_F1": 0.3469965444074777,
+      "empty_predictions": 9,
+      "test_used": true
+    },
+    "OCRNet_HRNetW18": {
+      "images": 1124,
+      "confusion_matrix": [
+        [
+          239986803,
+          4505429
+        ],
+        [
+          3586713,
+          10890655
+        ]
+      ],
+      "mIoU": 0.7705462989538978,
+      "crackIoU": 0.573711819180282,
+      "precision": 0.7073652624914232,
+      "recall": 0.7522537936453643,
+      "f1": 0.7291192862478698,
+      "boundary_counts_pm_pn_gm_gn": [
+        539139,
+        1518159,
+        539811,
+        1682267
+      ],
+      "boundary_precision": 0.3551268345410461,
+      "boundary_recall": 0.32088307028551355,
+      "boundary_F1": 0.3371376312527346,
+      "empty_predictions": 18,
+      "test_used": true
+    }
+  },
+  "speed": [
+    {
+      "model": "C0_BiSeNetV2",
+      "images_timed": 101,
+      "warmup": 20,
+      "avg_seconds_per_image": 0.016039399010599545,
+      "ms_per_image": 16.039399010599546,
+      "images_per_second": 62.34647565904157,
+      "config": "C:\\local_wave3\\configs\\C4_test.yml",
+      "checkpoint": "C:\\local_c0clean\\model.pdparams"
+    },
+    {
+      "model": "C4_BiSeNetV2_inputcrop",
+      "images_timed": 101,
+      "warmup": 20,
+      "avg_seconds_per_image": 0.015879998019306302,
+      "ms_per_image": 15.879998019306303,
+      "images_per_second": 62.97230004589659,
+      "config": "C:\\local_wave3\\configs\\C4_test.yml",
+      "checkpoint": "C:\\local_wave3\\checkpoints\\C4\\model.pdparams"
+    },
+    {
+      "model": "SegFormer_B0",
+      "images_timed": 101,
+      "warmup": 20,
+      "avg_seconds_per_image": 0.01432007029629543,
+      "ms_per_image": 14.32007029629543,
+      "images_per_second": 69.8320594319078,
+      "config": "C:\\local_wave3\\configs\\public_segformer_b0_test.yml",
+      "checkpoint": "C:\\local_wave3\\checkpoints\\public_segformer_b0\\model.pdparams"
+    },
+    {
+      "model": "OCRNet_HRNetW18",
+      "images_timed": 101,
+      "warmup": 20,
+      "avg_seconds_per_image": 0.07014197722598357,
+      "ms_per_image": 70.14197722598357,
+      "images_per_second": 14.25679799099757,
+      "config": "C:\\local_wave3\\configs\\public_ocrnet_hrnetw18_test.yml",
+      "checkpoint": "C:\\local_wave3\\checkpoints\\public_ocrnet_hrnetw18\\model.pdparams"
+    }
+  ],
+  "sota_claim": false,
+  "conclusion": "C4 improves C0 but does not exceed SegFormer-B0 or OCRNet-HRNet-W18 on local test under the recorded protocol."
+}

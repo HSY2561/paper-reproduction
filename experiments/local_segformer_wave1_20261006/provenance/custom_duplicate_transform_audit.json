@@ -1,0 +1,237 @@
+{
+  "test_used": false,
+  "checked": "decoded RGB exact under D4; pHash <=4 candidates verified against full labels",
+  "cross_split_exact_d4": [
+    [
+      {
+        "split": "train",
+        "image": "images\\train\\1104.jpg",
+        "label": "annotations\\train\\1104.png"
+      },
+      {
+        "split": "val",
+        "image": "images\\val\\1591.jpg",
+        "label": "annotations\\val\\1591.png"
+      }
+    ],
+    [
+      {
+        "split": "train",
+        "image": "images\\train\\1115.jpg",
+        "label": "annotations\\train\\1115.png"
+      },
+      {
+        "split": "val",
+        "image": "images\\val\\1601.jpg",
+        "label": "annotations\\val\\1601.png"
+      }
+    ],
+    [
+      {
+        "split": "train",
+        "image": "images\\train\\1119.jpg",
+        "label": "annotations\\train\\1119.png"
+      },
+      {
+        "split": "val",
+        "image": "images\\val\\1604.jpg",
+        "label": "annotations\\val\\1604.png"
+      }
+    ],
+    [
+      {
+        "split": "train",
+        "image": "images\\train\\1133.jpg",
+        "label": "annotations\\train\\1133.png"
+      },
+      {
+        "split": "val",
+        "image": "images\\val\\1613.jpg",
+        "label": "annotations\\val\\1613.png"
+      }
+    ],
+    [
+      {
+        "split": "train",
+        "image": "images\\train\\1135.jpg",
+        "label": "annotations\\train\\1135.png"
+      },
+      {
+        "split": "val",
+        "image": "images\\val\\1614.jpg",
+        "label": "annotations\\val\\1614.png"
+      }
+    ],
+    [
+      {
+        "split": "train",
+        "image": "images\\train\\1139.jpg",
+        "label": "annotations\\train\\1139.png"
+      },
+      {
+        "split": "val",
+        "image": "images\\val\\1617.jpg",
+        "label": "annotations\\val\\1617.png"
+      }
+    ],
+    [
+      {
+        "split": "train",
+        "image": "images\\train\\1167.jpg",
+        "label": "annotations\\train\\1167.png"
+      },
+      {
+        "split": "val",
+        "image": "images\\val\\1629.jpg",
+        "label": "annotations\\val\\1629.png"
+      }
+    ],
+    [
+      {
+        "split": "train",
+        "image": "images\\train\\1179.jpg",
+        "label": "annotations\\train\\1179.png"
+      },
+      {
+        "split": "val",
+        "image": "images\\val\\1635.jpg",
+        "label": "annotations\\val\\1635.png"
+      }
+    ],
+    [
+      {
+        "split": "train",
+        "image": "images\\train\\1185.jpg",
+        "label": "annotations\\train\\1185.png"
+      },
+      {
+        "split": "val",
+        "image": "images\\val\\1637.jpg",
+        "label": "annotations\\val\\1637.png"
+      }
+    ],
+    [
+      {
+        "split": "train",
+        "image": "images\\train\\1300.jpg",
+        "label": "annotations\\train\\1300.png"
+      },
+      {
+        "split": "val",
+        "image": "images\\val\\1301.jpg",
+        "label": "annotations\\val\\1301.png"
+      }
+    ],
+    [
+      {
+        "split": "train",
+        "image": "images\\train\\1558.jpg",
+        "label": "annotations\\train\\1558.png"
+      },
+      {
+        "split": "val",
+        "image": "images\\val\\1557.jpg",
+        "label": "annotations\\val\\1557.png"
+      }
+    ],
+    [
+      {
+        "split": "train",
+        "image": "images\\train\\1566.jpg",
+        "label": "annotations\\train\\1566.png"
+      },
+      {
+        "split": "val",
+        "image": "images\\val\\1565.jpg",
+        "label": "annotations\\val\\1565.png"
+      }
+    ],
+    [
+      {
+        "split": "train",
+        "image": "images\\train\\1574.jpg",
+        "label": "annotations\\train\\1574.png"
+      },
+      {
+        "split": "val",
+        "image": "images\\val\\1079.jpg",
+        "label": "annotations\\val\\1079.png"
+      }
+    ],
+    [
+      {
+        "split": "train",
+        "image": "images\\train\\1577.jpg",
+        "label": "annotations\\train\\1577.png"
+      },
+      {
+        "split": "val",
+        "image": "images\\val\\1084.jpg",
+        "label": "annotations\\val\\1084.png"
+      }
+    ],
+    [
+      {
+        "split": "train",
+        "image": "images\\train\\1609.jpg",
+        "label": "annotations\\train\\1609.png"
+      },
+      {
+        "split": "val",
+        "image": "images\\val\\1126.jpg",
+        "label": "annotations\\val\\1126.png"
+      }
+    ],
+    [
+      {
+        "split": "train",
+        "image": "images\\train\\1627.jpg",
+        "label": "annotations\\train\\1627.png"
+      },
+      {
+        "split": "val",
+        "image": "images\\val\\1163.jpg",
+        "label": "annotations\\val\\1163.png"
+      }
+    ],
+    [
+      {
+        "split": "train",
+        "image": "images\\train\\1633.jpg",
+        "label": "annotations\\train\\1633.png"
+      },
+      {
+        "split": "val",
+        "image": "images\\val\\1175.jpg",
+        "label": "annotations\\val\\1175.png"
+      }
+    ],
+    [
+      {
+        "split": "train",
+        "image": "images\\train\\1657.jpg",
+        "label": "annotations\\train\\1657.png"
+      },
+      {
+        "split": "val",
+        "image": "images\\val\\1232.jpg",
+        "label": "annotations\\val\\1232.png"
+      }
+    ]
+  ],
+  "near_candidates": [
+    {
+      "train_image": "images\\train\\197.jpg",
+      "val_image": "images\\val\\198.jpg",
+      "phash_hamming": 4,
+      "label_exact_transform_indices": []
+    },
+    {
+      "train_image": "images\\train\\495.jpg",
+      "val_image": "images\\val\\496.jpg",
+      "phash_hamming": 2,
+      "label_exact_transform_indices": []
+    }
+  ],
+  "source_frame_identity_known": false
+}

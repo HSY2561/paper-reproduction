@@ -1,0 +1,26 @@
+{
+  "paddleseg/models/ocrnet.py": {
+    "url": "https://raw.githubusercontent.com/PaddlePaddle/PaddleSeg/release/2.10/paddleseg/models/ocrnet.py",
+    "upstream_sha256": "b90d2ce917564fd634459ac36c0fd5ca78a583384503bff3ff32e2b1c80b3266",
+    "local_sha256": "b90d2ce917564fd634459ac36c0fd5ca78a583384503bff3ff32e2b1c80b3266",
+    "equal_ignoring_line_endings": true
+  },
+  "paddleseg/models/gscnn.py": {
+    "url": "https://raw.githubusercontent.com/PaddlePaddle/PaddleSeg/release/2.10/paddleseg/models/gscnn.py",
+    "upstream_sha256": "257e13f74dcb36c5c6743d75997394649385c6cf766ce1b3218b45e1b5fbddd3",
+    "local_sha256": "257e13f74dcb36c5c6743d75997394649385c6cf766ce1b3218b45e1b5fbddd3",
+    "equal_ignoring_line_endings": true
+  },
+  "paddleseg/models/losses/binary_cross_entropy_loss.py": {
+    "url": "https://raw.githubusercontent.com/PaddlePaddle/PaddleSeg/release/2.10/paddleseg/models/losses/binary_cross_entropy_loss.py",
+    "upstream_sha256": "1d6652e5e39b18acf5798a82690577c139c6babd557266e3934a6f32ec8c2800",
+    "local_sha256": "1d6652e5e39b18acf5798a82690577c139c6babd557266e3934a6f32ec8c2800",
+    "equal_ignoring_line_endings": true
+  },
+  "paddleseg/core/train.py": {
+    "url": "https://raw.githubusercontent.com/PaddlePaddle/PaddleSeg/release/2.10/paddleseg/core/train.py",
+    "upstream_sha256": "04066d1e913f15743d2d11ced82b72ed00d75a02c2825298b669f8c72b72451a",
+    "local_sha256": "04066d1e913f15743d2d11ced82b72ed00d75a02c2825298b669f8c72b72451a",
+    "equal_ignoring_line_endings": true
+  }
+}

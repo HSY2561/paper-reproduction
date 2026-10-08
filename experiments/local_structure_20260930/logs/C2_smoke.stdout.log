@@ -1,0 +1,248 @@
+[2026/09/30 02:06:30] INFO: 
+------------Environment Information-------------
+platform: Windows-11-10.0.26200-SP0
+Python: 3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]
+Paddle compiled with cuda: True
+NVCC: Build cuda_13.4.r13.4/compiler.38657139_0
+cudnn: 90.9
+GPUs used: 1
+CUDA_VISIBLE_DEVICES: None
+GPU: ['GPU 0: NVIDIA GeForce']
+PaddleSeg: 0.0.0.dev0
+PaddlePaddle: 3.4.0
+OpenCV: 4.11.0
+------------------------------------------------
+[2026/09/30 02:06:30] INFO: 
+---------------Config Information---------------
+batch_size: 4
+iters: 30
+train_dataset:
+  dataset_root: C:/Users/user/algolab_data
+  edge: true
+  mode: train
+  num_classes: 2
+  train_path: C:/Users/user/algolab_data/train.txt
+  transforms:
+  - max_scale_factor: 2.0
+    min_scale_factor: 0.5
+    scale_step_size: 0.25
+    type: ResizeStepScaling
+  - crop_size:
+    - 400
+    - 400
+    type: RandomPaddingCrop
+  - type: RandomHorizontalFlip
+  - brightness_range: 0.5
+    contrast_range: 0.5
+    saturation_range: 0.5
+    type: RandomDistort
+  - type: Normalize
+  type: Dataset
+val_dataset:
+  dataset_root: C:/Users/user/algolab_data
+  mode: val
+  num_classes: 2
+  transforms:
+  - type: Normalize
+  type: Dataset
+  val_path: C:/Users/user/algolab_data/val.txt
+optimizer:
+  beta1: 0.9
+  beta2: 0.999
+  type: AdamW
+  weight_decay: 0.01
+lr_scheduler:
+  end_lr: 0.0
+  learning_rate: 6.0e-05
+  power: 1
+  type: PolynomialDecay
+loss:
+  coef:
+  - 1
+  - 1
+  - 1
+  - 1
+  - 1
+  - 1.0
+  types:
+  - coef:
+    - 0.8
+    - 0.2
+    losses:
+    - min_kept: 65000
+      type: OhemCrossEntropyLoss
+    - type: DiceLoss
+    type: MixedLoss
+  - coef:
+    - 0.8
+    - 0.2
+    losses:
+    - min_kept: 65000
+      type: OhemCrossEntropyLoss
+    - type: DiceLoss
+    type: MixedLoss
+  - coef:
+    - 0.8
+    - 0.2
+    losses:
+    - min_kept: 65000
+      type: OhemCrossEntropyLoss
+    - type: DiceLoss
+    type: MixedLoss
+  - coef:
+    - 0.8
+    - 0.2
+    losses:
+    - min_kept: 65000
+      type: OhemCrossEntropyLoss
+    - type: DiceLoss
+    type: MixedLoss
+  - coef:
+    - 0.8
+    - 0.2
+    losses:
+    - min_kept: 65000
+      type: OhemCrossEntropyLoss
+    - type: DiceLoss
+    type: MixedLoss
+  - edge_label: true
+    type: BCELoss
+    weight: dynamic
+model:
+  context_type: none
+  num_classes: 2
+  shape_stream: true
+  type: BiSeNetV2
+------------------------------------------------
+
+[2026/09/30 02:06:30] INFO: Set device: gpu
+[2026/09/30 02:06:30] INFO: Use the following config to build model
+model:
+  context_type: none
+  num_classes: 2
+  shape_stream: true
+  type: BiSeNetV2
+[2026/09/30 02:06:30] INFO: Use the following config to build train_dataset
+train_dataset:
+  dataset_root: C:/Users/user/algolab_data
+  edge: true
+  mode: train
+  num_classes: 2
+  train_path: C:/Users/user/algolab_data/train.txt
+  transforms:
+  - max_scale_factor: 2.0
+    min_scale_factor: 0.5
+    scale_step_size: 0.25
+    type: ResizeStepScaling
+  - crop_size:
+    - 400
+    - 400
+    type: RandomPaddingCrop
+  - type: RandomHorizontalFlip
+  - brightness_range: 0.5
+    contrast_range: 0.5
+    saturation_range: 0.5
+    type: RandomDistort
+  - type: Normalize
+  type: Dataset
+[2026/09/30 02:06:30] INFO: Use the following config to build val_dataset
+val_dataset:
+  dataset_root: C:/Users/user/algolab_data
+  mode: val
+  num_classes: 2
+  transforms:
+  - type: Normalize
+  type: Dataset
+  val_path: C:/Users/user/algolab_data/val.txt
+[2026/09/30 02:06:30] INFO: Use the following config to build optimizer
+optimizer:
+  beta1: 0.9
+  beta2: 0.999
+  type: AdamW
+  weight_decay: 0.01
+[2026/09/30 02:06:30] INFO: Use the following config to build loss
+loss:
+  coef:
+  - 1
+  - 1
+  - 1
+  - 1
+  - 1
+  - 1.0
+  types:
+  - coef:
+    - 0.8
+    - 0.2
+    losses:
+    - min_kept: 65000
+      type: OhemCrossEntropyLoss
+    - type: DiceLoss
+    type: MixedLoss
+  - coef:
+    - 0.8
+    - 0.2
+    losses:
+    - min_kept: 65000
+      type: OhemCrossEntropyLoss
+    - type: DiceLoss
+    type: MixedLoss
+  - coef:
+    - 0.8
+    - 0.2
+    losses:
+    - min_kept: 65000
+      type: OhemCrossEntropyLoss
+    - type: DiceLoss
+    type: MixedLoss
+  - coef:
+    - 0.8
+    - 0.2
+    losses:
+    - min_kept: 65000
+      type: OhemCrossEntropyLoss
+    - type: DiceLoss
+    type: MixedLoss
+  - coef:
+    - 0.8
+    - 0.2
+    losses:
+    - min_kept: 65000
+      type: OhemCrossEntropyLoss
+    - type: DiceLoss
+    type: MixedLoss
+  - edge_label: true
+    type: BCELoss
+    weight: dynamic
+[2026/09/30 02:06:33] INFO: [TRAIN] epoch: 1, iter: 10/30, loss: 3.9143, lr: 0.000042, batch_cost: 0.2232, reader_cost: 0.01590, ips: 17.9199 samples/sec, max_mem_reserved: 1049 MB, max_mem_allocated: 819 MB | ETA 00:00:04
+[2026/09/30 02:06:35] INFO: [TRAIN] epoch: 1, iter: 20/30, loss: 3.7850, lr: 0.000022, batch_cost: 0.1320, reader_cost: 0.02848, ips: 30.3025 samples/sec, max_mem_reserved: 1049 MB, max_mem_allocated: 819 MB | ETA 00:00:01
+[2026/09/30 02:06:37] INFO: [TRAIN] epoch: 1, iter: 30/30, loss: 3.8152, lr: 0.000002, batch_cost: 0.1591, reader_cost: 0.05085, ips: 25.1360 samples/sec, max_mem_reserved: 1049 MB, max_mem_allocated: 819 MB | ETA 00:00:00
+[2026/09/30 02:06:37] INFO: Start evaluating (total_samples: 348, total_iters: 348)...
+[2026/09/30 02:06:44] INFO: [EVAL] #Images: 348 mIoU: 0.4442 Acc: 0.7913 Kappa: 0.1068 Dice: 0.5329
+[2026/09/30 02:06:44] INFO: [EVAL] Class IoU: 
+[0.7862 0.1022]
+[2026/09/30 02:06:44] INFO: [EVAL] Class Precision: 
+[0.9591 0.119 ]
+[2026/09/30 02:06:44] INFO: [EVAL] Class Recall: 
+[0.8135 0.4208]
+[2026/09/30 02:06:44] INFO: Start evaluating (total_samples: 348, total_iters: 348)...
+[2026/09/30 02:06:51] INFO: [EVAL] #Images: 348 mIoU: 0.3104 Acc: 0.5774 Kappa: 0.0033 Dice: 0.4130
+[2026/09/30 02:06:51] INFO: [EVAL] Class IoU: 
+[0.5669 0.0539]
+[2026/09/30 02:06:51] INFO: [EVAL] Class Precision: 
+[0.9447 0.0581]
+[2026/09/30 02:06:51] INFO: [EVAL] Class Recall: 
+[0.5864 0.4267]
+[2026/09/30 02:06:51] INFO: [EVAL] The model with the best validation mIoU (0.4442) was saved at iter 30.
+[2026/09/30 02:06:51] INFO: [EVAL] The EMA model with the best validation mIoU (0.3104) was saved at iter 30.
+<class 'paddle.nn.layer.conv.Conv2D'>'s flops has been counted
+<class 'paddle.nn.layer.norm.BatchNorm2D'>'s flops has been counted
+<class 'paddle.nn.layer.activation.ReLU'>'s flops has been counted
+Cannot find suitable count function for <class 'paddle.nn.layer.pooling.MaxPool2D'>. Treat it as zero FLOPs.
+<class 'paddle.nn.layer.pooling.AdaptiveAvgPool2D'>'s flops has been counted
+Cannot find suitable count function for <class 'paddleseg.models.layers.wrap_functions.Add'>. Treat it as zero FLOPs.
+Cannot find suitable count function for <class 'paddle.nn.layer.common.Identity'>. Treat it as zero FLOPs.
+<class 'paddle.nn.layer.pooling.AvgPool2D'>'s flops has been counted
+Cannot find suitable count function for <class 'paddle.nn.layer.activation.Sigmoid'>. Treat it as zero FLOPs.
+<class 'paddle.nn.layer.common.Dropout'>'s flops has been counted
+Cannot find suitable count function for <class 'paddleseg.models.layers.activation.Activation'>. Treat it as zero FLOPs.
+Total Flops: 6007277542     Total Params: 2449313

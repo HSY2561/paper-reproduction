@@ -1,0 +1,139 @@
+[2026/09/30 02:53:05] INFO: 
+------------Environment Information-------------
+platform: Windows-11-10.0.26200-SP0
+Python: 3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]
+Paddle compiled with cuda: True
+NVCC: Build cuda_13.4.r13.4/compiler.38657139_0
+cudnn: 90.9
+GPUs used: 1
+CUDA_VISIBLE_DEVICES: None
+GPU: ['GPU 0: NVIDIA GeForce']
+PaddleSeg: 0.0.0.dev0
+PaddlePaddle: 3.4.0
+OpenCV: 4.11.0
+------------------------------------------------
+[2026/09/30 02:53:05] INFO: 
+---------------Config Information---------------
+batch_size: 4
+iters: 18000
+train_dataset:
+  dataset_root: C:/Users/user/algolab_data
+  mode: train
+  num_classes: 2
+  train_path: C:/Users/user/algolab_data/train.txt
+  transforms:
+  - max_scale_factor: 2.0
+    min_scale_factor: 0.5
+    scale_step_size: 0.25
+    type: ResizeStepScaling
+  - crop_size:
+    - 400
+    - 400
+    type: RandomPaddingCrop
+  - type: RandomHorizontalFlip
+  - brightness_range: 0.5
+    contrast_range: 0.5
+    saturation_range: 0.5
+    type: RandomDistort
+  - type: Normalize
+  type: Dataset
+val_dataset:
+  dataset_root: C:/Users/user/algolab_data
+  mode: val
+  num_classes: 2
+  transforms:
+  - type: Normalize
+  type: Dataset
+  val_path: C:/Users/user/algolab_data/val.txt
+optimizer:
+  beta1: 0.9
+  beta2: 0.999
+  type: AdamW
+  weight_decay: 0.01
+lr_scheduler:
+  end_lr: 0.0
+  learning_rate: 6.0e-05
+  power: 1
+  type: PolynomialDecay
+loss:
+  coef:
+  - 1
+  - 1
+  - 1
+  - 1
+  - 1
+  types:
+  - coef:
+    - 0.8
+    - 0.2
+    losses:
+    - min_kept: 65000
+      type: OhemCrossEntropyLoss
+    - type: DiceLoss
+    type: MixedLoss
+  - coef:
+    - 0.8
+    - 0.2
+    losses:
+    - min_kept: 65000
+      type: OhemCrossEntropyLoss
+    - type: DiceLoss
+    type: MixedLoss
+  - coef:
+    - 0.8
+    - 0.2
+    losses:
+    - min_kept: 65000
+      type: OhemCrossEntropyLoss
+    - type: DiceLoss
+    type: MixedLoss
+  - coef:
+    - 0.8
+    - 0.2
+    losses:
+    - min_kept: 65000
+      type: OhemCrossEntropyLoss
+    - type: DiceLoss
+    type: MixedLoss
+  - coef:
+    - 0.8
+    - 0.2
+    losses:
+    - min_kept: 65000
+      type: OhemCrossEntropyLoss
+    - type: DiceLoss
+    type: MixedLoss
+model:
+  context_type: ocr
+  num_classes: 2
+  shape_stream: false
+  type: BiSeNetV2
+------------------------------------------------
+
+[2026/09/30 02:53:05] INFO: Set device: gpu
+[2026/09/30 02:53:05] INFO: Use the following config to build model
+model:
+  context_type: ocr
+  num_classes: 2
+  shape_stream: false
+  type: BiSeNetV2
+[2026/09/30 02:53:05] INFO: Loading pretrained model from D:\论文复现\experiments\local_structure_20260930\checkpoints\C1\model.pdparams
+[2026/09/30 02:53:05] INFO: There are 398/398 variables loaded into BiSeNetV2.
+[2026/09/30 02:53:05] INFO: Loaded trained weights successfully.
+[2026/09/30 02:53:05] INFO: Use the following config to build val_dataset
+val_dataset:
+  dataset_root: C:/Users/user/algolab_data
+  mode: val
+  num_classes: 2
+  transforms:
+  - type: Normalize
+  type: Dataset
+  val_path: C:/Users/user/algolab_data/val.txt
+[2026/09/30 02:53:05] INFO: Start evaluating (total_samples: 348, total_iters: 348)...
+[2026/09/30 02:53:14] INFO: [EVAL] #Images: 348 mIoU: 0.8111 Acc: 0.9765 Kappa: 0.7731 Dice: 0.8866
+[2026/09/30 02:53:14] INFO: [EVAL] Class IoU: 
+[0.9754 0.6469]
+[2026/09/30 02:53:14] INFO: [EVAL] Class Precision: 
+[0.9859 0.8093]
+[2026/09/30 02:53:14] INFO: [EVAL] Class Recall: 
+[0.9892 0.7632]

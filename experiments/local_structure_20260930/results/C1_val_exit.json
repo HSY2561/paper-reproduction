@@ -1,0 +1,15 @@
+{
+  "command": [
+    "C:\\Users\\user\\算法实验\\venv_bisenet\\Scripts\\python.exe",
+    "D:\\论文复现\\experiments\\local_structure_20260930\\src\\PaddleSeg-2.10.0\\tools\\val.py",
+    "--config",
+    "D:\\论文复现\\experiments\\local_structure_20260930\\configs\\C1.yml",
+    "--model_path",
+    "D:\\论文复现\\experiments\\local_structure_20260930\\checkpoints\\C1\\model.pdparams",
+    "--device",
+    "gpu",
+    "--num_workers",
+    "0"
+  ],
+  "exit_code": 0
+}

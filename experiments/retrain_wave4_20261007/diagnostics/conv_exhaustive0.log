@@ -1,0 +1,5 @@
+WARNING: Logging before InitGoogleLogging() is written to STDERR
+W1007 22:30:35.660290 47516 gpu_resources.cc:116] Please NOTE: device: 0, GPU Compute Capability: 12.0, Driver API Version: 13.2, Runtime API Version: 12.9
+paddle 3.4.0 cuda 12.9
+forward [1, 64, 400, 400] 2.043421745300293
+backward_ok

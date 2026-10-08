@@ -1,0 +1,8 @@
+{
+  "model": "deeplabv3p_r50",
+  "variant": "cpu_batch1_smoke",
+  "exit_code": 0,
+  "ended_at": "2026-10-08T10:50:21.1781480+08:00",
+  "test_used": false,
+  "log": "D:\\论文复现\\experiments\\retrain_wave4_20261007\\logs\\smoke_deeplabv3p_r50_cpu_20261008.log"
+}

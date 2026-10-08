@@ -1,0 +1,13 @@
+{
+  "completed": [
+    "C1",
+    "C2"
+  ],
+  "test_used": false,
+  "ended_at": "2026-09-30T03:52:14.9392247+08:00",
+  "C3": "not_started_both_single_modules_failed",
+  "status": "validation_audited_wave_complete",
+  "audited_at": "2026-09-30T06:55:14.876283+08:00",
+  "decision_file": "results/wave_decision.json",
+  "next_wave_started": false
+}

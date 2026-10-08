@@ -1,0 +1,2 @@
+images\val\1003.jpg annotations\val\1003.png
+images\val\1010.jpg annotations\val\1010.png

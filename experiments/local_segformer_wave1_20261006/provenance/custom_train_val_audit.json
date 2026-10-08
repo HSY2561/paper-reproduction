@@ -1,0 +1,215 @@
+{
+  "train_val_only": true,
+  "test_used": false,
+  "summary": {
+    "train": {
+      "pairs": 1418,
+      "sizes": {
+        "(1024, 1024)": 1418
+      },
+      "label_value_pixel_counts": {
+        "0": 1439499992,
+        "1": 47380776
+      },
+      "empty_label1": 0
+    },
+    "val": {
+      "pairs": 177,
+      "sizes": {
+        "(1024, 1024)": 177
+      },
+      "label_value_pixel_counts": {
+        "0": 179663757,
+        "1": 5934195
+      },
+      "empty_label1": 0
+    }
+  },
+  "issues": [],
+  "cross_split_identical_images": [
+    [
+      {
+        "split": "train",
+        "image": "images\\train\\1104.jpg"
+      },
+      {
+        "split": "val",
+        "image": "images\\val\\1591.jpg"
+      }
+    ],
+    [
+      {
+        "split": "train",
+        "image": "images\\train\\1115.jpg"
+      },
+      {
+        "split": "val",
+        "image": "images\\val\\1601.jpg"
+      }
+    ],
+    [
+      {
+        "split": "train",
+        "image": "images\\train\\1119.jpg"
+      },
+      {
+        "split": "val",
+        "image": "images\\val\\1604.jpg"
+      }
+    ],
+    [
+      {
+        "split": "train",
+        "image": "images\\train\\1133.jpg"
+      },
+      {
+        "split": "val",
+        "image": "images\\val\\1613.jpg"
+      }
+    ],
+    [
+      {
+        "split": "train",
+        "image": "images\\train\\1135.jpg"
+      },
+      {
+        "split": "val",
+        "image": "images\\val\\1614.jpg"
+      }
+    ],
+    [
+      {
+        "split": "train",
+        "image": "images\\train\\1139.jpg"
+      },
+      {
+        "split": "val",
+        "image": "images\\val\\1617.jpg"
+      }
+    ],
+    [
+      {
+        "split": "train",
+        "image": "images\\train\\1167.jpg"
+      },
+      {
+        "split": "val",
+        "image": "images\\val\\1629.jpg"
+      }
+    ],
+    [
+      {
+        "split": "train",
+        "image": "images\\train\\1179.jpg"
+      },
+      {
+        "split": "val",
+        "image": "images\\val\\1635.jpg"
+      }
+    ],
+    [
+      {
+        "split": "train",
+        "image": "images\\train\\1185.jpg"
+      },
+      {
+        "split": "val",
+        "image": "images\\val\\1637.jpg"
+      }
+    ],
+    [
+      {
+        "split": "train",
+        "image": "images\\train\\1300.jpg"
+      },
+      {
+        "split": "val",
+        "image": "images\\val\\1301.jpg"
+      }
+    ],
+    [
+      {
+        "split": "train",
+        "image": "images\\train\\1558.jpg"
+      },
+      {
+        "split": "val",
+        "image": "images\\val\\1557.jpg"
+      }
+    ],
+    [
+      {
+        "split": "train",
+        "image": "images\\train\\1566.jpg"
+      },
+      {
+        "split": "val",
+        "image": "images\\val\\1565.jpg"
+      }
+    ],
+    [
+      {
+        "split": "train",
+        "image": "images\\train\\1574.jpg"
+      },
+      {
+        "split": "val",
+        "image": "images\\val\\1079.jpg"
+      }
+    ],
+    [
+      {
+        "split": "train",
+        "image": "images\\train\\1577.jpg"
+      },
+      {
+        "split": "val",
+        "image": "images\\val\\1084.jpg"
+      }
+    ],
+    [
+      {
+        "split": "train",
+        "image": "images\\train\\1609.jpg"
+      },
+      {
+        "split": "val",
+        "image": "images\\val\\1126.jpg"
+      }
+    ],
+    [
+      {
+        "split": "train",
+        "image": "images\\train\\1627.jpg"
+      },
+      {
+        "split": "val",
+        "image": "images\\val\\1163.jpg"
+      }
+    ],
+    [
+      {
+        "split": "train",
+        "image": "images\\train\\1633.jpg"
+      },
+      {
+        "split": "val",
+        "image": "images\\val\\1175.jpg"
+      }
+    ],
+    [
+      {
+        "split": "train",
+        "image": "images\\train\\1657.jpg"
+      },
+      {
+        "split": "val",
+        "image": "images\\val\\1232.jpg"
+      }
+    ]
+  ],
+  "smoke_train_pairs": 2,
+  "batch_size": 4,
+  "official_drop_last": true,
+  "root_cause": "smoke train has 2 pairs, batch_size=4, drop_last=True yields zero batches; training loop cannot increment iter"
+}

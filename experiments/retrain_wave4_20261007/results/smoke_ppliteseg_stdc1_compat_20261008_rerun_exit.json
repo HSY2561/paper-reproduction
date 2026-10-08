@@ -1,0 +1,14 @@
+{
+  "model": "ppliteseg_stdc1",
+  "variant": "compat_patch_disk_fixed",
+  "exit_code": 0,
+  "ended_at": "2026-10-08T10:42:01.0980566+08:00",
+  "iters": 20,
+  "batch_size": 2,
+  "seed": 42,
+  "test_used": false,
+  "source": "D:\\论文复现\\experiments\\retrain_wave4_20261007\\src\\PaddleSeg-2.10.0",
+  "patch": "PPContext expand/clone",
+  "log": "D:\\论文复现\\experiments\\retrain_wave4_20261007\\logs\\smoke_ppliteseg_stdc1_compat_20261008_rerun.log",
+  "output": "D:\\论文复现\\experiments\\retrain_wave4_20261007\\training\\smoke_ppliteseg_stdc1_compat_20261008_rerun"
+}

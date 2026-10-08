@@ -1,0 +1,12 @@
+{
+  "model": "PP-LiteSeg-STDC1",
+  "completed": true,
+  "iter_completed": 18000,
+  "iter_checkpoint_present": true,
+  "exit_code": null,
+  "exit_code_source": "Launcher did not write a process exit JSON; completion is verified by the iter_18000 checkpoint and final training/evaluation log.",
+  "traceback_found": false,
+  "test_used": false,
+  "train_log": "logs/ppliteseg_stdc1_crack500_formal_train.stdout.log",
+  "output_dir": "training/ppliteseg_stdc1_crack500_formal"
+}

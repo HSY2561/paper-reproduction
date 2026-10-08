@@ -1,0 +1,25 @@
+{
+  "model": "ocrnet_hrnetw18",
+  "images": 1124,
+  "split": "Crack500 test",
+  "confusion_matrix": [
+    [
+      239863375,
+      4628857
+    ],
+    [
+      3477731,
+      10999637
+    ]
+  ],
+  "mIoU": 0.7715088888298939,
+  "crackIoU": 0.5757095920308695,
+  "precision": 0.7038193827249126,
+  "recall": 0.7597815431644758,
+  "F1": 0.7307305799780787,
+  "empty_predictions": 13,
+  "zero_overlap_images": 18,
+  "checkpoint": "C:\\retrain_wave4\\checkpoints\\ocrnet_hrnetw18\\model.pdparams",
+  "checkpoint_sha256": "de78e90ca3d5921c385cc3f82a8a694f8ef4b1d6d055f49e31750c1361416570",
+  "test_used": true
+}

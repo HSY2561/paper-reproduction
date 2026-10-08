@@ -1,0 +1,54 @@
+batch_size: 4
+iters: 18000
+model:
+  type: SegFormer
+  backbone:
+    type: MixVisionTransformer_B0
+    pretrained: https://bj.bcebos.com/paddleseg/dygraph/backbone/mix_vision_transformer_b0.tar.gz
+  embedding_dim: 256
+  num_classes: 2
+  decoder_variant: uafm_ppcontext
+optimizer:
+  type: AdamW
+  beta1: 0.9
+  beta2: 0.999
+  weight_decay: 0.01
+lr_scheduler:
+  type: PolynomialDecay
+  learning_rate: 6.0e-05
+  end_lr: 0.0
+  power: 1
+loss:
+  types:
+  - type: CrossEntropyLoss
+  coef:
+  - 1
+train_dataset:
+  type: Dataset
+  dataset_root: C:/custom_crack
+  train_path: C:/retrain_wave4/configs/train_source_disjoint.txt
+  num_classes: 2
+  mode: train
+  transforms:
+  - type: ResizeStepScaling
+    min_scale_factor: 0.75
+    max_scale_factor: 1.25
+    scale_step_size: 0.25
+  - type: RandomPaddingCrop
+    crop_size:
+    - 400
+    - 400
+  - type: RandomHorizontalFlip
+  - type: RandomDistort
+    brightness_range: 0.5
+    contrast_range: 0.5
+    saturation_range: 0.5
+  - type: Normalize
+val_dataset:
+  type: Dataset
+  dataset_root: C:/custom_crack
+  val_path: C:/retrain_wave4/configs/val_source_disjoint.txt
+  num_classes: 2
+  mode: val
+  transforms:
+  - type: Normalize

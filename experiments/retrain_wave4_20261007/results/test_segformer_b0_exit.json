@@ -1,0 +1,7 @@
+{
+  "model": "segformer_b0",
+  "model_path": "C:\\retrain_wave4\\training\\segformer_b0\\ema_best_model\\ema_model.pdparams",
+  "exit_code": 0,
+  "test_used": true,
+  "ended_at": "2026-10-07T18:47:42.8284650+08:00"
+}

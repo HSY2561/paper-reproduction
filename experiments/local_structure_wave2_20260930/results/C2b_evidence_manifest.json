@@ -1,0 +1,135 @@
+{
+  "variant": "C2b",
+  "created_at": "2026-09-30T23:52:01.479115+08:00",
+  "test_used": false,
+  "items": [
+    {
+      "path": "D:\\论文复现\\experiments\\local_structure_wave2_20260930\\configs\\C2b.yml",
+      "relative_path": "configs/C2b.yml",
+      "role": "frozen config",
+      "exists": true,
+      "sha256": "cf9c7526b0f1ecb6b9d8ca77925a2db4c24020688c1d95098bb7609a73d4ebc2",
+      "bytes": 1323
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\local_structure_wave2_20260930\\checkpoints\\C2b\\selection.json",
+      "relative_path": "checkpoints/C2b/selection.json",
+      "role": "checkpoint selection",
+      "exists": true,
+      "sha256": "78d3cb300ded9c96ef5e39ea4300073ff025a9b4a2aceb79fd3d86f9e56e2cf9",
+      "bytes": 1025
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\local_structure_wave2_20260930\\checkpoints\\C2b\\model.pdparams",
+      "relative_path": "checkpoints/C2b/model.pdparams",
+      "role": "frozen weights",
+      "exists": true,
+      "sha256": "3cb76719b317d0d460aa97b1c88b38832468129e5945e43ad4fe1e97cfecea96",
+      "bytes": 10193837
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\local_structure_wave2_20260930\\results\\C2b_exit.json",
+      "relative_path": "results/C2b_exit.json",
+      "role": "training exit receipt",
+      "exists": true,
+      "sha256": "1f86139521914c98af5bd197f101110edfafdd69d3183c9decaaaf20e0433d0b",
+      "bytes": 219
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\local_structure_wave2_20260930\\results\\C2b_launch.json",
+      "relative_path": "results/C2b_launch.json",
+      "role": "launch receipt",
+      "exists": true,
+      "sha256": "52ebdcaa0446ce71aa0124ef888d6c97c6ec87bf80816680835ccf7cb3970e28",
+      "bytes": 1947
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\local_structure_wave2_20260930\\results\\C2b_val_exit.json",
+      "relative_path": "results/C2b_val_exit.json",
+      "role": "official validation exit",
+      "exists": true,
+      "sha256": "e96059b879983dec2f0e5a349b9f5aa2dfd86401e796296050ff62de94226415",
+      "bytes": 124
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\local_structure_wave2_20260930\\logs\\C2b_train.stdout.log",
+      "relative_path": "logs/C2b_train.stdout.log",
+      "role": "training stdout",
+      "exists": true,
+      "sha256": "e69e2bd1bc22087c3f4f4282058944e70e93ead035d132a5602cf520400815d1",
+      "bytes": 64988
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\local_structure_wave2_20260930\\logs\\C2b_train.stderr.log",
+      "relative_path": "logs/C2b_train.stderr.log",
+      "role": "training stderr",
+      "exists": true,
+      "sha256": "8d0fa51e12466b2115ef0de14afc8762166e5044782c1f9effade8776fd68371",
+      "bytes": 418628
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\local_structure_wave2_20260930\\logs\\C2b_frozen_val.log",
+      "relative_path": "logs/C2b_frozen_val.log",
+      "role": "official frozen validation log",
+      "exists": true,
+      "sha256": "e48698ab70f6cabd1ee2694678be00cd96c9f5b8eb255ab48ecb759ea7e688cf",
+      "bytes": 16822
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\local_structure_wave2_20260930\\results\\C2b_val_per_image.csv",
+      "relative_path": "results/C2b_val_per_image.csv",
+      "role": "per-image official audit",
+      "exists": true,
+      "sha256": "967052d27173d985b32a1a2db8389c0dc92ab127a76b9dce4f4dd80615b3e281",
+      "bytes": 32555
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\local_structure_wave2_20260930\\results\\wave2_validation_metrics.json",
+      "relative_path": "results/wave2_validation_metrics.json",
+      "role": "global validation metrics",
+      "exists": true,
+      "sha256": "853671b1d5a05be5db38f3cd133bd9aeb53a239b86c4fce5acc3b204167374af",
+      "bytes": 11390
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\local_structure_wave2_20260930\\results\\point_refinement_location_audit.json",
+      "relative_path": "results/point_refinement_location_audit.json",
+      "role": "coarse/refined point location audit",
+      "exists": true,
+      "sha256": "1cac62affc827edc4268bfe98dc13541b3f5dbc3d92a76b5b5914ed519d0b041",
+      "bytes": 195308
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\local_structure_wave2_20260930\\provenance\\train_val_manifest_reference.json",
+      "relative_path": "provenance/train_val_manifest_reference.json",
+      "role": "train/val provenance reference",
+      "exists": true,
+      "sha256": "88cdcce05033307bb7ed03a6cbb2bcf7fc9122164d95ab4a9123c5f886d97864",
+      "bytes": 265
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\local_structure_wave2_20260930\\provenance\\wave2_source_hashes.json",
+      "relative_path": "provenance/wave2_source_hashes.json",
+      "role": "source/config hashes",
+      "exists": true,
+      "sha256": "e26f13742a30c9e51a67998fd627d70bcd6d83412937c3090fa60a32e4a2b8de",
+      "bytes": 1554
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\local_structure_wave2_20260930\\provenance\\pointrend_upstream_check.json",
+      "relative_path": "provenance/pointrend_upstream_check.json",
+      "role": "PointRend upstream verification",
+      "exists": true,
+      "sha256": "e7ad1671bbe3666c6fa5e99108e6ab0954cfaebdee734cd4502131f4f0fa9b20",
+      "bytes": 633
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\local_structure_wave2_20260930\\results\\diagnosis_contact_sheet_c0_c2b.png",
+      "relative_path": "results/diagnosis_contact_sheet_c0_c2b.png",
+      "role": "visual audit contact sheet",
+      "exists": true,
+      "sha256": "e636a9d5a60a10117fd959548a77328b1f035db943e58194a3d7cc66090bf719",
+      "bytes": 515022
+    }
+  ]
+}

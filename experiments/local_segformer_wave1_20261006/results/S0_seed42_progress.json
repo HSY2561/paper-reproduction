@@ -1,0 +1,7 @@
+{
+  "checked_at": "2026-10-07T00:38:40.1514809+08:00",
+  "status": "running",
+  "last_log_line": "[2026/10/07 00:38:40] INFO: [TRAIN] epoch: 8, iter: 2490/18000, loss: 0.0405, lr: 0.000052, batch_cost: 0.0856, reader_cost: 0.03761, ips: 46.7303 samples/sec, max_mem_reserved: 1731 MB, max_mem_allocated: 1081 MB | ETA 00:22:07",
+  "exit_json": "D:\\论文复现\\experiments\\local_segformer_wave1_20261006\\results\\S0_seed42_exit.json",
+  "test_used": false
+}

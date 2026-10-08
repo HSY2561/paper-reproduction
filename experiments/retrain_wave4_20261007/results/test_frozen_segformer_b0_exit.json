@@ -1,0 +1,8 @@
+{
+  "model": "segformer_b0",
+  "model_path": "C:\\retrain_wave4\\checkpoints\\segformer_b0\\model.pdparams",
+  "exit_code": 0,
+  "test_used": true,
+  "selection_record": "C:\\retrain_wave4\\checkpoints\\segformer_b0\\selection.json",
+  "ended_at": "2026-10-07T19:09:09.9108174+08:00"
+}

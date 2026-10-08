@@ -1,0 +1,15 @@
+{
+  "model": "PP-LiteSeg-STDC1",
+  "phase": "formal_protocol_batch4_smoke",
+  "exit_code": 0,
+  "started_at": "2026-10-08T12:13:33.6161185+08:00",
+  "ended_at": "2026-10-08T12:14:13.3762313+08:00",
+  "iters": 20,
+  "batch_size": 4,
+  "seed": 42,
+  "config": "D:\\论文复现\\experiments\\retrain_wave4_20261007\\configs\\ppliteseg_stdc1_crack500_formal.yml",
+  "source": "D:\\论文复现\\experiments\\retrain_wave4_20261007\\src\\PaddleSeg-2.10.0",
+  "output": "D:\\论文复现\\experiments\\retrain_wave4_20261007\\training\\smoke_ppliteseg_stdc1_formal_batch4_20261008",
+  "log": "D:\\论文复现\\experiments\\retrain_wave4_20261007\\logs\\smoke_ppliteseg_stdc1_formal_batch4_20261008.log",
+  "test_used": false
+}

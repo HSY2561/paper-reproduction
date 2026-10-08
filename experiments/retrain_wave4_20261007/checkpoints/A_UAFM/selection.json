@@ -1,0 +1,34 @@
+{
+  "candidates": [
+    {
+      "type": "ordinary",
+      "checkpoint": "C:\\retrain_wave4\\training\\A_UAFM\\best_model\\model.pdparams",
+      "state": {
+        "mIoU": 0.8772685563318916,
+        "Acc": 0.9912131142481572,
+        "iter": 18000
+      }
+    },
+    {
+      "type": "ema",
+      "checkpoint": "C:\\retrain_wave4\\training\\A_UAFM\\ema_best_model\\ema_model.pdparams",
+      "state": {
+        "mIoU": 0.8769134279609005,
+        "Acc": 0.9911765728966665,
+        "iter": 18000
+      }
+    }
+  ],
+  "selected": {
+    "type": "ordinary",
+    "checkpoint": "C:\\retrain_wave4\\training\\A_UAFM\\best_model\\model.pdparams",
+    "state": {
+      "mIoU": 0.8772685563318916,
+      "Acc": 0.9912131142481572,
+      "iter": 18000
+    }
+  },
+  "selection_rule": "highest validation mIoU across ordinary/EMA; no test selection",
+  "sha256": "4eaa3bcf38a425874c07a2d2940d14d51869e9b06c0e95cd903fa4de4fbb1a9c",
+  "test_used": false
+}

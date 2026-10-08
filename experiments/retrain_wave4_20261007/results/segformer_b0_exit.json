@@ -1,0 +1,9 @@
+{
+  "model": "segformer_b0",
+  "exit_code": 0,
+  "ended_at": "2026-10-07T10:27:31.5979520+08:00",
+  "seed": 42,
+  "iters": 18000,
+  "batch_size": 4,
+  "test_used": false
+}

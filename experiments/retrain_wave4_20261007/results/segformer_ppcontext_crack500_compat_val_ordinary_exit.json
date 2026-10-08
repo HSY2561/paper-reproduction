@@ -1,0 +1,7 @@
+{
+  "kind": "ordinary",
+  "checkpoint": "D:\\论文复现\\experiments\\retrain_wave4_20261007\\training\\segformer_ppcontext_crack500_compat\\best_model\\model.pdparams",
+  "exit_code": 0,
+  "test_used": false,
+  "log": "D:\\论文复现\\experiments\\retrain_wave4_20261007\\logs\\segformer_ppcontext_crack500_compat_val_ordinary.log"
+}

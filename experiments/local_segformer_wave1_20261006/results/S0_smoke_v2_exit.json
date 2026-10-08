@@ -1,0 +1,10 @@
+{
+  "exit_code": 0,
+  "ended_at": "2026-10-07T00:30:34.1996477+08:00",
+  "seed": 42,
+  "train_pairs": 8,
+  "val_pairs": 2,
+  "batch_size": 4,
+  "source": "C:\\local_wave1src",
+  "test_used": false
+}

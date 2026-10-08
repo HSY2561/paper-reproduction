@@ -1,0 +1,95 @@
+{
+  "variant": "C1b",
+  "created_at": "2026-09-30T23:52:01.496728+08:00",
+  "test_used": false,
+  "items": [
+    {
+      "path": "D:\\论文复现\\experiments\\local_structure_wave2_20260930\\configs\\C1b.yml",
+      "relative_path": "configs/C1b.yml",
+      "role": "frozen config",
+      "exists": true,
+      "sha256": "6b33c44c183ed8c2cbfbaaf3d19f01f843ad5bd772c7b9d7bbb19a385867ccaa",
+      "bytes": 1263
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\local_structure_wave2_20260930\\checkpoints\\C1b\\selection.json",
+      "relative_path": "checkpoints/C1b/selection.json",
+      "role": "checkpoint selection",
+      "exists": true,
+      "sha256": "45b9f4e72bd825b0f121e35dfdb1e89b0a9658cc90e26ff7cb287fad82c13ebd",
+      "bytes": 1238
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\local_structure_wave2_20260930\\checkpoints\\C1b\\model.pdparams",
+      "relative_path": "checkpoints/C1b/model.pdparams",
+      "role": "frozen weights",
+      "exists": true,
+      "sha256": "992fb7e47281c37f8d46cd13c8ce315975a50682a196e4d0e0ba969a9d64ecb7",
+      "bytes": 10452521
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\local_structure_wave2_20260930\\results\\C1b_val_exit.json",
+      "relative_path": "results/C1b_val_exit.json",
+      "role": "official validation exit",
+      "exists": true,
+      "sha256": "e6f786d58f0f628ca8a5c3f3e4c387bc8a58389b7739b122f5288aa0af27cda0",
+      "bytes": 124
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\local_structure_wave2_20260930\\logs\\C1b_train.stdout.log",
+      "relative_path": "logs/C1b_train.stdout.log",
+      "role": "training stdout",
+      "exists": true,
+      "sha256": "1794bcf3bf3642b9220e1bb267747285ceac06c4603473aa0373b565c78e6fdd",
+      "bytes": 65031
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\local_structure_wave2_20260930\\logs\\C1b_train.stderr.log",
+      "relative_path": "logs/C1b_train.stderr.log",
+      "role": "training stderr",
+      "exists": true,
+      "sha256": "c5a4cabbbd281447164bdefc71b75193570fa72be2218b5f1f93d15c132886d2",
+      "bytes": 336284
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\local_structure_wave2_20260930\\logs\\C1b_frozen_val.log",
+      "relative_path": "logs/C1b_frozen_val.log",
+      "role": "official frozen validation log",
+      "exists": true,
+      "sha256": "850e570e8a6e7866add2732ae32d090eb99da956bc0afc4e4fb398d988443b1a",
+      "bytes": 14161
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\local_structure_wave2_20260930\\results\\C1b_val_per_image.csv",
+      "relative_path": "results/C1b_val_per_image.csv",
+      "role": "per-image official audit",
+      "exists": true,
+      "sha256": "e9a404644a059d215f3221288298104bb3ae67f339b02d5f0ee17efc6c71bd55",
+      "bytes": 32348
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\local_structure_wave2_20260930\\results\\wave2_validation_metrics.json",
+      "relative_path": "results/wave2_validation_metrics.json",
+      "role": "global validation metrics",
+      "exists": true,
+      "sha256": "853671b1d5a05be5db38f3cd133bd9aeb53a239b86c4fce5acc3b204167374af",
+      "bytes": 11390
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\local_structure_wave2_20260930\\provenance\\train_val_manifest_reference.json",
+      "relative_path": "provenance/train_val_manifest_reference.json",
+      "role": "train/val provenance reference",
+      "exists": true,
+      "sha256": "88cdcce05033307bb7ed03a6cbb2bcf7fc9122164d95ab4a9123c5f886d97864",
+      "bytes": 265
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\local_structure_wave2_20260930\\provenance\\wave2_source_hashes.json",
+      "relative_path": "provenance/wave2_source_hashes.json",
+      "role": "source/config hashes",
+      "exists": true,
+      "sha256": "e26f13742a30c9e51a67998fd627d70bcd6d83412937c3090fa60a32e4a2b8de",
+      "bytes": 1554
+    }
+  ]
+}

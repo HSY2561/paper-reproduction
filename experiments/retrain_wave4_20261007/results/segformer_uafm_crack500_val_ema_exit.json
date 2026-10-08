@@ -1,0 +1,5 @@
+{
+  "kind": "ema",
+  "checkpoint": "D:\\论文复现\\experiments\\retrain_wave4_20261007\\training\\segformer_uafm_crack500\\ema_best_model\\ema_model.pdparams",
+  "exit_code": 0
+}

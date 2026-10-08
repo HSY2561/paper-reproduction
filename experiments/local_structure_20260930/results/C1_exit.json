@@ -1,0 +1,12 @@
+{
+  "variant": "C1",
+  "ended_at": "2026-09-30T02:52:04.4105046+08:00",
+  "config": "D:\\论文复现\\experiments\\local_structure_20260930\\configs\\C1.yml",
+  "started_at": "2026-09-30T02:09:39.4857116+08:00",
+  "exit_code": 0,
+  "test_used": false,
+  "args": [
+    "\"D:\\论文复现\\experiments\\local_structure_20260930\\src\\PaddleSeg-2.10.0\\tools\\train.py\" --config \"D:\\论文复现\\experiments\\local_structure_20260930\\configs\\C1.yml\" --save_dir \"D:\\论文复现\\experiments\\local_structure_20260930\\training\\C1\" --save_interval 1000 --log_iters 100 --keep_checkpoint_max 2 --seed 42 --num_workers 0 --use_ema --do_eval --device gpu --precision fp32"
+  ],
+  "output": "D:\\论文复现\\experiments\\local_structure_20260930\\training\\C1"
+}

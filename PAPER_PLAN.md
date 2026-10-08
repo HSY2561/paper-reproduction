@@ -248,3 +248,28 @@ CR=|C∩S|/|C|；UR=|C\S|/|C|；OR=|S\C|/|S|。在相同有效ROI、C非空且�
 候选模型正式题录与版本需在实施前核对：PIDNet A Real-Time Semantic Segmentation Network Inspired by PID Controllers；BiSeNet V2 Bilateral Network with Guided Aggregation for Real-Time Semantic Segmentation；SegFormer Simple and Efficient Design for Semantic Segmentation with Transformers。不要把三者全部笼统标为CVPR算法；BiSeNet V2与BiSeNet原版也不能混用。HrSegNet作为补充来源，核对原始网络与师兄改进版的区别。
 
 目前的大纲不依赖尚未核对完的Development of AI- and Robotics-Assisted Automated全文结论；后续相关工作扩充时应先核清题名和实际方法，再决定引用位置。
+
+## 2026-10-06 SegFormer-B0 基线方向更新
+
+根据新论文主线，本项目将 SegFormer-B0 设为精度优先主基线 S0；BiSeNetV2/C4 保留为轻量部署对照。SegFormer 的 Crack500 本地结果仅作历史参考：验证 mIoU=0.826676、裂缝 IoU=0.675882、F1=0.806599，原始 test mIoU=0.772686。正式的新基线先在自建数据 `PaddleSeg-release-2.8\dataset\custom` 上完成 smoke、seed42 训练和逐图误差诊断，再决定只做一个细节恢复模块或一个上下文模块。已有 SegFormer 运行已经使用 0.75–1.25 尺度增强和 400 裁剪，不能把相同的输入设置重复写成新消融。
+
+后续编号为 S0-custom、A（高分辨率细节/边界恢复）、B（多尺度上下文）、A+B。只有 A、B 单独通过预先门槛后才做联合。自建 test、Crack500 test 和 source-frame-disjoint test 在模型冻结前封存。边界 F1 后续统一用全局匹配计数的 harmonic mean 计算；旧 OCRNet 边界记录中的错误公式不作为新结论。
+
+详细协议、数据角色、模块位置、风险、筛选门槛和机器人验证顺序见 `D:\论文复现\SegFormer新基线与论文实验规划_20261006.md`。
+
+## 2026-10-07 自建数据审计与 S0 正式训练状态
+
+自建数据的 20 iter smoke 首次未产生训练步，原因是 smoke 清单仅 2 对图像，而官方训练器 `drop_last=True`、batch=4；该进程没有退出回执，已标记为 `aborted_no_progress`，不作为实验结果。修正为 8 对训练图像、2 对验证图像后，官方训练入口真实退出码为 0，完成训练、验证和 checkpoint 保存。
+
+对 1418/177 train/val 图像进行尺寸、标签值、像素哈希和 D4 旋转/翻转审计后，发现 18 个 train/val 图像是完全相同的图像副本或 D4 等价副本。原始清单保留用于追溯；正式 S0 使用移除训练侧重复图像的 source-disjoint 清单：train=1400、val=177。测试清单没有读取，原始数据没有修改。审计证据位于 `experiments\local_segformer_wave1_20261006\provenance\custom_train_val_audit.json`、`custom_duplicate_transform_audit.json` 和 `custom_source_disjoint_manifest.json`。
+
+S0 seed42 已在 RTX5060 上以 18,000 iter、batch4、FP32、EMA、官方 SegFormer-B0 开始正式训练。训练日志为 `experiments\local_segformer_wave1_20261006\logs\S0_seed42_train.log`，启动回执为 `results\S0_seed42_launch.json`，完成后写入 `results\S0_seed42_exit.json`。在训练未完成前不启动任何模块消融和不访问 test。
+
+
+## 2026-10-08 论文主线调整：封闭场地覆盖巡检与事件触发修复
+
+根据新的作业设想，本文不再把“裂缝循迹”作为四轮底盘的主要任务。新的系统主线是：封闭场地建图 → 完整覆盖路径巡检 → 在线裂缝分割和全局裂缝地图 → 事件触发安全停车 → 停车后二次观测 → 三轴/云台精定位修复 → 修复复检 → 从未完成的覆盖路径恢复。
+
+底盘只跟随场地覆盖路径，裂缝中心线只用于停车后生成三轴机构的修复轨迹。底盘仍需要普通导航控制器，但它不再被表述为裂缝中心线 PID 循迹。建议采用 boustrophedon/cellular decomposition 生成完整覆盖路径，使用地图导航和 waypoint 执行；如果平台支持 ROS 2，Nav2 的 planner、controller、behavior tree 和 Coverage Server 可作为工程实现依据。详细方案、文献和验收门槛见 `封闭场地自主巡检与裂缝修复论文规划_20261008.md`。
+
+新的论文贡献应围绕覆盖完整性、感知—坐标—修复接口和“停车—重观测—修复—恢复”任务闭环提出，不能把成熟的覆盖规划、Nav2、骨架化或样条拟合单独宣称为原创算法。实验主对照改为：只巡检、直接使用行驶帧坐标、停车后二次观测并进行三轴修复；评价同时报告区域覆盖率、裂缝地图召回率、投影误差、喷嘴轨迹误差、CR/UR/OR/CUI、任务完成率和恢复失败率。

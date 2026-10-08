@@ -1,0 +1,36 @@
+{
+  "model": "ocrnet_hrnetw18",
+  "selection_metric": "validation_mIoU",
+  "candidates": [
+    {
+      "variant": "best_model",
+      "checkpoint": "C:\\retrain_wave4\\training\\ocrnet_hrnetw18\\best_model\\model.pdparams",
+      "state": {
+        "mIoU": 0.8227357600895859,
+        "Acc": 0.9774013439003661,
+        "iter": 16000
+      }
+    },
+    {
+      "variant": "ema_best_model",
+      "checkpoint": "C:\\retrain_wave4\\training\\ocrnet_hrnetw18\\ema_best_model\\ema_model.pdparams",
+      "state": {
+        "mIoU": 0.8207086259730316,
+        "Acc": 0.9775335347595533,
+        "iter": 17000
+      }
+    }
+  ],
+  "selected": {
+    "variant": "best_model",
+    "checkpoint": "C:\\retrain_wave4\\training\\ocrnet_hrnetw18\\best_model\\model.pdparams",
+    "state": {
+      "mIoU": 0.8227357600895859,
+      "Acc": 0.9774013439003661,
+      "iter": 16000
+    }
+  },
+  "sha256": "de78e90ca3d5921c385cc3f82a8a694f8ef4b1d6d055f49e31750c1361416570",
+  "test_used_for_selection": false,
+  "frozen_at": "2026-10-07T16:49:41.140077+08:00"
+}

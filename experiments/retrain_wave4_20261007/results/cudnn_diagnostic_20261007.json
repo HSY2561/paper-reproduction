@@ -1,0 +1,100 @@
+{
+  "date": "2026-10-07",
+  "gpu": "NVIDIA GeForce RTX 5060",
+  "driver": "596.21",
+  "paddle": "3.4.0",
+  "cuda": "12.9",
+  "cudnn": "9.9",
+  "diagnosis": "Windows Paddle/cuDNN convolution-pooling backward incompatibility on RTX 5060 for specific tensor graphs",
+  "original_failures": {
+    "segformer_ppcontext": "CUDNN_STATUS_INTERNAL_ERROR/EXECUTION_FAILED at Conv2dGradNodeFinal",
+    "ppliteseg": "CUDNN_STATUS_EXECUTION_FAILED at Conv2dGradNodeFinal",
+    "pidnet": "CUDNN_STATUS_EXECUTION_FAILED at Pool2dGradNode",
+    "deeplabv3p": "CUDNN_STATUS_INTERNAL_ERROR/EXECUTION_FAILED at Conv2dGradNodeFinal or BatchNormGradNode"
+  },
+  "tests": {
+    "plain_conv_backward": "pass",
+    "segformer_ppcontext_original": "fail",
+    "segformer_ppcontext_compat_2iter": "pass",
+    "segformer_ppcontext_compat_20iter": "pass",
+    "ppliteseg_compat_2iter": "pass",
+    "pidnet_compat_2iter": "fail_pool2d_grad",
+    "deeplabv3p_compat_2iter": "fail_batchnorm_or_conv_grad",
+    "paddle_blackwell_special_wheel": "still_failed_on_same_graph",
+    "pidnet_cpu_batch1_smoke": "pass",
+    "deeplabv3p_cpu_batch1_smoke": "pass"
+  },
+  "compat_patch": "In official PPContextModule forward, use expand for 1x1 branch and clone interpolation outputs; numerically equivalent, only avoids problematic memory/kernel path",
+  "test_used": false,
+  "deeplab_aspp_pool_patch": "CustomAvgPool2D + clone interpolation tested; smoke still fails in another Conv2dGradNode",
+  "ppcontext_formal_pid": 45520,
+  "formal_training": "completed_18000_iter",
+  "formal_training_exit_code": null,
+  "formal_training_exit_code_source": "launcher did not write exit JSON; completion verified from iter_18000 and final eval",
+  "formal_validation": {
+    "best_variant": "ema_best_model",
+    "best_iter": 11000,
+    "mIoU": 0.8249022475,
+    "crackIoU": 0.6727544534,
+    "F1": 0.8043672543,
+    "boundary_F1": 0.5775807443,
+    "test_used": false,
+    "gate_passed": false
+  },
+  "ppliteseg_current_official_smoke": {
+    "first_exit_code": 1,
+    "first_error": "OSError: [Errno 28] No space left on device while saving optimizer state after train/val completed",
+    "rerun_exit_code": 0,
+    "rerun_iters": 20,
+    "rerun_validation_images": 348,
+    "rerun_val_mIoU": 0.4747,
+    "rerun_val_crackIoU": 0.0343,
+    "rerun_val_precision": 0.088,
+    "rerun_val_recall": 0.0532,
+    "rerun_output": "training/smoke_ppliteseg_stdc1_compat_20261008_rerun",
+    "rerun_log": "logs/smoke_ppliteseg_stdc1_compat_20261008_rerun.log",
+    "test_used": false
+  },
+  "disk_cleanup": {
+    "removed_generated_envs": [
+      "envs/paddle_blackwell312",
+      "envs/paddle_blackwell_test"
+    ],
+    "removed_temp_output": "training/smoke_ppliteseg_stdc1_compat_20261008",
+    "free_bytes_after_cleanup": 5169872896
+  },
+  "pidnet_current_smoke": {
+    "original_exit_code": 1,
+    "compat_pool_patch_exit_code": 1,
+    "nocudnn_batch1_exit_code": 1,
+    "error": "CUDNN_STATUS_INTERNAL_ERROR/EXECUTION_FAILED at Conv2dGradNodeFinal after pool compatibility rewrite, SyncBatchNorm->BatchNorm2D and FLAGS_use_cudnn=0",
+    "test_used": false,
+    "cpu_batch1_exit_code": 0
+  },
+  "deeplabv3p_current_smoke": {
+    "original_exit_code": 1,
+    "aspp_pool_patch_exit_code": 1,
+    "nocudnn_batch1_exit_code": 1,
+    "error": "CUDNN_STATUS_INTERNAL_ERROR at Conv2dGradNodeFinal after ASPP CustomAvgPool2D rewrite and FLAGS_use_cudnn=0",
+    "test_used": false,
+    "cpu_batch1_exit_code": 0
+  },
+  "conclusion": "PP-LiteSeg GPU smoke and its formal 18,000-iter training are complete after disk/compatibility repair, but its Crack500 validation gate failed and test was not accessed. PIDNet-S and DeepLabV3P run on CPU but remain blocked by RTX5060 Windows Paddle 3.4/cuDNN convolution backward compatibility on GPU and have no valid GPU training/test result.",
+  "ppliteseg_formal_training": {
+    "status": "completed_18000_iter",
+    "config": "configs/ppliteseg_stdc1_crack500_formal.yml",
+    "selected_variant": "best_model",
+    "selected_iter": 8000,
+    "val_mIoU": 0.8205094481314313,
+    "val_crackIoU": 0.6641036699986556,
+    "val_precision": 0.8250009671155241,
+    "val_recall": 0.7729951323946548,
+    "val_F1": 0.7981518002411377,
+    "val_boundary_F1": 0.5643136376374424,
+    "gate_passed": false,
+    "test_used": false,
+    "exit_code": null,
+    "exit_code_source": "launcher did not write exit JSON; completion verified by iter_18000 and final val.py evaluation",
+    "selection_json": "results/ppliteseg_stdc1_crack500_formal_selection.json"
+  }
+}

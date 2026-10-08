@@ -1,0 +1,106 @@
+--- baseline/bisenet.py
++++ structure/bisenet.py
+@@ -46,7 +46,8 @@
+                  in_channels=3,
+                  pretrained=None,
+                  context_type='none',
+-                 fusion_type='bga'):
++                 fusion_type='bga',
++                 shape_stream=False):
+         super().__init__()
+ 
+         C1, C2, C3 = 64, 64, 128
+@@ -57,7 +58,7 @@
+ 
+         self.db = DetailBranch(in_channels, db_channels)
+         self.sb = SemanticBranch(in_channels, sb_channels,
+-                                 context_type=context_type)
++                                 context_type='none' if context_type == 'ocr' else context_type)
+ 
+         if fusion_type == 'uafm_sp':
+             self.bga = layers.UAFM_SpAtten(mid_channels, mid_channels,
+@@ -74,10 +75,67 @@
+         self.pretrained = pretrained
+         self.init_weight()
+ 
+-    def forward(self, x):
+-        dfm = self.db(x)
++        # Integration only: reuse PaddleSeg OCRNet's published OCR operators.
++        # Construct additions after the original initialization so C0 and the
++        # shared backbone initialization remain unchanged for a fixed seed.
++        self.use_ocr = context_type == 'ocr'
++        self.use_shape = shape_stream
++        if self.use_ocr:
++            from paddleseg.models.ocrnet import SpatialGatherBlock, SpatialOCRModule
++            self.ocr_gather = SpatialGatherBlock(C5, num_classes)
++            self.ocr_context = SpatialOCRModule(C5, C5 // 2, C5)
++
++        if self.use_shape:
++            # GSCNNHead's three-stage shape stream, with its official blocks.
++            # Adaptations: use the 1/4 detail feature (64 channels), guide it
++            # with BiSeNetV2's semantic stages, and concatenate its edge signal
++            # with the existing BGA feature. No ASPP or GSCNN decoder is used.
++            from paddleseg.models.gscnn import GatedSpatailConv2d
++            from paddleseg.models.backbones.resnet_vd import BasicBlock
++            self.shape_guides = nn.LayerList([
++                nn.Conv2D(c, 1, 1) for c in (C3, C4, C5)
++            ])
++            self.shape_res = nn.LayerList([
++                BasicBlock(c, c, stride=1) for c in (64, 32, 16)
++            ])
++            self.shape_reduce = nn.LayerList([
++                nn.Conv2D(a, b, 1) for a, b in ((64, 32), (32, 16), (16, 8))
++            ])
++            self.shape_gates = nn.LayerList([
++                GatedSpatailConv2d(c, c) for c in (32, 16, 8)
++            ])
++            self.shape_edge = nn.Conv2D(8, 1, 1, bias_attr=False)
++            self.shape_fusion = layers.ConvBNReLU(mid_channels + 1, mid_channels, 1)
++
++    def forward(self, x):
++        if self.use_shape:
++            dfm = x
++            for index, layer in enumerate(self.db.convs):
++                dfm = layer(dfm)
++                if index == 4:
++                    shape_feature = dfm
++        else:
++            dfm = self.db(x)
+         feat1, feat2, feat3, feat4, sfm = self.sb(x)
+-        logit = self.head(self.bga(dfm, sfm))
++        if self.use_ocr:
++            # Existing supervised auxiliary logits provide OCR's soft regions.
++            # Reuse this result for aux loss; do not run the BN/dropout twice.
++            logit4 = self.aux_head4(feat4)
++            regions = self.ocr_gather(sfm, logit4)
++            sfm = self.ocr_context(sfm, regions)
++        fused = self.bga(dfm, sfm)
++        if self.use_shape:
++            for guide, res, reduce, gate, semantic in zip(
++                    self.shape_guides, self.shape_res, self.shape_reduce,
++                    self.shape_gates, (feat2, feat3, feat4)):
++                guide_map = F.interpolate(guide(semantic), shape_feature.shape[2:],
++                                          mode='bilinear', align_corners=self.align_corners)
++                shape_feature = gate(reduce(res(shape_feature)), guide_map)
++            edge_logit = self.shape_edge(shape_feature)
++            edge_for_fusion = F.interpolate(F.sigmoid(edge_logit), fused.shape[2:],
++                                            mode='bilinear', align_corners=self.align_corners)
++            fused = self.shape_fusion(paddle.concat([fused, edge_for_fusion], axis=1))
++        logit = self.head(fused)
+ 
+         if not self.training:
+             logit_list = [logit]
+@@ -85,8 +143,12 @@
+             logit1 = self.aux_head1(feat1)
+             logit2 = self.aux_head2(feat2)
+             logit3 = self.aux_head3(feat3)
+-            logit4 = self.aux_head4(feat4)
++            if not self.use_ocr:
++                logit4 = self.aux_head4(feat4)
+             logit_list = [logit, logit1, logit2, logit3, logit4]
++            if self.use_shape:
++                # Official BCELoss(edge_label=True) consumes raw edge logits.
++                logit_list.append(edge_logit)
+ 
+         logit_list = [
+             F.interpolate(logit,

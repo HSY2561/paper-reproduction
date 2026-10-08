@@ -1,0 +1,7 @@
+{
+  "status": "aborted_no_progress",
+  "exit_code": null,
+  "reason": "No log/checkpoint progress after startup; process terminated for diagnosis",
+  "log": "D:\\论文复现\\experiments\\local_segformer_wave1_20261006\\logs\\S0_smoke.log",
+  "timestamp": "2026-10-06T22:27:48.4531375+08:00"
+}

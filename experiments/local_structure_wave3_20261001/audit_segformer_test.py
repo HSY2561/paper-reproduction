@@ -1,0 +1,1 @@
+exec(open(r'C:\local_wave3\audit_C4_test.py').read().replace('C4_test.yml','public_segformer_b0_test.yml').replace('C:\\local_wave3\\checkpoints\\C4\\model.pdparams','C:\\local_wave3\\checkpoints\\public_segformer_b0\\model.pdparams').replace('C4_test_metrics.json','public_segformer_b0_test_metrics.json'))

@@ -1,0 +1,6 @@
+{
+  "model": "deeplabv3p_b1",
+  "exit_code": 1,
+  "ended_at": "2026-10-07T10:02:10.9188586+08:00",
+  "test_used": false
+}

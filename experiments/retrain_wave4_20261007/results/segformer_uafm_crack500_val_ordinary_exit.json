@@ -1,0 +1,5 @@
+{
+  "kind": "ordinary",
+  "checkpoint": "D:\\论文复现\\experiments\\retrain_wave4_20261007\\training\\segformer_uafm_crack500\\best_model\\model.pdparams",
+  "exit_code": 0
+}

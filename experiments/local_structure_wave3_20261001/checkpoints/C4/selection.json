@@ -1,0 +1,12 @@
+{
+  "variant": "C4_inputcrop",
+  "training_exit_code": 0,
+  "completed_iter": 18000,
+  "selection_split": "val",
+  "selected_type": "ema",
+  "selected_iter": 12000,
+  "checkpoint": "D:\\论文复现\\experiments\\local_structure_wave3_20261001\\checkpoints\\C4\\model.pdparams",
+  "sha256": "8bf6ea85dab203036a05b06e9b6f489ca08cbdf75e47084da9d0dd3db99e4555",
+  "config_sha256": "740ecff73de65bdbb17c5b82521704f283d7259e2121bde637f7114609bb95d0",
+  "test_used": false
+}

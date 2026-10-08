@@ -1,0 +1,359 @@
+[2026/10/08 10:43:46] INFO: 
+------------Environment Information-------------
+platform: Windows-11-10.0.26200-SP0
+Python: 3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]
+Paddle compiled with cuda: True
+NVCC: Build cuda_13.4.r13.4/compiler.38657139_0
+cudnn: 90.9
+GPUs used: 1
+CUDA_VISIBLE_DEVICES: None
+GPU: ['GPU 0: NVIDIA GeForce']
+PaddleSeg: 0.0.0.dev0
+PaddlePaddle: 3.4.0
+OpenCV: 4.11.0
+------------------------------------------------
+[2026/10/08 10:43:46] INFO: 
+---------------Config Information---------------
+batch_size: 1
+iters: 2
+train_dataset:
+  dataset_root: C:/Users/user/algolab_data
+  mode: train
+  num_classes: 2
+  train_path: C:/Users/user/algolab_data/train.txt
+  transforms:
+  - type: AddEdgeLabel
+  - max_scale_factor: 2.1
+    min_scale_factor: 0.5
+    scale_step_size: 0.1
+    type: ResizeStepScaling
+  - crop_size:
+    - 400
+    - 400
+    type: RandomPaddingCrop
+  - type: RandomHorizontalFlip
+  - mean:
+    - 0.485
+    - 0.456
+    - 0.406
+    std:
+    - 0.229
+    - 0.224
+    - 0.225
+    type: Normalize
+  type: Dataset
+val_dataset:
+  dataset_root: C:/Users/user/algolab_data
+  mode: val
+  num_classes: 2
+  transforms:
+  - mean:
+    - 0.485
+    - 0.456
+    - 0.406
+    std:
+    - 0.229
+    - 0.224
+    - 0.225
+    type: Normalize
+  type: Dataset
+  val_path: C:/Users/user/algolab_data/val.txt
+optimizer:
+  momentum: 0.9
+  type: SGD
+  weight_decay: 0.0005
+lr_scheduler:
+  end_lr: 0.0
+  learning_rate: 0.01
+  power: 0.9
+  type: PolynomialDecay
+loss:
+  coef:
+  - 0.4
+  - 1.0
+  - 10.0
+  - 1.0
+  types:
+  - avg_non_ignore: false
+    type: CrossEntropyLoss
+    weight:
+    - 1.0
+    - 1.0
+  - min_kept: 131072
+    thresh: 0.9
+    type: OhemCrossEntropyLoss
+    weight:
+    - 1.0
+    - 1.0
+  - edge_label: true
+    type: BCELoss
+    weight: dynamic
+  - min_kept: 131072
+    thresh: 0.9
+    type: OhemCrossEntropyLoss
+    weight:
+    - 1.0
+    - 1.0
+model:
+  backbone:
+    type: PIDNet_Small
+  head_channels: 128
+  num_classes: 2
+  pretrained: https://paddleseg.bj.bcebos.com/dygraph/pidnet/pidnet_small_imagenet1k.pdparams
+  type: PIDNet
+std:
+- 0.229
+- 0.224
+- 0.225
+weight:
+- 1.0
+- 1.0
+mean:
+- 0.485
+- 0.456
+- 0.406
+------------------------------------------------
+
+[2026/10/08 10:43:46] INFO: Set device: gpu
+[2026/10/08 10:43:46] INFO: Use the following config to build model
+model:
+  backbone:
+    type: PIDNet_Small
+  head_channels: 128
+  num_classes: 2
+  pretrained: https://paddleseg.bj.bcebos.com/dygraph/pidnet/pidnet_small_imagenet1k.pdparams
+  type: PIDNet
+WARNING: Logging before InitGoogleLogging() is written to STDERR
+W1008 10:43:46.249387 24112 gpu_resources.cc:116] Please NOTE: device: 0, GPU Compute Capability: 12.0, Driver API Version: 13.2, Runtime API Version: 12.9
+[2026/10/08 10:43:46] INFO: Loading pretrained model from https://paddleseg.bj.bcebos.com/dygraph/pidnet/pidnet_small_imagenet1k.pdparams
+[2026/10/08 10:43:46] WARNING: backbone.d_branch_layers.0.conv_bn_relu._conv.weight is not in pretrained model
+[2026/10/08 10:43:46] WARNING: backbone.d_branch_layers.0.conv_bn_relu._batch_norm.weight is not in pretrained model
+[2026/10/08 10:43:46] WARNING: backbone.d_branch_layers.0.conv_bn_relu._batch_norm.bias is not in pretrained model
+[2026/10/08 10:43:46] WARNING: backbone.d_branch_layers.0.conv_bn_relu._batch_norm._mean is not in pretrained model
+[2026/10/08 10:43:46] WARNING: backbone.d_branch_layers.0.conv_bn_relu._batch_norm._variance is not in pretrained model
+[2026/10/08 10:43:46] WARNING: backbone.d_branch_layers.0.conv_bn._conv.weight is not in pretrained model
+[2026/10/08 10:43:46] WARNING: backbone.d_branch_layers.0.conv_bn._batch_norm.weight is not in pretrained model
+[2026/10/08 10:43:46] WARNING: backbone.d_branch_layers.0.conv_bn._batch_norm.bias is not in pretrained model
+[2026/10/08 10:43:46] WARNING: backbone.d_branch_layers.0.conv_bn._batch_norm._mean is not in pretrained model
+[2026/10/08 10:43:46] WARNING: backbone.d_branch_layers.0.conv_bn._batch_norm._variance is not in pretrained model
+[2026/10/08 10:43:46] WARNING: backbone.d_branch_layers.0.downsample._conv.weight is not in pretrained model
+[2026/10/08 10:43:46] WARNING: backbone.d_branch_layers.0.downsample._batch_norm.weight is not in pretrained model
+[2026/10/08 10:43:46] WARNING: backbone.d_branch_layers.0.downsample._batch_norm.bias is not in pretrained model
+[2026/10/08 10:43:46] WARNING: backbone.d_branch_layers.0.downsample._batch_norm._mean is not in pretrained model
+[2026/10/08 10:43:46] WARNING: backbone.d_branch_layers.0.downsample._batch_norm._variance is not in pretrained model
+[2026/10/08 10:43:46] WARNING: backbone.d_branch_layers.1.0.conv_bn_relu1._conv.weight is not in pretrained model
+[2026/10/08 10:43:46] WARNING: backbone.d_branch_layers.1.0.conv_bn_relu1._batch_norm.weight is not in pretrained model
+[2026/10/08 10:43:46] WARNING: backbone.d_branch_layers.1.0.conv_bn_relu1._batch_norm.bias is not in pretrained model
+[2026/10/08 10:43:46] WARNING: backbone.d_branch_layers.1.0.conv_bn_relu1._batch_norm._mean is not in pretrained model
+[2026/10/08 10:43:46] WARNING: backbone.d_branch_layers.1.0.conv_bn_relu1._batch_norm._variance is not in pretrained model
+[2026/10/08 10:43:46] WARNING: backbone.d_branch_layers.1.0.conv_bn_relu2._conv.weight is not in pretrained model
+[2026/10/08 10:43:46] WARNING: backbone.d_branch_layers.1.0.conv_bn_relu2._batch_norm.weight is not in pretrained model
+[2026/10/08 10:43:46] WARNING: backbone.d_branch_layers.1.0.conv_bn_relu2._batch_norm.bias is not in pretrained model
+[2026/10/08 10:43:46] WARNING: backbone.d_branch_layers.1.0.conv_bn_relu2._batch_norm._mean is not in pretrained model
+[2026/10/08 10:43:46] WARNING: backbone.d_branch_layers.1.0.conv_bn_relu2._batch_norm._variance is not in pretrained model
+[2026/10/08 10:43:46] WARNING: backbone.d_branch_layers.1.0.conv_bn._conv.weight is not in pretrained model
+[2026/10/08 10:43:46] WARNING: backbone.d_branch_layers.1.0.conv_bn._batch_norm.weight is not in pretrained model
+[2026/10/08 10:43:46] WARNING: backbone.d_branch_layers.1.0.conv_bn._batch_norm.bias is not in pretrained model
+[2026/10/08 10:43:46] WARNING: backbone.d_branch_layers.1.0.conv_bn._batch_norm._mean is not in pretrained model
+[2026/10/08 10:43:46] WARNING: backbone.d_branch_layers.1.0.conv_bn._batch_norm._variance is not in pretrained model
+[2026/10/08 10:43:46] WARNING: backbone.d_branch_layers.1.0.downsample._conv.weight is not in pretrained model
+[2026/10/08 10:43:46] WARNING: backbone.d_branch_layers.1.0.downsample._batch_norm.weight is not in pretrained model
+[2026/10/08 10:43:46] WARNING: backbone.d_branch_layers.1.0.downsample._batch_norm.bias is not in pretrained model
+[2026/10/08 10:43:46] WARNING: backbone.d_branch_layers.1.0.downsample._batch_norm._mean is not in pretrained model
+[2026/10/08 10:43:46] WARNING: backbone.d_branch_layers.1.0.downsample._batch_norm._variance is not in pretrained model
+[2026/10/08 10:43:46] WARNING: backbone.d_branch_layers.2.0.conv_bn_relu1._conv.weight is not in pretrained model
+[2026/10/08 10:43:46] WARNING: backbone.d_branch_layers.2.0.conv_bn_relu1._batch_norm.weight is not in pretrained model
+[2026/10/08 10:43:46] WARNING: backbone.d_branch_layers.2.0.conv_bn_relu1._batch_norm.bias is not in pretrained model
+[2026/10/08 10:43:46] WARNING: backbone.d_branch_layers.2.0.conv_bn_relu1._batch_norm._mean is not in pretrained model
+[2026/10/08 10:43:46] WARNING: backbone.d_branch_layers.2.0.conv_bn_relu1._batch_norm._variance is not in pretrained model
+[2026/10/08 10:43:46] WARNING: backbone.d_branch_layers.2.0.conv_bn_relu2._conv.weight is not in pretrained model
+[2026/10/08 10:43:46] WARNING: backbone.d_branch_layers.2.0.conv_bn_relu2._batch_norm.weight is not in pretrained model
+[2026/10/08 10:43:46] WARNING: backbone.d_branch_layers.2.0.conv_bn_relu2._batch_norm.bias is not in pretrained model
+[2026/10/08 10:43:46] WARNING: backbone.d_branch_layers.2.0.conv_bn_relu2._batch_norm._mean is not in pretrained model
+[2026/10/08 10:43:46] WARNING: backbone.d_branch_layers.2.0.conv_bn_relu2._batch_norm._variance is not in pretrained model
+[2026/10/08 10:43:46] WARNING: backbone.d_branch_layers.2.0.conv_bn._conv.weight is not in pretrained model
+[2026/10/08 10:43:46] WARNING: backbone.d_branch_layers.2.0.conv_bn._batch_norm.weight is not in pretrained model
+[2026/10/08 10:43:46] WARNING: backbone.d_branch_layers.2.0.conv_bn._batch_norm.bias is not in pretrained model
+[2026/10/08 10:43:46] WARNING: backbone.d_branch_layers.2.0.conv_bn._batch_norm._mean is not in pretrained model
+[2026/10/08 10:43:46] WARNING: backbone.d_branch_layers.2.0.conv_bn._batch_norm._variance is not in pretrained model
+[2026/10/08 10:43:46] WARNING: backbone.d_branch_layers.2.0.downsample._conv.weight is not in pretrained model
+[2026/10/08 10:43:46] WARNING: backbone.d_branch_layers.2.0.downsample._batch_norm.weight is not in pretrained model
+[2026/10/08 10:43:46] WARNING: backbone.d_branch_layers.2.0.downsample._batch_norm.bias is not in pretrained model
+[2026/10/08 10:43:46] WARNING: backbone.d_branch_layers.2.0.downsample._batch_norm._mean is not in pretrained model
+[2026/10/08 10:43:46] WARNING: backbone.d_branch_layers.2.0.downsample._batch_norm._variance is not in pretrained model
+[2026/10/08 10:43:46] WARNING: backbone.spp.scales.0.0.weight is not in pretrained model
+[2026/10/08 10:43:46] WARNING: backbone.spp.scales.0.0.bias is not in pretrained model
+[2026/10/08 10:43:46] WARNING: backbone.spp.scales.0.0._mean is not in pretrained model
+[2026/10/08 10:43:46] WARNING: backbone.spp.scales.0.0._variance is not in pretrained model
+[2026/10/08 10:43:46] WARNING: backbone.spp.scales.0.2.weight is not in pretrained model
+[2026/10/08 10:43:46] WARNING: backbone.spp.scales.1.1.0.weight is not in pretrained model
+[2026/10/08 10:43:46] WARNING: backbone.spp.scales.1.1.0.bias is not in pretrained model
+[2026/10/08 10:43:46] WARNING: backbone.spp.scales.1.1.0._mean is not in pretrained model
+[2026/10/08 10:43:46] WARNING: backbone.spp.scales.1.1.0._variance is not in pretrained model
+[2026/10/08 10:43:46] WARNING: backbone.spp.scales.1.1.2.weight is not in pretrained model
+[2026/10/08 10:43:46] WARNING: backbone.spp.scales.2.1.0.weight is not in pretrained model
+[2026/10/08 10:43:46] WARNING: backbone.spp.scales.2.1.0.bias is not in pretrained model
+[2026/10/08 10:43:46] WARNING: backbone.spp.scales.2.1.0._mean is not in pretrained model
+[2026/10/08 10:43:46] WARNING: backbone.spp.scales.2.1.0._variance is not in pretrained model
+[2026/10/08 10:43:46] WARNING: backbone.spp.scales.2.1.2.weight is not in pretrained model
+[2026/10/08 10:43:46] WARNING: backbone.spp.scales.3.1.0.weight is not in pretrained model
+[2026/10/08 10:43:46] WARNING: backbone.spp.scales.3.1.0.bias is not in pretrained model
+[2026/10/08 10:43:46] WARNING: backbone.spp.scales.3.1.0._mean is not in pretrained model
+[2026/10/08 10:43:46] WARNING: backbone.spp.scales.3.1.0._variance is not in pretrained model
+[2026/10/08 10:43:46] WARNING: backbone.spp.scales.3.1.2.weight is not in pretrained model
+[2026/10/08 10:43:46] WARNING: backbone.spp.scales.4.1.0.weight is not in pretrained model
+[2026/10/08 10:43:46] WARNING: backbone.spp.scales.4.1.0.bias is not in pretrained model
+[2026/10/08 10:43:46] WARNING: backbone.spp.scales.4.1.0._mean is not in pretrained model
+[2026/10/08 10:43:46] WARNING: backbone.spp.scales.4.1.0._variance is not in pretrained model
+[2026/10/08 10:43:46] WARNING: backbone.spp.scales.4.1.2.weight is not in pretrained model
+[2026/10/08 10:43:46] WARNING: backbone.spp.processes.0.weight is not in pretrained model
+[2026/10/08 10:43:46] WARNING: backbone.spp.processes.0.bias is not in pretrained model
+[2026/10/08 10:43:46] WARNING: backbone.spp.processes.0._mean is not in pretrained model
+[2026/10/08 10:43:46] WARNING: backbone.spp.processes.0._variance is not in pretrained model
+[2026/10/08 10:43:46] WARNING: backbone.spp.processes.2.weight is not in pretrained model
+[2026/10/08 10:43:46] WARNING: backbone.spp.compression.0.weight is not in pretrained model
+[2026/10/08 10:43:46] WARNING: backbone.spp.compression.0.bias is not in pretrained model
+[2026/10/08 10:43:46] WARNING: backbone.spp.compression.0._mean is not in pretrained model
+[2026/10/08 10:43:46] WARNING: backbone.spp.compression.0._variance is not in pretrained model
+[2026/10/08 10:43:46] WARNING: backbone.spp.compression.2.weight is not in pretrained model
+[2026/10/08 10:43:46] WARNING: backbone.spp.shortcut.0.weight is not in pretrained model
+[2026/10/08 10:43:46] WARNING: backbone.spp.shortcut.0.bias is not in pretrained model
+[2026/10/08 10:43:46] WARNING: backbone.spp.shortcut.0._mean is not in pretrained model
+[2026/10/08 10:43:46] WARNING: backbone.spp.shortcut.0._variance is not in pretrained model
+[2026/10/08 10:43:46] WARNING: backbone.spp.shortcut.2.weight is not in pretrained model
+[2026/10/08 10:43:46] WARNING: backbone.dfm.f_p._conv.weight is not in pretrained model
+[2026/10/08 10:43:46] WARNING: backbone.dfm.f_p._batch_norm.weight is not in pretrained model
+[2026/10/08 10:43:46] WARNING: backbone.dfm.f_p._batch_norm.bias is not in pretrained model
+[2026/10/08 10:43:46] WARNING: backbone.dfm.f_p._batch_norm._mean is not in pretrained model
+[2026/10/08 10:43:46] WARNING: backbone.dfm.f_p._batch_norm._variance is not in pretrained model
+[2026/10/08 10:43:46] WARNING: backbone.dfm.f_i._conv.weight is not in pretrained model
+[2026/10/08 10:43:46] WARNING: backbone.dfm.f_i._batch_norm.weight is not in pretrained model
+[2026/10/08 10:43:46] WARNING: backbone.dfm.f_i._batch_norm.bias is not in pretrained model
+[2026/10/08 10:43:46] WARNING: backbone.dfm.f_i._batch_norm._mean is not in pretrained model
+[2026/10/08 10:43:46] WARNING: backbone.dfm.f_i._batch_norm._variance is not in pretrained model
+[2026/10/08 10:43:46] WARNING: backbone.diff_1._conv.weight is not in pretrained model
+[2026/10/08 10:43:46] WARNING: backbone.diff_1._batch_norm.weight is not in pretrained model
+[2026/10/08 10:43:46] WARNING: backbone.diff_1._batch_norm.bias is not in pretrained model
+[2026/10/08 10:43:46] WARNING: backbone.diff_1._batch_norm._mean is not in pretrained model
+[2026/10/08 10:43:46] WARNING: backbone.diff_1._batch_norm._variance is not in pretrained model
+[2026/10/08 10:43:46] WARNING: backbone.diff_2._conv.weight is not in pretrained model
+[2026/10/08 10:43:46] WARNING: backbone.diff_2._batch_norm.weight is not in pretrained model
+[2026/10/08 10:43:46] WARNING: backbone.diff_2._batch_norm.bias is not in pretrained model
+[2026/10/08 10:43:46] WARNING: backbone.diff_2._batch_norm._mean is not in pretrained model
+[2026/10/08 10:43:46] WARNING: backbone.diff_2._batch_norm._variance is not in pretrained model
+[2026/10/08 10:43:46] WARNING: decode_head.i_head.conv.0.weight is not in pretrained model
+[2026/10/08 10:43:46] WARNING: decode_head.i_head.conv.0.bias is not in pretrained model
+[2026/10/08 10:43:46] WARNING: decode_head.i_head.conv.0._mean is not in pretrained model
+[2026/10/08 10:43:46] WARNING: decode_head.i_head.conv.0._variance is not in pretrained model
+[2026/10/08 10:43:46] WARNING: decode_head.i_head.conv.2.weight is not in pretrained model
+[2026/10/08 10:43:46] WARNING: decode_head.i_head.norm.weight is not in pretrained model
+[2026/10/08 10:43:46] WARNING: decode_head.i_head.norm.bias is not in pretrained model
+[2026/10/08 10:43:46] WARNING: decode_head.i_head.norm._mean is not in pretrained model
+[2026/10/08 10:43:46] WARNING: decode_head.i_head.norm._variance is not in pretrained model
+[2026/10/08 10:43:46] WARNING: decode_head.p_head.conv.0.weight is not in pretrained model
+[2026/10/08 10:43:46] WARNING: decode_head.p_head.conv.0.bias is not in pretrained model
+[2026/10/08 10:43:46] WARNING: decode_head.p_head.conv.0._mean is not in pretrained model
+[2026/10/08 10:43:46] WARNING: decode_head.p_head.conv.0._variance is not in pretrained model
+[2026/10/08 10:43:46] WARNING: decode_head.p_head.conv.2.weight is not in pretrained model
+[2026/10/08 10:43:46] WARNING: decode_head.p_head.norm.weight is not in pretrained model
+[2026/10/08 10:43:46] WARNING: decode_head.p_head.norm.bias is not in pretrained model
+[2026/10/08 10:43:46] WARNING: decode_head.p_head.norm._mean is not in pretrained model
+[2026/10/08 10:43:46] WARNING: decode_head.p_head.norm._variance is not in pretrained model
+[2026/10/08 10:43:46] WARNING: decode_head.d_head.conv.0.weight is not in pretrained model
+[2026/10/08 10:43:46] WARNING: decode_head.d_head.conv.0.bias is not in pretrained model
+[2026/10/08 10:43:46] WARNING: decode_head.d_head.conv.0._mean is not in pretrained model
+[2026/10/08 10:43:46] WARNING: decode_head.d_head.conv.0._variance is not in pretrained model
+[2026/10/08 10:43:46] WARNING: decode_head.d_head.conv.2.weight is not in pretrained model
+[2026/10/08 10:43:46] WARNING: decode_head.d_head.norm.weight is not in pretrained model
+[2026/10/08 10:43:46] WARNING: decode_head.d_head.norm.bias is not in pretrained model
+[2026/10/08 10:43:46] WARNING: decode_head.d_head.norm._mean is not in pretrained model
+[2026/10/08 10:43:46] WARNING: decode_head.d_head.norm._variance is not in pretrained model
+[2026/10/08 10:43:46] WARNING: decode_head.p_cls_seg.weight is not in pretrained model
+[2026/10/08 10:43:46] WARNING: decode_head.p_cls_seg.bias is not in pretrained model
+[2026/10/08 10:43:46] WARNING: decode_head.d_cls_seg.weight is not in pretrained model
+[2026/10/08 10:43:46] WARNING: decode_head.d_cls_seg.bias is not in pretrained model
+[2026/10/08 10:43:46] WARNING: decode_head.conv_seg.weight is not in pretrained model
+[2026/10/08 10:43:46] WARNING: decode_head.conv_seg.bias is not in pretrained model
+[2026/10/08 10:43:46] INFO: There are 250/398 variables loaded into PIDNet.
+[2026/10/08 10:43:46] INFO: Use the following config to build train_dataset
+train_dataset:
+  dataset_root: C:/Users/user/algolab_data
+  mode: train
+  num_classes: 2
+  train_path: C:/Users/user/algolab_data/train.txt
+  transforms:
+  - type: AddEdgeLabel
+  - max_scale_factor: 2.1
+    min_scale_factor: 0.5
+    scale_step_size: 0.1
+    type: ResizeStepScaling
+  - crop_size:
+    - 400
+    - 400
+    type: RandomPaddingCrop
+  - type: RandomHorizontalFlip
+  - mean:
+    - 0.485
+    - 0.456
+    - 0.406
+    std:
+    - 0.229
+    - 0.224
+    - 0.225
+    type: Normalize
+  type: Dataset
+[2026/10/08 10:43:46] INFO: If the type is SGD and momentum in optimizer config, the type is changed to Momentum.
+[2026/10/08 10:43:46] INFO: Use the following config to build optimizer
+optimizer:
+  momentum: 0.9
+  type: Momentum
+  weight_decay: 0.0005
+[2026/10/08 10:43:46] INFO: Use the following config to build loss
+loss:
+  coef:
+  - 0.4
+  - 1.0
+  - 10.0
+  - 1.0
+  types:
+  - avg_non_ignore: false
+    type: CrossEntropyLoss
+    weight:
+    - 1.0
+    - 1.0
+  - min_kept: 131072
+    thresh: 0.9
+    type: OhemCrossEntropyLoss
+    weight:
+    - 1.0
+    - 1.0
+  - edge_label: true
+    type: BCELoss
+    weight: dynamic
+  - min_kept: 131072
+    thresh: 0.9
+    type: OhemCrossEntropyLoss
+    weight:
+    - 1.0
+    - 1.0
+C:\Users\user\�㷨ʵ��\venv_bisenet\Lib\site-packages\paddle\nn\layer\norm.py:885: UserWarning: When training, we now always track global mean and variance.
+  warnings.warn(
+W1008 10:43:47.420773 24112 backward.cc:694] While running Node (Conv2dGradNodeFinal) raises an EnforceNotMet exception
+Traceback (most recent call last):
+  File "D:\���ĸ���\experiments\retrain_wave4_20261007\src\PaddleSeg-2.10.0\tools\train.py", line 252, in <module>
+    main(args)
+  File "D:\���ĸ���\experiments\retrain_wave4_20261007\src\PaddleSeg-2.10.0\tools\train.py", line 222, in main
+    train(model,
+  File "D:\���ĸ���\experiments\retrain_wave4_20261007\src\PaddleSeg-2.10.0\paddleseg\core\train.py", line 264, in train
+    loss.backward()
+  File "C:\Users\user\�㷨ʵ��\venv_bisenet\Lib\site-packages\paddle\base\wrapped_decorator.py", line 50, in wrapper
+    return decorated(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\�㷨ʵ��\venv_bisenet\Lib\site-packages\paddle\base\framework.py", line 727, in __impl__
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\�㷨ʵ��\venv_bisenet\Lib\site-packages\paddle\base\dygraph\tensor_patch_methods.py", line 373, in backward
+    core.eager.run_backward(
+OSError: (External) CUDNN error(4000), CUDNN_STATUS_INTERNAL_ERROR. 
+  [Hint: Please search for the error code(4000) on website (https://docs.nvidia.com/deeplearning/cudnn/api/index.html#cudnnStatus_t) to get Nvidia's official solution and advice about CUDNN Error.] (at ../paddle/phi/kernels/gpudnn/conv_cudnn_v7.h:741)
+

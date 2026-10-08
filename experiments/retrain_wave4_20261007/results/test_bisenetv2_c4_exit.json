@@ -1,0 +1,7 @@
+{
+  "model": "bisenetv2_c4",
+  "model_path": "C:\\retrain_wave4\\training\\bisenetv2_c4\\ema_best_model\\ema_model.pdparams",
+  "exit_code": 0,
+  "test_used": true,
+  "ended_at": "2026-10-07T18:48:58.1675040+08:00"
+}

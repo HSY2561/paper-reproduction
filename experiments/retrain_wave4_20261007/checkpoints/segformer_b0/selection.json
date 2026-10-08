@@ -1,0 +1,36 @@
+{
+  "model": "segformer_b0",
+  "selection_metric": "validation_mIoU",
+  "candidates": [
+    {
+      "variant": "best_model",
+      "checkpoint": "C:\\retrain_wave4\\training\\segformer_b0\\best_model\\model.pdparams",
+      "state": {
+        "mIoU": 0.8280206270288883,
+        "Acc": 0.9788539726576456,
+        "iter": 11000
+      }
+    },
+    {
+      "variant": "ema_best_model",
+      "checkpoint": "C:\\retrain_wave4\\training\\segformer_b0\\ema_best_model\\ema_model.pdparams",
+      "state": {
+        "mIoU": 0.8267463290049477,
+        "Acc": 0.9785374548447987,
+        "iter": 12000
+      }
+    }
+  ],
+  "selected": {
+    "variant": "best_model",
+    "checkpoint": "C:\\retrain_wave4\\training\\segformer_b0\\best_model\\model.pdparams",
+    "state": {
+      "mIoU": 0.8280206270288883,
+      "Acc": 0.9788539726576456,
+      "iter": 11000
+    }
+  },
+  "sha256": "07f6048e0a6de174a2c3ca1915df4bcd635565a706d978288fba946ef240f2d5",
+  "test_used_for_selection": false,
+  "frozen_at": "2026-10-07T16:49:41.074187+08:00"
+}

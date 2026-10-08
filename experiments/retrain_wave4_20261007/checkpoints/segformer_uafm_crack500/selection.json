@@ -1,0 +1,16 @@
+{
+  "model": "SegFormer-B0+UAFM_SpAtten",
+  "selection_metric": "validation_mIoU",
+  "candidates": [
+    {"variant":"best_model","iter":4000,"mIoU":0.8258,"crackIoU":0.6744,"precision":0.8127,"recall":0.7985,"F1":0.8055},
+    {"variant":"ema_best_model","iter":11000,"mIoU":0.8263,"crackIoU":0.6752,"precision":0.8202,"recall":0.7924,"F1":0.8059}
+  ],
+  "selected_variant": "ema_best_model",
+  "selected_iter": 11000,
+  "checkpoint_sha256": "a96a8e62320f0db0bf5d783d6a28ea6bfea24794d6d3bffa44c1b218be0efa47",
+  "test_used_for_selection": false,
+  "eligible_for_test": false,
+  "baseline_val": {"mIoU":0.8280,"crackIoU":0.6722,"precision":0.8120,"recall":0.7961,"F1":0.8030},
+  "delta_vs_baseline": {"mIoU":-0.0017,"crackIoU":0.0030,"precision":0.0082,"recall":-0.0037,"F1":0.0029},
+  "gate": {"crackIoU_min_delta":0.005,"F1_min_delta":0.003,"max_recall_drop":0.005,"passed":false,"reason":"mIoU decreased and crackIoU/F1 gains are below thresholds"}
+}

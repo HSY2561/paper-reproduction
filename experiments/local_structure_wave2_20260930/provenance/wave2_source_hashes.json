@@ -1,0 +1,34 @@
+{
+  "created_at": "2026-09-30T10:57:31.301837+08:00",
+  "base": "D:\\论文复现\\experiments\\local_structure_20260930",
+  "wave2": "D:\\论文复现\\experiments\\local_structure_wave2_20260930",
+  "files": {
+    "paddleseg/models/bisenet.py": {
+      "wave1_sha256": "1f975c94b87ae68bd05873b668e35f983385fb83f2f3e106d668a1dc28dc3b87",
+      "wave2_sha256": "7f87ede08a47e4679759daee0ccd9b2f8405f0075a3132c8c4d3f0d9e1a26b05",
+      "changed": true
+    },
+    "paddleseg/models/pointrend.py": {
+      "wave1_sha256": "0f82266a51d903f4899fe42856e9fd7954c86988f25091480c87a2b9da5b7b87",
+      "wave2_sha256": "0f82266a51d903f4899fe42856e9fd7954c86988f25091480c87a2b9da5b7b87",
+      "changed": false
+    },
+    "paddleseg/models/losses/point_cross_entropy_loss.py": {
+      "wave1_sha256": "f41fd1294cd6bdaa5522eb01366a7acfebb8e201f53207155bfd2fcdfa96221c",
+      "wave2_sha256": "f41fd1294cd6bdaa5522eb01366a7acfebb8e201f53207155bfd2fcdfa96221c",
+      "changed": false
+    },
+    "paddleseg/core/train.py": {
+      "wave1_sha256": "04066d1e913f15743d2d11ced82b72ed00d75a02c2825298b669f8c72b72451a",
+      "wave2_sha256": "04066d1e913f15743d2d11ced82b72ed00d75a02c2825298b669f8c72b72451a",
+      "changed": false
+    },
+    "configs/C1b.yml": {
+      "wave2_sha256": "6b33c44c183ed8c2cbfbaaf3d19f01f843ad5bd772c7b9d7bbb19a385867ccaa"
+    },
+    "configs/C2b.yml": {
+      "wave2_sha256": "cf9c7526b0f1ecb6b9d8ca77925a2db4c24020688c1d95098bb7609a73d4ebc2"
+    }
+  },
+  "finalized_at": "2026-09-30T11:01:20.164660+08:00"
+}

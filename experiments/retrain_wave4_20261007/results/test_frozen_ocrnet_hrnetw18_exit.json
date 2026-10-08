@@ -1,0 +1,8 @@
+{
+  "model": "ocrnet_hrnetw18",
+  "model_path": "C:\\retrain_wave4\\checkpoints\\ocrnet_hrnetw18\\model.pdparams",
+  "exit_code": 0,
+  "test_used": true,
+  "selection_record": "C:\\retrain_wave4\\checkpoints\\ocrnet_hrnetw18\\selection.json",
+  "ended_at": "2026-10-07T19:10:34.8495328+08:00"
+}

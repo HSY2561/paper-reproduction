@@ -1,0 +1,68 @@
+{
+  "seed": 42,
+  "repetitions_per_image": 5,
+  "train_images": 1896,
+  "crop_size": [
+    400,
+    400
+  ],
+  "scales": {
+    "0.5": {
+      "samples": 9480,
+      "empty_crop_rate": 0.0,
+      "mean_retained_crack_fraction": 1.0,
+      "p10_retained_fraction": 1.0,
+      "partial_border_rate": 0.8238396624472574,
+      "mean_valid_fraction": 0.3638411392405062
+    },
+    "0.75": {
+      "samples": 9480,
+      "empty_crop_rate": 0.02879746835443038,
+      "mean_retained_crack_fraction": 0.7825954105470867,
+      "p10_retained_fraction": 0.47398502956701094,
+      "partial_border_rate": 0.9358649789029536,
+      "mean_valid_fraction": 0.6818670886075948
+    },
+    "1": {
+      "samples": 9480,
+      "empty_crop_rate": 0.1060126582278481,
+      "mean_retained_crack_fraction": 0.5619541505761969,
+      "p10_retained_fraction": 0.0,
+      "partial_border_rate": 0.8654008438818566,
+      "mean_valid_fraction": 0.9029535864978903
+    },
+    "1.25": {
+      "samples": 9480,
+      "empty_crop_rate": 0.19609704641350212,
+      "mean_retained_crack_fraction": 0.36930249004342186,
+      "p10_retained_fraction": 0.0,
+      "partial_border_rate": 0.8016877637130801,
+      "mean_valid_fraction": 1.0
+    },
+    "1.5": {
+      "samples": 9480,
+      "empty_crop_rate": 0.3078059071729958,
+      "mean_retained_crack_fraction": 0.24652462318636092,
+      "p10_retained_fraction": 0.0,
+      "partial_border_rate": 0.6901898734177215,
+      "mean_valid_fraction": 1.0
+    },
+    "1.75": {
+      "samples": 9480,
+      "empty_crop_rate": 0.38586497890295357,
+      "mean_retained_crack_fraction": 0.18026008301418953,
+      "p10_retained_fraction": 0.0,
+      "partial_border_rate": 0.6125527426160338,
+      "mean_valid_fraction": 1.0
+    },
+    "2": {
+      "samples": 9480,
+      "empty_crop_rate": 0.4534810126582278,
+      "mean_retained_crack_fraction": 0.13673358795708954,
+      "p10_retained_fraction": 0.0,
+      "partial_border_rate": 0.5447257383966245,
+      "mean_valid_fraction": 1.0
+    }
+  },
+  "test_used": false
+}

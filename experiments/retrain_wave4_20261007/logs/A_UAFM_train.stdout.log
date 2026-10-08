@@ -1,0 +1,642 @@
+[2026/10/07 16:48:44] INFO: 
+------------Environment Information-------------
+platform: Windows-11-10.0.26200-SP0
+Python: 3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]
+Paddle compiled with cuda: True
+NVCC: Build cuda_13.4.r13.4/compiler.38657139_0
+cudnn: 90.9
+GPUs used: 1
+CUDA_VISIBLE_DEVICES: None
+GPU: ['GPU 0: NVIDIA GeForce']
+PaddleSeg: 0.0.0.dev0
+PaddlePaddle: 3.4.0
+OpenCV: 4.11.0
+------------------------------------------------
+[2026/10/07 16:48:44] INFO: 
+---------------Config Information---------------
+batch_size: 4
+iters: 18000
+train_dataset:
+  dataset_root: C:/custom_crack
+  mode: train
+  num_classes: 2
+  train_path: C:/retrain_wave4/configs/train_source_disjoint.txt
+  transforms:
+  - max_scale_factor: 1.25
+    min_scale_factor: 0.75
+    scale_step_size: 0.25
+    type: ResizeStepScaling
+  - crop_size:
+    - 400
+    - 400
+    type: RandomPaddingCrop
+  - type: RandomHorizontalFlip
+  - brightness_range: 0.5
+    contrast_range: 0.5
+    saturation_range: 0.5
+    type: RandomDistort
+  - type: Normalize
+  type: Dataset
+val_dataset:
+  dataset_root: C:/custom_crack
+  mode: val
+  num_classes: 2
+  transforms:
+  - type: Normalize
+  type: Dataset
+  val_path: C:/retrain_wave4/configs/val_source_disjoint.txt
+optimizer:
+  beta1: 0.9
+  beta2: 0.999
+  type: AdamW
+  weight_decay: 0.01
+lr_scheduler:
+  end_lr: 0.0
+  learning_rate: 6.0e-05
+  power: 1
+  type: PolynomialDecay
+loss:
+  coef:
+  - 1
+  types:
+  - type: CrossEntropyLoss
+model:
+  backbone:
+    pretrained: https://bj.bcebos.com/paddleseg/dygraph/backbone/mix_vision_transformer_b0.tar.gz
+    type: MixVisionTransformer_B0
+  decoder_variant: uafm
+  embedding_dim: 256
+  num_classes: 2
+  type: SegFormer
+------------------------------------------------
+
+[2026/10/07 16:48:44] INFO: Set device: gpu
+[2026/10/07 16:48:44] INFO: Use the following config to build model
+model:
+  backbone:
+    pretrained: https://bj.bcebos.com/paddleseg/dygraph/backbone/mix_vision_transformer_b0.tar.gz
+    type: MixVisionTransformer_B0
+  decoder_variant: uafm
+  embedding_dim: 256
+  num_classes: 2
+  type: SegFormer
+[2026/10/07 16:48:44] INFO: Loading pretrained model from https://bj.bcebos.com/paddleseg/dygraph/backbone/mix_vision_transformer_b0.tar.gz
+[2026/10/07 16:48:44] INFO: There are 176/176 variables loaded into MixVisionTransformer.
+[2026/10/07 16:48:44] INFO: Use the following config to build train_dataset
+train_dataset:
+  dataset_root: C:/custom_crack
+  mode: train
+  num_classes: 2
+  train_path: C:/retrain_wave4/configs/train_source_disjoint.txt
+  transforms:
+  - max_scale_factor: 1.25
+    min_scale_factor: 0.75
+    scale_step_size: 0.25
+    type: ResizeStepScaling
+  - crop_size:
+    - 400
+    - 400
+    type: RandomPaddingCrop
+  - type: RandomHorizontalFlip
+  - brightness_range: 0.5
+    contrast_range: 0.5
+    saturation_range: 0.5
+    type: RandomDistort
+  - type: Normalize
+  type: Dataset
+[2026/10/07 16:48:44] INFO: Use the following config to build val_dataset
+val_dataset:
+  dataset_root: C:/custom_crack
+  mode: val
+  num_classes: 2
+  transforms:
+  - type: Normalize
+  type: Dataset
+  val_path: C:/retrain_wave4/configs/val_source_disjoint.txt
+[2026/10/07 16:48:44] INFO: Use the following config to build optimizer
+optimizer:
+  beta1: 0.9
+  beta2: 0.999
+  type: AdamW
+  weight_decay: 0.01
+[2026/10/07 16:48:44] INFO: Use the following config to build loss
+loss:
+  coef:
+  - 1
+  types:
+  - type: CrossEntropyLoss
+[2026/10/07 16:48:58] INFO: [TRAIN] epoch: 1, iter: 100/18000, loss: 0.5532, lr: 0.000060, batch_cost: 0.1186, reader_cost: 0.02477, ips: 33.7298 samples/sec, max_mem_reserved: 1680 MB, max_mem_allocated: 1339 MB | ETA 00:35:22
+[2026/10/07 16:49:11] INFO: [TRAIN] epoch: 1, iter: 200/18000, loss: 0.2023, lr: 0.000059, batch_cost: 0.1189, reader_cost: 0.03618, ips: 33.6513 samples/sec, max_mem_reserved: 1680 MB, max_mem_allocated: 1339 MB | ETA 00:35:15
+[2026/10/07 16:49:25] INFO: [TRAIN] epoch: 1, iter: 300/18000, loss: 0.1358, lr: 0.000059, batch_cost: 0.1158, reader_cost: 0.03430, ips: 34.5476 samples/sec, max_mem_reserved: 1680 MB, max_mem_allocated: 1339 MB | ETA 00:34:09
+[2026/10/07 16:49:36] INFO: [TRAIN] epoch: 2, iter: 400/18000, loss: 0.1172, lr: 0.000059, batch_cost: 0.0969, reader_cost: 0.01504, ips: 41.2788 samples/sec, max_mem_reserved: 1680 MB, max_mem_allocated: 1339 MB | ETA 00:28:25
+[2026/10/07 16:49:47] INFO: [TRAIN] epoch: 2, iter: 500/18000, loss: 0.1028, lr: 0.000058, batch_cost: 0.0925, reader_cost: 0.00975, ips: 43.2417 samples/sec, max_mem_reserved: 1680 MB, max_mem_allocated: 1339 MB | ETA 00:26:58
+[2026/10/07 16:49:58] INFO: [TRAIN] epoch: 2, iter: 600/18000, loss: 0.0896, lr: 0.000058, batch_cost: 0.0904, reader_cost: 0.00872, ips: 44.2448 samples/sec, max_mem_reserved: 1680 MB, max_mem_allocated: 1339 MB | ETA 00:26:13
+[2026/10/07 16:50:09] INFO: [TRAIN] epoch: 2, iter: 700/18000, loss: 0.0909, lr: 0.000058, batch_cost: 0.0899, reader_cost: 0.00811, ips: 44.4846 samples/sec, max_mem_reserved: 1680 MB, max_mem_allocated: 1339 MB | ETA 00:25:55
+[2026/10/07 16:50:20] INFO: [TRAIN] epoch: 3, iter: 800/18000, loss: 0.0781, lr: 0.000057, batch_cost: 0.0903, reader_cost: 0.00919, ips: 44.3137 samples/sec, max_mem_reserved: 1680 MB, max_mem_allocated: 1339 MB | ETA 00:25:52
+[2026/10/07 16:50:31] INFO: [TRAIN] epoch: 3, iter: 900/18000, loss: 0.0752, lr: 0.000057, batch_cost: 0.0904, reader_cost: 0.00937, ips: 44.2306 samples/sec, max_mem_reserved: 1680 MB, max_mem_allocated: 1339 MB | ETA 00:25:46
+[2026/10/07 16:50:42] INFO: [TRAIN] epoch: 3, iter: 1000/18000, loss: 0.0658, lr: 0.000057, batch_cost: 0.0906, reader_cost: 0.00979, ips: 44.1468 samples/sec, max_mem_reserved: 1680 MB, max_mem_allocated: 1339 MB | ETA 00:25:40
+[2026/10/07 16:50:42] INFO: Start evaluating (total_samples: 177, total_iters: 177)...
+[2026/10/07 16:50:52] INFO: [EVAL] #Images: 177 mIoU: 0.8216 Acc: 0.9863 Kappa: 0.7862 Dice: 0.8931
+[2026/10/07 16:50:52] INFO: [EVAL] Class IoU: 
+[0.9859 0.6574]
+[2026/10/07 16:50:52] INFO: [EVAL] Class Precision: 
+[0.9942 0.764 ]
+[2026/10/07 16:50:52] INFO: [EVAL] Class Recall: 
+[0.9916 0.8248]
+[2026/10/07 16:50:52] INFO: Start evaluating (total_samples: 177, total_iters: 177)...
+[2026/10/07 16:51:02] INFO: [EVAL] #Images: 177 mIoU: 0.7896 Acc: 0.9847 Kappa: 0.7381 Dice: 0.8690
+[2026/10/07 16:51:02] INFO: [EVAL] Class IoU: 
+[0.9844 0.5948]
+[2026/10/07 16:51:02] INFO: [EVAL] Class Precision: 
+[0.9902 0.7956]
+[2026/10/07 16:51:02] INFO: [EVAL] Class Recall: 
+[0.994  0.7021]
+[2026/10/07 16:51:02] INFO: [EVAL] The model with the best validation mIoU (0.8216) was saved at iter 1000.
+[2026/10/07 16:51:02] INFO: [EVAL] The EMA model with the best validation mIoU (0.7896) was saved at iter 1000.
+[2026/10/07 16:51:13] INFO: [TRAIN] epoch: 4, iter: 1100/18000, loss: 0.0722, lr: 0.000056, batch_cost: 0.0891, reader_cost: 0.00872, ips: 44.8932 samples/sec, max_mem_reserved: 2192 MB, max_mem_allocated: 1339 MB | ETA 00:25:05
+[2026/10/07 16:51:24] INFO: [TRAIN] epoch: 4, iter: 1200/18000, loss: 0.0646, lr: 0.000056, batch_cost: 0.0927, reader_cost: 0.01191, ips: 43.1387 samples/sec, max_mem_reserved: 2192 MB, max_mem_allocated: 1339 MB | ETA 00:25:57
+[2026/10/07 16:51:35] INFO: [TRAIN] epoch: 4, iter: 1300/18000, loss: 0.0678, lr: 0.000056, batch_cost: 0.0955, reader_cost: 0.01411, ips: 41.8803 samples/sec, max_mem_reserved: 2192 MB, max_mem_allocated: 1339 MB | ETA 00:26:35
+[2026/10/07 16:51:47] INFO: [TRAIN] epoch: 4, iter: 1400/18000, loss: 0.0650, lr: 0.000055, batch_cost: 0.0969, reader_cost: 0.01486, ips: 41.2840 samples/sec, max_mem_reserved: 2192 MB, max_mem_allocated: 1339 MB | ETA 00:26:48
+[2026/10/07 16:51:58] INFO: [TRAIN] epoch: 5, iter: 1500/18000, loss: 0.0625, lr: 0.000055, batch_cost: 0.0902, reader_cost: 0.00894, ips: 44.3631 samples/sec, max_mem_reserved: 2192 MB, max_mem_allocated: 1339 MB | ETA 00:24:47
+[2026/10/07 16:52:09] INFO: [TRAIN] epoch: 5, iter: 1600/18000, loss: 0.0585, lr: 0.000055, batch_cost: 0.0923, reader_cost: 0.01122, ips: 43.3600 samples/sec, max_mem_reserved: 2192 MB, max_mem_allocated: 1339 MB | ETA 00:25:12
+[2026/10/07 16:52:20] INFO: [TRAIN] epoch: 5, iter: 1700/18000, loss: 0.0538, lr: 0.000054, batch_cost: 0.0921, reader_cost: 0.01175, ips: 43.4542 samples/sec, max_mem_reserved: 2192 MB, max_mem_allocated: 1339 MB | ETA 00:25:00
+[2026/10/07 16:52:31] INFO: [TRAIN] epoch: 6, iter: 1800/18000, loss: 0.0562, lr: 0.000054, batch_cost: 0.0933, reader_cost: 0.01266, ips: 42.8775 samples/sec, max_mem_reserved: 2192 MB, max_mem_allocated: 1339 MB | ETA 00:25:11
+[2026/10/07 16:52:41] INFO: [TRAIN] epoch: 6, iter: 1900/18000, loss: 0.0555, lr: 0.000054, batch_cost: 0.0912, reader_cost: 0.01078, ips: 43.8540 samples/sec, max_mem_reserved: 2192 MB, max_mem_allocated: 1339 MB | ETA 00:24:28
+[2026/10/07 16:52:52] INFO: [TRAIN] epoch: 6, iter: 2000/18000, loss: 0.0567, lr: 0.000053, batch_cost: 0.0899, reader_cost: 0.00868, ips: 44.4965 samples/sec, max_mem_reserved: 2192 MB, max_mem_allocated: 1339 MB | ETA 00:23:58
+[2026/10/07 16:52:52] INFO: Start evaluating (total_samples: 177, total_iters: 177)...
+[2026/10/07 16:53:02] INFO: [EVAL] #Images: 177 mIoU: 0.8458 Acc: 0.9886 Kappa: 0.8199 Dice: 0.9100
+[2026/10/07 16:53:02] INFO: [EVAL] Class IoU: 
+[0.9883 0.7033]
+[2026/10/07 16:53:02] INFO: [EVAL] Class Precision: 
+[0.9948 0.8107]
+[2026/10/07 16:53:02] INFO: [EVAL] Class Recall: 
+[0.9935 0.8414]
+[2026/10/07 16:53:02] INFO: Start evaluating (total_samples: 177, total_iters: 177)...
+[2026/10/07 16:53:13] INFO: [EVAL] #Images: 177 mIoU: 0.8277 Acc: 0.9871 Kappa: 0.7948 Dice: 0.8974
+[2026/10/07 16:53:13] INFO: [EVAL] Class IoU: 
+[0.9868 0.6686]
+[2026/10/07 16:53:13] INFO: [EVAL] Class Precision: 
+[0.9938 0.7918]
+[2026/10/07 16:53:13] INFO: [EVAL] Class Recall: 
+[0.993  0.8113]
+[2026/10/07 16:53:13] INFO: [EVAL] The model with the best validation mIoU (0.8458) was saved at iter 2000.
+[2026/10/07 16:53:13] INFO: [EVAL] The EMA model with the best validation mIoU (0.8277) was saved at iter 2000.
+[2026/10/07 16:53:23] INFO: [TRAIN] epoch: 6, iter: 2100/18000, loss: 0.0493, lr: 0.000053, batch_cost: 0.0867, reader_cost: 0.00575, ips: 46.1421 samples/sec, max_mem_reserved: 2192 MB, max_mem_allocated: 1339 MB | ETA 00:22:58
+[2026/10/07 16:53:34] INFO: [TRAIN] epoch: 7, iter: 2200/18000, loss: 0.0498, lr: 0.000053, batch_cost: 0.0916, reader_cost: 0.01042, ips: 43.6878 samples/sec, max_mem_reserved: 2192 MB, max_mem_allocated: 1339 MB | ETA 00:24:06
+[2026/10/07 16:53:45] INFO: [TRAIN] epoch: 7, iter: 2300/18000, loss: 0.0542, lr: 0.000052, batch_cost: 0.0918, reader_cost: 0.01057, ips: 43.5596 samples/sec, max_mem_reserved: 2192 MB, max_mem_allocated: 1339 MB | ETA 00:24:01
+[2026/10/07 16:53:56] INFO: [TRAIN] epoch: 7, iter: 2400/18000, loss: 0.0530, lr: 0.000052, batch_cost: 0.0910, reader_cost: 0.00971, ips: 43.9759 samples/sec, max_mem_reserved: 2192 MB, max_mem_allocated: 1339 MB | ETA 00:23:38
+[2026/10/07 16:54:08] INFO: [TRAIN] epoch: 8, iter: 2500/18000, loss: 0.0478, lr: 0.000052, batch_cost: 0.0959, reader_cost: 0.01372, ips: 41.6932 samples/sec, max_mem_reserved: 2192 MB, max_mem_allocated: 1339 MB | ETA 00:24:47
+[2026/10/07 16:54:18] INFO: [TRAIN] epoch: 8, iter: 2600/18000, loss: 0.0517, lr: 0.000051, batch_cost: 0.0886, reader_cost: 0.00783, ips: 45.1311 samples/sec, max_mem_reserved: 2192 MB, max_mem_allocated: 1339 MB | ETA 00:22:44
+[2026/10/07 16:54:29] INFO: [TRAIN] epoch: 8, iter: 2700/18000, loss: 0.0514, lr: 0.000051, batch_cost: 0.0895, reader_cost: 0.00875, ips: 44.7028 samples/sec, max_mem_reserved: 2192 MB, max_mem_allocated: 1339 MB | ETA 00:22:49
+[2026/10/07 16:54:40] INFO: [TRAIN] epoch: 8, iter: 2800/18000, loss: 0.0502, lr: 0.000051, batch_cost: 0.0896, reader_cost: 0.00891, ips: 44.6408 samples/sec, max_mem_reserved: 2192 MB, max_mem_allocated: 1339 MB | ETA 00:22:41
+[2026/10/07 16:54:51] INFO: [TRAIN] epoch: 9, iter: 2900/18000, loss: 0.0492, lr: 0.000050, batch_cost: 0.0900, reader_cost: 0.00937, ips: 44.4218 samples/sec, max_mem_reserved: 2192 MB, max_mem_allocated: 1339 MB | ETA 00:22:39
+[2026/10/07 16:55:02] INFO: [TRAIN] epoch: 9, iter: 3000/18000, loss: 0.0465, lr: 0.000050, batch_cost: 0.0908, reader_cost: 0.00948, ips: 44.0384 samples/sec, max_mem_reserved: 2192 MB, max_mem_allocated: 1339 MB | ETA 00:22:42
+[2026/10/07 16:55:02] INFO: Start evaluating (total_samples: 177, total_iters: 177)...
+[2026/10/07 16:55:12] INFO: [EVAL] #Images: 177 mIoU: 0.8478 Acc: 0.9883 Kappa: 0.8227 Dice: 0.9113
+[2026/10/07 16:55:12] INFO: [EVAL] Class IoU: 
+[0.988  0.7075]
+[2026/10/07 16:55:12] INFO: [EVAL] Class Precision: 
+[0.9962 0.7797]
+[2026/10/07 16:55:12] INFO: [EVAL] Class Recall: 
+[0.9917 0.8843]
+[2026/10/07 16:55:12] INFO: Start evaluating (total_samples: 177, total_iters: 177)...
+[2026/10/07 16:55:22] INFO: [EVAL] #Images: 177 mIoU: 0.8464 Acc: 0.9886 Kappa: 0.8207 Dice: 0.9104
+[2026/10/07 16:55:22] INFO: [EVAL] Class IoU: 
+[0.9882 0.7045]
+[2026/10/07 16:55:22] INFO: [EVAL] Class Precision: 
+[0.9951 0.8017]
+[2026/10/07 16:55:22] INFO: [EVAL] Class Recall: 
+[0.993  0.8532]
+[2026/10/07 16:55:22] INFO: [EVAL] The model with the best validation mIoU (0.8478) was saved at iter 3000.
+[2026/10/07 16:55:22] INFO: [EVAL] The EMA model with the best validation mIoU (0.8464) was saved at iter 3000.
+[2026/10/07 16:55:33] INFO: [TRAIN] epoch: 9, iter: 3100/18000, loss: 0.0470, lr: 0.000050, batch_cost: 0.0872, reader_cost: 0.00558, ips: 45.8963 samples/sec, max_mem_reserved: 2192 MB, max_mem_allocated: 1339 MB | ETA 00:21:38
+[2026/10/07 16:55:43] INFO: [TRAIN] epoch: 10, iter: 3200/18000, loss: 0.0453, lr: 0.000049, batch_cost: 0.0903, reader_cost: 0.00919, ips: 44.3127 samples/sec, max_mem_reserved: 2192 MB, max_mem_allocated: 1339 MB | ETA 00:22:15
+[2026/10/07 16:55:54] INFO: [TRAIN] epoch: 10, iter: 3300/18000, loss: 0.0424, lr: 0.000049, batch_cost: 0.0896, reader_cost: 0.00872, ips: 44.6430 samples/sec, max_mem_reserved: 2192 MB, max_mem_allocated: 1339 MB | ETA 00:21:57
+[2026/10/07 16:56:05] INFO: [TRAIN] epoch: 10, iter: 3400/18000, loss: 0.0429, lr: 0.000049, batch_cost: 0.0918, reader_cost: 0.01099, ips: 43.5879 samples/sec, max_mem_reserved: 2192 MB, max_mem_allocated: 1339 MB | ETA 00:22:19
+[2026/10/07 16:56:16] INFO: [TRAIN] epoch: 10, iter: 3500/18000, loss: 0.0464, lr: 0.000048, batch_cost: 0.0906, reader_cost: 0.01009, ips: 44.1307 samples/sec, max_mem_reserved: 2192 MB, max_mem_allocated: 1339 MB | ETA 00:21:54
+[2026/10/07 16:56:27] INFO: [TRAIN] epoch: 11, iter: 3600/18000, loss: 0.0442, lr: 0.000048, batch_cost: 0.0915, reader_cost: 0.01101, ips: 43.7330 samples/sec, max_mem_reserved: 2192 MB, max_mem_allocated: 1339 MB | ETA 00:21:57
+[2026/10/07 16:56:38] INFO: [TRAIN] epoch: 11, iter: 3700/18000, loss: 0.0399, lr: 0.000048, batch_cost: 0.0908, reader_cost: 0.01032, ips: 44.0328 samples/sec, max_mem_reserved: 2192 MB, max_mem_allocated: 1339 MB | ETA 00:21:39
+[2026/10/07 16:56:49] INFO: [TRAIN] epoch: 11, iter: 3800/18000, loss: 0.0441, lr: 0.000047, batch_cost: 0.0896, reader_cost: 0.00880, ips: 44.6333 samples/sec, max_mem_reserved: 2192 MB, max_mem_allocated: 1339 MB | ETA 00:21:12
+[2026/10/07 16:56:59] INFO: [TRAIN] epoch: 12, iter: 3900/18000, loss: 0.0379, lr: 0.000047, batch_cost: 0.0904, reader_cost: 0.00973, ips: 44.2708 samples/sec, max_mem_reserved: 2192 MB, max_mem_allocated: 1339 MB | ETA 00:21:13
+[2026/10/07 16:57:10] INFO: [TRAIN] epoch: 12, iter: 4000/18000, loss: 0.0394, lr: 0.000047, batch_cost: 0.0911, reader_cost: 0.01061, ips: 43.9010 samples/sec, max_mem_reserved: 2192 MB, max_mem_allocated: 1339 MB | ETA 00:21:15
+[2026/10/07 16:57:10] INFO: Start evaluating (total_samples: 177, total_iters: 177)...
+[2026/10/07 16:57:21] INFO: [EVAL] #Images: 177 mIoU: 0.8600 Acc: 0.9898 Kappa: 0.8390 Dice: 0.9195
+[2026/10/07 16:57:21] INFO: [EVAL] Class IoU: 
+[0.9896 0.7305]
+[2026/10/07 16:57:21] INFO: [EVAL] Class Precision: 
+[0.9954 0.828 ]
+[2026/10/07 16:57:21] INFO: [EVAL] Class Recall: 
+[0.9941 0.8612]
+[2026/10/07 16:57:21] INFO: Start evaluating (total_samples: 177, total_iters: 177)...
+[2026/10/07 16:57:31] INFO: [EVAL] #Images: 177 mIoU: 0.8558 Acc: 0.9894 Kappa: 0.8335 Dice: 0.9167
+[2026/10/07 16:57:31] INFO: [EVAL] Class IoU: 
+[0.9891 0.7226]
+[2026/10/07 16:57:31] INFO: [EVAL] Class Precision: 
+[0.9955 0.8155]
+[2026/10/07 16:57:31] INFO: [EVAL] Class Recall: 
+[0.9935 0.8639]
+[2026/10/07 16:57:31] INFO: [EVAL] The model with the best validation mIoU (0.8600) was saved at iter 4000.
+[2026/10/07 16:57:31] INFO: [EVAL] The EMA model with the best validation mIoU (0.8558) was saved at iter 4000.
+[2026/10/07 16:57:42] INFO: [TRAIN] epoch: 12, iter: 4100/18000, loss: 0.0432, lr: 0.000046, batch_cost: 0.0879, reader_cost: 0.00513, ips: 45.4919 samples/sec, max_mem_reserved: 2192 MB, max_mem_allocated: 1339 MB | ETA 00:20:22
+[2026/10/07 16:57:52] INFO: [TRAIN] epoch: 12, iter: 4200/18000, loss: 0.0385, lr: 0.000046, batch_cost: 0.0901, reader_cost: 0.00761, ips: 44.3834 samples/sec, max_mem_reserved: 2192 MB, max_mem_allocated: 1339 MB | ETA 00:20:43
+[2026/10/07 16:58:04] INFO: [TRAIN] epoch: 13, iter: 4300/18000, loss: 0.0365, lr: 0.000046, batch_cost: 0.0925, reader_cost: 0.01002, ips: 43.2243 samples/sec, max_mem_reserved: 2192 MB, max_mem_allocated: 1339 MB | ETA 00:21:07
+[2026/10/07 16:58:14] INFO: [TRAIN] epoch: 13, iter: 4400/18000, loss: 0.0434, lr: 0.000045, batch_cost: 0.0914, reader_cost: 0.00991, ips: 43.7554 samples/sec, max_mem_reserved: 2192 MB, max_mem_allocated: 1339 MB | ETA 00:20:43
+[2026/10/07 16:58:26] INFO: [TRAIN] epoch: 13, iter: 4500/18000, loss: 0.0405, lr: 0.000045, batch_cost: 0.0930, reader_cost: 0.01036, ips: 43.0120 samples/sec, max_mem_reserved: 2192 MB, max_mem_allocated: 1339 MB | ETA 00:20:55
+[2026/10/07 16:58:37] INFO: [TRAIN] epoch: 14, iter: 4600/18000, loss: 0.0380, lr: 0.000045, batch_cost: 0.0926, reader_cost: 0.01051, ips: 43.2054 samples/sec, max_mem_reserved: 2192 MB, max_mem_allocated: 1339 MB | ETA 00:20:40
+[2026/10/07 16:58:49] INFO: [TRAIN] epoch: 14, iter: 4700/18000, loss: 0.0388, lr: 0.000044, batch_cost: 0.1045, reader_cost: 0.02251, ips: 38.2712 samples/sec, max_mem_reserved: 2192 MB, max_mem_allocated: 1339 MB | ETA 00:23:10
+[2026/10/07 16:59:01] INFO: [TRAIN] epoch: 14, iter: 4800/18000, loss: 0.0393, lr: 0.000044, batch_cost: 0.1076, reader_cost: 0.02488, ips: 37.1792 samples/sec, max_mem_reserved: 2192 MB, max_mem_allocated: 1339 MB | ETA 00:23:40
+[2026/10/07 16:59:12] INFO: [TRAIN] epoch: 14, iter: 4900/18000, loss: 0.0380, lr: 0.000044, batch_cost: 0.0921, reader_cost: 0.01018, ips: 43.4289 samples/sec, max_mem_reserved: 2192 MB, max_mem_allocated: 1339 MB | ETA 00:20:06
+[2026/10/07 16:59:23] INFO: [TRAIN] epoch: 15, iter: 5000/18000, loss: 0.0372, lr: 0.000043, batch_cost: 0.0919, reader_cost: 0.00954, ips: 43.5219 samples/sec, max_mem_reserved: 2192 MB, max_mem_allocated: 1339 MB | ETA 00:19:54
+[2026/10/07 16:59:23] INFO: Start evaluating (total_samples: 177, total_iters: 177)...
+[2026/10/07 16:59:34] INFO: [EVAL] #Images: 177 mIoU: 0.8544 Acc: 0.9895 Kappa: 0.8315 Dice: 0.9158
+[2026/10/07 16:59:34] INFO: [EVAL] Class IoU: 
+[0.9892 0.7197]
+[2026/10/07 16:59:34] INFO: [EVAL] Class Precision: 
+[0.9948 0.8301]
+[2026/10/07 16:59:34] INFO: [EVAL] Class Recall: 
+[0.9943 0.844 ]
+[2026/10/07 16:59:34] INFO: Start evaluating (total_samples: 177, total_iters: 177)...
+[2026/10/07 16:59:44] INFO: [EVAL] #Images: 177 mIoU: 0.8603 Acc: 0.9897 Kappa: 0.8394 Dice: 0.9197
+[2026/10/07 16:59:44] INFO: [EVAL] Class IoU: 
+[0.9894 0.7312]
+[2026/10/07 16:59:44] INFO: [EVAL] Class Precision: 
+[0.9958 0.8179]
+[2026/10/07 16:59:44] INFO: [EVAL] Class Recall: 
+[0.9936 0.8734]
+[2026/10/07 16:59:44] INFO: [EVAL] The model with the best validation mIoU (0.8600) was saved at iter 4000.
+[2026/10/07 16:59:44] INFO: [EVAL] The EMA model with the best validation mIoU (0.8603) was saved at iter 5000.
+[2026/10/07 16:59:55] INFO: [TRAIN] epoch: 15, iter: 5100/18000, loss: 0.0379, lr: 0.000043, batch_cost: 0.0894, reader_cost: 0.00665, ips: 44.7452 samples/sec, max_mem_reserved: 2192 MB, max_mem_allocated: 1339 MB | ETA 00:19:13
+[2026/10/07 17:00:06] INFO: [TRAIN] epoch: 15, iter: 5200/18000, loss: 0.0382, lr: 0.000043, batch_cost: 0.0906, reader_cost: 0.00869, ips: 44.1603 samples/sec, max_mem_reserved: 2192 MB, max_mem_allocated: 1339 MB | ETA 00:19:19
+[2026/10/07 17:00:17] INFO: [TRAIN] epoch: 16, iter: 5300/18000, loss: 0.0407, lr: 0.000042, batch_cost: 0.0908, reader_cost: 0.00804, ips: 44.0763 samples/sec, max_mem_reserved: 2192 MB, max_mem_allocated: 1339 MB | ETA 00:19:12
+[2026/10/07 17:00:28] INFO: [TRAIN] epoch: 16, iter: 5400/18000, loss: 0.0378, lr: 0.000042, batch_cost: 0.0906, reader_cost: 0.00812, ips: 44.1708 samples/sec, max_mem_reserved: 2192 MB, max_mem_allocated: 1339 MB | ETA 00:19:01
+[2026/10/07 17:00:38] INFO: [TRAIN] epoch: 16, iter: 5500/18000, loss: 0.0386, lr: 0.000042, batch_cost: 0.0900, reader_cost: 0.00909, ips: 44.4204 samples/sec, max_mem_reserved: 2192 MB, max_mem_allocated: 1339 MB | ETA 00:18:45
+[2026/10/07 17:00:49] INFO: [TRAIN] epoch: 16, iter: 5600/18000, loss: 0.0368, lr: 0.000041, batch_cost: 0.0892, reader_cost: 0.00788, ips: 44.8212 samples/sec, max_mem_reserved: 2192 MB, max_mem_allocated: 1339 MB | ETA 00:18:26
+[2026/10/07 17:01:00] INFO: [TRAIN] epoch: 17, iter: 5700/18000, loss: 0.0380, lr: 0.000041, batch_cost: 0.0922, reader_cost: 0.01054, ips: 43.3898 samples/sec, max_mem_reserved: 2192 MB, max_mem_allocated: 1339 MB | ETA 00:18:53
+[2026/10/07 17:01:11] INFO: [TRAIN] epoch: 17, iter: 5800/18000, loss: 0.0398, lr: 0.000041, batch_cost: 0.0905, reader_cost: 0.00976, ips: 44.2051 samples/sec, max_mem_reserved: 2192 MB, max_mem_allocated: 1339 MB | ETA 00:18:23
+[2026/10/07 17:01:22] INFO: [TRAIN] epoch: 17, iter: 5900/18000, loss: 0.0363, lr: 0.000040, batch_cost: 0.0916, reader_cost: 0.00998, ips: 43.6671 samples/sec, max_mem_reserved: 2192 MB, max_mem_allocated: 1339 MB | ETA 00:18:28
+[2026/10/07 17:01:33] INFO: [TRAIN] epoch: 18, iter: 6000/18000, loss: 0.0362, lr: 0.000040, batch_cost: 0.0924, reader_cost: 0.01129, ips: 43.2961 samples/sec, max_mem_reserved: 2192 MB, max_mem_allocated: 1339 MB | ETA 00:18:28
+[2026/10/07 17:01:33] INFO: Start evaluating (total_samples: 177, total_iters: 177)...
+[2026/10/07 17:01:43] INFO: [EVAL] #Images: 177 mIoU: 0.8597 Acc: 0.9894 Kappa: 0.8387 Dice: 0.9193
+[2026/10/07 17:01:43] INFO: [EVAL] Class IoU: 
+[0.9891 0.7304]
+[2026/10/07 17:01:43] INFO: [EVAL] Class Precision: 
+[0.9966 0.7969]
+[2026/10/07 17:01:43] INFO: [EVAL] Class Recall: 
+[0.9924 0.8974]
+[2026/10/07 17:01:43] INFO: Start evaluating (total_samples: 177, total_iters: 177)...
+[2026/10/07 17:01:53] INFO: [EVAL] #Images: 177 mIoU: 0.8625 Acc: 0.9900 Kappa: 0.8423 Dice: 0.9212
+[2026/10/07 17:01:53] INFO: [EVAL] Class IoU: 
+[0.9897 0.7353]
+[2026/10/07 17:01:53] INFO: [EVAL] Class Precision: 
+[0.9958 0.8235]
+[2026/10/07 17:01:53] INFO: [EVAL] Class Recall: 
+[0.9938 0.8729]
+[2026/10/07 17:01:53] INFO: [EVAL] The model with the best validation mIoU (0.8600) was saved at iter 4000.
+[2026/10/07 17:01:53] INFO: [EVAL] The EMA model with the best validation mIoU (0.8625) was saved at iter 6000.
+[2026/10/07 17:02:04] INFO: [TRAIN] epoch: 18, iter: 6100/18000, loss: 0.0384, lr: 0.000040, batch_cost: 0.0865, reader_cost: 0.00501, ips: 46.2236 samples/sec, max_mem_reserved: 2192 MB, max_mem_allocated: 1339 MB | ETA 00:17:09
+[2026/10/07 17:02:15] INFO: [TRAIN] epoch: 18, iter: 6200/18000, loss: 0.0366, lr: 0.000039, batch_cost: 0.0892, reader_cost: 0.00853, ips: 44.8216 samples/sec, max_mem_reserved: 2192 MB, max_mem_allocated: 1339 MB | ETA 00:17:33
+[2026/10/07 17:02:26] INFO: [TRAIN] epoch: 18, iter: 6300/18000, loss: 0.0367, lr: 0.000039, batch_cost: 0.0910, reader_cost: 0.00992, ips: 43.9471 samples/sec, max_mem_reserved: 2192 MB, max_mem_allocated: 1339 MB | ETA 00:17:44
+[2026/10/07 17:02:36] INFO: [TRAIN] epoch: 19, iter: 6400/18000, loss: 0.0339, lr: 0.000039, batch_cost: 0.0902, reader_cost: 0.00903, ips: 44.3544 samples/sec, max_mem_reserved: 2192 MB, max_mem_allocated: 1339 MB | ETA 00:17:26
+[2026/10/07 17:02:47] INFO: [TRAIN] epoch: 19, iter: 6500/18000, loss: 0.0401, lr: 0.000038, batch_cost: 0.0926, reader_cost: 0.01109, ips: 43.1930 samples/sec, max_mem_reserved: 2192 MB, max_mem_allocated: 1339 MB | ETA 00:17:44
+[2026/10/07 17:02:58] INFO: [TRAIN] epoch: 19, iter: 6600/18000, loss: 0.0418, lr: 0.000038, batch_cost: 0.0914, reader_cost: 0.01021, ips: 43.7714 samples/sec, max_mem_reserved: 2192 MB, max_mem_allocated: 1339 MB | ETA 00:17:21
+[2026/10/07 17:03:09] INFO: [TRAIN] epoch: 20, iter: 6700/18000, loss: 0.0343, lr: 0.000038, batch_cost: 0.0904, reader_cost: 0.00952, ips: 44.2381 samples/sec, max_mem_reserved: 2192 MB, max_mem_allocated: 1339 MB | ETA 00:17:01
+[2026/10/07 17:03:20] INFO: [TRAIN] epoch: 20, iter: 6800/18000, loss: 0.0379, lr: 0.000037, batch_cost: 0.0877, reader_cost: 0.00629, ips: 45.6320 samples/sec, max_mem_reserved: 2192 MB, max_mem_allocated: 1339 MB | ETA 00:16:21
+[2026/10/07 17:03:31] INFO: [TRAIN] epoch: 20, iter: 6900/18000, loss: 0.0339, lr: 0.000037, batch_cost: 0.0892, reader_cost: 0.00841, ips: 44.8622 samples/sec, max_mem_reserved: 2192 MB, max_mem_allocated: 1339 MB | ETA 00:16:29
+[2026/10/07 17:03:41] INFO: [TRAIN] epoch: 20, iter: 7000/18000, loss: 0.0351, lr: 0.000037, batch_cost: 0.0899, reader_cost: 0.00919, ips: 44.4785 samples/sec, max_mem_reserved: 2192 MB, max_mem_allocated: 1339 MB | ETA 00:16:29
+[2026/10/07 17:03:41] INFO: Start evaluating (total_samples: 177, total_iters: 177)...
+[2026/10/07 17:03:51] INFO: [EVAL] #Images: 177 mIoU: 0.8566 Acc: 0.9899 Kappa: 0.8344 Dice: 0.9172
+[2026/10/07 17:03:51] INFO: [EVAL] Class IoU: 
+[0.9896 0.7237]
+[2026/10/07 17:03:51] INFO: [EVAL] Class Precision: 
+[0.9944 0.8486]
+[2026/10/07 17:03:51] INFO: [EVAL] Class Recall: 
+[0.9951 0.8309]
+[2026/10/07 17:03:51] INFO: Start evaluating (total_samples: 177, total_iters: 177)...
+[2026/10/07 17:04:02] INFO: [EVAL] #Images: 177 mIoU: 0.8648 Acc: 0.9901 Kappa: 0.8453 Dice: 0.9227
+[2026/10/07 17:04:02] INFO: [EVAL] Class IoU: 
+[0.9898 0.7398]
+[2026/10/07 17:04:02] INFO: [EVAL] Class Precision: 
+[0.996  0.8224]
+[2026/10/07 17:04:02] INFO: [EVAL] Class Recall: 
+[0.9937 0.8804]
+[2026/10/07 17:04:02] INFO: [EVAL] The model with the best validation mIoU (0.8600) was saved at iter 4000.
+[2026/10/07 17:04:02] INFO: [EVAL] The EMA model with the best validation mIoU (0.8648) was saved at iter 7000.
+[2026/10/07 17:04:13] INFO: [TRAIN] epoch: 21, iter: 7100/18000, loss: 0.0366, lr: 0.000036, batch_cost: 0.0941, reader_cost: 0.01219, ips: 42.4999 samples/sec, max_mem_reserved: 2192 MB, max_mem_allocated: 1339 MB | ETA 00:17:05
+[2026/10/07 17:04:24] INFO: [TRAIN] epoch: 21, iter: 7200/18000, loss: 0.0363, lr: 0.000036, batch_cost: 0.0913, reader_cost: 0.01087, ips: 43.7921 samples/sec, max_mem_reserved: 2192 MB, max_mem_allocated: 1339 MB | ETA 00:16:26
+[2026/10/07 17:04:35] INFO: [TRAIN] epoch: 21, iter: 7300/18000, loss: 0.0350, lr: 0.000036, batch_cost: 0.0915, reader_cost: 0.01062, ips: 43.7379 samples/sec, max_mem_reserved: 2192 MB, max_mem_allocated: 1339 MB | ETA 00:16:18
+[2026/10/07 17:04:45] INFO: [TRAIN] epoch: 22, iter: 7400/18000, loss: 0.0353, lr: 0.000035, batch_cost: 0.0893, reader_cost: 0.00823, ips: 44.7793 samples/sec, max_mem_reserved: 2192 MB, max_mem_allocated: 1339 MB | ETA 00:15:46
+[2026/10/07 17:04:56] INFO: [TRAIN] epoch: 22, iter: 7500/18000, loss: 0.0347, lr: 0.000035, batch_cost: 0.0906, reader_cost: 0.00911, ips: 44.1305 samples/sec, max_mem_reserved: 2192 MB, max_mem_allocated: 1339 MB | ETA 00:15:51
+[2026/10/07 17:05:07] INFO: [TRAIN] epoch: 22, iter: 7600/18000, loss: 0.0317, lr: 0.000035, batch_cost: 0.0916, reader_cost: 0.01061, ips: 43.6560 samples/sec, max_mem_reserved: 2192 MB, max_mem_allocated: 1339 MB | ETA 00:15:52
+[2026/10/07 17:05:18] INFO: [TRAIN] epoch: 22, iter: 7700/18000, loss: 0.0371, lr: 0.000034, batch_cost: 0.0949, reader_cost: 0.01303, ips: 42.1539 samples/sec, max_mem_reserved: 2192 MB, max_mem_allocated: 1339 MB | ETA 00:16:17
+[2026/10/07 17:05:29] INFO: [TRAIN] epoch: 23, iter: 7800/18000, loss: 0.0315, lr: 0.000034, batch_cost: 0.0910, reader_cost: 0.00944, ips: 43.9581 samples/sec, max_mem_reserved: 2192 MB, max_mem_allocated: 1339 MB | ETA 00:15:28
+[2026/10/07 17:05:40] INFO: [TRAIN] epoch: 23, iter: 7900/18000, loss: 0.0374, lr: 0.000034, batch_cost: 0.0924, reader_cost: 0.01096, ips: 43.3043 samples/sec, max_mem_reserved: 2192 MB, max_mem_allocated: 1339 MB | ETA 00:15:32
+[2026/10/07 17:05:52] INFO: [TRAIN] epoch: 23, iter: 8000/18000, loss: 0.0332, lr: 0.000033, batch_cost: 0.0933, reader_cost: 0.01194, ips: 42.8776 samples/sec, max_mem_reserved: 2192 MB, max_mem_allocated: 1339 MB | ETA 00:15:32
+[2026/10/07 17:05:52] INFO: Start evaluating (total_samples: 177, total_iters: 177)...
+[2026/10/07 17:06:02] INFO: [EVAL] #Images: 177 mIoU: 0.8666 Acc: 0.9903 Kappa: 0.8477 Dice: 0.9238
+[2026/10/07 17:06:02] INFO: [EVAL] Class IoU: 
+[0.99   0.7432]
+[2026/10/07 17:06:02] INFO: [EVAL] Class Precision: 
+[0.9961 0.8252]
+[2026/10/07 17:06:02] INFO: [EVAL] Class Recall: 
+[0.9938 0.8821]
+[2026/10/07 17:06:02] INFO: Start evaluating (total_samples: 177, total_iters: 177)...
+[2026/10/07 17:06:12] INFO: [EVAL] #Images: 177 mIoU: 0.8661 Acc: 0.9902 Kappa: 0.8470 Dice: 0.9235
+[2026/10/07 17:06:12] INFO: [EVAL] Class IoU: 
+[0.9899 0.7423]
+[2026/10/07 17:06:12] INFO: [EVAL] Class Precision: 
+[0.9961 0.8243]
+[2026/10/07 17:06:12] INFO: [EVAL] Class Recall: 
+[0.9938 0.8819]
+[2026/10/07 17:06:12] INFO: [EVAL] The model with the best validation mIoU (0.8666) was saved at iter 8000.
+[2026/10/07 17:06:12] INFO: [EVAL] The EMA model with the best validation mIoU (0.8661) was saved at iter 8000.
+[2026/10/07 17:06:23] INFO: [TRAIN] epoch: 24, iter: 8100/18000, loss: 0.0352, lr: 0.000033, batch_cost: 0.0897, reader_cost: 0.00821, ips: 44.5929 samples/sec, max_mem_reserved: 2192 MB, max_mem_allocated: 1339 MB | ETA 00:14:48
+[2026/10/07 17:06:34] INFO: [TRAIN] epoch: 24, iter: 8200/18000, loss: 0.0344, lr: 0.000033, batch_cost: 0.0910, reader_cost: 0.00892, ips: 43.9359 samples/sec, max_mem_reserved: 2192 MB, max_mem_allocated: 1339 MB | ETA 00:14:52
+[2026/10/07 17:06:45] INFO: [TRAIN] epoch: 24, iter: 8300/18000, loss: 0.0353, lr: 0.000032, batch_cost: 0.0934, reader_cost: 0.01122, ips: 42.8082 samples/sec, max_mem_reserved: 2192 MB, max_mem_allocated: 1339 MB | ETA 00:15:06
+[2026/10/07 17:06:56] INFO: [TRAIN] epoch: 24, iter: 8400/18000, loss: 0.0340, lr: 0.000032, batch_cost: 0.0907, reader_cost: 0.00911, ips: 44.1171 samples/sec, max_mem_reserved: 2192 MB, max_mem_allocated: 1339 MB | ETA 00:14:30
+[2026/10/07 17:07:07] INFO: [TRAIN] epoch: 25, iter: 8500/18000, loss: 0.0309, lr: 0.000032, batch_cost: 0.0899, reader_cost: 0.00860, ips: 44.5068 samples/sec, max_mem_reserved: 2192 MB, max_mem_allocated: 1339 MB | ETA 00:14:13
+[2026/10/07 17:07:17] INFO: [TRAIN] epoch: 25, iter: 8600/18000, loss: 0.0333, lr: 0.000031, batch_cost: 0.0890, reader_cost: 0.00808, ips: 44.9297 samples/sec, max_mem_reserved: 2192 MB, max_mem_allocated: 1339 MB | ETA 00:13:56
+[2026/10/07 17:07:28] INFO: [TRAIN] epoch: 25, iter: 8700/18000, loss: 0.0369, lr: 0.000031, batch_cost: 0.0908, reader_cost: 0.00995, ips: 44.0730 samples/sec, max_mem_reserved: 2192 MB, max_mem_allocated: 1339 MB | ETA 00:14:04
+[2026/10/07 17:07:39] INFO: [TRAIN] epoch: 26, iter: 8800/18000, loss: 0.0357, lr: 0.000031, batch_cost: 0.0915, reader_cost: 0.01032, ips: 43.7057 samples/sec, max_mem_reserved: 2192 MB, max_mem_allocated: 1339 MB | ETA 00:14:01
+[2026/10/07 17:07:50] INFO: [TRAIN] epoch: 26, iter: 8900/18000, loss: 0.0341, lr: 0.000030, batch_cost: 0.0923, reader_cost: 0.01048, ips: 43.3547 samples/sec, max_mem_reserved: 2192 MB, max_mem_allocated: 1339 MB | ETA 00:13:59
+[2026/10/07 17:08:01] INFO: [TRAIN] epoch: 26, iter: 9000/18000, loss: 0.0327, lr: 0.000030, batch_cost: 0.0896, reader_cost: 0.00832, ips: 44.6586 samples/sec, max_mem_reserved: 2192 MB, max_mem_allocated: 1339 MB | ETA 00:13:26
+[2026/10/07 17:08:01] INFO: Start evaluating (total_samples: 177, total_iters: 177)...
+[2026/10/07 17:08:11] INFO: [EVAL] #Images: 177 mIoU: 0.8632 Acc: 0.9902 Kappa: 0.8432 Dice: 0.9216
+[2026/10/07 17:08:11] INFO: [EVAL] Class IoU: 
+[0.9899 0.7365]
+[2026/10/07 17:08:11] INFO: [EVAL] Class Precision: 
+[0.9954 0.8372]
+[2026/10/07 17:08:11] INFO: [EVAL] Class Recall: 
+[0.9945 0.8596]
+[2026/10/07 17:08:11] INFO: Start evaluating (total_samples: 177, total_iters: 177)...
+[2026/10/07 17:08:21] INFO: [EVAL] #Images: 177 mIoU: 0.8675 Acc: 0.9903 Kappa: 0.8489 Dice: 0.9244
+[2026/10/07 17:08:21] INFO: [EVAL] Class IoU: 
+[0.9901 0.745 ]
+[2026/10/07 17:08:21] INFO: [EVAL] Class Precision: 
+[0.9961 0.8271]
+[2026/10/07 17:08:21] INFO: [EVAL] Class Recall: 
+[0.9939 0.8824]
+[2026/10/07 17:08:21] INFO: [EVAL] The model with the best validation mIoU (0.8666) was saved at iter 8000.
+[2026/10/07 17:08:21] INFO: [EVAL] The EMA model with the best validation mIoU (0.8675) was saved at iter 9000.
+[2026/10/07 17:08:32] INFO: [TRAIN] epoch: 26, iter: 9100/18000, loss: 0.0332, lr: 0.000030, batch_cost: 0.0875, reader_cost: 0.00576, ips: 45.6957 samples/sec, max_mem_reserved: 2192 MB, max_mem_allocated: 1339 MB | ETA 00:12:59
+[2026/10/07 17:08:43] INFO: [TRAIN] epoch: 27, iter: 9200/18000, loss: 0.0343, lr: 0.000029, batch_cost: 0.0916, reader_cost: 0.01056, ips: 43.6793 samples/sec, max_mem_reserved: 2192 MB, max_mem_allocated: 1339 MB | ETA 00:13:25
+[2026/10/07 17:08:54] INFO: [TRAIN] epoch: 27, iter: 9300/18000, loss: 0.0288, lr: 0.000029, batch_cost: 0.0918, reader_cost: 0.00988, ips: 43.5559 samples/sec, max_mem_reserved: 2192 MB, max_mem_allocated: 1339 MB | ETA 00:13:18
+[2026/10/07 17:09:05] INFO: [TRAIN] epoch: 27, iter: 9400/18000, loss: 0.0359, lr: 0.000029, batch_cost: 0.0913, reader_cost: 0.00995, ips: 43.7904 samples/sec, max_mem_reserved: 2192 MB, max_mem_allocated: 1339 MB | ETA 00:13:05
+[2026/10/07 17:09:15] INFO: [TRAIN] epoch: 28, iter: 9500/18000, loss: 0.0328, lr: 0.000028, batch_cost: 0.0900, reader_cost: 0.00930, ips: 44.4453 samples/sec, max_mem_reserved: 2192 MB, max_mem_allocated: 1339 MB | ETA 00:12:44
+[2026/10/07 17:09:26] INFO: [TRAIN] epoch: 28, iter: 9600/18000, loss: 0.0363, lr: 0.000028, batch_cost: 0.0902, reader_cost: 0.00945, ips: 44.3219 samples/sec, max_mem_reserved: 2192 MB, max_mem_allocated: 1339 MB | ETA 00:12:38
+[2026/10/07 17:09:37] INFO: [TRAIN] epoch: 28, iter: 9700/18000, loss: 0.0294, lr: 0.000028, batch_cost: 0.0889, reader_cost: 0.00786, ips: 44.9974 samples/sec, max_mem_reserved: 2192 MB, max_mem_allocated: 1339 MB | ETA 00:12:17
+[2026/10/07 17:09:48] INFO: [TRAIN] epoch: 28, iter: 9800/18000, loss: 0.0371, lr: 0.000027, batch_cost: 0.0902, reader_cost: 0.00891, ips: 44.3479 samples/sec, max_mem_reserved: 2192 MB, max_mem_allocated: 1339 MB | ETA 00:12:19
+[2026/10/07 17:09:59] INFO: [TRAIN] epoch: 29, iter: 9900/18000, loss: 0.0334, lr: 0.000027, batch_cost: 0.0917, reader_cost: 0.01062, ips: 43.6103 samples/sec, max_mem_reserved: 2192 MB, max_mem_allocated: 1339 MB | ETA 00:12:22
+[2026/10/07 17:10:10] INFO: [TRAIN] epoch: 29, iter: 10000/18000, loss: 0.0314, lr: 0.000027, batch_cost: 0.0927, reader_cost: 0.01212, ips: 43.1675 samples/sec, max_mem_reserved: 2192 MB, max_mem_allocated: 1339 MB | ETA 00:12:21
+[2026/10/07 17:10:10] INFO: Start evaluating (total_samples: 177, total_iters: 177)...
+[2026/10/07 17:10:20] INFO: [EVAL] #Images: 177 mIoU: 0.8606 Acc: 0.9904 Kappa: 0.8397 Dice: 0.9198
+[2026/10/07 17:10:20] INFO: [EVAL] Class IoU: 
+[0.9901 0.7311]
+[2026/10/07 17:10:20] INFO: [EVAL] Class Precision: 
+[0.994 0.872]
+[2026/10/07 17:10:20] INFO: [EVAL] Class Recall: 
+[0.996 0.819]
+[2026/10/07 17:10:20] INFO: Start evaluating (total_samples: 177, total_iters: 177)...
+[2026/10/07 17:10:30] INFO: [EVAL] #Images: 177 mIoU: 0.8700 Acc: 0.9906 Kappa: 0.8521 Dice: 0.9261
+[2026/10/07 17:10:30] INFO: [EVAL] Class IoU: 
+[0.9903 0.7498]
+[2026/10/07 17:10:30] INFO: [EVAL] Class Precision: 
+[0.9962 0.8303]
+[2026/10/07 17:10:30] INFO: [EVAL] Class Recall: 
+[0.994  0.8855]
+[2026/10/07 17:10:30] INFO: [EVAL] The model with the best validation mIoU (0.8666) was saved at iter 8000.
+[2026/10/07 17:10:30] INFO: [EVAL] The EMA model with the best validation mIoU (0.8700) was saved at iter 10000.
+[2026/10/07 17:10:41] INFO: [TRAIN] epoch: 29, iter: 10100/18000, loss: 0.0426, lr: 0.000026, batch_cost: 0.0880, reader_cost: 0.00700, ips: 45.4484 samples/sec, max_mem_reserved: 2192 MB, max_mem_allocated: 1339 MB | ETA 00:11:35
+[2026/10/07 17:10:51] INFO: [TRAIN] epoch: 30, iter: 10200/18000, loss: 0.0335, lr: 0.000026, batch_cost: 0.0845, reader_cost: 0.00640, ips: 47.3276 samples/sec, max_mem_reserved: 2192 MB, max_mem_allocated: 1339 MB | ETA 00:10:59
+[2026/10/07 17:11:00] INFO: [TRAIN] epoch: 30, iter: 10300/18000, loss: 0.0323, lr: 0.000026, batch_cost: 0.0808, reader_cost: 0.00443, ips: 49.4956 samples/sec, max_mem_reserved: 2192 MB, max_mem_allocated: 1339 MB | ETA 00:10:22
+[2026/10/07 17:11:10] INFO: [TRAIN] epoch: 30, iter: 10400/18000, loss: 0.0321, lr: 0.000025, batch_cost: 0.0842, reader_cost: 0.00621, ips: 47.5323 samples/sec, max_mem_reserved: 2192 MB, max_mem_allocated: 1339 MB | ETA 00:10:39
+[2026/10/07 17:11:20] INFO: [TRAIN] epoch: 30, iter: 10500/18000, loss: 0.0326, lr: 0.000025, batch_cost: 0.0825, reader_cost: 0.00480, ips: 48.4828 samples/sec, max_mem_reserved: 2192 MB, max_mem_allocated: 1339 MB | ETA 00:10:18
+[2026/10/07 17:11:33] INFO: [TRAIN] epoch: 31, iter: 10600/18000, loss: 0.0300, lr: 0.000025, batch_cost: 0.1107, reader_cost: 0.02057, ips: 36.1196 samples/sec, max_mem_reserved: 2192 MB, max_mem_allocated: 1339 MB | ETA 00:13:39
+[2026/10/07 17:11:45] INFO: [TRAIN] epoch: 31, iter: 10700/18000, loss: 0.0329, lr: 0.000024, batch_cost: 0.0991, reader_cost: 0.01463, ips: 40.3598 samples/sec, max_mem_reserved: 2192 MB, max_mem_allocated: 1339 MB | ETA 00:12:03
+[2026/10/07 17:11:55] INFO: [TRAIN] epoch: 31, iter: 10800/18000, loss: 0.0362, lr: 0.000024, batch_cost: 0.0821, reader_cost: 0.00408, ips: 48.7340 samples/sec, max_mem_reserved: 2192 MB, max_mem_allocated: 1339 MB | ETA 00:09:50
+[2026/10/07 17:12:05] INFO: [TRAIN] epoch: 32, iter: 10900/18000, loss: 0.0321, lr: 0.000024, batch_cost: 0.0850, reader_cost: 0.00674, ips: 47.0782 samples/sec, max_mem_reserved: 2192 MB, max_mem_allocated: 1339 MB | ETA 00:10:03
+[2026/10/07 17:12:14] INFO: [TRAIN] epoch: 32, iter: 11000/18000, loss: 0.0312, lr: 0.000023, batch_cost: 0.0830, reader_cost: 0.00433, ips: 48.1811 samples/sec, max_mem_reserved: 2192 MB, max_mem_allocated: 1339 MB | ETA 00:09:41
+[2026/10/07 17:12:15] INFO: Start evaluating (total_samples: 177, total_iters: 177)...
+[2026/10/07 17:12:25] INFO: [EVAL] #Images: 177 mIoU: 0.8651 Acc: 0.9905 Kappa: 0.8457 Dice: 0.9229
+[2026/10/07 17:12:25] INFO: [EVAL] Class IoU: 
+[0.9902 0.7401]
+[2026/10/07 17:12:25] INFO: [EVAL] Class Precision: 
+[0.995  0.8538]
+[2026/10/07 17:12:25] INFO: [EVAL] Class Recall: 
+[0.9952 0.8475]
+[2026/10/07 17:12:25] INFO: Start evaluating (total_samples: 177, total_iters: 177)...
+[2026/10/07 17:12:35] INFO: [EVAL] #Images: 177 mIoU: 0.8713 Acc: 0.9907 Kappa: 0.8538 Dice: 0.9269
+[2026/10/07 17:12:35] INFO: [EVAL] Class IoU: 
+[0.9904 0.7523]
+[2026/10/07 17:12:35] INFO: [EVAL] Class Precision: 
+[0.9962 0.8336]
+[2026/10/07 17:12:35] INFO: [EVAL] Class Recall: 
+[0.9942 0.8851]
+[2026/10/07 17:12:35] INFO: [EVAL] The model with the best validation mIoU (0.8666) was saved at iter 8000.
+[2026/10/07 17:12:35] INFO: [EVAL] The EMA model with the best validation mIoU (0.8713) was saved at iter 11000.
+[2026/10/07 17:12:45] INFO: [TRAIN] epoch: 32, iter: 11100/18000, loss: 0.0329, lr: 0.000023, batch_cost: 0.0806, reader_cost: 0.00025, ips: 49.6183 samples/sec, max_mem_reserved: 2192 MB, max_mem_allocated: 1339 MB | ETA 00:09:16
+[2026/10/07 17:12:54] INFO: [TRAIN] epoch: 32, iter: 11200/18000, loss: 0.0346, lr: 0.000023, batch_cost: 0.0796, reader_cost: 0.00123, ips: 50.2501 samples/sec, max_mem_reserved: 2192 MB, max_mem_allocated: 1339 MB | ETA 00:09:01
+[2026/10/07 17:13:04] INFO: [TRAIN] epoch: 33, iter: 11300/18000, loss: 0.0338, lr: 0.000022, batch_cost: 0.0828, reader_cost: 0.00486, ips: 48.3238 samples/sec, max_mem_reserved: 2192 MB, max_mem_allocated: 1339 MB | ETA 00:09:14
+[2026/10/07 17:13:14] INFO: [TRAIN] epoch: 33, iter: 11400/18000, loss: 0.0304, lr: 0.000022, batch_cost: 0.0817, reader_cost: 0.00397, ips: 48.9673 samples/sec, max_mem_reserved: 2192 MB, max_mem_allocated: 1339 MB | ETA 00:08:59
+[2026/10/07 17:13:24] INFO: [TRAIN] epoch: 33, iter: 11500/18000, loss: 0.0295, lr: 0.000022, batch_cost: 0.0851, reader_cost: 0.00538, ips: 46.9809 samples/sec, max_mem_reserved: 2192 MB, max_mem_allocated: 1339 MB | ETA 00:09:13
+[2026/10/07 17:13:34] INFO: [TRAIN] epoch: 34, iter: 11600/18000, loss: 0.0297, lr: 0.000021, batch_cost: 0.0842, reader_cost: 0.00513, ips: 47.5123 samples/sec, max_mem_reserved: 2192 MB, max_mem_allocated: 1339 MB | ETA 00:08:58
+[2026/10/07 17:13:43] INFO: [TRAIN] epoch: 34, iter: 11700/18000, loss: 0.0301, lr: 0.000021, batch_cost: 0.0834, reader_cost: 0.00567, ips: 47.9903 samples/sec, max_mem_reserved: 2192 MB, max_mem_allocated: 1339 MB | ETA 00:08:45
+[2026/10/07 17:13:53] INFO: [TRAIN] epoch: 34, iter: 11800/18000, loss: 0.0321, lr: 0.000021, batch_cost: 0.0847, reader_cost: 0.00665, ips: 47.2279 samples/sec, max_mem_reserved: 2192 MB, max_mem_allocated: 1339 MB | ETA 00:08:45
+[2026/10/07 17:14:03] INFO: [TRAIN] epoch: 34, iter: 11900/18000, loss: 0.0333, lr: 0.000020, batch_cost: 0.0859, reader_cost: 0.00789, ips: 46.5673 samples/sec, max_mem_reserved: 2192 MB, max_mem_allocated: 1339 MB | ETA 00:08:43
+[2026/10/07 17:14:13] INFO: [TRAIN] epoch: 35, iter: 12000/18000, loss: 0.0318, lr: 0.000020, batch_cost: 0.0851, reader_cost: 0.00709, ips: 47.0026 samples/sec, max_mem_reserved: 2192 MB, max_mem_allocated: 1339 MB | ETA 00:08:30
+[2026/10/07 17:14:13] INFO: Start evaluating (total_samples: 177, total_iters: 177)...
+[2026/10/07 17:14:23] INFO: [EVAL] #Images: 177 mIoU: 0.8717 Acc: 0.9910 Kappa: 0.8542 Dice: 0.9271
+[2026/10/07 17:14:23] INFO: [EVAL] Class IoU: 
+[0.9907 0.7527]
+[2026/10/07 17:14:23] INFO: [EVAL] Class Precision: 
+[0.9953 0.8595]
+[2026/10/07 17:14:23] INFO: [EVAL] Class Recall: 
+[0.9954 0.8583]
+[2026/10/07 17:14:23] INFO: Start evaluating (total_samples: 177, total_iters: 177)...
+[2026/10/07 17:14:33] INFO: [EVAL] #Images: 177 mIoU: 0.8734 Acc: 0.9908 Kappa: 0.8564 Dice: 0.9282
+[2026/10/07 17:14:33] INFO: [EVAL] Class IoU: 
+[0.9906 0.7562]
+[2026/10/07 17:14:33] INFO: [EVAL] Class Precision: 
+[0.9963 0.8363]
+[2026/10/07 17:14:33] INFO: [EVAL] Class Recall: 
+[0.9943 0.8876]
+[2026/10/07 17:14:34] INFO: [EVAL] The model with the best validation mIoU (0.8717) was saved at iter 12000.
+[2026/10/07 17:14:34] INFO: [EVAL] The EMA model with the best validation mIoU (0.8734) was saved at iter 12000.
+[2026/10/07 17:14:43] INFO: [TRAIN] epoch: 35, iter: 12100/18000, loss: 0.0296, lr: 0.000020, batch_cost: 0.0798, reader_cost: 0.00245, ips: 50.1509 samples/sec, max_mem_reserved: 2192 MB, max_mem_allocated: 1339 MB | ETA 00:07:50
+[2026/10/07 17:14:53] INFO: [TRAIN] epoch: 35, iter: 12200/18000, loss: 0.0332, lr: 0.000019, batch_cost: 0.0838, reader_cost: 0.00610, ips: 47.7344 samples/sec, max_mem_reserved: 2192 MB, max_mem_allocated: 1339 MB | ETA 00:08:06
+[2026/10/07 17:15:02] INFO: [TRAIN] epoch: 36, iter: 12300/18000, loss: 0.0332, lr: 0.000019, batch_cost: 0.0821, reader_cost: 0.00454, ips: 48.7087 samples/sec, max_mem_reserved: 2192 MB, max_mem_allocated: 1339 MB | ETA 00:07:48
+[2026/10/07 17:15:12] INFO: [TRAIN] epoch: 36, iter: 12400/18000, loss: 0.0304, lr: 0.000019, batch_cost: 0.0830, reader_cost: 0.00580, ips: 48.2102 samples/sec, max_mem_reserved: 2192 MB, max_mem_allocated: 1339 MB | ETA 00:07:44
+[2026/10/07 17:15:22] INFO: [TRAIN] epoch: 36, iter: 12500/18000, loss: 0.0335, lr: 0.000018, batch_cost: 0.0807, reader_cost: 0.00348, ips: 49.5568 samples/sec, max_mem_reserved: 2192 MB, max_mem_allocated: 1339 MB | ETA 00:07:23
+[2026/10/07 17:15:31] INFO: [TRAIN] epoch: 36, iter: 12600/18000, loss: 0.0309, lr: 0.000018, batch_cost: 0.0825, reader_cost: 0.00547, ips: 48.4947 samples/sec, max_mem_reserved: 2192 MB, max_mem_allocated: 1339 MB | ETA 00:07:25
+[2026/10/07 17:15:42] INFO: [TRAIN] epoch: 37, iter: 12700/18000, loss: 0.0312, lr: 0.000018, batch_cost: 0.0913, reader_cost: 0.00851, ips: 43.8246 samples/sec, max_mem_reserved: 2192 MB, max_mem_allocated: 1339 MB | ETA 00:08:03
+[2026/10/07 17:15:56] INFO: [TRAIN] epoch: 37, iter: 12800/18000, loss: 0.0301, lr: 0.000017, batch_cost: 0.1129, reader_cost: 0.02082, ips: 35.4268 samples/sec, max_mem_reserved: 2192 MB, max_mem_allocated: 1339 MB | ETA 00:09:47
+[2026/10/07 17:16:10] INFO: [TRAIN] epoch: 37, iter: 12900/18000, loss: 0.0309, lr: 0.000017, batch_cost: 0.1151, reader_cost: 0.02397, ips: 34.7436 samples/sec, max_mem_reserved: 2192 MB, max_mem_allocated: 1339 MB | ETA 00:09:47
+[2026/10/07 17:16:24] INFO: [TRAIN] epoch: 38, iter: 13000/18000, loss: 0.0313, lr: 0.000017, batch_cost: 0.1164, reader_cost: 0.02524, ips: 34.3499 samples/sec, max_mem_reserved: 2192 MB, max_mem_allocated: 1339 MB | ETA 00:09:42
+[2026/10/07 17:16:24] INFO: Start evaluating (total_samples: 177, total_iters: 177)...
+[2026/10/07 17:16:35] INFO: [EVAL] #Images: 177 mIoU: 0.8727 Acc: 0.9907 Kappa: 0.8555 Dice: 0.9278
+[2026/10/07 17:16:35] INFO: [EVAL] Class IoU: 
+[0.9905 0.7549]
+[2026/10/07 17:16:35] INFO: [EVAL] Class Precision: 
+[0.9964 0.8303]
+[2026/10/07 17:16:35] INFO: [EVAL] Class Recall: 
+[0.994  0.8925]
+[2026/10/07 17:16:35] INFO: Start evaluating (total_samples: 177, total_iters: 177)...
+[2026/10/07 17:16:46] INFO: [EVAL] #Images: 177 mIoU: 0.8743 Acc: 0.9910 Kappa: 0.8576 Dice: 0.9288
+[2026/10/07 17:16:46] INFO: [EVAL] Class IoU: 
+[0.9907 0.7579]
+[2026/10/07 17:16:46] INFO: [EVAL] Class Precision: 
+[0.9962 0.8404]
+[2026/10/07 17:16:46] INFO: [EVAL] Class Recall: 
+[0.9944 0.8853]
+[2026/10/07 17:16:46] INFO: [EVAL] The model with the best validation mIoU (0.8727) was saved at iter 13000.
+[2026/10/07 17:16:46] INFO: [EVAL] The EMA model with the best validation mIoU (0.8743) was saved at iter 13000.
+[2026/10/07 17:17:00] INFO: [TRAIN] epoch: 38, iter: 13100/18000, loss: 0.0333, lr: 0.000016, batch_cost: 0.1105, reader_cost: 0.01882, ips: 36.2137 samples/sec, max_mem_reserved: 2192 MB, max_mem_allocated: 1339 MB | ETA 00:09:01
+[2026/10/07 17:17:14] INFO: [TRAIN] epoch: 38, iter: 13200/18000, loss: 0.0324, lr: 0.000016, batch_cost: 0.1160, reader_cost: 0.02440, ips: 34.4937 samples/sec, max_mem_reserved: 2192 MB, max_mem_allocated: 1339 MB | ETA 00:09:16
+[2026/10/07 17:17:27] INFO: [TRAIN] epoch: 38, iter: 13300/18000, loss: 0.0334, lr: 0.000016, batch_cost: 0.1139, reader_cost: 0.02290, ips: 35.1335 samples/sec, max_mem_reserved: 2192 MB, max_mem_allocated: 1339 MB | ETA 00:08:55
+[2026/10/07 17:17:42] INFO: [TRAIN] epoch: 39, iter: 13400/18000, loss: 0.0327, lr: 0.000015, batch_cost: 0.1167, reader_cost: 0.02420, ips: 34.2646 samples/sec, max_mem_reserved: 2192 MB, max_mem_allocated: 1339 MB | ETA 00:08:56
+[2026/10/07 17:17:55] INFO: [TRAIN] epoch: 39, iter: 13500/18000, loss: 0.0321, lr: 0.000015, batch_cost: 0.1139, reader_cost: 0.02199, ips: 35.1225 samples/sec, max_mem_reserved: 2192 MB, max_mem_allocated: 1339 MB | ETA 00:08:32
+[2026/10/07 17:18:09] INFO: [TRAIN] epoch: 39, iter: 13600/18000, loss: 0.0294, lr: 0.000015, batch_cost: 0.1127, reader_cost: 0.02176, ips: 35.4875 samples/sec, max_mem_reserved: 2192 MB, max_mem_allocated: 1339 MB | ETA 00:08:15
+[2026/10/07 17:18:23] INFO: [TRAIN] epoch: 40, iter: 13700/18000, loss: 0.0298, lr: 0.000014, batch_cost: 0.1174, reader_cost: 0.02611, ips: 34.0716 samples/sec, max_mem_reserved: 2192 MB, max_mem_allocated: 1339 MB | ETA 00:08:24
+[2026/10/07 17:18:37] INFO: [TRAIN] epoch: 40, iter: 13800/18000, loss: 0.0298, lr: 0.000014, batch_cost: 0.1157, reader_cost: 0.02414, ips: 34.5823 samples/sec, max_mem_reserved: 2192 MB, max_mem_allocated: 1339 MB | ETA 00:08:05
+[2026/10/07 17:18:51] INFO: [TRAIN] epoch: 40, iter: 13900/18000, loss: 0.0290, lr: 0.000014, batch_cost: 0.1144, reader_cost: 0.02288, ips: 34.9704 samples/sec, max_mem_reserved: 2192 MB, max_mem_allocated: 1339 MB | ETA 00:07:48
+[2026/10/07 17:19:05] INFO: [TRAIN] epoch: 40, iter: 14000/18000, loss: 0.0302, lr: 0.000013, batch_cost: 0.1145, reader_cost: 0.02403, ips: 34.9381 samples/sec, max_mem_reserved: 2192 MB, max_mem_allocated: 1339 MB | ETA 00:07:37
+[2026/10/07 17:19:05] INFO: Start evaluating (total_samples: 177, total_iters: 177)...
+[2026/10/07 17:19:16] INFO: [EVAL] #Images: 177 mIoU: 0.8729 Acc: 0.9910 Kappa: 0.8558 Dice: 0.9279
+[2026/10/07 17:19:16] INFO: [EVAL] Class IoU: 
+[0.9907 0.7551]
+[2026/10/07 17:19:16] INFO: [EVAL] Class Precision: 
+[0.9957 0.85  ]
+[2026/10/07 17:19:16] INFO: [EVAL] Class Recall: 
+[0.9949 0.8712]
+[2026/10/07 17:19:16] INFO: Start evaluating (total_samples: 177, total_iters: 177)...
+[2026/10/07 17:19:27] INFO: [EVAL] #Images: 177 mIoU: 0.8746 Acc: 0.9910 Kappa: 0.8580 Dice: 0.9290
+[2026/10/07 17:19:27] INFO: [EVAL] Class IoU: 
+[0.9907 0.7584]
+[2026/10/07 17:19:27] INFO: [EVAL] Class Precision: 
+[0.9962 0.8414]
+[2026/10/07 17:19:27] INFO: [EVAL] Class Recall: 
+[0.9945 0.8849]
+[2026/10/07 17:19:27] INFO: [EVAL] The model with the best validation mIoU (0.8729) was saved at iter 14000.
+[2026/10/07 17:19:27] INFO: [EVAL] The EMA model with the best validation mIoU (0.8746) was saved at iter 14000.
+[2026/10/07 17:19:41] INFO: [TRAIN] epoch: 41, iter: 14100/18000, loss: 0.0314, lr: 0.000013, batch_cost: 0.1162, reader_cost: 0.02497, ips: 34.4096 samples/sec, max_mem_reserved: 2192 MB, max_mem_allocated: 1339 MB | ETA 00:07:33
+[2026/10/07 17:19:55] INFO: [TRAIN] epoch: 41, iter: 14200/18000, loss: 0.0300, lr: 0.000013, batch_cost: 0.1156, reader_cost: 0.02450, ips: 34.6062 samples/sec, max_mem_reserved: 2192 MB, max_mem_allocated: 1339 MB | ETA 00:07:19
+[2026/10/07 17:20:09] INFO: [TRAIN] epoch: 41, iter: 14300/18000, loss: 0.0317, lr: 0.000012, batch_cost: 0.1175, reader_cost: 0.02531, ips: 34.0514 samples/sec, max_mem_reserved: 2192 MB, max_mem_allocated: 1339 MB | ETA 00:07:14
+[2026/10/07 17:20:24] INFO: [TRAIN] epoch: 42, iter: 14400/18000, loss: 0.0307, lr: 0.000012, batch_cost: 0.1164, reader_cost: 0.02481, ips: 34.3704 samples/sec, max_mem_reserved: 2192 MB, max_mem_allocated: 1339 MB | ETA 00:06:58
+[2026/10/07 17:20:38] INFO: [TRAIN] epoch: 42, iter: 14500/18000, loss: 0.0315, lr: 0.000012, batch_cost: 0.1136, reader_cost: 0.02188, ips: 35.1970 samples/sec, max_mem_reserved: 2192 MB, max_mem_allocated: 1339 MB | ETA 00:06:37
+[2026/10/07 17:20:52] INFO: [TRAIN] epoch: 42, iter: 14600/18000, loss: 0.0365, lr: 0.000011, batch_cost: 0.1153, reader_cost: 0.02255, ips: 34.6857 samples/sec, max_mem_reserved: 2192 MB, max_mem_allocated: 1339 MB | ETA 00:06:32
+[2026/10/07 17:21:06] INFO: [TRAIN] epoch: 42, iter: 14700/18000, loss: 0.0300, lr: 0.000011, batch_cost: 0.1150, reader_cost: 0.02349, ips: 34.7870 samples/sec, max_mem_reserved: 2192 MB, max_mem_allocated: 1339 MB | ETA 00:06:19
+[2026/10/07 17:21:20] INFO: [TRAIN] epoch: 43, iter: 14800/18000, loss: 0.0313, lr: 0.000011, batch_cost: 0.1175, reader_cost: 0.02628, ips: 34.0494 samples/sec, max_mem_reserved: 2192 MB, max_mem_allocated: 1339 MB | ETA 00:06:15
+[2026/10/07 17:21:34] INFO: [TRAIN] epoch: 43, iter: 14900/18000, loss: 0.0338, lr: 0.000010, batch_cost: 0.1165, reader_cost: 0.02489, ips: 34.3469 samples/sec, max_mem_reserved: 2192 MB, max_mem_allocated: 1339 MB | ETA 00:06:01
+[2026/10/07 17:21:48] INFO: [TRAIN] epoch: 43, iter: 15000/18000, loss: 0.0305, lr: 0.000010, batch_cost: 0.1164, reader_cost: 0.02433, ips: 34.3641 samples/sec, max_mem_reserved: 2192 MB, max_mem_allocated: 1339 MB | ETA 00:05:49
+[2026/10/07 17:21:48] INFO: Start evaluating (total_samples: 177, total_iters: 177)...
+[2026/10/07 17:21:59] INFO: [EVAL] #Images: 177 mIoU: 0.8741 Acc: 0.9910 Kappa: 0.8573 Dice: 0.9287
+[2026/10/07 17:21:59] INFO: [EVAL] Class IoU: 
+[0.9907 0.7574]
+[2026/10/07 17:21:59] INFO: [EVAL] Class Precision: 
+[0.996  0.8454]
+[2026/10/07 17:21:59] INFO: [EVAL] Class Recall: 
+[0.9947 0.8792]
+[2026/10/07 17:21:59] INFO: Start evaluating (total_samples: 177, total_iters: 177)...
+[2026/10/07 17:22:10] INFO: [EVAL] #Images: 177 mIoU: 0.8751 Acc: 0.9910 Kappa: 0.8587 Dice: 0.9293
+[2026/10/07 17:22:10] INFO: [EVAL] Class IoU: 
+[0.9908 0.7595]
+[2026/10/07 17:22:10] INFO: [EVAL] Class Precision: 
+[0.9962 0.8423]
+[2026/10/07 17:22:10] INFO: [EVAL] Class Recall: 
+[0.9945 0.8854]
+[2026/10/07 17:22:10] INFO: [EVAL] The model with the best validation mIoU (0.8741) was saved at iter 15000.
+[2026/10/07 17:22:10] INFO: [EVAL] The EMA model with the best validation mIoU (0.8751) was saved at iter 15000.
+[2026/10/07 17:22:24] INFO: [TRAIN] epoch: 44, iter: 15100/18000, loss: 0.0288, lr: 0.000010, batch_cost: 0.1130, reader_cost: 0.02187, ips: 35.4007 samples/sec, max_mem_reserved: 2192 MB, max_mem_allocated: 1339 MB | ETA 00:05:27
+[2026/10/07 17:22:38] INFO: [TRAIN] epoch: 44, iter: 15200/18000, loss: 0.0270, lr: 0.000009, batch_cost: 0.1168, reader_cost: 0.02568, ips: 34.2453 samples/sec, max_mem_reserved: 2192 MB, max_mem_allocated: 1339 MB | ETA 00:05:27
+[2026/10/07 17:22:51] INFO: [TRAIN] epoch: 44, iter: 15300/18000, loss: 0.0309, lr: 0.000009, batch_cost: 0.1142, reader_cost: 0.02306, ips: 35.0166 samples/sec, max_mem_reserved: 2192 MB, max_mem_allocated: 1339 MB | ETA 00:05:08
+[2026/10/07 17:23:05] INFO: [TRAIN] epoch: 44, iter: 15400/18000, loss: 0.0289, lr: 0.000009, batch_cost: 0.1153, reader_cost: 0.02417, ips: 34.6892 samples/sec, max_mem_reserved: 2192 MB, max_mem_allocated: 1339 MB | ETA 00:04:59
+[2026/10/07 17:23:19] INFO: [TRAIN] epoch: 45, iter: 15500/18000, loss: 0.0285, lr: 0.000008, batch_cost: 0.1156, reader_cost: 0.02407, ips: 34.5989 samples/sec, max_mem_reserved: 2192 MB, max_mem_allocated: 1339 MB | ETA 00:04:49
+[2026/10/07 17:23:33] INFO: [TRAIN] epoch: 45, iter: 15600/18000, loss: 0.0287, lr: 0.000008, batch_cost: 0.1153, reader_cost: 0.02336, ips: 34.7044 samples/sec, max_mem_reserved: 2192 MB, max_mem_allocated: 1339 MB | ETA 00:04:36
+[2026/10/07 17:23:48] INFO: [TRAIN] epoch: 45, iter: 15700/18000, loss: 0.0303, lr: 0.000008, batch_cost: 0.1160, reader_cost: 0.02447, ips: 34.4937 samples/sec, max_mem_reserved: 2192 MB, max_mem_allocated: 1339 MB | ETA 00:04:26
+[2026/10/07 17:24:01] INFO: [TRAIN] epoch: 46, iter: 15800/18000, loss: 0.0284, lr: 0.000007, batch_cost: 0.1151, reader_cost: 0.02457, ips: 34.7446 samples/sec, max_mem_reserved: 2192 MB, max_mem_allocated: 1339 MB | ETA 00:04:13
+[2026/10/07 17:24:15] INFO: [TRAIN] epoch: 46, iter: 15900/18000, loss: 0.0290, lr: 0.000007, batch_cost: 0.1132, reader_cost: 0.02224, ips: 35.3267 samples/sec, max_mem_reserved: 2192 MB, max_mem_allocated: 1339 MB | ETA 00:03:57
+[2026/10/07 17:24:29] INFO: [TRAIN] epoch: 46, iter: 16000/18000, loss: 0.0310, lr: 0.000007, batch_cost: 0.1115, reader_cost: 0.02038, ips: 35.8797 samples/sec, max_mem_reserved: 2192 MB, max_mem_allocated: 1339 MB | ETA 00:03:42
+[2026/10/07 17:24:29] INFO: Start evaluating (total_samples: 177, total_iters: 177)...
+[2026/10/07 17:24:40] INFO: [EVAL] #Images: 177 mIoU: 0.8751 Acc: 0.9911 Kappa: 0.8586 Dice: 0.9293
+[2026/10/07 17:24:40] INFO: [EVAL] Class IoU: 
+[0.9908 0.7593]
+[2026/10/07 17:24:40] INFO: [EVAL] Class Precision: 
+[0.996  0.8472]
+[2026/10/07 17:24:40] INFO: [EVAL] Class Recall: 
+[0.9948 0.8799]
+[2026/10/07 17:24:40] INFO: Start evaluating (total_samples: 177, total_iters: 177)...
+[2026/10/07 17:24:51] INFO: [EVAL] #Images: 177 mIoU: 0.8757 Acc: 0.9911 Kappa: 0.8594 Dice: 0.9297
+[2026/10/07 17:24:51] INFO: [EVAL] Class IoU: 
+[0.9908 0.7605]
+[2026/10/07 17:24:51] INFO: [EVAL] Class Precision: 
+[0.9962 0.8437]
+[2026/10/07 17:24:51] INFO: [EVAL] Class Recall: 
+[0.9946 0.8853]
+[2026/10/07 17:24:51] INFO: [EVAL] The model with the best validation mIoU (0.8751) was saved at iter 16000.
+[2026/10/07 17:24:51] INFO: [EVAL] The EMA model with the best validation mIoU (0.8757) was saved at iter 16000.
+[2026/10/07 17:25:04] INFO: [TRAIN] epoch: 46, iter: 16100/18000, loss: 0.0284, lr: 0.000006, batch_cost: 0.1100, reader_cost: 0.01829, ips: 36.3512 samples/sec, max_mem_reserved: 2192 MB, max_mem_allocated: 1339 MB | ETA 00:03:29
+[2026/10/07 17:25:18] INFO: [TRAIN] epoch: 47, iter: 16200/18000, loss: 0.0296, lr: 0.000006, batch_cost: 0.1146, reader_cost: 0.02387, ips: 34.8934 samples/sec, max_mem_reserved: 2192 MB, max_mem_allocated: 1339 MB | ETA 00:03:26
+[2026/10/07 17:25:32] INFO: [TRAIN] epoch: 47, iter: 16300/18000, loss: 0.0307, lr: 0.000006, batch_cost: 0.1165, reader_cost: 0.02489, ips: 34.3245 samples/sec, max_mem_reserved: 2192 MB, max_mem_allocated: 1339 MB | ETA 00:03:18
+[2026/10/07 17:25:46] INFO: [TRAIN] epoch: 47, iter: 16400/18000, loss: 0.0299, lr: 0.000005, batch_cost: 0.1121, reader_cost: 0.02106, ips: 35.6686 samples/sec, max_mem_reserved: 2192 MB, max_mem_allocated: 1339 MB | ETA 00:02:59
+[2026/10/07 17:26:00] INFO: [TRAIN] epoch: 48, iter: 16500/18000, loss: 0.0279, lr: 0.000005, batch_cost: 0.1157, reader_cost: 0.02428, ips: 34.5858 samples/sec, max_mem_reserved: 2192 MB, max_mem_allocated: 1339 MB | ETA 00:02:53
+[2026/10/07 17:26:14] INFO: [TRAIN] epoch: 48, iter: 16600/18000, loss: 0.0281, lr: 0.000005, batch_cost: 0.1135, reader_cost: 0.02209, ips: 35.2412 samples/sec, max_mem_reserved: 2192 MB, max_mem_allocated: 1339 MB | ETA 00:02:38
+[2026/10/07 17:26:28] INFO: [TRAIN] epoch: 48, iter: 16700/18000, loss: 0.0282, lr: 0.000004, batch_cost: 0.1149, reader_cost: 0.02327, ips: 34.8097 samples/sec, max_mem_reserved: 2192 MB, max_mem_allocated: 1339 MB | ETA 00:02:29
+[2026/10/07 17:26:42] INFO: [TRAIN] epoch: 48, iter: 16800/18000, loss: 0.0300, lr: 0.000004, batch_cost: 0.1148, reader_cost: 0.02383, ips: 34.8332 samples/sec, max_mem_reserved: 2192 MB, max_mem_allocated: 1339 MB | ETA 00:02:17
+[2026/10/07 17:26:56] INFO: [TRAIN] epoch: 49, iter: 16900/18000, loss: 0.0294, lr: 0.000004, batch_cost: 0.1134, reader_cost: 0.02174, ips: 35.2685 samples/sec, max_mem_reserved: 2192 MB, max_mem_allocated: 1339 MB | ETA 00:02:04
+[2026/10/07 17:27:10] INFO: [TRAIN] epoch: 49, iter: 17000/18000, loss: 0.0275, lr: 0.000003, batch_cost: 0.1156, reader_cost: 0.02449, ips: 34.5979 samples/sec, max_mem_reserved: 2192 MB, max_mem_allocated: 1339 MB | ETA 00:01:55
+[2026/10/07 17:27:10] INFO: Start evaluating (total_samples: 177, total_iters: 177)...
+[2026/10/07 17:27:21] INFO: [EVAL] #Images: 177 mIoU: 0.8756 Acc: 0.9912 Kappa: 0.8592 Dice: 0.9296
+[2026/10/07 17:27:21] INFO: [EVAL] Class IoU: 
+[0.991  0.7602]
+[2026/10/07 17:27:21] INFO: [EVAL] Class Precision: 
+[0.9957 0.8565]
+[2026/10/07 17:27:21] INFO: [EVAL] Class Recall: 
+[0.9952 0.8712]
+[2026/10/07 17:27:21] INFO: Start evaluating (total_samples: 177, total_iters: 177)...
+[2026/10/07 17:27:31] INFO: [EVAL] #Images: 177 mIoU: 0.8763 Acc: 0.9911 Kappa: 0.8602 Dice: 0.9301
+[2026/10/07 17:27:31] INFO: [EVAL] Class IoU: 
+[0.9909 0.7618]
+[2026/10/07 17:27:31] INFO: [EVAL] Class Precision: 
+[0.9963 0.8439]
+[2026/10/07 17:27:31] INFO: [EVAL] Class Recall: 
+[0.9946 0.8867]
+[2026/10/07 17:27:32] INFO: [EVAL] The model with the best validation mIoU (0.8756) was saved at iter 17000.
+[2026/10/07 17:27:32] INFO: [EVAL] The EMA model with the best validation mIoU (0.8763) was saved at iter 17000.
+[2026/10/07 17:27:45] INFO: [TRAIN] epoch: 49, iter: 17100/18000, loss: 0.0311, lr: 0.000003, batch_cost: 0.1095, reader_cost: 0.01834, ips: 36.5355 samples/sec, max_mem_reserved: 2192 MB, max_mem_allocated: 1339 MB | ETA 00:01:38
+[2026/10/07 17:27:59] INFO: [TRAIN] epoch: 50, iter: 17200/18000, loss: 0.0300, lr: 0.000003, batch_cost: 0.1162, reader_cost: 0.02459, ips: 34.4202 samples/sec, max_mem_reserved: 2192 MB, max_mem_allocated: 1339 MB | ETA 00:01:32
+[2026/10/07 17:28:13] INFO: [TRAIN] epoch: 50, iter: 17300/18000, loss: 0.0289, lr: 0.000002, batch_cost: 0.1166, reader_cost: 0.02522, ips: 34.2912 samples/sec, max_mem_reserved: 2192 MB, max_mem_allocated: 1339 MB | ETA 00:01:21
+[2026/10/07 17:28:27] INFO: [TRAIN] epoch: 50, iter: 17400/18000, loss: 0.0279, lr: 0.000002, batch_cost: 0.1161, reader_cost: 0.02441, ips: 34.4505 samples/sec, max_mem_reserved: 2192 MB, max_mem_allocated: 1339 MB | ETA 00:01:09
+[2026/10/07 17:28:41] INFO: [TRAIN] epoch: 50, iter: 17500/18000, loss: 0.0296, lr: 0.000002, batch_cost: 0.1168, reader_cost: 0.02574, ips: 34.2355 samples/sec, max_mem_reserved: 2192 MB, max_mem_allocated: 1339 MB | ETA 00:00:58
+[2026/10/07 17:28:55] INFO: [TRAIN] epoch: 51, iter: 17600/18000, loss: 0.0293, lr: 0.000001, batch_cost: 0.1147, reader_cost: 0.02337, ips: 34.8815 samples/sec, max_mem_reserved: 2192 MB, max_mem_allocated: 1339 MB | ETA 00:00:45
+[2026/10/07 17:29:09] INFO: [TRAIN] epoch: 51, iter: 17700/18000, loss: 0.0306, lr: 0.000001, batch_cost: 0.1142, reader_cost: 0.02304, ips: 35.0150 samples/sec, max_mem_reserved: 2192 MB, max_mem_allocated: 1339 MB | ETA 00:00:34
+[2026/10/07 17:29:23] INFO: [TRAIN] epoch: 51, iter: 17800/18000, loss: 0.0291, lr: 0.000001, batch_cost: 0.1167, reader_cost: 0.02547, ips: 34.2678 samples/sec, max_mem_reserved: 2192 MB, max_mem_allocated: 1339 MB | ETA 00:00:23
+[2026/10/07 17:29:37] INFO: [TRAIN] epoch: 52, iter: 17900/18000, loss: 0.0289, lr: 0.000000, batch_cost: 0.1154, reader_cost: 0.02405, ips: 34.6540 samples/sec, max_mem_reserved: 2192 MB, max_mem_allocated: 1339 MB | ETA 00:00:11
+[2026/10/07 17:29:52] INFO: [TRAIN] epoch: 52, iter: 18000/18000, loss: 0.0284, lr: 0.000000, batch_cost: 0.1164, reader_cost: 0.02522, ips: 34.3617 samples/sec, max_mem_reserved: 2192 MB, max_mem_allocated: 1339 MB | ETA 00:00:00
+[2026/10/07 17:29:52] INFO: Start evaluating (total_samples: 177, total_iters: 177)...
+[2026/10/07 17:30:02] INFO: [EVAL] #Images: 177 mIoU: 0.8773 Acc: 0.9912 Kappa: 0.8614 Dice: 0.9307
+[2026/10/07 17:30:02] INFO: [EVAL] Class IoU: 
+[0.991  0.7636]
+[2026/10/07 17:30:02] INFO: [EVAL] Class Precision: 
+[0.9963 0.8453]
+[2026/10/07 17:30:02] INFO: [EVAL] Class Recall: 
+[0.9946 0.8876]
+[2026/10/07 17:30:02] INFO: Start evaluating (total_samples: 177, total_iters: 177)...
+[2026/10/07 17:30:13] INFO: [EVAL] #Images: 177 mIoU: 0.8769 Acc: 0.9912 Kappa: 0.8610 Dice: 0.9305
+[2026/10/07 17:30:13] INFO: [EVAL] Class IoU: 
+[0.9909 0.7629]
+[2026/10/07 17:30:13] INFO: [EVAL] Class Precision: 
+[0.9963 0.8441]
+[2026/10/07 17:30:13] INFO: [EVAL] Class Recall: 
+[0.9946 0.888 ]
+[2026/10/07 17:30:13] INFO: [EVAL] The model with the best validation mIoU (0.8773) was saved at iter 18000.
+[2026/10/07 17:30:13] INFO: [EVAL] The EMA model with the best validation mIoU (0.8769) was saved at iter 18000.
+<class 'paddle.nn.layer.conv.Conv2D'>'s flops has been counted
+Cannot find suitable count function for <class 'paddle.nn.layer.norm.LayerNorm'>. Treat it as zero FLOPs.
+<class 'paddle.nn.layer.common.Linear'>'s flops has been counted
+<class 'paddle.nn.layer.common.Dropout'>'s flops has been counted
+Cannot find suitable count function for <class 'paddleseg.models.backbones.transformer_utils.Identity'>. Treat it as zero FLOPs.
+Cannot find suitable count function for <class 'paddle.nn.layer.activation.GELU'>. Treat it as zero FLOPs.
+Cannot find suitable count function for <class 'paddleseg.models.backbones.transformer_utils.DropPath'>. Treat it as zero FLOPs.
+Cannot find suitable count function for <class 'paddle.nn.layer.common.Dropout2D'>. Treat it as zero FLOPs.
+<class 'paddle.nn.layer.norm.BatchNorm2D'>'s flops has been counted
+<class 'paddle.nn.layer.activation.ReLU'>'s flops has been counted
+Total Flops: 15942862528     Total Params: 4896968

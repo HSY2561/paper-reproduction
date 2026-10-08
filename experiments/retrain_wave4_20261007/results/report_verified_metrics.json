@@ -1,0 +1,112 @@
+[
+  {
+    "model": "A_UAFM",
+    "images": 177,
+    "split": "custom val",
+    "confusion_matrix": [
+      [
+        178699921,
+        963836
+      ],
+      [
+        666992,
+        5267203
+      ]
+    ],
+    "mIoU": 0.8772685563318916,
+    "crackIoU": 0.7635806507683135,
+    "precision": 0.8453169688072888,
+    "recall": 0.8876019409540805,
+    "F1": 0.8659435568604763,
+    "empty_predictions": 0,
+    "zero_overlap_images": 0,
+    "checkpoint": "C:\\retrain_wave4\\checkpoints\\A_UAFM\\model.pdparams",
+    "checkpoint_sha256": "4eaa3bcf38a425874c07a2d2940d14d51869e9b06c0e95cd903fa4de4fbb1a9c",
+    "test_used": false,
+    "boundary_counts_pm_pn_gm_gn": [
+      317787,
+      584465,
+      319879,
+      566760
+    ],
+    "boundary_precision": 0.5437228918754758,
+    "boundary_recall": 0.5643993930411462,
+    "boundary_F1": 0.5538682405979869,
+    "boundary_protocol": "inner boundary: foreground minus 3x3 erosion, zero outside; Euclidean distance <=2px, aggregate counts then harmonic mean"
+  },
+  {
+    "model": "segformer_b0",
+    "images": 1124,
+    "split": "Crack500 test",
+    "confusion_matrix": [
+      [
+        240591323,
+        3900909
+      ],
+      [
+        3988840,
+        10488528
+      ]
+    ],
+    "mIoU": 0.7694752771365169,
+    "crackIoU": 0.5707024657425721,
+    "precision": 0.7289046819552426,
+    "recall": 0.7244775431556344,
+    "F1": 0.7266843698150869,
+    "empty_predictions": 8,
+    "zero_overlap_images": 11,
+    "checkpoint": "C:\\retrain_wave4\\checkpoints\\segformer_b0\\model.pdparams",
+    "checkpoint_sha256": "07f6048e0a6de174a2c3ca1915df4bcd635565a706d978288fba946ef240f2d5",
+    "test_used": true
+  },
+  {
+    "model": "ocrnet_hrnetw18",
+    "images": 1124,
+    "split": "Crack500 test",
+    "confusion_matrix": [
+      [
+        239863375,
+        4628857
+      ],
+      [
+        3477731,
+        10999637
+      ]
+    ],
+    "mIoU": 0.7715088888298939,
+    "crackIoU": 0.5757095920308695,
+    "precision": 0.7038193827249126,
+    "recall": 0.7597815431644758,
+    "F1": 0.7307305799780787,
+    "empty_predictions": 13,
+    "zero_overlap_images": 18,
+    "checkpoint": "C:\\retrain_wave4\\checkpoints\\ocrnet_hrnetw18\\model.pdparams",
+    "checkpoint_sha256": "de78e90ca3d5921c385cc3f82a8a694f8ef4b1d6d055f49e31750c1361416570",
+    "test_used": true
+  },
+  {
+    "model": "bisenetv2_c4",
+    "images": 1124,
+    "split": "Crack500 test",
+    "confusion_matrix": [
+      [
+        240915259,
+        3576973
+      ],
+      [
+        4428104,
+        10049264
+      ]
+    ],
+    "mIoU": 0.7622264355289433,
+    "crackIoU": 0.556612063547487,
+    "precision": 0.7374937042413103,
+    "recall": 0.6941361164543168,
+    "F1": 0.7151583577978697,
+    "empty_predictions": 21,
+    "zero_overlap_images": 29,
+    "checkpoint": "C:\\retrain_wave4\\checkpoints\\bisenetv2_c4\\model.pdparams",
+    "checkpoint_sha256": "81dcd7a52d0c8e4edcd55a8af82811a329e3148a2a36190154e8f809630e1dc2",
+    "test_used": true
+  }
+]

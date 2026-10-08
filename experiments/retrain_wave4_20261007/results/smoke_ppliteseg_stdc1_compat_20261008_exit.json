@@ -1,0 +1,12 @@
+{
+  "model": "ppliteseg_stdc1",
+  "variant": "compat_patch",
+  "exit_code": 1,
+  "ended_at": "2026-10-08T10:33:32.9727038+08:00",
+  "iters": 20,
+  "batch_size": 2,
+  "seed": 42,
+  "test_used": false,
+  "source": "D:\\论文复现\\experiments\\retrain_wave4_20261007\\src\\PaddleSeg-2.10.0",
+  "patch": "PPContext expand/clone"
+}

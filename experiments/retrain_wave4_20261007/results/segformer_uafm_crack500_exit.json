@@ -1,0 +1,8 @@
+{
+  "model": "segformer_uafm_crack500",
+  "exit_code": 0,
+  "ended_at": "2026-10-07T21:42:32.9921249+08:00",
+  "iters": 18000,
+  "seed": 42,
+  "test_used": false
+}

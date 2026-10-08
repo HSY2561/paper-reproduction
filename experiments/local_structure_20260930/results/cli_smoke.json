@@ -1,0 +1,62 @@
+[
+  {
+    "name": "C1",
+    "exit_code": 0,
+    "elapsed_seconds": 22.77149534225464,
+    "command": [
+      "C:\\Users\\user\\算法实验\\venv_bisenet\\Scripts\\python.exe",
+      "D:\\论文复现\\experiments\\local_structure_20260930\\src\\PaddleSeg-2.10.0\\tools\\train.py",
+      "--config",
+      "D:\\论文复现\\experiments\\local_structure_20260930\\configs\\C1.yml",
+      "--save_dir",
+      "D:\\论文复现\\experiments\\local_structure_20260930\\smoke\\C1",
+      "--iters",
+      "30",
+      "--save_interval",
+      "30",
+      "--log_iters",
+      "10",
+      "--keep_checkpoint_max",
+      "1",
+      "--seed",
+      "42",
+      "--num_workers",
+      "0",
+      "--use_ema",
+      "--do_eval",
+      "--device",
+      "gpu"
+    ],
+    "test_used": false
+  },
+  {
+    "name": "C2",
+    "exit_code": 0,
+    "elapsed_seconds": 25.617702960968018,
+    "command": [
+      "C:\\Users\\user\\算法实验\\venv_bisenet\\Scripts\\python.exe",
+      "D:\\论文复现\\experiments\\local_structure_20260930\\src\\PaddleSeg-2.10.0\\tools\\train.py",
+      "--config",
+      "D:\\论文复现\\experiments\\local_structure_20260930\\configs\\C2.yml",
+      "--save_dir",
+      "D:\\论文复现\\experiments\\local_structure_20260930\\smoke\\C2",
+      "--iters",
+      "30",
+      "--save_interval",
+      "30",
+      "--log_iters",
+      "10",
+      "--keep_checkpoint_max",
+      "1",
+      "--seed",
+      "42",
+      "--num_workers",
+      "0",
+      "--use_ema",
+      "--do_eval",
+      "--device",
+      "gpu"
+    ],
+    "test_used": false
+  }
+]

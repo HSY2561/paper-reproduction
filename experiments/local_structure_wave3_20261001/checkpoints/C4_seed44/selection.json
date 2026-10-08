@@ -1,0 +1,7 @@
+{
+  "test_used": false,
+  "iter": 14000,
+  "best_val_mIoU": 0.8129,
+  "source": "ema_best_model/ema_model.pdparams",
+  "sha256": "1578428e5b71c19c779434a17d97a2e23f31311b579a7823e87bb1f8de869fa8"
+}

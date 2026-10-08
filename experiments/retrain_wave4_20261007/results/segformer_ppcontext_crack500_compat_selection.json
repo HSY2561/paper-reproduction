@@ -1,0 +1,71 @@
+{
+  "model": "SegFormer-B0+PPContextModule",
+  "selection_metric": "validation_mIoU",
+  "test_used_for_selection": false,
+  "protocol": "Crack500 val, RTX5060, seed42, FP32, batch4, AdamW 6e-5, PolynomialDecay end_lr0, 18000 iter",
+  "candidates": [
+    {
+      "variant": "best_model",
+      "checkpoint": "D:\\论文复现\\experiments\\retrain_wave4_20261007\\training\\segformer_ppcontext_crack500_compat\\best_model\\model.pdparams",
+      "iter": 11000,
+      "mIoU": 0.8246,
+      "crackIoU": 0.6718,
+      "precision": 0.8287,
+      "recall": 0.7802,
+      "F1": 0.8037,
+      "boundary_F1": null
+    },
+    {
+      "variant": "ema_best_model",
+      "checkpoint": "D:\\论文复现\\experiments\\retrain_wave4_20261007\\training\\segformer_ppcontext_crack500_compat\\ema_best_model\\ema_model.pdparams",
+      "iter": 11000,
+      "mIoU": 0.8249,
+      "crackIoU": 0.6727544534,
+      "precision": 0.810944388,
+      "recall": 0.7978959495,
+      "F1": 0.8043672543,
+      "boundary_F1": 0.5775807443
+    }
+  ],
+  "selected": {
+    "variant": "ema_best_model",
+    "checkpoint": "D:\\论文复现\\experiments\\retrain_wave4_20261007\\training\\segformer_ppcontext_crack500_compat\\ema_best_model\\ema_model.pdparams",
+    "iter": 11000,
+    "mIoU": 0.8249022475,
+    "crackIoU": 0.6727544534,
+    "precision": 0.810944388,
+    "recall": 0.7978959495,
+    "F1": 0.8043672543,
+    "boundary_F1": 0.5775807443,
+    "sha256": "5c8a9ca5765c59896383b2bef2f4e539ef6356d88d499d3d12557160227fb067"
+  },
+  "baseline": {
+    "mIoU": 0.828020627,
+    "crackIoU": 0.6781735002,
+    "precision": 0.8282687204,
+    "recall": 0.7891343901,
+    "F1": 0.8082281125,
+    "boundary_F1": 0.5894120598
+  },
+  "delta_vs_baseline": {
+    "mIoU": -0.0031183795,
+    "crackIoU": -0.0054190468,
+    "precision": -0.0173243325,
+    "recall": 0.0087615594,
+    "F1": -0.0038608581,
+    "boundary_F1": -0.0118313155
+  },
+  "gate": {
+    "crackIoU_delta_min": 0.005,
+    "F1_delta_min": 0.003,
+    "max_recall_drop": 0.005,
+    "mIoU_non_decrease": true,
+    "boundary_F1_non_decrease": true,
+    "passed": false,
+    "reason": "crack IoU, F1, mIoU and 2px boundary F1 all fail the preregistered gate"
+  },
+  "eligible_for_test": false,
+  "checkpoint_sha256": "5c8a9ca5765c59896383b2bef2f4e539ef6356d88d499d3d12557160227fb067",
+  "boundary_protocol": "inner boundary foreground minus 3x3 erosion; symmetric Euclidean distance <=2px; aggregate counts",
+  "test_accessed": false
+}

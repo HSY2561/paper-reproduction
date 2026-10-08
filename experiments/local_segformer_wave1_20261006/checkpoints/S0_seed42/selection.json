@@ -1,0 +1,32 @@
+{
+  "selected": {
+    "type": "ema",
+    "mIoU": 0.8737868326659668,
+    "iter": 17000,
+    "source_weight": "C:\\segformer_wave1\\training\\S0_seed42\\ema_best_model\\ema_model.pdparams"
+  },
+  "candidates": [
+    {
+      "type": "regular",
+      "mIoU": 0.8736354363346972,
+      "iter": 17000,
+      "source_weight": "C:\\segformer_wave1\\training\\S0_seed42\\best_model\\model.pdparams"
+    },
+    {
+      "type": "ema",
+      "mIoU": 0.8737868326659668,
+      "iter": 17000,
+      "source_weight": "C:\\segformer_wave1\\training\\S0_seed42\\ema_best_model\\ema_model.pdparams"
+    }
+  ],
+  "selection_split": "val",
+  "selection_rule": "highest full precision validation mIoU from regular/EMA states",
+  "checkpoint": "C:\\segformer_wave1\\checkpoints\\S0_seed42\\model.pdparams",
+  "sha256": "92223d2dcf414c57811c1d91f64fde5dbf1c9f3d5597236813e3592ae99fcea8",
+  "training_exit_code": 0,
+  "final_iter": 18000,
+  "dataset_protocol": "custom train-val exact-image/D4 decontamination; source-frame identity not established",
+  "train_pairs": 1400,
+  "val_pairs": 177,
+  "test_used": false
+}

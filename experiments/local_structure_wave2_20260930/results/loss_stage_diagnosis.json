@@ -1,0 +1,63 @@
+{
+  "created_at": "2026-09-30T22:47:07.973796+08:00",
+  "test_used": false,
+  "baseline": {
+    "mIoU": 0.8107941296103464,
+    "crack_IoU": 0.6464058596515182,
+    "precision": 0.8026144190821995,
+    "recall": 0.7685878735486117,
+    "F1": 0.7852327005059833,
+    "boundary_F1": 0.3951462673966857
+  },
+  "wave2": {
+    "C1b": {
+      "mIoU": 0.8128508286742746,
+      "crack_IoU": 0.6502905998609612,
+      "precision": 0.8023521035028094,
+      "recall": 0.7743303759887086,
+      "F1": 0.788092230442019,
+      "boundary_F1": 0.38832608961028653,
+      "deltas_vs_C0": {
+        "mIoU": 0.0020566990639282468,
+        "crack_IoU": 0.0038847402094429606,
+        "precision": -0.0002623155793901599,
+        "recall": 0.005742502440096886,
+        "F1": 0.002859529936035776
+      },
+      "boundary_F1_delta": -0.006820177786399151,
+      "gates": {
+        "crack_IoU_gain_at_least_0.005": false,
+        "F1_gain_at_least_0.003": false,
+        "recall_drop_at_most_0.005": true
+      },
+      "passed": false
+    },
+    "C2b": {
+      "mIoU": 0.810254887958985,
+      "crack_IoU": 0.6454919090956035,
+      "precision": 0.7991274996313934,
+      "recall": 0.7705102162847194,
+      "F1": 0.7845579860072108,
+      "boundary_F1": 0.41192721137528393,
+      "deltas_vs_C0": {
+        "mIoU": -0.0005392416513613218,
+        "crack_IoU": -0.0009139505559146999,
+        "precision": -0.0034869194508061474,
+        "recall": 0.0019223427361076961,
+        "F1": -0.000674714498772433
+      },
+      "boundary_F1_delta": 0.01678094397859825,
+      "gates": {
+        "boundary_F1_gain_at_least_0.01": true,
+        "crack_IoU_not_lower": false,
+        "recall_drop_at_most_0.005": true
+      },
+      "passed": false
+    }
+  },
+  "interpretation": {
+    "input_stage": "training uses ResizeStepScaling 0.5-2.0, nearest label resize, RandomPaddingCrop 400x400; validation uses Normalize only. Input augmentation can reduce thin-crack scale or crop continuity, but validation has no external resize, so it is a training-distribution hypothesis.",
+    "feature_stage": "BiSeNetV2 main BGA/head operate at 1/8 resolution and semantic context at 1/32; raw label 1/8 nearest down/up proxy mean IoU is about 0.689 on train/val, indicating a spatial-resolution ceiling proxy.",
+    "recovery_stage": "C2b PointRend raises boundary F1 by about 0.0168 but lowers crack IoU by about 0.0009, directly showing recovery can improve edge placement while changing region decisions."
+  }
+}

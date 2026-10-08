@@ -1,0 +1,13 @@
+{
+  "model": "SegFormer-B0+A_UAFM_SpAtten",
+  "selection": "ordinary best model iter18000",
+  "val_images": 177,
+  "mIoU": 0.8773,
+  "crackIoU": 0.7636,
+  "precision": 0.8453,
+  "recall": 0.8876,
+  "F1": 0.8659337295862428,
+  "checkpoint": "C:\\retrain_wave4\\training\\A_UAFM\\best_model\\model.pdparams",
+  "checkpoint_sha256": "4eaa3bcf38a425874c07a2d2940d14d51869e9b06c0e95cd903fa4de4fbb1a9c",
+  "test_used": false
+}

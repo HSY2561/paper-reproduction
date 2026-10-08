@@ -1,0 +1,25 @@
+{
+  "variant": "C2b",
+  "selection_split": "val",
+  "best_states": {
+    "regular": {
+      "mIoU": 0.8091797177816183,
+      "iter": 11000,
+      "weight": "D:\\论文复现\\experiments\\local_structure_wave2_20260930\\training\\C2b\\best_model\\model.pdparams"
+    },
+    "ema": {
+      "mIoU": 0.810254887958985,
+      "iter": 12000,
+      "weight": "D:\\论文复现\\experiments\\local_structure_wave2_20260930\\training\\C2b\\ema_best_model\\ema_model.pdparams"
+    }
+  },
+  "selected_type": "ema",
+  "selected_iter": 12000,
+  "checkpoint": "D:\\论文复现\\experiments\\local_structure_wave2_20260930\\checkpoints\\C2b\\model.pdparams",
+  "sha256": "3cb76719b317d0d460aa97b1c88b38832468129e5945e43ad4fe1e97cfecea96",
+  "config_sha256": "cf9c7526b0f1ecb6b9d8ca77925a2db4c24020688c1d95098bb7609a73d4ebc2",
+  "source_sha256": "7f87ede08a47e4679759daee0ccd9b2f8405f0075a3132c8c4d3f0d9e1a26b05",
+  "training_exit_code": 0,
+  "test_used": false,
+  "frozen_at": "2026-09-30T22:26:41.898087+08:00"
+}

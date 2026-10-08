@@ -1,0 +1,22 @@
+{
+  "variant": "C2",
+  "selection_split": "val",
+  "selected_type": "ema",
+  "best_states": {
+    "regular": {
+      "mIoU": 0.8095067049699707,
+      "iter": 11000,
+      "weight": "D:\\论文复现\\experiments\\local_structure_20260930\\training\\C2\\best_model\\model.pdparams"
+    },
+    "ema": {
+      "mIoU": 0.8112664858289041,
+      "iter": 12000,
+      "weight": "D:\\论文复现\\experiments\\local_structure_20260930\\training\\C2\\ema_best_model\\ema_model.pdparams"
+    }
+  },
+  "checkpoint": "D:\\论文复现\\experiments\\local_structure_20260930\\checkpoints\\C2\\model.pdparams",
+  "sha256": "dc5d2cbfb3e6450b9de0e5c27aedd984a98b53ca71e56de0b32b36248d47463e",
+  "config_sha256": "566aa48df2fc194462efed24a3779f340faf18dfe050896aa49c88e3c88a2e74",
+  "training_exit_code": 0,
+  "test_used": false
+}

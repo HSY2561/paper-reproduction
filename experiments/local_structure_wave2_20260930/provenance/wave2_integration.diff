@@ -1,0 +1,119 @@
+diff --git "a/D:\\\350\256\272\346\226\207\345\244\215\347\216\260\\experiments\\local_structure_20260930\\src\\PaddleSeg-2.10.0\\paddleseg\\models\\bisenet.py" "b/D:\\\350\256\272\346\226\207\345\244\215\347\216\260\\experiments\\local_structure_wave2_20260930\\src\\PaddleSeg-2.10.0\\paddleseg\\models\\bisenet.py"
+index d8a803b00..667c7d9a2 100644
+--- "a/D:\\\350\256\272\346\226\207\345\244\215\347\216\260\\experiments\\local_structure_20260930\\src\\PaddleSeg-2.10.0\\paddleseg\\models\\bisenet.py"
++++ "b/D:\\\350\256\272\346\226\207\345\244\215\347\216\260\\experiments\\local_structure_wave2_20260930\\src\\PaddleSeg-2.10.0\\paddleseg\\models\\bisenet.py"
+@@ -47,7 +47,8 @@ class BiSeNetV2(nn.Layer):
+                  pretrained=None,
+                  context_type='none',
+                  fusion_type='bga',
+-                 shape_stream=False):
++                 shape_stream=False,
++                 point_refine=False):
+         super().__init__()
+ 
+         C1, C2, C3 = 64, 64, 128
+@@ -58,7 +59,7 @@ class BiSeNetV2(nn.Layer):
+ 
+         self.db = DetailBranch(in_channels, db_channels)
+         self.sb = SemanticBranch(in_channels, sb_channels,
+-                                 context_type='none' if context_type == 'ocr' else context_type)
++                                 context_type='none' if context_type in ('ocr', 'ocr_high') else context_type)
+ 
+         if fusion_type == 'uafm_sp':
+             self.bga = layers.UAFM_SpAtten(mid_channels, mid_channels,
+@@ -78,8 +79,10 @@ class BiSeNetV2(nn.Layer):
+         # Integration only: reuse PaddleSeg OCRNet's published OCR operators.
+         # Construct additions after the original initialization so C0 and the
+         # shared backbone initialization remain unchanged for a fixed seed.
+-        self.use_ocr = context_type == 'ocr'
++        self.use_ocr = context_type in ('ocr', 'ocr_high')
++        self.ocr_high = context_type == 'ocr_high'
+         self.use_shape = shape_stream
++        self.use_point = point_refine
+         if self.use_ocr:
+             from paddleseg.models.ocrnet import SpatialGatherBlock, SpatialOCRModule
+             self.ocr_gather = SpatialGatherBlock(C5, num_classes)
+@@ -107,23 +110,54 @@ class BiSeNetV2(nn.Layer):
+             self.shape_edge = nn.Conv2D(8, 1, 1, bias_attr=False)
+             self.shape_fusion = layers.ConvBNReLU(mid_channels + 1, mid_channels, 1)
+ 
++        if self.use_point:
++            # Reuse the published PaddleSeg PointRend point head with the
++            # existing BiSeNetV2 coarse mask and 1/4 detail feature.
++            from paddleseg.models.pointrend import PointHead
++            self.point_head = PointHead(
++                num_classes=num_classes,
++                in_channels=[64],
++                out_channels=64,
++                in_index=[0],
++                num_fcs=3,
++                scale_factor=2,
++                subdivision_steps=3,
++                subdivision_num_points=8196,
++                dropout_ratio=0)
++            # Paddle 3.4 returns int64 spatial shapes; the upstream PointHead
++            # stores this scalar as int32 and concat rejects mixed dtypes.
++            self.point_head.subdivision_num_points = (
++                self.point_head.subdivision_num_points.astype('int64'))
++
+     def forward(self, x):
+-        if self.use_shape:
++        if self.use_shape or self.use_point:
+             dfm = x
+             for index, layer in enumerate(self.db.convs):
+                 dfm = layer(dfm)
+                 if index == 4:
+-                    shape_feature = dfm
++                    if self.use_shape:
++                        shape_feature = dfm
++                    if self.use_point:
++                        point_feature = dfm
+         else:
+             dfm = self.db(x)
+         feat1, feat2, feat3, feat4, sfm = self.sb(x)
+-        if self.use_ocr:
++        if self.use_ocr and not self.ocr_high:
+             # Existing supervised auxiliary logits provide OCR's soft regions.
+             # Reuse this result for aux loss; do not run the BN/dropout twice.
+             logit4 = self.aux_head4(feat4)
+             regions = self.ocr_gather(sfm, logit4)
+             sfm = self.ocr_context(sfm, regions)
+         fused = self.bga(dfm, sfm)
++        if self.ocr_high:
++            # Controlled placement change: identical OCR operators, but
++            # gather context on the 1/8 fused feature rather than 1/32.
++            logit4 = self.aux_head4(feat4)
++            high_res_regions = F.interpolate(
++                logit4, fused.shape[2:], mode='bilinear',
++                align_corners=self.align_corners)
++            regions = self.ocr_gather(fused, high_res_regions)
++            fused = self.ocr_context(fused, regions)
+         if self.use_shape:
+             for guide, res, reduce, gate, semantic in zip(
+                     self.shape_guides, self.shape_res, self.shape_reduce,
+@@ -137,6 +171,14 @@ class BiSeNetV2(nn.Layer):
+             fused = self.shape_fusion(paddle.concat([fused, edge_for_fusion], axis=1))
+         logit = self.head(fused)
+ 
++        if self.use_point:
++            point_output = self.point_head([point_feature], [logit])
++            if not self.training:
++                return [F.interpolate(point_output[0],
++                                      x.shape[2:],
++                                      mode='bilinear',
++                                      align_corners=self.align_corners)]
++
+         if not self.training:
+             logit_list = [logit]
+         else:
+@@ -158,6 +200,10 @@ class BiSeNetV2(nn.Layer):
+             for logit in logit_list
+         ]
+ 
++        if self.use_point:
++            # Official PointCrossEntropyLoss consumes (point logits, coords).
++            logit_list.append(point_output)
++
+         return logit_list
+ 
+     def init_weight(self):

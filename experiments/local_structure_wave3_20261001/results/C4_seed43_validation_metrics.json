@@ -1,0 +1,43 @@
+{
+  "n": 348,
+  "confusion_matrix": [
+    [
+      76181346,
+      805399
+    ],
+    [
+      1057241,
+      3550158
+    ]
+  ],
+  "mIoU": 0.8160078423424186,
+  "crackIoU": 0.6558822257915408,
+  "precision": 0.8150870256088946,
+  "recall": 0.7705340909263556,
+  "f1": 0.7921846319450859,
+  "boundary_counts": [
+    171528,
+    407153,
+    170476,
+    471716
+  ],
+  "boundary_f1": 0.3890494496851198,
+  "empty_predictions": 4,
+  "test_used": false,
+  "boundary_precision": 0.4212863469015333,
+  "boundary_recall": 0.36139541588582963,
+  "deltas_vs_C0": {
+    "mIoU": 0.005213712732072273,
+    "crackIoU": 0.009476366140022563,
+    "precision": 0.012472606526695018,
+    "recall": 0.0019462173777439196,
+    "f1": 0.006951931439102665,
+    "boundary_f1": -0.006096817711565894
+  },
+  "gates": {
+    "crack_IoU_gain_at_least_0.005": true,
+    "F1_gain_at_least_0.003": true,
+    "recall_drop_at_most_0.005": true
+  },
+  "passed": true
+}

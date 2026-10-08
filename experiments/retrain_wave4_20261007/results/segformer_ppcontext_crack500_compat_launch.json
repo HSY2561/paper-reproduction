@@ -1,0 +1,8 @@
+{
+  "model": "segformer_ppcontext_crack500_compat",
+  "pid": 45520,
+  "started_at": "2026-10-07T22:58:44.9013166+08:00",
+  "source": "D:\\论文复现\\experiments\\retrain_wave4_20261007\\src\\PaddleSeg-2.10.0",
+  "patch": "PPContext 1x1 expand + interpolation clone",
+  "test_used": false
+}

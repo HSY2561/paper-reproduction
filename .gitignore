@@ -4,6 +4,7 @@ envs/
 **/__pycache__/
 **/.pytest_cache/
 *.py[cod]
+*.bak*
 
 # Local datasets, downloaded references, and temporary workspaces
 data/
@@ -43,6 +44,32 @@ experiments/**/best_model/
 
 # One-off remote administration scripts (some contain local credentials)
 /tmp_*.py
+/tmp_*.ps1
+
+# Local-only snapshots and downloaded upstream components removed from the project view
+/PaddleSeg-release-2.8/EISeg/
+/PaddleSeg-release-2.8/Matting/
+/PaddleSeg-release-2.8/contrib/
+/PaddleSeg-release-2.8/deploy/
+/PaddleSeg-release-2.8/test_tipc/
+/PaddleSeg-release-2.8/docs/images/
+/PaddleSeg-release-2.8/docs/apis/
+/PaddleSeg-release-2.8/docs/config/
+/PaddleSeg-release-2.8/docs/data/
+/PaddleSeg-release-2.8/docs/evaluation/
+/PaddleSeg-release-2.8/docs/models/
+/PaddleSeg-release-2.8/docs/module/
+/PaddleSeg-release-2.8/docs/predict/
+/PaddleSeg-release-2.8/docs/static/
+/PaddleSeg-release-2.8/docs/train/
+/PaddleSeg-release-2.8/backup/
+/PaddleSeg-release-2.8/tests/benchmark/
+/PaddleSeg-release-2.8/tests/infer/
+/PaddleSeg-release-2.8/tests/install/
+/PaddleSeg-release-2.8/*.jpg
+/PaddleSeg-release-2.8/*.jpeg
+/PaddleSeg-release-2.8/*.png
+/PaddleSeg-release-2.8/*.zip
 /tmp_*.yml
 
 # Editor and OS files

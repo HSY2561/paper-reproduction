@@ -1,0 +1,29 @@
+{
+  "original_train_pairs": 1418,
+  "original_val_pairs": 177,
+  "removed_train_duplicate_pairs": 18,
+  "clean_train_pairs": 1400,
+  "clean_val_pairs": 177,
+  "removed_train_images": [
+    "images\\train\\1104.jpg",
+    "images\\train\\1115.jpg",
+    "images\\train\\1119.jpg",
+    "images\\train\\1133.jpg",
+    "images\\train\\1135.jpg",
+    "images\\train\\1139.jpg",
+    "images\\train\\1167.jpg",
+    "images\\train\\1179.jpg",
+    "images\\train\\1185.jpg",
+    "images\\train\\1300.jpg",
+    "images\\train\\1558.jpg",
+    "images\\train\\1566.jpg",
+    "images\\train\\1574.jpg",
+    "images\\train\\1577.jpg",
+    "images\\train\\1609.jpg",
+    "images\\train\\1627.jpg",
+    "images\\train\\1633.jpg",
+    "images\\train\\1657.jpg"
+  ],
+  "test_used": false,
+  "reason": "exact decoded RGB D4 duplicates with validation retained"
+}

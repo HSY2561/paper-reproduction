@@ -1,0 +1,36 @@
+{
+  "model": "bisenetv2_c4",
+  "selection_metric": "validation_mIoU",
+  "candidates": [
+    {
+      "variant": "best_model",
+      "checkpoint": "C:\\retrain_wave4\\training\\bisenetv2_c4\\best_model\\model.pdparams",
+      "state": {
+        "mIoU": 0.8168939599172524,
+        "Acc": 0.977151399492591,
+        "iter": 12000
+      }
+    },
+    {
+      "variant": "ema_best_model",
+      "checkpoint": "C:\\retrain_wave4\\training\\bisenetv2_c4\\ema_best_model\\ema_model.pdparams",
+      "state": {
+        "mIoU": 0.8171609611993988,
+        "Acc": 0.9774450970402974,
+        "iter": 12000
+      }
+    }
+  ],
+  "selected": {
+    "variant": "ema_best_model",
+    "checkpoint": "C:\\retrain_wave4\\training\\bisenetv2_c4\\ema_best_model\\ema_model.pdparams",
+    "state": {
+      "mIoU": 0.8171609611993988,
+      "Acc": 0.9774450970402974,
+      "iter": 12000
+    }
+  },
+  "sha256": "81dcd7a52d0c8e4edcd55a8af82811a329e3148a2a36190154e8f809630e1dc2",
+  "test_used_for_selection": false,
+  "frozen_at": "2026-10-07T16:49:41.155597+08:00"
+}

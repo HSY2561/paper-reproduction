@@ -1,0 +1,12 @@
+{
+  "paddleseg/models/pointrend.py": {
+    "official_url": "https://raw.githubusercontent.com/PaddlePaddle/PaddleSeg/v2.10.0/paddleseg/models/pointrend.py",
+    "equal_ignoring_line_endings": true,
+    "local_sha256": "0f82266a51d903f4899fe42856e9fd7954c86988f25091480c87a2b9da5b7b87"
+  },
+  "paddleseg/models/losses/point_cross_entropy_loss.py": {
+    "official_url": "https://raw.githubusercontent.com/PaddlePaddle/PaddleSeg/v2.10.0/paddleseg/models/losses/point_cross_entropy_loss.py",
+    "equal_ignoring_line_endings": true,
+    "local_sha256": "f41fd1294cd6bdaa5522eb01366a7acfebb8e201f53207155bfd2fcdfa96221c"
+  }
+}

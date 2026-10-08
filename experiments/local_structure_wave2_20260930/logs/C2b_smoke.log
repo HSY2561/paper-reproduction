@@ -1,0 +1,256 @@
+[2026/09/30 10:58:44] INFO: 
+------------Environment Information-------------
+platform: Windows-11-10.0.26200-SP0
+Python: 3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]
+Paddle compiled with cuda: True
+NVCC: Build cuda_13.4.r13.4/compiler.38657139_0
+cudnn: 90.9
+GPUs used: 1
+CUDA_VISIBLE_DEVICES: None
+GPU: ['GPU 0: NVIDIA GeForce']
+PaddleSeg: 0.0.0.dev0
+PaddlePaddle: 3.4.0
+OpenCV: 4.11.0
+------------------------------------------------
+[2026/09/30 10:58:44] INFO: 
+---------------Config Information---------------
+batch_size: 4
+iters: 30
+train_dataset:
+  dataset_root: C:/Users/user/algolab_data
+  mode: train
+  num_classes: 2
+  train_path: C:/Users/user/algolab_data/train.txt
+  transforms:
+  - max_scale_factor: 2.0
+    min_scale_factor: 0.5
+    scale_step_size: 0.25
+    type: ResizeStepScaling
+  - crop_size:
+    - 400
+    - 400
+    type: RandomPaddingCrop
+  - type: RandomHorizontalFlip
+  - brightness_range: 0.5
+    contrast_range: 0.5
+    saturation_range: 0.5
+    type: RandomDistort
+  - type: Normalize
+  type: Dataset
+val_dataset:
+  dataset_root: C:/Users/user/algolab_data
+  mode: val
+  num_classes: 2
+  transforms:
+  - type: Normalize
+  type: Dataset
+  val_path: C:/Users/user/algolab_data/val.txt
+optimizer:
+  beta1: 0.9
+  beta2: 0.999
+  type: AdamW
+  weight_decay: 0.01
+lr_scheduler:
+  end_lr: 0.0
+  learning_rate: 6.0e-05
+  power: 1
+  type: PolynomialDecay
+loss:
+  coef:
+  - 1
+  - 1
+  - 1
+  - 1
+  - 1
+  - 1.0
+  types:
+  - coef:
+    - 0.8
+    - 0.2
+    losses:
+    - min_kept: 65000
+      type: OhemCrossEntropyLoss
+    - type: DiceLoss
+    type: MixedLoss
+  - coef:
+    - 0.8
+    - 0.2
+    losses:
+    - min_kept: 65000
+      type: OhemCrossEntropyLoss
+    - type: DiceLoss
+    type: MixedLoss
+  - coef:
+    - 0.8
+    - 0.2
+    losses:
+    - min_kept: 65000
+      type: OhemCrossEntropyLoss
+    - type: DiceLoss
+    type: MixedLoss
+  - coef:
+    - 0.8
+    - 0.2
+    losses:
+    - min_kept: 65000
+      type: OhemCrossEntropyLoss
+    - type: DiceLoss
+    type: MixedLoss
+  - coef:
+    - 0.8
+    - 0.2
+    losses:
+    - min_kept: 65000
+      type: OhemCrossEntropyLoss
+    - type: DiceLoss
+    type: MixedLoss
+  - type: PointCrossEntropyLoss
+model:
+  context_type: none
+  num_classes: 2
+  point_refine: true
+  shape_stream: false
+  type: BiSeNetV2
+------------------------------------------------
+
+[2026/09/30 10:58:44] INFO: Set device: gpu
+[2026/09/30 10:58:44] INFO: Use the following config to build model
+model:
+  context_type: none
+  num_classes: 2
+  point_refine: true
+  shape_stream: false
+  type: BiSeNetV2
+WARNING: Logging before InitGoogleLogging() is written to STDERR
+W0930 10:58:44.288820 27728 gpu_resources.cc:116] Please NOTE: device: 0, GPU Compute Capability: 12.0, Driver API Version: 13.2, Runtime API Version: 12.9
+[2026/09/30 10:58:44] INFO: Use the following config to build train_dataset
+train_dataset:
+  dataset_root: C:/Users/user/algolab_data
+  mode: train
+  num_classes: 2
+  train_path: C:/Users/user/algolab_data/train.txt
+  transforms:
+  - max_scale_factor: 2.0
+    min_scale_factor: 0.5
+    scale_step_size: 0.25
+    type: ResizeStepScaling
+  - crop_size:
+    - 400
+    - 400
+    type: RandomPaddingCrop
+  - type: RandomHorizontalFlip
+  - brightness_range: 0.5
+    contrast_range: 0.5
+    saturation_range: 0.5
+    type: RandomDistort
+  - type: Normalize
+  type: Dataset
+[2026/09/30 10:58:44] INFO: Use the following config to build val_dataset
+val_dataset:
+  dataset_root: C:/Users/user/algolab_data
+  mode: val
+  num_classes: 2
+  transforms:
+  - type: Normalize
+  type: Dataset
+  val_path: C:/Users/user/algolab_data/val.txt
+[2026/09/30 10:58:44] INFO: Use the following config to build optimizer
+optimizer:
+  beta1: 0.9
+  beta2: 0.999
+  type: AdamW
+  weight_decay: 0.01
+[2026/09/30 10:58:44] INFO: Use the following config to build loss
+loss:
+  coef:
+  - 1
+  - 1
+  - 1
+  - 1
+  - 1
+  - 1.0
+  types:
+  - coef:
+    - 0.8
+    - 0.2
+    losses:
+    - min_kept: 65000
+      type: OhemCrossEntropyLoss
+    - type: DiceLoss
+    type: MixedLoss
+  - coef:
+    - 0.8
+    - 0.2
+    losses:
+    - min_kept: 65000
+      type: OhemCrossEntropyLoss
+    - type: DiceLoss
+    type: MixedLoss
+  - coef:
+    - 0.8
+    - 0.2
+    losses:
+    - min_kept: 65000
+      type: OhemCrossEntropyLoss
+    - type: DiceLoss
+    type: MixedLoss
+  - coef:
+    - 0.8
+    - 0.2
+    losses:
+    - min_kept: 65000
+      type: OhemCrossEntropyLoss
+    - type: DiceLoss
+    type: MixedLoss
+  - coef:
+    - 0.8
+    - 0.2
+    losses:
+    - min_kept: 65000
+      type: OhemCrossEntropyLoss
+    - type: DiceLoss
+    type: MixedLoss
+  - type: PointCrossEntropyLoss
+C:\Users\user\算法实验\venv_bisenet\Lib\site-packages\paddle\nn\layer\norm.py:885: UserWarning: When training, we now always track global mean and variance.
+  warnings.warn(
+[2026/09/30 10:58:46] INFO: [TRAIN] epoch: 1, iter: 10/30, loss: 4.2720, lr: 0.000042, batch_cost: 0.1962, reader_cost: 0.00712, ips: 20.3839 samples/sec, max_mem_reserved: 896 MB, max_mem_allocated: 687 MB | ETA 00:00:03
+[2026/09/30 10:58:48] INFO: [TRAIN] epoch: 1, iter: 20/30, loss: 4.0521, lr: 0.000022, batch_cost: 0.1081, reader_cost: 0.00005, ips: 36.9987 samples/sec, max_mem_reserved: 896 MB, max_mem_allocated: 687 MB | ETA 00:00:01
+[2026/09/30 10:58:49] INFO: [TRAIN] epoch: 1, iter: 30/30, loss: 4.0411, lr: 0.000002, batch_cost: 0.0934, reader_cost: 0.00010, ips: 42.8211 samples/sec, max_mem_reserved: 896 MB, max_mem_allocated: 687 MB | ETA 00:00:00
+[2026/09/30 10:58:49] INFO: Start evaluating (total_samples: 348, total_iters: 348)...
+Traceback (most recent call last):
+  File "D:\论文复现\experiments\local_structure_wave2_20260930\src\PaddleSeg-2.10.0\tools\train.py", line 252, in <module>
+    main(args)
+  File "D:\论文复现\experiments\local_structure_wave2_20260930\src\PaddleSeg-2.10.0\tools\train.py", line 222, in main
+    train(model,
+  File "D:\论文复现\experiments\local_structure_wave2_20260930\src\PaddleSeg-2.10.0\paddleseg\core\train.py", line 342, in train
+    mean_iou, acc, _, _, _ = evaluate(model,
+                             ^^^^^^^^^^^^^^^
+  File "D:\论文复现\experiments\local_structure_wave2_20260930\src\PaddleSeg-2.10.0\paddleseg\core\val.py", line 158, in evaluate
+    pred, logits = infer.inference(
+                   ^^^^^^^^^^^^^^^^
+  File "D:\论文复现\experiments\local_structure_wave2_20260930\src\PaddleSeg-2.10.0\paddleseg\core\infer.py", line 171, in inference
+    logits = model(im)
+             ^^^^^^^^^
+  File "C:\Users\user\算法实验\venv_bisenet\Lib\site-packages\paddle\nn\layer\layers.py", line 1955, in __call__
+    return self.forward(*inputs, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\论文复现\experiments\local_structure_wave2_20260930\src\PaddleSeg-2.10.0\paddleseg\models\bisenet.py", line 171, in forward
+    point_output = self.point_head([point_feature], [logit])
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\算法实验\venv_bisenet\Lib\site-packages\paddle\nn\layer\layers.py", line 1955, in __call__
+    return self.forward(*inputs, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\论文复现\experiments\local_structure_wave2_20260930\src\PaddleSeg-2.10.0\paddleseg\models\pointrend.py", line 510, in forward
+    point_indices, points = self.get_points_test(
+                            ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\论文复现\experiments\local_structure_wave2_20260930\src\PaddleSeg-2.10.0\paddleseg\models\pointrend.py", line 430, in get_points_test
+    num_points = paddle.min(paddle.concat([height * width, num_points]))
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\算法实验\venv_bisenet\Lib\site-packages\paddle\utils\decorator_utils.py", line 201, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\算法实验\venv_bisenet\Lib\site-packages\paddle\tensor\manipulation.py", line 1552, in concat
+    return _C_ops.concat(input, axis, out=out)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: (InvalidArgument) The data_type of input tensor in list isn't consistent, the first tensor is int64, but 1th tensor is int32. (at ..\paddle\phi\api\lib\kernel_dispatch.cc:150)
+

@@ -1,0 +1,169 @@
+{
+  "base_forward_max_difference": 0.0,
+  "package": "D:\\\u8bba\u6587\u590d\u73b0\\experiments\\local_structure_20260930\\src\\PaddleSeg-2.10.0\\paddleseg\\__init__.py",
+  "paddle": "3.4.0",
+  "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+  "checks": {
+    "C1": {
+      "loss": 3.8438808917999268,
+      "output_shapes": [
+        [
+          4,
+          2,
+          400,
+          400
+        ],
+        [
+          4,
+          2,
+          400,
+          400
+        ],
+        [
+          4,
+          2,
+          400,
+          400
+        ],
+        [
+          4,
+          2,
+          400,
+          400
+        ],
+        [
+          4,
+          2,
+          400,
+          400
+        ]
+      ],
+      "params": 2602482,
+      "gradient_checks": {
+        "ocr_context": {
+          "parameters": 42,
+          "nonzero_finite_grad_parameters": 28
+        }
+      },
+      "test_used": false
+    },
+    "C2": {
+      "loss": 3.9951391220092773,
+      "output_shapes": [
+        [
+          4,
+          2,
+          400,
+          400
+        ],
+        [
+          4,
+          2,
+          400,
+          400
+        ],
+        [
+          4,
+          2,
+          400,
+          400
+        ],
+        [
+          4,
+          2,
+          400,
+          400
+        ],
+        [
+          4,
+          2,
+          400,
+          400
+        ],
+        [
+          4,
+          1,
+          400,
+          400
+        ]
+      ],
+      "params": 2646841,
+      "gradient_checks": {
+        "shape_gates": {
+          "parameters": 39,
+          "nonzero_finite_grad_parameters": 27
+        },
+        "shape_edge": {
+          "parameters": 1,
+          "nonzero_finite_grad_parameters": 1
+        },
+        "shape_fusion": {
+          "parameters": 6,
+          "nonzero_finite_grad_parameters": 4
+        }
+      },
+      "test_used": false
+    },
+    "C3": {
+      "loss": 7.511070251464844,
+      "output_shapes": [
+        [
+          4,
+          2,
+          400,
+          400
+        ],
+        [
+          4,
+          2,
+          400,
+          400
+        ],
+        [
+          4,
+          2,
+          400,
+          400
+        ],
+        [
+          4,
+          2,
+          400,
+          400
+        ],
+        [
+          4,
+          2,
+          400,
+          400
+        ],
+        [
+          4,
+          1,
+          400,
+          400
+        ]
+      ],
+      "params": 2723449,
+      "gradient_checks": {
+        "ocr_context": {
+          "parameters": 42,
+          "nonzero_finite_grad_parameters": 28
+        },
+        "shape_gates": {
+          "parameters": 39,
+          "nonzero_finite_grad_parameters": 27
+        },
+        "shape_edge": {
+          "parameters": 1,
+          "nonzero_finite_grad_parameters": 1
+        },
+        "shape_fusion": {
+          "parameters": 6,
+          "nonzero_finite_grad_parameters": 4
+        }
+      },
+      "test_used": false
+    }
+  }
+}

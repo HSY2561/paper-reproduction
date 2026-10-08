@@ -1,0 +1,11 @@
+{
+  "created_at": "2026-10-06T22:09:59.6326433+08:00",
+  "dataset_root": "C:\\custom_crack",
+  "split_counts": {
+    "train": 1418,
+    "val": 177,
+    "test": 177
+  },
+  "missing_paths": 0,
+  "test_used": false
+}

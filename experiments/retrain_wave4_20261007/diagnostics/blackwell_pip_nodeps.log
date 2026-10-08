@@ -1,0 +1,4 @@
+Collecting paddlepaddle-gpu==3.0.0.dev20250717
+  Downloading paddlepaddle_gpu-3.0.0.dev20250717-cp312-cp312-win_amd64.whl (537.4 MB)
+Installing collected packages: paddlepaddle-gpu
+Successfully installed paddlepaddle-gpu-3.0.0.dev20250717

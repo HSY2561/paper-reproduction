@@ -1,0 +1,42 @@
+[
+  {
+    "model": "C0_BiSeNetV2",
+    "images_timed": 101,
+    "warmup": 20,
+    "avg_seconds_per_image": 0.016039399010599545,
+    "ms_per_image": 16.039399010599546,
+    "images_per_second": 62.34647565904157,
+    "config": "C:\\local_wave3\\configs\\C4_test.yml",
+    "checkpoint": "C:\\local_c0clean\\model.pdparams"
+  },
+  {
+    "model": "C4_BiSeNetV2_inputcrop",
+    "images_timed": 101,
+    "warmup": 20,
+    "avg_seconds_per_image": 0.015879998019306302,
+    "ms_per_image": 15.879998019306303,
+    "images_per_second": 62.97230004589659,
+    "config": "C:\\local_wave3\\configs\\C4_test.yml",
+    "checkpoint": "C:\\local_wave3\\checkpoints\\C4\\model.pdparams"
+  },
+  {
+    "model": "SegFormer_B0",
+    "images_timed": 101,
+    "warmup": 20,
+    "avg_seconds_per_image": 0.01432007029629543,
+    "ms_per_image": 14.32007029629543,
+    "images_per_second": 69.8320594319078,
+    "config": "C:\\local_wave3\\configs\\public_segformer_b0_test.yml",
+    "checkpoint": "C:\\local_wave3\\checkpoints\\public_segformer_b0\\model.pdparams"
+  },
+  {
+    "model": "OCRNet_HRNetW18",
+    "images_timed": 101,
+    "warmup": 20,
+    "avg_seconds_per_image": 0.07014197722598357,
+    "ms_per_image": 70.14197722598357,
+    "images_per_second": 14.25679799099757,
+    "config": "C:\\local_wave3\\configs\\public_ocrnet_hrnetw18_test.yml",
+    "checkpoint": "C:\\local_wave3\\checkpoints\\public_ocrnet_hrnetw18\\model.pdparams"
+  }
+]

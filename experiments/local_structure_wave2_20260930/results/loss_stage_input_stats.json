@@ -1,0 +1,138 @@
+{
+  "train": {
+    "n": 1896,
+    "mask_fraction_mean": 0.06367937364912968,
+    "thickness_px_quantiles": {
+      "0.05": 2.0,
+      "0.1": 4.0,
+      "0.25": 7.211102550927978,
+      "0.5": 15.231546211727817,
+      "0.75": 28.0,
+      "0.9": 44.721359549995796
+    },
+    "thin_fraction_width_le_2px": 0.07360555915448375,
+    "thin_fraction_width_le_4px": 0.14471922805541018,
+    "one_eighth_lattice_back_iou_mean": 0.7036490293274479,
+    "one_eighth_lattice_back_iou_p10": 0.4854497291281325,
+    "one_eighth_small_zero": 0,
+    "scale_stats": {
+      "0.5": {
+        "zero_after_nearest": 0,
+        "positive_image_count": 1896,
+        "area_ratio_mean": 0.249938258183164,
+        "area_ratio_p10": 0.24733511959396443,
+        "scaled_width_mean": 8.38023915453453
+      },
+      "0.75": {
+        "zero_after_nearest": 0,
+        "positive_image_count": 1896,
+        "area_ratio_mean": 0.5624555076594895,
+        "area_ratio_p10": 0.5571110641371007,
+        "scaled_width_mean": 12.03924055542545
+      },
+      "1": {
+        "zero_after_nearest": 0,
+        "positive_image_count": 1896,
+        "area_ratio_mean": 1.0,
+        "area_ratio_p10": 1.0,
+        "scaled_width_mean": 15.74987003092804
+      },
+      "1.25": {
+        "zero_after_nearest": 0,
+        "positive_image_count": 1896,
+        "area_ratio_mean": 1.562519945750684,
+        "area_ratio_p10": 1.553683766536744,
+        "scaled_width_mean": 19.313126016265
+      },
+      "1.5": {
+        "zero_after_nearest": 0,
+        "positive_image_count": 1896,
+        "area_ratio_mean": 2.2498368975395047,
+        "area_ratio_p10": 2.2424161817615484,
+        "scaled_width_mean": 22.950086404128054
+      },
+      "1.75": {
+        "zero_after_nearest": 0,
+        "positive_image_count": 1896,
+        "area_ratio_mean": 3.062410204123317,
+        "area_ratio_p10": 3.0499554020593544,
+        "scaled_width_mean": 26.59434176892796
+      },
+      "2.0": {
+        "zero_after_nearest": 0,
+        "positive_image_count": 1896,
+        "area_ratio_mean": 4.0,
+        "area_ratio_p10": 4.0,
+        "scaled_width_mean": 30.279000054668796
+      }
+    }
+  },
+  "val": {
+    "n": 348,
+    "mask_fraction_mean": 0.057020185940518026,
+    "thickness_px_quantiles": {
+      "0.05": 2.0,
+      "0.1": 2.8284271247461903,
+      "0.25": 6.324555320336759,
+      "0.5": 14.142135623730951,
+      "0.75": 26.0,
+      "0.9": 40.24922359499622
+    },
+    "thin_fraction_width_le_2px": 0.07838522341998164,
+    "thin_fraction_width_le_4px": 0.15428097284389738,
+    "one_eighth_lattice_back_iou_mean": 0.6894671927022566,
+    "one_eighth_lattice_back_iou_p10": 0.48020871195296455,
+    "one_eighth_small_zero": 0,
+    "scale_stats": {
+      "0.5": {
+        "zero_after_nearest": 0,
+        "positive_image_count": 348,
+        "area_ratio_mean": 0.24996775332296245,
+        "area_ratio_p10": 0.24705616651674744,
+        "scaled_width_mean": 7.714889906080674
+      },
+      "0.75": {
+        "zero_after_nearest": 0,
+        "positive_image_count": 348,
+        "area_ratio_mean": 0.5624526402185931,
+        "area_ratio_p10": 0.5569274780068534,
+        "scaled_width_mean": 11.040294789771218
+      },
+      "1": {
+        "zero_after_nearest": 0,
+        "positive_image_count": 348,
+        "area_ratio_mean": 1.0,
+        "area_ratio_p10": 1.0,
+        "scaled_width_mean": 14.40183651608768
+      },
+      "1.25": {
+        "zero_after_nearest": 0,
+        "positive_image_count": 348,
+        "area_ratio_mean": 1.561955501040319,
+        "area_ratio_p10": 1.552646457519232,
+        "scaled_width_mean": 17.625642083908335
+      },
+      "1.5": {
+        "zero_after_nearest": 0,
+        "positive_image_count": 348,
+        "area_ratio_mean": 2.249822782359868,
+        "area_ratio_p10": 2.241370403109374,
+        "scaled_width_mean": 20.927339394496105
+      },
+      "1.75": {
+        "zero_after_nearest": 0,
+        "positive_image_count": 348,
+        "area_ratio_mean": 3.062407120620191,
+        "area_ratio_p10": 3.049425667391521,
+        "scaled_width_mean": 24.23669051001078
+      },
+      "2.0": {
+        "zero_after_nearest": 0,
+        "positive_image_count": 348,
+        "area_ratio_mean": 4.0,
+        "area_ratio_p10": 4.0,
+        "scaled_width_mean": 27.5811867413975
+      }
+    }
+  }
+}

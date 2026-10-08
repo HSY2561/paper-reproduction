@@ -1,0 +1,8 @@
+{
+  "test_used": false,
+  "best_val_mIoU": 0.8189,
+  "source": "best_model/model.pdparams",
+  "sha256": "ca7a21f2fbd24a36bbeef0687b26d7cdc6e4342b85b5f63541f2e893452c8936",
+  "iter": 16000,
+  "protocol": "official validation log; regular and EMA candidates compared"
+}

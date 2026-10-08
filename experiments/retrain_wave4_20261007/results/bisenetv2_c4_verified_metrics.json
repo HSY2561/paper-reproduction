@@ -1,0 +1,25 @@
+{
+  "model": "bisenetv2_c4",
+  "images": 1124,
+  "split": "Crack500 test",
+  "confusion_matrix": [
+    [
+      240915259,
+      3576973
+    ],
+    [
+      4428104,
+      10049264
+    ]
+  ],
+  "mIoU": 0.7622264355289433,
+  "crackIoU": 0.556612063547487,
+  "precision": 0.7374937042413103,
+  "recall": 0.6941361164543168,
+  "F1": 0.7151583577978697,
+  "empty_predictions": 21,
+  "zero_overlap_images": 29,
+  "checkpoint": "C:\\retrain_wave4\\checkpoints\\bisenetv2_c4\\model.pdparams",
+  "checkpoint_sha256": "81dcd7a52d0c8e4edcd55a8af82811a329e3148a2a36190154e8f809630e1dc2",
+  "test_used": true
+}

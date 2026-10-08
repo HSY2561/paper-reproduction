@@ -1,0 +1,26 @@
+{
+  "variant": "C1b",
+  "selection_split": "val",
+  "best_states": {
+    "regular": {
+      "mIoU": 0.8112215836877571,
+      "iter": 13000,
+      "weight": "D:\\论文复现\\experiments\\local_structure_wave2_20260930\\training\\C1b\\best_model\\model.pdparams"
+    },
+    "ema": {
+      "mIoU": 0.8128508286742746,
+      "iter": 15000,
+      "weight": "D:\\论文复现\\experiments\\local_structure_wave2_20260930\\training\\C1b\\ema_best_model\\ema_model.pdparams"
+    }
+  },
+  "selected_type": "ema",
+  "selected_iter": 15000,
+  "checkpoint": "D:\\论文复现\\experiments\\local_structure_wave2_20260930\\checkpoints\\C1b\\model.pdparams",
+  "sha256": "992fb7e47281c37f8d46cd13c8ce315975a50682a196e4d0e0ba969a9d64ecb7",
+  "config_sha256": "6b33c44c183ed8c2cbfbaaf3d19f01f843ad5bd772c7b9d7bbb19a385867ccaa",
+  "source_sha256": "7f87ede08a47e4679759daee0ccd9b2f8405f0075a3132c8c4d3f0d9e1a26b05",
+  "training_exit_code": null,
+  "exit_code_note": "Detached Start-Process supervisor could not retrieve ExitCode; complete 18000 log, final files and process exit verified; official val.py will independently validate frozen checkpoint.",
+  "test_used": false,
+  "frozen_at": "2026-09-30T12:12:43.548599+08:00"
+}

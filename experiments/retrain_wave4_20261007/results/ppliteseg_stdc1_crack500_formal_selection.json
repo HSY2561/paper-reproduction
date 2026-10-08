@@ -1,0 +1,98 @@
+{
+  "model": "PP-LiteSeg-STDC1",
+  "model_family": "official PaddleSeg PPLiteSeg with STDC1",
+  "protocol": {
+    "dataset": "Crack500",
+    "split": "train/val only for selection",
+    "gpu": "RTX 5060",
+    "framework": "PaddleSeg 2.10.0 / Paddle 3.4.0",
+    "seed": 42,
+    "precision": "FP32",
+    "batch_size": 4,
+    "optimizer": "AdamW",
+    "learning_rate": 6E-05,
+    "scheduler": "PolynomialDecay end_lr=0",
+    "iters": 18000,
+    "train_scale": "0.75-1.25",
+    "crop": "400x400",
+    "test_used": false
+  },
+  "candidates": [
+    {
+      "variant": "best_model",
+      "checkpoint": "training/ppliteseg_stdc1_crack500_formal/best_model/model.pdparams",
+      "selected": true,
+      "best_iter": 8000,
+      "mIoU": 0.8205094481314313,
+      "crackIoU": 0.6641036699986556,
+      "precision": 0.8250009671155241,
+      "recall": 0.7729951323946548,
+      "f1": 0.7981518002411377,
+      "boundary_f1": 0.5643136376374424,
+      "checkpoint_sha256": "42da2e8fdb5859589731b494e021fb5705946ac7268462a4618450aad5bd3f12"
+    },
+    {
+      "variant": "ema_best_model",
+      "checkpoint": "training/ppliteseg_stdc1_crack500_formal/ema_best_model/ema_model.pdparams",
+      "selected": false,
+      "best_iter": 8000,
+      "mIoU": 0.8191,
+      "crackIoU": 0.6614,
+      "precision": 0.8272,
+      "recall": 0.7675,
+      "f1": 0.7962325202232394,
+      "boundary_f1": null,
+      "checkpoint_sha256": "18b7996e1900f858e4b4ad7950727df9fcc5a1da76f88b0c2c2d5c7fe247271c"
+    }
+  ],
+  "baseline": {
+    "model": "SegFormer-B0",
+    "mIoU": 0.8280206270288883,
+    "crackIoU": 0.678173500242201,
+    "precision": 0.8282687204407948,
+    "recall": 0.789134390140728,
+    "f1": 0.8082281124619405,
+    "boundary_f1": 0.5894120597501529
+  },
+  "selected_variant": "best_model",
+  "selected_iter": 8000,
+  "selected_checkpoint_sha256": "42da2e8fdb5859589731b494e021fb5705946ac7268462a4618450aad5bd3f12",
+  "delta_vs_segformer_val": {
+    "mIoU": -0.007511178897457005,
+    "crackIoU": -0.014069830243545467,
+    "precision": -0.003267753325270739,
+    "recall": -0.016139257746073166,
+    "f1": -0.010076312220802741,
+    "boundary_f1": -0.025098422112710517
+  },
+  "gate": {
+    "criteria": {
+      "crackIoU_min_delta": 0.005,
+      "f1_min_delta": 0.003,
+      "recall_min_delta": -0.005,
+      "mIoU_min_delta": 0,
+      "boundary_f1_min_delta": 0
+    },
+    "passed": false,
+    "failures": [
+      "crack IoU decreased by 0.014069",
+      "F1 decreased by 0.010076",
+      "Recall decreased by 0.016139",
+      "mIoU decreased by 0.007511",
+      "boundary F1 decreased by 0.025098"
+    ]
+  },
+  "eligible_for_test": false,
+  "test_used": false,
+  "conclusion": "Validation gate failed; PP-LiteSeg is retained as an official-model comparison/negative result and no Crack500 test evaluation was performed.",
+  "evidence": {
+    "train_log": "logs/ppliteseg_stdc1_crack500_formal_train.stdout.log",
+    "stderr_log": "logs/ppliteseg_stdc1_crack500_formal_train.stderr.log",
+    "ordinary_val_log": "logs/ppliteseg_stdc1_crack500_formal_val_ordinary.log",
+    "ema_val_log": "logs/ppliteseg_stdc1_crack500_formal_val_ema.log",
+    "boundary_metrics": "results/ppliteseg_stdc1_crack500_formal_validation_metrics.json",
+    "config": "configs/ppliteseg_stdc1_crack500_formal.yml"
+  },
+  "frozen_checkpoint": "checkpoints/ppliteseg_stdc1_crack500_formal/model.pdparams",
+  "frozen_ema_checkpoint": "checkpoints/ppliteseg_stdc1_crack500_formal/ema_model.pdparams"
+}

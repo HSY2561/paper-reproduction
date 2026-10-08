@@ -1,0 +1,8 @@
+images\train\1.jpg annotations\train\1.png
+images\train\10.jpg annotations\train\10.png
+images\train\100.jpg annotations\train\100.png
+images\train\1000.jpg annotations\train\1000.png
+images\train\1001.jpg annotations\train\1001.png
+images\train\1002.jpg annotations\train\1002.png
+images\train\1004.jpg annotations\train\1004.png
+images\train\1007.jpg annotations\train\1007.png

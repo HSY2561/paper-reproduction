@@ -1,0 +1,174 @@
+[2026/10/07 00:30:27] INFO: 
+------------Environment Information-------------
+platform: Windows-11-10.0.26200-SP0
+Python: 3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]
+Paddle compiled with cuda: True
+NVCC: Build cuda_13.4.r13.4/compiler.38657139_0
+cudnn: 90.9
+GPUs used: 1
+CUDA_VISIBLE_DEVICES: None
+GPU: ['GPU 0: NVIDIA GeForce']
+PaddleSeg: 0.0.0.dev0
+PaddlePaddle: 3.4.0
+OpenCV: 4.11.0
+------------------------------------------------
+[2026/10/07 00:30:27] INFO: 
+---------------Config Information---------------
+batch_size: 4
+iters: 20
+train_dataset:
+  dataset_root: C:/custom_crack
+  mode: train
+  num_classes: 2
+  train_path: C:/segformer_wave1/configs/train_smoke8.txt
+  transforms:
+  - max_scale_factor: 1.25
+    min_scale_factor: 0.75
+    scale_step_size: 0.25
+    type: ResizeStepScaling
+  - crop_size:
+    - 400
+    - 400
+    type: RandomPaddingCrop
+  - type: RandomHorizontalFlip
+  - brightness_range: 0.5
+    contrast_range: 0.5
+    saturation_range: 0.5
+    type: RandomDistort
+  - type: Normalize
+  type: Dataset
+val_dataset:
+  dataset_root: C:/custom_crack
+  mode: val
+  num_classes: 2
+  transforms:
+  - type: Normalize
+  type: Dataset
+  val_path: C:/segformer_wave1/configs/val_smoke2.txt
+optimizer:
+  beta1: 0.9
+  beta2: 0.999
+  type: AdamW
+  weight_decay: 0.01
+lr_scheduler:
+  end_lr: 0.0
+  learning_rate: 6.0e-05
+  power: 1
+  type: PolynomialDecay
+loss:
+  coef:
+  - 1
+  types:
+  - type: CrossEntropyLoss
+model:
+  backbone:
+    pretrained: https://bj.bcebos.com/paddleseg/dygraph/backbone/mix_vision_transformer_b0.tar.gz
+    type: MixVisionTransformer_B0
+  embedding_dim: 256
+  num_classes: 2
+  type: SegFormer
+------------------------------------------------
+
+[2026/10/07 00:30:27] INFO: Set device: gpu
+[2026/10/07 00:30:27] INFO: Use the following config to build model
+model:
+  backbone:
+    pretrained: https://bj.bcebos.com/paddleseg/dygraph/backbone/mix_vision_transformer_b0.tar.gz
+    type: MixVisionTransformer_B0
+  embedding_dim: 256
+  num_classes: 2
+  type: SegFormer
+[2026/10/07 00:30:27] INFO: Loading pretrained model from https://bj.bcebos.com/paddleseg/dygraph/backbone/mix_vision_transformer_b0.tar.gz
+[2026/10/07 00:30:27] INFO: There are 176/176 variables loaded into MixVisionTransformer.
+[2026/10/07 00:30:28] INFO: Use the following config to build train_dataset
+train_dataset:
+  dataset_root: C:/custom_crack
+  mode: train
+  num_classes: 2
+  train_path: C:/segformer_wave1/configs/train_smoke8.txt
+  transforms:
+  - max_scale_factor: 1.25
+    min_scale_factor: 0.75
+    scale_step_size: 0.25
+    type: ResizeStepScaling
+  - crop_size:
+    - 400
+    - 400
+    type: RandomPaddingCrop
+  - type: RandomHorizontalFlip
+  - brightness_range: 0.5
+    contrast_range: 0.5
+    saturation_range: 0.5
+    type: RandomDistort
+  - type: Normalize
+  type: Dataset
+[2026/10/07 00:30:28] INFO: Use the following config to build val_dataset
+val_dataset:
+  dataset_root: C:/custom_crack
+  mode: val
+  num_classes: 2
+  transforms:
+  - type: Normalize
+  type: Dataset
+  val_path: C:/segformer_wave1/configs/val_smoke2.txt
+[2026/10/07 00:30:28] INFO: Use the following config to build optimizer
+optimizer:
+  beta1: 0.9
+  beta2: 0.999
+  type: AdamW
+  weight_decay: 0.01
+[2026/10/07 00:30:28] INFO: Use the following config to build loss
+loss:
+  coef:
+  - 1
+  types:
+  - type: CrossEntropyLoss
+[2026/10/07 00:30:29] INFO: [TRAIN] epoch: 1, iter: 1/20, loss: 1.2212, lr: 0.000060, batch_cost: 1.2218, reader_cost: 0.14351, ips: 3.2739 samples/sec, max_mem_reserved: 1219 MB, max_mem_allocated: 1033 MB | ETA 00:00:23
+[2026/10/07 00:30:29] INFO: [TRAIN] epoch: 1, iter: 2/20, loss: 1.1070, lr: 0.000057, batch_cost: 0.0452, reader_cost: 0.00000, ips: 88.5318 samples/sec, max_mem_reserved: 1219 MB, max_mem_allocated: 1081 MB | ETA 00:00:00
+[2026/10/07 00:30:29] INFO: [TRAIN] epoch: 2, iter: 3/20, loss: 1.0804, lr: 0.000054, batch_cost: 0.1497, reader_cost: 0.09646, ips: 26.7289 samples/sec, max_mem_reserved: 1219 MB, max_mem_allocated: 1081 MB | ETA 00:00:02
+[2026/10/07 00:30:29] INFO: [TRAIN] epoch: 2, iter: 4/20, loss: 1.2592, lr: 0.000051, batch_cost: 0.0955, reader_cost: 0.04995, ips: 41.9032 samples/sec, max_mem_reserved: 1219 MB, max_mem_allocated: 1081 MB | ETA 00:00:01
+[2026/10/07 00:30:29] INFO: [TRAIN] epoch: 3, iter: 5/20, loss: 0.9858, lr: 0.000048, batch_cost: 0.1583, reader_cost: 0.10564, ips: 25.2640 samples/sec, max_mem_reserved: 1219 MB, max_mem_allocated: 1081 MB | ETA 00:00:02
+[2026/10/07 00:30:29] INFO: [TRAIN] epoch: 3, iter: 6/20, loss: 1.0429, lr: 0.000045, batch_cost: 0.0831, reader_cost: 0.03951, ips: 48.1549 samples/sec, max_mem_reserved: 1219 MB, max_mem_allocated: 1081 MB | ETA 00:00:01
+[2026/10/07 00:30:30] INFO: [TRAIN] epoch: 4, iter: 7/20, loss: 0.6728, lr: 0.000042, batch_cost: 0.1704, reader_cost: 0.12304, ips: 23.4707 samples/sec, max_mem_reserved: 1219 MB, max_mem_allocated: 1081 MB | ETA 00:00:02
+[2026/10/07 00:30:30] INFO: [TRAIN] epoch: 4, iter: 8/20, loss: 0.9404, lr: 0.000039, batch_cost: 0.1256, reader_cost: 0.07928, ips: 31.8586 samples/sec, max_mem_reserved: 1219 MB, max_mem_allocated: 1081 MB | ETA 00:00:01
+[2026/10/07 00:30:30] INFO: [TRAIN] epoch: 5, iter: 9/20, loss: 0.9004, lr: 0.000036, batch_cost: 0.1597, reader_cost: 0.11241, ips: 25.0540 samples/sec, max_mem_reserved: 1219 MB, max_mem_allocated: 1081 MB | ETA 00:00:01
+[2026/10/07 00:30:30] INFO: [TRAIN] epoch: 5, iter: 10/20, loss: 0.7482, lr: 0.000033, batch_cost: 0.0981, reader_cost: 0.04867, ips: 40.7710 samples/sec, max_mem_reserved: 1219 MB, max_mem_allocated: 1081 MB | ETA 00:00:00
+[2026/10/07 00:30:30] INFO: [TRAIN] epoch: 6, iter: 11/20, loss: 0.8586, lr: 0.000030, batch_cost: 0.1557, reader_cost: 0.10403, ips: 25.6852 samples/sec, max_mem_reserved: 1219 MB, max_mem_allocated: 1081 MB | ETA 00:00:01
+[2026/10/07 00:30:30] INFO: [TRAIN] epoch: 6, iter: 12/20, loss: 0.8454, lr: 0.000027, batch_cost: 0.0921, reader_cost: 0.04723, ips: 43.4169 samples/sec, max_mem_reserved: 1219 MB, max_mem_allocated: 1081 MB | ETA 00:00:00
+[2026/10/07 00:30:30] INFO: [TRAIN] epoch: 7, iter: 13/20, loss: 0.7254, lr: 0.000024, batch_cost: 0.1486, reader_cost: 0.09942, ips: 26.9156 samples/sec, max_mem_reserved: 1219 MB, max_mem_allocated: 1081 MB | ETA 00:00:01
+[2026/10/07 00:30:31] INFO: [TRAIN] epoch: 7, iter: 14/20, loss: 0.7985, lr: 0.000021, batch_cost: 0.0902, reader_cost: 0.04552, ips: 44.3423 samples/sec, max_mem_reserved: 1219 MB, max_mem_allocated: 1081 MB | ETA 00:00:00
+[2026/10/07 00:30:31] INFO: [TRAIN] epoch: 8, iter: 15/20, loss: 0.8048, lr: 0.000018, batch_cost: 0.1522, reader_cost: 0.09510, ips: 26.2877 samples/sec, max_mem_reserved: 1219 MB, max_mem_allocated: 1081 MB | ETA 00:00:00
+[2026/10/07 00:30:31] INFO: [TRAIN] epoch: 8, iter: 16/20, loss: 0.9211, lr: 0.000015, batch_cost: 0.0831, reader_cost: 0.03898, ips: 48.1362 samples/sec, max_mem_reserved: 1219 MB, max_mem_allocated: 1081 MB | ETA 00:00:00
+[2026/10/07 00:30:31] INFO: [TRAIN] epoch: 9, iter: 17/20, loss: 1.0217, lr: 0.000012, batch_cost: 0.1362, reader_cost: 0.08617, ips: 29.3778 samples/sec, max_mem_reserved: 1219 MB, max_mem_allocated: 1081 MB | ETA 00:00:00
+[2026/10/07 00:30:31] INFO: [TRAIN] epoch: 9, iter: 18/20, loss: 0.6719, lr: 0.000009, batch_cost: 0.0785, reader_cost: 0.03433, ips: 50.9613 samples/sec, max_mem_reserved: 1219 MB, max_mem_allocated: 1081 MB | ETA 00:00:00
+[2026/10/07 00:30:31] INFO: [TRAIN] epoch: 10, iter: 19/20, loss: 1.1150, lr: 0.000006, batch_cost: 0.1492, reader_cost: 0.10005, ips: 26.8111 samples/sec, max_mem_reserved: 1219 MB, max_mem_allocated: 1081 MB | ETA 00:00:00
+[2026/10/07 00:30:31] INFO: [TRAIN] epoch: 10, iter: 20/20, loss: 0.6229, lr: 0.000003, batch_cost: 0.1017, reader_cost: 0.05775, ips: 39.3148 samples/sec, max_mem_reserved: 1219 MB, max_mem_allocated: 1081 MB | ETA 00:00:00
+[2026/10/07 00:30:31] INFO: Start evaluating (total_samples: 2, total_iters: 2)...
+[2026/10/07 00:30:31] INFO: [EVAL] #Images: 2 mIoU: 0.8054 Acc: 0.9591 Kappa: 0.7699 Dice: 0.8845
+[2026/10/07 00:30:31] INFO: [EVAL] Class IoU: 
+[0.9556 0.6551]
+[2026/10/07 00:30:31] INFO: [EVAL] Class Precision: 
+[0.9986 0.6619]
+[2026/10/07 00:30:31] INFO: [EVAL] Class Recall: 
+[0.9569 0.9845]
+[2026/10/07 00:30:31] INFO: Start evaluating (total_samples: 2, total_iters: 2)...
+[2026/10/07 00:30:32] INFO: [EVAL] #Images: 2 mIoU: 0.6721 Acc: 0.9041 Kappa: 0.5726 Dice: 0.7821
+[2026/10/07 00:30:32] INFO: [EVAL] Class IoU: 
+[0.896  0.4482]
+[2026/10/07 00:30:32] INFO: [EVAL] Class Precision: 
+[0.9987 0.451 ]
+[2026/10/07 00:30:32] INFO: [EVAL] Class Recall: 
+[0.8971 0.986 ]
+[2026/10/07 00:30:32] INFO: [EVAL] The model with the best validation mIoU (0.8054) was saved at iter 20.
+[2026/10/07 00:30:32] INFO: [EVAL] The EMA model with the best validation mIoU (0.6721) was saved at iter 20.
+<class 'paddle.nn.layer.conv.Conv2D'>'s flops has been counted
+Cannot find suitable count function for <class 'paddle.nn.layer.norm.LayerNorm'>. Treat it as zero FLOPs.
+<class 'paddle.nn.layer.common.Linear'>'s flops has been counted
+<class 'paddle.nn.layer.common.Dropout'>'s flops has been counted
+Cannot find suitable count function for <class 'paddleseg.models.backbones.transformer_utils.Identity'>. Treat it as zero FLOPs.
+Cannot find suitable count function for <class 'paddle.nn.layer.activation.GELU'>. Treat it as zero FLOPs.
+Cannot find suitable count function for <class 'paddleseg.models.backbones.transformer_utils.DropPath'>. Treat it as zero FLOPs.
+Cannot find suitable count function for <class 'paddle.nn.layer.common.Dropout2D'>. Treat it as zero FLOPs.
+<class 'paddle.nn.layer.norm.BatchNorm2D'>'s flops has been counted
+<class 'paddle.nn.layer.activation.ReLU'>'s flops has been counted
+Total Flops: 4135182528     Total Params: 3715170

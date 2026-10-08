@@ -1,0 +1,13 @@
+{
+  "source": "D:\\论文复现\\experiments\\retrain_wave4_20261007\\src\\PaddleSeg-2.10.0",
+  "segformer_sha256": "28C50C86DD6868311692F77C3AEA20A20823EFB1AB45B2D4E2BBB13DEE8BD451",
+  "variants": [
+    "base",
+    "uafm",
+    "ppcontext",
+    "uafm_ppcontext",
+    "ppliteseg_stdc1_formal"
+  ],
+  "test_used": false,
+  "ppliteseg_training_config": "configs/ppliteseg_stdc1_crack500_formal.yml"
+}
