@@ -1,0 +1,9 @@
+{
+  "ended_at": "2026-10-13T11:17:26.1310730+08:00",
+  "run": "C_Ham_decoder",
+  "seed": 42,
+  "batch_size": 4,
+  "exit_code": 0,
+  "iters": 18000,
+  "test_used": false
+}

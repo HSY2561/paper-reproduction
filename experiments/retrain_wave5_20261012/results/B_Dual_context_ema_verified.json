@@ -1,0 +1,31 @@
+{
+  "n": 348,
+  "confusion_matrix": [
+    [
+      76148900,
+      837845
+    ],
+    [
+      928527,
+      3678872
+    ]
+  ],
+  "mIoU": 0.8264707722344525,
+  "crackIoU": 0.6756119652305755,
+  "precision": 0.8145013291733797,
+  "recall": 0.7984704602314668,
+  "f1": 0.8064062315735574,
+  "boundary_counts_pred_gt": [
+    187057,
+    185077,
+    430491,
+    471716
+  ],
+  "boundary_precision": 0.4345201177260384,
+  "boundary_recall": 0.39234836215010727,
+  "boundary_f1": 0.4123588228604848,
+  "empty_predictions": 4,
+  "test_used": false,
+  "config": "D:\\\u8bba\u6587\u590d\u73b0\\experiments\\retrain_wave5_20261012\\configs\\B_Dual_context.yml",
+  "model_path": "D:\\\u8bba\u6587\u590d\u73b0\\experiments\\retrain_wave5_20261012\\training\\B_Dual_context\\ema_best_model\\ema_model.pdparams"
+}

@@ -1,0 +1,159 @@
+[2026/10/12 15:42:31] INFO: 
+------------Environment Information-------------
+platform: Windows-11-10.0.26200-SP0
+Python: 3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]
+Paddle compiled with cuda: True
+NVCC: Build cuda_13.4.r13.4/compiler.38657139_0
+cudnn: 90.9
+GPUs used: 1
+CUDA_VISIBLE_DEVICES: None
+GPU: ['GPU 0: NVIDIA GeForce']
+PaddleSeg: 0.0.0.dev0
+PaddlePaddle: 3.4.0
+OpenCV: 4.11.0
+------------------------------------------------
+[2026/10/12 15:42:31] INFO: 
+---------------Config Information---------------
+batch_size: 4
+iters: 20
+train_dataset:
+  dataset_root: C:/Users/user/algolab_data
+  mode: train
+  num_classes: 2
+  train_path: C:/Users/user/algolab_data/train.txt
+  transforms:
+  - max_scale_factor: 1.25
+    min_scale_factor: 0.75
+    scale_step_size: 0.25
+    type: ResizeStepScaling
+  - crop_size:
+    - 400
+    - 400
+    type: RandomPaddingCrop
+  - type: RandomHorizontalFlip
+  - brightness_range: 0.5
+    contrast_range: 0.5
+    saturation_range: 0.5
+    type: RandomDistort
+  - type: Normalize
+  type: Dataset
+val_dataset:
+  dataset_root: C:/Users/user/algolab_data
+  mode: val
+  num_classes: 2
+  transforms:
+  - type: Normalize
+  type: Dataset
+  val_path: C:/Users/user/algolab_data/val.txt
+optimizer:
+  beta1: 0.9
+  beta2: 0.999
+  type: AdamW
+  weight_decay: 0.01
+lr_scheduler:
+  end_lr: 0.0
+  learning_rate: 6.0e-05
+  power: 1
+  type: PolynomialDecay
+loss:
+  coef:
+  - 1
+  types:
+  - type: CrossEntropyLoss
+model:
+  backbone:
+    pretrained: https://bj.bcebos.com/paddleseg/dygraph/backbone/mix_vision_transformer_b0.tar.gz
+    type: MixVisionTransformer_B0
+  decoder_variant: dual_context
+  embedding_dim: 256
+  num_classes: 2
+  type: SegFormer
+------------------------------------------------
+
+[2026/10/12 15:42:31] INFO: Set device: gpu
+[2026/10/12 15:42:31] INFO: Use the following config to build model
+model:
+  backbone:
+    pretrained: https://bj.bcebos.com/paddleseg/dygraph/backbone/mix_vision_transformer_b0.tar.gz
+    type: MixVisionTransformer_B0
+  decoder_variant: dual_context
+  embedding_dim: 256
+  num_classes: 2
+  type: SegFormer
+[2026/10/12 15:42:32] INFO: Loading pretrained model from https://bj.bcebos.com/paddleseg/dygraph/backbone/mix_vision_transformer_b0.tar.gz
+[2026/10/12 15:42:32] INFO: There are 176/176 variables loaded into MixVisionTransformer.
+[2026/10/12 15:42:32] INFO: Use the following config to build train_dataset
+train_dataset:
+  dataset_root: C:/Users/user/algolab_data
+  mode: train
+  num_classes: 2
+  train_path: C:/Users/user/algolab_data/train.txt
+  transforms:
+  - max_scale_factor: 1.25
+    min_scale_factor: 0.75
+    scale_step_size: 0.25
+    type: ResizeStepScaling
+  - crop_size:
+    - 400
+    - 400
+    type: RandomPaddingCrop
+  - type: RandomHorizontalFlip
+  - brightness_range: 0.5
+    contrast_range: 0.5
+    saturation_range: 0.5
+    type: RandomDistort
+  - type: Normalize
+  type: Dataset
+[2026/10/12 15:42:32] INFO: Use the following config to build val_dataset
+val_dataset:
+  dataset_root: C:/Users/user/algolab_data
+  mode: val
+  num_classes: 2
+  transforms:
+  - type: Normalize
+  type: Dataset
+  val_path: C:/Users/user/algolab_data/val.txt
+[2026/10/12 15:42:32] INFO: Use the following config to build optimizer
+optimizer:
+  beta1: 0.9
+  beta2: 0.999
+  type: AdamW
+  weight_decay: 0.01
+[2026/10/12 15:42:32] INFO: Use the following config to build loss
+loss:
+  coef:
+  - 1
+  types:
+  - type: CrossEntropyLoss
+[2026/10/12 15:42:33] INFO: [TRAIN] epoch: 1, iter: 10/20, loss: 0.2855, lr: 0.000033, batch_cost: 0.1601, reader_cost: 0.00776, ips: 24.9836 samples/sec, max_mem_reserved: 1223 MB, max_mem_allocated: 1091 MB | ETA 00:00:01
+[2026/10/12 15:42:34] INFO: [TRAIN] epoch: 1, iter: 20/20, loss: 0.2677, lr: 0.000003, batch_cost: 0.0558, reader_cost: 0.00010, ips: 71.7068 samples/sec, max_mem_reserved: 1223 MB, max_mem_allocated: 1091 MB | ETA 00:00:00
+[2026/10/12 15:42:34] INFO: Start evaluating (total_samples: 348, total_iters: 348)...
+[2026/10/12 15:42:39] INFO: [EVAL] #Images: 348 mIoU: 0.5468 Acc: 0.9457 Kappa: 0.2388 Dice: 0.6152
+[2026/10/12 15:42:39] INFO: [EVAL] Class IoU: 
+[0.9451 0.1485]
+[2026/10/12 15:42:39] INFO: [EVAL] Class Precision: 
+[0.9522 0.5632]
+[2026/10/12 15:42:39] INFO: [EVAL] Class Recall: 
+[0.9922 0.1678]
+[2026/10/12 15:42:39] INFO: Start evaluating (total_samples: 348, total_iters: 348)...
+[2026/10/12 15:42:45] INFO: [EVAL] #Images: 348 mIoU: 0.5336 Acc: 0.9356 Kappa: 0.2041 Dice: 0.6000
+[2026/10/12 15:42:45] INFO: [EVAL] Class IoU: 
+[0.935  0.1322]
+[2026/10/12 15:42:45] INFO: [EVAL] Class Precision: 
+[0.952  0.3565]
+[2026/10/12 15:42:45] INFO: [EVAL] Class Recall: 
+[0.9812 0.1737]
+[2026/10/12 15:42:45] INFO: [EVAL] The model with the best validation mIoU (0.5468) was saved at iter 20.
+[2026/10/12 15:42:45] INFO: [EVAL] The EMA model with the best validation mIoU (0.5336) was saved at iter 20.
+<class 'paddle.nn.layer.conv.Conv2D'>'s flops has been counted
+Cannot find suitable count function for <class 'paddle.nn.layer.norm.LayerNorm'>. Treat it as zero FLOPs.
+<class 'paddle.nn.layer.common.Linear'>'s flops has been counted
+<class 'paddle.nn.layer.common.Dropout'>'s flops has been counted
+Cannot find suitable count function for <class 'paddleseg.models.backbones.transformer_utils.Identity'>. Treat it as zero FLOPs.
+Cannot find suitable count function for <class 'paddle.nn.layer.activation.GELU'>. Treat it as zero FLOPs.
+Cannot find suitable count function for <class 'paddleseg.models.backbones.transformer_utils.DropPath'>. Treat it as zero FLOPs.
+<class 'paddle.nn.layer.norm.BatchNorm2D'>'s flops has been counted
+<class 'paddle.nn.layer.activation.ReLU'>'s flops has been counted
+Cannot find suitable count function for <class 'paddleseg.models.layers.attention.CAM'>. Treat it as zero FLOPs.
+Cannot find suitable count function for <class 'paddle.nn.layer.common.Dropout2D'>. Treat it as zero FLOPs.
+Total Flops: 4179238800     Total Params: 3976883

@@ -1,0 +1,24 @@
+{
+  "figure": "Fig. 4-3",
+  "model": "SegFormer-B0",
+  "dataset": "Crack500 validation",
+  "log": "D:\\论文复现\\experiments\\retrain_wave4_20261007\\logs\\segformer_b0_train.log",
+  "selection_json": "D:\\论文复现\\experiments\\retrain_wave4_20261007\\checkpoints\\segformer_b0\\selection.json",
+  "n_validation_events": 18,
+  "selection_metric": "validation mIoU",
+  "selected_frozen_variant": "ordinary best_model",
+  "selected_frozen_iteration": 11000,
+  "selected_frozen_mIoU": 0.8280206270288883,
+  "ordinary_best": {
+    "iteration": 11000,
+    "ordinary_mIoU": 0.828,
+    "ema_mIoU": 0.8262
+  },
+  "ema_best": {
+    "iteration": 12000,
+    "ordinary_mIoU": 0.8245,
+    "ema_mIoU": 0.8267
+  },
+  "test_used_for_curve_or_selection": false,
+  "note": "All values are parsed from the recorded log; no interpolation or smoothing was applied."
+}

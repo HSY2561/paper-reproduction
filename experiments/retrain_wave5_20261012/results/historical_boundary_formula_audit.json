@@ -1,0 +1,23 @@
+{
+  "segformer_b0": {
+    "old_boundary_f1_invalid": 0.5894120597501529,
+    "correct_harmonic_from_old_counts": 0.41770772036109727,
+    "boundary_precision": 0.44178177360032694,
+    "boundary_recall": 0.3961218190606212,
+    "note": "Old counts use approximate OpenCV distanceTransform; fresh exact 2px evaluation still required."
+  },
+  "segformer_ppcontext_compat": {
+    "old_boundary_f1_invalid": 0.5775807442986319,
+    "correct_harmonic_from_old_counts": 0.40592422787117166,
+    "boundary_precision": 0.43018942300247076,
+    "boundary_recall": 0.38425026922979083,
+    "note": "Old counts use approximate OpenCV distanceTransform; fresh exact 2px evaluation still required."
+  },
+  "ppliteseg_stdc1_crack500_formal": {
+    "old_boundary_f1_invalid": 0.5643136376374424,
+    "correct_harmonic_from_old_counts": 0.3930096616096774,
+    "boundary_precision": 0.4309052542411339,
+    "boundary_recall": 0.3612406617541063,
+    "note": "Old counts use approximate OpenCV distanceTransform; fresh exact 2px evaluation still required."
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "run": "B_Dual_context",
+  "exit_code": 0,
+  "iters": 18000,
+  "batch_size": 4,
+  "seed": 42,
+  "ended_at": "2026-10-12T21:30:34.8044970+08:00",
+  "test_used": false
+}

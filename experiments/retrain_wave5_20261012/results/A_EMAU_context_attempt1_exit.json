@@ -1,0 +1,7 @@
+{
+  "exit_code": null,
+  "status": "process_absent_before_first_logged_iteration",
+  "completed_training": false,
+  "reason": "Detached launch produced model-load log only; native exit code not captured",
+  "test_used": false
+}

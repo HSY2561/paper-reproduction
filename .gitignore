@@ -45,6 +45,7 @@ experiments/**/best_model/
 # One-off remote administration scripts (some contain local credentials)
 /tmp_*.py
 /tmp_*.ps1
+/tmp_paper*.txt
 
 # Local-only snapshots and downloaded upstream components removed from the project view
 /PaddleSeg-release-2.8/EISeg/
@@ -71,6 +72,16 @@ experiments/**/best_model/
 /PaddleSeg-release-2.8/*.png
 /PaddleSeg-release-2.8/*.zip
 /tmp_*.yml
+
+# Reference repositories: keep source/docs, omit downloaded archives and generated media
+/references/*.zip
+/references/**/*.pdf
+/references/**/_tmp_*/
+/references/Crack-Filling-Robot/CrackMaps/
+/references/Crack-Filling-Robot/Results/
+/references/Crack-Filling-Robot/Docs/5.Videos/
+/references/Crack-Filling-Robot/Docs/1.Images/
+/references/Crack-Filling-Robot/Software/*.mat
 
 # Editor and OS files
 .idea/

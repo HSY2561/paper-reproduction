@@ -1,0 +1,116 @@
+{
+  "dataset": "Crack500 validation",
+  "model": "SegFormer-B0",
+  "checkpoint": "D:\\论文复现\\experiments\\retrain_wave4_20261007\\checkpoints\\segformer_b0\\model.pdparams",
+  "checkpoint_sha256": "07f6048e0a6de174a2c3ca1915df4bcd635565a706d978288fba946ef240f2d5",
+  "selected_iteration": 11000,
+  "config": "D:\\论文复现\\experiments\\retrain_wave4_20261007\\configs\\public_segformer_b0.yml",
+  "source_code": "D:\\论文复现\\experiments\\retrain_wave4_20261007\\src\\PaddleSeg-2.10.0",
+  "paddle_version": "3.4.0",
+  "selection_rule": "Nearest image IoU ranks to quantiles .2,.4,.6,.8; distinct filename source prefixes; not class-balanced or representative prevalence. No test data accessed.",
+  "inference": "Official inference, FP32, Normalize only, argmax, no TTA or postprocessing",
+  "boundary": "mask minus 3x3 erosion; exact pixel overlap shown white; no matching tolerance in display",
+  "source_hashes_verified_unchanged": true,
+  "samples": [
+    {
+      "row": 1,
+      "selection_target_quantile": 0.2,
+      "source_image": "C:\\Users\\user\\algolab_data\\valcrop\\20160307_162438_1921_1081.jpg",
+      "source_label": "C:\\Users\\user\\algolab_data\\valcrop\\20160307_162438_1921_1081.png",
+      "source_sha256": {
+        "C:\\Users\\user\\algolab_data\\valcrop\\20160307_162438_1921_1081.jpg": "1aa6dfdc66ca728967f62fdd746e89859c5dea06a6c6357b3f696ea238a635a7",
+        "C:\\Users\\user\\algolab_data\\valcrop\\20160307_162438_1921_1081.png": "ab1d889da912294b7e4cb50e02729221908681fcf76fbfefea1ab80efa0c7214"
+      },
+      "image": "20160307_162438_1921_1081.jpg",
+      "crack_iou": 0.511038094260191,
+      "tp": 9954,
+      "fp": 8970,
+      "fn": 554,
+      "original_shape": [
+        360,
+        640,
+        3
+      ],
+      "label_values": [
+        0,
+        1
+      ],
+      "exported_panels": "D:\\论文复现\\figures\\fig4_2_dataset_examples\\panels\\row_1"
+    },
+    {
+      "row": 2,
+      "selection_target_quantile": 0.4,
+      "source_image": "C:\\Users\\user\\algolab_data\\valcrop\\20160302_155857_641_721.jpg",
+      "source_label": "C:\\Users\\user\\algolab_data\\valcrop\\20160302_155857_641_721.png",
+      "source_sha256": {
+        "C:\\Users\\user\\algolab_data\\valcrop\\20160302_155857_641_721.jpg": "7ad6cd9f588ef11c18bd244533bb6d431d9754b404d2591e5fe0f78df5080182",
+        "C:\\Users\\user\\algolab_data\\valcrop\\20160302_155857_641_721.png": "71f585c8dd5000a3374c588fbd6be5247fe37ab7819442ee9eaf59a9598b932a"
+      },
+      "image": "20160302_155857_641_721.jpg",
+      "crack_iou": 0.6188332395422997,
+      "tp": 9897,
+      "fp": 4488,
+      "fn": 1608,
+      "original_shape": [
+        360,
+        640,
+        3
+      ],
+      "label_values": [
+        0,
+        1
+      ],
+      "exported_panels": "D:\\论文复现\\figures\\fig4_2_dataset_examples\\panels\\row_2"
+    },
+    {
+      "row": 3,
+      "selection_target_quantile": 0.6,
+      "source_image": "C:\\Users\\user\\algolab_data\\valcrop\\20160328_152022_641_721.jpg",
+      "source_label": "C:\\Users\\user\\algolab_data\\valcrop\\20160328_152022_641_721.png",
+      "source_sha256": {
+        "C:\\Users\\user\\algolab_data\\valcrop\\20160328_152022_641_721.jpg": "2e6d3e64ff5b87235c922c3fc0bdfc3ce89b1723f9d18814e8d11a1d831d8707",
+        "C:\\Users\\user\\algolab_data\\valcrop\\20160328_152022_641_721.png": "da7479681c67a08b093b3c5a4d875e7daa8816bd90804bb6bdedc7e4cd4507bd"
+      },
+      "image": "20160328_152022_641_721.jpg",
+      "crack_iou": 0.6953238154355473,
+      "tp": 13442,
+      "fp": 3558,
+      "fn": 2332,
+      "original_shape": [
+        360,
+        640,
+        3
+      ],
+      "label_values": [
+        0,
+        1
+      ],
+      "exported_panels": "D:\\论文复现\\figures\\fig4_2_dataset_examples\\panels\\row_3"
+    },
+    {
+      "row": 4,
+      "selection_target_quantile": 0.8,
+      "source_image": "C:\\Users\\user\\algolab_data\\valcrop\\20160328_151244_1_721.jpg",
+      "source_label": "C:\\Users\\user\\algolab_data\\valcrop\\20160328_151244_1_721.png",
+      "source_sha256": {
+        "C:\\Users\\user\\algolab_data\\valcrop\\20160328_151244_1_721.jpg": "ea3bea7dde46bdbfab9cab5835dde7d64beffaec4528daf420aaa325135a401e",
+        "C:\\Users\\user\\algolab_data\\valcrop\\20160328_151244_1_721.png": "6f1a9bbc0a770f5c944959261000202de4eaef24c66dc836c3015aaf72aa47c6"
+      },
+      "image": "20160328_151244_1_721.jpg",
+      "crack_iou": 0.779646418857661,
+      "tp": 17199,
+      "fp": 2304,
+      "fn": 2557,
+      "original_shape": [
+        360,
+        640,
+        3
+      ],
+      "label_values": [
+        0,
+        1
+      ],
+      "exported_panels": "D:\\论文复现\\figures\\fig4_2_dataset_examples\\panels\\row_4"
+    }
+  ]
+}

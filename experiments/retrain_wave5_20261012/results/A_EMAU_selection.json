@@ -1,0 +1,15 @@
+{
+  "model": "SegFormer-B0+EMAU",
+  "selected_variant": "best_model",
+  "selected_iter": 13000,
+  "val_mIoU": 0.8269120532624614,
+  "val_crackIoU": 0.6768466814542675,
+  "val_precision": 0.8000253208587608,
+  "val_recall": 0.8146778692273016,
+  "val_F1": 0.8072851131115497,
+  "val_boundary_F1": 0.4071980003291235,
+  "sha256": "64c08103d9f54c81e169c1f88b1277ea4f5e9d0de9bdcd5fee2aa7f46f793492",
+  "test_used": false,
+  "gate_passed": false,
+  "reason": "mIoU and crack IoU below SegFormer baseline"
+}

@@ -1,0 +1,12 @@
+{
+  "run": "A_EMAU_context",
+  "pid": 78996,
+  "started_at": "2026-10-12T15:01:14.9471921+08:00",
+  "config": "D:\\论文复现\\experiments\\retrain_wave5_20261012\\configs\\A_EMAU_context.yml",
+  "save_dir": "D:\\论文复现\\experiments\\retrain_wave5_20261012\\training\\A_EMAU_context",
+  "iters": 18000,
+  "batch_size": 4,
+  "seed": 42,
+  "test_used": false,
+  "status": "running"
+}

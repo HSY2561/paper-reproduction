@@ -1,0 +1,53 @@
+[2026/10/12 20:59:50] INFO: Set device: gpu
+[2026/10/12 20:59:50] INFO: Use the following config to build model
+model:
+  backbone:
+    pretrained: https://bj.bcebos.com/paddleseg/dygraph/backbone/mix_vision_transformer_b0.tar.gz
+    type: MixVisionTransformer_B0
+  embedding_dim: 256
+  num_classes: 2
+  type: SegFormer
+[2026/10/12 20:59:50] INFO: Loading pretrained model from https://bj.bcebos.com/paddleseg/dygraph/backbone/mix_vision_transformer_b0.tar.gz
+[2026/10/12 20:59:50] INFO: There are 176/176 variables loaded into MixVisionTransformer.
+[2026/10/12 20:59:50] INFO: Loading pretrained model from D:\���ĸ���\experiments\retrain_wave4_20261007\checkpoints\segformer_b0\model.pdparams
+[2026/10/12 20:59:50] INFO: There are 191/191 variables loaded into SegFormer.
+[2026/10/12 20:59:50] INFO: Use the following config to build val_dataset
+val_dataset:
+  dataset_root: C:/Users/user/algolab_data
+  mode: val
+  num_classes: 2
+  transforms:
+  - type: Normalize
+  type: Dataset
+  val_path: C:/Users/user/algolab_data/val.txt
+{
+  "n": 348,
+  "confusion_matrix": [
+    [
+      76232895,
+      753850
+    ],
+    [
+      971542,
+      3635857
+    ]
+  ],
+  "mIoU": 0.8280206270288883,
+  "crackIoU": 0.678173500242201,
+  "precision": 0.8282687204407948,
+  "recall": 0.789134390140728,
+  "f1": 0.8082281124619405,
+  "boundary_counts_pred_gt": [
+    189182,
+    186857,
+    428225,
+    471716
+  ],
+  "boundary_precision": 0.44178177360032694,
+  "boundary_recall": 0.3961218190606212,
+  "boundary_f1": 0.41770772036109727,
+  "empty_predictions": 6,
+  "test_used": false,
+  "config": "D:\\\u8bba\u6587\u590d\u73b0\\experiments\\retrain_wave4_20261007\\configs\\public_segformer_b0.yml",
+  "model_path": "D:\\\u8bba\u6587\u590d\u73b0\\experiments\\retrain_wave4_20261007\\checkpoints\\segformer_b0\\model.pdparams"
+}
