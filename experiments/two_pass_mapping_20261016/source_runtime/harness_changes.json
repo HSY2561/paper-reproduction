@@ -1,0 +1,9 @@
+{
+  "changes": [
+    "Isolated copy only: SCC.m worki=true -> worki=false suppresses animation, algorithm unchanged",
+    "Added original sample map to expected relative directory Crack Maps/Uniform",
+    "Created Results/GIF output folder"
+  ],
+  "source": "D:/论文复现/references/Crack-Filling-Robot",
+  "upstream_commit": "d044d083fd9fb21296f9b8fb5d55c6b42145bf92"
+}

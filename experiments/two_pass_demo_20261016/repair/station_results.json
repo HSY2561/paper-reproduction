@@ -1,0 +1,104 @@
+[
+  {
+    "station": 1,
+    "nominal_base_mm": [
+      130.0,
+      125.0
+    ],
+    "actual_base_mm": [
+      138.0,
+      119.0
+    ],
+    "injected_error_dx_dy_yaw": [
+      8.0,
+      -6.0,
+      3.0
+    ],
+    "estimated_base_mm": [
+      138.00000104281256,
+      119.00000104053882
+    ],
+    "estimated_yaw_deg": 2.9999992689126915,
+    "base_estimation_error_mm": 1.4731527628138306e-06,
+    "estimated_yaw_error_deg": -7.310873084698244e-07,
+    "owned_skeleton_pixels": 272,
+    "components": 1,
+    "tree_edges": 271,
+    "traced_edges": 271,
+    "trajectory_rows": 545,
+    "all_pen_down_midpoints_inside_local_mask": true,
+    "all_points_reachable": true,
+    "before_median_mm": 5.205646142606164,
+    "before_p95_mm": 11.912206671271763,
+    "after_median_mm": 0.2266033258810061,
+    "after_p95_mm": 0.3491047833538104
+  },
+  {
+    "station": 2,
+    "nominal_base_mm": [
+      280.0,
+      125.0
+    ],
+    "actual_base_mm": [
+      275.0,
+      132.0
+    ],
+    "injected_error_dx_dy_yaw": [
+      -5.0,
+      7.0,
+      -2.0
+    ],
+    "estimated_base_mm": [
+      275.0000020890056,
+      131.99999672988992
+    ],
+    "estimated_yaw_deg": -1.9999980808937754,
+    "base_estimation_error_mm": 3.880407752510733e-06,
+    "estimated_yaw_error_deg": 1.9191062246015633e-06,
+    "owned_skeleton_pixels": 448,
+    "components": 1,
+    "tree_edges": 447,
+    "traced_edges": 447,
+    "trajectory_rows": 899,
+    "all_pen_down_midpoints_inside_local_mask": true,
+    "all_points_reachable": true,
+    "before_median_mm": 6.602199962898673,
+    "before_p95_mm": 10.499536349684204,
+    "after_median_mm": 0.19228689337734103,
+    "after_p95_mm": 0.3103542392780421
+  },
+  {
+    "station": 3,
+    "nominal_base_mm": [
+      430.0,
+      125.0
+    ],
+    "actual_base_mm": [
+      436.0,
+      129.0
+    ],
+    "injected_error_dx_dy_yaw": [
+      6.0,
+      4.0,
+      2.0
+    ],
+    "estimated_base_mm": [
+      436.00000094810184,
+      129.00000123520053
+    ],
+    "estimated_yaw_deg": 2.0000007511200777,
+    "base_estimation_error_mm": 1.5571183157277363e-06,
+    "estimated_yaw_error_deg": 7.511200776910698e-07,
+    "owned_skeleton_pixels": 283,
+    "components": 2,
+    "tree_edges": 281,
+    "traced_edges": 281,
+    "trajectory_rows": 568,
+    "all_pen_down_midpoints_inside_local_mask": true,
+    "all_points_reachable": true,
+    "before_median_mm": 1.2485577043295346,
+    "before_p95_mm": 6.507192465040434,
+    "after_median_mm": 0.22052323477343042,
+    "after_p95_mm": 0.31058989289840616
+  }
+]

@@ -1,0 +1,14 @@
+{
+  "status": "NOT_CALIBRATED_NOT_EXECUTABLE",
+  "units": "m",
+  "world_frame": "map",
+  "resolution_m_per_cell": null,
+  "world_origin": null,
+  "row_column_axis_definition": null,
+  "valid_observation_layer_required": true,
+  "unobserved_is_not_background": true,
+  "model_checkpoint_sha256": null,
+  "calibration_sha256": null,
+  "probability_threshold": null,
+  "fov_and_robot_motion_limits_measured": false
+}

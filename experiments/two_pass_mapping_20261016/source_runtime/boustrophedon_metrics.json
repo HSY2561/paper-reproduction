@@ -1,0 +1,9 @@
+{
+  "status": "success",
+  "waypoints": 77,
+  "path_length_px": 19450.71169334721,
+  "sensor_radius_px": 342,
+  "scan_step_px": 483.66103833159849,
+  "units": "author map pixels",
+  "scope": "Unmodified author BoustrophedonPath on synthetic rectangle; not measured robot trajectory"
+}

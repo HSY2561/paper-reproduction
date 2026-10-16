@@ -1,0 +1,17 @@
+﻿id,X_mm,Y_mm,Z_mm,source
+1,20.0,30.0,0,synthetic_exact_not_measured
+2,20.0,220.0,0,synthetic_exact_not_measured
+3,100.0,30.0,0,synthetic_exact_not_measured
+4,100.0,220.0,0,synthetic_exact_not_measured
+5,180.0,30.0,0,synthetic_exact_not_measured
+6,180.0,220.0,0,synthetic_exact_not_measured
+7,260.0,30.0,0,synthetic_exact_not_measured
+8,260.0,220.0,0,synthetic_exact_not_measured
+9,340.0,30.0,0,synthetic_exact_not_measured
+10,340.0,220.0,0,synthetic_exact_not_measured
+11,420.0,30.0,0,synthetic_exact_not_measured
+12,420.0,220.0,0,synthetic_exact_not_measured
+13,500.0,30.0,0,synthetic_exact_not_measured
+14,500.0,220.0,0,synthetic_exact_not_measured
+15,580.0,30.0,0,synthetic_exact_not_measured
+16,580.0,220.0,0,synthetic_exact_not_measured

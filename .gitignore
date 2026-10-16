@@ -88,3 +88,16 @@ experiments/**/best_model/
 .vscode/
 .DS_Store
 Thumbs.db
+
+# Publish authored project documents and figure exports
+!/大纲安排草稿_已修改_20261014.docx
+!/论文项目完整复盘报告_20261014.docx
+!/SegFormer_B0_消融实验对照表与图注_20261014.docx
+!/figures/**/*.pdf
+!/P0_real_segformer_trajectory/P0_real_segformer_skeleton_trajectory.pdf
+
+# Downloaded paper text/pages and duplicate upstream source remain local
+/P0_robot_repair_reference.txt
+/experiments/two_pass_mapping_20261016/paper_review/paper_extracted.txt
+/experiments/two_pass_mapping_20261016/paper_review/page_*.png
+/experiments/two_pass_mapping_20261016/source_runtime/author_software/

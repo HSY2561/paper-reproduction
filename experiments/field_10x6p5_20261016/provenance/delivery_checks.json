@@ -1,0 +1,67 @@
+{
+  "hardware_execution_allowed": false,
+  "planning_only": true,
+  "motor_image_sha256_match": true,
+  "csv_scenarios": [
+    {
+      "file": "D:\\论文复现\\experiments\\field_10x6p5_20261016\\planning\\A_conservative_PLANNING_ONLY.csv",
+      "rows": 714,
+      "recomputed_length_m": 196.70000000000002
+    },
+    {
+      "file": "D:\\论文复现\\experiments\\field_10x6p5_20261016\\planning\\B_conditional_PLANNING_ONLY.csv",
+      "rows": 297,
+      "recomputed_length_m": 105.7
+    }
+  ],
+  "template_rows": [
+    {
+      "file": "frame_pose.csv",
+      "data_rows": 0
+    },
+    {
+      "file": "ground_control_points.csv",
+      "data_rows": 0
+    },
+    {
+      "file": "independent_validation.csv",
+      "data_rows": 0
+    },
+    {
+      "file": "repair_stations.csv",
+      "data_rows": 0
+    },
+    {
+      "file": "tool_execution.csv",
+      "data_rows": 0
+    },
+    {
+      "file": "wheel_imu_raw.csv",
+      "data_rows": 0
+    }
+  ],
+  "figures": [
+    {
+      "file": "01_drone_segformer_review.png",
+      "dimensions_px": [
+        2100,
+        2100
+      ]
+    },
+    {
+      "file": "02_scan_routes_PLANNING_ONLY.png",
+      "dimensions_px": [
+        2739,
+        1249
+      ]
+    },
+    {
+      "file": "03_geometry_and_workflow.png",
+      "dimensions_px": [
+        2310,
+        1179
+      ]
+    }
+  ],
+  "review": "Numerical route and motor calculations cross-reviewed. Distinguishes planning vs real evidence; historical pose corrections and conservative coverage added."
+}

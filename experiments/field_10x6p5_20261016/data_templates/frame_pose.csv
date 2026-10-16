@@ -1,0 +1,1 @@
+﻿run_id,frame_id,image_path,image_sha256,camera_timestamp_ns,timestamp_type,mapped_mcu_us,pose_x_m,pose_y_m,pose_yaw_rad,pose_source,sigma_x_m,sigma_y_m,sigma_yaw_rad,exposure_us,width_px,height_px,pixel_format,intrinsics_id,camera_to_XYZ_id,map_version

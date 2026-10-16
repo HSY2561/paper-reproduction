@@ -1,0 +1,10 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8"><title>一条裂缝：先检后修演示</title>
+<style>body{font-family:"Microsoft YaHei",sans-serif;background:#eef3f7;color:#182c3c;margin:0}main{max-width:1250px;margin:30px auto;padding:28px;background:white;border-radius:18px}h1{font-size:28px}.note{background:#fff3d9;border-left:5px solid #d49b26;padding:15px;line-height:1.8}img{width:100%;margin:16px 0;border:1px solid #ddd}p{line-height:1.8}a{color:#126e9b}.stat{display:flex;gap:15px;flex-wrap:wrap}.stat div{padding:16px;background:#edf7f8;border-radius:9px;flex:1}</style>
+<main><h1>一条裂缝，如何从拍照变成修复轨迹？</h1>
+<div class="note"><b>教学仿真，非实车实验。</b> 所有场景、位姿及标定参数都是假设。Mask是理想分割占位，未运行SegFormer；没有控制机器人。图中小误差不代表真实系统精度。</div>
+<p>三次停拍 → 理想裂缝Mask → 用坐标拼图 → 保留骨架分叉 → 三个粗定位工位 → 局部重拍与三轴演示轨迹。</p>
+<div class="stat"><div>第一遍<br><b>3张有重叠的照片</b></div><div>分割作用<br><b>指出哪些像素是裂缝</b></div><div>定位作用<br><b>决定照片放到哪里</b></div><div>第二遍<br><b>停车后重新对准</b></div></div>
+<h2>按时间顺序播放</h2><img src="figures/03_walkthrough.gif" alt="两遍作业模拟动画"><h2>六步总图</h2><img src="figures/00_full_process.png" alt="六步过程">
+<h2>照片与分割结果</h2><p>下面的白色Mask来自合成几何，演示的是未来真实模型输出的接口。</p><img src="figures/01_scan_frames_and_masks.png">
+<h2>为什么到位后还要拍一次？</h2><p>本例故意给停车加入毫米级偏移和角度误差。绿色路径由局部观测重新计算；橙色虚线表示抬笔转移，避免跨分叉直接出胶。</p><img src="figures/02_local_rescan_and_trajectory.png">
+<p><a href="一条裂缝_两遍作业仿真说明.md">详细说明</a> · <a href="results.json">真实运行的模拟结果JSON</a> · <a href="scan_pose_log_SIMULATED.csv">位姿记录示例</a> · <a href="verification.json">程序校验</a></p></main></html>

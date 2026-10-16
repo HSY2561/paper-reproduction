@@ -1,0 +1,1 @@
+﻿run_id,station_id,mcu_monotonic_us,tool_x_mm,tool_y_mm,tool_z_mm,flow_command,flow_measurement_if_available,endstop_status,execution_state

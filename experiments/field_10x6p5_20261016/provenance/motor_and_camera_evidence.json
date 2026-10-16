@@ -1,0 +1,25 @@
+{
+  "source": "C:\\Users\\user\\Documents\\xwechat_files\\wxid_5pdys5n6l8cp22_3124\\temp\\RWTemp\\2026-10\\9e20f478899dc29eb19741386f9343c8\\23349b06adcd301342fc4db6f86255e4.jpg",
+  "copy": "D:\\论文复现\\experiments\\field_10x6p5_20261016\\inputs\\motor_selected_specification.jpg",
+  "sha256": "bb45e46bb08925308a27c4a293b9bb201c26be1037a691c8e3cb44b2246d4eec",
+  "user_selected_row_transcription": {
+    "voltage_V": 12,
+    "ratio": 369,
+    "no_load_rpm": 27,
+    "no_load_A": 0.32,
+    "rated_rpm": 19,
+    "rated_A": 1.1,
+    "rated_kgf_cm": 23.9,
+    "power_W": 5,
+    "stall_kgf_cm": 83,
+    "stall_A": 4.1,
+    "weight_g": 359
+  },
+  "encoder_PPR": "not shown; unknown",
+  "not_used_other_supplier": {
+    "reason": "Same family does not prove exact product identity",
+    "other_supplier_rated_rpm": 20
+  },
+  "camera_taobao_link": "https://e.tb.cn/h.jYNDvFfBiQiqbV5?tk=Wdh6TtOVp85",
+  "camera_link_access": "failed; product title only, mode not verified"
+}

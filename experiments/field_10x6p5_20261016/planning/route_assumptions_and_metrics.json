@@ -1,0 +1,105 @@
+{
+  "status": "PLANNING_ONLY",
+  "scenarios": [
+    {
+      "scenario": "A_conservative",
+      "planning_only": true,
+      "hardware_execution_allowed": false,
+      "base_center_offset_from_camera_assumed_m": [
+        0,
+        0
+      ],
+      "base_center_offset_from_tool_assumed_m": [
+        0,
+        0
+      ],
+      "assumed_inset_m": 0.45,
+      "field_m": [
+        10,
+        6.5
+      ],
+      "effective_FOV_forward_transverse_m": [
+        0.4,
+        0.4
+      ],
+      "nx": 34,
+      "ny": 21,
+      "frames": 714,
+      "actual_steps_m": [
+        0.2757575757575758,
+        0.27999999999999997
+      ],
+      "scan_path_m": 196.70000000000002,
+      "ideal_observed_area_m2": 57.0,
+      "ideal_field_observed_fraction": 0.8769230769230769,
+      "centered_repair_reachable_area_m2": 57.0,
+      "time_minutes_excluding_acceleration_setup_processing_and_correction": [
+        {
+          "speed_m_s": 0.05,
+          "assumed_dwell_s": 2,
+          "travel_min": 65.56666666666666,
+          "travel_plus_dwell_min": 89.36666666666666
+        },
+        {
+          "speed_m_s": 0.1,
+          "assumed_dwell_s": 2,
+          "travel_min": 32.78333333333333,
+          "travel_plus_dwell_min": 56.583333333333336
+        }
+      ],
+      "conditions": "Body envelope and offsets unmeasured; this is a numerical planning example, not controller commands."
+    },
+    {
+      "scenario": "B_conditional",
+      "planning_only": true,
+      "hardware_execution_allowed": false,
+      "base_center_offset_from_camera_assumed_m": [
+        0,
+        0
+      ],
+      "base_center_offset_from_tool_assumed_m": [
+        0,
+        0
+      ],
+      "assumed_inset_m": 0.45,
+      "field_m": [
+        10,
+        6.5
+      ],
+      "effective_FOV_forward_transverse_m": [
+        0.5,
+        0.8
+      ],
+      "nx": 27,
+      "ny": 11,
+      "frames": 297,
+      "actual_steps_m": [
+        0.35000000000000003,
+        0.56
+      ],
+      "scan_path_m": 105.7,
+      "ideal_observed_area_m2": 61.43999999999999,
+      "ideal_field_observed_fraction": 0.9452307692307691,
+      "centered_repair_reachable_area_m2": 57.0,
+      "time_minutes_excluding_acceleration_setup_processing_and_correction": [
+        {
+          "speed_m_s": 0.05,
+          "assumed_dwell_s": 2,
+          "travel_min": 35.233333333333334,
+          "travel_plus_dwell_min": 45.13333333333333
+        },
+        {
+          "speed_m_s": 0.1,
+          "assumed_dwell_s": 2,
+          "travel_min": 17.616666666666667,
+          "travel_plus_dwell_min": 27.516666666666666
+        }
+      ],
+      "conditions": "Body envelope and offsets unmeasured; this is a numerical planning example, not controller commands."
+    }
+  ],
+  "motor_direct_drive_speed_at_27rpm_m_s": 0.21488493750554183,
+  "wheel_circumference_m": 0.47752208334564855,
+  "motor_direct_drive_speed_at_19rpm_m_s": 0.15121532639278873,
+  "motor_spec_basis": "User-selected screenshot: rated-load 19rpm; 27rpm is no-load. Wheel directly driven assumed."
+}

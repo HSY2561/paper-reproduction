@@ -1,0 +1,1 @@
+﻿pose_id,timestamp_ns,clock_id,parent_frame,child_frame,tx_m,ty_m,tz_m,qx,qy,qz,qw,quality,position_error_bound_m,yaw_error_bound_rad

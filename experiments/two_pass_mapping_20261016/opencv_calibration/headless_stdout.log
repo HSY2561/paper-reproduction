@@ -1,0 +1,49 @@
+processing data/left01.jpg... 
+           data/left01.jpg... OK
+processing data/left02.jpg... 
+           data/left02.jpg... OK
+processing data/left03.jpg... 
+           data/left03.jpg... OK
+processing data/left04.jpg... 
+           data/left04.jpg... OK
+processing data/left05.jpg... 
+           data/left05.jpg... OK
+processing data/left06.jpg... 
+           data/left06.jpg... OK
+processing data/left07.jpg... 
+           data/left07.jpg... OK
+processing data/left08.jpg... 
+           data/left08.jpg... OK
+processing data/left09.jpg... 
+           data/left09.jpg... OK
+processing data/left11.jpg... 
+           data/left11.jpg... OK
+processing data/left12.jpg... 
+           data/left12.jpg... OK
+processing data/left13.jpg... 
+           data/left13.jpg... OK
+processing data/left14.jpg... 
+           data/left14.jpg... OK
+
+RMS: 0.1962351132525735
+camera matrix:
+ [[532.78886421   0.         342.48108823]
+ [  0.         532.91351332 233.91316152]
+ [  0.           0.           1.        ]]
+distortion coefficients:  [-2.81102054e-01  2.72645721e-02  1.21776409e-03 -1.29731960e-04
+  1.58508593e-01]
+
+Undistorted image written to: outputs_headless\left01_undistorted.png
+Undistorted image written to: outputs_headless\left02_undistorted.png
+Undistorted image written to: outputs_headless\left03_undistorted.png
+Undistorted image written to: outputs_headless\left04_undistorted.png
+Undistorted image written to: outputs_headless\left05_undistorted.png
+Undistorted image written to: outputs_headless\left06_undistorted.png
+Undistorted image written to: outputs_headless\left07_undistorted.png
+Undistorted image written to: outputs_headless\left08_undistorted.png
+Undistorted image written to: outputs_headless\left09_undistorted.png
+Undistorted image written to: outputs_headless\left11_undistorted.png
+Undistorted image written to: outputs_headless\left12_undistorted.png
+Undistorted image written to: outputs_headless\left13_undistorted.png
+Undistorted image written to: outputs_headless\left14_undistorted.png
+Done

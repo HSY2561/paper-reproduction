@@ -1,0 +1,52 @@
+{
+  "source_images": [
+    {
+      "file": "C:\\Users\\user\\AppData\\Local\\Temp\\codex-clipboard-8b2022be-e8c2-491e-b681-2a4db9034e54.png",
+      "sha256": "9b1f4b7e49f01799d5352ed63b41455d388f45c663a1cedc069dd203b6d3ede2",
+      "size_px": [
+        1280,
+        720
+      ]
+    },
+    {
+      "file": "C:\\Users\\user\\AppData\\Local\\Temp\\codex-clipboard-4ad6ad34-aa76-45eb-b343-a0d9f1397a7c.png",
+      "sha256": "48c6a6cc17135b9579c231cd31795ea16ce8093a262b14b58e017d33fb7a4aca",
+      "size_px": [
+        1345,
+        757
+      ]
+    }
+  ],
+  "model": "frozen_original_SegFormer_B0",
+  "checkpoint": "D:\\论文复现\\experiments\\retrain_wave4_20261007\\checkpoints\\segformer_b0\\model.pdparams",
+  "checkpoint_sha256": "07f6048e0a6de174a2c3ca1915df4bcd635565a706d978288fba946ef240f2d5",
+  "runtime_source": "D:\\论文复现\\experiments\\retrain_wave4_20261007\\src\\PaddleSeg-2.10.0",
+  "device": "CPU",
+  "image_size_px": [
+    1280,
+    720
+  ],
+  "native_resolution": true,
+  "slide_crop": [
+    400,
+    400
+  ],
+  "stride": [
+    200,
+    200
+  ],
+  "foreground_pixels": 69911,
+  "foreground_fraction": 0.07585828993055556,
+  "raw_components": 4,
+  "largest_component_pixels": [
+    34833,
+    34793,
+    275,
+    10
+  ],
+  "inference_seconds_this_CPU_run": 44.971357107162476,
+  "metric_status": "NO_GROUND_TRUTH_NO_ACCURACY_CLAIM",
+  "camera_domain": "drone_image_not_robot_camera",
+  "scene_dimensions": "user_reported_10x6.5_m_not_survey_calibrated",
+  "note": "Original inputs are unchanged copies. Predicted pixels are not confirmed crack truth. No forced two-component filtering, no training, no test-set tuning."
+}

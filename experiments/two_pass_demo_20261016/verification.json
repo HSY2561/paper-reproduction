@@ -1,0 +1,15 @@
+{
+  "coordinate_axes_tests_max_error_mm": 2.842170943040401e-14,
+  "all_real_motion_disabled": true,
+  "all_stations_within_workspace": true,
+  "all_pen_down_midpoints_inside_masks": true,
+  "all_tree_edges_traced_once": true,
+  "has_unobserved_layer": true,
+  "observed_y_range_mm": [
+    15,
+    235
+  ],
+  "skeleton_coverage_tolerance_mm": 1.5,
+  "synthetic_truth_used_for_mask_generation_and_evaluation_only": true,
+  "independent_CSV_metric_recomputation_matches": true
+}

@@ -1,0 +1,6 @@
+{
+  "stdout": "{\"status\":\"success\",\"waypoints\":77,\"path_length_px\":19450.71169334721,\"sensor_radius_px\":342,\"scan_step_px\":483.66103833159849,\"units\":\"author map pixels\",\"scope\":\"Unmodified author BoustrophedonPath on synthetic rectangle; not measured robot trajectory\"}\r\nBOUSTROPHEDON_COMPLETE\r\n{\"status\":\"success\",\"input\":\"D:/���ĸ���/P0_real_segformer_trajectory/20160222_080850_1281_361_segformer_mask_raw.png\",\"mask_shape\":[360,640],\"foreground_pixels\":13354,\"raw_skeleton_pixels\":526,\"author_pruned_skeleton_pixels\":429,\"nodes\":2,\"edges\":1,\"author_reported_compute_time\":0.2981166,\"units\":\"image pixels, nodes are row/column\",\"limitation\":\"Author hardcodes 2 mm/px and 7-inch footprint; original spur threshold 44 px is NOT calibrated to this image. Graph is a footprint-planning abstraction, not exact crack centerline.\"}\r\nSEGFORMER_INTERFACE_COMPLETE\r\n",
+  "ended": "2026-10-16T00:54:44.8748849+08:00",
+  "exit_code": 0,
+  "stderr": null
+}

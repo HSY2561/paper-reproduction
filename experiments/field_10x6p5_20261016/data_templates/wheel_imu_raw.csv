@@ -1,0 +1,1 @@
+﻿run_id,seq,mcu_monotonic_us,host_receive_ns,fl_count,fr_count,rl_count,rr_count,gyro_x_rad_s,gyro_y_rad_s,gyro_z_rad_s,acc_x_m_s2,acc_y_m_s2,acc_z_m_s2,battery_V
