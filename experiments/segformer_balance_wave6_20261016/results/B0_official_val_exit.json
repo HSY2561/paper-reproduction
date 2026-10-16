@@ -1,0 +1,16 @@
+{
+  "exit_code": 0,
+  "elapsed_seconds": 21.11,
+  "ended_at": "2026-10-16T23:49:33+08:00",
+  "command": [
+    "C:\\venv_bisenet\\Scripts\\python.exe",
+    "D:\\论文复现\\experiments\\segformer_balance_wave6_20261016\\src\\PaddleSeg-2.10.0\\tools\\val.py",
+    "--config",
+    "D:\\论文复现\\experiments\\segformer_balance_wave6_20261016\\configs\\B0.yml",
+    "--model_path",
+    "D:\\论文复现\\experiments\\retrain_wave4_20261007\\checkpoints\\segformer_b0\\model.pdparams",
+    "--num_workers",
+    "0"
+  ],
+  "test_used": false
+}

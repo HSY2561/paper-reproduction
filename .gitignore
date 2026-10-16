@@ -101,3 +101,6 @@ Thumbs.db
 /experiments/two_pass_mapping_20261016/paper_review/paper_extracted.txt
 /experiments/two_pass_mapping_20261016/paper_review/page_*.png
 /experiments/two_pass_mapping_20261016/source_runtime/author_software/
+
+# Local experiment process lock; keep progress snapshots in version control
+/experiments/segformer_balance_wave6_20261016/results/queue.lock

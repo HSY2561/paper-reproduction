@@ -1,0 +1,188 @@
+{
+  "created_at": "2026-10-16T23:46:04+08:00",
+  "jobs": [
+    {
+      "id": "W128",
+      "width": 128,
+      "modules": [],
+      "family": "width_control",
+      "label": "MLP decoder width128"
+    },
+    {
+      "id": "W64",
+      "width": 64,
+      "modules": [],
+      "family": "width_control",
+      "label": "MLP decoder width64"
+    },
+    {
+      "id": "M08_MSCA",
+      "width": 128,
+      "modules": [
+        "msca"
+      ],
+      "family": "msca",
+      "label": "MSCAN SpatialAttention",
+      "source": "backbones/mscan.py",
+      "purpose": "融合后多尺度大核条带卷积",
+      "parent": "W128"
+    },
+    {
+      "id": "M13_Aligned",
+      "width": 128,
+      "modules": [
+        "aligned"
+      ],
+      "family": "aligned",
+      "label": "SFNet AlignedModule",
+      "source": "sfnet.py",
+      "purpose": "C1与C4语义流对齐",
+      "parent": "W128"
+    },
+    {
+      "id": "M03_GC",
+      "width": 128,
+      "modules": [
+        "gc"
+      ],
+      "family": "gc",
+      "label": "Global Context Block",
+      "source": "gcnet.py",
+      "purpose": "C4全局上下文",
+      "parent": "W128"
+    },
+    {
+      "id": "M06_CAM",
+      "width": 128,
+      "modules": [
+        "cam"
+      ],
+      "family": "cam",
+      "label": "Channel Attention Module",
+      "source": "layers/attention.py",
+      "purpose": "C4通道关系",
+      "parent": "W128"
+    },
+    {
+      "id": "M11_ASPPsep",
+      "width": 128,
+      "modules": [
+        "aspp_sep"
+      ],
+      "family": "aspp_sep",
+      "label": "Separable ASPP",
+      "source": "layers/pyramid_pool.py",
+      "purpose": "投影C4多尺度空洞卷积",
+      "parent": "W128"
+    },
+    {
+      "id": "M02_PSA",
+      "width": 128,
+      "modules": [
+        "polarized"
+      ],
+      "family": "polarized",
+      "label": "Polarized Self Attention",
+      "source": "layers/polaried_self_attention.py",
+      "purpose": "融合后空间与通道判别",
+      "parent": "W128"
+    },
+    {
+      "id": "M04_CCA",
+      "width": 128,
+      "modules": [
+        "cca"
+      ],
+      "family": "cca",
+      "label": "Criss Cross Attention",
+      "source": "ccnet.py",
+      "purpose": "C4行列长距离依赖",
+      "parent": "W128"
+    },
+    {
+      "id": "M05_PAM",
+      "width": 128,
+      "modules": [
+        "pam"
+      ],
+      "family": "pam",
+      "label": "Position Attention Module",
+      "source": "layers/attention.py",
+      "purpose": "C4空间位置关系",
+      "parent": "W128"
+    },
+    {
+      "id": "M07_NonLocal",
+      "width": 128,
+      "modules": [
+        "nonlocal"
+      ],
+      "family": "nonlocal",
+      "label": "NonLocal2D",
+      "source": "layers/nonlocal2d.py",
+      "purpose": "C4成对上下文",
+      "parent": "W128"
+    },
+    {
+      "id": "M09_Encoding",
+      "width": 128,
+      "modules": [
+        "encoding"
+      ],
+      "family": "encoding",
+      "label": "EncModule",
+      "source": "encnet.py",
+      "purpose": "C4字典编码上下文",
+      "parent": "W128"
+    },
+    {
+      "id": "M10_GloRe",
+      "width": 128,
+      "modules": [
+        "glore"
+      ],
+      "family": "glore",
+      "label": "GloRe GruModule",
+      "source": "glore.py",
+      "purpose": "C4图关系推理",
+      "parent": "W128"
+    },
+    {
+      "id": "M14_UAFMchannel",
+      "width": 128,
+      "modules": [
+        "uafm_channel"
+      ],
+      "family": "uafm_channel",
+      "label": "UAFM Channel Attention",
+      "source": "layers/tensor_fusion.py",
+      "purpose": "C1与融合特征通道融合",
+      "parent": "W128"
+    },
+    {
+      "id": "M01_SE",
+      "width": 128,
+      "modules": [
+        "se"
+      ],
+      "family": "se",
+      "label": "MobileNetV3 SE",
+      "source": "backbones/mobilenetv3.py",
+      "purpose": "融合后通道选择",
+      "parent": "W128"
+    },
+    {
+      "id": "M12_PSP",
+      "width": 128,
+      "modules": [
+        "psp_pool"
+      ],
+      "family": "psp_pool",
+      "label": "PSP PPModule",
+      "source": "layers/pyramid_pool.py",
+      "purpose": "投影C4金字塔池化",
+      "parent": "W128"
+    }
+  ],
+  "distinct_module_families": 14
+}

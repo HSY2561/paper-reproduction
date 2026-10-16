@@ -1,0 +1,27 @@
+{
+  "date": "2026-10-16T23:46:06+08:00",
+  "seed": 42,
+  "batch_size": 4,
+  "iters": 18000,
+  "precision": "fp32",
+  "optimizer": "AdamW",
+  "lr": 6e-05,
+  "end_lr": 0,
+  "train": 1896,
+  "val": 348,
+  "crop": [
+    400,
+    400
+  ],
+  "scaling": [
+    0.75,
+    1.25
+  ],
+  "test_used": false,
+  "baseline_checkpoint": "D:\\论文复现\\experiments\\retrain_wave4_20261007\\checkpoints\\segformer_b0\\model.pdparams",
+  "baseline_sha256": "07f6048e0a6de174a2c3ca1915df4bcd635565a706d978288fba946ef240f2d5",
+  "pretrained_sha256": "211e15d5157b8d48b1931102c40094da0b578de1c153c5706360f7ad561a774e",
+  "module_family_count": 14,
+  "width_controls_count": 2,
+  "public_comparison_policy": "all six preregistered controls get test after val-only freezing, regardless of rank"
+}
