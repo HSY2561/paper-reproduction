@@ -1,0 +1,13 @@
+{
+  "detected_at": "2026-10-17T15:43:41.9788828+08:00",
+  "model": "M01_SE",
+  "last_training_iter": 2000,
+  "latest_complete_checkpoint": 1000,
+  "previous_exit_code": null,
+  "old_processes_present": false,
+  "cause": "Unknown abrupt termination during iter2000 validation; background creation flags alone did not prevent a later stop.",
+  "archive": "D:\\论文复现\\experiments\\segformer_balance_wave6_20261016\\provenance\\interruption_20261017_154341",
+  "preserved_complete_runs": 14,
+  "recovery": "Only SE restarts at seed42 for full18k. One-time Windows task independent from Codex tool session.",
+  "test_used": false
+}

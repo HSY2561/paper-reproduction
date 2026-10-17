@@ -104,3 +104,26 @@ Thumbs.db
 
 # Local experiment process lock; keep progress snapshots in version control
 /experiments/segformer_balance_wave6_20261016/results/queue.lock
+
+# Superseded generated documents; preserve original preregistration and raw evidence
+/experiments/segformer_balance_wave6_20261016/refine-logs/EXPERIMENT_RESULTS_*.md
+/experiments/segformer_balance_wave6_20261016/refine-logs/EXPERIMENT_TRACKER_*.md
+/experiments/segformer_balance_wave6_20261016/refine-logs/EXPERIMENT_PLAN_20261017_*.md
+/experiments/segformer_balance_wave6_20261016/refine-logs/RESULT_ANALYSIS_*.md
+/experiments/segformer_balance_wave6_20261016/refine-logs/MAIN_ABLATION_BEFORE_*.md
+/experiments/segformer_balance_wave6_20261016/provenance/RUNTIME_*.md
+/experiments/segformer_balance_wave6_20261016/**/queue.lock
+/experiments/field_efficiency_20261017/MANIFEST_before_*.md
+/experiments/field_efficiency_20261017/实验建议_*.md
+
+# Superseded root plans and drafts; retain local copies and Git history
+/PAPER_PLAN_20260920_195554.md
+/SegFormer_B0_第4章_实验结果与分析_仿参考论文_20261012.md
+/封闭场地自主巡检与裂缝修复论文规划_20261008.md
+/基线模型选择报告.md
+/实验结果汇总与后续计划.md
+/结构级改进实验计划.md
+/师兄论文消融逻辑借鉴与本论文实验设计.md
+
+# Publish current authored Wave6 figure exports
+!/experiments/segformer_balance_wave6_20261016/figures/results_20261017/*.pdf

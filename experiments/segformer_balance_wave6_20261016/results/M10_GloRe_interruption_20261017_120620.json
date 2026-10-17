@@ -1,0 +1,15 @@
+{
+  "detected_at": "2026-10-17T12:06:20.3492532+08:00",
+  "model": "M10_GloRe",
+  "last_observed_iter": 1800,
+  "latest_checkpoint_iter": 1000,
+  "last_heartbeat": "2026-10-17T11:58:48+08:00",
+  "old_runner_pid": 102120,
+  "old_child_pid": 78952,
+  "old_processes_present": false,
+  "exit_code": null,
+  "cause": "Unknown abrupt termination: logs and heartbeat stopped; original exec session lost; unsandboxed process query confirmed no old runner/child.",
+  "evidence_archive": "D:\\论文复现\\experiments\\segformer_balance_wave6_20261016\\provenance\\interruption_20261017_120620",
+  "recovery_policy": "Keep all 12 completed jobs. Restart only interrupted GloRe from same pretrained seed42 for full 18000 iterations; official resume resets EMA/RNG. New queue uses approved independent process after successful 5-second durability probe.",
+  "test_used": false
+}

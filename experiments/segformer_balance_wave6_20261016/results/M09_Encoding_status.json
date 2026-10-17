@@ -1,4 +1,35 @@
 {
-  "status": "smoke_passed",
-  "updated_at": "2026-10-16T23:56:29+08:00"
+  "status": "complete",
+  "updated_at": "2026-10-17T11:55:07+08:00",
+  "selection": {
+    "model": "M09_Encoding",
+    "candidates": [
+      {
+        "variant": "best_model",
+        "mIoU": 0.8271446654076087,
+        "iter": 11000,
+        "weight": "D:\\论文复现\\experiments\\segformer_balance_wave6_20261016\\training\\M09_Encoding\\best_model\\model.pdparams",
+        "state_sha256": "aa2438bf3bd57d59f991291ef2687706f6a72febf05f270826a547baf9497fbe"
+      },
+      {
+        "variant": "ema_best_model",
+        "mIoU": 0.8263720129183065,
+        "iter": 12000,
+        "weight": "D:\\论文复现\\experiments\\segformer_balance_wave6_20261016\\training\\M09_Encoding\\ema_best_model\\ema_model.pdparams",
+        "state_sha256": "282d7c18c8b9af905702a772ac0636a85a113cf3c6553d6de44a8b6c1e8214e7"
+      }
+    ],
+    "selected": {
+      "variant": "best_model",
+      "mIoU": 0.8271446654076087,
+      "iter": 11000,
+      "weight": "D:\\论文复现\\experiments\\segformer_balance_wave6_20261016\\training\\M09_Encoding\\best_model\\model.pdparams",
+      "state_sha256": "aa2438bf3bd57d59f991291ef2687706f6a72febf05f270826a547baf9497fbe"
+    },
+    "sha256": "2f8ebfc72bf8f0f82ddbdd32155a470d76da428d3026dc9cf9b58e4f6eaf728a",
+    "checkpoint": "D:\\论文复现\\experiments\\segformer_balance_wave6_20261016\\checkpoints\\M09_Encoding\\model.pdparams",
+    "selection": "highest exact validation mIoU from ordinary and EMA state",
+    "test_used": false,
+    "frozen_at": "2026-10-17T11:54:18+08:00"
+  }
 }

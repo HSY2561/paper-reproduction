@@ -1,10 +1,10 @@
 {
-  "tag": "W128_train",
-  "pid": 99500,
-  "runner_pid": 52828,
-  "timestamp": "2026-10-17T00:21:39+08:00",
-  "latest_iter": 12500,
-  "elapsed_seconds": 1406.8,
-  "log_size": 327781,
-  "free_gb": 14.3
+  "tag": "M01_SE_train",
+  "pid": 102320,
+  "runner_pid": 78068,
+  "timestamp": "2026-10-17T17:49:44+08:00",
+  "latest_iter": 3200,
+  "elapsed_seconds": 7197.3,
+  "log_size": 207004,
+  "free_gb": 12.76
 }

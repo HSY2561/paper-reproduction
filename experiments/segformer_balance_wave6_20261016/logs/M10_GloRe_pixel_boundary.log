@@ -1,0 +1,59 @@
+[2026/10/17 12:48:55] INFO: Use the following config to build val_dataset
+val_dataset:
+  dataset_root: C:/Users/user/algolab_data
+  mode: val
+  num_classes: 2
+  transforms:
+  - type: Normalize
+  type: Dataset
+  val_path: C:/Users/user/algolab_data/val.txt
+[2026/10/17 12:48:55] INFO: Set device: gpu
+[2026/10/17 12:48:55] INFO: Use the following config to build model
+model:
+  backbone:
+    pretrained: "D:\\\u8BBA\u6587\u590D\u73B0\\experiments\\segformer_balance_wave6_20261016\\\
+      weights\\mit_b0_imagenet.pdparams"
+    type: MixVisionTransformer_B0
+  balance_modules:
+  - glore
+  embedding_dim: 128
+  num_classes: 2
+  type: SegFormer
+WARNING: Logging before InitGoogleLogging() is written to STDERR
+W1017 12:48:55.916342 86296 gpu_resources.cc:116] Please NOTE: device: 0, GPU Compute Capability: 12.0, Driver API Version: 13.2, Runtime API Version: 12.9
+[2026/10/17 12:48:56] INFO: Loading pretrained model from D:\论文复现\experiments\segformer_balance_wave6_20261016\weights\mit_b0_imagenet.pdparams
+[2026/10/17 12:48:56] INFO: There are 176/176 variables loaded into MixVisionTransformer.
+[2026/10/17 12:48:56] INFO: Loading pretrained model from D:\论文复现\experiments\segformer_balance_wave6_20261016\checkpoints\M10_GloRe\model.pdparams
+[2026/10/17 12:48:56] INFO: There are 203/203 variables loaded into SegFormer.
+{
+  "n": 348,
+  "confusion_matrix": [
+    [
+      76119273,
+      867472
+    ],
+    [
+      897852,
+      3709547
+    ]
+  ],
+  "mIoU": 0.8274464508519561,
+  "crackIoU": 0.6775587954492444,
+  "precision": 0.8104722746398911,
+  "recall": 0.8051282296150171,
+  "f1": 0.8077914136747696,
+  "boundary_counts_pred_gt": [
+    216198,
+    215264,
+    465033,
+    505846
+  ],
+  "boundary_precision": 0.4649089419460554,
+  "boundary_recall": 0.42555244086144794,
+  "boundary_f1": 0.44436095454175595,
+  "empty_predictions": 7,
+  "test_used": false,
+  "boundary_protocol": "inner boundary, zero outside image; exact Euclidean <=2px; global counts then harmonic mean",
+  "config": "D:\\\u8bba\u6587\u590d\u73b0\\experiments\\segformer_balance_wave6_20261016\\configs\\M10_GloRe.yml",
+  "model_path": "D:\\\u8bba\u6587\u590d\u73b0\\experiments\\segformer_balance_wave6_20261016\\checkpoints\\M10_GloRe\\model.pdparams"
+}

@@ -1,0 +1,28 @@
+[2026/10/17 11:21:17] INFO: Use the following config to build model
+model:
+  backbone:
+    pretrained: "D:\\\u8BBA\u6587\u590D\u73B0\\experiments\\segformer_balance_wave6_20261016\\\
+      weights\\mit_b0_imagenet.pdparams"
+    type: MixVisionTransformer_B0
+  balance_modules:
+  - nonlocal
+  embedding_dim: 128
+  num_classes: 2
+  type: SegFormer
+WARNING: Logging before InitGoogleLogging() is written to STDERR
+W1017 11:21:17.731961 92548 gpu_resources.cc:116] Please NOTE: device: 0, GPU Compute Capability: 12.0, Driver API Version: 13.2, Runtime API Version: 12.9
+[2026/10/17 11:21:17] INFO: Loading pretrained model from D:\论文复现\experiments\segformer_balance_wave6_20261016\weights\mit_b0_imagenet.pdparams
+[2026/10/17 11:21:17] INFO: There are 176/176 variables loaded into MixVisionTransformer.
+[2026/10/17 11:21:17] INFO: Loading pretrained model from D:\论文复现\experiments\segformer_balance_wave6_20261016\checkpoints\M07_NonLocal\model.pdparams
+[2026/10/17 11:21:17] INFO: There are 202/202 variables loaded into SegFormer.
+D:\论文复现\experiments\segformer_balance_wave6_20261016\experiment_queue.py:219: VisibleDeprecationWarning: 
+Warning:
+API "paddle.device.cuda.synchronize" is deprecated since 2.5.0, and will be removed in future versions. Please use "paddle.device.synchronize" instead.
+    Reason: synchronize in paddle.device.cuda will be removed in future 
+  paddle.device.cuda.synchronize()
+D:\论文复现\experiments\segformer_balance_wave6_20261016\experiment_queue.py:223: VisibleDeprecationWarning: 
+Warning:
+API "paddle.device.cuda.synchronize" is deprecated since 2.5.0, and will be removed in future versions. Please use "paddle.device.synchronize" instead.
+    Reason: synchronize in paddle.device.cuda will be removed in future 
+  paddle.device.cuda.synchronize()
+{"model": "M07_NonLocal", "params_total": 3518498, "params_trainable": 3517730, "latency": [{"input_shape": [1, 3, 400, 400], "repeat_ms": [15.60675600077957, 16.051421999000013, 16.014479999430478], "median_ms": 16.014479999430478}, {"input_shape": [1, 3, 480, 480], "repeat_ms": [11.181085999123752, 9.882995998486876, 9.394942000508308], "median_ms": 9.882995998486876}], "checkpoint": "D:\\论文复现\\experiments\\segformer_balance_wave6_20261016\\checkpoints\\M07_NonLocal\\model.pdparams", "feature_shapes_at400": [[1, 32, 100, 100], [1, 64, 50, 50], [1, 160, 25, 25], [1, 256, 13, 13]], "hardware": "NVIDIA GeForce RTX 5060", "paddle": "3.4.0", "protocol": "FP32 GPU network forward; batch1; sync; warmup20; 3x50; no I/O/postprocess", "test_used": false, "timestamp": "2026-10-17T11:21:22+08:00"}

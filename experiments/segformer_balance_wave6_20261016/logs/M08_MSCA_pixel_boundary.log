@@ -1,0 +1,59 @@
+[2026/10/17 01:44:09] INFO: Use the following config to build val_dataset
+val_dataset:
+  dataset_root: C:/Users/user/algolab_data
+  mode: val
+  num_classes: 2
+  transforms:
+  - type: Normalize
+  type: Dataset
+  val_path: C:/Users/user/algolab_data/val.txt
+[2026/10/17 01:44:10] INFO: Set device: gpu
+[2026/10/17 01:44:10] INFO: Use the following config to build model
+model:
+  backbone:
+    pretrained: "D:\\\u8BBA\u6587\u590D\u73B0\\experiments\\segformer_balance_wave6_20261016\\\
+      weights\\mit_b0_imagenet.pdparams"
+    type: MixVisionTransformer_B0
+  balance_modules:
+  - msca
+  embedding_dim: 128
+  num_classes: 2
+  type: SegFormer
+WARNING: Logging before InitGoogleLogging() is written to STDERR
+W1017 01:44:10.367542 59560 gpu_resources.cc:116] Please NOTE: device: 0, GPU Compute Capability: 12.0, Driver API Version: 13.2, Runtime API Version: 12.9
+[2026/10/17 01:44:10] INFO: Loading pretrained model from D:\论文复现\experiments\segformer_balance_wave6_20261016\weights\mit_b0_imagenet.pdparams
+[2026/10/17 01:44:10] INFO: There are 176/176 variables loaded into MixVisionTransformer.
+[2026/10/17 01:44:10] INFO: Loading pretrained model from D:\论文复现\experiments\segformer_balance_wave6_20261016\checkpoints\M08_MSCA\model.pdparams
+[2026/10/17 01:44:10] INFO: There are 211/211 variables loaded into SegFormer.
+{
+  "n": 348,
+  "confusion_matrix": [
+    [
+      76129467,
+      857278
+    ],
+    [
+      928474,
+      3678925
+    ]
+  ],
+  "mIoU": 0.8251499722080275,
+  "crackIoU": 0.6732191124928335,
+  "precision": 0.8110141896207026,
+  "recall": 0.7984819634678916,
+  "f1": 0.8046992859050515,
+  "boundary_counts_pred_gt": [
+    213260,
+    212675,
+    459347,
+    505846
+  ],
+  "boundary_precision": 0.46426775400731907,
+  "boundary_recall": 0.4204342823705238,
+  "boundary_f1": 0.44126513098807346,
+  "empty_predictions": 12,
+  "test_used": false,
+  "boundary_protocol": "inner boundary, zero outside image; exact Euclidean <=2px; global counts then harmonic mean",
+  "config": "D:\\\u8bba\u6587\u590d\u73b0\\experiments\\segformer_balance_wave6_20261016\\configs\\M08_MSCA.yml",
+  "model_path": "D:\\\u8bba\u6587\u590d\u73b0\\experiments\\segformer_balance_wave6_20261016\\checkpoints\\M08_MSCA\\model.pdparams"
+}

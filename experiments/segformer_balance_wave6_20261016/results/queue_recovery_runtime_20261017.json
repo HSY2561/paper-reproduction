@@ -1,0 +1,20 @@
+{
+  "verified_at": "2026-10-17T09:06:32.882220+08:00",
+  "session_id": 54465,
+  "runner_pid": 102120,
+  "child_pid": 80492,
+  "started_at": "2026-10-17T09:04:55+08:00",
+  "heartbeat": {
+    "tag": "M02_PSA_train",
+    "pid": 80492,
+    "runner_pid": 102120,
+    "timestamp": "2026-10-17T09:06:15+08:00",
+    "latest_iter": 600,
+    "elapsed_seconds": 80.3,
+    "log_size": 5405,
+    "free_gb": 13.6
+  },
+  "hidden_launch_first_attempt": "No persistent training observed; PID return alone is not accepted as success.",
+  "previous_exit_code": null,
+  "test_used": false
+}

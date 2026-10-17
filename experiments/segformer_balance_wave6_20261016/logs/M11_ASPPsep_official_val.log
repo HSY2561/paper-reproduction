@@ -1,0 +1,231 @@
+[2026/10/17 04:08:52] INFO: 
+------------Environment Information-------------
+platform: Windows-11-10.0.26200-SP0
+Python: 3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]
+Paddle compiled with cuda: True
+NVCC: Build cuda_13.4.r13.4/compiler.38657139_0
+cudnn: 90.9
+GPUs used: 1
+CUDA_VISIBLE_DEVICES: None
+GPU: ['GPU 0: NVIDIA GeForce']
+PaddleSeg: 0.0.0.dev0
+PaddlePaddle: 3.4.0
+OpenCV: 4.11.0
+------------------------------------------------
+[2026/10/17 04:08:52] INFO: 
+---------------Config Information---------------
+batch_size: 4
+iters: 18000
+train_dataset:
+  dataset_root: C:/Users/user/algolab_data
+  mode: train
+  num_classes: 2
+  train_path: C:/Users/user/algolab_data/train.txt
+  transforms:
+  - max_scale_factor: 1.25
+    min_scale_factor: 0.75
+    scale_step_size: 0.25
+    type: ResizeStepScaling
+  - crop_size:
+    - 400
+    - 400
+    type: RandomPaddingCrop
+  - type: RandomHorizontalFlip
+  - brightness_range: 0.5
+    contrast_range: 0.5
+    saturation_range: 0.5
+    type: RandomDistort
+  - type: Normalize
+  type: Dataset
+val_dataset:
+  dataset_root: C:/Users/user/algolab_data
+  mode: val
+  num_classes: 2
+  transforms:
+  - type: Normalize
+  type: Dataset
+  val_path: C:/Users/user/algolab_data/val.txt
+optimizer:
+  beta1: 0.9
+  beta2: 0.999
+  type: AdamW
+  weight_decay: 0.01
+lr_scheduler:
+  end_lr: 0.0
+  learning_rate: 6.0e-05
+  power: 1
+  type: PolynomialDecay
+loss:
+  coef:
+  - 1
+  types:
+  - type: CrossEntropyLoss
+model:
+  backbone:
+    pretrained: "D:\\\u8BBA\u6587\u590D\u73B0\\experiments\\segformer_balance_wave6_20261016\\\
+      weights\\mit_b0_imagenet.pdparams"
+    type: MixVisionTransformer_B0
+  balance_modules:
+  - aspp_sep
+  embedding_dim: 128
+  num_classes: 2
+  type: SegFormer
+------------------------------------------------
+
+[2026/10/17 04:08:52] INFO: Set device: gpu
+[2026/10/17 04:08:52] INFO: Use the following config to build model
+model:
+  backbone:
+    pretrained: "D:\\\u8BBA\u6587\u590D\u73B0\\experiments\\segformer_balance_wave6_20261016\\\
+      weights\\mit_b0_imagenet.pdparams"
+    type: MixVisionTransformer_B0
+  balance_modules:
+  - aspp_sep
+  embedding_dim: 128
+  num_classes: 2
+  type: SegFormer
+WARNING: Logging before InitGoogleLogging() is written to STDERR
+W1017 04:08:52.943662 101372 gpu_resources.cc:116] Please NOTE: device: 0, GPU Compute Capability: 12.0, Driver API Version: 13.2, Runtime API Version: 12.9
+[2026/10/17 04:08:53] INFO: Loading pretrained model from D:\论文复现\experiments\segformer_balance_wave6_20261016\weights\mit_b0_imagenet.pdparams
+[2026/10/17 04:08:53] INFO: There are 176/176 variables loaded into MixVisionTransformer.
+[2026/10/17 04:08:53] INFO: Loading pretrained model from D:\论文复现\experiments\segformer_balance_wave6_20261016\checkpoints\M11_ASPPsep\model.pdparams
+[2026/10/17 04:08:53] INFO: There are 227/227 variables loaded into SegFormer.
+[2026/10/17 04:08:53] INFO: Loaded trained weights successfully.
+[2026/10/17 04:08:53] INFO: Use the following config to build val_dataset
+val_dataset:
+  dataset_root: C:/Users/user/algolab_data
+  mode: val
+  num_classes: 2
+  transforms:
+  - type: Normalize
+  type: Dataset
+  val_path: C:/Users/user/algolab_data/val.txt
+[2026/10/17 04:08:53] INFO: Start evaluating (total_samples: 348, total_iters: 348)...
+
+  1/348 [..............................] - ETA: 5:19 - batch_cost: 0.9210 - reader cost: 0.0862
+  4/348 [..............................] - ETA: 1:24 - batch_cost: 0.2455 - reader cost: 0.0216
+  7/348 [..............................] - ETA: 51s - batch_cost: 0.1506 - reader cost: 0.0124 
+ 10/348 [..............................] - ETA: 37s - batch_cost: 0.1121 - reader cost: 0.0088
+ 13/348 [>.............................] - ETA: 30s - batch_cost: 0.0916 - reader cost: 0.0068
+ 16/348 [>.............................] - ETA: 25s - batch_cost: 0.0780 - reader cost: 0.0055
+ 19/348 [>.............................] - ETA: 22s - batch_cost: 0.0696 - reader cost: 0.0046
+ 22/348 [>.............................] - ETA: 20s - batch_cost: 0.0627 - reader cost: 0.0041
+ 25/348 [=>............................] - ETA: 18s - batch_cost: 0.0577 - reader cost: 0.0036
+ 28/348 [=>............................] - ETA: 17s - batch_cost: 0.0537 - reader cost: 0.0032
+ 31/348 [=>............................] - ETA: 16s - batch_cost: 0.0506 - reader cost: 0.0029
+ 34/348 [=>............................] - ETA: 15s - batch_cost: 0.0479 - reader cost: 0.0027
+ 37/348 [==>...........................] - ETA: 14s - batch_cost: 0.0456 - reader cost: 0.0025
+ 40/348 [==>...........................] - ETA: 13s - batch_cost: 0.0438 - reader cost: 0.0023
+ 43/348 [==>...........................] - ETA: 12s - batch_cost: 0.0422 - reader cost: 0.0021
+ 46/348 [==>...........................] - ETA: 12s - batch_cost: 0.0408 - reader cost: 0.0020
+ 49/348 [===>..........................] - ETA: 11s - batch_cost: 0.0396 - reader cost: 0.0019
+ 52/348 [===>..........................] - ETA: 11s - batch_cost: 0.0386 - reader cost: 0.0018
+ 55/348 [===>..........................] - ETA: 11s - batch_cost: 0.0377 - reader cost: 0.0017
+ 58/348 [====>.........................] - ETA: 10s - batch_cost: 0.0367 - reader cost: 0.0016
+ 61/348 [====>.........................] - ETA: 10s - batch_cost: 0.0359 - reader cost: 0.0016
+ 64/348 [====>.........................] - ETA: 10s - batch_cost: 0.0353 - reader cost: 0.0015
+ 67/348 [====>.........................] - ETA: 9s - batch_cost: 0.0346 - reader cost: 0.0014 
+ 70/348 [=====>........................] - ETA: 9s - batch_cost: 0.0339 - reader cost: 0.0014
+ 73/348 [=====>........................] - ETA: 9s - batch_cost: 0.0334 - reader cost: 0.0013
+ 76/348 [=====>........................] - ETA: 8s - batch_cost: 0.0328 - reader cost: 0.0013
+ 79/348 [=====>........................] - ETA: 8s - batch_cost: 0.0323 - reader cost: 0.0012
+ 82/348 [======>.......................] - ETA: 8s - batch_cost: 0.0318 - reader cost: 0.0012
+ 85/348 [======>.......................] - ETA: 8s - batch_cost: 0.0315 - reader cost: 0.0012
+ 88/348 [======>.......................] - ETA: 8s - batch_cost: 0.0311 - reader cost: 0.0011
+ 91/348 [======>.......................] - ETA: 7s - batch_cost: 0.0307 - reader cost: 0.0011
+ 94/348 [=======>......................] - ETA: 7s - batch_cost: 0.0303 - reader cost: 0.0010
+ 97/348 [=======>......................] - ETA: 7s - batch_cost: 0.0300 - reader cost: 0.0010
+100/348 [=======>......................] - ETA: 7s - batch_cost: 0.0297 - reader cost: 9.8237e-04
+103/348 [=======>......................] - ETA: 7s - batch_cost: 0.0295 - reader cost: 9.5871e-04
+106/348 [========>.....................] - ETA: 7s - batch_cost: 0.0293 - reader cost: 9.3158e-04
+109/348 [========>.....................] - ETA: 6s - batch_cost: 0.0291 - reader cost: 9.0594e-04
+112/348 [========>.....................] - ETA: 6s - batch_cost: 0.0289 - reader cost: 8.8167e-04
+115/348 [========>.....................] - ETA: 6s - batch_cost: 0.0288 - reader cost: 8.7178e-04
+118/348 [=========>....................] - ETA: 6s - batch_cost: 0.0286 - reader cost: 8.4962e-04
+121/348 [=========>....................] - ETA: 6s - batch_cost: 0.0285 - reader cost: 8.2856e-04
+124/348 [=========>....................] - ETA: 6s - batch_cost: 0.0283 - reader cost: 8.0851e-04
+127/348 [=========>....................] - ETA: 6s - batch_cost: 0.0282 - reader cost: 7.8941e-04
+130/348 [==========>...................] - ETA: 6s - batch_cost: 0.0281 - reader cost: 7.7119e-04
+133/348 [==========>...................] - ETA: 6s - batch_cost: 0.0279 - reader cost: 7.5380e-04
+136/348 [==========>...................] - ETA: 5s - batch_cost: 0.0278 - reader cost: 7.3717e-04
+139/348 [==========>...................] - ETA: 5s - batch_cost: 0.0276 - reader cost: 7.2126e-04
+142/348 [===========>..................] - ETA: 5s - batch_cost: 0.0275 - reader cost: 7.1306e-04
+145/348 [===========>..................] - ETA: 5s - batch_cost: 0.0273 - reader cost: 6.9831e-04
+148/348 [===========>..................] - ETA: 5s - batch_cost: 0.0272 - reader cost: 6.8415e-04
+151/348 [============>.................] - ETA: 5s - batch_cost: 0.0271 - reader cost: 6.8384e-04
+154/348 [============>.................] - ETA: 5s - batch_cost: 0.0270 - reader cost: 6.7705e-04
+157/348 [============>.................] - ETA: 5s - batch_cost: 0.0268 - reader cost: 6.6411e-04
+160/348 [============>.................] - ETA: 5s - batch_cost: 0.0267 - reader cost: 6.5482e-04
+163/348 [=============>................] - ETA: 4s - batch_cost: 0.0266 - reader cost: 6.4277e-04
+166/348 [=============>................] - ETA: 4s - batch_cost: 0.0265 - reader cost: 6.3115e-04
+169/348 [=============>................] - ETA: 4s - batch_cost: 0.0264 - reader cost: 6.2586e-04
+172/348 [=============>................] - ETA: 4s - batch_cost: 0.0263 - reader cost: 6.1494e-04
+175/348 [==============>...............] - ETA: 4s - batch_cost: 0.0263 - reader cost: 6.1013e-04
+178/348 [==============>...............] - ETA: 4s - batch_cost: 0.0262 - reader cost: 5.9985e-04
+181/348 [==============>...............] - ETA: 4s - batch_cost: 0.0261 - reader cost: 5.8991e-04
+184/348 [==============>...............] - ETA: 4s - batch_cost: 0.0261 - reader cost: 5.8029e-04
+187/348 [===============>..............] - ETA: 4s - batch_cost: 0.0260 - reader cost: 5.7098e-04
+190/348 [===============>..............] - ETA: 4s - batch_cost: 0.0259 - reader cost: 5.6196e-04
+193/348 [===============>..............] - ETA: 4s - batch_cost: 0.0259 - reader cost: 5.5323e-04
+196/348 [===============>..............] - ETA: 3s - batch_cost: 0.0258 - reader cost: 5.4476e-04
+199/348 [================>.............] - ETA: 3s - batch_cost: 0.0257 - reader cost: 5.3655e-04
+202/348 [================>.............] - ETA: 3s - batch_cost: 0.0256 - reader cost: 5.3608e-04
+205/348 [================>.............] - ETA: 3s - batch_cost: 0.0256 - reader cost: 5.2823e-04
+208/348 [================>.............] - ETA: 3s - batch_cost: 0.0256 - reader cost: 5.2061e-04
+211/348 [=================>............] - ETA: 3s - batch_cost: 0.0255 - reader cost: 5.1321e-04
+214/348 [=================>............] - ETA: 3s - batch_cost: 0.0255 - reader cost: 5.0602e-04
+217/348 [=================>............] - ETA: 3s - batch_cost: 0.0254 - reader cost: 4.9902e-04
+220/348 [=================>............] - ETA: 3s - batch_cost: 0.0254 - reader cost: 4.9222e-04
+223/348 [==================>...........] - ETA: 3s - batch_cost: 0.0253 - reader cost: 4.8559e-04
+226/348 [==================>...........] - ETA: 3s - batch_cost: 0.0253 - reader cost: 4.7915e-04
+229/348 [==================>...........] - ETA: 3s - batch_cost: 0.0252 - reader cost: 4.7727e-04
+232/348 [===================>..........] - ETA: 2s - batch_cost: 0.0251 - reader cost: 4.7109e-04
+235/348 [===================>..........] - ETA: 2s - batch_cost: 0.0251 - reader cost: 4.6508e-04
+238/348 [===================>..........] - ETA: 2s - batch_cost: 0.0250 - reader cost: 4.5922e-04
+241/348 [===================>..........] - ETA: 2s - batch_cost: 0.0250 - reader cost: 4.5350e-04
+244/348 [====================>.........] - ETA: 2s - batch_cost: 0.0249 - reader cost: 4.4793e-04
+247/348 [====================>.........] - ETA: 2s - batch_cost: 0.0249 - reader cost: 4.4249e-04
+250/348 [====================>.........] - ETA: 2s - batch_cost: 0.0248 - reader cost: 4.3718e-04
+253/348 [====================>.........] - ETA: 2s - batch_cost: 0.0247 - reader cost: 4.3199e-04
+255/348 [====================>.........] - ETA: 2s - batch_cost: 0.0247 - reader cost: 4.2860e-04
+258/348 [=====================>........] - ETA: 2s - batch_cost: 0.0247 - reader cost: 4.2362e-04
+261/348 [=====================>........] - ETA: 2s - batch_cost: 0.0247 - reader cost: 4.1875e-04
+264/348 [=====================>........] - ETA: 2s - batch_cost: 0.0246 - reader cost: 4.1399e-04
+267/348 [======================>.......] - ETA: 1s - batch_cost: 0.0245 - reader cost: 4.1308e-04
+270/348 [======================>.......] - ETA: 1s - batch_cost: 0.0245 - reader cost: 4.1219e-04
+272/348 [======================>.......] - ETA: 1s - batch_cost: 0.0245 - reader cost: 4.0915e-04
+275/348 [======================>.......] - ETA: 1s - batch_cost: 0.0245 - reader cost: 4.0469e-04
+278/348 [======================>.......] - ETA: 1s - batch_cost: 0.0244 - reader cost: 4.0391e-04
+280/348 [=======================>......] - ETA: 1s - batch_cost: 0.0244 - reader cost: 4.0103e-04
+282/348 [=======================>......] - ETA: 1s - batch_cost: 0.0245 - reader cost: 3.9819e-04
+285/348 [=======================>......] - ETA: 1s - batch_cost: 0.0244 - reader cost: 3.9576e-04
+288/348 [=======================>......] - ETA: 1s - batch_cost: 0.0245 - reader cost: 3.9345e-04
+291/348 [========================>.....] - ETA: 1s - batch_cost: 0.0244 - reader cost: 3.9457e-04
+294/348 [========================>.....] - ETA: 1s - batch_cost: 0.0244 - reader cost: 3.9394e-04
+297/348 [========================>.....] - ETA: 1s - batch_cost: 0.0243 - reader cost: 3.8996e-04
+300/348 [========================>.....] - ETA: 1s - batch_cost: 0.0243 - reader cost: 3.8606e-04
+303/348 [=========================>....] - ETA: 1s - batch_cost: 0.0243 - reader cost: 3.8223e-04
+306/348 [=========================>....] - ETA: 1s - batch_cost: 0.0242 - reader cost: 3.7849e-04
+309/348 [=========================>....] - ETA: 0s - batch_cost: 0.0242 - reader cost: 3.7806e-04
+312/348 [=========================>....] - ETA: 0s - batch_cost: 0.0242 - reader cost: 3.7764e-04
+315/348 [==========================>...] - ETA: 0s - batch_cost: 0.0241 - reader cost: 3.7405e-04
+318/348 [==========================>...] - ETA: 0s - batch_cost: 0.0241 - reader cost: 3.7052e-04
+321/348 [==========================>...] - ETA: 0s - batch_cost: 0.0240 - reader cost: 3.6706e-04
+324/348 [==========================>...] - ETA: 0s - batch_cost: 0.0240 - reader cost: 3.6366e-04
+327/348 [===========================>..] - ETA: 0s - batch_cost: 0.0240 - reader cost: 3.6032e-04
+330/348 [===========================>..] - ETA: 0s - batch_cost: 0.0240 - reader cost: 3.6008e-04
+332/348 [===========================>..] - ETA: 0s - batch_cost: 0.0240 - reader cost: 3.5791e-04
+334/348 [===========================>..] - ETA: 0s - batch_cost: 0.0240 - reader cost: 3.5577e-04
+336/348 [===========================>..] - ETA: 0s - batch_cost: 0.0240 - reader cost: 3.5365e-04
+338/348 [============================>.] - ETA: 0s - batch_cost: 0.0240 - reader cost: 3.5746e-04
+340/348 [============================>.] - ETA: 0s - batch_cost: 0.0240 - reader cost: 3.5536e-04
+343/348 [============================>.] - ETA: 0s - batch_cost: 0.0241 - reader cost: 3.5225e-04
+346/348 [============================>.] - ETA: 0s - batch_cost: 0.0240 - reader cost: 3.5209e-04
+348/348 [==============================] - 8s 24ms/step - batch_cost: 0.0240 - reader cost: 3.5136e-04
+[2026/10/17 04:09:01] INFO: [EVAL] #Images: 348 mIoU: 0.8274 Acc: 0.9783 Kappa: 0.7963 Dice: 0.8982
+[2026/10/17 04:09:01] INFO: [EVAL] Class IoU: 
+[0.9773 0.6776]
+[2026/10/17 04:09:01] INFO: [EVAL] Class Precision: 
+[0.9884 0.8092]
+[2026/10/17 04:09:01] INFO: [EVAL] Class Recall: 
+[0.9886 0.8064]

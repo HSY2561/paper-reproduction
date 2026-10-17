@@ -1,0 +1,59 @@
+[2026/10/17 03:31:20] INFO: Use the following config to build val_dataset
+val_dataset:
+  dataset_root: C:/Users/user/algolab_data
+  mode: val
+  num_classes: 2
+  transforms:
+  - type: Normalize
+  type: Dataset
+  val_path: C:/Users/user/algolab_data/val.txt
+[2026/10/17 03:31:21] INFO: Set device: gpu
+[2026/10/17 03:31:21] INFO: Use the following config to build model
+model:
+  backbone:
+    pretrained: "D:\\\u8BBA\u6587\u590D\u73B0\\experiments\\segformer_balance_wave6_20261016\\\
+      weights\\mit_b0_imagenet.pdparams"
+    type: MixVisionTransformer_B0
+  balance_modules:
+  - cam
+  embedding_dim: 128
+  num_classes: 2
+  type: SegFormer
+WARNING: Logging before InitGoogleLogging() is written to STDERR
+W1017 03:31:21.608062 74036 gpu_resources.cc:116] Please NOTE: device: 0, GPU Compute Capability: 12.0, Driver API Version: 13.2, Runtime API Version: 12.9
+[2026/10/17 03:31:21] INFO: Loading pretrained model from D:\论文复现\experiments\segformer_balance_wave6_20261016\weights\mit_b0_imagenet.pdparams
+[2026/10/17 03:31:21] INFO: There are 176/176 variables loaded into MixVisionTransformer.
+[2026/10/17 03:31:21] INFO: Loading pretrained model from D:\论文复现\experiments\segformer_balance_wave6_20261016\checkpoints\M06_CAM\model.pdparams
+[2026/10/17 03:31:21] INFO: There are 192/192 variables loaded into SegFormer.
+{
+  "n": 348,
+  "confusion_matrix": [
+    [
+      76102344,
+      884401
+    ],
+    [
+      891231,
+      3716168
+    ]
+  ],
+  "mIoU": 0.8269377947455834,
+  "crackIoU": 0.6766757711497141,
+  "precision": 0.8077626919626681,
+  "recall": 0.8065652659993198,
+  "f1": 0.8071635348863072,
+  "boundary_counts_pred_gt": [
+    212464,
+    211298,
+    460650,
+    505846
+  ],
+  "boundary_precision": 0.46122652773255185,
+  "boundary_recall": 0.4177121100097658,
+  "boundary_f1": 0.43839216486492655,
+  "empty_predictions": 7,
+  "test_used": false,
+  "boundary_protocol": "inner boundary, zero outside image; exact Euclidean <=2px; global counts then harmonic mean",
+  "config": "D:\\\u8bba\u6587\u590d\u73b0\\experiments\\segformer_balance_wave6_20261016\\configs\\M06_CAM.yml",
+  "model_path": "D:\\\u8bba\u6587\u590d\u73b0\\experiments\\segformer_balance_wave6_20261016\\checkpoints\\M06_CAM\\model.pdparams"
+}
