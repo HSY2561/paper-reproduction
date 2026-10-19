@@ -1,0 +1,41 @@
+# 输出索引
+
+| 路径 | 字节 |
+|---|---:|
+| configs/C0.yml | 1223 |
+| configs/L01_CE_Dice.yml | 1314 |
+| configs/L02_CE_Dice.yml | 1315 |
+| configs/L03_CE_Dice.yml | 1314 |
+| configs/L04_CE_Dice.yml | 1314 |
+| configs/L05_CE_Lovasz.yml | 1323 |
+| configs/L06_CE_Lovasz.yml | 1324 |
+| configs/L07_CE_Lovasz.yml | 1323 |
+| configs/L08_WeightedCE.yml | 1258 |
+| configs/L09_WeightedCE.yml | 1258 |
+| configs/L10_WeightedCE.yml | 1258 |
+| configs/L11_TopKCE.yml | 1254 |
+| configs/L12_TopKCE.yml | 1255 |
+| configs/L13_OHEM.yml | 1265 |
+| configs/L14_SoftmaxFocal.yml | 1258 |
+| configs/L15_SoftmaxFocal.yml | 1258 |
+| configs/L16_CE_Focal.yml | 1361 |
+| configs/L17_OHEM_Dice.yml | 1361 |
+| configs/L18_WeightedCE_Dice.yml | 1356 |
+| configs/L19_CE_DualTask.yml | 1335 |
+| configs/L20_CE_RMI.yml | 1430 |
+| configs/R01_BootstrapCE.yml | 1271 |
+| configs/R02_CE_FGLovasz.yml | 1351 |
+| provenance/config_hashes.json | 2106 |
+| provenance/control.json | 2743 |
+| provenance/jobs.json | 10610 |
+| provenance/previous_followup_audit.json | 1183 |
+| provenance/protocol.json | 1166 |
+| provenance/REVIEW.md | 10461 |
+| provenance/source_hashes.json | 20161 |
+| results/C0_profile.json | 1241 |
+| results/C0_val.json | 942 |
+| results/C0_val_per_image.csv | 40342 |
+| results/comparison.json | 13182 |
+| results/loss_ablation.csv | 1583 |
+| refine-logs/RESULTS.md | 2729 |
+| refine-logs/RESULTS_20261019_230246_550872.md | 2729 |

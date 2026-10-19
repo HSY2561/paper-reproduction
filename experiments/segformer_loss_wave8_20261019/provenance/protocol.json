@@ -1,0 +1,36 @@
+{
+  "parent": "SegFormer-B0 width128+Aligned",
+  "params": 3470434,
+  "seed": 42,
+  "iters": 18000,
+  "batch": 4,
+  "optimizer": "AdamW",
+  "lr": 6e-05,
+  "end_lr": 0,
+  "model_precision": "FP32",
+  "test_used": false,
+  "train": 1896,
+  "val": 348,
+  "initialization": "common ImageNet backbone, not fine-tuning trained C0",
+  "target_completed": 20,
+  "trials": "20 main configurations, 2 preregistered engineering-only reserves; not 20 independent algorithms",
+  "changes": "only official loss config; fixed architecture, crops, augmentation, optimizer and training budget",
+  "main_gate": {
+    "crackIoU": 0.002,
+    "f1": 0.001,
+    "mIoU": 0,
+    "precision": 0,
+    "recall": -0.005,
+    "boundary_f1": -0.005
+  },
+  "precision_track": {
+    "precision": 0.005,
+    "crackIoU": 0,
+    "f1": 0,
+    "mIoU": 0,
+    "recall": -0.005,
+    "boundary_f1": -0.005
+  },
+  "selection": "exact ordinary/EMA maximum val mIoU, frozen SHA, independent val/boundary; top2 recipes frozen before seeds43/44",
+  "efficiency": "network is identical; loss does not reduce parameters or accelerate inference; record training cost separately"
+}

@@ -2,6 +2,12 @@
 
 此索引从本次交付开始登记，不声称枚举此前全部工程文件。
 
+## 2026-10-19：Wave8 损失实验准备快照
+
+- [损失目录与预检代码](experiments/segformer_loss_wave8_20261019/)
+- [上一轮九项复核审计](experiments/segformer_loss_wave8_20261019/provenance/previous_followup_audit.json)
+- 状态：准备材料开始生成；本次尚无该波正式训练完成回执，不填写新性能。
+
 ## 2026-10-19 20:19：归因与三 seed 队列完成
 
 - [最新完成说明与三 seed 汇总](experiments/segformer_aligned_wave7_20261018/followup_20261019/README.md)

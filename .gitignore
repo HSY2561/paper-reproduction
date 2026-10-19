@@ -142,3 +142,9 @@ Thumbs.db
 
 # Downloaded third-party paper text/pages remain local
 /experiments/repair_options_20261019/source_review/
+
+# Wave8 local process lock and generated duplicate report snapshots
+/experiments/segformer_loss_wave8_20261019/**/queue.lock
+/experiments/segformer_loss_wave8_20261019/refine-logs/EXPERIMENT_RESULTS_*.md
+/experiments/segformer_loss_wave8_20261019/refine-logs/EXPERIMENT_TRACKER_*.md
+/experiments/segformer_loss_wave8_20261019/refine-logs/RESULTS_*.md
