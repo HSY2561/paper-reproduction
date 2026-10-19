@@ -1,0 +1,32 @@
+{
+  "tag": "M01_SE_train",
+  "pid": 102320,
+  "runner_pid": 78068,
+  "command": [
+    "C:\\venv_bisenet\\Scripts\\python.exe",
+    "D:\\论文复现\\experiments\\segformer_balance_wave6_20261016\\src\\PaddleSeg-2.10.0\\tools\\train.py",
+    "--config",
+    "D:\\论文复现\\experiments\\segformer_balance_wave6_20261016\\configs\\M01_SE.yml",
+    "--save_dir",
+    "D:\\论文复现\\experiments\\segformer_balance_wave6_20261016\\training\\M01_SE",
+    "--iters",
+    "18000",
+    "--do_eval",
+    "--use_ema",
+    "--save_interval",
+    "1000",
+    "--seed",
+    "42",
+    "--log_iters",
+    "100",
+    "--num_workers",
+    "0",
+    "--keep_checkpoint_max",
+    "1",
+    "--precision",
+    "fp32"
+  ],
+  "started_at": "2026-10-17T15:49:47+08:00",
+  "log": "D:\\论文复现\\experiments\\segformer_balance_wave6_20261016\\logs\\M01_SE_train.log",
+  "test_used": false
+}

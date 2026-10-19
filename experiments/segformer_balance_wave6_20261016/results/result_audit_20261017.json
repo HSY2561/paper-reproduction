@@ -1,13 +1,13 @@
 {
-  "checked_at": "2026-10-17T15:45:58+08:00",
-  "complete_runs": 14,
-  "complete_module_mechanisms": 12,
+  "checked_at": "2026-10-18T15:53:33+08:00",
+  "complete_runs": 15,
+  "complete_module_mechanisms": 13,
   "baseline_sha_matches": true,
   "data_audit": {
     "checked_files": 4488,
     "mismatches": [],
     "test_used": false,
-    "timestamp": "2026-10-17T15:45:58+08:00"
+    "timestamp": "2026-10-18T15:53:33+08:00"
   },
   "runs": [
     {
@@ -207,6 +207,21 @@
     },
     {
       "id": "M14_UAFMchannel",
+      "exit_codes": {
+        "train": 0,
+        "official_val": 0,
+        "pixel_boundary": 0,
+        "profile": 0
+      },
+      "final_iter_in_log": true,
+      "final_checkpoint": true,
+      "frozen_sha_matches": true,
+      "highest_exact_val_selected": true,
+      "independent_val_matches": true,
+      "test_used": false
+    },
+    {
+      "id": "M01_SE",
       "exit_codes": {
         "train": 0,
         "official_val": 0,

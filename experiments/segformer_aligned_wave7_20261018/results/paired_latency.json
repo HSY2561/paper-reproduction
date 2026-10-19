@@ -1,0 +1,1261 @@
+{
+  "protocol": "one process, FP32, batch1, fixed input; warmup40; 12 randomized paired rounds x30 forwards, warmup5 between models, GPU sync",
+  "exclusive_gpu_training": true,
+  "exclusive_machine": false,
+  "limitation": "Desktop applications remain running; CPU saturation previously observed. This is a conditional paired measurement, not proof of deployment speed.",
+  "before": {
+    "exit_code": 0,
+    "stdout": "timestamp, name, utilization.gpu [%], memory.used [MiB], temperature.gpu, clocks.current.sm [MHz], clocks.current.memory [MHz], power.draw [W]\n2026/10/18 10:27:16.169, NVIDIA GeForce RTX 5060, 7 %, 5392 MiB, 51, 1327 MHz, 7001 MHz, 24.02 W\n",
+    "stderr": ""
+  },
+  "after": {
+    "exit_code": 0,
+    "stdout": "timestamp, name, utilization.gpu [%], memory.used [MiB], temperature.gpu, clocks.current.sm [MHz], clocks.current.memory [MHz], power.draw [W]\n2026/10/18 10:28:09.011, NVIDIA GeForce RTX 5060, 38 %, 5848 MiB, 57, 2857 MHz, 13801 MHz, 61.56 W\n",
+    "stderr": ""
+  },
+  "raw": [
+    {
+      "size": 400,
+      "round": 0,
+      "id": "M13_Aligned",
+      "ms": 18.1392666650936,
+      "order": [
+        "M13_Aligned",
+        "B0",
+        "M10_GloRe",
+        "W128"
+      ]
+    },
+    {
+      "size": 400,
+      "round": 0,
+      "id": "B0",
+      "ms": 11.110646665717164,
+      "order": [
+        "M13_Aligned",
+        "B0",
+        "M10_GloRe",
+        "W128"
+      ]
+    },
+    {
+      "size": 400,
+      "round": 0,
+      "id": "M10_GloRe",
+      "ms": 15.020293338845173,
+      "order": [
+        "M13_Aligned",
+        "B0",
+        "M10_GloRe",
+        "W128"
+      ]
+    },
+    {
+      "size": 400,
+      "round": 0,
+      "id": "W128",
+      "ms": 9.514426665070156,
+      "order": [
+        "M13_Aligned",
+        "B0",
+        "M10_GloRe",
+        "W128"
+      ]
+    },
+    {
+      "size": 400,
+      "round": 1,
+      "id": "W128",
+      "ms": 11.494323331862688,
+      "order": [
+        "W128",
+        "B0",
+        "M13_Aligned",
+        "M10_GloRe"
+      ]
+    },
+    {
+      "size": 400,
+      "round": 1,
+      "id": "B0",
+      "ms": 14.136976663333675,
+      "order": [
+        "W128",
+        "B0",
+        "M13_Aligned",
+        "M10_GloRe"
+      ]
+    },
+    {
+      "size": 400,
+      "round": 1,
+      "id": "M13_Aligned",
+      "ms": 18.184550005632143,
+      "order": [
+        "W128",
+        "B0",
+        "M13_Aligned",
+        "M10_GloRe"
+      ]
+    },
+    {
+      "size": 400,
+      "round": 1,
+      "id": "M10_GloRe",
+      "ms": 17.326679996525247,
+      "order": [
+        "W128",
+        "B0",
+        "M13_Aligned",
+        "M10_GloRe"
+      ]
+    },
+    {
+      "size": 400,
+      "round": 2,
+      "id": "M13_Aligned",
+      "ms": 17.27296000656982,
+      "order": [
+        "M13_Aligned",
+        "M10_GloRe",
+        "B0",
+        "W128"
+      ]
+    },
+    {
+      "size": 400,
+      "round": 2,
+      "id": "M10_GloRe",
+      "ms": 18.230846671697993,
+      "order": [
+        "M13_Aligned",
+        "M10_GloRe",
+        "B0",
+        "W128"
+      ]
+    },
+    {
+      "size": 400,
+      "round": 2,
+      "id": "B0",
+      "ms": 15.023456669102112,
+      "order": [
+        "M13_Aligned",
+        "M10_GloRe",
+        "B0",
+        "W128"
+      ]
+    },
+    {
+      "size": 400,
+      "round": 2,
+      "id": "W128",
+      "ms": 14.863093329283098,
+      "order": [
+        "M13_Aligned",
+        "M10_GloRe",
+        "B0",
+        "W128"
+      ]
+    },
+    {
+      "size": 400,
+      "round": 3,
+      "id": "W128",
+      "ms": 16.87222666417559,
+      "order": [
+        "W128",
+        "B0",
+        "M10_GloRe",
+        "M13_Aligned"
+      ]
+    },
+    {
+      "size": 400,
+      "round": 3,
+      "id": "B0",
+      "ms": 17.086246671775978,
+      "order": [
+        "W128",
+        "B0",
+        "M10_GloRe",
+        "M13_Aligned"
+      ]
+    },
+    {
+      "size": 400,
+      "round": 3,
+      "id": "M10_GloRe",
+      "ms": 18.228316664074857,
+      "order": [
+        "W128",
+        "B0",
+        "M10_GloRe",
+        "M13_Aligned"
+      ]
+    },
+    {
+      "size": 400,
+      "round": 3,
+      "id": "M13_Aligned",
+      "ms": 16.62412000199159,
+      "order": [
+        "W128",
+        "B0",
+        "M10_GloRe",
+        "M13_Aligned"
+      ]
+    },
+    {
+      "size": 400,
+      "round": 4,
+      "id": "W128",
+      "ms": 9.059373335912824,
+      "order": [
+        "W128",
+        "M13_Aligned",
+        "M10_GloRe",
+        "B0"
+      ]
+    },
+    {
+      "size": 400,
+      "round": 4,
+      "id": "M13_Aligned",
+      "ms": 10.511259998505315,
+      "order": [
+        "W128",
+        "M13_Aligned",
+        "M10_GloRe",
+        "B0"
+      ]
+    },
+    {
+      "size": 400,
+      "round": 4,
+      "id": "M10_GloRe",
+      "ms": 9.917973331175745,
+      "order": [
+        "W128",
+        "M13_Aligned",
+        "M10_GloRe",
+        "B0"
+      ]
+    },
+    {
+      "size": 400,
+      "round": 4,
+      "id": "B0",
+      "ms": 9.514083333003024,
+      "order": [
+        "W128",
+        "M13_Aligned",
+        "M10_GloRe",
+        "B0"
+      ]
+    },
+    {
+      "size": 400,
+      "round": 5,
+      "id": "W128",
+      "ms": 10.290326667018235,
+      "order": [
+        "W128",
+        "M13_Aligned",
+        "M10_GloRe",
+        "B0"
+      ]
+    },
+    {
+      "size": 400,
+      "round": 5,
+      "id": "M13_Aligned",
+      "ms": 10.660563331718246,
+      "order": [
+        "W128",
+        "M13_Aligned",
+        "M10_GloRe",
+        "B0"
+      ]
+    },
+    {
+      "size": 400,
+      "round": 5,
+      "id": "M10_GloRe",
+      "ms": 10.27684333578994,
+      "order": [
+        "W128",
+        "M13_Aligned",
+        "M10_GloRe",
+        "B0"
+      ]
+    },
+    {
+      "size": 400,
+      "round": 5,
+      "id": "B0",
+      "ms": 16.567526664584875,
+      "order": [
+        "W128",
+        "M13_Aligned",
+        "M10_GloRe",
+        "B0"
+      ]
+    },
+    {
+      "size": 400,
+      "round": 6,
+      "id": "M10_GloRe",
+      "ms": 13.651289992655316,
+      "order": [
+        "M10_GloRe",
+        "B0",
+        "M13_Aligned",
+        "W128"
+      ]
+    },
+    {
+      "size": 400,
+      "round": 6,
+      "id": "B0",
+      "ms": 8.688376665425798,
+      "order": [
+        "M10_GloRe",
+        "B0",
+        "M13_Aligned",
+        "W128"
+      ]
+    },
+    {
+      "size": 400,
+      "round": 6,
+      "id": "M13_Aligned",
+      "ms": 10.439743334427476,
+      "order": [
+        "M10_GloRe",
+        "B0",
+        "M13_Aligned",
+        "W128"
+      ]
+    },
+    {
+      "size": 400,
+      "round": 6,
+      "id": "W128",
+      "ms": 9.509056666865945,
+      "order": [
+        "M10_GloRe",
+        "B0",
+        "M13_Aligned",
+        "W128"
+      ]
+    },
+    {
+      "size": 400,
+      "round": 7,
+      "id": "M10_GloRe",
+      "ms": 10.995143333760401,
+      "order": [
+        "M10_GloRe",
+        "W128",
+        "M13_Aligned",
+        "B0"
+      ]
+    },
+    {
+      "size": 400,
+      "round": 7,
+      "id": "W128",
+      "ms": 9.393306666364273,
+      "order": [
+        "M10_GloRe",
+        "W128",
+        "M13_Aligned",
+        "B0"
+      ]
+    },
+    {
+      "size": 400,
+      "round": 7,
+      "id": "M13_Aligned",
+      "ms": 10.37004666092495,
+      "order": [
+        "M10_GloRe",
+        "W128",
+        "M13_Aligned",
+        "B0"
+      ]
+    },
+    {
+      "size": 400,
+      "round": 7,
+      "id": "B0",
+      "ms": 8.975186664611101,
+      "order": [
+        "M10_GloRe",
+        "W128",
+        "M13_Aligned",
+        "B0"
+      ]
+    },
+    {
+      "size": 400,
+      "round": 8,
+      "id": "W128",
+      "ms": 9.040373330935836,
+      "order": [
+        "W128",
+        "M13_Aligned",
+        "M10_GloRe",
+        "B0"
+      ]
+    },
+    {
+      "size": 400,
+      "round": 8,
+      "id": "M13_Aligned",
+      "ms": 10.37590333726257,
+      "order": [
+        "W128",
+        "M13_Aligned",
+        "M10_GloRe",
+        "B0"
+      ]
+    },
+    {
+      "size": 400,
+      "round": 8,
+      "id": "M10_GloRe",
+      "ms": 10.596750001423061,
+      "order": [
+        "W128",
+        "M13_Aligned",
+        "M10_GloRe",
+        "B0"
+      ]
+    },
+    {
+      "size": 400,
+      "round": 8,
+      "id": "B0",
+      "ms": 9.279103328784307,
+      "order": [
+        "W128",
+        "M13_Aligned",
+        "M10_GloRe",
+        "B0"
+      ]
+    },
+    {
+      "size": 400,
+      "round": 9,
+      "id": "M10_GloRe",
+      "ms": 12.807876663282514,
+      "order": [
+        "M10_GloRe",
+        "M13_Aligned",
+        "B0",
+        "W128"
+      ]
+    },
+    {
+      "size": 400,
+      "round": 9,
+      "id": "M13_Aligned",
+      "ms": 14.15564000296096,
+      "order": [
+        "M10_GloRe",
+        "M13_Aligned",
+        "B0",
+        "W128"
+      ]
+    },
+    {
+      "size": 400,
+      "round": 9,
+      "id": "B0",
+      "ms": 17.05480666520695,
+      "order": [
+        "M10_GloRe",
+        "M13_Aligned",
+        "B0",
+        "W128"
+      ]
+    },
+    {
+      "size": 400,
+      "round": 9,
+      "id": "W128",
+      "ms": 17.565206663372617,
+      "order": [
+        "M10_GloRe",
+        "M13_Aligned",
+        "B0",
+        "W128"
+      ]
+    },
+    {
+      "size": 400,
+      "round": 10,
+      "id": "M13_Aligned",
+      "ms": 20.432506664656103,
+      "order": [
+        "M13_Aligned",
+        "M10_GloRe",
+        "W128",
+        "B0"
+      ]
+    },
+    {
+      "size": 400,
+      "round": 10,
+      "id": "M10_GloRe",
+      "ms": 18.889130000025034,
+      "order": [
+        "M13_Aligned",
+        "M10_GloRe",
+        "W128",
+        "B0"
+      ]
+    },
+    {
+      "size": 400,
+      "round": 10,
+      "id": "W128",
+      "ms": 9.502919996157289,
+      "order": [
+        "M13_Aligned",
+        "M10_GloRe",
+        "W128",
+        "B0"
+      ]
+    },
+    {
+      "size": 400,
+      "round": 10,
+      "id": "B0",
+      "ms": 9.294163334804276,
+      "order": [
+        "M13_Aligned",
+        "M10_GloRe",
+        "W128",
+        "B0"
+      ]
+    },
+    {
+      "size": 400,
+      "round": 11,
+      "id": "W128",
+      "ms": 9.660293332611522,
+      "order": [
+        "W128",
+        "M10_GloRe",
+        "B0",
+        "M13_Aligned"
+      ]
+    },
+    {
+      "size": 400,
+      "round": 11,
+      "id": "M10_GloRe",
+      "ms": 13.080229998255769,
+      "order": [
+        "W128",
+        "M10_GloRe",
+        "B0",
+        "M13_Aligned"
+      ]
+    },
+    {
+      "size": 400,
+      "round": 11,
+      "id": "B0",
+      "ms": 11.95337666819493,
+      "order": [
+        "W128",
+        "M10_GloRe",
+        "B0",
+        "M13_Aligned"
+      ]
+    },
+    {
+      "size": 400,
+      "round": 11,
+      "id": "M13_Aligned",
+      "ms": 11.049976665526628,
+      "order": [
+        "W128",
+        "M10_GloRe",
+        "B0",
+        "M13_Aligned"
+      ]
+    },
+    {
+      "size": 480,
+      "round": 0,
+      "id": "M10_GloRe",
+      "ms": 20.222326663012307,
+      "order": [
+        "M10_GloRe",
+        "W128",
+        "M13_Aligned",
+        "B0"
+      ]
+    },
+    {
+      "size": 480,
+      "round": 0,
+      "id": "W128",
+      "ms": 17.490066673296194,
+      "order": [
+        "M10_GloRe",
+        "W128",
+        "M13_Aligned",
+        "B0"
+      ]
+    },
+    {
+      "size": 480,
+      "round": 0,
+      "id": "M13_Aligned",
+      "ms": 12.574716665161153,
+      "order": [
+        "M10_GloRe",
+        "W128",
+        "M13_Aligned",
+        "B0"
+      ]
+    },
+    {
+      "size": 480,
+      "round": 0,
+      "id": "B0",
+      "ms": 9.199740000379583,
+      "order": [
+        "M10_GloRe",
+        "W128",
+        "M13_Aligned",
+        "B0"
+      ]
+    },
+    {
+      "size": 480,
+      "round": 1,
+      "id": "B0",
+      "ms": 9.400703331145147,
+      "order": [
+        "B0",
+        "M10_GloRe",
+        "M13_Aligned",
+        "W128"
+      ]
+    },
+    {
+      "size": 480,
+      "round": 1,
+      "id": "M10_GloRe",
+      "ms": 10.087413333045939,
+      "order": [
+        "B0",
+        "M10_GloRe",
+        "M13_Aligned",
+        "W128"
+      ]
+    },
+    {
+      "size": 480,
+      "round": 1,
+      "id": "M13_Aligned",
+      "ms": 10.51253667101264,
+      "order": [
+        "B0",
+        "M10_GloRe",
+        "M13_Aligned",
+        "W128"
+      ]
+    },
+    {
+      "size": 480,
+      "round": 1,
+      "id": "W128",
+      "ms": 9.069203329272568,
+      "order": [
+        "B0",
+        "M10_GloRe",
+        "M13_Aligned",
+        "W128"
+      ]
+    },
+    {
+      "size": 480,
+      "round": 2,
+      "id": "B0",
+      "ms": 14.966793335042894,
+      "order": [
+        "B0",
+        "W128",
+        "M13_Aligned",
+        "M10_GloRe"
+      ]
+    },
+    {
+      "size": 480,
+      "round": 2,
+      "id": "W128",
+      "ms": 18.224803327272337,
+      "order": [
+        "B0",
+        "W128",
+        "M13_Aligned",
+        "M10_GloRe"
+      ]
+    },
+    {
+      "size": 480,
+      "round": 2,
+      "id": "M13_Aligned",
+      "ms": 10.178890001649657,
+      "order": [
+        "B0",
+        "W128",
+        "M13_Aligned",
+        "M10_GloRe"
+      ]
+    },
+    {
+      "size": 480,
+      "round": 2,
+      "id": "M10_GloRe",
+      "ms": 10.627216667247316,
+      "order": [
+        "B0",
+        "W128",
+        "M13_Aligned",
+        "M10_GloRe"
+      ]
+    },
+    {
+      "size": 480,
+      "round": 3,
+      "id": "M13_Aligned",
+      "ms": 11.267160003383955,
+      "order": [
+        "M13_Aligned",
+        "M10_GloRe",
+        "B0",
+        "W128"
+      ]
+    },
+    {
+      "size": 480,
+      "round": 3,
+      "id": "M10_GloRe",
+      "ms": 12.567489997794231,
+      "order": [
+        "M13_Aligned",
+        "M10_GloRe",
+        "B0",
+        "W128"
+      ]
+    },
+    {
+      "size": 480,
+      "round": 3,
+      "id": "B0",
+      "ms": 10.723470003965,
+      "order": [
+        "M13_Aligned",
+        "M10_GloRe",
+        "B0",
+        "W128"
+      ]
+    },
+    {
+      "size": 480,
+      "round": 3,
+      "id": "W128",
+      "ms": 9.747666663800677,
+      "order": [
+        "M13_Aligned",
+        "M10_GloRe",
+        "B0",
+        "W128"
+      ]
+    },
+    {
+      "size": 480,
+      "round": 4,
+      "id": "M10_GloRe",
+      "ms": 11.351386667229235,
+      "order": [
+        "M10_GloRe",
+        "M13_Aligned",
+        "B0",
+        "W128"
+      ]
+    },
+    {
+      "size": 480,
+      "round": 4,
+      "id": "M13_Aligned",
+      "ms": 10.044146670649448,
+      "order": [
+        "M10_GloRe",
+        "M13_Aligned",
+        "B0",
+        "W128"
+      ]
+    },
+    {
+      "size": 480,
+      "round": 4,
+      "id": "B0",
+      "ms": 9.051039993452529,
+      "order": [
+        "M10_GloRe",
+        "M13_Aligned",
+        "B0",
+        "W128"
+      ]
+    },
+    {
+      "size": 480,
+      "round": 4,
+      "id": "W128",
+      "ms": 8.549703331664205,
+      "order": [
+        "M10_GloRe",
+        "M13_Aligned",
+        "B0",
+        "W128"
+      ]
+    },
+    {
+      "size": 480,
+      "round": 5,
+      "id": "M10_GloRe",
+      "ms": 10.476593331744274,
+      "order": [
+        "M10_GloRe",
+        "B0",
+        "M13_Aligned",
+        "W128"
+      ]
+    },
+    {
+      "size": 480,
+      "round": 5,
+      "id": "B0",
+      "ms": 9.301030007191002,
+      "order": [
+        "M10_GloRe",
+        "B0",
+        "M13_Aligned",
+        "W128"
+      ]
+    },
+    {
+      "size": 480,
+      "round": 5,
+      "id": "M13_Aligned",
+      "ms": 10.504313333270451,
+      "order": [
+        "M10_GloRe",
+        "B0",
+        "M13_Aligned",
+        "W128"
+      ]
+    },
+    {
+      "size": 480,
+      "round": 5,
+      "id": "W128",
+      "ms": 8.947799998956421,
+      "order": [
+        "M10_GloRe",
+        "B0",
+        "M13_Aligned",
+        "W128"
+      ]
+    },
+    {
+      "size": 480,
+      "round": 6,
+      "id": "M10_GloRe",
+      "ms": 14.99054666298131,
+      "order": [
+        "M10_GloRe",
+        "B0",
+        "W128",
+        "M13_Aligned"
+      ]
+    },
+    {
+      "size": 480,
+      "round": 6,
+      "id": "B0",
+      "ms": 16.749966664550204,
+      "order": [
+        "M10_GloRe",
+        "B0",
+        "W128",
+        "M13_Aligned"
+      ]
+    },
+    {
+      "size": 480,
+      "round": 6,
+      "id": "W128",
+      "ms": 18.429393336797755,
+      "order": [
+        "M10_GloRe",
+        "B0",
+        "W128",
+        "M13_Aligned"
+      ]
+    },
+    {
+      "size": 480,
+      "round": 6,
+      "id": "M13_Aligned",
+      "ms": 18.707046665561695,
+      "order": [
+        "M10_GloRe",
+        "B0",
+        "W128",
+        "M13_Aligned"
+      ]
+    },
+    {
+      "size": 480,
+      "round": 7,
+      "id": "M13_Aligned",
+      "ms": 17.879106670928497,
+      "order": [
+        "M13_Aligned",
+        "W128",
+        "M10_GloRe",
+        "B0"
+      ]
+    },
+    {
+      "size": 480,
+      "round": 7,
+      "id": "W128",
+      "ms": 18.05856000476827,
+      "order": [
+        "M13_Aligned",
+        "W128",
+        "M10_GloRe",
+        "B0"
+      ]
+    },
+    {
+      "size": 480,
+      "round": 7,
+      "id": "M10_GloRe",
+      "ms": 20.89035667013377,
+      "order": [
+        "M13_Aligned",
+        "W128",
+        "M10_GloRe",
+        "B0"
+      ]
+    },
+    {
+      "size": 480,
+      "round": 7,
+      "id": "B0",
+      "ms": 15.845413327527544,
+      "order": [
+        "M13_Aligned",
+        "W128",
+        "M10_GloRe",
+        "B0"
+      ]
+    },
+    {
+      "size": 480,
+      "round": 8,
+      "id": "B0",
+      "ms": 15.140339996044835,
+      "order": [
+        "B0",
+        "W128",
+        "M10_GloRe",
+        "M13_Aligned"
+      ]
+    },
+    {
+      "size": 480,
+      "round": 8,
+      "id": "W128",
+      "ms": 20.73295333733161,
+      "order": [
+        "B0",
+        "W128",
+        "M10_GloRe",
+        "M13_Aligned"
+      ]
+    },
+    {
+      "size": 480,
+      "round": 8,
+      "id": "M10_GloRe",
+      "ms": 22.51902666563789,
+      "order": [
+        "B0",
+        "W128",
+        "M10_GloRe",
+        "M13_Aligned"
+      ]
+    },
+    {
+      "size": 480,
+      "round": 8,
+      "id": "M13_Aligned",
+      "ms": 18.252483336254954,
+      "order": [
+        "B0",
+        "W128",
+        "M10_GloRe",
+        "M13_Aligned"
+      ]
+    },
+    {
+      "size": 480,
+      "round": 9,
+      "id": "M10_GloRe",
+      "ms": 18.078719995295007,
+      "order": [
+        "M10_GloRe",
+        "M13_Aligned",
+        "B0",
+        "W128"
+      ]
+    },
+    {
+      "size": 480,
+      "round": 9,
+      "id": "M13_Aligned",
+      "ms": 18.702093333316345,
+      "order": [
+        "M10_GloRe",
+        "M13_Aligned",
+        "B0",
+        "W128"
+      ]
+    },
+    {
+      "size": 480,
+      "round": 9,
+      "id": "B0",
+      "ms": 9.049616660922766,
+      "order": [
+        "M10_GloRe",
+        "M13_Aligned",
+        "B0",
+        "W128"
+      ]
+    },
+    {
+      "size": 480,
+      "round": 9,
+      "id": "W128",
+      "ms": 9.143813326954842,
+      "order": [
+        "M10_GloRe",
+        "M13_Aligned",
+        "B0",
+        "W128"
+      ]
+    },
+    {
+      "size": 480,
+      "round": 10,
+      "id": "M10_GloRe",
+      "ms": 10.193070000968874,
+      "order": [
+        "M10_GloRe",
+        "M13_Aligned",
+        "B0",
+        "W128"
+      ]
+    },
+    {
+      "size": 480,
+      "round": 10,
+      "id": "M13_Aligned",
+      "ms": 10.172576666809618,
+      "order": [
+        "M10_GloRe",
+        "M13_Aligned",
+        "B0",
+        "W128"
+      ]
+    },
+    {
+      "size": 480,
+      "round": 10,
+      "id": "B0",
+      "ms": 9.315390000119805,
+      "order": [
+        "M10_GloRe",
+        "M13_Aligned",
+        "B0",
+        "W128"
+      ]
+    },
+    {
+      "size": 480,
+      "round": 10,
+      "id": "W128",
+      "ms": 11.098349994669357,
+      "order": [
+        "M10_GloRe",
+        "M13_Aligned",
+        "B0",
+        "W128"
+      ]
+    },
+    {
+      "size": 480,
+      "round": 11,
+      "id": "M10_GloRe",
+      "ms": 20.47111999709159,
+      "order": [
+        "M10_GloRe",
+        "W128",
+        "M13_Aligned",
+        "B0"
+      ]
+    },
+    {
+      "size": 480,
+      "round": 11,
+      "id": "W128",
+      "ms": 15.35022999936094,
+      "order": [
+        "M10_GloRe",
+        "W128",
+        "M13_Aligned",
+        "B0"
+      ]
+    },
+    {
+      "size": 480,
+      "round": 11,
+      "id": "M13_Aligned",
+      "ms": 18.909746664576232,
+      "order": [
+        "M10_GloRe",
+        "W128",
+        "M13_Aligned",
+        "B0"
+      ]
+    },
+    {
+      "size": 480,
+      "round": 11,
+      "id": "B0",
+      "ms": 15.692016660856703,
+      "order": [
+        "M10_GloRe",
+        "W128",
+        "M13_Aligned",
+        "B0"
+      ]
+    }
+  ],
+  "summary": [
+    {
+      "id": "B0",
+      "size": 400,
+      "median_ms": 11.532011666956047,
+      "p10_ms": 9.005578331028422,
+      "p90_ms": 17.00607866514474,
+      "paired_median_ratio_to_B0": 1.0,
+      "paired_min_ratio": 1.0,
+      "paired_max_ratio": 1.0,
+      "params": 3715170
+    },
+    {
+      "id": "W128",
+      "size": 400,
+      "median_ms": 9.587359998840839,
+      "p10_ms": 9.09276666895797,
+      "p90_ms": 16.671313330686342,
+      "paired_median_ratio_to_B0": 0.9808732172384026,
+      "paired_min_ratio": 0.6211142360202185,
+      "paired_max_ratio": 1.0944572309699614,
+      "params": 3451746
+    },
+    {
+      "id": "M13_Aligned",
+      "size": 400,
+      "median_ms": 12.602808334243793,
+      "p10_ms": 10.382287336979061,
+      "p90_ms": 18.180021671578288,
+      "paired_median_ratio_to_B0": 1.1339669087806796,
+      "paired_min_ratio": 0.643461365570427,
+      "paired_max_ratio": 2.198423454442808,
+      "params": 3470434
+    },
+    {
+      "id": "M10_GloRe",
+      "size": 400,
+      "median_ms": 13.365759995455543,
+      "p10_ms": 10.308834002353251,
+      "p90_ms": 18.23059367093568,
+      "paired_median_ratio_to_B0": 1.1777468273130975,
+      "paired_min_ratio": 0.62030039509506,
+      "paired_max_ratio": 2.0323647562002756,
+      "params": 3498978
+    },
+    {
+      "id": "B0",
+      "size": 480,
+      "median_ms": 10.062086667555073,
+      "p10_ms": 9.065909994145233,
+      "p90_ms": 15.83007366086046,
+      "paired_median_ratio_to_B0": 1.0,
+      "paired_min_ratio": 1.0,
+      "paired_max_ratio": 1.0,
+      "params": 3715170
+    },
+    {
+      "id": "W128",
+      "size": 480,
+      "median_ms": 13.224289997015148,
+      "p10_ms": 8.959940331988037,
+      "p90_ms": 18.408934335845213,
+      "paired_median_ratio_to_B0": 1.0553366953843208,
+      "paired_min_ratio": 0.9090030242259717,
+      "paired_max_ratio": 1.9011479316344322,
+      "params": 3451746
+    },
+    {
+      "id": "M13_Aligned",
+      "size": 480,
+      "median_ms": 11.920938334272554,
+      "p10_ms": 10.173208000293622,
+      "p90_ms": 18.70655133233716,
+      "paired_median_ratio_to_B0": 1.1233085811016548,
+      "paired_min_ratio": 0.6800982530985475,
+      "paired_max_ratio": 2.066617187673156,
+      "params": 3470434
+    },
+    {
+      "id": "M10_GloRe",
+      "size": 480,
+      "median_ms": 13.779018330387771,
+      "p10_ms": 10.221422334046414,
+      "p90_ms": 20.84843300282955,
+      "paired_median_ratio_to_B0": 1.2130569370995343,
+      "paired_min_ratio": 0.7100530106449057,
+      "paired_max_ratio": 2.198141106398434,
+      "params": 3498978
+    }
+  ],
+  "test_used": false
+}

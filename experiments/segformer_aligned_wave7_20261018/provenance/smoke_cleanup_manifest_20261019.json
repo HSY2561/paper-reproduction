@@ -1,0 +1,1128 @@
+{
+  "reason": "Completed smoke weight/optimizer copies are redundant; preserve logs, true exit and full18k/frozen checkpoints. Reserve disk for matched seeds and public controls.",
+  "candidates": [
+    {
+      "root": "D:\\\u8bba\u6587\u590d\u73b0\\experiments\\segformer_aligned_wave7_20261018\\training\\smoke_A01_GloRe",
+      "full_run_status": "complete",
+      "files": [
+        {
+          "relative": "best_model\\model.pdparams",
+          "bytes": 14088122,
+          "sha256": "055c737891434bdaf6b5994c6b68fc3d3e1c7b3780b03cf4a08c04ee3b61d84a"
+        },
+        {
+          "relative": "best_model\\model.pdstates",
+          "bytes": 162,
+          "sha256": "2988cb599645f42cb5a28b4da6cf026f1e4a45d4abb063283453757e851a2b44"
+        },
+        {
+          "relative": "ema_best_model\\ema_model.pdparams",
+          "bytes": 14090690,
+          "sha256": "20039654a582244566731ff111c4e91cc605404750ff091f12097fa02f80411e"
+        },
+        {
+          "relative": "ema_best_model\\ema_model.pdstates",
+          "bytes": 162,
+          "sha256": "fd97fb756ffe753779cdc07cebc81dfc9253f812b6940d9f2ce822ebccc1141b"
+        },
+        {
+          "relative": "iter_20\\ema_model.pdparams",
+          "bytes": 14090690,
+          "sha256": "20039654a582244566731ff111c4e91cc605404750ff091f12097fa02f80411e"
+        },
+        {
+          "relative": "iter_20\\ema_model.pdstates",
+          "bytes": 162,
+          "sha256": "fd97fb756ffe753779cdc07cebc81dfc9253f812b6940d9f2ce822ebccc1141b"
+        },
+        {
+          "relative": "iter_20\\model.pdopt",
+          "bytes": 28210978,
+          "sha256": "1cbc43152c75b04fb21eedc6378b5f782c4d6f75f1f18f1ef6201f0cc8d3a70a"
+        },
+        {
+          "relative": "iter_20\\model.pdparams",
+          "bytes": 14088122,
+          "sha256": "055c737891434bdaf6b5994c6b68fc3d3e1c7b3780b03cf4a08c04ee3b61d84a"
+        },
+        {
+          "relative": "iter_20\\model.pdstates",
+          "bytes": 162,
+          "sha256": "2988cb599645f42cb5a28b4da6cf026f1e4a45d4abb063283453757e851a2b44"
+        }
+      ]
+    },
+    {
+      "root": "D:\\\u8bba\u6587\u590d\u73b0\\experiments\\segformer_aligned_wave7_20261018\\training\\smoke_A02_ASPPsep",
+      "full_run_status": "complete",
+      "files": [
+        {
+          "relative": "best_model\\model.pdparams",
+          "bytes": 14320119,
+          "sha256": "465e060b661ca7bdfee182e0d07a5edd59c935c8cf04c069aaada1e83372a7ee"
+        },
+        {
+          "relative": "best_model\\model.pdstates",
+          "bytes": 162,
+          "sha256": "f4a54a7ffd9da54d83f7a5134a725d46636900698219ea69824a4d432dc24de4"
+        },
+        {
+          "relative": "ema_best_model\\ema_model.pdparams",
+          "bytes": 14322999,
+          "sha256": "f762fe3890d3bfd94553aacec956db0c7a31f0afcf2c2e647f5db1fb6991368f"
+        },
+        {
+          "relative": "ema_best_model\\ema_model.pdstates",
+          "bytes": 162,
+          "sha256": "ab7e691c3baa3ca7e289526aec042bbc42b31fe65a8973f44f017f351dc28779"
+        },
+        {
+          "relative": "iter_20\\ema_model.pdparams",
+          "bytes": 14322999,
+          "sha256": "f762fe3890d3bfd94553aacec956db0c7a31f0afcf2c2e647f5db1fb6991368f"
+        },
+        {
+          "relative": "iter_20\\ema_model.pdstates",
+          "bytes": 162,
+          "sha256": "ab7e691c3baa3ca7e289526aec042bbc42b31fe65a8973f44f017f351dc28779"
+        },
+        {
+          "relative": "iter_20\\model.pdopt",
+          "bytes": 28666032,
+          "sha256": "0d735fb4e03cb42bc89a1457ca0157df974523da97ab74eb0139c97b873b328f"
+        },
+        {
+          "relative": "iter_20\\model.pdparams",
+          "bytes": 14320119,
+          "sha256": "465e060b661ca7bdfee182e0d07a5edd59c935c8cf04c069aaada1e83372a7ee"
+        },
+        {
+          "relative": "iter_20\\model.pdstates",
+          "bytes": 162,
+          "sha256": "f4a54a7ffd9da54d83f7a5134a725d46636900698219ea69824a4d432dc24de4"
+        }
+      ]
+    },
+    {
+      "root": "D:\\\u8bba\u6587\u590d\u73b0\\experiments\\segformer_aligned_wave7_20261018\\training\\smoke_A03_Encoding",
+      "full_run_status": "complete",
+      "files": [
+        {
+          "relative": "best_model\\model.pdparams",
+          "bytes": 14446638,
+          "sha256": "6c747508ba9e666225c64bfccd007e42ea1fc037e957357ff92d38b7eb8caacc"
+        },
+        {
+          "relative": "best_model\\model.pdstates",
+          "bytes": 162,
+          "sha256": "7418abd375a2cac49777acf6ed851d6f4b0aa4e6928bf08d59249bfc77e9a5c9"
+        },
+        {
+          "relative": "ema_best_model\\ema_model.pdparams",
+          "bytes": 14449232,
+          "sha256": "526017d7f121166dffb1b780d173a35c990f2274260367e2e7de2fc05351ad7e"
+        },
+        {
+          "relative": "ema_best_model\\ema_model.pdstates",
+          "bytes": 162,
+          "sha256": "2fefa8c5fe536dbe5d36d74abf556e062bb2934216e8a597e4dfd3f07f1afbd2"
+        },
+        {
+          "relative": "iter_20\\ema_model.pdparams",
+          "bytes": 14449232,
+          "sha256": "526017d7f121166dffb1b780d173a35c990f2274260367e2e7de2fc05351ad7e"
+        },
+        {
+          "relative": "iter_20\\ema_model.pdstates",
+          "bytes": 162,
+          "sha256": "2fefa8c5fe536dbe5d36d74abf556e062bb2934216e8a597e4dfd3f07f1afbd2"
+        },
+        {
+          "relative": "iter_20\\model.pdopt",
+          "bytes": 28927230,
+          "sha256": "6fd4d420bf6df8a35b6570b6d20ec312d8c499307c0311df77b44217aa99843f"
+        },
+        {
+          "relative": "iter_20\\model.pdparams",
+          "bytes": 14446638,
+          "sha256": "6c747508ba9e666225c64bfccd007e42ea1fc037e957357ff92d38b7eb8caacc"
+        },
+        {
+          "relative": "iter_20\\model.pdstates",
+          "bytes": 162,
+          "sha256": "7418abd375a2cac49777acf6ed851d6f4b0aa4e6928bf08d59249bfc77e9a5c9"
+        }
+      ]
+    },
+    {
+      "root": "D:\\\u8bba\u6587\u590d\u73b0\\experiments\\segformer_aligned_wave7_20261018\\training\\smoke_A04_ExternalAttention",
+      "full_run_status": "complete",
+      "files": [
+        {
+          "relative": "best_model\\model.pdparams",
+          "bytes": 14033870,
+          "sha256": "118e4b907565ceffaac9d9fac85bb170f59ec9095671492d3630d5b016bd40e0"
+        },
+        {
+          "relative": "best_model\\model.pdstates",
+          "bytes": 162,
+          "sha256": "40fd4984a14eb1070b7a70441316eb2bd794847f6dbaf3dbfa9027e514c8e779"
+        },
+        {
+          "relative": "ema_best_model\\ema_model.pdparams",
+          "bytes": 14036360,
+          "sha256": "0c0f2c2a8d343a74cd7d14ed85bfeaadc76d266215ce8ce81e5b6107441d2ccc"
+        },
+        {
+          "relative": "ema_best_model\\ema_model.pdstates",
+          "bytes": 162,
+          "sha256": "ff3d9313e3a16a0a38d85a6bedc7a8e6f04d7074dd8e38920f4d744d02b663da"
+        },
+        {
+          "relative": "iter_20\\ema_model.pdparams",
+          "bytes": 14036360,
+          "sha256": "0c0f2c2a8d343a74cd7d14ed85bfeaadc76d266215ce8ce81e5b6107441d2ccc"
+        },
+        {
+          "relative": "iter_20\\ema_model.pdstates",
+          "bytes": 162,
+          "sha256": "ff3d9313e3a16a0a38d85a6bedc7a8e6f04d7074dd8e38920f4d744d02b663da"
+        },
+        {
+          "relative": "iter_20\\model.pdopt",
+          "bytes": 28101466,
+          "sha256": "c04f50d91857ee45132f11ff34e5aaf21f8db29ca8b8c49a1ee4f2be6ea906ad"
+        },
+        {
+          "relative": "iter_20\\model.pdparams",
+          "bytes": 14033870,
+          "sha256": "118e4b907565ceffaac9d9fac85bb170f59ec9095671492d3630d5b016bd40e0"
+        },
+        {
+          "relative": "iter_20\\model.pdstates",
+          "bytes": 162,
+          "sha256": "40fd4984a14eb1070b7a70441316eb2bd794847f6dbaf3dbfa9027e514c8e779"
+        }
+      ]
+    },
+    {
+      "root": "D:\\\u8bba\u6587\u590d\u73b0\\experiments\\segformer_aligned_wave7_20261018\\training\\smoke_A05_ContextEmbedding",
+      "full_run_status": "complete",
+      "files": [
+        {
+          "relative": "best_model\\model.pdparams",
+          "bytes": 16531040,
+          "sha256": "c21c3a5e38e364e5dda6a45f25fbc4303390044834fe39b83daf5ac1cf9c55e7"
+        },
+        {
+          "relative": "best_model\\model.pdstates",
+          "bytes": 162,
+          "sha256": "f1d82ed125f4dcdca0399788fcb8cfc98bc9814c51d044ac87f45990765d6be0"
+        },
+        {
+          "relative": "ema_best_model\\ema_model.pdparams",
+          "bytes": 16533608,
+          "sha256": "283e2eb12e97840d19e2ca4ca68506cc7095a6b75b3c7f6775fd8230bc21232c"
+        },
+        {
+          "relative": "ema_best_model\\ema_model.pdstates",
+          "bytes": 162,
+          "sha256": "ea3f83f8f7f4addd3a7c7fc07a722972e79ff2b654bcdb08745d1cc2b8823e4e"
+        },
+        {
+          "relative": "iter_20\\ema_model.pdparams",
+          "bytes": 16533608,
+          "sha256": "283e2eb12e97840d19e2ca4ca68506cc7095a6b75b3c7f6775fd8230bc21232c"
+        },
+        {
+          "relative": "iter_20\\ema_model.pdstates",
+          "bytes": 162,
+          "sha256": "ea3f83f8f7f4addd3a7c7fc07a722972e79ff2b654bcdb08745d1cc2b8823e4e"
+        },
+        {
+          "relative": "iter_20\\model.pdopt",
+          "bytes": 33091750,
+          "sha256": "d1fc78e86383afd2aafbd3e7657c2ee13f6f3468b453cb57ee94b9099e05557a"
+        },
+        {
+          "relative": "iter_20\\model.pdparams",
+          "bytes": 16531040,
+          "sha256": "c21c3a5e38e364e5dda6a45f25fbc4303390044834fe39b83daf5ac1cf9c55e7"
+        },
+        {
+          "relative": "iter_20\\model.pdstates",
+          "bytes": 162,
+          "sha256": "f1d82ed125f4dcdca0399788fcb8cfc98bc9814c51d044ac87f45990765d6be0"
+        }
+      ]
+    },
+    {
+      "root": "D:\\\u8bba\u6587\u590d\u73b0\\experiments\\segformer_aligned_wave7_20261018\\training\\smoke_A06_DNL",
+      "full_run_status": "complete",
+      "files": [
+        {
+          "relative": "best_model\\model.pdparams",
+          "bytes": 14167311,
+          "sha256": "3317eba091cd0912d84018225db8e7dc43d5f116ea208c60841ecfab9a4fabec"
+        },
+        {
+          "relative": "best_model\\model.pdstates",
+          "bytes": 162,
+          "sha256": "51ed4ee6963a51a011cc8463e8963472eaa0b0a29b66b5844581cca23c85ae42"
+        },
+        {
+          "relative": "ema_best_model\\ema_model.pdparams",
+          "bytes": 14169892,
+          "sha256": "e7737e54c5db075f5462d3033c67474a11955d8b7934c4b15a28498b2e3bb032"
+        },
+        {
+          "relative": "ema_best_model\\ema_model.pdstates",
+          "bytes": 162,
+          "sha256": "4226ca6d8f6b3cff1d4d0ab93969238c62c481271f74f4e35d6d1f2200c39164"
+        },
+        {
+          "relative": "iter_20\\ema_model.pdparams",
+          "bytes": 14169892,
+          "sha256": "e7737e54c5db075f5462d3033c67474a11955d8b7934c4b15a28498b2e3bb032"
+        },
+        {
+          "relative": "iter_20\\ema_model.pdstates",
+          "bytes": 162,
+          "sha256": "4226ca6d8f6b3cff1d4d0ab93969238c62c481271f74f4e35d6d1f2200c39164"
+        },
+        {
+          "relative": "iter_20\\model.pdopt",
+          "bytes": 28369630,
+          "sha256": "91e76e841256f523f5b688bf90610079262935247e18fbdb9b807abfec30520a"
+        },
+        {
+          "relative": "iter_20\\model.pdparams",
+          "bytes": 14167311,
+          "sha256": "3317eba091cd0912d84018225db8e7dc43d5f116ea208c60841ecfab9a4fabec"
+        },
+        {
+          "relative": "iter_20\\model.pdstates",
+          "bytes": 162,
+          "sha256": "51ed4ee6963a51a011cc8463e8963472eaa0b0a29b66b5844581cca23c85ae42"
+        }
+      ]
+    },
+    {
+      "root": "D:\\\u8bba\u6587\u590d\u73b0\\experiments\\segformer_aligned_wave7_20261018\\training\\smoke_A07_PPContext",
+      "full_run_status": "complete",
+      "files": [
+        {
+          "relative": "best_model\\model.pdparams",
+          "bytes": 14101687,
+          "sha256": "b0d2dbd601f5ef3208bf99afe96cacb4c0bfe8e5c52e98f7e562bad282c71466"
+        },
+        {
+          "relative": "best_model\\model.pdstates",
+          "bytes": 162,
+          "sha256": "ff675c54ec66344fe27362283ff97055d3ac581565900d4be35939da40baf046"
+        },
+        {
+          "relative": "ema_best_model\\ema_model.pdparams",
+          "bytes": 14104411,
+          "sha256": "51ecad203a265ceadcd076416abd1cbf8cfc4009b41e026bcb8685f260f8626c"
+        },
+        {
+          "relative": "ema_best_model\\ema_model.pdstates",
+          "bytes": 162,
+          "sha256": "be2fb0ba56291591264fdf198da685bbf3f64511d5989637c6ca79b53a3dd471"
+        },
+        {
+          "relative": "iter_20\\ema_model.pdparams",
+          "bytes": 14104411,
+          "sha256": "51ecad203a265ceadcd076416abd1cbf8cfc4009b41e026bcb8685f260f8626c"
+        },
+        {
+          "relative": "iter_20\\ema_model.pdstates",
+          "bytes": 162,
+          "sha256": "be2fb0ba56291591264fdf198da685bbf3f64511d5989637c6ca79b53a3dd471"
+        },
+        {
+          "relative": "iter_20\\model.pdopt",
+          "bytes": 28238204,
+          "sha256": "179d37ce5785d820865dc4f0f35376d8a827208fdab3821bda7417f5eb497e4d"
+        },
+        {
+          "relative": "iter_20\\model.pdparams",
+          "bytes": 14101687,
+          "sha256": "b0d2dbd601f5ef3208bf99afe96cacb4c0bfe8e5c52e98f7e562bad282c71466"
+        },
+        {
+          "relative": "iter_20\\model.pdstates",
+          "bytes": 162,
+          "sha256": "ff675c54ec66344fe27362283ff97055d3ac581565900d4be35939da40baf046"
+        }
+      ]
+    },
+    {
+      "root": "D:\\\u8bba\u6587\u590d\u73b0\\experiments\\segformer_aligned_wave7_20261018\\training\\smoke_A09_APNB",
+      "full_run_status": "complete",
+      "files": [
+        {
+          "relative": "best_model\\model.pdparams",
+          "bytes": 14695738,
+          "sha256": "ecbf52ac725556f7fddc7b80edb32ba81ac5a2e91e5166a46847f7fb08b3def3"
+        },
+        {
+          "relative": "best_model\\model.pdstates",
+          "bytes": 162,
+          "sha256": "e8843a49797c2ad192f81a3e42fdb4075b13259c7e6d47c97591a42d125c1f2a"
+        },
+        {
+          "relative": "ema_best_model\\ema_model.pdparams",
+          "bytes": 14698436,
+          "sha256": "f34c9333bc72f0664e386e3db77982ba795972397447b8b953988eb0c09f75d8"
+        },
+        {
+          "relative": "ema_best_model\\ema_model.pdstates",
+          "bytes": 162,
+          "sha256": "92455c2f8c9c4c508ecf97e6cceecced5dfc3e34e36312ac70b5f495fba42c95"
+        },
+        {
+          "relative": "iter_20\\ema_model.pdparams",
+          "bytes": 14698436,
+          "sha256": "f34c9333bc72f0664e386e3db77982ba795972397447b8b953988eb0c09f75d8"
+        },
+        {
+          "relative": "iter_20\\ema_model.pdstates",
+          "bytes": 162,
+          "sha256": "92455c2f8c9c4c508ecf97e6cceecced5dfc3e34e36312ac70b5f495fba42c95"
+        },
+        {
+          "relative": "iter_20\\model.pdopt",
+          "bytes": 29290116,
+          "sha256": "d4fe768d4934c434d37e5dccce683e33afac16027c1f17c81766ea0fcccde1ee"
+        },
+        {
+          "relative": "iter_20\\model.pdparams",
+          "bytes": 14695738,
+          "sha256": "ecbf52ac725556f7fddc7b80edb32ba81ac5a2e91e5166a46847f7fb08b3def3"
+        },
+        {
+          "relative": "iter_20\\model.pdstates",
+          "bytes": 162,
+          "sha256": "e8843a49797c2ad192f81a3e42fdb4075b13259c7e6d47c97591a42d125c1f2a"
+        }
+      ]
+    },
+    {
+      "root": "D:\\\u8bba\u6587\u590d\u73b0\\experiments\\segformer_aligned_wave7_20261018\\training\\smoke_A10_AFNB",
+      "full_run_status": "complete",
+      "files": [
+        {
+          "relative": "best_model\\model.pdparams",
+          "bytes": 14646566,
+          "sha256": "b77ddbd403b8e57021b47939043ef5ba3aca31bff306e2e0a39ad4b5cf807038"
+        },
+        {
+          "relative": "best_model\\model.pdstates",
+          "bytes": 162,
+          "sha256": "4137e0008722a24372c8e689050b70371416a5d6594c4cabedcd1bbc6471fb49"
+        },
+        {
+          "relative": "ema_best_model\\ema_model.pdparams",
+          "bytes": 14649264,
+          "sha256": "0a20946c8a1bd2b91d476524503f7a56e7f75cceb2709f20535023d0b1834568"
+        },
+        {
+          "relative": "ema_best_model\\ema_model.pdstates",
+          "bytes": 162,
+          "sha256": "316fdf740a52ec6b78e1e9155ad08ec17470ae7e38e73447246b92e6cb8ee0ef"
+        },
+        {
+          "relative": "iter_20\\ema_model.pdparams",
+          "bytes": 14649264,
+          "sha256": "0a20946c8a1bd2b91d476524503f7a56e7f75cceb2709f20535023d0b1834568"
+        },
+        {
+          "relative": "iter_20\\ema_model.pdstates",
+          "bytes": 162,
+          "sha256": "316fdf740a52ec6b78e1e9155ad08ec17470ae7e38e73447246b92e6cb8ee0ef"
+        },
+        {
+          "relative": "iter_20\\model.pdopt",
+          "bytes": 29325934,
+          "sha256": "65a0e84033eaa35d57ce950e18cb8e9427a2606369f7ad72cb9387d1379e2da1"
+        },
+        {
+          "relative": "iter_20\\model.pdparams",
+          "bytes": 14646566,
+          "sha256": "b77ddbd403b8e57021b47939043ef5ba3aca31bff306e2e0a39ad4b5cf807038"
+        },
+        {
+          "relative": "iter_20\\model.pdstates",
+          "bytes": 162,
+          "sha256": "4137e0008722a24372c8e689050b70371416a5d6594c4cabedcd1bbc6471fb49"
+        }
+      ]
+    },
+    {
+      "root": "D:\\\u8bba\u6587\u590d\u73b0\\experiments\\segformer_aligned_wave7_20261018\\training\\smoke_A11_JPU",
+      "full_run_status": "complete",
+      "files": [
+        {
+          "relative": "best_model\\model.pdparams",
+          "bytes": 14204709,
+          "sha256": "ca7f2b6954d11460c9d479dc14e65c769ebbfb6ff0a5f11a8fa78f6f8a205e9c"
+        },
+        {
+          "relative": "best_model\\model.pdstates",
+          "bytes": 162,
+          "sha256": "fa810f103dffd73b1c706980bfe431f2c3e1666bc388cba44c4ef9819b37116f"
+        },
+        {
+          "relative": "ema_best_model\\ema_model.pdparams",
+          "bytes": 14207836,
+          "sha256": "298ef21f83fa5e5476cdd7f4921c54c91657ae0efc22c8437a5befa7bb0452de"
+        },
+        {
+          "relative": "ema_best_model\\ema_model.pdstates",
+          "bytes": 162,
+          "sha256": "830ec1a461e61d7288176ae22d276a65269e488c5d2a836d22b0da0cc8b622ce"
+        },
+        {
+          "relative": "iter_20\\ema_model.pdparams",
+          "bytes": 14207836,
+          "sha256": "298ef21f83fa5e5476cdd7f4921c54c91657ae0efc22c8437a5befa7bb0452de"
+        },
+        {
+          "relative": "iter_20\\ema_model.pdstates",
+          "bytes": 162,
+          "sha256": "830ec1a461e61d7288176ae22d276a65269e488c5d2a836d22b0da0cc8b622ce"
+        },
+        {
+          "relative": "iter_20\\model.pdopt",
+          "bytes": 28442684,
+          "sha256": "377fa753bc9776675019423a91e8e1796d9970ace50a80fb07868cf6f4216e20"
+        },
+        {
+          "relative": "iter_20\\model.pdparams",
+          "bytes": 14204709,
+          "sha256": "ca7f2b6954d11460c9d479dc14e65c769ebbfb6ff0a5f11a8fa78f6f8a205e9c"
+        },
+        {
+          "relative": "iter_20\\model.pdstates",
+          "bytes": 162,
+          "sha256": "fa810f103dffd73b1c706980bfe431f2c3e1666bc388cba44c4ef9819b37116f"
+        }
+      ]
+    },
+    {
+      "root": "D:\\\u8bba\u6587\u590d\u73b0\\experiments\\segformer_aligned_wave7_20261018\\training\\smoke_A12_DCM",
+      "full_run_status": "complete",
+      "files": [
+        {
+          "relative": "best_model\\model.pdparams",
+          "bytes": 14701665,
+          "sha256": "d4c3639c7224dac27f316457519d5ec9f105b29232a0f0c5fd6a6eea202c6eb1"
+        },
+        {
+          "relative": "best_model\\model.pdstates",
+          "bytes": 162,
+          "sha256": "4133b357a9a4e5832e661d5c84e367fdd11cf79ed45c251f1aadcda398ef74cb"
+        },
+        {
+          "relative": "ema_best_model\\ema_model.pdparams",
+          "bytes": 14704311,
+          "sha256": "6c396b3108e5a821d7e82931392828e4497c55687bb4882a5cd1b12d2dd49003"
+        },
+        {
+          "relative": "ema_best_model\\ema_model.pdstates",
+          "bytes": 162,
+          "sha256": "0e45cd8579d389541a72fcc3cf3cd5ea513be2c52d7e7dfc5eb5215ea8c7b6f7"
+        },
+        {
+          "relative": "iter_20\\ema_model.pdparams",
+          "bytes": 14704311,
+          "sha256": "6c396b3108e5a821d7e82931392828e4497c55687bb4882a5cd1b12d2dd49003"
+        },
+        {
+          "relative": "iter_20\\ema_model.pdstates",
+          "bytes": 162,
+          "sha256": "0e45cd8579d389541a72fcc3cf3cd5ea513be2c52d7e7dfc5eb5215ea8c7b6f7"
+        },
+        {
+          "relative": "iter_20\\model.pdopt",
+          "bytes": 29429440,
+          "sha256": "60fcfbfa6d3dadae063335e5335469cb09f0348e612f8c4c15ead64728286ef4"
+        },
+        {
+          "relative": "iter_20\\model.pdparams",
+          "bytes": 14701665,
+          "sha256": "d4c3639c7224dac27f316457519d5ec9f105b29232a0f0c5fd6a6eea202c6eb1"
+        },
+        {
+          "relative": "iter_20\\model.pdstates",
+          "bytes": 162,
+          "sha256": "4133b357a9a4e5832e661d5c84e367fdd11cf79ed45c251f1aadcda398ef74cb"
+        }
+      ]
+    },
+    {
+      "root": "D:\\\u8bba\u6587\u590d\u73b0\\experiments\\segformer_aligned_wave7_20261018\\training\\smoke_A13_EMAU",
+      "full_run_status": "complete",
+      "files": [
+        {
+          "relative": "best_model\\model.pdparams",
+          "bytes": 13930921,
+          "sha256": "563014ebcf9cf98c40f1a44ce8628cd7618a158f120369b44068945cffb4cbf7"
+        },
+        {
+          "relative": "best_model\\model.pdstates",
+          "bytes": 162,
+          "sha256": "b21c2e8500e7835a5a5b25b1580efd161c5a68a6d574e4b2bc63f1bb405e2f4a"
+        },
+        {
+          "relative": "ema_best_model\\ema_model.pdparams",
+          "bytes": 13933345,
+          "sha256": "c7a88e0b01f0b7348dc335edceff274867163df54621417d225d3e783d99fc7b"
+        },
+        {
+          "relative": "ema_best_model\\ema_model.pdstates",
+          "bytes": 162,
+          "sha256": "7d8fbeeb982b3949cdff96cd23cd753d16dce35bd8c19632c06d1a124c39328a"
+        },
+        {
+          "relative": "iter_20\\ema_model.pdparams",
+          "bytes": 13933345,
+          "sha256": "c7a88e0b01f0b7348dc335edceff274867163df54621417d225d3e783d99fc7b"
+        },
+        {
+          "relative": "iter_20\\ema_model.pdstates",
+          "bytes": 162,
+          "sha256": "7d8fbeeb982b3949cdff96cd23cd753d16dce35bd8c19632c06d1a124c39328a"
+        },
+        {
+          "relative": "iter_20\\model.pdopt",
+          "bytes": 27833458,
+          "sha256": "816daee1e6e37158660b2f1898eebd732b8015b3a3f2d54109bb2c4ec2a4aa3f"
+        },
+        {
+          "relative": "iter_20\\model.pdparams",
+          "bytes": 13930921,
+          "sha256": "563014ebcf9cf98c40f1a44ce8628cd7618a158f120369b44068945cffb4cbf7"
+        },
+        {
+          "relative": "iter_20\\model.pdstates",
+          "bytes": 162,
+          "sha256": "b21c2e8500e7835a5a5b25b1580efd161c5a68a6d574e4b2bc63f1bb405e2f4a"
+        }
+      ]
+    },
+    {
+      "root": "D:\\\u8bba\u6587\u590d\u73b0\\experiments\\segformer_aligned_wave7_20261018\\training\\smoke_A14_NonLocal",
+      "full_run_status": "complete",
+      "files": [
+        {
+          "relative": "best_model\\model.pdparams",
+          "bytes": 14166164,
+          "sha256": "917a347ba5af511b75112ab6e231b7987b5c9479a806643f452d53d8c4817d88"
+        },
+        {
+          "relative": "best_model\\model.pdstates",
+          "bytes": 162,
+          "sha256": "844b03382617b37908a28af4667eedb8fb40a17417e458ffce336f040ab98952"
+        },
+        {
+          "relative": "ema_best_model\\ema_model.pdparams",
+          "bytes": 14168719,
+          "sha256": "d1c03c2e7144b3f844d451d4022c713abd0e93fb33326f2b99a394e5cdfe125c"
+        },
+        {
+          "relative": "ema_best_model\\ema_model.pdstates",
+          "bytes": 162,
+          "sha256": "9f3b7f8de2b7b18d07d004d5b9db852b8072e4dafa5bcd7738ec3bbb1e253f72"
+        },
+        {
+          "relative": "iter_20\\ema_model.pdparams",
+          "bytes": 14168719,
+          "sha256": "d1c03c2e7144b3f844d451d4022c713abd0e93fb33326f2b99a394e5cdfe125c"
+        },
+        {
+          "relative": "iter_20\\ema_model.pdstates",
+          "bytes": 162,
+          "sha256": "9f3b7f8de2b7b18d07d004d5b9db852b8072e4dafa5bcd7738ec3bbb1e253f72"
+        },
+        {
+          "relative": "iter_20\\model.pdopt",
+          "bytes": 28366838,
+          "sha256": "1bc7fc314038321b70cafe8c42856687ea5645fda14443fd8026058ce5b59c54"
+        },
+        {
+          "relative": "iter_20\\model.pdparams",
+          "bytes": 14166164,
+          "sha256": "917a347ba5af511b75112ab6e231b7987b5c9479a806643f452d53d8c4817d88"
+        },
+        {
+          "relative": "iter_20\\model.pdstates",
+          "bytes": 162,
+          "sha256": "844b03382617b37908a28af4667eedb8fb40a17417e458ffce336f040ab98952"
+        }
+      ]
+    },
+    {
+      "root": "D:\\\u8bba\u6587\u590d\u73b0\\experiments\\segformer_aligned_wave7_20261018\\training\\smoke_A15_AttentionRefinement",
+      "full_run_status": "complete",
+      "files": [
+        {
+          "relative": "best_model\\model.pdparams",
+          "bytes": 14558769,
+          "sha256": "d3f62b6df22761cc957a3e43e7539e945a6224db34437649b0e885a0992ea2e0"
+        },
+        {
+          "relative": "best_model\\model.pdstates",
+          "bytes": 162,
+          "sha256": "b84475383d46821d82faba9a12dff27326ee52c1378ebd48eec5230dc59bc401"
+        },
+        {
+          "relative": "ema_best_model\\ema_model.pdparams",
+          "bytes": 14561311,
+          "sha256": "bc4174273dbc5b97edeb356958fb230e7369eb82a19237bcd8a862ffe5cdd892"
+        },
+        {
+          "relative": "ema_best_model\\ema_model.pdstates",
+          "bytes": 162,
+          "sha256": "6955efe8854734507daeb1f35629908067ed631852d34f75321b6813bfc23560"
+        },
+        {
+          "relative": "iter_20\\ema_model.pdparams",
+          "bytes": 14561311,
+          "sha256": "bc4174273dbc5b97edeb356958fb230e7369eb82a19237bcd8a862ffe5cdd892"
+        },
+        {
+          "relative": "iter_20\\ema_model.pdstates",
+          "bytes": 162,
+          "sha256": "6955efe8854734507daeb1f35629908067ed631852d34f75321b6813bfc23560"
+        },
+        {
+          "relative": "iter_20\\model.pdopt",
+          "bytes": 29150658,
+          "sha256": "048e01f6a0235b82464598a5a6160a33b2f86655817e97621733038589cd64c8"
+        },
+        {
+          "relative": "iter_20\\model.pdparams",
+          "bytes": 14558769,
+          "sha256": "d3f62b6df22761cc957a3e43e7539e945a6224db34437649b0e885a0992ea2e0"
+        },
+        {
+          "relative": "iter_20\\model.pdstates",
+          "bytes": 162,
+          "sha256": "b84475383d46821d82faba9a12dff27326ee52c1378ebd48eec5230dc59bc401"
+        }
+      ]
+    },
+    {
+      "root": "D:\\\u8bba\u6587\u590d\u73b0\\experiments\\segformer_aligned_wave7_20261018\\training\\smoke_A16_CAM",
+      "full_run_status": "complete",
+      "files": [
+        {
+          "relative": "best_model\\model.pdparams",
+          "bytes": 13898151,
+          "sha256": "ddda7791e8cbee4ba63fc359143ebe33ffc59cba9843912974cf170d60b721d5"
+        },
+        {
+          "relative": "best_model\\model.pdstates",
+          "bytes": 162,
+          "sha256": "bc75a57e342a9b5dd6f3c746e44053657764897e2d5581ad6ef7f2008e7ba4f1"
+        },
+        {
+          "relative": "ema_best_model\\ema_model.pdparams",
+          "bytes": 13900576,
+          "sha256": "f5e5741a3dadf78ff60e4df42e01dc9b2f7bea95dc66616d5c12101aacf5df03"
+        },
+        {
+          "relative": "ema_best_model\\ema_model.pdstates",
+          "bytes": 162,
+          "sha256": "4caa483836681017bd8f3b672ee0a791079fd8bdf4e8a46ffa356b4f29e81efc"
+        },
+        {
+          "relative": "iter_20\\ema_model.pdparams",
+          "bytes": 13900576,
+          "sha256": "f5e5741a3dadf78ff60e4df42e01dc9b2f7bea95dc66616d5c12101aacf5df03"
+        },
+        {
+          "relative": "iter_20\\ema_model.pdstates",
+          "bytes": 162,
+          "sha256": "4caa483836681017bd8f3b672ee0a791079fd8bdf4e8a46ffa356b4f29e81efc"
+        },
+        {
+          "relative": "iter_20\\model.pdopt",
+          "bytes": 27833794,
+          "sha256": "d11558d0cf2c412a9e41729d18a365b4aeee2009b2887d3433ff7661ae8683f5"
+        },
+        {
+          "relative": "iter_20\\model.pdparams",
+          "bytes": 13898151,
+          "sha256": "ddda7791e8cbee4ba63fc359143ebe33ffc59cba9843912974cf170d60b721d5"
+        },
+        {
+          "relative": "iter_20\\model.pdstates",
+          "bytes": 162,
+          "sha256": "bc75a57e342a9b5dd6f3c746e44053657764897e2d5581ad6ef7f2008e7ba4f1"
+        }
+      ]
+    },
+    {
+      "root": "D:\\\u8bba\u6587\u590d\u73b0\\experiments\\segformer_aligned_wave7_20261018\\training\\smoke_A17_CCA",
+      "full_run_status": "complete",
+      "files": [
+        {
+          "relative": "best_model\\model.pdparams",
+          "bytes": 14227653,
+          "sha256": "7684960f6e749321acf22ba82a195848031288e8a574a9bee2943f0eae33d39c"
+        },
+        {
+          "relative": "best_model\\model.pdstates",
+          "bytes": 162,
+          "sha256": "4197cff3ad300f839064bea01717cbdfe96cb37298817a0454fb7e2c3810c2b7"
+        },
+        {
+          "relative": "ema_best_model\\ema_model.pdparams",
+          "bytes": 14230156,
+          "sha256": "198e19ac40d7f35cc3dd22d2a376b4adc0ef1b9dd90b09b0cf28e0aa5441ae72"
+        },
+        {
+          "relative": "ema_best_model\\ema_model.pdstates",
+          "bytes": 162,
+          "sha256": "dc352fdf511e366d407559c79bf303f6517ba62153cadb5b2d024dbbe8fac2ac"
+        },
+        {
+          "relative": "iter_20\\ema_model.pdparams",
+          "bytes": 14230156,
+          "sha256": "198e19ac40d7f35cc3dd22d2a376b4adc0ef1b9dd90b09b0cf28e0aa5441ae72"
+        },
+        {
+          "relative": "iter_20\\ema_model.pdstates",
+          "bytes": 162,
+          "sha256": "dc352fdf511e366d407559c79bf303f6517ba62153cadb5b2d024dbbe8fac2ac"
+        },
+        {
+          "relative": "iter_20\\model.pdopt",
+          "bytes": 28494106,
+          "sha256": "e76659ec1142628801f74112d8e003bfd11ed3f38fe0065d60f4bc8e79642e08"
+        },
+        {
+          "relative": "iter_20\\model.pdparams",
+          "bytes": 14227653,
+          "sha256": "7684960f6e749321acf22ba82a195848031288e8a574a9bee2943f0eae33d39c"
+        },
+        {
+          "relative": "iter_20\\model.pdstates",
+          "bytes": 162,
+          "sha256": "4197cff3ad300f839064bea01717cbdfe96cb37298817a0454fb7e2c3810c2b7"
+        }
+      ]
+    },
+    {
+      "root": "D:\\\u8bba\u6587\u590d\u73b0\\experiments\\segformer_aligned_wave7_20261018\\training\\smoke_A18_PAM",
+      "full_run_status": "complete",
+      "files": [
+        {
+          "relative": "best_model\\model.pdparams",
+          "bytes": 14227655,
+          "sha256": "e205341ef43df2378ae7643d3ab21bb6a513a9b1c388a02816680da1cdb0f0a1"
+        },
+        {
+          "relative": "best_model\\model.pdstates",
+          "bytes": 162,
+          "sha256": "415b15ab919f4a58964f53b916225cd25c791ffe17f69d3f47f36cf7d9a0692f"
+        },
+        {
+          "relative": "ema_best_model\\ema_model.pdparams",
+          "bytes": 14230158,
+          "sha256": "91b79f8d246030f5e322106c8f5a3d26fcbf3914bac511383644bdff3fbb85bf"
+        },
+        {
+          "relative": "ema_best_model\\ema_model.pdstates",
+          "bytes": 162,
+          "sha256": "717b9f58b047017d8ae917138aabd024433315c970945e021617c0ff0d7e6972"
+        },
+        {
+          "relative": "iter_20\\ema_model.pdparams",
+          "bytes": 14230158,
+          "sha256": "91b79f8d246030f5e322106c8f5a3d26fcbf3914bac511383644bdff3fbb85bf"
+        },
+        {
+          "relative": "iter_20\\ema_model.pdstates",
+          "bytes": 162,
+          "sha256": "717b9f58b047017d8ae917138aabd024433315c970945e021617c0ff0d7e6972"
+        },
+        {
+          "relative": "iter_20\\model.pdopt",
+          "bytes": 28493962,
+          "sha256": "ab87834b2f63a5a933227eb6cb5ca61bf08197d1e7e52e2a9ca2f2a9a4e9d473"
+        },
+        {
+          "relative": "iter_20\\model.pdparams",
+          "bytes": 14227655,
+          "sha256": "e205341ef43df2378ae7643d3ab21bb6a513a9b1c388a02816680da1cdb0f0a1"
+        },
+        {
+          "relative": "iter_20\\model.pdstates",
+          "bytes": 162,
+          "sha256": "415b15ab919f4a58964f53b916225cd25c791ffe17f69d3f47f36cf7d9a0692f"
+        }
+      ]
+    },
+    {
+      "root": "D:\\\u8bba\u6587\u590d\u73b0\\experiments\\segformer_aligned_wave7_20261018\\training\\smoke_A19_MSCA",
+      "full_run_status": "complete",
+      "files": [
+        {
+          "relative": "best_model\\model.pdparams",
+          "bytes": 14154713,
+          "sha256": "b848b59682e4cc062a714fce2109fb113663eb434f85051159688420e07d2759"
+        },
+        {
+          "relative": "best_model\\model.pdstates",
+          "bytes": 162,
+          "sha256": "df6823abc6ba6fd4bf570de1ee76e340d790806c5adff123150f57ea59504e66"
+        },
+        {
+          "relative": "ema_best_model\\ema_model.pdparams",
+          "bytes": 14157385,
+          "sha256": "27581d2048da7a7e297cfea0e4a087f5c22d3fbd790042c1e1fe6f9cb1ffa9fd"
+        },
+        {
+          "relative": "ema_best_model\\ema_model.pdstates",
+          "bytes": 162,
+          "sha256": "6f50962b76f2f054226eba477f421c08c4f4a92852a62d4aa599d99e482f5ce1"
+        },
+        {
+          "relative": "iter_20\\ema_model.pdparams",
+          "bytes": 14157385,
+          "sha256": "27581d2048da7a7e297cfea0e4a087f5c22d3fbd790042c1e1fe6f9cb1ffa9fd"
+        },
+        {
+          "relative": "iter_20\\ema_model.pdstates",
+          "bytes": 162,
+          "sha256": "6f50962b76f2f054226eba477f421c08c4f4a92852a62d4aa599d99e482f5ce1"
+        },
+        {
+          "relative": "iter_20\\model.pdopt",
+          "bytes": 28349780,
+          "sha256": "542e0b67b5d8a42281d88837851d6ea68362fc1d162dee9a302c3539dd1e5f88"
+        },
+        {
+          "relative": "iter_20\\model.pdparams",
+          "bytes": 14154713,
+          "sha256": "b848b59682e4cc062a714fce2109fb113663eb434f85051159688420e07d2759"
+        },
+        {
+          "relative": "iter_20\\model.pdstates",
+          "bytes": 162,
+          "sha256": "df6823abc6ba6fd4bf570de1ee76e340d790806c5adff123150f57ea59504e66"
+        }
+      ]
+    },
+    {
+      "root": "D:\\\u8bba\u6587\u590d\u73b0\\experiments\\segformer_aligned_wave7_20261018\\training\\smoke_A20_UAFMChannel",
+      "full_run_status": "complete",
+      "files": [
+        {
+          "relative": "best_model\\model.pdparams",
+          "bytes": 15250986,
+          "sha256": "e4d7a5d6d6a8d401a3232377ae09a8f68d46f3bb1d1ebe0dcdabaebfd933cd45"
+        },
+        {
+          "relative": "best_model\\model.pdstates",
+          "bytes": 162,
+          "sha256": "7b9afeb23aa6953eb7ce8c619e4ce24293c8b8557530ba8004248986e57b0e72"
+        },
+        {
+          "relative": "ema_best_model\\ema_model.pdparams",
+          "bytes": 15253658,
+          "sha256": "e50d74ab64e2c0f0a1824ba1e35200fdaeea66cda3c9959dc70756f29ba00c6d"
+        },
+        {
+          "relative": "ema_best_model\\ema_model.pdstates",
+          "bytes": 162,
+          "sha256": "7e973d32ecb80b5d6af805d29c61c53eda768fe4765d9c5ec401fb81c1661269"
+        },
+        {
+          "relative": "iter_20\\ema_model.pdparams",
+          "bytes": 15253658,
+          "sha256": "e50d74ab64e2c0f0a1824ba1e35200fdaeea66cda3c9959dc70756f29ba00c6d"
+        },
+        {
+          "relative": "iter_20\\ema_model.pdstates",
+          "bytes": 162,
+          "sha256": "7e973d32ecb80b5d6af805d29c61c53eda768fe4765d9c5ec401fb81c1661269"
+        },
+        {
+          "relative": "iter_20\\model.pdopt",
+          "bytes": 30532363,
+          "sha256": "9b925d6ad4fa092b558e89aef4477ebc4172d6d6f4c63d34b86ea69cd0749b59"
+        },
+        {
+          "relative": "iter_20\\model.pdparams",
+          "bytes": 15250986,
+          "sha256": "e4d7a5d6d6a8d401a3232377ae09a8f68d46f3bb1d1ebe0dcdabaebfd933cd45"
+        },
+        {
+          "relative": "iter_20\\model.pdstates",
+          "bytes": 162,
+          "sha256": "7b9afeb23aa6953eb7ce8c619e4ce24293c8b8557530ba8004248986e57b0e72"
+        }
+      ]
+    },
+    {
+      "root": "D:\\\u8bba\u6587\u590d\u73b0\\experiments\\segformer_aligned_wave7_20261018\\training\\smoke_A21_Polarized",
+      "full_run_status": "complete",
+      "files": [
+        {
+          "relative": "best_model\\model.pdparams",
+          "bytes": 14030173,
+          "sha256": "18aae8deb95eae6097bb91a6646445a96d6005617e6c795d7b0a09fbe0bc5ecb"
+        },
+        {
+          "relative": "best_model\\model.pdstates",
+          "bytes": 162,
+          "sha256": "52dbfa520ca94e0a2b0df814d04ef8dfbc27628eae4786f15e75759fd670e128"
+        },
+        {
+          "relative": "ema_best_model\\ema_model.pdparams",
+          "bytes": 14032650,
+          "sha256": "33fa3e9d8f9217fc25ca2cbdb78d0e5660472eaa9010f534e8dfc16b8353d13d"
+        },
+        {
+          "relative": "ema_best_model\\ema_model.pdstates",
+          "bytes": 162,
+          "sha256": "e6b393ed1be412275a4f2147b0b4f5a261d4683fc8a03c98f0ec9dd875f2323c"
+        },
+        {
+          "relative": "iter_20\\ema_model.pdparams",
+          "bytes": 14032650,
+          "sha256": "33fa3e9d8f9217fc25ca2cbdb78d0e5660472eaa9010f534e8dfc16b8353d13d"
+        },
+        {
+          "relative": "iter_20\\ema_model.pdstates",
+          "bytes": 162,
+          "sha256": "e6b393ed1be412275a4f2147b0b4f5a261d4683fc8a03c98f0ec9dd875f2323c"
+        },
+        {
+          "relative": "iter_20\\model.pdopt",
+          "bytes": 28098532,
+          "sha256": "2016e78a391cfbcdf9c82493e41142909662cf4a7a11113863d786a9848a5579"
+        },
+        {
+          "relative": "iter_20\\model.pdparams",
+          "bytes": 14030173,
+          "sha256": "18aae8deb95eae6097bb91a6646445a96d6005617e6c795d7b0a09fbe0bc5ecb"
+        },
+        {
+          "relative": "iter_20\\model.pdstates",
+          "bytes": 162,
+          "sha256": "52dbfa520ca94e0a2b0df814d04ef8dfbc27628eae4786f15e75759fd670e128"
+        }
+      ]
+    },
+    {
+      "root": "D:\\\u8bba\u6587\u590d\u73b0\\experiments\\segformer_aligned_wave7_20261018\\training\\smoke_A22_Hamburger",
+      "full_run_status": "complete",
+      "files": [
+        {
+          "relative": "best_model\\model.pdparams",
+          "bytes": 14047657,
+          "sha256": "32c2cfff1389d051cca5a2d5bbef43c87c0449256765cca97e61e0fb7dad870e"
+        },
+        {
+          "relative": "best_model\\model.pdstates",
+          "bytes": 162,
+          "sha256": "99daa8663ebd07efa5d7df37f27e34dde7231520d4493d03faa5174d05279556"
+        },
+        {
+          "relative": "ema_best_model\\ema_model.pdparams",
+          "bytes": 14050147,
+          "sha256": "f2f015a8f404a77bd893e3d03c895e9ee2b7ab2c84b3efe37b3627574327f6aa"
+        },
+        {
+          "relative": "ema_best_model\\ema_model.pdstates",
+          "bytes": 162,
+          "sha256": "010aef8f5214087c276358078b081648652497104b1fdfc48d6326892005490a"
+        },
+        {
+          "relative": "iter_20\\ema_model.pdparams",
+          "bytes": 14050147,
+          "sha256": "f2f015a8f404a77bd893e3d03c895e9ee2b7ab2c84b3efe37b3627574327f6aa"
+        },
+        {
+          "relative": "iter_20\\ema_model.pdstates",
+          "bytes": 162,
+          "sha256": "010aef8f5214087c276358078b081648652497104b1fdfc48d6326892005490a"
+        },
+        {
+          "relative": "iter_20\\model.pdopt",
+          "bytes": 28100586,
+          "sha256": "2a4d3fd3e6313ae96ae84a6334ed5599937c3b8fffa6a0361e1a2c081ec7714a"
+        },
+        {
+          "relative": "iter_20\\model.pdparams",
+          "bytes": 14047657,
+          "sha256": "32c2cfff1389d051cca5a2d5bbef43c87c0449256765cca97e61e0fb7dad870e"
+        },
+        {
+          "relative": "iter_20\\model.pdstates",
+          "bytes": 162,
+          "sha256": "99daa8663ebd07efa5d7df37f27e34dde7231520d4493d03faa5174d05279556"
+        }
+      ]
+    },
+    {
+      "root": "D:\\\u8bba\u6587\u590d\u73b0\\experiments\\segformer_aligned_wave7_20261018\\training\\smoke_A23_SE",
+      "full_run_status": "complete",
+      "files": [
+        {
+          "relative": "best_model\\model.pdparams",
+          "bytes": 13931812,
+          "sha256": "f3b6e517c8eb794f067379299891f2bd3e9305be7594cf57d3088a0c4cee65bb"
+        },
+        {
+          "relative": "best_model\\model.pdstates",
+          "bytes": 162,
+          "sha256": "caac9aaf2e2345af3c3e236bc38d49d6aa5343c3e2d7a62893b739ff4db6de0e"
+        },
+        {
+          "relative": "ema_best_model\\ema_model.pdparams",
+          "bytes": 13934276,
+          "sha256": "d0f1bad2274786eb5544bf5d5471d5afc54747bded64353c4e8bd87532051ae2"
+        },
+        {
+          "relative": "ema_best_model\\ema_model.pdstates",
+          "bytes": 162,
+          "sha256": "a84ce3062877fc1e4e42234b6d3d0436ee2a5e807b2c2259862849988d12099d"
+        },
+        {
+          "relative": "iter_20\\ema_model.pdparams",
+          "bytes": 13934276,
+          "sha256": "d0f1bad2274786eb5544bf5d5471d5afc54747bded64353c4e8bd87532051ae2"
+        },
+        {
+          "relative": "iter_20\\ema_model.pdstates",
+          "bytes": 162,
+          "sha256": "a84ce3062877fc1e4e42234b6d3d0436ee2a5e807b2c2259862849988d12099d"
+        },
+        {
+          "relative": "iter_20\\model.pdopt",
+          "bytes": 27901751,
+          "sha256": "96aec907d76cae98020a8bd8b14349b4ec3b020135c96b768aee64db47ee52f5"
+        },
+        {
+          "relative": "iter_20\\model.pdparams",
+          "bytes": 13931812,
+          "sha256": "f3b6e517c8eb794f067379299891f2bd3e9305be7594cf57d3088a0c4cee65bb"
+        },
+        {
+          "relative": "iter_20\\model.pdstates",
+          "bytes": 162,
+          "sha256": "caac9aaf2e2345af3c3e236bc38d49d6aa5343c3e2d7a62893b739ff4db6de0e"
+        }
+      ]
+    }
+  ],
+  "test_used": false
+}

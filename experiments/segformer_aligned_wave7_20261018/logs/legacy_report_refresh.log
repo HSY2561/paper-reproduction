@@ -1,0 +1,1 @@
+{"report": "D:\\论文复现\\SegFormer模块消融结果与改进建议_20261017.md", "csv": "D:\\论文复现\\experiments\\segformer_balance_wave6_20261016\\results\\ablation_table_percent_20261017.csv", "figures": "D:\\论文复现\\experiments\\segformer_balance_wave6_20261016\\figures\\results_20261017", "complete_runs": 15, "complete_modules": 13, "test_used": false, "audit_passed": true}

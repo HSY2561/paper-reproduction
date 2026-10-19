@@ -1,0 +1,74 @@
+[
+  {
+    "id": "X_AFNB_s42",
+    "source": "A10_AFNB",
+    "seed": 42,
+    "modules": [
+      "afnb"
+    ]
+  },
+  {
+    "id": "B0_s43",
+    "source": "B0",
+    "seed": 43,
+    "modules": []
+  },
+  {
+    "id": "A0_s43",
+    "source": "A0",
+    "seed": 43,
+    "modules": [
+      "aligned"
+    ]
+  },
+  {
+    "id": "A21_s43",
+    "source": "A21_Polarized",
+    "seed": 43,
+    "modules": [
+      "aligned",
+      "polarized"
+    ]
+  },
+  {
+    "id": "A10_s43",
+    "source": "A10_AFNB",
+    "seed": 43,
+    "modules": [
+      "aligned",
+      "afnb"
+    ]
+  },
+  {
+    "id": "B0_s44",
+    "source": "B0",
+    "seed": 44,
+    "modules": []
+  },
+  {
+    "id": "A0_s44",
+    "source": "A0",
+    "seed": 44,
+    "modules": [
+      "aligned"
+    ]
+  },
+  {
+    "id": "A21_s44",
+    "source": "A21_Polarized",
+    "seed": 44,
+    "modules": [
+      "aligned",
+      "polarized"
+    ]
+  },
+  {
+    "id": "A10_s44",
+    "source": "A10_AFNB",
+    "seed": 44,
+    "modules": [
+      "aligned",
+      "afnb"
+    ]
+  }
+]

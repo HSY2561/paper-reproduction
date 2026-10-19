@@ -1,0 +1,122 @@
+[
+  {
+    "id": "A01_GloRe",
+    "constructor_pass": true,
+    "params": 3517666
+  },
+  {
+    "id": "A02_ASPPsep",
+    "constructor_pass": true,
+    "params": 3574882
+  },
+  {
+    "id": "A03_Encoding",
+    "constructor_pass": true,
+    "params": 3607218
+  },
+  {
+    "id": "A04_ExternalAttention",
+    "constructor_pass": true,
+    "params": 3504226
+  },
+  {
+    "id": "A05_ContextEmbedding",
+    "constructor_pass": true,
+    "params": 4128354
+  },
+  {
+    "id": "A06_DNL",
+    "constructor_pass": true,
+    "params": 3537443
+  },
+  {
+    "id": "A07_PPContext",
+    "constructor_pass": true,
+    "params": 3520706
+  },
+  {
+    "id": "A08_DAPPM",
+    "constructor_pass": true,
+    "params": 3662050
+  },
+  {
+    "id": "A09_APNB",
+    "constructor_pass": true,
+    "params": 3652578
+  },
+  {
+    "id": "A10_AFNB",
+    "constructor_pass": true,
+    "params": 3656994
+  },
+  {
+    "id": "A11_JPU",
+    "constructor_pass": true,
+    "params": 3545570
+  },
+  {
+    "id": "A12_DCM",
+    "constructor_pass": true,
+    "params": 3670882
+  },
+  {
+    "id": "A13_EMAU",
+    "constructor_pass": true,
+    "params": 3470434
+  },
+  {
+    "id": "A14_NonLocal",
+    "constructor_pass": true,
+    "params": 3537186
+  },
+  {
+    "id": "A15_AttentionRefinement",
+    "constructor_pass": true,
+    "params": 3635298
+  },
+  {
+    "id": "A16_CAM",
+    "constructor_pass": true,
+    "params": 3470435
+  },
+  {
+    "id": "A17_CCA",
+    "constructor_pass": true,
+    "params": 3552675
+  },
+  {
+    "id": "A18_PAM",
+    "constructor_pass": true,
+    "params": 3552675
+  },
+  {
+    "id": "A19_MSCA",
+    "constructor_pass": true,
+    "params": 3534050
+  },
+  {
+    "id": "A20_UAFMChannel",
+    "constructor_pass": true,
+    "params": 3808098
+  },
+  {
+    "id": "A21_Polarized",
+    "constructor_pass": true,
+    "params": 3503330
+  },
+  {
+    "id": "A22_Hamburger",
+    "constructor_pass": true,
+    "params": 3503586
+  },
+  {
+    "id": "A23_SE",
+    "constructor_pass": true,
+    "params": 3478786
+  },
+  {
+    "id": "A24_PSP",
+    "constructor_pass": true,
+    "params": 3783010
+  }
+]

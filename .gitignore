@@ -127,3 +127,10 @@ Thumbs.db
 
 # Publish current authored Wave6 figure exports
 !/experiments/segformer_balance_wave6_20261016/figures/results_20261017/*.pdf
+
+# Wave7: keep current reports, initial plans and raw evidence; local snapshots stay local
+/experiments/segformer_aligned_wave7_20261018/**/queue.lock
+/experiments/segformer_aligned_wave7_20261018/refine-logs/EXPERIMENT_RESULTS_*.md
+/experiments/segformer_aligned_wave7_20261018/refine-logs/STAGE1_ANALYSIS_*.md
+/experiments/segformer_aligned_wave7_20261018/followup_20261019/refine-logs/RESULTS_*.md
+!/experiments/segformer_aligned_wave7_20261018/figures/screening_20261019/*.pdf

@@ -1,0 +1,14 @@
+Traceback (most recent call last):
+  File "D:\论文复现\experiments\segformer_aligned_wave7_20261018\followup_20261019\followup_queue.py", line 124, in <module>
+    elif args.run:run()
+                  ^^^^^
+  File "D:\论文复现\experiments\segformer_aligned_wave7_20261018\followup_20261019\followup_queue.py", line 78, in run
+    if sha(r['checkpoint'])!=r['sha256']:raise RuntimeError('Frozen candidate SHA mismatch')
+       ^^^^^^^^^^^^^^^^^^^^
+  File "D:\论文复现\experiments\segformer_balance_wave6_20261016\experiment_queue.py", line 58, in sha
+    with Path(path).open('rb') as stream:
+         ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\python312\Lib\pathlib.py", line 1013, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'D:\\璁烘枃澶嶇幇\\experiments\\retrain_wave4_20261007\\checkpoints\\segformer_b0\\model.pdparams'

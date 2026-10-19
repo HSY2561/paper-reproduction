@@ -1,0 +1,167 @@
+[2026/10/18 15:53:54] INFO: Use the following config to build model
+model:
+  backbone:
+    pretrained: "D:\\\u8BBA\u6587\u590D\u73B0\\experiments\\segformer_balance_wave6_20261016\\\
+      weights\\mit_b0_imagenet.pdparams"
+    type: MixVisionTransformer_B0
+  balance_modules: []
+  embedding_dim: 256
+  num_classes: 2
+  type: SegFormer
+WARNING: Logging before InitGoogleLogging() is written to STDERR
+W1018 15:53:54.557461 101104 gpu_resources.cc:116] Please NOTE: device: 0, GPU Compute Capability: 12.0, Driver API Version: 13.2, Runtime API Version: 12.9
+[2026/10/18 15:53:54] INFO: Loading pretrained model from D:\论文复现\experiments\segformer_balance_wave6_20261016\weights\mit_b0_imagenet.pdparams
+[2026/10/18 15:53:54] INFO: There are 176/176 variables loaded into MixVisionTransformer.
+[2026/10/18 15:53:54] INFO: Loading pretrained model from D:\论文复现\experiments\retrain_wave4_20261007\checkpoints\segformer_b0\model.pdparams
+[2026/10/18 15:53:54] INFO: There are 191/191 variables loaded into SegFormer.
+[2026/10/18 15:53:54] INFO: Use the following config to build val_dataset
+val_dataset:
+  dataset_root: C:/Users/user/algolab_data
+  mode: val
+  num_classes: 2
+  transforms:
+  - type: Normalize
+  type: Dataset
+  val_path: C:/Users/user/algolab_data/val.txt
+SPATIAL_AUDIT B0 0
+SPATIAL_AUDIT B0 50
+SPATIAL_AUDIT B0 100
+SPATIAL_AUDIT B0 150
+SPATIAL_AUDIT B0 200
+SPATIAL_AUDIT B0 250
+SPATIAL_AUDIT B0 300
+[2026/10/18 15:54:09] INFO: Use the following config to build model
+model:
+  backbone:
+    pretrained: "D:\\\u8BBA\u6587\u590D\u73B0\\experiments\\segformer_balance_wave6_20261016\\\
+      weights\\mit_b0_imagenet.pdparams"
+    type: MixVisionTransformer_B0
+  balance_modules:
+  - aligned
+  embedding_dim: 128
+  num_classes: 2
+  type: SegFormer
+[2026/10/18 15:54:09] INFO: Loading pretrained model from D:\论文复现\experiments\segformer_balance_wave6_20261016\weights\mit_b0_imagenet.pdparams
+[2026/10/18 15:54:09] INFO: There are 176/176 variables loaded into MixVisionTransformer.
+[2026/10/18 15:54:09] INFO: Loading pretrained model from D:\论文复现\experiments\segformer_balance_wave6_20261016\checkpoints\M13_Aligned\model.pdparams
+[2026/10/18 15:54:09] INFO: There are 194/194 variables loaded into SegFormer.
+[2026/10/18 15:54:09] INFO: Use the following config to build val_dataset
+val_dataset:
+  dataset_root: C:/Users/user/algolab_data
+  mode: val
+  num_classes: 2
+  transforms:
+  - type: Normalize
+  type: Dataset
+  val_path: C:/Users/user/algolab_data/val.txt
+SPATIAL_AUDIT M13_Aligned 0
+SPATIAL_AUDIT M13_Aligned 50
+SPATIAL_AUDIT M13_Aligned 100
+SPATIAL_AUDIT M13_Aligned 150
+SPATIAL_AUDIT M13_Aligned 200
+SPATIAL_AUDIT M13_Aligned 250
+SPATIAL_AUDIT M13_Aligned 300
+[2026/10/18 15:54:23] INFO: Use the following config to build model
+model:
+  backbone:
+    pretrained: "D:\\\u8BBA\u6587\u590D\u73B0\\experiments\\segformer_balance_wave6_20261016\\\
+      weights\\mit_b0_imagenet.pdparams"
+    type: MixVisionTransformer_B0
+  balance_modules:
+  - glore
+  embedding_dim: 128
+  num_classes: 2
+  type: SegFormer
+[2026/10/18 15:54:23] INFO: Loading pretrained model from D:\论文复现\experiments\segformer_balance_wave6_20261016\weights\mit_b0_imagenet.pdparams
+[2026/10/18 15:54:23] INFO: There are 176/176 variables loaded into MixVisionTransformer.
+[2026/10/18 15:54:23] INFO: Loading pretrained model from D:\论文复现\experiments\segformer_balance_wave6_20261016\checkpoints\M10_GloRe\model.pdparams
+[2026/10/18 15:54:23] INFO: There are 203/203 variables loaded into SegFormer.
+[2026/10/18 15:54:23] INFO: Use the following config to build val_dataset
+val_dataset:
+  dataset_root: C:/Users/user/algolab_data
+  mode: val
+  num_classes: 2
+  transforms:
+  - type: Normalize
+  type: Dataset
+  val_path: C:/Users/user/algolab_data/val.txt
+SPATIAL_AUDIT M10_GloRe 0
+SPATIAL_AUDIT M10_GloRe 50
+SPATIAL_AUDIT M10_GloRe 100
+SPATIAL_AUDIT M10_GloRe 150
+SPATIAL_AUDIT M10_GloRe 200
+SPATIAL_AUDIT M10_GloRe 250
+SPATIAL_AUDIT M10_GloRe 300
+{
+  "models": {
+    "B0": {
+      "confusion_matrix": [
+        [
+          76232895,
+          753850
+        ],
+        [
+          971542,
+          3635857
+        ]
+      ],
+      "counts": {
+        "fp_near_2px": 272718,
+        "fp_2_to_5px": 239663,
+        "fp_far_5px": 241469,
+        "fn_gt_inner_distance_le2": 342034,
+        "fn_gt_inner_distance_gt2": 629508,
+        "empty_pred": 6
+      },
+      "n": 348,
+      "original_confusion_reproduced": true
+    },
+    "M13_Aligned": {
+      "confusion_matrix": [
+        [
+          76223138,
+          763607
+        ],
+        [
+          963066,
+          3644333
+        ]
+      ],
+      "counts": {
+        "fp_near_2px": 288501,
+        "fp_2_to_5px": 249121,
+        "fp_far_5px": 225985,
+        "fn_gt_inner_distance_le2": 327063,
+        "fn_gt_inner_distance_gt2": 636003,
+        "empty_pred": 12
+      },
+      "n": 348,
+      "original_confusion_reproduced": true
+    },
+    "M10_GloRe": {
+      "confusion_matrix": [
+        [
+          76119273,
+          867472
+        ],
+        [
+          897852,
+          3709547
+        ]
+      ],
+      "counts": {
+        "fp_near_2px": 299790,
+        "fp_2_to_5px": 271781,
+        "fp_far_5px": 295901,
+        "fn_gt_inner_distance_le2": 316032,
+        "fn_gt_inner_distance_gt2": 581820,
+        "empty_pred": 7
+      },
+      "n": 348,
+      "original_confusion_reproduced": true
+    }
+  },
+  "test_used": false,
+  "protocol": "official inference argmax and original restoration; exact euclidean distance to GT foreground; FN distance bands describe region interior, not crack width",
+  "limitations": "Far false positives are spatial categories, not automatic shadow/leaf scene labels. No threshold or architecture selection from this audit."
+}

@@ -1,6 +1,6 @@
 # 实验执行跟踪
 
-更新时间：2026-10-17T23:13:52+08:00
+更新时间：2026-10-18T15:53:39+08:00
 
 | 编号 | 机制 | 宽度 | 状态 |
 |---|---|---:|---|
@@ -18,5 +18,5 @@
 | M09_Encoding | EncModule | 128 | complete |
 | M10_GloRe | GloRe GruModule | 128 | complete |
 | M14_UAFMchannel | UAFM Channel Attention | 128 | complete |
-| M01_SE | MobileNetV3 SE | 128 | needs_review |
+| M01_SE | MobileNetV3 SE | 128 | complete |
 | M12_PSP | PSP PPModule | 128 | smoke_failed |

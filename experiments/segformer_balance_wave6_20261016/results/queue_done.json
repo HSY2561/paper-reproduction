@@ -1,0 +1,25 @@
+{
+  "timestamp": "2026-10-18T11:04:21+08:00",
+  "states": [
+    "complete",
+    "complete",
+    "complete",
+    "complete",
+    "complete",
+    "complete",
+    "complete",
+    "complete",
+    "complete",
+    "complete",
+    "complete",
+    "complete",
+    "complete",
+    "complete",
+    "complete",
+    "smoke_failed"
+  ],
+  "full_training_complete": 15,
+  "planned_modules": 14,
+  "test_used": false,
+  "next_step": "review Pareto table; choose complementary pair before joint training"
+}

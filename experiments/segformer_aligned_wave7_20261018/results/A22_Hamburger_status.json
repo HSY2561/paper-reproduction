@@ -1,0 +1,35 @@
+{
+  "status": "complete",
+  "updated_at": "2026-10-19T04:43:37+08:00",
+  "selection": {
+    "model": "A22_Hamburger",
+    "candidates": [
+      {
+        "variant": "best_model",
+        "mIoU": 0.8297358005316174,
+        "iter": 17000,
+        "weight": "D:\\论文复现\\experiments\\segformer_aligned_wave7_20261018\\training\\A22_Hamburger\\best_model\\model.pdparams",
+        "state_sha256": "9848a94fbd954026bda6772df8ac6566861721bacf2c2bc7d0c23b2035468974"
+      },
+      {
+        "variant": "ema_best_model",
+        "mIoU": 0.8301340566376368,
+        "iter": 12000,
+        "weight": "D:\\论文复现\\experiments\\segformer_aligned_wave7_20261018\\training\\A22_Hamburger\\ema_best_model\\ema_model.pdparams",
+        "state_sha256": "744b75f36e94996e6d1ee56e23b91939512e7bc74802b4570004ff336e3d6c96"
+      }
+    ],
+    "selected": {
+      "variant": "ema_best_model",
+      "mIoU": 0.8301340566376368,
+      "iter": 12000,
+      "weight": "D:\\论文复现\\experiments\\segformer_aligned_wave7_20261018\\training\\A22_Hamburger\\ema_best_model\\ema_model.pdparams",
+      "state_sha256": "744b75f36e94996e6d1ee56e23b91939512e7bc74802b4570004ff336e3d6c96"
+    },
+    "sha256": "8c3f6abd749abb3281a0432b7c841e749be87d6e6ead49db105f2f3405af4929",
+    "checkpoint": "D:\\论文复现\\experiments\\segformer_aligned_wave7_20261018\\checkpoints\\A22_Hamburger\\model.pdparams",
+    "selection": "highest exact validation mIoU from ordinary and EMA state",
+    "test_used": false,
+    "frozen_at": "2026-10-19T04:42:48+08:00"
+  }
+}

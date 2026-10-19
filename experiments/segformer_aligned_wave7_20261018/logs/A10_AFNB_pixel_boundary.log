@@ -1,0 +1,66 @@
+D:\论文复现\experiments\segformer_aligned_wave7_20261018\src\PaddleSeg-2.10.0\paddleseg\models\backbones\efficientformerv2.py:206: SyntaxWarning: "is not" with 'str' literal. Did you mean "!="?
+  if self.mode is not 'multi_scale':
+D:\论文复现\experiments\segformer_aligned_wave7_20261018\src\PaddleSeg-2.10.0\paddleseg\models\layers\ms_deformable_attention.py:103: SyntaxWarning: invalid escape sequence '\s'
+  input_flatten:               (N, \sum_{l=0}^{L-1} H_l \cdot W_l, C)
+D:\论文复现\experiments\segformer_aligned_wave7_20261018\src\PaddleSeg-2.10.0\paddleseg\models\losses\rmi_loss.py:76: SyntaxWarning: invalid escape sequence '\i'
+  logits (Tensor): Shape is [N, C, H, W], logits at each prediction (between -\infty and +\infty).
+[2026/10/18 21:21:09] INFO: Use the following config to build val_dataset
+val_dataset:
+  dataset_root: C:/Users/user/algolab_data
+  mode: val
+  num_classes: 2
+  transforms:
+  - type: Normalize
+  type: Dataset
+  val_path: C:/Users/user/algolab_data/val.txt
+[2026/10/18 21:21:09] INFO: Set device: gpu
+[2026/10/18 21:21:09] INFO: Use the following config to build model
+model:
+  backbone:
+    pretrained: "D:\\\u8BBA\u6587\u590D\u73B0\\experiments\\segformer_aligned_wave7_20261018\\\
+      weights\\mit_b0_imagenet.pdparams"
+    type: MixVisionTransformer_B0
+  balance_modules:
+  - aligned
+  - afnb
+  embedding_dim: 128
+  num_classes: 2
+  type: SegFormer
+WARNING: Logging before InitGoogleLogging() is written to STDERR
+W1018 21:21:09.665040 54964 gpu_resources.cc:116] Please NOTE: device: 0, GPU Compute Capability: 12.0, Driver API Version: 13.2, Runtime API Version: 12.9
+[2026/10/18 21:21:09] INFO: Loading pretrained model from D:\论文复现\experiments\segformer_aligned_wave7_20261018\weights\mit_b0_imagenet.pdparams
+[2026/10/18 21:21:09] INFO: There are 176/176 variables loaded into MixVisionTransformer.
+[2026/10/18 21:21:09] INFO: Loading pretrained model from D:\论文复现\experiments\segformer_aligned_wave7_20261018\checkpoints\A10_AFNB\model.pdparams
+[2026/10/18 21:21:09] INFO: There are 216/216 variables loaded into SegFormer.
+{
+  "n": 348,
+  "confusion_matrix": [
+    [
+      76211703,
+      775042
+    ],
+    [
+      938402,
+      3668997
+    ]
+  ],
+  "mIoU": 0.8298360447012223,
+  "crackIoU": 0.681660421359008,
+  "precision": 0.8255996403271888,
+  "recall": 0.7963271685391259,
+  "f1": 0.810699250218584,
+  "boundary_counts_pred_gt": [
+    216795,
+    215257,
+    451815,
+    505846
+  ],
+  "boundary_precision": 0.4798313469008333,
+  "boundary_recall": 0.42553860265772586,
+  "boundary_f1": 0.4510570755548329,
+  "empty_predictions": 15,
+  "test_used": false,
+  "boundary_protocol": "inner boundary, zero outside image; exact Euclidean <=2px; global counts then harmonic mean",
+  "config": "D:\\\u8bba\u6587\u590d\u73b0\\experiments\\segformer_aligned_wave7_20261018\\configs\\A10_AFNB.yml",
+  "model_path": "D:\\\u8bba\u6587\u590d\u73b0\\experiments\\segformer_aligned_wave7_20261018\\checkpoints\\A10_AFNB\\model.pdparams"
+}

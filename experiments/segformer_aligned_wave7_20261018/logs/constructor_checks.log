@@ -1,0 +1,369 @@
+D:\论文复现\experiments\segformer_aligned_wave7_20261018\src\PaddleSeg-2.10.0\paddleseg\models\backbones\efficientformerv2.py:206: SyntaxWarning: "is not" with 'str' literal. Did you mean "!="?
+  if self.mode is not 'multi_scale':
+D:\论文复现\experiments\segformer_aligned_wave7_20261018\src\PaddleSeg-2.10.0\paddleseg\models\layers\ms_deformable_attention.py:103: SyntaxWarning: invalid escape sequence '\s'
+  input_flatten:               (N, \sum_{l=0}^{L-1} H_l \cdot W_l, C)
+D:\论文复现\experiments\segformer_aligned_wave7_20261018\src\PaddleSeg-2.10.0\paddleseg\models\losses\rmi_loss.py:76: SyntaxWarning: invalid escape sequence '\i'
+  logits (Tensor): Shape is [N, C, H, W], logits at each prediction (between -\infty and +\infty).
+[2026/10/18 15:54:16] INFO: Use the following config to build model
+model:
+  backbone:
+    pretrained: "D:\\\u8BBA\u6587\u590D\u73B0\\experiments\\segformer_aligned_wave7_20261018\\\
+      weights\\mit_b0_imagenet.pdparams"
+    type: MixVisionTransformer_B0
+  balance_modules:
+  - aligned
+  - glore
+  embedding_dim: 128
+  num_classes: 2
+  type: SegFormer
+[2026/10/18 15:54:17] INFO: Loading pretrained model from D:\论文复现\experiments\segformer_aligned_wave7_20261018\weights\mit_b0_imagenet.pdparams
+[2026/10/18 15:54:17] INFO: There are 176/176 variables loaded into MixVisionTransformer.
+CONSTRUCTOR A01_GloRe True
+[2026/10/18 15:54:17] INFO: Use the following config to build model
+model:
+  backbone:
+    pretrained: "D:\\\u8BBA\u6587\u590D\u73B0\\experiments\\segformer_aligned_wave7_20261018\\\
+      weights\\mit_b0_imagenet.pdparams"
+    type: MixVisionTransformer_B0
+  balance_modules:
+  - aligned
+  - aspp_sep
+  embedding_dim: 128
+  num_classes: 2
+  type: SegFormer
+[2026/10/18 15:54:18] INFO: Loading pretrained model from D:\论文复现\experiments\segformer_aligned_wave7_20261018\weights\mit_b0_imagenet.pdparams
+[2026/10/18 15:54:18] INFO: There are 176/176 variables loaded into MixVisionTransformer.
+CONSTRUCTOR A02_ASPPsep True
+[2026/10/18 15:54:18] INFO: Use the following config to build model
+model:
+  backbone:
+    pretrained: "D:\\\u8BBA\u6587\u590D\u73B0\\experiments\\segformer_aligned_wave7_20261018\\\
+      weights\\mit_b0_imagenet.pdparams"
+    type: MixVisionTransformer_B0
+  balance_modules:
+  - aligned
+  - encoding
+  embedding_dim: 128
+  num_classes: 2
+  type: SegFormer
+[2026/10/18 15:54:19] INFO: Loading pretrained model from D:\论文复现\experiments\segformer_aligned_wave7_20261018\weights\mit_b0_imagenet.pdparams
+[2026/10/18 15:54:19] INFO: There are 176/176 variables loaded into MixVisionTransformer.
+CONSTRUCTOR A03_Encoding True
+[2026/10/18 15:54:19] INFO: Use the following config to build model
+model:
+  backbone:
+    pretrained: "D:\\\u8BBA\u6587\u590D\u73B0\\experiments\\segformer_aligned_wave7_20261018\\\
+      weights\\mit_b0_imagenet.pdparams"
+    type: MixVisionTransformer_B0
+  balance_modules:
+  - aligned
+  - external_attention
+  embedding_dim: 128
+  num_classes: 2
+  type: SegFormer
+[2026/10/18 15:54:20] INFO: Loading pretrained model from D:\论文复现\experiments\segformer_aligned_wave7_20261018\weights\mit_b0_imagenet.pdparams
+[2026/10/18 15:54:20] INFO: There are 176/176 variables loaded into MixVisionTransformer.
+CONSTRUCTOR A04_ExternalAttention True
+[2026/10/18 15:54:20] INFO: Use the following config to build model
+model:
+  backbone:
+    pretrained: "D:\\\u8BBA\u6587\u590D\u73B0\\experiments\\segformer_aligned_wave7_20261018\\\
+      weights\\mit_b0_imagenet.pdparams"
+    type: MixVisionTransformer_B0
+  balance_modules:
+  - aligned
+  - context_embedding
+  embedding_dim: 128
+  num_classes: 2
+  type: SegFormer
+[2026/10/18 15:54:20] INFO: Loading pretrained model from D:\论文复现\experiments\segformer_aligned_wave7_20261018\weights\mit_b0_imagenet.pdparams
+[2026/10/18 15:54:21] INFO: There are 176/176 variables loaded into MixVisionTransformer.
+CONSTRUCTOR A05_ContextEmbedding True
+[2026/10/18 15:54:21] INFO: Use the following config to build model
+model:
+  backbone:
+    pretrained: "D:\\\u8BBA\u6587\u590D\u73B0\\experiments\\segformer_aligned_wave7_20261018\\\
+      weights\\mit_b0_imagenet.pdparams"
+    type: MixVisionTransformer_B0
+  balance_modules:
+  - aligned
+  - dnl
+  embedding_dim: 128
+  num_classes: 2
+  type: SegFormer
+[2026/10/18 15:54:21] INFO: Loading pretrained model from D:\论文复现\experiments\segformer_aligned_wave7_20261018\weights\mit_b0_imagenet.pdparams
+[2026/10/18 15:54:21] INFO: There are 176/176 variables loaded into MixVisionTransformer.
+CONSTRUCTOR A06_DNL True
+[2026/10/18 15:54:21] INFO: Use the following config to build model
+model:
+  backbone:
+    pretrained: "D:\\\u8BBA\u6587\u590D\u73B0\\experiments\\segformer_aligned_wave7_20261018\\\
+      weights\\mit_b0_imagenet.pdparams"
+    type: MixVisionTransformer_B0
+  balance_modules:
+  - aligned
+  - ppcontext
+  embedding_dim: 128
+  num_classes: 2
+  type: SegFormer
+[2026/10/18 15:54:22] INFO: Loading pretrained model from D:\论文复现\experiments\segformer_aligned_wave7_20261018\weights\mit_b0_imagenet.pdparams
+[2026/10/18 15:54:22] INFO: There are 176/176 variables loaded into MixVisionTransformer.
+CONSTRUCTOR A07_PPContext True
+[2026/10/18 15:54:22] INFO: Use the following config to build model
+model:
+  backbone:
+    pretrained: "D:\\\u8BBA\u6587\u590D\u73B0\\experiments\\segformer_aligned_wave7_20261018\\\
+      weights\\mit_b0_imagenet.pdparams"
+    type: MixVisionTransformer_B0
+  balance_modules:
+  - aligned
+  - dappm
+  embedding_dim: 128
+  num_classes: 2
+  type: SegFormer
+[2026/10/18 15:54:23] INFO: Loading pretrained model from D:\论文复现\experiments\segformer_aligned_wave7_20261018\weights\mit_b0_imagenet.pdparams
+[2026/10/18 15:54:23] INFO: There are 176/176 variables loaded into MixVisionTransformer.
+CONSTRUCTOR A08_DAPPM True
+[2026/10/18 15:54:23] INFO: Use the following config to build model
+model:
+  backbone:
+    pretrained: "D:\\\u8BBA\u6587\u590D\u73B0\\experiments\\segformer_aligned_wave7_20261018\\\
+      weights\\mit_b0_imagenet.pdparams"
+    type: MixVisionTransformer_B0
+  balance_modules:
+  - aligned
+  - apnb
+  embedding_dim: 128
+  num_classes: 2
+  type: SegFormer
+[2026/10/18 15:54:24] INFO: Loading pretrained model from D:\论文复现\experiments\segformer_aligned_wave7_20261018\weights\mit_b0_imagenet.pdparams
+[2026/10/18 15:54:24] INFO: There are 176/176 variables loaded into MixVisionTransformer.
+CONSTRUCTOR A09_APNB True
+[2026/10/18 15:54:24] INFO: Use the following config to build model
+model:
+  backbone:
+    pretrained: "D:\\\u8BBA\u6587\u590D\u73B0\\experiments\\segformer_aligned_wave7_20261018\\\
+      weights\\mit_b0_imagenet.pdparams"
+    type: MixVisionTransformer_B0
+  balance_modules:
+  - aligned
+  - afnb
+  embedding_dim: 128
+  num_classes: 2
+  type: SegFormer
+[2026/10/18 15:54:25] INFO: Loading pretrained model from D:\论文复现\experiments\segformer_aligned_wave7_20261018\weights\mit_b0_imagenet.pdparams
+[2026/10/18 15:54:25] INFO: There are 176/176 variables loaded into MixVisionTransformer.
+CONSTRUCTOR A10_AFNB True
+[2026/10/18 15:54:25] INFO: Use the following config to build model
+model:
+  backbone:
+    pretrained: "D:\\\u8BBA\u6587\u590D\u73B0\\experiments\\segformer_aligned_wave7_20261018\\\
+      weights\\mit_b0_imagenet.pdparams"
+    type: MixVisionTransformer_B0
+  balance_modules:
+  - aligned
+  - jpu
+  embedding_dim: 128
+  num_classes: 2
+  type: SegFormer
+[2026/10/18 15:54:26] INFO: Loading pretrained model from D:\论文复现\experiments\segformer_aligned_wave7_20261018\weights\mit_b0_imagenet.pdparams
+[2026/10/18 15:54:26] INFO: There are 176/176 variables loaded into MixVisionTransformer.
+CONSTRUCTOR A11_JPU True
+[2026/10/18 15:54:26] INFO: Use the following config to build model
+model:
+  backbone:
+    pretrained: "D:\\\u8BBA\u6587\u590D\u73B0\\experiments\\segformer_aligned_wave7_20261018\\\
+      weights\\mit_b0_imagenet.pdparams"
+    type: MixVisionTransformer_B0
+  balance_modules:
+  - aligned
+  - dcm
+  embedding_dim: 128
+  num_classes: 2
+  type: SegFormer
+[2026/10/18 15:54:26] INFO: Loading pretrained model from D:\论文复现\experiments\segformer_aligned_wave7_20261018\weights\mit_b0_imagenet.pdparams
+[2026/10/18 15:54:27] INFO: There are 176/176 variables loaded into MixVisionTransformer.
+CONSTRUCTOR A12_DCM True
+[2026/10/18 15:54:27] INFO: Use the following config to build model
+model:
+  backbone:
+    pretrained: "D:\\\u8BBA\u6587\u590D\u73B0\\experiments\\segformer_aligned_wave7_20261018\\\
+      weights\\mit_b0_imagenet.pdparams"
+    type: MixVisionTransformer_B0
+  balance_modules:
+  - aligned
+  - emau
+  embedding_dim: 128
+  num_classes: 2
+  type: SegFormer
+[2026/10/18 15:54:27] INFO: Loading pretrained model from D:\论文复现\experiments\segformer_aligned_wave7_20261018\weights\mit_b0_imagenet.pdparams
+[2026/10/18 15:54:27] INFO: There are 176/176 variables loaded into MixVisionTransformer.
+C:\venv_bisenet\Lib\site-packages\paddle\tensor\creation.py:1181: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach(), rather than paddle.to_tensor(sourceTensor).
+  return tensor(
+CONSTRUCTOR A13_EMAU True
+[2026/10/18 15:54:28] INFO: Use the following config to build model
+model:
+  backbone:
+    pretrained: "D:\\\u8BBA\u6587\u590D\u73B0\\experiments\\segformer_aligned_wave7_20261018\\\
+      weights\\mit_b0_imagenet.pdparams"
+    type: MixVisionTransformer_B0
+  balance_modules:
+  - aligned
+  - nonlocal
+  embedding_dim: 128
+  num_classes: 2
+  type: SegFormer
+[2026/10/18 15:54:28] INFO: Loading pretrained model from D:\论文复现\experiments\segformer_aligned_wave7_20261018\weights\mit_b0_imagenet.pdparams
+[2026/10/18 15:54:28] INFO: There are 176/176 variables loaded into MixVisionTransformer.
+CONSTRUCTOR A14_NonLocal True
+[2026/10/18 15:54:29] INFO: Use the following config to build model
+model:
+  backbone:
+    pretrained: "D:\\\u8BBA\u6587\u590D\u73B0\\experiments\\segformer_aligned_wave7_20261018\\\
+      weights\\mit_b0_imagenet.pdparams"
+    type: MixVisionTransformer_B0
+  balance_modules:
+  - aligned
+  - attention_refinement
+  embedding_dim: 128
+  num_classes: 2
+  type: SegFormer
+[2026/10/18 15:54:30] INFO: Loading pretrained model from D:\论文复现\experiments\segformer_aligned_wave7_20261018\weights\mit_b0_imagenet.pdparams
+[2026/10/18 15:54:30] INFO: There are 176/176 variables loaded into MixVisionTransformer.
+CONSTRUCTOR A15_AttentionRefinement True
+[2026/10/18 15:54:30] INFO: Use the following config to build model
+model:
+  backbone:
+    pretrained: "D:\\\u8BBA\u6587\u590D\u73B0\\experiments\\segformer_aligned_wave7_20261018\\\
+      weights\\mit_b0_imagenet.pdparams"
+    type: MixVisionTransformer_B0
+  balance_modules:
+  - aligned
+  - cam
+  embedding_dim: 128
+  num_classes: 2
+  type: SegFormer
+[2026/10/18 15:54:31] INFO: Loading pretrained model from D:\论文复现\experiments\segformer_aligned_wave7_20261018\weights\mit_b0_imagenet.pdparams
+[2026/10/18 15:54:31] INFO: There are 176/176 variables loaded into MixVisionTransformer.
+CONSTRUCTOR A16_CAM True
+[2026/10/18 15:54:31] INFO: Use the following config to build model
+model:
+  backbone:
+    pretrained: "D:\\\u8BBA\u6587\u590D\u73B0\\experiments\\segformer_aligned_wave7_20261018\\\
+      weights\\mit_b0_imagenet.pdparams"
+    type: MixVisionTransformer_B0
+  balance_modules:
+  - aligned
+  - cca
+  embedding_dim: 128
+  num_classes: 2
+  type: SegFormer
+[2026/10/18 15:54:31] INFO: Loading pretrained model from D:\论文复现\experiments\segformer_aligned_wave7_20261018\weights\mit_b0_imagenet.pdparams
+[2026/10/18 15:54:32] INFO: There are 176/176 variables loaded into MixVisionTransformer.
+CONSTRUCTOR A17_CCA True
+[2026/10/18 15:54:32] INFO: Use the following config to build model
+model:
+  backbone:
+    pretrained: "D:\\\u8BBA\u6587\u590D\u73B0\\experiments\\segformer_aligned_wave7_20261018\\\
+      weights\\mit_b0_imagenet.pdparams"
+    type: MixVisionTransformer_B0
+  balance_modules:
+  - aligned
+  - pam
+  embedding_dim: 128
+  num_classes: 2
+  type: SegFormer
+[2026/10/18 15:54:32] INFO: Loading pretrained model from D:\论文复现\experiments\segformer_aligned_wave7_20261018\weights\mit_b0_imagenet.pdparams
+[2026/10/18 15:54:33] INFO: There are 176/176 variables loaded into MixVisionTransformer.
+CONSTRUCTOR A18_PAM True
+[2026/10/18 15:54:33] INFO: Use the following config to build model
+model:
+  backbone:
+    pretrained: "D:\\\u8BBA\u6587\u590D\u73B0\\experiments\\segformer_aligned_wave7_20261018\\\
+      weights\\mit_b0_imagenet.pdparams"
+    type: MixVisionTransformer_B0
+  balance_modules:
+  - aligned
+  - msca
+  embedding_dim: 128
+  num_classes: 2
+  type: SegFormer
+[2026/10/18 15:54:33] INFO: Loading pretrained model from D:\论文复现\experiments\segformer_aligned_wave7_20261018\weights\mit_b0_imagenet.pdparams
+[2026/10/18 15:54:33] INFO: There are 176/176 variables loaded into MixVisionTransformer.
+CONSTRUCTOR A19_MSCA True
+[2026/10/18 15:54:34] INFO: Use the following config to build model
+model:
+  backbone:
+    pretrained: "D:\\\u8BBA\u6587\u590D\u73B0\\experiments\\segformer_aligned_wave7_20261018\\\
+      weights\\mit_b0_imagenet.pdparams"
+    type: MixVisionTransformer_B0
+  balance_modules:
+  - aligned
+  - uafm_channel
+  embedding_dim: 128
+  num_classes: 2
+  type: SegFormer
+[2026/10/18 15:54:35] INFO: Loading pretrained model from D:\论文复现\experiments\segformer_aligned_wave7_20261018\weights\mit_b0_imagenet.pdparams
+[2026/10/18 15:54:35] INFO: There are 176/176 variables loaded into MixVisionTransformer.
+CONSTRUCTOR A20_UAFMChannel True
+[2026/10/18 15:54:35] INFO: Use the following config to build model
+model:
+  backbone:
+    pretrained: "D:\\\u8BBA\u6587\u590D\u73B0\\experiments\\segformer_aligned_wave7_20261018\\\
+      weights\\mit_b0_imagenet.pdparams"
+    type: MixVisionTransformer_B0
+  balance_modules:
+  - aligned
+  - polarized
+  embedding_dim: 128
+  num_classes: 2
+  type: SegFormer
+[2026/10/18 15:54:36] INFO: Loading pretrained model from D:\论文复现\experiments\segformer_aligned_wave7_20261018\weights\mit_b0_imagenet.pdparams
+[2026/10/18 15:54:36] INFO: There are 176/176 variables loaded into MixVisionTransformer.
+CONSTRUCTOR A21_Polarized True
+[2026/10/18 15:54:36] INFO: Use the following config to build model
+model:
+  backbone:
+    pretrained: "D:\\\u8BBA\u6587\u590D\u73B0\\experiments\\segformer_aligned_wave7_20261018\\\
+      weights\\mit_b0_imagenet.pdparams"
+    type: MixVisionTransformer_B0
+  balance_modules:
+  - aligned
+  - hamburger
+  embedding_dim: 128
+  num_classes: 2
+  type: SegFormer
+[2026/10/18 15:54:36] INFO: Loading pretrained model from D:\论文复现\experiments\segformer_aligned_wave7_20261018\weights\mit_b0_imagenet.pdparams
+[2026/10/18 15:54:36] INFO: There are 176/176 variables loaded into MixVisionTransformer.
+CONSTRUCTOR A22_Hamburger True
+[2026/10/18 15:54:37] INFO: Use the following config to build model
+model:
+  backbone:
+    pretrained: "D:\\\u8BBA\u6587\u590D\u73B0\\experiments\\segformer_aligned_wave7_20261018\\\
+      weights\\mit_b0_imagenet.pdparams"
+    type: MixVisionTransformer_B0
+  balance_modules:
+  - aligned
+  - se
+  embedding_dim: 128
+  num_classes: 2
+  type: SegFormer
+[2026/10/18 15:54:37] INFO: Loading pretrained model from D:\论文复现\experiments\segformer_aligned_wave7_20261018\weights\mit_b0_imagenet.pdparams
+[2026/10/18 15:54:37] INFO: There are 176/176 variables loaded into MixVisionTransformer.
+CONSTRUCTOR A23_SE True
+[2026/10/18 15:54:37] INFO: Use the following config to build model
+model:
+  backbone:
+    pretrained: "D:\\\u8BBA\u6587\u590D\u73B0\\experiments\\segformer_aligned_wave7_20261018\\\
+      weights\\mit_b0_imagenet.pdparams"
+    type: MixVisionTransformer_B0
+  balance_modules:
+  - aligned
+  - psp_pool
+  embedding_dim: 128
+  num_classes: 2
+  type: SegFormer
+[2026/10/18 15:54:38] INFO: Loading pretrained model from D:\论文复现\experiments\segformer_aligned_wave7_20261018\weights\mit_b0_imagenet.pdparams
+[2026/10/18 15:54:38] INFO: There are 176/176 variables loaded into MixVisionTransformer.
+CONSTRUCTOR A24_PSP True
+CONSTRUCTOR_DONE 24 24

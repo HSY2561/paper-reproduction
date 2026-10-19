@@ -1,10 +1,10 @@
 {
-  "tag": "M01_SE_train",
-  "pid": 102320,
-  "runner_pid": 78068,
-  "timestamp": "2026-10-17T17:49:44+08:00",
-  "latest_iter": 3200,
-  "elapsed_seconds": 7197.3,
-  "log_size": 207004,
-  "free_gb": 12.76
+  "tag": "M01_SE_profile",
+  "pid": 89660,
+  "runner_pid": 32820,
+  "timestamp": "2026-10-18T11:04:04+08:00",
+  "latest_iter": null,
+  "elapsed_seconds": 0.0,
+  "log_size": 0,
+  "free_gb": 11.18
 }

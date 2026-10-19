@@ -1,0 +1,5 @@
+{
+  "status": "compatibility_deferred",
+  "updated_at": "2026-10-19T05:18:28+08:00",
+  "reason": "Prior PSP backward cuDNN incompatibility; no performance result"
+}

@@ -4,11 +4,13 @@
 
 GitHub 中的日志、heartbeat 和进程状态是提交时保存的快照，不代表查看时的实时运行状态。`queue.lock` 是本机防重入锁，不上传到仓库。
 
-## 最新状态（2026-10-17）
+## 最新状态（2026-10-19）
 
-14 个新训练组（12 种模块、2 个宽度控制）已完成 18k 训练、验证与选模核验；原始 B0 为冻结复用基线。Aligned 的单 seed 验证裂缝 IoU 为 67.852%，F1 为 80.847%，参数为 3.470434M；区域指标略高于 B0，但边界 F1 较低，速度与多种子结论仍待核验。
+15 个新训练组（13 种模块、2 个宽度控制）已完成 18k 训练、验证与选模核验；原始 B0 为冻结复用基线。[队列完成回执](results/queue_done.json)记录完成时间为 2026-10-18 11:04:21（北京时间），本轮未使用 test 选模。
 
-SE 最新退出回执为 17:49:47 超时（`exit_code=1`、`needs_review`），日志止于 3200/18000；PSP 为反向 smoke 失败。两者的性能保持空白。旧 heartbeat/active_process 文件是最后的运行记录，不表示进程仍在运行。
+SE 已在先前超时后补完：2026-10-18 11:03:32 的[训练退出回执](results/M01_SE_train_exit.json)为 `exit_code=0`，[状态](results/M01_SE_status.json)为 `complete`；[验证结果](results/M01_SE_val.json)为裂缝 IoU 67.553%、F1 80.635%、mIoU 82.636%。PSP 仍为反向 smoke 失败，性能保持空白；兼容性失败不代表模型性能差。旧 heartbeat/active_process 文件是运行记录，不表示进程仍在运行。
+
+Aligned 的本轮单 seed 验证裂缝 IoU 为 67.852%，F1 为 80.847%，参数为 3.470434M；区域指标略高于 B0，但边界 F1 较低。这些是 Wave6 筛选结果，后续联合消融、多种子复核与最新阶段请从 [Wave7 工程](../segformer_aligned_wave7_20261018/README.md)继续阅读。
 
 ## 阅读与复现入口
 
@@ -17,7 +19,7 @@ SE 最新退出回执为 17:49:47 超时（`exit_code=1`、`needs_review`），�
 - 自动更新的消融表：[refine-logs/EXPERIMENT_RESULTS.md](refine-logs/EXPERIMENT_RESULTS.md)
 - 机器可读对照表：[results/ablation_table.csv](results/ablation_table.csv)
 - 结构与性能总表：[results/comparison.json](results/comparison.json)
-- 当前进程与进度：results/active_process.json、heartbeat.json、各status.json
+- 保存的进程与进度快照：results/active_process.json、heartbeat.json、各status.json
 - 每次真实退出回执：results/*_exit.json
 - 旧结果选模、边界协议修正：[provenance/historical_corrections.json](provenance/historical_corrections.json)
 

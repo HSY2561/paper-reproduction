@@ -1,0 +1,6 @@
+{
+  "status": "needs_review",
+  "updated_at": "2026-10-17T17:49:47+08:00",
+  "error": "Child timeout: M01_SE_train",
+  "traceback": "Traceback (most recent call last):\n  File \"D:\\论文复现\\experiments\\segformer_balance_wave6_20261016\\experiment_queue.py\", line 413, in run_queue\n    if run_command(train_args(ident), ident + '_train'):\n       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\论文复现\\experiments\\segformer_balance_wave6_20261016\\experiment_queue.py\", line 174, in run_command\n    raise RuntimeError('Child timeout: ' + tag)\nRuntimeError: Child timeout: M01_SE_train\n"
+}

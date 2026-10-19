@@ -1,0 +1,35 @@
+D:\论文复现\experiments\segformer_aligned_wave7_20261018\src\PaddleSeg-2.10.0\paddleseg\models\backbones\efficientformerv2.py:206: SyntaxWarning: "is not" with 'str' literal. Did you mean "!="?
+  if self.mode is not 'multi_scale':
+D:\论文复现\experiments\segformer_aligned_wave7_20261018\src\PaddleSeg-2.10.0\paddleseg\models\layers\ms_deformable_attention.py:103: SyntaxWarning: invalid escape sequence '\s'
+  input_flatten:               (N, \sum_{l=0}^{L-1} H_l \cdot W_l, C)
+D:\论文复现\experiments\segformer_aligned_wave7_20261018\src\PaddleSeg-2.10.0\paddleseg\models\losses\rmi_loss.py:76: SyntaxWarning: invalid escape sequence '\i'
+  logits (Tensor): Shape is [N, C, H, W], logits at each prediction (between -\infty and +\infty).
+[2026/10/19 04:05:37] INFO: Use the following config to build model
+model:
+  backbone:
+    pretrained: "D:\\\u8BBA\u6587\u590D\u73B0\\experiments\\segformer_aligned_wave7_20261018\\\
+      weights\\mit_b0_imagenet.pdparams"
+    type: MixVisionTransformer_B0
+  balance_modules:
+  - aligned
+  - polarized
+  embedding_dim: 128
+  num_classes: 2
+  type: SegFormer
+WARNING: Logging before InitGoogleLogging() is written to STDERR
+W1019 04:05:37.281488 25224 gpu_resources.cc:116] Please NOTE: device: 0, GPU Compute Capability: 12.0, Driver API Version: 13.2, Runtime API Version: 12.9
+[2026/10/19 04:05:37] INFO: Loading pretrained model from D:\论文复现\experiments\segformer_aligned_wave7_20261018\weights\mit_b0_imagenet.pdparams
+[2026/10/19 04:05:37] INFO: There are 176/176 variables loaded into MixVisionTransformer.
+[2026/10/19 04:05:37] INFO: Loading pretrained model from D:\论文复现\experiments\segformer_aligned_wave7_20261018\checkpoints\A21_Polarized\model.pdparams
+[2026/10/19 04:05:37] INFO: There are 199/199 variables loaded into SegFormer.
+D:\论文复现\experiments\segformer_balance_wave6_20261016\experiment_queue.py:219: VisibleDeprecationWarning: 
+Warning:
+API "paddle.device.cuda.synchronize" is deprecated since 2.5.0, and will be removed in future versions. Please use "paddle.device.synchronize" instead.
+    Reason: synchronize in paddle.device.cuda will be removed in future 
+  paddle.device.cuda.synchronize()
+D:\论文复现\experiments\segformer_balance_wave6_20261016\experiment_queue.py:223: VisibleDeprecationWarning: 
+Warning:
+API "paddle.device.cuda.synchronize" is deprecated since 2.5.0, and will be removed in future versions. Please use "paddle.device.synchronize" instead.
+    Reason: synchronize in paddle.device.cuda will be removed in future 
+  paddle.device.cuda.synchronize()
+{"model": "A21_Polarized", "params_total": 3503330, "params_trainable": 3503074, "latency": [{"input_shape": [1, 3, 400, 400], "repeat_ms": [17.983879996463656, 10.206518000923097, 10.691506001167], "median_ms": 10.691506001167}, {"input_shape": [1, 3, 480, 480], "repeat_ms": [15.442499998025596, 15.800250000320375, 16.725912000983953], "median_ms": 15.800250000320375}], "checkpoint": "D:\\论文复现\\experiments\\segformer_aligned_wave7_20261018\\checkpoints\\A21_Polarized\\model.pdparams", "feature_shapes_at400": [[1, 32, 100, 100], [1, 64, 50, 50], [1, 160, 25, 25], [1, 256, 13, 13]], "hardware": "NVIDIA GeForce RTX 5060", "paddle": "3.4.0", "protocol": "FP32 GPU network forward; batch1; sync; warmup20; 3x50; no I/O/postprocess", "test_used": false, "timestamp": "2026-10-19T04:05:43+08:00"}

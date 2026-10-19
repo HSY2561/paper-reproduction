@@ -1,0 +1,16 @@
+{
+  "tag": "A23_SE_profile",
+  "pid": 80276,
+  "runner_pid": 85160,
+  "started_at": "2026-10-19T05:18:14+08:00",
+  "command": [
+    "C:\\venv_bisenet\\Scripts\\python.exe",
+    "D:\\论文复现\\experiments\\segformer_aligned_wave7_20261018\\aligned_queue.py",
+    "--profile",
+    "A23_SE",
+    "--weights",
+    "D:\\论文复现\\experiments\\segformer_aligned_wave7_20261018\\checkpoints\\A23_SE\\model.pdparams"
+  ],
+  "log": "D:\\论文复现\\experiments\\segformer_aligned_wave7_20261018\\logs\\A23_SE_profile.log",
+  "test_used": false
+}

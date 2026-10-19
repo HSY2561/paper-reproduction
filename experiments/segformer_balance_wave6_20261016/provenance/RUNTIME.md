@@ -1,6 +1,8 @@
 # 本地运行契约
 
-> 2026-10-17 最新退出状态：SE 训练在 17:49:47 达到 7200 秒超时，`results/M01_SE_train_exit.json` 为 exit_code=1、timed_out=true，`M01_SE_status.json` 为 needs_review。最后日志为 3200/18000，性能未完成。下文15:50及更早的进程/PID是历史记录，不能表示当前仍在运行。本次 GitHub 同步只整理结果与说明，没有重启训练或修改系统任务。
+> 最新覆盖状态（2026-10-19 核对）：Wave6 已完成 15 个新训练组（13 种模块、2 个宽度控制），见 [queue_done.json](../results/queue_done.json)，完成时间为 2026-10-18 11:04:21（北京时间）。SE 已补完 18k 训练，最新 [M01_SE_train_exit.json](../results/M01_SE_train_exit.json)于 2026-10-18 11:03:32 记录 `exit_code=0`，[M01_SE_status.json](../results/M01_SE_status.json)为 `complete`，独立官方验证和像素/边界评估退出码均为 0。PSP 仍为反向 smoke 失败。下述超时、恢复、session/PID 均为历史记录，不能替代最新退出回执或表示进程仍在运行。后续阶段见 [Wave7 工程](../../segformer_aligned_wave7_20261018/README.md)。本次同步仅更新文档，没有重启实验或修改系统任务。
+
+> 历史状态（2026-10-17，已由上述完成回执覆盖）：SE 训练在 17:49:47 达到 7200 秒超时；当时 `results/M01_SE_train_exit.json` 为 exit_code=1、timed_out=true，`M01_SE_status.json` 为 needs_review，最后日志为 3200/18000，性能尚未完成。保留这段说明用于追溯中断与恢复过程。
 
 复用 Python `C:\venv_bisenet\Scripts\python.exe`，PaddlePaddle 3.4.0，RTX5060 8GB，FP32。不安装新框架。数据只读 `C:\Users\user\algolab_data`；新文件仅写本波次目录。
 

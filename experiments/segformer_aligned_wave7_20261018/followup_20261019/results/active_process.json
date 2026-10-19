@@ -1,0 +1,32 @@
+{
+  "tag": "A0_s43_train",
+  "pid": 100588,
+  "runner_pid": 34044,
+  "started_at": "2026-10-19T10:33:29+08:00",
+  "command": [
+    "C:\\venv_bisenet\\Scripts\\python.exe",
+    "D:\\论文复现\\experiments\\segformer_aligned_wave7_20261018\\src\\PaddleSeg-2.10.0\\tools\\train.py",
+    "--config",
+    "D:\\论文复现\\experiments\\segformer_aligned_wave7_20261018\\followup_20261019\\configs\\A0_s43.yml",
+    "--save_dir",
+    "D:\\论文复现\\experiments\\segformer_aligned_wave7_20261018\\followup_20261019\\training\\A0_s43",
+    "--iters",
+    "18000",
+    "--do_eval",
+    "--use_ema",
+    "--save_interval",
+    "1000",
+    "--seed",
+    "43",
+    "--log_iters",
+    "100",
+    "--num_workers",
+    "0",
+    "--keep_checkpoint_max",
+    "1",
+    "--precision",
+    "fp32"
+  ],
+  "log": "D:\\论文复现\\experiments\\segformer_aligned_wave7_20261018\\followup_20261019\\logs\\A0_s43_train.log",
+  "test_used": false
+}

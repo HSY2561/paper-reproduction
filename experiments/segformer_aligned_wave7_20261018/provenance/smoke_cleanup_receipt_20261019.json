@@ -1,0 +1,29 @@
+{
+  "removed": [
+    "D:\\论文复现\\experiments\\segformer_aligned_wave7_20261018\\training\\smoke_A01_GloRe",
+    "D:\\论文复现\\experiments\\segformer_aligned_wave7_20261018\\training\\smoke_A02_ASPPsep",
+    "D:\\论文复现\\experiments\\segformer_aligned_wave7_20261018\\training\\smoke_A03_Encoding",
+    "D:\\论文复现\\experiments\\segformer_aligned_wave7_20261018\\training\\smoke_A04_ExternalAttention",
+    "D:\\论文复现\\experiments\\segformer_aligned_wave7_20261018\\training\\smoke_A05_ContextEmbedding",
+    "D:\\论文复现\\experiments\\segformer_aligned_wave7_20261018\\training\\smoke_A06_DNL",
+    "D:\\论文复现\\experiments\\segformer_aligned_wave7_20261018\\training\\smoke_A07_PPContext",
+    "D:\\论文复现\\experiments\\segformer_aligned_wave7_20261018\\training\\smoke_A09_APNB",
+    "D:\\论文复现\\experiments\\segformer_aligned_wave7_20261018\\training\\smoke_A10_AFNB",
+    "D:\\论文复现\\experiments\\segformer_aligned_wave7_20261018\\training\\smoke_A11_JPU",
+    "D:\\论文复现\\experiments\\segformer_aligned_wave7_20261018\\training\\smoke_A12_DCM",
+    "D:\\论文复现\\experiments\\segformer_aligned_wave7_20261018\\training\\smoke_A13_EMAU",
+    "D:\\论文复现\\experiments\\segformer_aligned_wave7_20261018\\training\\smoke_A14_NonLocal",
+    "D:\\论文复现\\experiments\\segformer_aligned_wave7_20261018\\training\\smoke_A15_AttentionRefinement",
+    "D:\\论文复现\\experiments\\segformer_aligned_wave7_20261018\\training\\smoke_A16_CAM",
+    "D:\\论文复现\\experiments\\segformer_aligned_wave7_20261018\\training\\smoke_A17_CCA",
+    "D:\\论文复现\\experiments\\segformer_aligned_wave7_20261018\\training\\smoke_A18_PAM",
+    "D:\\论文复现\\experiments\\segformer_aligned_wave7_20261018\\training\\smoke_A19_MSCA",
+    "D:\\论文复现\\experiments\\segformer_aligned_wave7_20261018\\training\\smoke_A20_UAFMChannel",
+    "D:\\论文复现\\experiments\\segformer_aligned_wave7_20261018\\training\\smoke_A21_Polarized",
+    "D:\\论文复现\\experiments\\segformer_aligned_wave7_20261018\\training\\smoke_A22_Hamburger",
+    "D:\\论文复现\\experiments\\segformer_aligned_wave7_20261018\\training\\smoke_A23_SE"
+  ],
+  "ended_at": "2026-10-19T09:04:41.1263528+08:00",
+  "scope": "only completed smoke artifact directories",
+  "test_used": false
+}

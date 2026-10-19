@@ -1,0 +1,31 @@
+{
+  "model": "A02_ASPPsep",
+  "candidates": [
+    {
+      "variant": "best_model",
+      "mIoU": 0.8292348133826619,
+      "iter": 8000,
+      "weight": "D:\\论文复现\\experiments\\segformer_aligned_wave7_20261018\\training\\A02_ASPPsep\\best_model\\model.pdparams",
+      "state_sha256": "af553f267977992dd6140abdf3e8fb488f06bd9dec7df9f652bd4fffb5056358"
+    },
+    {
+      "variant": "ema_best_model",
+      "mIoU": 0.8280860763724248,
+      "iter": 12000,
+      "weight": "D:\\论文复现\\experiments\\segformer_aligned_wave7_20261018\\training\\A02_ASPPsep\\ema_best_model\\ema_model.pdparams",
+      "state_sha256": "af9d35b7f19706fa82f3774bb99e18435a02256a1fea834316b2bcc5eee840e8"
+    }
+  ],
+  "selected": {
+    "variant": "best_model",
+    "mIoU": 0.8292348133826619,
+    "iter": 8000,
+    "weight": "D:\\论文复现\\experiments\\segformer_aligned_wave7_20261018\\training\\A02_ASPPsep\\best_model\\model.pdparams",
+    "state_sha256": "af553f267977992dd6140abdf3e8fb488f06bd9dec7df9f652bd4fffb5056358"
+  },
+  "sha256": "243a1390e296ca259eeadb2804b7e10c04f32d8dddf46909c29de9ab0669d646",
+  "checkpoint": "D:\\论文复现\\experiments\\segformer_aligned_wave7_20261018\\checkpoints\\A02_ASPPsep\\model.pdparams",
+  "selection": "highest exact validation mIoU from ordinary and EMA state",
+  "test_used": false,
+  "frozen_at": "2026-10-18T17:10:56+08:00"
+}

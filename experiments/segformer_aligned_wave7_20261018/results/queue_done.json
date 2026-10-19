@@ -1,0 +1,32 @@
+{
+  "updated_at": "2026-10-19T05:18:32+08:00",
+  "states": {
+    "A01_GloRe": "complete",
+    "A02_ASPPsep": "complete",
+    "A03_Encoding": "complete",
+    "A04_ExternalAttention": "complete",
+    "A05_ContextEmbedding": "complete",
+    "A06_DNL": "complete",
+    "A07_PPContext": "complete",
+    "A08_DAPPM": "smoke_failed",
+    "A09_APNB": "complete",
+    "A10_AFNB": "complete",
+    "A11_JPU": "complete",
+    "A12_DCM": "complete",
+    "A13_EMAU": "complete",
+    "A14_NonLocal": "complete",
+    "A15_AttentionRefinement": "complete",
+    "A16_CAM": "complete",
+    "A17_CCA": "complete",
+    "A18_PAM": "complete",
+    "A19_MSCA": "complete",
+    "A20_UAFMChannel": "complete",
+    "A21_Polarized": "complete",
+    "A22_Hamburger": "complete",
+    "A23_SE": "complete",
+    "A24_PSP": "compatibility_deferred"
+  },
+  "complete": 22,
+  "test_used": false,
+  "next_step": "review failures, paired timing, Pareto top2 and matched seeds before public controls/test"
+}

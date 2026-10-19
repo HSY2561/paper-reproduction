@@ -1,0 +1,336 @@
+# Crack500 SegFormer-B0 模型消融报告
+
+> 当前阅读入口：[2026-10-17 最新结果报告](SegFormer模块消融结果与改进建议_20261017.md)。本文件保留阶段记录，后面的旧主线、旧指标定义和历史状态不代表当前结论。
+
+## 2026-10-17：SegFormer精度效率消融（最新核验结果）
+
+
+更新时间：2026-10-18T15:53:33+08:00。这是本轮**验证集筛选报告**，不是最终test对照表。
+
+## 已完成与未完成
+
+已完成15个新训练组，其中13种不同模块、2个宽度控制；另复用原始B0冻结基线。15组均核对真实exit code 0、18,000/18,000日志、iter_18000、普通/EMA最高精确val mIoU、冻结SHA256、独立官方val、像素/边界评估和参数统计。原始B0 SHA仍一致，train/val全部4488个文件哈希复核无变化。SE已完成并按同一规则纳入本表；PSP反向smoke失败，不填写性能。
+
+SE旧日志停在13:34，在2000iter后的验证过程中中断，该旧运行没有训练exit JSON；实际原因未知。现场和当时已完成的14组保留，只对SE按相同seed/预训练重新训练。为处理反复丢失的工具会话，已获准使用有2小时时限、自动过期删除的一次性Windows任务运行同一队列；实际是否在运行仍须以新日志和回执核对，不能以注册成功代替完成。当前SE状态为complete，GloRe和UAFM通道组已经完整完成。
+
+## 数据与口径
+
+RTX5060，Paddle3.4，FP32，seed42，batch4，18k，AdamW lr6e-5、poly end_lr0、相同增强/400裁剪/CE/EMA；模块从相同ImageNet MiT-B0初始化。所有新模块接在width128母体，必须同时对照W128与原始width256基线，不能把减小通道宽度的收益算成模块收益。这里只使用Crack500 train1896/val348，没有读取test或自建数据。
+
+Precision、Recall、F1、IoU均为裂缝前景的全验证集混淆矩阵指标；mIoU是背景/裂缝两类IoU均值。对于本报告的二值全局计数，F1=2×IoU/(1+IoU)，两者同升不是两个独立统计证据。Params采用同一模型参数统计，包含骨干与解码器，单位M。
+
+边界为前景减3×3腐蚀、图外为零、精确欧氏距离≤2px，全局匹配计数后算调和平均。不能混入旧报告0.4177或曾错误计算的0.5894等不同口径B0边界数字。当前所有结果只有一个seed，不能称显著提升。
+
+## 完整消融表
+
+| 配置（模块组均为W128母体） | Precision % | Recall % | F1 % | IoU % | mIoU % | Params M | 边界F1 % |
+|---|---:|---:|---:|---:|---:|---:|---:|
+| SegFormer-B0，原始width256 | 82.827 | 78.913 | 80.823 | 67.817 | 82.802 | 3.715170 | 45.152 |
+| W128 仅压缩解码器至128 | 80.275 | 81.142 | 80.706 | 67.653 | 82.678 | 3.451746 | 44.029 |
+| W64 仅压缩解码器至64 | 81.115 | 79.462 | 80.280 | 67.056 | 82.374 | 3.369186 | 43.302 |
+| M01_SE SE | 80.993 | 80.279 | 80.635 | 67.553 | 82.636 | 3.460098 | 43.797 |
+| M02_PSA Polarized SA | 80.185 | 80.723 | 80.453 | 67.299 | 82.489 | 3.484642 | 43.277 |
+| M03_GC Global Context | 82.080 | 79.143 | 80.585 | 67.483 | 82.614 | 3.460499 | 44.623 |
+| M04_CCA Criss-Cross Attention | 81.651 | 79.682 | 80.654 | 67.581 | 82.660 | 3.533987 | 44.242 |
+| M05_PAM PAM | 81.657 | 79.574 | 80.602 | 67.507 | 82.621 | 3.533987 | 44.108 |
+| M06_CAM CAM | 80.776 | 80.657 | 80.716 | 67.668 | 82.694 | 3.451747 | 43.839 |
+| M07_NonLocal NonLocal | 79.771 | 81.900 | 80.822 | 67.816 | 82.757 | 3.518498 | 43.445 |
+| M08_MSCA MSCA | 81.101 | 79.848 | 80.470 | 67.322 | 82.515 | 3.515362 | 44.127 |
+| M09_Encoding Encoding | 82.320 | 79.170 | 80.715 | 67.665 | 82.714 | 3.588530 | 44.786 |
+| M10_GloRe GloRe | 81.047 | 80.513 | 80.779 | 67.756 | 82.745 | 3.498978 | 44.436 |
+| M11_ASPPsep Separable ASPP | 80.916 | 80.643 | 80.780 | 67.756 | 82.743 | 3.556194 | 44.693 |
+| M12_PSP PSP（兼容性失败） | — | — | — | — | — | — | — |
+| M13_Aligned Aligned | 82.677 | 79.097 | 80.847 | 67.852 | 82.818 | 3.470434 | 44.928 |
+| M14_UAFMchannel UAFM Channel | 81.860 | 79.651 | 80.741 | 67.702 | 82.727 | 3.789410 | 44.749 |
+
+## 结果如何理解
+
+1. **当前最高裂缝IoU的完成项是M13_Aligned，IoU=0.678520、F1=0.808474；Aligned的参数精度折中值得关注。** Aligned相对原始B0，F1增加0.0246个百分点，裂缝IoU增加0.0346个百分点，mIoU增加0.0164个百分点；参数减少6.59%。边界F1仍下降0.2239个百分点。相对W128母体，其IoU/F1/边界F1增加0.1992/0.1416/0.8990个百分点，表明能恢复部分压缩损失；是否能稳定超过原始B0尚未证实。它主要把W128的高Recall工作点拉回较高Precision，不足以认定所有细裂缝定位都改善。
+
+2. **GloRe是效率方向的候选，不是精度胜出者。** 参数3.498978M，减少5.82%；F1/IoU分别低于B0约0.0437/ 0.0615个百分点。当前JSON的efficiency_pass=true，但使用了不同时间段测出的延迟，仅是临时规则判定。此前400/480尺寸出现倒挂、重复波动，**不能据10.67ms与基线15.58ms直接声称加速31.5%**。精度线和最终目标线仍未通过。
+
+3. **背景误检没有被证明解决。** 13个完成模块中，13个相对B0提高Recall、降低Precision，13个边界F1低于B0。B0总FP/FN为753850/971542；Aligned为763607/963066，即FP增加9,757、FN减少8,476；GloRe增加113,622个FP、减少73,690个FN；NonLocal增加203,059个FP、减少137,614个FN。说明多数候选以更激进的前景预测换取漏检减少，不能写成“阴影、落叶误检得到抑制”。具体场景归因仍需人工分组查看图像。
+
+4. **继续减宽到64不合算。** 参数只比B0减少9.31%，IoU却下降0.7610个百分点；W128已减少7.09%，更适合作为效率母体。UAFM通道融合参数反而高于原B0约2%，同时F1下降，没有进入最终组合的充分理由。GC/PSA/CCA/PAM/MSCA等没有区域增益，不按模块名称继续堆叠。
+
+5. **目前不是SOTA，也没有最终定型。** Aligned只是单seed验证集最好；GloRe仅临时满足效率容差。六个公开原始模型尚未完成本轮统一test表；不同数据划分、验证与test、服务器与本机数字不能横向拼成胜出证据。
+
+## 建议的后续顺序
+
+| 优先级 | 工作及模型位置 | 要解决的问题/预期收益 | 成本与风险 | 放行条件 |
+|---|---|---|---|---|
+| 1 | 完成SE；同一进程交错顺序复测B0、W128、Aligned、GloRe | 补齐单项，排除GPU热态/时钟造成的假加速 | 只补最后一个未完成模块；速度评估先避开并行训练 | 真exit0/18k/冻结独立val；同输入、FP32、batch1、预热和同步 |
+| 2 | 从逐图CSV定位Aligned/GloRe的FP增加与边界损失，人工标注阴影/纹理/低对比度类别 | 判断瓶颈来自已有裂缝扩张、断裂还是背景激活 | 总指标不能自动推断场景；不得删失败图或按结果改标签 | 保留全348图，报告提升/下降分布及最差案例；只用val |
+| 3 | **至多一组探索性Aligned+GloRe**：GloRe接原生C4；Aligned对齐C1与投影C4后再融合 | 一个补深层关系，一个补跨尺度恢复，观察互补性 | 参数静态估计3.517666M（约减5.32%），不是实测；可能累加FP或边界退化；grid_sample部署支持待测 | 先复测与诊断，运行前登记；与W128、两个单模块组成四行消融；不改输入/loss/预算 |
+| 4 | 真正有效候选与B0匹配seed43/44 | 排除单seed和多模型反复筛选的偶然最大值 | 每组仍完整18k；当前不能计算均值±标准差 | 报告三seed均值/波动，完整精度与边界门槛不事后放宽 |
+| 5 | 六个预选原始公开模型，统一冻结后test | 检验真实精度/参数折中 | 不因val弱删行；兼容性失败不伪造数字 | 阶段一稳定后再做；复用合法已有结果，补齐缺项 |
+
+原计划优先的Aligned+GC、MSCA+CAM缺少两侧区域增益，不执行。Aligned+GloRe只是当前证据支持的下一组假设，**不是已经训练的组合**，不自动保证提升；本报告不把组合估算参数加入结果表。两者相对W128都减少FP、增加FN，误差方向相同；接入位置不同只提供结构互补的假设，不能写成已证明误差互补，联合时尤其要防止Recall继续下降。
+
+组合建议依据SE完成前的12模块证据提出；若SE补齐后改写候选排名或门槛结论，应先重新审阅，再运行组合，不能仅按本脚本固定建议自动启动。
+
+如果组合仍无实质收益，停止重复叠加全局注意力：MiT本身已有长距离关系建模，冗余是一个待验证解释。优先补输入/裁剪细线保留、标签边界一致性及train内难负样本统计，再针对明确因素做一个单变量实验。若调整损失或采样，另起独立消融，不能与本轮结构改动同时变更，也不能看test调阈值。
+
+最终论文可如实围绕“轻量解码器压缩与特征对齐带来的精度—成本折中”组织；现阶段不能写成“全部精度超过原模型、最低参数、阴影误检已解决、机器人实时性已证实”。自建数据、源帧互斥和机器人修复是后续外部验证。
+
+## 图与证据
+
+参数—IoU图展示所有已完成项，而非只展示最好的候选。
+
+![参数与裂缝IoU](experiments/segformer_balance_wave6_20261016/figures/results_20261017/params_iou.png)
+
+误检与漏检变化图中的橙条是新增FP，蓝条是减少FN；两者同时增长正说明Precision/Recall取舍。
+
+![误检漏检变化](experiments/segformer_balance_wave6_20261016/figures/results_20261017/false_positive_tradeoff.png)
+
+- 精确数据：`results/comparison.json`、各组`*_val.json`和`*_val_per_image.csv`。
+- 百分数消融CSV：`results/ablation_table_percent_20261017.csv`。
+- 核验清单：`results/result_audit_20261017.json`。
+- 原始训练、验证、退出码：`logs/`和`results/*_exit.json`。
+- 冻结权重及选模：`checkpoints/<ID>/selection.json`与同目录权重SHA256。
+- 原始开源模块位置及训练契约：`refine-logs/EXPERIMENT_PLAN.md`、`provenance/RUNTIME.md`。
+
+这是结果快照；SE后续完成时须按相同口径更新，不用中间迭代指标填表。
+
+
+## 2026-10-07：SegFormer 主线 Crack500 优化结果（历史记录，后续修正见新日期章节）
+
+本节覆盖此前 BiSeNetV2/C4 主线，作为当前论文视觉分割主线。C4、BiSeNetV2 及其融合结果不再进入主比较表。
+
+统一协议为 RTX5060、PaddleSeg-2.10.0、FP32、seed=42、batch=4、AdamW、初始学习率 `6e-5`、PolynomialDecay `end_lr=0`、18,000 iter。所有候选只使用 Crack500 train/val 选择 checkpoint，未通过验证门槛的候选不访问 test。
+
+| 模型 | 状态 | val mIoU | val 裂缝 IoU | val Recall | val F1 | Crack500 test |
+|---|---|---:|---:|---:|---:|---|
+| SegFormer-B0 | 基线，冻结后已测 | 0.8280 | — | — | — | mIoU 0.7695，裂缝 IoU 0.5707，F1 0.7267 |
+| SegFormer-B0 + UAFM_SpAtten | 验证门槛未通过，未测 test | 0.8263 | 0.6752 | 0.7924 | 0.8059 | 不访问 |
+| SegFormer-B0 + PPContextModule | smoke 失败 | — | — | — | — | 不访问 |
+| SegFormer-B0 + UAFM + PPContext | 不启动 | — | — | — | — | 不访问 |
+| OCRNet-HRNet-W18 | 原始公开模型，冻结后已测 | 0.8227 | — | — | — | mIoU 0.7715，裂缝 IoU 0.5757，F1 0.7307 |
+
+UAFM 的 Crack500 独立验证复核选择 EMA iter=11000。相对 SegFormer-B0，mIoU 下降 0.0017，裂缝 IoU 仅增加 0.0030，F1 增加约 0.0029，未达到预注册的裂缝 IoU +0.005、F1 +0.003、Recall 下降不超过 0.005 且 mIoU 不下降的条件，因此冻结为审计 checkpoint，但不进入 test。
+
+PPContextModule 在本轮明确使用的 D 盘 PaddleSeg 源码和 RTX5060/Paddle3.4 环境中，20 iter 反向 smoke 真实退出码为 1，错误为 `CUDNN_STATUS_INTERNAL_ERROR`。PP-LiteSeg-STDC1、PIDNet-S、DeepLabV3P-ResNet50 的原始结构 smoke 也分别失败，退出码均为 1，错误为 cuDNN 执行/内部错误；没有合法的完整训练和 test 数字，不能把它们写进性能比较表。
+
+本轮结论：当前没有通过验证门槛的 SegFormer 结构优化模型，不能声称 SOTA。主线暂时保留 SegFormer-B0 与 OCRNet-HRNet-W18 的 Crack500 冻结结果；C4 和 BiSeNetV2 不再作为主线基线或对照。完整 JSON 证据见 `experiments/retrain_wave4_20261007/results/crack500_segformer_ablation_summary.json`。
+
+## 2026-09-30：RTX 5060 本地正式结构消融
+
+本地新阶段执行[本地结构消融计划](本地结构消融执行计划_20260930.md)。以下为本地验证集结果，不能与下文服务器 test 数值直接比较。
+
+| 方案 | 本地状态 | val mIoU | 裂缝 IoU | Precision | Recall | F1 | 边界 F1（2px） |
+|---|---|---:|---:|---:|---:|---:|---:|
+| C0：BiSeNetV2，统一 OHEM/Dice/EMA，end_lr=0 | 复用9月28日有效18k训练及冻结权重 | 0.810794 | 0.646406 | 0.802614 | 0.768588 | 0.785233 | 0.395146 |
+| C1：+官方 OCR 目标上下文 | 18k完成、冻结EMA iter12000；未通过门槛 | 0.811145 | 0.646877 | 0.809275 | 0.763233 | 0.785580 | 0.396428 |
+| C2：+GSCNN门控形状分支及边界监督 | 18k完成、冻结EMA iter12000；未通过边界门槛 | 0.811266 | 0.647423 | 0.798333 | 0.774008 | 0.785982 | 0.393072 |
+| C3：C1+C2 | 不启动：C1和C2均未通过各自门槛 | — | — | — | — | — | — |
+
+
+
+旧本地学习率配置的验证 mIoU 为 0.814841、裂缝 IoU 0.654314，继续保留为历史最佳参考。C1、C2均未超过历史最佳，也未达到各自预定门槛；本轮没有可采纳的结构改进，不称 SOTA。C0边界指标由完整348张验证预测计算，混淆矩阵与既有冻结指标完全一致；2px指标定义详见计划及 `experiments/local_structure_20260930/results/C0_boundary_metrics.json`。训练数据0/1、审阅图0/255不混用。
+
+模型代码只在独立快照的现有 `bisenet.py` 做成熟模块接口适配，官方 OCR/GSCNN/BCELoss/train.py 源码已对照上游。两组smoke真实退出码均为0，包含EMA、验证及checkpoint写入。活动状态以 `experiments/local_structure_20260930/results/queue_state.json` 和真实退出回执为准。下文均为2026-09-25服务器历史结果。
+
+下一波本地候选已于2026-09-30 11:01:54启动串行训练：C1b为OCR从1/32改接到1/8的受控对照，C2b为官方PointRend点细化单模块。两组30iter官方管线smoke均通过，正式18k尚在进行；本表不填未完成的指标。状态见 `experiments/local_structure_wave2_20260930/results/queue_state.json`，细节见[执行计划](本地结构消融执行计划_20260930.md)。
+
+训练队列修正（12:13）：C1b日志和最终checkpoint已核对，但原监督进程未取得真实训练退出码，故标记为未知；已按val mIoU=0.812851冻结EMA iter15000，尚待独立val重评及全量指标。C2b从12:13:10独立正式训练中，新的控制进程会写真实`$LASTEXITCODE`。不把中途val数字视作最终消融结论。
+
+更新时间：2026-09-25  
+服务器工程：`/hy-tmp/crack_project`  
+数据集：`/hy-tmp/crack_project/data/Crack500_data_u8`  
+统一测试集：1124 张原始 Crack500 test 图像  
+主基线：PaddleSeg 官方 BiSeNetV2；CE 是默认训练损失，不写入模型名称
+
+## 最终结论
+
+本轮 A0～A7 已按“验证集筛选、冻结后测试”的流程完成。通过真实服务器日志，最优组合仍是：
+
+**BiSeNetV2 + OHEM Cross Entropy + DiceLoss + EMA**。
+
+它相对 BiSeNetV2 默认 CE 的测试 mIoU 提升 0.0088，但测试 mIoU 仍为 0.7694，低于 OCRNet-HRNet-W18 的 0.7760；裂缝 IoU 0.5705，低于 0.5819；前景 F1 0.7264，低于 0.7356。因此当前结果不能称为严格 SOTA。A2～A7 中没有一个模块满足进入最终组合的筛选条件，最终组合只保留 A1 的损失与 EMA 配置。
+
+## A0～A7 真实消融记录
+
+| 编号 | 实际配置 | 训练/选模 | 最佳验证 mIoU | 结果 | 服务器证据 |
+|---|---|---:|---:|---|---|
+| A0 | BiSeNetV2 + 默认 CE | 18k iter | 0.8057 | 主基线 | `logs/bisenetv2_train.log` |
+| A1 | OHEM + Dice + EMA | 18k iter | **0.8181** | 当前最佳，进入最终测试 | `logs/bisenetv2_ohem_dice_ema.log` |
+| A2 | A1 + PaddleSeg 官方 PPModule | 6k iter | 0.7999（EMA） | 未通过，未冻结到 test | `logs/bisenetv2_a2_ppm_6k_20260925.log` |
+| A3 | A1 + PaddleSeg 官方 ASPPModule | 6k iter | 0.7859（EMA） | 未通过，未冻结到 test | `logs/bisenetv2_a3_aspp_6k_20260925.log` |
+| A4 | 边界监督候选：RelaxBoundary/OhemEdgeAttention | 既有筛选 | 0.7642；OhemEdge 不兼容 | 未通过 | `logs/abl3_ohem_relax.log`、`logs/abl2_ohem_edge.log` |
+| A5 | 连通性候选：SemanticConnectivityLoss | 既有筛选 | 0.3053 | 训练失效，未进入组合 | `logs/abl2_driver.log`、`configs/bisenetv2_ablation_semconn.yml` |
+| A6 | A1 + PaddleSeg 官方 SE 通道注意力 | 3k iter 筛选 | 0.7756（非 EMA） | 未通过 | `logs/bisenetv2_a6_se_3k_20260925.log` |
+| A7 | A1 + PPModule + SE | 3k iter 筛选 | 0.7825（非 EMA） | 未通过 | `logs/bisenetv2_a7_ppm_se_3k_20260925.log` |
+
+说明：A2、A3、A6、A7 是结构模块筛选实验，使用同一原始 Crack500 训练/验证划分和随机种子 42；筛选阶段不使用 test 集。PPModule、ASPPModule 和 SE 均来自服务器 PaddleSeg 2.10.0 官方实现，未自定义新的算法模块。
+
+## 冻结后的统一 test 结果
+
+| 模型 | mIoU | 裂缝 IoU | 裂缝 Precision | 裂缝 Recall | 裂缝前景 F1 |
+|---|---:|---:|---:|---:|---:|
+| BiSeNetV2（默认 CE） | 0.7606 | 0.5545 | 0.7146 | 0.7122 | 0.7134 |
+| **BiSeNetV2 + OHEM + Dice + EMA（最终组合）** | **0.7694** | **0.5705** | **0.7296** | **0.7233** | **0.7264** |
+| PP-LiteSeg-STDC1 | 0.7661 | 0.5634 | 0.7527 | 0.6915 | 0.7219 |
+| OCRNet-HRNet-W18 | **0.7760** | **0.5819** | **0.7601** | 0.7128 | **0.7356** |
+| DeepLabV3P-ResNet50 | 0.7257 | 0.4955 | 0.5995 | **0.7406** | 0.6619 |
+| SegFormer-B0 | 0.7570 | 0.5466 | 0.7388 | 0.6776 | 0.7069 |
+| PIDNet-S | 0.5005 | 0.0547 | 0.8036 | 0.0554 | 0.1036 |
+| HrSegNet-B32 | 0.7473 | — | — | — | — |
+
+A1 的 test 结果来自 `logs/recheck_bisenetv2_ohem_dice_ema_test_20260924.log`；基线和开源模型结果来自同一批 recheck 日志。裂缝前景 F1 由裂缝类别 Precision 与 Recall 计算，不能直接用 PaddleSeg 的两类宏平均 Dice 替代。
+
+## 统一 18k 结构级改进结果
+
+S1-S3 均使用 seed=42、18,000 iter、A1 的 OHEM+Dice+EMA 训练协议，并采用验证集最佳 EMA checkpoint，在同一 1,124 张原始 Crack500 test 上评估。
+
+| 方案 | 最佳验证 mIoU | 冻结 EMA iter | Test mIoU | 裂缝 IoU | Precision | Recall | F1 | 结论 |
+|---|---:|---:|---:|---:|---:|---:|---:|---|
+| S0：A1 控制组 | 0.8181 | 已有 A1 checkpoint | **0.7694** | **0.5705** | 0.7296 | **0.7233** | **0.7264** | 当前最终候选 |
+| S1：A1 + PPContextModule | 0.8187 | 16000 | 0.7677 | 0.5673 | 0.7323 | 0.7157 | 0.7239 | 淘汰 |
+| S2：A1 + UAFM_SpAtten | 0.8158 | 17000 | 0.7638 | 0.5594 | 0.7425 | 0.6941 | 0.7175 | 淘汰 |
+| S3：A1 + PPContextModule + UAFM_SpAtten | 0.8197 | 18000 | 0.7669 | 0.5651 | **0.7476** | 0.6983 | 0.7221 | 淘汰 |
+
+验证集 mIoU 的小幅提升没有转化为 test 提升，说明本轮结构模块存在验证集过拟合或跨划分泛化不足。S3 的 Precision 最高，但漏检增加，不能用于当前以裂缝 IoU、Recall 和循迹连续性为主的任务。
+
+## 为什么结构模块没有保留
+
+- PPM 在验证集最佳 EMA mIoU 为 0.7999，低于 A1 的 0.8181，且参数量约 2.84M，已经超过轻量增量门槛。
+- ASPP 在 6k 筛选中最佳 EMA mIoU 为 0.7859，低于 A1；参数量约 2.50M，未抵消精度损失。
+- SE 和 PPM+SE 的最佳非 EMA mIoU 分别为 0.7756 和 0.7825，均没有达到 A1。
+- RelaxBoundaryLoss、Weighted/OHEM、RMI、DualTask、SemanticConnectivityLoss、噪声/模糊增强和 Lovasz/Focal 组合在既有筛选中也没有超过 A1；OhemEdgeAttentionLoss 要求 `edge_logit` 输出，与官方 BiSeNetV2 输出结构不兼容。
+
+## 最终组合方案
+
+论文和工程中固定使用：
+
+1. 网络：PaddleSeg 官方 BiSeNetV2；
+2. 主损失：OHEM Cross Entropy 与 DiceLoss，比例 0.8/0.2；
+3. 训练稳定化：EMA；
+4. 训练协议：AdamW、PolynomialDecay、原始 Crack500 train/val/test 划分；
+5. 选模指标：验证集裂缝 IoU 优先，mIoU、Recall、前景 F1 作为并列参考；
+6. 测试：只对冻结后的 A1 checkpoint 做一次统一 test 评估。
+
+当前不把 PPM、ASPP、SE、SCSegamba 作为最终组合。SCSegamba 已按项目决定归档，不进入主比较。
+
+## 后续任务
+
+1. S1-S3 已按统一 18k 协议完成，均未超过 A1，最终模型继续采用 BiSeNetV2 + OHEM + Dice + EMA。
+2. 不再保留 PPContextModule、UAFM_SpAtten 及其联合结构作为论文最终组合；其完整日志和 checkpoint 仅作消融审计。
+3. 当前模型仍未超过 OCRNet-HRNet-W18，不能写 SOTA；后续优先进行 source-frame-disjoint 复核、参数量/FLOPs/Jetson Nano 延迟记录和自建数据迁移。
+4. 若论文必须继续追求数值提升，只允许下一轮单独验证一个官方 OCR 上下文或 GSCNN 边界方向，不能与已淘汰模块叠加。
+
+## 2026-10-01 RTX5060 本地输入审计与公开模型统一结果
+
+本地波次已完成输入/标签/裁剪审计、C0/C2b恢复方式对照、C4输入尺度单变量实验、C4 seed43/44复核，以及 SegFormer-B0/OCRNet-HRNet-W18 的同协议公开模型比较。完整报告见 [模型消融最终报告_20261001.md](模型消融最终报告_20261001.md)，原始证据在 `D:\论文复现\experiments\local_structure_wave3_20261001`。
+
+C4 将训练尺度从 `[0.5,2.0]` 收窄到 `[0.75,1.25]`。seed42 验证 mIoU/裂缝IoU/F1 为 0.815506/0.654863/0.791440，seed43 为 0.816008/0.655882/0.792185，seed44 为 0.812876/0.649777/0.787715，seed44 未达到预设门槛。C4 因而是有证据支持的输入单变量改进，尚不是稳健 SOTA。
+
+| 本地 test 模型 | mIoU | 裂缝 IoU | Precision | Recall | F1 |
+|---|---:|---:|---:|---:|---:|
+| C0 BiSeNetV2 | 0.756346 | 0.545696 | 0.731795 | 0.682119 | 0.706085 |
+| C4 输入/裁剪单变量 | 0.761899 | 0.555998 | 0.737333 | 0.693324 | 0.714652 |
+| SegFormer-B0 | **0.772686** | **0.576876** | 0.726718 | **0.736690** | **0.731670** |
+| OCRNet-HRNet-W18 | 0.770546 | 0.573712 | **0.752254** | 0.707365 | 0.729119 |
+
+本表统一使用本地 1124 张原始 test，验证集选模后评估。SegFormer-B0 和 OCRNet 均高于 C4，当前不能写“达到 SOTA”。C4 的实际价值是以约2.33M参数和15.88 ms/图改善轻量 BiSeNetV2；OCRNet 约12.11M参数、70.14 ms/图，SegFormer约3.72M参数、14.32 ms/图。后续应转向 source-frame-disjoint 复核和机器人闭环指标，而不是继续无证据堆叠结构模块。
+
+## 2026-10-06 SegFormer-B0 基线方向更新
+
+根据新论文主线，本项目将 SegFormer-B0 设为精度优先主基线 S0；BiSeNetV2/C4 保留为轻量部署对照。SegFormer 的 Crack500 本地结果仅作历史参考：验证 mIoU=0.826676、裂缝 IoU=0.675882、F1=0.806599，原始 test mIoU=0.772686。正式的新基线先在自建数据 `PaddleSeg-release-2.8\dataset\custom` 上完成 smoke、seed42 训练和逐图误差诊断，再决定只做一个细节恢复模块或一个上下文模块。已有 SegFormer 运行已经使用 0.75–1.25 尺度增强和 400 裁剪，不能把相同的输入设置重复写成新消融。
+
+后续编号为 S0-custom、A（高分辨率细节/边界恢复）、B（多尺度上下文）、A+B。只有 A、B 单独通过预先门槛后才做联合。自建 test、Crack500 test 和 source-frame-disjoint test 在模型冻结前封存。边界 F1 后续统一用全局匹配计数的 harmonic mean 计算；旧 OCRNet 边界记录中的错误公式不作为新结论。
+
+详细协议、数据角色、模块位置、风险、筛选门槛和机器人验证顺序见 `D:\论文复现\SegFormer新基线与论文实验规划_20261006.md`。
+
+## 2026-10-07 自建数据审计与 S0 正式训练状态
+
+自建数据的 20 iter smoke 首次未产生训练步，原因是 smoke 清单仅 2 对图像，而官方训练器 `drop_last=True`、batch=4；该进程没有退出回执，已标记为 `aborted_no_progress`，不作为实验结果。修正为 8 对训练图像、2 对验证图像后，官方训练入口真实退出码为 0，完成训练、验证和 checkpoint 保存。
+
+对 1418/177 train/val 图像进行尺寸、标签值、像素哈希和 D4 旋转/翻转审计后，发现 18 个 train/val 图像是完全相同的图像副本或 D4 等价副本。原始清单保留用于追溯；正式 S0 使用移除训练侧重复图像的 source-disjoint 清单：train=1400、val=177。测试清单没有读取，原始数据没有修改。审计证据位于 `experiments\local_segformer_wave1_20261006\provenance\custom_train_val_audit.json`、`custom_duplicate_transform_audit.json` 和 `custom_source_disjoint_manifest.json`。
+
+S0 seed42 已在 RTX5060 上以 18,000 iter、batch4、FP32、EMA、官方 SegFormer-B0 开始正式训练。训练日志为 `experiments\local_segformer_wave1_20261006\logs\S0_seed42_train.log`，启动回执为 `results\S0_seed42_launch.json`，完成后写入 `results\S0_seed42_exit.json`。在训练未完成前不启动任何模块消融和不访问 test。
+
+## 2026-10-07 RTX 5060 重跑状态
+
+本轮因显卡更换，重新建立统一训练波次 `experiments/retrain_wave4_20261007`。Crack500 的 SegFormer-B0 已完成 18,000 iter（seed42、batch4、FP32、EMA、仅 train/val 选模，退出码0），OCRNet-HRNet-W18 正在训练，随后为 BiSeNetV2-C4；三者完成后才访问 test。自建数据 SegFormer S0 已在当前 RTX5060 完成，正式验证结果见 `experiments/local_segformer_wave1_20261006/results/S0_seed42_validation_metrics.json`。A=官方 UAFM_SpAtten 的 smoke 退出码0；B=官方 PPContextModule 在 RTX5060/Paddle3.4 反向传播触发 CUDNN_STATUS_INTERNAL_ERROR，作为兼容性负结果保留，未写入性能对比。当前不能宣称 SOTA，需等三模型 test 与自建 A 正式消融完成。
+
+## RTX 5060 重跑最终状态（2026-10-07）
+
+Crack500 统一 test 已完成（1124 张）：SegFormer-B0 mIoU/裂缝IoU/F1=0.7717/0.5751/0.7302；OCRNet-HRNet-W18=0.7710/0.5740/0.7293；BiSeNetV2-C4=0.7622/0.5566/0.7151。三者退出码均为0。SegFormer-B0 在本轮三模型中最好，但与 OCRNet 差距很小，不能宣称 SOTA。
+
+自建数据 SegFormer-B0+官方 UAFM_SpAtten 已完成 18,000 iter，验证集普通最优 checkpoint 指标为 mIoU=0.8773、裂缝IoU=0.7636、Precision=0.8453、Recall=0.8876、F1=0.8659。PPContextModule 在 RTX5060/Paddle3.4 smoke 阶段出现 CUDNN_STATUS_INTERNAL_ERROR，作为兼容性负结果保存，不计为性能结果。正式论文结论仍需补齐 A 的边界F1及与 S0 的统一逐图对照。
+
+## 2026-10-07 总结报告与冻结权重修正
+
+已生成 [论文实验总结报告_20261007.md](论文实验总结报告_20261007.md)。核查发现旧的 `results/baseline_test_summary.json` 曾用 SegFormer/OCRNet 的 EMA 权重做 test，而验证集选模实际选择了普通权重；现已覆盖为与冻结选择一致的结果。修正后的 Crack500 test 为：SegFormer-B0 0.7695/0.5707/0.7267，OCRNet-HRNet-W18 0.7715/0.5757/0.7307，BiSeNetV2-C4 0.7622/0.5566/0.7152（依次为 mIoU/裂缝IoU/F1）。自建 SegFormer + UAFM 验证裂缝IoU和F1提升，但Recall下降0.0092，未通过预注册门槛；PPContext smoke为CUDNN兼容性失败。因此当前仍不能称SOTA，报告已将完成项与待完成项分开列出。
+
+## 2026-10-07：RTX 5060 cuDNN 执行错误诊断与兼容修补
+
+`CUDNN_STATUS_INTERNAL_ERROR` 和 `CUDNN_STATUS_EXECUTION_FAILED` 出现在 `loss.backward()` 的 GPU 反向算子中，含义是 cuDNN 为某个卷积、池化或归一化张量图选择的内核执行失败；它不是标签错误，也不是 Crack500 数据损坏。当前环境为 RTX 5060、驱动 596.21、PaddlePaddle 3.4.0、CUDA 12.9、cuDNN 9.9。普通 Conv2D 反向和 SegFormer-B0/UAFM 正常，故障集中于特定的池化/上采样/卷积组合。
+
+已定位 PPContext/PPLiteSeg 的触发链为 `AdaptiveAvgPool2D -> 1x1 Conv -> bilinear upsample -> Conv`。在官方 `PPContextModule` 中加入等价的 Windows/RTX 50 兼容处理：1x1 特征图采用 `paddle.expand`（与常数双线性上采样数值相同），其它上采样结果执行 `clone()` 后再进入后续卷积。该修补不改变输出语义，仅改变张量布局和内核路径。PPContext 2 iter、20 iter（batch=2）以及 PP-LiteSeg-STDC1 2 iter（batch=1）均真实 exit code 0；正式 PPContext 18,000 iter 已启动，尚未访问 test。
+
+PIDNet-S 的当前错误已缩小到 `Pool2dGradNode`，DeepLabV3P-ResNet50 的错误落在 `BatchNormGradNode`/`Conv2dGradNode`；它们不是 PPContext 同一问题，尚未宣称修复，也未启动完整训练。详细退出码、日志和环境记录见 `experiments/retrain_wave4_20261007/results/cudnn_diagnostic_20261007.json`。
+
+
+补充：DeepLabV3P 的 ASPP 图像池化已尝试切换到 PaddleSeg 内置的等价 `CustomAvgPool2D` 并连续化插值输出，但 smoke 仍在另一处 `Conv2dGradNode` 失败；因此 DeepLab 仍需单独的 RTX 50 兼容性处理或 Linux/适配版运行环境。PIDNet 同样仍停在 `Pool2dGradNode`，不能与 PPContext 的修补混为一谈。
+
+## 2026-10-07 SegFormer Crack500 主线补充：PPContext 兼容性训练与验证结论
+
+此前 PPContext 的原始 smoke 因 RTX5060/Windows Paddle cuDNN 反向算子失败，不能据此下性能结论。随后仅针对官方 PPContextModule 做了数值等价兼容处理：1×1 全局分支使用 paddle.expand，插值结果在后续卷积前 clone()，没有改变模型语义、输入、损失或训练预算。兼容版本在相同 Crack500 train/val 协议下完成 18,000 iter；日志和 iter_18000 检查点均存在，训练没有访问 test。启动器没有写出独立 exit JSON，因此退出码保留为未知，不能把它写成 exit code 0。
+
+独立官方 val.py 复核选择 EMA iter=11000。348 张验证图结果如下：
+
+| 模型 | mIoU | 裂缝 IoU | Precision | Recall | F1 | 2px boundary-F1 |
+|---|---:|---:|---:|---:|---:|---:|
+| SegFormer-B0 基线 | 0.828021 | 0.678174 | 0.828269 | 0.789134 | 0.808228 | 0.589412 |
+| SegFormer-B0 + PPContext（兼容版） | 0.824902 | 0.672754 | 0.810944 | 0.797896 | 0.804367 | 0.577581 |
+
+相对基线，PPContext 的 mIoU、裂缝 IoU、Precision、F1 和边界 F1 分别变化 -0.003118、-0.005419、-0.017324、-0.003861 和 -0.011831；虽然 Recall 增加 0.008762，但没有达到预注册门槛。因此 PPContext 保留为兼容性修补和负结果消融，不访问 test，也不进入联合模型。UAFM 已先前未通过门槛，所以 UAFM+PPContext 不启动。当前 SegFormer 主线没有通过筛选的优化模块，不能声称 SOTA。
+
+PP-LiteSeg-STDC1、PIDNet-S、DeepLabV3P-ResNet50 的当前官方配置反向 smoke 仍分别以 exit code 1 失败，错误落在 cuDNN Conv/Pool/BatchNorm 反向；没有完整训练或 test 结果。OCRNet-HRNet-W18 保留为已完成的原始公开对照。C4/BiSeNetV2 及所有 C4 融合变体继续排除在 SegFormer 主线之外。
+
+主要证据：experiments\retrain_wave4_20261007\results\segformer_ppcontext_crack500_compat_selection.json、segformer_ppcontext_compat_val_boundary_metrics.json、segformer_ppcontext_crack500_compat_exit.json、cudnn_diagnostic_20261007.json，以及对应训练/验证日志。
+
+## 2026-10-08 RTX5060 cuDNN smoke 修复复核
+
+本轮重新核对了 PP-LiteSeg-STDC1、PIDNet-S 和 DeepLabV3P-ResNet50 的 GPU smoke。环境为 Windows 11、RTX5060（计算能力 12.0）、驱动 596.21、PaddlePaddle 3.4.0、CUDA 12.9、cuDNN 9.9，数据仍为 `C:\Users\user\algolab_data`，本轮没有访问 test。
+
+PP-LiteSeg 的兼容补丁（PPContext 的 1×1 分支使用 `expand`，插值结果 `clone`）已经通过真实训练—验证流程。第一次退出码为 1 的原因是 D 盘只剩 112 KB，训练和 348 张验证图已经完成，最后保存优化器状态时收到 `OSError: [Errno 28] No space left on device`。清理本轮专门创建的兼容性测试环境和临时输出后，以同一配置重新跑 20 iter，真实退出码为 0；普通验证 mIoU=0.4747，EMA 验证 mIoU=0.4710。证据：`experiments\retrain_wave4_20261007\results\smoke_ppliteseg_stdc1_compat_20261008_rerun_exit.json` 和对应日志。该结果仅证明后端 smoke 通过，不是正式训练或 test 结果。
+
+PIDNet-S 的等价池化替换、单卡 BatchNorm 兼容尝试以及 `FLAGS_use_cudnn=0`、batch=1 的最小 smoke 仍在 `Conv2dGradNodeFinal` 触发 `CUDNN_STATUS_INTERNAL_ERROR/EXECUTION_FAILED`，退出码仍为 1。DeepLabV3P 的 ASPP 图像池化等价替换以及同样的无 cuDNN、batch=1 smoke 仍在 `Conv2dGradNodeFinal` 触发 `CUDNN_STATUS_INTERNAL_ERROR`，退出码仍为 1。两者都没有合法的完整训练或 test 结果，不能放进公开模型性能表。
+
+PaddleX 官方安装文档明确说明，标准 Windows PaddlePaddle wheel 尚未完全支持 NVIDIA 50 系列，并提供了专用 wheel；文档还提示该 wheel 仍存在已知问题并持续适配。[官方说明](https://paddlepaddle.github.io/PaddleX/latest/en/installation/paddlepaddle_install.html) 因此当前结论是：PP-LiteSeg 的特定算子路径已修复；PIDNet 和 DeepLabV3P 属于当前 Windows/Paddle/cuDNN 对 RTX5060 的卷积反向兼容阻塞，继续改模型结构会破坏“官方原始模型”对照。正式比较应转到 Linux/WSL 的官方 CUDA 环境或后续兼容 wheel 后再执行。
+
+完整诊断 JSON：`experiments\retrain_wave4_20261007\results\cudnn_diagnostic_20261007.json`。
+
+补充核验：PIDNet-S 和 DeepLabV3P 在相同配置、batch=1、1 iter 的 CPU smoke 均 exit code 0。由此排除数据清单、预训练权重、模型注册和损失配置错误；GPU 失败限定在当前 Windows Paddle/cuDNN 的 RTX5060 卷积反向执行路径。CPU smoke 仅作故障定位，不产生可用于论文比较的训练结果。
+
+## 2026-10-08 PP-LiteSeg-STDC1 正式训练与验证结论（覆盖此前 smoke 状态）
+
+PP-LiteSeg-STDC1 已在 RTX5060、PaddleSeg 官方结构、Crack500 train/val 上完成 18,000 iter 正式训练。正式配置为 batch=4、FP32、seed=42、AdamW、初始学习率 6e-5、PolynomialDecay end_lr=0、训练尺度 0.75–1.25、400×400 crop；仅使用 train/val 选模，没有访问 test。训练日志确认 `iter 18000/18000`，普通 best_model 与 EMA best_model 均在 iter=8000 保存；普通模型的验证 mIoU 更高，因此选择普通 best_model。
+
+独立官方 `tools/val.py` 对 348 张验证图复核，并用同一官方推理接口计算 2px 边界指标：
+
+| 模型 | mIoU | 裂缝 IoU | Precision | Recall | F1 | 2px boundary-F1 |
+|---|---:|---:|---:|---:|---:|---:|
+| SegFormer-B0 基线 | 0.828021 | 0.678174 | 0.828269 | 0.789134 | 0.808228 | 0.589412 |
+| PP-LiteSeg-STDC1（普通 best，iter 8000） | 0.820509 | 0.664104 | 0.825001 | 0.772995 | 0.798152 | 0.564314 |
+| PP-LiteSeg-STDC1（EMA best，iter 8000） | 0.819100 | 0.661400 | 0.827200 | 0.767500 | 0.796233 | 未单独计算 |
+
+普通 best 相对 SegFormer-B0 的 mIoU、裂缝 IoU、Recall、F1 和边界 F1 分别下降 0.007511、0.014070、0.016139、0.010076 和 0.025098，未达到预注册验证门槛。因此 PP-LiteSeg 作为原始公开模型的验证负结果保留，不冻结为最终候选，也不访问 Crack500 test；当前不能声称 SOTA。模型参数量为 8,039,122，FLOPs 为 3,567,881,920，RTX5060 验证 batch_cost 约 0.0184 s。
+
+第一次 PP-LiteSeg 训练回合因磁盘空间耗尽而中止于最后保存阶段；清理临时产物后，正式 batch4 smoke 真实退出码为 0，随后完整 18,000 iter 训练完成。训练启动器没有写出独立进程退出 JSON，因此正式训练 exit_code 保留为未知；完成依据是 `iter_18000`、最终训练日志和独立 val.py 回执。完整选择、门槛和 SHA256 记录见 `experiments/retrain_wave4_20261007/results/ppliteseg_stdc1_crack500_formal_selection.json` 与 `ppliteseg_stdc1_crack500_formal_exit.json`。
+## 2026-10-13 SegFormer-B0 Crack500 结构消融波次五
+
+针对长裂缝上下文、复杂背景误检和机器人部署成本，基于 SegFormer-B0 在 RTX5060、FP32、seed42、batch4、AdamW、18,000 iter、相同 Crack500 train/val 清单和 0.75–1.25 缩放/400×400 裁剪协议下，完成了三个官方 PaddleSeg 结构模块的单变量消融。候选均只使用验证集选模；本轮没有读取 Crack500 test。
+
+| 配置 | 验证 mIoU | 裂缝 IoU | Precision | Recall | F1 | 2px 边界 F1 | 参数量 | FLOPs | 结论 |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|---|
+| SegFormer-B0 | 0.828021 | 0.678174 | 0.828269 | 0.789134 | 0.808228 | 0.417708 | 基线 | 基线 | 控制组 |
+| + EMAU（C4上下文） | 0.826912 | 0.676847 | 0.800025 | 0.814678 | 0.807285 | 0.407198 | 3,847,266 | 4,157,420,224* | 未通过 |
+| + DualAttentionModule（C4上下文） | 0.828128 | 0.678855 | 0.809990 | 0.807437 | 0.808712 | 0.415447 | 3,976,883 | 4,179,238,800 | 未通过 |
+| + LightHamHead（轻量解码器） | 0.823293 | 0.669802 | 0.808070 | 0.796520 | 0.802253 | 0.397322 | 3,431,138 | 1,621,371,944* | 未通过 |
+
+门槛为相对基线裂缝 IoU 至少增加 0.005、F1 至少增加 0.003、Recall 下降不超过 0.005、mIoU 和边界 F1 不下降。EMAU 的裂缝 IoU、mIoU 和边界 F1 下降；DualAttention 的数值变化很小（裂缝 IoU +0.000681、F1 +0.000484），但未达到提升门槛且边界 F1 下降 0.002261；LightHamHead 同时损失主体区域和边界质量。三者均保留为可复核的正式负结果，未启动联合模块，也没有候选访问 test。
+
+EMAU、DualAttention 和 LightHamHead 均使用 PaddleSeg 官方实现；实现与完整日志、独立 val.py 回执、逐图边界 CSV 和冻结权重位于 `D:\论文复现\experiments\retrain_wave5_20261012`。EMAU 和 LightHamHead 的 FLOPs 统计对官方 NMF/EMAU 算子存在未计数项，表中以 `*` 标记，不能当作完整算力结论。当前 Crack500 主线仍采用 SegFormer-B0；不能声称 SOTA。下一步应先完成统一同机推理延迟/参数复核与逐图误差分析，再决定是否转向输入、标签和 source-frame-disjoint 诊断，而不是继续无条件堆叠模块。
