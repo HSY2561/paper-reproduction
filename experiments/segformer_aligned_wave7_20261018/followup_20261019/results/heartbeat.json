@@ -1,10 +1,10 @@
 {
-  "tag": "A0_s43_train",
-  "pid": 100588,
+  "tag": "A21_s43_train",
+  "pid": 106156,
   "runner_pid": 34044,
-  "timestamp": "2026-10-19T11:23:34+08:00",
-  "latest_iter": 9300,
-  "elapsed_seconds": 3004.7,
-  "log_size": 510867,
-  "free_gb": 8.58
+  "timestamp": "2026-10-19T14:08:32+08:00",
+  "latest_iter": 16400,
+  "elapsed_seconds": 5832.3,
+  "log_size": 1017916,
+  "free_gb": 8.39
 }

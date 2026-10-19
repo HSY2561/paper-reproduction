@@ -15,7 +15,7 @@
 
 以上是 **Crack500 验证集、seed42 筛选结果**，尚不是最终模型结论。PAM 虽然区域 IoU 最高，但未通过完整贡献门槛。A21/A10 进入归因与匹配 seed43/44 复核；三 seed 汇总、稳定速度、六个公开模型及本轮统一 test 尚未完成。本轮速度测量稳定性未通过，且两个候选的中位延迟均慢于 B0，不能声称加速。
 
-复核队列共 9 项新训练，当前已取得 AFNB 单模块 seed42 与 B0 seed43 的完成记录，其余进度以 [复核结果表](experiments/segformer_aligned_wave7_20261018/followup_20261019/refine-logs/RESULTS.md)及各项状态/退出回执为准。训练继续产生新记录，GitHub 展示本次提交快照。
+复核队列共 9 项新训练，当前已取得 AFNB 单模块 seed42、B0 seed43 与 A0 seed43 的完成记录，A21 seed43 的保存状态为训练中。其余进度以 [复核结果表](experiments/segformer_aligned_wave7_20261018/followup_20261019/refine-logs/RESULTS.md)及各项状态/退出回执为准。训练继续产生新记录，GitHub 展示本次提交快照。
 
 此前 Wave6 的 SE 已于 10 月 18 日补训完成，Wave6 共 **15 个完整组（13 种模块、2 个宽度对照）**；PSP 仍为 smoke 失败。旧的 SE 超时记录作为历史保留，不代表最新状态。
 
@@ -32,6 +32,10 @@
 - [真实分割到轨迹处理](P0_real_segformer_trajectory/README.md)：真实 SegFormer 掩膜、骨架及离线轨迹；毫米坐标仍使用占位映射。
 - [教学仿真](experiments/two_pass_demo_20261016/一条裂缝_两遍作业仿真说明.md)、[10×6.5 m 场地完整方案](10m×6.5m场地_麦克纳姆扫描建图与定点修复完整实验方案_20261016.md)：保留算法演示及完整场地设计，首次实测范围按 10 月 17 日建议缩小。
 - [项目复盘](论文项目完整复盘报告_20261014.md)、[交付索引](MANIFEST.md)。
+
+## Crack500 数据集
+
+当前训练读取 `C:\Users\user\algolab_data` 的 `traincrop/valcrop/testcrop` 与同目录的划分清单，分别为 1,896/348/1,124 对图像和标签。该版本是公开 Crack500 的裁剪分割基准，原始数据集的“500”指高分辨率原图数。3,368 对文件完整性检查通过；跨划分有 6 个疑似同源的文件名前缀，尚需源图级确认，不能据文件齐全断言划分完全独立。核验方法、原作者来源、实际目录及完整结果见 [Crack500 完整性核验](analysis/crack500_integrity_20261019/README.md)。数据本体保留本地。
 
 ## 仓库整理与复现说明
 

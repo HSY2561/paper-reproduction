@@ -18,7 +18,7 @@
 
 运行前阅读 [主波运行契约](provenance/RUNTIME.md)及[复核运行契约](followup_20261019/provenance/RUNTIME.md)，核对 Python、Crack500 train/val、预训练/冻结权重和数据清单的本机路径。当前实现包含本地 Windows/Paddle3.4/RTX5060 环境路径，其他机器需先调整。训练中的进程、系统任务和锁应按运行契约核实，避免重复启动。
 
-最新正式结果由各组 `*_status.json`、`*_train_exit.json`、选模记录、独立验证及日志共同确认；同名汇总表在完成阶段刷新，可能落后于正在运行的状态文件。本次提交时已有 AFNB 单模块 seed42、B0 seed43 完成记录，其他运行见复核目录。三 seed 未齐前不报告均值和标准差。
+最新正式结果由各组 `*_status.json`、`*_train_exit.json`、选模记录、独立验证及日志共同确认；同名汇总表在完成阶段刷新，可能落后于正在运行的状态文件。本次提交时已有 AFNB 单模块 seed42、B0 seed43、A0 seed43 完成记录，A21 seed43 的保存状态为训练中，其他运行见复核目录。三 seed 未齐前不报告均值和标准差。
 
 `summarize_wave7.py` 用于汇总已有结果和生成图，`diagnostics/` 保留诊断代码；`candidate_latency.py`、`paired_latency.py` 保留速度测量实现。复现实验所需的源代码、配置、日志、CSV、退出回执和权重 SHA256 均随仓库保留，权重/数据集/环境缓存/本机锁不上传。
 

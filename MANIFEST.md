@@ -2,6 +2,13 @@
 
 此索引从本次交付开始登记，不声称枚举此前全部工程文件。
 
+## 2026-10-19：Crack500 文件核验与复核进度更新
+
+- [数据来源、目录与完整性结论](analysis/crack500_integrity_20261019/README.md)
+- [机器可读核验结果](analysis/crack500_integrity_20261019/audit.json)、[逐文件 SHA256](analysis/crack500_integrity_20261019/file_sha256.json)
+- 3,368 对裁剪图像/标签全部存在并可解码，与本地原包的清单和前景标签一致；文件名前缀跨划分风险独立记录，未擅自调整划分。
+- 候选复核新增 A0 seed43 的完整结果；A21 seed43 的保存状态为训练中，三 seed 尚未齐备。
+
 ## 2026-10-19：Wave7 筛选完成与候选复核
 
 - [阶段报告](SegFormer_Aligned模块筛选阶段报告_20261019.md)、[代码与证据入口](experiments/segformer_aligned_wave7_20261018/README.md)
