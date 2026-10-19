@@ -1,5 +1,7 @@
 # 输出索引
 
+同步说明（2026-10-20 06:05）：L05–L08 已完成训练与独立验证，L09 最近状态为 training，实时阶段见状态 JSON 与回执。以下为生成器记录的本地输出清单，不代表每项都上传：模型权重、进程锁和重复时间戳快照按 `.gitignore` 留在本地；选模 SHA、原始日志和指标保留在 GitHub。
+
 | 路径 | 字节 |
 |---|---:|
 | configs/C0.yml | 1223 |
@@ -39,17 +41,17 @@
 | provenance/RUNTIME.md | 1370 |
 | provenance/scheduled_loss_task.xml | 1800 |
 | provenance/source_hashes.json | 20161 |
-| results/active_process.json | 577 |
+| results/active_process.json | 581 |
 | results/C0_profile.json | 1241 |
 | results/C0_recheck.json | 930 |
 | results/C0_recheck_exit.json | 649 |
 | results/C0_recheck_per_image.csv | 40342 |
 | results/C0_val.json | 942 |
 | results/C0_val_per_image.csv | 40342 |
-| results/comparison.json | 14161 |
+| results/comparison.json | 14837 |
 | results/gradient_preflight.json | 24090 |
 | results/gradient_preflight_exit.json | 301 |
-| results/heartbeat.json | 217 |
+| results/heartbeat.json | 214 |
 | results/L01_CE_Dice_status.json | 2623 |
 | results/L02_CE_Dice_status.json | 2623 |
 | results/L03_CE_Dice_status.json | 2623 |
@@ -81,7 +83,16 @@
 | results/L07_CE_Lovasz_train_exit.json | 813 |
 | results/L07_CE_Lovasz_val.json | 937 |
 | results/L07_CE_Lovasz_val_per_image.csv | 40509 |
-| results/loss_ablation.csv | 1869 |
+| results/L08_WeightedCE_official_val_exit.json | 598 |
+| results/L08_WeightedCE_pixel_boundary_exit.json | 668 |
+| results/L08_WeightedCE_profile.json | 1244 |
+| results/L08_WeightedCE_profile_exit.json | 465 |
+| results/L08_WeightedCE_smoke_exit.json | 813 |
+| results/L08_WeightedCE_status.json | 1556 |
+| results/L08_WeightedCE_train_exit.json | 815 |
+| results/L08_WeightedCE_val.json | 941 |
+| results/L08_WeightedCE_val_per_image.csv | 40539 |
+| results/loss_ablation.csv | 1994 |
 | results/scheduled_loss_registration.json | 459 |
 | logs/C0_recheck.log | 3047 |
 | logs/gradient_preflight.log | 6734 |
@@ -100,7 +111,12 @@
 | logs/L07_CE_Lovasz_profile.log | 3387 |
 | logs/L07_CE_Lovasz_smoke.log | 71737 |
 | logs/L07_CE_Lovasz_train.log | 1157051 |
-| logs/runner.log | 724 |
+| logs/L08_WeightedCE_official_val.log | 35818 |
+| logs/L08_WeightedCE_pixel_boundary.log | 3059 |
+| logs/L08_WeightedCE_profile.log | 3394 |
+| logs/L08_WeightedCE_smoke.log | 71277 |
+| logs/L08_WeightedCE_train.log | 1176309 |
+| logs/runner.log | 947 |
 | logs/runner.stderr.log | 0 |
 | checkpoints/L05_CE_Lovasz/model.pdparams | 13898078 |
 | checkpoints/L05_CE_Lovasz/selection.json | 1401 |
@@ -108,8 +124,10 @@
 | checkpoints/L06_CE_Lovasz/selection.json | 1399 |
 | checkpoints/L07_CE_Lovasz/model.pdparams | 13898078 |
 | checkpoints/L07_CE_Lovasz/selection.json | 1401 |
+| checkpoints/L08_WeightedCE/model.pdparams | 13898078 |
+| checkpoints/L08_WeightedCE/selection.json | 1404 |
 | refine-logs/EXPERIMENT_PLAN.md | 12629 |
-| refine-logs/RESULTS.md | 2704 |
+| refine-logs/RESULTS.md | 2734 |
 | refine-logs/RESULTS_20261019_230246_550872.md | 2729 |
 | refine-logs/RESULTS_20261019_231018_091063.md | 2542 |
 | refine-logs/RESULTS_20261019_231246_901580.md | 2560 |
@@ -119,3 +137,4 @@
 | refine-logs/RESULTS_20261020_004632_897754.md | 2644 |
 | refine-logs/RESULTS_20261020_023513_793550.md | 2674 |
 | refine-logs/RESULTS_20261020_042216_072354.md | 2704 |
+| refine-logs/RESULTS_20261020_060416_976421.md | 2734 |
