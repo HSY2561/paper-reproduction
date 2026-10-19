@@ -2,11 +2,17 @@
 
 此索引从本次交付开始登记，不声称枚举此前全部工程文件。
 
+## 2026-10-20：Wave8 首项完整训练与后续进度
+
+- [当前代码与证据入口](experiments/segformer_loss_wave8_20261019/README.md)、[损失消融进度](SegFormer损失函数消融进展_20261019.md)、[冻结执行计划](SegFormer损失函数优化20方案执行计划_20261019.md)
+- 状态：L05 CE + 0.1 Lovasz 完成 18k 及独立验证；L06 最近状态为训练中；L01–L04 梯度预检失败，保留证据不填性能。
+- 原先两个替补配置已在训练前停用并移入 `provenance/prelaunch_disabled_reserves/` 保存，不按验证成绩扩充本轮搜索。
+
 ## 2026-10-19：Wave8 损失实验准备快照
 
 - [损失目录与预检代码](experiments/segformer_loss_wave8_20261019/)
 - [上一轮九项复核审计](experiments/segformer_loss_wave8_20261019/provenance/previous_followup_audit.json)
-- 状态：准备材料开始生成；本次尚无该波正式训练完成回执，不填写新性能。
+- 历史状态：这是准备阶段快照；当前正式训练进度见本页顶部 10 月 20 日条目。
 
 ## 2026-10-19 20:19：归因与三 seed 队列完成
 

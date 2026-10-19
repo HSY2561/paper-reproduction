@@ -27,6 +27,4 @@ def catalog():
     add('L18_WeightedCE_Dice','Weighted CE [1.5,1] + 0.25 Dice',mix(ce(weight=[1.5,1.]),dice(),.25),'weighted_CE_Dice','背景惩罚和前景重叠的取舍','两项目标强度可能抵消；不改变图像或标签文件')
     add('L19_CE_DualTask','CE + 0.01 DualTask',mix(ce(),dict(type='DualTaskLoss',tau=.5),.01),'CE_boundary_gradient','官方梯度边界一致性，沿用同一分割头','额外随机采样/卷积训练开销；必须先验证对logits梯度有效')
     add('L20_CE_RMI','CE + 0.01 RMI',mix(ce(),dict(type='RMILoss',num_classes=2,rmi_radius=3,rmi_pool_way=0,rmi_pool_size=3,rmi_pool_stride=3),.01),'CE_RMI','局部邻域互信息关系约束','内部float64/矩阵逆开销和数值稳定性；RMI值可为负，不伪称纯FP32损失计算')
-    add('R01_BootstrapCE','Bootstrap CE K10000 th0.3',dict(type='BootstrappedCrossEntropyLoss',min_K=10000,loss_th=.3),'bootstrap_CE','技术替补：图内高损失像素挖掘','只替代工程失败，不按验证成绩扩充搜索','reserve')
-    add('R02_CE_FGLovasz','CE + 0.25 foreground Lovasz',mix(ce(),lovasz(classes=[1]),.25),'CE_fg_Lovasz','技术替补：显式只约束裂缝IoU代理','可能增加前景假阳性；只是classes变体不是新算法','reserve')
     return specs

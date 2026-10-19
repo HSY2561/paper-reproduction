@@ -396,44 +396,5 @@
     "purpose": "局部邻域互信息关系约束",
     "risk": "内部float64/矩阵逆开销和数值稳定性；RMI值可为负，不伪称纯FP32损失计算",
     "role": "main"
-  },
-  {
-    "id": "R01_BootstrapCE",
-    "label": "Bootstrap CE K10000 th0.3",
-    "loss": {
-      "type": "BootstrappedCrossEntropyLoss",
-      "min_K": 10000,
-      "loss_th": 0.3
-    },
-    "family": "bootstrap_CE",
-    "purpose": "技术替补：图内高损失像素挖掘",
-    "risk": "只替代工程失败，不按验证成绩扩充搜索",
-    "role": "reserve"
-  },
-  {
-    "id": "R02_CE_FGLovasz",
-    "label": "CE + 0.25 foreground Lovasz",
-    "loss": {
-      "type": "MixedLoss",
-      "losses": [
-        {
-          "type": "CrossEntropyLoss"
-        },
-        {
-          "type": "LovaszSoftmaxLoss",
-          "classes": [
-            1
-          ]
-        }
-      ],
-      "coef": [
-        1.0,
-        0.25
-      ]
-    },
-    "family": "CE_fg_Lovasz",
-    "purpose": "技术替补：显式只约束裂缝IoU代理",
-    "risk": "可能增加前景假阳性；只是classes变体不是新算法",
-    "role": "reserve"
   }
 ]

@@ -1,17 +1,17 @@
 # SegFormer＋Aligned 损失函数消融进度
 
-更新时间：2026-10-19T23:02:46+08:00
+更新时间：2026-10-20T00:46:32+08:00
 
-仅Crack500验证集；20主方案＋2技术备选。所有模型结构和推理参数相同。权重变体不计独立算法。
+仅Crack500验证集；20主方案，不按验证成绩增加替补。所有模型结构和推理参数相同。权重变体不计独立算法。
 
 | 编号 | 配方 | 状态 | P% | R% | F1% | IoU% | mIoU% | BF1% | Params M |
 |---|---|---|---:|---:|---:|---:|---:|---:|---:|
 | C0 | A0 + CE | 冻结复用 | 82.6766 | 79.0974 | 80.8474 | 67.8520 | 82.8184 | 44.9285 | 3.470434 |
-| L01_CE_Dice | CE + 0.1 Dice | pending | — | — | — | — | — | — | — |
-| L02_CE_Dice | CE + 0.25 Dice | pending | — | — | — | — | — | — | — |
-| L03_CE_Dice | CE + 0.5 Dice | pending | — | — | — | — | — | — | — |
-| L04_CE_Dice | CE + 1.0 Dice | pending | — | — | — | — | — | — | — |
-| L05_CE_Lovasz | CE + 0.1 Lovasz | pending | — | — | — | — | — | — | — |
+| L01_CE_Dice | CE + 0.1 Dice | gradient_preflight_failed | — | — | — | — | — | — | — |
+| L02_CE_Dice | CE + 0.25 Dice | gradient_preflight_failed | — | — | — | — | — | — | — |
+| L03_CE_Dice | CE + 0.5 Dice | gradient_preflight_failed | — | — | — | — | — | — | — |
+| L04_CE_Dice | CE + 1.0 Dice | gradient_preflight_failed | — | — | — | — | — | — | — |
+| L05_CE_Lovasz | CE + 0.1 Lovasz | complete | 80.6454 | 81.5407 | 81.0906 | 68.1953 | 82.9721 | 44.1729 | 3.470434 |
 | L06_CE_Lovasz | CE + 0.25 Lovasz | pending | — | — | — | — | — | — | — |
 | L07_CE_Lovasz | CE + 0.5 Lovasz | pending | — | — | — | — | — | — | — |
 | L08_WeightedCE | CE weights [1.5, 1.0] | pending | — | — | — | — | — | — | — |
@@ -27,8 +27,6 @@
 | L18_WeightedCE_Dice | Weighted CE [1.5,1] + 0.25 Dice | pending | — | — | — | — | — | — | — |
 | L19_CE_DualTask | CE + 0.01 DualTask | pending | — | — | — | — | — | — | — |
 | L20_CE_RMI | CE + 0.01 RMI | pending | — | — | — | — | — | — | — |
-| R01_BootstrapCE | Bootstrap CE K10000 th0.3 | reserve | — | — | — | — | — | — | — |
-| R02_CE_FGLovasz | CE + 0.25 foreground Lovasz | reserve | — | — | — | — | — | — | — |
 
 普通/EMA按最高精确val mIoU选模，冻结后独立验证。筛选不读test或自建数据；失败不填性能。
 不同损失的绝对标量不可横向当作精度；参数和推理算子不变，不能将损失优化称为减参或加速。

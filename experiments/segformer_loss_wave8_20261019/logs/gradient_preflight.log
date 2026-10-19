@@ -1,0 +1,256 @@
+D:\论文复现\experiments\segformer_loss_wave8_20261019\src\PaddleSeg-2.10.0\paddleseg\models\backbones\efficientformerv2.py:206: SyntaxWarning: "is not" with 'str' literal. Did you mean "!="?
+  if self.mode is not 'multi_scale':
+D:\论文复现\experiments\segformer_loss_wave8_20261019\src\PaddleSeg-2.10.0\paddleseg\models\layers\ms_deformable_attention.py:103: SyntaxWarning: invalid escape sequence '\s'
+  input_flatten:               (N, \sum_{l=0}^{L-1} H_l \cdot W_l, C)
+D:\论文复现\experiments\segformer_loss_wave8_20261019\src\PaddleSeg-2.10.0\paddleseg\models\losses\rmi_loss.py:76: SyntaxWarning: invalid escape sequence '\i'
+  logits (Tensor): Shape is [N, C, H, W], logits at each prediction (between -\infty and +\infty).
+[2026/10/19 23:12:41] INFO: Use the following config to build loss
+loss:
+  coef:
+  - 1.0
+  types:
+  - coef:
+    - 1.0
+    - 0.1
+    losses:
+    - type: CrossEntropyLoss
+    - type: DiceLoss
+    type: MixedLoss
+WARNING: Logging before InitGoogleLogging() is written to STDERR
+W1019 23:12:42.269135 25728 gpu_resources.cc:116] Please NOTE: device: 0, GPU Compute Capability: 12.0, Driver API Version: 13.2, Runtime API Version: 12.9
+W1019 23:12:43.540320 25728 backward.cc:694] While running Node (CrossEntropyWithSoftmaxGradNode) raises an EnforceNotMet exception
+GRADIENT_PREFLIGHT L01_CE_Dice False
+[2026/10/19 23:12:43] INFO: Use the following config to build loss
+loss:
+  coef:
+  - 1.0
+  types:
+  - coef:
+    - 1.0
+    - 0.25
+    losses:
+    - type: CrossEntropyLoss
+    - type: DiceLoss
+    type: MixedLoss
+W1019 23:12:43.741659 25728 backward.cc:694] While running Node (CrossEntropyWithSoftmaxGradNode) raises an EnforceNotMet exception
+GRADIENT_PREFLIGHT L02_CE_Dice False
+[2026/10/19 23:12:43] INFO: Use the following config to build loss
+loss:
+  coef:
+  - 1.0
+  types:
+  - coef:
+    - 1.0
+    - 0.5
+    losses:
+    - type: CrossEntropyLoss
+    - type: DiceLoss
+    type: MixedLoss
+W1019 23:12:43.752951 25728 backward.cc:694] While running Node (CrossEntropyWithSoftmaxGradNode) raises an EnforceNotMet exception
+GRADIENT_PREFLIGHT L03_CE_Dice False
+[2026/10/19 23:12:43] INFO: Use the following config to build loss
+loss:
+  coef:
+  - 1.0
+  types:
+  - coef:
+    - 1.0
+    - 1.0
+    losses:
+    - type: CrossEntropyLoss
+    - type: DiceLoss
+    type: MixedLoss
+W1019 23:12:43.773953 25728 backward.cc:694] While running Node (CrossEntropyWithSoftmaxGradNode) raises an EnforceNotMet exception
+GRADIENT_PREFLIGHT L04_CE_Dice False
+[2026/10/19 23:12:43] INFO: Use the following config to build loss
+loss:
+  coef:
+  - 1.0
+  types:
+  - coef:
+    - 1.0
+    - 0.1
+    losses:
+    - type: CrossEntropyLoss
+    - type: LovaszSoftmaxLoss
+    type: MixedLoss
+GRADIENT_PREFLIGHT L05_CE_Lovasz True
+[2026/10/19 23:12:44] INFO: Use the following config to build loss
+loss:
+  coef:
+  - 1.0
+  types:
+  - coef:
+    - 1.0
+    - 0.25
+    losses:
+    - type: CrossEntropyLoss
+    - type: LovaszSoftmaxLoss
+    type: MixedLoss
+GRADIENT_PREFLIGHT L06_CE_Lovasz True
+[2026/10/19 23:12:44] INFO: Use the following config to build loss
+loss:
+  coef:
+  - 1.0
+  types:
+  - coef:
+    - 1.0
+    - 0.5
+    losses:
+    - type: CrossEntropyLoss
+    - type: LovaszSoftmaxLoss
+    type: MixedLoss
+GRADIENT_PREFLIGHT L07_CE_Lovasz True
+[2026/10/19 23:12:44] INFO: Use the following config to build loss
+loss:
+  coef:
+  - 1.0
+  types:
+  - type: CrossEntropyLoss
+    weight:
+    - 1.5
+    - 1.0
+GRADIENT_PREFLIGHT L08_WeightedCE True
+[2026/10/19 23:12:44] INFO: Use the following config to build loss
+loss:
+  coef:
+  - 1.0
+  types:
+  - type: CrossEntropyLoss
+    weight:
+    - 2.0
+    - 1.0
+GRADIENT_PREFLIGHT L09_WeightedCE True
+[2026/10/19 23:12:44] INFO: Use the following config to build loss
+loss:
+  coef:
+  - 1.0
+  types:
+  - type: CrossEntropyLoss
+    weight:
+    - 1.0
+    - 2.0
+GRADIENT_PREFLIGHT L10_WeightedCE True
+[2026/10/19 23:12:44] INFO: Use the following config to build loss
+loss:
+  coef:
+  - 1.0
+  types:
+  - top_k_percent_pixels: 0.5
+    type: CrossEntropyLoss
+GRADIENT_PREFLIGHT L11_TopKCE True
+[2026/10/19 23:12:44] INFO: Use the following config to build loss
+loss:
+  coef:
+  - 1.0
+  types:
+  - top_k_percent_pixels: 0.25
+    type: CrossEntropyLoss
+GRADIENT_PREFLIGHT L12_TopKCE True
+[2026/10/19 23:12:44] INFO: Use the following config to build loss
+loss:
+  coef:
+  - 1.0
+  types:
+  - min_kept: 40000
+    thresh: 0.7
+    type: OhemCrossEntropyLoss
+GRADIENT_PREFLIGHT L13_OHEM True
+[2026/10/19 23:12:44] INFO: Use the following config to build loss
+loss:
+  coef:
+  - 1.0
+  types:
+  - alpha: 1.0
+    gamma: 1.0
+    type: MultiClassFocalLoss
+GRADIENT_PREFLIGHT L14_SoftmaxFocal True
+[2026/10/19 23:12:44] INFO: Use the following config to build loss
+loss:
+  coef:
+  - 1.0
+  types:
+  - alpha: 1.0
+    gamma: 2.0
+    type: MultiClassFocalLoss
+GRADIENT_PREFLIGHT L15_SoftmaxFocal True
+[2026/10/19 23:12:44] INFO: Use the following config to build loss
+loss:
+  coef:
+  - 1.0
+  types:
+  - coef:
+    - 1.0
+    - 0.5
+    losses:
+    - type: CrossEntropyLoss
+    - alpha: 1.0
+      gamma: 2.0
+      type: MultiClassFocalLoss
+    type: MixedLoss
+GRADIENT_PREFLIGHT L16_CE_Focal True
+[2026/10/19 23:12:44] INFO: Use the following config to build loss
+loss:
+  coef:
+  - 1.0
+  types:
+  - coef:
+    - 1.0
+    - 0.25
+    losses:
+    - min_kept: 40000
+      thresh: 0.7
+      type: OhemCrossEntropyLoss
+    - type: DiceLoss
+    type: MixedLoss
+GRADIENT_PREFLIGHT L17_OHEM_Dice True
+[2026/10/19 23:12:44] INFO: Use the following config to build loss
+loss:
+  coef:
+  - 1.0
+  types:
+  - coef:
+    - 1.0
+    - 0.25
+    losses:
+    - type: CrossEntropyLoss
+      weight:
+      - 1.5
+      - 1.0
+    - type: DiceLoss
+    type: MixedLoss
+W1019 23:12:44.489956 25728 backward.cc:694] While running Node (CrossEntropyWithSoftmaxGradNode) raises an EnforceNotMet exception
+GRADIENT_PREFLIGHT L18_WeightedCE_Dice False
+[2026/10/19 23:12:44] INFO: Use the following config to build loss
+loss:
+  coef:
+  - 1.0
+  types:
+  - coef:
+    - 1.0
+    - 0.01
+    losses:
+    - type: CrossEntropyLoss
+    - tau: 0.5
+      type: DualTaskLoss
+    type: MixedLoss
+GRADIENT_PREFLIGHT L19_CE_DualTask True
+[2026/10/19 23:12:44] INFO: Use the following config to build loss
+loss:
+  coef:
+  - 1.0
+  types:
+  - coef:
+    - 1.0
+    - 0.01
+    losses:
+    - type: CrossEntropyLoss
+    - num_classes: 2
+      rmi_pool_size: 3
+      rmi_pool_stride: 3
+      rmi_pool_way: 0
+      rmi_radius: 3
+      type: RMILoss
+    type: MixedLoss
+GRADIENT_PREFLIGHT L20_CE_RMI True
+PREFLIGHT_DONE 15 / 20

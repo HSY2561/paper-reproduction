@@ -13,13 +13,13 @@
   "val": 348,
   "initialization": "common ImageNet backbone, not fine-tuning trained C0",
   "target_completed": 20,
-  "trials": "20 main configurations, 2 preregistered engineering-only reserves; not 20 independent algorithms",
+  "trials": "20 main configurations; no outcome-triggered reserves; not 20 independent algorithms",
   "changes": "only official loss config; fixed architecture, crops, augmentation, optimizer and training budget",
   "main_gate": {
     "crackIoU": 0.002,
     "f1": 0.001,
     "mIoU": 0,
-    "precision": 0,
+    "precision": -0.005,
     "recall": -0.005,
     "boundary_f1": -0.005
   },
@@ -31,6 +31,6 @@
     "recall": -0.005,
     "boundary_f1": -0.005
   },
-  "selection": "exact ordinary/EMA maximum val mIoU, frozen SHA, independent val/boundary; top2 recipes frozen before seeds43/44",
+  "selection": "exact ordinary/EMA maximum val mIoU, frozen SHA, independent val/boundary; main-gate top2 recipes frozen before seeds43/44; precision track descriptive only, not a gate bypass",
   "efficiency": "network is identical; loss does not reduce parameters or accelerate inference; record training cost separately"
 }

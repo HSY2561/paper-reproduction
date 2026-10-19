@@ -37,5 +37,11 @@
   },
   "A21_mean_iou_gain_vs_A0": 0.0019078952840414498,
   "A10_mean_iou_gain_vs_A0": -0.002332865869209111,
-  "test_used": false
+  "test_used": false,
+  "checked_at": "2026-10-19T23:10:17.366507+08:00",
+  "wrapper_exit_code": null,
+  "scheduler_last_result": -1073741510,
+  "scheduler_last_result_hex": "0xC000013A",
+  "wrapper_receipt_missing": true,
+  "note": "All 9 jobs have real successful training/validation/profile exits and final18k/frozen SHA; wrapper has no final receipt and scheduler returned abort status. Do not describe wrapper as exit0. Global process inventory confirmed no old queue/trainer on 2026-10-19 23:07."
 }

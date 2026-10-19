@@ -1,0 +1,10 @@
+{
+  "task_name": "Codex-SegFormer-loss-wave8-once-20261019",
+  "registered_at": "2026-10-19T23:11:49.6651425+08:00",
+  "start": "2026-10-19T23:11:59",
+  "state": 3,
+  "priority": 4,
+  "action": "-NoProfile -NonInteractive -ExecutionPolicy Bypass -File \"D:\\论文复现\\experiments\\segformer_loss_wave8_20261019\\run_loss_queue.ps1\"",
+  "training_started_confirmed": false,
+  "old_task_removed": "Codex-SegFormer-wave7-followup-once-20261019"
+}

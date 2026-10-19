@@ -54,7 +54,7 @@
       "purpose": "区域重叠与小前景召回；单独比较Dice系数",
       "risk": "可能扩张前景、降低Precision；Dice必须位于MixedLoss最后",
       "role": "main",
-      "status": "pending"
+      "status": "gradient_preflight_failed"
     },
     {
       "id": "L02_CE_Dice",
@@ -78,7 +78,7 @@
       "purpose": "区域重叠与小前景召回；单独比较Dice系数",
       "risk": "可能扩张前景、降低Precision；Dice必须位于MixedLoss最后",
       "role": "main",
-      "status": "pending"
+      "status": "gradient_preflight_failed"
     },
     {
       "id": "L03_CE_Dice",
@@ -102,7 +102,7 @@
       "purpose": "区域重叠与小前景召回；单独比较Dice系数",
       "risk": "可能扩张前景、降低Precision；Dice必须位于MixedLoss最后",
       "role": "main",
-      "status": "pending"
+      "status": "gradient_preflight_failed"
     },
     {
       "id": "L04_CE_Dice",
@@ -126,7 +126,7 @@
       "purpose": "区域重叠与小前景召回；单独比较Dice系数",
       "risk": "可能扩张前景、降低Precision；Dice必须位于MixedLoss最后",
       "role": "main",
-      "status": "pending"
+      "status": "gradient_preflight_failed"
     },
     {
       "id": "L05_CE_Lovasz",
@@ -150,7 +150,25 @@
       "purpose": "像素分类与IoU代理目标结合",
       "risk": "排序和更大训练开销；可能牺牲细小边界",
       "role": "main",
-      "status": "pending"
+      "status": "complete",
+      "precision": 0.8064542857559909,
+      "recall": 0.8154071310081892,
+      "f1": 0.8109059980593457,
+      "crackIoU": 0.6819528117507203,
+      "mIoU": 0.8297212852864204,
+      "boundary_f1": 0.44172946246788886,
+      "params": 3470434,
+      "delta": {
+        "precision": -0.020311278203591132,
+        "recall": 0.0244330912082934,
+        "f1": 0.002432129245316661,
+        "crackIoU": 0.003433182467118656,
+        "mIoU": 0.0015370138553658652,
+        "boundary_f1": -0.00755536175574989
+      },
+      "main_gate": false,
+      "precision_gate": false,
+      "full_final_status": "pending matched-seed verification and final protocol"
     },
     {
       "id": "L06_CE_Lovasz",
@@ -449,49 +467,8 @@
       "risk": "内部float64/矩阵逆开销和数值稳定性；RMI值可为负，不伪称纯FP32损失计算",
       "role": "main",
       "status": "pending"
-    },
-    {
-      "id": "R01_BootstrapCE",
-      "label": "Bootstrap CE K10000 th0.3",
-      "loss": {
-        "type": "BootstrappedCrossEntropyLoss",
-        "min_K": 10000,
-        "loss_th": 0.3
-      },
-      "family": "bootstrap_CE",
-      "purpose": "技术替补：图内高损失像素挖掘",
-      "risk": "只替代工程失败，不按验证成绩扩充搜索",
-      "role": "reserve",
-      "status": "reserve"
-    },
-    {
-      "id": "R02_CE_FGLovasz",
-      "label": "CE + 0.25 foreground Lovasz",
-      "loss": {
-        "type": "MixedLoss",
-        "losses": [
-          {
-            "type": "CrossEntropyLoss"
-          },
-          {
-            "type": "LovaszSoftmaxLoss",
-            "classes": [
-              1
-            ]
-          }
-        ],
-        "coef": [
-          1.0,
-          0.25
-        ]
-      },
-      "family": "CE_fg_Lovasz",
-      "purpose": "技术替补：显式只约束裂缝IoU代理",
-      "risk": "可能增加前景假阳性；只是classes变体不是新算法",
-      "role": "reserve",
-      "status": "reserve"
     }
   ],
-  "updated_at": "2026-10-19T23:02:46+08:00",
+  "updated_at": "2026-10-20T00:46:32+08:00",
   "test_used": false
 }

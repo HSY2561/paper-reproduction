@@ -1,0 +1,423 @@
+{
+  "created_at": "2026-10-19T23:08:29.5818885+08:00",
+  "scope": "Only successful smoke duplicates; formal/best/frozen checkpoints and logs preserved",
+  "targets": [
+    "D:\\论文复现\\experiments\\segformer_aligned_wave7_20261018\\followup_20261019\\training\\smoke_X_AFNB_s42",
+    "D:\\论文复现\\experiments\\segformer_aligned_wave7_20261018\\followup_20261019\\training\\smoke_B0_s43",
+    "D:\\论文复现\\experiments\\segformer_aligned_wave7_20261018\\followup_20261019\\training\\smoke_A0_s43",
+    "D:\\论文复现\\experiments\\segformer_aligned_wave7_20261018\\followup_20261019\\training\\smoke_A21_s43",
+    "D:\\论文复现\\experiments\\segformer_aligned_wave7_20261018\\followup_20261019\\training\\smoke_A10_s43",
+    "D:\\论文复现\\experiments\\segformer_aligned_wave7_20261018\\followup_20261019\\training\\smoke_B0_s44",
+    "D:\\论文复现\\experiments\\segformer_aligned_wave7_20261018\\followup_20261019\\training\\smoke_A0_s44",
+    "D:\\论文复现\\experiments\\segformer_aligned_wave7_20261018\\followup_20261019\\training\\smoke_A21_s44",
+    "D:\\论文复现\\experiments\\segformer_aligned_wave7_20261018\\followup_20261019\\training\\smoke_A10_s44"
+  ],
+  "files": [
+    {
+      "path": "D:\\论文复现\\experiments\\segformer_aligned_wave7_20261018\\followup_20261019\\training\\smoke_X_AFNB_s42\\best_model\\model.pdparams",
+      "bytes": 14571526,
+      "sha256": "9176A3C98748C2C2AE36D77A01D042AABDFA636A6B1EAD2041A83AE82F6DF593"
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\segformer_aligned_wave7_20261018\\followup_20261019\\training\\smoke_X_AFNB_s42\\best_model\\model.pdstates",
+      "bytes": 162,
+      "sha256": "3131F0C2BC0837B99F7F72C96FC8D88DE65B5D55C89C82BB34C6693AA77924D5"
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\segformer_aligned_wave7_20261018\\followup_20261019\\training\\smoke_X_AFNB_s42\\ema_best_model\\ema_model.pdparams",
+      "bytes": 14574185,
+      "sha256": "38DB08C2A3F249CF1381DFCCDBF5F663E82F0FB0E7331ECAB72533F7D8A97B0B"
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\segformer_aligned_wave7_20261018\\followup_20261019\\training\\smoke_X_AFNB_s42\\ema_best_model\\ema_model.pdstates",
+      "bytes": 162,
+      "sha256": "88674D6A3BF239433AF36360776326C4B8ADF9D60F79F1207F0782AD8823281A"
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\segformer_aligned_wave7_20261018\\followup_20261019\\training\\smoke_X_AFNB_s42\\iter_20\\ema_model.pdparams",
+      "bytes": 14574185,
+      "sha256": "38DB08C2A3F249CF1381DFCCDBF5F663E82F0FB0E7331ECAB72533F7D8A97B0B"
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\segformer_aligned_wave7_20261018\\followup_20261019\\training\\smoke_X_AFNB_s42\\iter_20\\ema_model.pdstates",
+      "bytes": 162,
+      "sha256": "88674D6A3BF239433AF36360776326C4B8ADF9D60F79F1207F0782AD8823281A"
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\segformer_aligned_wave7_20261018\\followup_20261019\\training\\smoke_X_AFNB_s42\\iter_20\\model.pdopt",
+      "bytes": 29175290,
+      "sha256": "474E745A67073FE3DEC70987B046860DC7FE04652C34BF55BC6049573D879131"
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\segformer_aligned_wave7_20261018\\followup_20261019\\training\\smoke_X_AFNB_s42\\iter_20\\model.pdparams",
+      "bytes": 14571526,
+      "sha256": "9176A3C98748C2C2AE36D77A01D042AABDFA636A6B1EAD2041A83AE82F6DF593"
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\segformer_aligned_wave7_20261018\\followup_20261019\\training\\smoke_X_AFNB_s42\\iter_20\\model.pdstates",
+      "bytes": 162,
+      "sha256": "3131F0C2BC0837B99F7F72C96FC8D88DE65B5D55C89C82BB34C6693AA77924D5"
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\segformer_aligned_wave7_20261018\\followup_20261019\\training\\smoke_B0_s43\\best_model\\model.pdparams",
+      "bytes": 14876757,
+      "sha256": "A2E44EC3B5E43ED1F52DD414310949AD6F2CABC89252DD0C3677B9F95B6FC3CB"
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\segformer_aligned_wave7_20261018\\followup_20261019\\training\\smoke_B0_s43\\best_model\\model.pdstates",
+      "bytes": 162,
+      "sha256": "B7B0DE3501B7E6E20707EB0E9F75912C83BDF2C2AF8E1E6CEEE65618C1237EF8"
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\segformer_aligned_wave7_20261018\\followup_20261019\\training\\smoke_B0_s43\\ema_best_model\\ema_model.pdparams",
+      "bytes": 14879130,
+      "sha256": "356E1BD95F9E6C7C276F15F57366B266559601BC467FECBF6CB628B86535647C"
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\segformer_aligned_wave7_20261018\\followup_20261019\\training\\smoke_B0_s43\\ema_best_model\\ema_model.pdstates",
+      "bytes": 162,
+      "sha256": "6F8C6693CFCEE6799815AC6FCBF9D743601CA60435E1AB477EFE52C78F7AE99E"
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\segformer_aligned_wave7_20261018\\followup_20261019\\training\\smoke_B0_s43\\iter_20\\ema_model.pdparams",
+      "bytes": 14879130,
+      "sha256": "356E1BD95F9E6C7C276F15F57366B266559601BC467FECBF6CB628B86535647C"
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\segformer_aligned_wave7_20261018\\followup_20261019\\training\\smoke_B0_s43\\iter_20\\ema_model.pdstates",
+      "bytes": 162,
+      "sha256": "6F8C6693CFCEE6799815AC6FCBF9D743601CA60435E1AB477EFE52C78F7AE99E"
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\segformer_aligned_wave7_20261018\\followup_20261019\\training\\smoke_B0_s43\\iter_20\\model.pdopt",
+      "bytes": 29788200,
+      "sha256": "0A5CE36B8D56C961779008DCFA2CCB0CE2BDB83F7FC5EB41594A4BC460B85938"
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\segformer_aligned_wave7_20261018\\followup_20261019\\training\\smoke_B0_s43\\iter_20\\model.pdparams",
+      "bytes": 14876757,
+      "sha256": "A2E44EC3B5E43ED1F52DD414310949AD6F2CABC89252DD0C3677B9F95B6FC3CB"
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\segformer_aligned_wave7_20261018\\followup_20261019\\training\\smoke_B0_s43\\iter_20\\model.pdstates",
+      "bytes": 162,
+      "sha256": "B7B0DE3501B7E6E20707EB0E9F75912C83BDF2C2AF8E1E6CEEE65618C1237EF8"
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\segformer_aligned_wave7_20261018\\followup_20261019\\training\\smoke_A0_s43\\best_model\\model.pdparams",
+      "bytes": 13898078,
+      "sha256": "274CF2767F121765F6F6CE688669C3B200D5C4CBD64D7158A1F0AECBAD35988F"
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\segformer_aligned_wave7_20261018\\followup_20261019\\training\\smoke_A0_s43\\best_model\\model.pdstates",
+      "bytes": 162,
+      "sha256": "59A9FCF1B8242B8586216FF73C61BA9AAC0784DAD90557BADB29E5B4767A96B3"
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\segformer_aligned_wave7_20261018\\followup_20261019\\training\\smoke_A0_s43\\ema_best_model\\ema_model.pdparams",
+      "bytes": 13900490,
+      "sha256": "B19EF74EE3BD592D4BA0DBE2D3ED172D407ABEFA50A4A487C26A946E140D38AC"
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\segformer_aligned_wave7_20261018\\followup_20261019\\training\\smoke_A0_s43\\ema_best_model\\ema_model.pdstates",
+      "bytes": 162,
+      "sha256": "E27EFDFA05FDDB35ED119C72598000B299EEDFD3DACD905E5D5775E19A98F3D4"
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\segformer_aligned_wave7_20261018\\followup_20261019\\training\\smoke_A0_s43\\iter_20\\ema_model.pdparams",
+      "bytes": 13900490,
+      "sha256": "B19EF74EE3BD592D4BA0DBE2D3ED172D407ABEFA50A4A487C26A946E140D38AC"
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\segformer_aligned_wave7_20261018\\followup_20261019\\training\\smoke_A0_s43\\iter_20\\ema_model.pdstates",
+      "bytes": 162,
+      "sha256": "E27EFDFA05FDDB35ED119C72598000B299EEDFD3DACD905E5D5775E19A98F3D4"
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\segformer_aligned_wave7_20261018\\followup_20261019\\training\\smoke_A0_s43\\iter_20\\model.pdopt",
+      "bytes": 27833458,
+      "sha256": "62775AB2C0F0A2F2A2E029DBB27EF75F62C95CF5333B8F93EC99A433AFB53353"
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\segformer_aligned_wave7_20261018\\followup_20261019\\training\\smoke_A0_s43\\iter_20\\model.pdparams",
+      "bytes": 13898078,
+      "sha256": "274CF2767F121765F6F6CE688669C3B200D5C4CBD64D7158A1F0AECBAD35988F"
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\segformer_aligned_wave7_20261018\\followup_20261019\\training\\smoke_A0_s43\\iter_20\\model.pdstates",
+      "bytes": 162,
+      "sha256": "59A9FCF1B8242B8586216FF73C61BA9AAC0784DAD90557BADB29E5B4767A96B3"
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\segformer_aligned_wave7_20261018\\followup_20261019\\training\\smoke_A21_s43\\best_model\\model.pdparams",
+      "bytes": 14030173,
+      "sha256": "524FBF165A3A12FCD8B5E1ADA4D2E824215FAA62D67721D5FD421139886CD0A1"
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\segformer_aligned_wave7_20261018\\followup_20261019\\training\\smoke_A21_s43\\best_model\\model.pdstates",
+      "bytes": 162,
+      "sha256": "DCE953E6D990E627ED6F595928A393B03B47B2177ECFB66A17CFA818788AEDA5"
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\segformer_aligned_wave7_20261018\\followup_20261019\\training\\smoke_A21_s43\\ema_best_model\\ema_model.pdparams",
+      "bytes": 14032650,
+      "sha256": "5A9E960BD7F935EE309F1EB07358B55510855074B93F06F28412E286F51A4A9E"
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\segformer_aligned_wave7_20261018\\followup_20261019\\training\\smoke_A21_s43\\ema_best_model\\ema_model.pdstates",
+      "bytes": 162,
+      "sha256": "5A759CBBB44FEF7B63E9DFED93233CD7E56A72F20F3FAFEF9E54DFF678F737A5"
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\segformer_aligned_wave7_20261018\\followup_20261019\\training\\smoke_A21_s43\\iter_20\\ema_model.pdparams",
+      "bytes": 14032650,
+      "sha256": "5A9E960BD7F935EE309F1EB07358B55510855074B93F06F28412E286F51A4A9E"
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\segformer_aligned_wave7_20261018\\followup_20261019\\training\\smoke_A21_s43\\iter_20\\ema_model.pdstates",
+      "bytes": 162,
+      "sha256": "5A759CBBB44FEF7B63E9DFED93233CD7E56A72F20F3FAFEF9E54DFF678F737A5"
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\segformer_aligned_wave7_20261018\\followup_20261019\\training\\smoke_A21_s43\\iter_20\\model.pdopt",
+      "bytes": 28098532,
+      "sha256": "BAD5146BC2E94C4AAC4D12F5D05016363AC91D958781A308618C96FCD652A2E5"
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\segformer_aligned_wave7_20261018\\followup_20261019\\training\\smoke_A21_s43\\iter_20\\model.pdparams",
+      "bytes": 14030173,
+      "sha256": "524FBF165A3A12FCD8B5E1ADA4D2E824215FAA62D67721D5FD421139886CD0A1"
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\segformer_aligned_wave7_20261018\\followup_20261019\\training\\smoke_A21_s43\\iter_20\\model.pdstates",
+      "bytes": 162,
+      "sha256": "DCE953E6D990E627ED6F595928A393B03B47B2177ECFB66A17CFA818788AEDA5"
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\segformer_aligned_wave7_20261018\\followup_20261019\\training\\smoke_A10_s43\\best_model\\model.pdparams",
+      "bytes": 14646566,
+      "sha256": "4CAC213B45B7B597AA5600F83EB3062F416312A26399BCBE3C4F3E6878FAD51C"
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\segformer_aligned_wave7_20261018\\followup_20261019\\training\\smoke_A10_s43\\best_model\\model.pdstates",
+      "bytes": 162,
+      "sha256": "9E0636C397B7057E791C6742E6DB03BBCDB896BE97BB177985211203D4C82BE3"
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\segformer_aligned_wave7_20261018\\followup_20261019\\training\\smoke_A10_s43\\ema_best_model\\ema_model.pdparams",
+      "bytes": 14649264,
+      "sha256": "DB75F9EBF2F1AE925650E8B8BDB48D5712EB5E2E507E4826E615F114BF13467A"
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\segformer_aligned_wave7_20261018\\followup_20261019\\training\\smoke_A10_s43\\ema_best_model\\ema_model.pdstates",
+      "bytes": 162,
+      "sha256": "CAA350FFED3BDF59244DF8E45E5D918034C5B0FA7F8E2959E1DFB3AB2BD33182"
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\segformer_aligned_wave7_20261018\\followup_20261019\\training\\smoke_A10_s43\\iter_20\\ema_model.pdparams",
+      "bytes": 14649264,
+      "sha256": "DB75F9EBF2F1AE925650E8B8BDB48D5712EB5E2E507E4826E615F114BF13467A"
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\segformer_aligned_wave7_20261018\\followup_20261019\\training\\smoke_A10_s43\\iter_20\\ema_model.pdstates",
+      "bytes": 162,
+      "sha256": "CAA350FFED3BDF59244DF8E45E5D918034C5B0FA7F8E2959E1DFB3AB2BD33182"
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\segformer_aligned_wave7_20261018\\followup_20261019\\training\\smoke_A10_s43\\iter_20\\model.pdopt",
+      "bytes": 29325934,
+      "sha256": "6B730B1F8DFB9D69CDC42C91C0567D4E9FF4B5068A74FC3B97D0A70400C15CDF"
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\segformer_aligned_wave7_20261018\\followup_20261019\\training\\smoke_A10_s43\\iter_20\\model.pdparams",
+      "bytes": 14646566,
+      "sha256": "4CAC213B45B7B597AA5600F83EB3062F416312A26399BCBE3C4F3E6878FAD51C"
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\segformer_aligned_wave7_20261018\\followup_20261019\\training\\smoke_A10_s43\\iter_20\\model.pdstates",
+      "bytes": 162,
+      "sha256": "9E0636C397B7057E791C6742E6DB03BBCDB896BE97BB177985211203D4C82BE3"
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\segformer_aligned_wave7_20261018\\followup_20261019\\training\\smoke_B0_s44\\best_model\\model.pdparams",
+      "bytes": 14876757,
+      "sha256": "E6C11F4EFE68A114BE10BCF423557321EB285747326C91CFE1DB99F6AE95A80F"
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\segformer_aligned_wave7_20261018\\followup_20261019\\training\\smoke_B0_s44\\best_model\\model.pdstates",
+      "bytes": 162,
+      "sha256": "D34A1B43ADA3B03F608EA094E159DF1E3D60B27756C2FCA41E7E6A69525ED09E"
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\segformer_aligned_wave7_20261018\\followup_20261019\\training\\smoke_B0_s44\\ema_best_model\\ema_model.pdparams",
+      "bytes": 14879130,
+      "sha256": "7F3173AF32398D79791EB055DC50094A04426D84FBA1249F7B0F01213220251A"
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\segformer_aligned_wave7_20261018\\followup_20261019\\training\\smoke_B0_s44\\ema_best_model\\ema_model.pdstates",
+      "bytes": 162,
+      "sha256": "4DAF4387133B4CBD9741C9893ADFB851CC0A9F36255F3EEC00F9A060D44616F4"
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\segformer_aligned_wave7_20261018\\followup_20261019\\training\\smoke_B0_s44\\iter_20\\ema_model.pdparams",
+      "bytes": 14879130,
+      "sha256": "7F3173AF32398D79791EB055DC50094A04426D84FBA1249F7B0F01213220251A"
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\segformer_aligned_wave7_20261018\\followup_20261019\\training\\smoke_B0_s44\\iter_20\\ema_model.pdstates",
+      "bytes": 162,
+      "sha256": "4DAF4387133B4CBD9741C9893ADFB851CC0A9F36255F3EEC00F9A060D44616F4"
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\segformer_aligned_wave7_20261018\\followup_20261019\\training\\smoke_B0_s44\\iter_20\\model.pdopt",
+      "bytes": 29788200,
+      "sha256": "6A6C36A8B7586672611D47022AEB20E757CD466BDEF26C1A03F30C42D4C6F29D"
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\segformer_aligned_wave7_20261018\\followup_20261019\\training\\smoke_B0_s44\\iter_20\\model.pdparams",
+      "bytes": 14876757,
+      "sha256": "E6C11F4EFE68A114BE10BCF423557321EB285747326C91CFE1DB99F6AE95A80F"
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\segformer_aligned_wave7_20261018\\followup_20261019\\training\\smoke_B0_s44\\iter_20\\model.pdstates",
+      "bytes": 162,
+      "sha256": "D34A1B43ADA3B03F608EA094E159DF1E3D60B27756C2FCA41E7E6A69525ED09E"
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\segformer_aligned_wave7_20261018\\followup_20261019\\training\\smoke_A0_s44\\best_model\\model.pdparams",
+      "bytes": 13898078,
+      "sha256": "1674B2B53DCEAC4637328D47538E4BC2EB1363ED25A31B9A67030521009E0AC2"
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\segformer_aligned_wave7_20261018\\followup_20261019\\training\\smoke_A0_s44\\best_model\\model.pdstates",
+      "bytes": 162,
+      "sha256": "BD11EB1296A9F66C2A3E45F6CE327DB9A24E80DF17E4565E55D038F981A7DB9A"
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\segformer_aligned_wave7_20261018\\followup_20261019\\training\\smoke_A0_s44\\ema_best_model\\ema_model.pdparams",
+      "bytes": 13900490,
+      "sha256": "2C8EB29D5CCD8A26D7777F0682185B23ED74648237387005B2CD2D9B6F638925"
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\segformer_aligned_wave7_20261018\\followup_20261019\\training\\smoke_A0_s44\\ema_best_model\\ema_model.pdstates",
+      "bytes": 162,
+      "sha256": "3E8F3C66D61982844BDFF8F036C627D02527B1F7891532470B46EC1F1BED1116"
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\segformer_aligned_wave7_20261018\\followup_20261019\\training\\smoke_A0_s44\\iter_20\\ema_model.pdparams",
+      "bytes": 13900490,
+      "sha256": "2C8EB29D5CCD8A26D7777F0682185B23ED74648237387005B2CD2D9B6F638925"
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\segformer_aligned_wave7_20261018\\followup_20261019\\training\\smoke_A0_s44\\iter_20\\ema_model.pdstates",
+      "bytes": 162,
+      "sha256": "3E8F3C66D61982844BDFF8F036C627D02527B1F7891532470B46EC1F1BED1116"
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\segformer_aligned_wave7_20261018\\followup_20261019\\training\\smoke_A0_s44\\iter_20\\model.pdopt",
+      "bytes": 27833458,
+      "sha256": "4C617F38CED88582929D99680709B396B0D3CBF561E5332794F34580F9E83C1B"
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\segformer_aligned_wave7_20261018\\followup_20261019\\training\\smoke_A0_s44\\iter_20\\model.pdparams",
+      "bytes": 13898078,
+      "sha256": "1674B2B53DCEAC4637328D47538E4BC2EB1363ED25A31B9A67030521009E0AC2"
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\segformer_aligned_wave7_20261018\\followup_20261019\\training\\smoke_A0_s44\\iter_20\\model.pdstates",
+      "bytes": 162,
+      "sha256": "BD11EB1296A9F66C2A3E45F6CE327DB9A24E80DF17E4565E55D038F981A7DB9A"
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\segformer_aligned_wave7_20261018\\followup_20261019\\training\\smoke_A21_s44\\best_model\\model.pdparams",
+      "bytes": 14030173,
+      "sha256": "C4F65D6514BD54B0D061B1516153966B3193A58EDB048BF2679DF4DD39744333"
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\segformer_aligned_wave7_20261018\\followup_20261019\\training\\smoke_A21_s44\\best_model\\model.pdstates",
+      "bytes": 162,
+      "sha256": "0E59993E0AE53E991688F76ABE2DF6145B472FF53ED0EBAF8344135A30DF83E5"
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\segformer_aligned_wave7_20261018\\followup_20261019\\training\\smoke_A21_s44\\ema_best_model\\ema_model.pdparams",
+      "bytes": 14032650,
+      "sha256": "DCAA3A4CDA08FC8D82DCC1B667867A2669F6F8F401952069F080189D481FEBA7"
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\segformer_aligned_wave7_20261018\\followup_20261019\\training\\smoke_A21_s44\\ema_best_model\\ema_model.pdstates",
+      "bytes": 162,
+      "sha256": "7F570D379ADB6B4B7D6E3B202235E0EDE338935F9A2387C84A9B56A2AE147909"
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\segformer_aligned_wave7_20261018\\followup_20261019\\training\\smoke_A21_s44\\iter_20\\ema_model.pdparams",
+      "bytes": 14032650,
+      "sha256": "DCAA3A4CDA08FC8D82DCC1B667867A2669F6F8F401952069F080189D481FEBA7"
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\segformer_aligned_wave7_20261018\\followup_20261019\\training\\smoke_A21_s44\\iter_20\\ema_model.pdstates",
+      "bytes": 162,
+      "sha256": "7F570D379ADB6B4B7D6E3B202235E0EDE338935F9A2387C84A9B56A2AE147909"
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\segformer_aligned_wave7_20261018\\followup_20261019\\training\\smoke_A21_s44\\iter_20\\model.pdopt",
+      "bytes": 28098532,
+      "sha256": "DB3B37DB130743B2C45CAC4A715EFD8B5709EEDBC80E4DFBD3EFCF5BF5229D3B"
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\segformer_aligned_wave7_20261018\\followup_20261019\\training\\smoke_A21_s44\\iter_20\\model.pdparams",
+      "bytes": 14030173,
+      "sha256": "C4F65D6514BD54B0D061B1516153966B3193A58EDB048BF2679DF4DD39744333"
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\segformer_aligned_wave7_20261018\\followup_20261019\\training\\smoke_A21_s44\\iter_20\\model.pdstates",
+      "bytes": 162,
+      "sha256": "0E59993E0AE53E991688F76ABE2DF6145B472FF53ED0EBAF8344135A30DF83E5"
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\segformer_aligned_wave7_20261018\\followup_20261019\\training\\smoke_A10_s44\\best_model\\model.pdparams",
+      "bytes": 14646566,
+      "sha256": "D2D97949702ADE90591FECF64E31F88D84EF7D07B87076F92A8BF7B9CBE9C585"
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\segformer_aligned_wave7_20261018\\followup_20261019\\training\\smoke_A10_s44\\best_model\\model.pdstates",
+      "bytes": 162,
+      "sha256": "B1B49ACFA4FE89FBCF805D9864A823F6E11F0E17A95B76FB3684CB306C9704E2"
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\segformer_aligned_wave7_20261018\\followup_20261019\\training\\smoke_A10_s44\\ema_best_model\\ema_model.pdparams",
+      "bytes": 14649264,
+      "sha256": "5B951C5317FF5466805BB568D9013A55F62A2677EE990B385A4B3DA689BA3E6D"
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\segformer_aligned_wave7_20261018\\followup_20261019\\training\\smoke_A10_s44\\ema_best_model\\ema_model.pdstates",
+      "bytes": 162,
+      "sha256": "B79FB0DC1C7BDD9B4ECC4FED4368D7F1FA824803493C2BBF84107328C1AA0960"
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\segformer_aligned_wave7_20261018\\followup_20261019\\training\\smoke_A10_s44\\iter_20\\ema_model.pdparams",
+      "bytes": 14649264,
+      "sha256": "5B951C5317FF5466805BB568D9013A55F62A2677EE990B385A4B3DA689BA3E6D"
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\segformer_aligned_wave7_20261018\\followup_20261019\\training\\smoke_A10_s44\\iter_20\\ema_model.pdstates",
+      "bytes": 162,
+      "sha256": "B79FB0DC1C7BDD9B4ECC4FED4368D7F1FA824803493C2BBF84107328C1AA0960"
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\segformer_aligned_wave7_20261018\\followup_20261019\\training\\smoke_A10_s44\\iter_20\\model.pdopt",
+      "bytes": 29325934,
+      "sha256": "62377DCEAABDB0371A2FAEC55DA5EAE82BF597CFB53E0ECE8C1426F512976BC1"
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\segformer_aligned_wave7_20261018\\followup_20261019\\training\\smoke_A10_s44\\iter_20\\model.pdparams",
+      "bytes": 14646566,
+      "sha256": "D2D97949702ADE90591FECF64E31F88D84EF7D07B87076F92A8BF7B9CBE9C585"
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\segformer_aligned_wave7_20261018\\followup_20261019\\training\\smoke_A10_s44\\iter_20\\model.pdstates",
+      "bytes": 162,
+      "sha256": "B1B49ACFA4FE89FBCF805D9864A823F6E11F0E17A95B76FB3684CB306C9704E2"
+    }
+  ],
+  "bytes": 777217224
+}

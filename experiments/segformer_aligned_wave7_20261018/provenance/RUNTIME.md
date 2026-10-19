@@ -1,3 +1,17 @@
+# 最新任务指向：Wave8损失函数消融（覆盖下面历史启动状态）
+
+2026-10-19 23:11：用户要求结合最新规划开始约20方案。可读网页用户方向为损失优化；助手正文未取回。主波22组、后续9项训练均已结束，逐阶段exit0/18k/冻结/独立验证已审计。后续wrapper最终退出回执缺失、系统中止0xC000013A，不能写wrapper exit0；旧任务注册已清理，XML及审计保留。不要重新启动主波或9项旧队列。
+
+当前唯一新活动工程：`D:/论文复现/experiments/segformer_loss_wave8_20261019`。先读其`refine-logs/EXPERIMENT_PLAN.md`、`provenance/RUNTIME.md`、`RELEASE.json`、`protocol.json`及实时heartbeat/active_process/status/exit。新任务`Codex-SegFormer-loss-wave8-once-20261019`调用`run_loss_queue.ps1`/`loss_queue.py --run`；先控制复现和梯度预检，再20项串行smoke/18k。当前是否已进入正式训练以实际日志为准，注册不等于开始。
+
+A21三seedIoU均值增益0.0019078953<原0.002门槛，A10均值退化；固定A0=width128＋Aligned，采用20种官方损失配置，不用Polarized/AFNB做新母体。损失不减参、不加速推理，Precision/Recall/BF1完整门槛不事后放宽。旧速度不稳定且中位数更慢，不声称加速或SOTA。
+
+仅train/val，不访问test或自建数据。Python C:/venv_bisenet/Scripts/python.exe，PYTHONPATH必须新波src/PaddleSeg-2.10.0。Normal优先级，每stage真实exit，源/配置/数据SHA守卫，盘余<4GiB、日志30min不变、NaN/断梯度/非零退出查明后再恢复，不能重复启动。先前9项成功smoke重复副本按SHA清单回收0.724GiB，正式/最佳/冻结权重和原始数据未删。
+
+健康无实质变化保持安静；完成/重要结果/故障通知。本轮20项结束后冻结最多top2并多seed复核，再继续六原始公开模型及统一test，最终报告表图CSV、复现索引和报告压缩包发送给用户后才停止监控。最终交付合同沿用主波refine-logs/FINAL_DELIVERY.md。
+
+---
+
 # 10月19日当前活动状态（覆盖下面历史PID和旧队列）
 
 > 20:19 后更新：followup_20261019 的九项新训练均已完成，见[完成说明](../followup_20261019/README.md)和该目录 `results/queue_done.json`。下文正在训练、活动任务和 PID 的表述保留为历史，不能用来判断当前运行；不应重复启动主波或已完成复核队列。

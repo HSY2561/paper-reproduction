@@ -38,13 +38,13 @@ def prepare():
     write(ROOT/'provenance/protocol.json',dict(parent='SegFormer-B0 width128+Aligned',params=3470434,seed=42,iters=18000,batch=4,
         optimizer='AdamW',lr=6e-5,end_lr=0,model_precision='FP32',test_used=False,train=1896,val=348,
         initialization='common ImageNet backbone, not fine-tuning trained C0',target_completed=20,
-        trials='20 main configurations, 2 preregistered engineering-only reserves; not 20 independent algorithms',
+        trials='20 main configurations; no outcome-triggered reserves; not 20 independent algorithms',
         changes='only official loss config; fixed architecture, crops, augmentation, optimizer and training budget',
-        main_gate={'crackIoU':.002,'f1':.001,'mIoU':0,'precision':0,'recall':-.005,'boundary_f1':-.005},
+        main_gate={'crackIoU':.002,'f1':.001,'mIoU':0,'precision':-.005,'recall':-.005,'boundary_f1':-.005},
         precision_track={'precision':.005,'crackIoU':0,'f1':0,'mIoU':0,'recall':-.005,'boundary_f1':-.005},
-        selection='exact ordinary/EMA maximum val mIoU, frozen SHA, independent val/boundary; top2 recipes frozen before seeds43/44',
+        selection='exact ordinary/EMA maximum val mIoU, frozen SHA, independent val/boundary; main-gate top2 recipes frozen before seeds43/44; precision track descriptive only, not a gate bypass',
         efficiency='network is identical; loss does not reduce parameters or accelerate inference; record training cost separately'))
-    report();print('PREPARED_20_MAIN_2_ENGINEERING_RESERVES',flush=True)
+    report();print('PREPARED_20_MAIN_NO_RESERVES',flush=True)
 
 
 def report():
@@ -57,7 +57,7 @@ def report():
             m=read(ROOT/'results'/(ident+'_val.json'));profile=read(ROOT/'results'/(ident+'_profile.json'))
             r.update({k:m[k] for k in FIELDS});r['params']=profile['params_total']
             d={k:m[k]-base[k] for k in FIELDS};r['delta']=d
-            r['main_gate']=d['crackIoU']>=.002 and d['f1']>=.001 and d['mIoU']>=0 and d['precision']>=0 and d['recall']>=-.005 and d['boundary_f1']>=-.005
+            r['main_gate']=d['crackIoU']>=.002 and d['f1']>=.001 and d['mIoU']>=0 and d['precision']>=-.005 and d['recall']>=-.005 and d['boundary_f1']>=-.005
             r['precision_gate']=d['precision']>=.005 and d['crackIoU']>=0 and d['f1']>=0 and d['mIoU']>=0 and d['recall']>=-.005 and d['boundary_f1']>=-.005
             r['full_final_status']='pending matched-seed verification and final protocol'
         rows.append(r)
@@ -65,7 +65,7 @@ def report():
     columns=['id','label','family','role','status',*FIELDS,'params','main_gate','precision_gate']
     with (ROOT/'results/loss_ablation.csv').open('w',encoding='utf-8-sig',newline='') as f:
         w=csv.DictWriter(f,fieldnames=columns,extrasaction='ignore');w.writeheader();w.writerows(rows)
-    lines=['# SegFormer＋Aligned 损失函数消融进度','','更新时间：'+q.now(),'','仅Crack500验证集；20主方案＋2技术备选。所有模型结构和推理参数相同。权重变体不计独立算法。','',
+    lines=['# SegFormer＋Aligned 损失函数消融进度','','更新时间：'+q.now(),'','仅Crack500验证集；20主方案，不按验证成绩增加替补。所有模型结构和推理参数相同。权重变体不计独立算法。','',
         '| 编号 | 配方 | 状态 | P% | R% | F1% | IoU% | mIoU% | BF1% | Params M |','|---|---|---|---:|---:|---:|---:|---:|---:|---:|',
         '| C0 | A0 + CE | 冻结复用 | '+' | '.join(f'{base[k]*100:.4f}' for k in FIELDS)+' | 3.470434 |']
     for r in rows:
@@ -91,8 +91,13 @@ def report():
 
 def verify():
     done=read(PREV/'followup_20261019/results/queue_done.json')
-    receipt=read(PREV/'followup_20261019/results/scheduled_followup_exit.json')
-    if not all(s=='complete' for s in done['states'].values()) or receipt['exit_code']!=0:raise RuntimeError('Previous queue has not completed successfully')
+    audit=read(ROOT/'provenance/previous_followup_audit.json')
+    if len(done['states'])!=9 or not all(s=='complete' for s in done['states'].values()) or audit['errors']:raise RuntimeError('Previous jobs have not all completed and verified')
+    for ident in done['states']:
+        for stage in ['smoke','train','official_val','pixel_boundary','profile']:
+            if read(PREV/'followup_20261019/results'/(ident+'_'+stage+'_exit.json'))['exit_code']!=0:raise RuntimeError('Previous real stage exit nonzero')
+        selected=read(PREV/'followup_20261019/checkpoints'/ident/'selection.json')
+        if sha(selected['checkpoint'])!=selected['sha256']:raise RuntimeError('Previous frozen checkpoint changed')
     for name,folder in [('source_hashes',q.SRC),('config_hashes',ROOT/'configs')]:
         for relative,expected in read(ROOT/'provenance'/(name+'.json')).items():
             if sha(folder/relative)!=expected:raise RuntimeError('Frozen source/config changed: '+relative)
