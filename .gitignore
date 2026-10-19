@@ -134,3 +134,11 @@ Thumbs.db
 /experiments/segformer_aligned_wave7_20261018/refine-logs/STAGE1_ANALYSIS_*.md
 /experiments/segformer_aligned_wave7_20261018/followup_20261019/refine-logs/RESULTS_*.md
 !/experiments/segformer_aligned_wave7_20261018/figures/screening_20261019/*.pdf
+
+# Retired root plans/redundant progress report; keep local copies and history
+/PAPER_PLAN.md
+/SegFormer新基线与论文实验规划_20261006.md
+/SegFormer_Aligned第二模块消融进展报告_20261018.md
+
+# Downloaded third-party paper text/pages remain local
+/experiments/repair_options_20261019/source_review/

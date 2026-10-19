@@ -1,5 +1,7 @@
 # 10月19日候选复核运行契约
 
+> 最新完成状态（20:19）：`../results/queue_done.json` 记录全部 9 项 complete，四模型三 seed 已齐备。以下启动、PID、heartbeat 为历史，不代表仍在运行；无需重启已完成队列。下一步仍按原计划审核预登记门槛与速度，再处理六个原始模型及本轮统一 test，详见 [完成说明](../README.md)。
+
 Python C:\venv_bisenet\Scripts\python.exe；PYTHONPATH必须为主wave7的src/PaddleSeg-2.10.0。正式源码与数据协议沿用主波已冻结哈希。活动入口followup_queue.py --run，profile子命令也由该文件处理。
 
 一次性任务Codex-SegFormer-wave7-followup-once-20261019执行run_followup.ps1。上一轮主任务正常exit0，已仅移除其注册，保留XML与真实退出证据。新任务第一次在训练前因Windows默认文本编码损坏元数据路径被SHA预检拦截，真实exit1保存在provenance/launch_path_encoding_failure_20261019。重建实际路径并核对原SHA后9:07:56重启同一任务；候选ID、门槛、数据和seed预算不变。以后所有元数据read_text必须显式encoding='utf-8'或调用read_json。

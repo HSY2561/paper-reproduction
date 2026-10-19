@@ -1,5 +1,7 @@
 # 10月19日当前活动状态（覆盖下面历史PID和旧队列）
 
+> 20:19 后更新：followup_20261019 的九项新训练均已完成，见[完成说明](../followup_20261019/README.md)和该目录 `results/queue_done.json`。下文正在训练、活动任务和 PID 的表述保留为历史，不能用来判断当前运行；不应重复启动主波或已完成复核队列。
+
 主波已05:18正常结束，22完整组已经独立审计，错误0；不要恢复或重训主波。当前活动工程是 followup_20261019，入口followup_queue.py，任务Codex-SegFormer-wave7-followup-once-20261019。请首先读 followup_20261019/provenance/RUNTIME.md、refine-logs/PLAN.md，以及该子目录results下的heartbeat、真实exit、各status。
 
 已冻结A21_Polarized/A10_AFNB供复核；9项新运行是AFNB单独seed42和B0/A0/A21/A10各seed43/44。9:09速度复核exit0但不稳定且当前中位数更慢，不得声称加速；9:09:39进入AFNB单独正式训练，9:15:40已3200/18000。后续请读取实时日志，勿以这些历史时间冒充当前进度。

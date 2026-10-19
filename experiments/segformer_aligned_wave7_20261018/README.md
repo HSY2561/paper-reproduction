@@ -2,6 +2,8 @@
 
 2026-10-19 同步状态：登记 24 项第二模块机制，22 项完成 18k 训练、冻结选模与独立验证，DAPPM 反向 smoke 失败，PSP 兼容性暂缓。B0、W128、A0（W128 + Aligned）复用核验过的冻结对照。
 
+20:19 更新：后续 9 项归因/多 seed 新训练也已全部完成，四模型三 seed 已齐备，见[最新完成说明](followup_20261019/README.md)。本页中的阶段筛选说明保留为选模背景，当前不再是训练中状态。
+
 已冻结 A21（Polarized）和 A10（AFNB）进入归因及匹配多 seed 复核。当前仍为验证集单 seed 筛选证据，不能视作最终模型。速度复测稳定性未通过，且两个候选的中位延迟均慢于 B0；参数减少不等于加速。
 
 ## 当前阅读入口
@@ -18,7 +20,7 @@
 
 运行前阅读 [主波运行契约](provenance/RUNTIME.md)及[复核运行契约](followup_20261019/provenance/RUNTIME.md)，核对 Python、Crack500 train/val、预训练/冻结权重和数据清单的本机路径。当前实现包含本地 Windows/Paddle3.4/RTX5060 环境路径，其他机器需先调整。训练中的进程、系统任务和锁应按运行契约核实，避免重复启动。
 
-最新正式结果由各组 `*_status.json`、`*_train_exit.json`、选模记录、独立验证及日志共同确认；同名汇总表在完成阶段刷新，可能落后于正在运行的状态文件。本次提交时已有 AFNB 单模块 seed42、B0 seed43、A0 seed43 完成记录，A21 seed43 的保存状态为训练中，其他运行见复核目录。三 seed 未齐前不报告均值和标准差。
+最新正式结果由各组 `*_status.json`、`*_train_exit.json`、选模记录、独立验证及日志共同确认。本轮九项已全部完成，均值和样本标准差见 `followup_20261019/results/three_seed_summary.json`；同名结果表与全部退出回执一起保留。
 
 `summarize_wave7.py` 用于汇总已有结果和生成图，`diagnostics/` 保留诊断代码；`candidate_latency.py`、`paired_latency.py` 保留速度测量实现。复现实验所需的源代码、配置、日志、CSV、退出回执和权重 SHA256 均随仓库保留，权重/数据集/环境缓存/本机锁不上传。
 
