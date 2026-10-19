@@ -234,7 +234,25 @@
       "purpose": "像素分类与IoU代理目标结合",
       "risk": "排序和更大训练开销；可能牺牲细小边界",
       "role": "main",
-      "status": "pending"
+      "status": "complete",
+      "precision": 0.7991141736412645,
+      "recall": 0.826847642238061,
+      "f1": 0.8127443878464792,
+      "crackIoU": 0.6845572086808425,
+      "mIoU": 0.8309944513879967,
+      "boundary_f1": 0.4544008526100033,
+      "params": 3470434,
+      "delta": {
+        "precision": -0.027651390318317537,
+        "recall": 0.035873602438165175,
+        "f1": 0.004270519032450126,
+        "crackIoU": 0.006037579397240811,
+        "mIoU": 0.002810179956942105,
+        "boundary_f1": 0.005116028386364546
+      },
+      "main_gate": false,
+      "precision_gate": false,
+      "full_final_status": "pending matched-seed verification and final protocol"
     },
     {
       "id": "L08_WeightedCE",
@@ -487,6 +505,6 @@
       "status": "pending"
     }
   ],
-  "updated_at": "2026-10-20T02:35:13+08:00",
+  "updated_at": "2026-10-20T04:22:16+08:00",
   "test_used": false
 }

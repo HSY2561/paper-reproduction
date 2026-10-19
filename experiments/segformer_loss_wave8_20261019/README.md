@@ -6,7 +6,8 @@
 
 - L05（CE + 0.1 Lovasz）已 complete：真实训练和独立验证/边界评估/profile 回执均为 exit0，训练日志到 18000/18000。验证裂缝 IoU 68.1953%、F1 81.0906%、mIoU 82.9721%、边界 F1 44.1729%。它是 seed42 单项结果。
 - L06（CE + 0.25 Lovasz）于 02:35 已 complete，18k 训练和独立验证回执均成功；验证裂缝 IoU 68.6376%、F1 81.4025%、mIoU 83.2048%、边界 F1 44.7172%，是 seed42 单项结果。
-- L07（CE + 0.5 Lovasz）的最近状态为 training。汇总表在阶段完成时刷新，可能仍显示 pending；实际运行进度应结合 `results/*_status.json`、heartbeat、日志和退出回执核对。
+- L07（CE + 0.5 Lovasz）于 04:22 已 complete，18k 训练和独立验证回执均成功；验证裂缝 IoU 68.4557%、F1 81.2744%、mIoU 83.0994%、边界 F1 45.4401%，是 seed42 单项结果。
+- L08（加权 CE）的最近状态为 training。汇总表在阶段完成时刷新，可能仍显示 pending；实际运行进度应结合 `results/*_status.json`、heartbeat、日志和退出回执核对。
 - L01–L04 已记录为 gradient_preflight_failed，保留梯度预检证据，性能不填数值。其他方案按各项回执更新。
 - C0 是复用的合法 A0 + CE 冻结基线，不计作新训练。两个原替补配置在启动前停用并保存在 `provenance/prelaunch_disabled_reserves/`，不根据验证成绩增加替补。
 
@@ -17,6 +18,7 @@
 - [梯度预检](results/gradient_preflight.json)、[预检退出回执](results/gradient_preflight_exit.json)、[运行契约](provenance/RUNTIME.md)。
 - [L05 训练回执](results/L05_CE_Lovasz_train_exit.json)、[独立验证](results/L05_CE_Lovasz_val.json)及同目录逐图 CSV。
 - [L06 训练回执](results/L06_CE_Lovasz_train_exit.json)、[独立验证](results/L06_CE_Lovasz_val.json)及同目录逐图 CSV。
+- [L07 训练回执](results/L07_CE_Lovasz_train_exit.json)、[独立验证](results/L07_CE_Lovasz_val.json)及同目录逐图 CSV。
 - [上一轮九项审计](provenance/previous_followup_audit.json)、[上一轮三 seed 完成说明](../segformer_aligned_wave7_20261018/followup_20261019/README.md)。
 
 ## 代码及结果边界

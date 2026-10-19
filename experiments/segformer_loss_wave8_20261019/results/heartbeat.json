@@ -1,10 +1,10 @@
 {
-  "tag": "L07_CE_Lovasz_train",
-  "pid": 16484,
+  "tag": "L08_WeightedCE_train",
+  "pid": 101584,
   "runner_pid": 67728,
-  "timestamp": "2026-10-20T04:18:27+08:00",
-  "latest_iter": 17900,
-  "elapsed_seconds": 6086.6,
-  "log_size": 1091024,
-  "free_gb": 7.71
+  "timestamp": "2026-10-20T04:33:57+08:00",
+  "latest_iter": 1800,
+  "elapsed_seconds": 604.7,
+  "log_size": 74592,
+  "free_gb": 7.54
 }
