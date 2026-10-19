@@ -8,7 +8,8 @@
 - L06（CE + 0.25 Lovasz）于 02:35 已 complete，18k 训练和独立验证回执均成功；验证裂缝 IoU 68.6376%、F1 81.4025%、mIoU 83.2048%、边界 F1 44.7172%，是 seed42 单项结果。
 - L07（CE + 0.5 Lovasz）于 04:22 已 complete，18k 训练和独立验证回执均成功；验证裂缝 IoU 68.4557%、F1 81.2744%、mIoU 83.0994%、边界 F1 45.4401%，是 seed42 单项结果。
 - L08（加权 CE [1.5, 1.0]）于 06:04 已 complete，18k 训练、独立验证、边界评估与 profile 四项回执均为 exit0；验证裂缝 IoU 66.8904%、F1 80.1609%、mIoU 82.3095%、边界 F1 44.1797%，是 seed42 单项结果。选中普通 best_model 的第 5000 步权重，选模 SHA 已保存，权重文件仅留本地。
-- L09（加权 CE [2.0, 1.0]）的最近状态为 training。汇总表在阶段完成时刷新，可能仍显示 pending；实际运行阶段应结合 `results/*_status.json`、heartbeat、日志和退出回执核对，不能将 smoke 通过视为正式训练完成。
+- L09（加权 CE [2.0, 1.0]）于 07:42 已 complete，18k 训练、独立验证、边界评估与 profile 四项回执均为 exit0；验证裂缝 IoU 65.4755%、F1 79.1362%、mIoU 81.5913%、边界 F1 43.5890%，是 seed42 单项结果。选中普通 best_model 的第 5000 步权重，选模 SHA 已保存，权重文件仅留本地。
+- L10（加权 CE [1.0, 2.0]）的最近状态为 training。汇总表在阶段完成时刷新，可能仍显示 pending；实际运行阶段应结合 `results/*_status.json`、heartbeat、日志和退出回执核对，不能将 smoke 通过视为正式训练完成。
 - L01–L04 已记录为 gradient_preflight_failed，保留梯度预检证据，性能不填数值。其他方案按各项回执更新。
 - C0 是复用的合法 A0 + CE 冻结基线，不计作新训练。两个原替补配置在启动前停用并保存在 `provenance/prelaunch_disabled_reserves/`，不根据验证成绩增加替补。
 
@@ -21,6 +22,7 @@
 - [L06 训练回执](results/L06_CE_Lovasz_train_exit.json)、[独立验证](results/L06_CE_Lovasz_val.json)及同目录逐图 CSV。
 - [L07 训练回执](results/L07_CE_Lovasz_train_exit.json)、[独立验证](results/L07_CE_Lovasz_val.json)及同目录逐图 CSV。
 - [L08 训练回执](results/L08_WeightedCE_train_exit.json)、[独立验证](results/L08_WeightedCE_val.json)、[逐图 CSV](results/L08_WeightedCE_val_per_image.csv)、[选模 SHA](checkpoints/L08_WeightedCE/selection.json)。
+- [L09 训练回执](results/L09_WeightedCE_train_exit.json)、[独立验证](results/L09_WeightedCE_val.json)、[逐图 CSV](results/L09_WeightedCE_val_per_image.csv)、[选模 SHA](checkpoints/L09_WeightedCE/selection.json)。
 - [上一轮九项审计](provenance/previous_followup_audit.json)、[上一轮三 seed 完成说明](../segformer_aligned_wave7_20261018/followup_20261019/README.md)。
 
 ## 代码及结果边界

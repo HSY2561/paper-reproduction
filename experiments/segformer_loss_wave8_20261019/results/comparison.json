@@ -302,7 +302,25 @@
       "purpose": "前两组增加背景误检代价；第三组为前景召回反向对照",
       "risk": "背景加权可能漏检，前景加权可能假阳性；类别顺序0背景/1裂缝",
       "role": "main",
-      "status": "pending"
+      "status": "complete",
+      "precision": 0.8530794866564653,
+      "recall": 0.7379716842409351,
+      "f1": 0.7913617325132036,
+      "crackIoU": 0.6547548210257613,
+      "mIoU": 0.8159132848830083,
+      "boundary_f1": 0.4358901080549826,
+      "params": 3470434,
+      "delta": {
+        "precision": 0.026313922696883263,
+        "recall": -0.05300235555896071,
+        "f1": -0.01711213630082542,
+        "crackIoU": -0.02376480825784033,
+        "mIoU": -0.012270986548046259,
+        "boundary_f1": -0.013394716168656173
+      },
+      "main_gate": false,
+      "precision_gate": false,
+      "full_final_status": "pending matched-seed verification and final protocol"
     },
     {
       "id": "L10_WeightedCE",
@@ -523,6 +541,6 @@
       "status": "pending"
     }
   ],
-  "updated_at": "2026-10-20T06:04:16+08:00",
+  "updated_at": "2026-10-20T07:42:44+08:00",
   "test_used": false
 }
