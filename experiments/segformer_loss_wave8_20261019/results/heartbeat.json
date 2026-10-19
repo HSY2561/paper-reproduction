@@ -2,9 +2,9 @@
   "tag": "L09_WeightedCE_train",
   "pid": 22600,
   "runner_pid": 67728,
-  "timestamp": "2026-10-20T06:06:50+08:00",
-  "latest_iter": 100,
-  "elapsed_seconds": 60.5,
-  "log_size": 5074,
-  "free_gb": 7.44
+  "timestamp": "2026-10-20T06:20:36+08:00",
+  "latest_iter": null,
+  "elapsed_seconds": 886.3,
+  "log_size": 177092,
+  "free_gb": 7.37
 }
