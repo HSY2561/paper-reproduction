@@ -1,10 +1,10 @@
 {
-  "tag": "L06_CE_Lovasz_train",
-  "pid": 99640,
+  "tag": "L07_CE_Lovasz_train",
+  "pid": 16484,
   "runner_pid": 67728,
-  "timestamp": "2026-10-20T02:31:21+08:00",
-  "latest_iter": 17900,
-  "elapsed_seconds": 6189.3,
-  "log_size": 1086006,
-  "free_gb": 7.88
+  "timestamp": "2026-10-20T02:47:06+08:00",
+  "latest_iter": 1600,
+  "elapsed_seconds": 605.0,
+  "log_size": 74572,
+  "free_gb": 7.71
 }

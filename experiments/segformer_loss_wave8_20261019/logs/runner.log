@@ -6,3 +6,8 @@ L05_CE_Lovasz_official_val exit 0 reason None
 L05_CE_Lovasz_pixel_boundary exit 0 reason None
 L05_CE_Lovasz_profile exit 0 reason None
 L06_CE_Lovasz_smoke exit 0 reason None
+L06_CE_Lovasz_train exit 0 reason None
+L06_CE_Lovasz_official_val exit 0 reason None
+L06_CE_Lovasz_pixel_boundary exit 0 reason None
+L06_CE_Lovasz_profile exit 0 reason None
+L07_CE_Lovasz_smoke exit 0 reason None
