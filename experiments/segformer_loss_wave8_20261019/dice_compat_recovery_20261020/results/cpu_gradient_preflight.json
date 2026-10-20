@@ -1,0 +1,161 @@
+{
+  "rows": [
+    {
+      "id": "L01_CE_Dice",
+      "role": "main",
+      "components": [
+        {
+          "type": "CrossEntropyLoss",
+          "value": 0.904116690158844,
+          "finite": true,
+          "gradient_valid": true,
+          "gradient_abs_sum": 1.0036543607711792,
+          "labels_changed": 0
+        },
+        {
+          "type": "DiceLoss",
+          "value": 0.5871525406837463,
+          "finite": true,
+          "gradient_valid": true,
+          "gradient_abs_sum": 0.2808424234390259,
+          "labels_changed": 16
+        }
+      ],
+      "combined": {
+        "type": "MixedLoss",
+        "value": 0.962831974029541,
+        "finite": true,
+        "gradient_valid": true,
+        "gradient_abs_sum": 1.031738519668579,
+        "labels_changed": 0
+      },
+      "pass": true
+    },
+    {
+      "id": "L02_CE_Dice",
+      "role": "main",
+      "components": [
+        {
+          "type": "CrossEntropyLoss",
+          "value": 0.904116690158844,
+          "finite": true,
+          "gradient_valid": true,
+          "gradient_abs_sum": 1.0036543607711792,
+          "labels_changed": 0
+        },
+        {
+          "type": "DiceLoss",
+          "value": 0.5871525406837463,
+          "finite": true,
+          "gradient_valid": true,
+          "gradient_abs_sum": 0.2808424234390259,
+          "labels_changed": 16
+        }
+      ],
+      "combined": {
+        "type": "MixedLoss",
+        "value": 1.0509048700332642,
+        "finite": true,
+        "gradient_valid": true,
+        "gradient_abs_sum": 1.0738649368286133,
+        "labels_changed": 0
+      },
+      "pass": true
+    },
+    {
+      "id": "L03_CE_Dice",
+      "role": "main",
+      "components": [
+        {
+          "type": "CrossEntropyLoss",
+          "value": 0.904116690158844,
+          "finite": true,
+          "gradient_valid": true,
+          "gradient_abs_sum": 1.0036543607711792,
+          "labels_changed": 0
+        },
+        {
+          "type": "DiceLoss",
+          "value": 0.5871525406837463,
+          "finite": true,
+          "gradient_valid": true,
+          "gradient_abs_sum": 0.2808424234390259,
+          "labels_changed": 16
+        }
+      ],
+      "combined": {
+        "type": "MixedLoss",
+        "value": 1.1976929903030396,
+        "finite": true,
+        "gradient_valid": true,
+        "gradient_abs_sum": 1.144075632095337,
+        "labels_changed": 0
+      },
+      "pass": true
+    },
+    {
+      "id": "L04_CE_Dice",
+      "role": "main",
+      "components": [
+        {
+          "type": "CrossEntropyLoss",
+          "value": 0.904116690158844,
+          "finite": true,
+          "gradient_valid": true,
+          "gradient_abs_sum": 1.0036543607711792,
+          "labels_changed": 0
+        },
+        {
+          "type": "DiceLoss",
+          "value": 0.5871525406837463,
+          "finite": true,
+          "gradient_valid": true,
+          "gradient_abs_sum": 0.2808424234390259,
+          "labels_changed": 16
+        }
+      ],
+      "combined": {
+        "type": "MixedLoss",
+        "value": 1.4912692308425903,
+        "finite": true,
+        "gradient_valid": true,
+        "gradient_abs_sum": 1.284496784210205,
+        "labels_changed": 0
+      },
+      "pass": true
+    },
+    {
+      "id": "L18_WeightedCE_Dice",
+      "role": "main",
+      "components": [
+        {
+          "type": "CrossEntropyLoss",
+          "value": 0.9039294123649597,
+          "finite": true,
+          "gradient_valid": true,
+          "gradient_abs_sum": 1.00356924533844,
+          "labels_changed": 0
+        },
+        {
+          "type": "DiceLoss",
+          "value": 0.5871525406837463,
+          "finite": true,
+          "gradient_valid": true,
+          "gradient_abs_sum": 0.2808424234390259,
+          "labels_changed": 16
+        }
+      ],
+      "combined": {
+        "type": "MixedLoss",
+        "value": 1.0507175922393799,
+        "finite": true,
+        "gradient_valid": true,
+        "gradient_abs_sum": 1.0737799406051636,
+        "labels_changed": 0
+      },
+      "pass": true
+    }
+  ],
+  "test_used": false,
+  "device": "cpu"
+}

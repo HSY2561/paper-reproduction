@@ -1,0 +1,9 @@
+{
+  "recorded_at": "2026-10-20T09:15:12.346000+08:00",
+  "automation_id": "segformer-crack500",
+  "last_attempt": "Tool call did not return before termination; no successful update receipt",
+  "recovery_pointer_verified_in_saved_prompt": false,
+  "authoritative_fallback": "Main provenance/RUNTIME.md top and refine-logs/PLAN_ADDENDUM_20261020.md explicitly point to recovery wait/queue",
+  "monitor_active": true,
+  "followup": "On next check read RUNTIME before interpreting original 5 failed states; retry app update only if necessary"
+}

@@ -12,6 +12,7 @@
 - L10（加权 CE [1.0, 2.0]）的最近状态为 training。汇总表在阶段完成时刷新，可能仍显示 pending；实际运行阶段应结合 `results/*_status.json`、heartbeat、日志和退出回执核对，不能将 smoke 通过视为正式训练完成。
 - L01–L04 已记录为 gradient_preflight_failed，保留梯度预检证据，性能不填数值。其他方案按各项回执更新。
 - C0 是复用的合法 A0 + CE 冻结基线，不计作新训练。两个原替补配置在启动前停用并保存在 `provenance/prelaunch_disabled_reserves/`，不根据验证成绩增加替补。
+- 新增 Dice 兼容恢复副本：已有 CPU 预检与独立源码，最近 heartbeat 为 `waiting_for_parent`、`gpu_started: false`。仅等待原队列结束，不代表 GPU 预检或正式训练成功；原失败记录保留。见[执行补充](refine-logs/PLAN_ADDENDUM_20261020.md)、[兼容审查](provenance/DICE_COMPAT_REVIEW.md)、[独立恢复计划](dice_compat_recovery_20261020/refine-logs/EXPERIMENT_PLAN.md)与[恢复心跳](dice_compat_recovery_20261020/results/heartbeat.json)。
 
 ## 阅读入口
 
