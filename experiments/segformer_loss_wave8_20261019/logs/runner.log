@@ -51,3 +51,4 @@ L14_SoftmaxFocal_official_val exit 0 reason None
 L14_SoftmaxFocal_pixel_boundary exit 0 reason None
 L14_SoftmaxFocal_profile exit 0 reason None
 L15_SoftmaxFocal_smoke exit 0 reason None
+L16_CE_Focal_smoke exit 0 reason None
