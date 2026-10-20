@@ -1,0 +1,32 @@
+{
+  "n": 348,
+  "confusion_matrix": [
+    [
+      76206233,
+      780512
+    ],
+    [
+      942852,
+      3664547
+    ]
+  ],
+  "mIoU": 0.8290140407487735,
+  "crackIoU": 0.6801424522416945,
+  "precision": 0.8244090798344859,
+  "recall": 0.7953613307638431,
+  "f1": 0.8096247450140062,
+  "boundary_counts_pred_gt": [
+    218277,
+    216642,
+    460054,
+    505846
+  ],
+  "boundary_precision": 0.4744595199693949,
+  "boundary_recall": 0.428276590108452,
+  "boundary_f1": 0.45018672253946423,
+  "empty_predictions": 10,
+  "test_used": false,
+  "boundary_protocol": "inner boundary, zero outside image; exact Euclidean <=2px; global counts then harmonic mean",
+  "config": "D:\\\u8bba\u6587\u590d\u73b0\\experiments\\segformer_loss_wave8_20261019\\configs\\L12_TopKCE.yml",
+  "model_path": "D:\\\u8bba\u6587\u590d\u73b0\\experiments\\segformer_loss_wave8_20261019\\checkpoints\\L12_TopKCE\\model.pdparams"
+}

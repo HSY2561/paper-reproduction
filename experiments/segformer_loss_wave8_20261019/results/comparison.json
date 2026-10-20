@@ -398,7 +398,25 @@
       "purpose": "降低易背景像素对梯度的支配",
       "risk": "可能过拟合标注噪声；topK是CE内部机制变体",
       "role": "main",
-      "status": "pending"
+      "status": "complete",
+      "precision": 0.8244090798344859,
+      "recall": 0.7953613307638431,
+      "f1": 0.8096247450140062,
+      "crackIoU": 0.6801424522416945,
+      "mIoU": 0.8290140407487735,
+      "boundary_f1": 0.45018672253946423,
+      "params": 3470434,
+      "delta": {
+        "precision": -0.0023564841250961477,
+        "recall": 0.004387290963947299,
+        "f1": 0.0011508761999771133,
+        "crackIoU": 0.0016228229580927955,
+        "mIoU": 0.0008297693177189425,
+        "boundary_f1": 0.000901898315825489
+      },
+      "main_gate": false,
+      "precision_gate": false,
+      "full_final_status": "pending matched-seed verification and final protocol"
     },
     {
       "id": "L13_OHEM",
@@ -577,6 +595,6 @@
       "status": "pending"
     }
   ],
-  "updated_at": "2026-10-20T10:47:32+08:00",
+  "updated_at": "2026-10-20T11:45:26+08:00",
   "test_used": false
 }

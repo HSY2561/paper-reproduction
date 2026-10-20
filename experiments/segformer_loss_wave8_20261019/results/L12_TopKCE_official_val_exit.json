@@ -1,0 +1,17 @@
+{
+  "exit_code": 0,
+  "stop_reason": null,
+  "elapsed_seconds": 28.12,
+  "ended_at": "2026-10-20T11:44:43+08:00",
+  "command": [
+    "C:\\venv_bisenet\\Scripts\\python.exe",
+    "D:\\论文复现\\experiments\\segformer_loss_wave8_20261019\\src\\PaddleSeg-2.10.0\\tools\\val.py",
+    "--config",
+    "D:\\论文复现\\experiments\\segformer_loss_wave8_20261019\\configs\\L12_TopKCE.yml",
+    "--model_path",
+    "D:\\论文复现\\experiments\\segformer_loss_wave8_20261019\\checkpoints\\L12_TopKCE\\model.pdparams",
+    "--num_workers",
+    "0"
+  ],
+  "test_used": false
+}
