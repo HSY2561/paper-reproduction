@@ -1,6 +1,6 @@
 # SegFormer＋Aligned 损失函数消融进度
 
-更新时间：2026-10-20T11:45:26+08:00
+更新时间：2026-10-20T12:47:39+08:00
 
 仅Crack500验证集；20主方案，不按验证成绩增加替补。所有模型结构和推理参数相同。权重变体不计独立算法。
 
@@ -19,7 +19,7 @@
 | L10_WeightedCE | CE weights [1.0, 2.0] | complete | 77.4460 | 84.4415 | 80.7926 | 67.7748 | 82.6971 | 41.7729 | 3.470434 |
 | L11_TopKCE | CE top 0.5 | complete | 82.1388 | 79.8635 | 80.9851 | 68.0463 | 82.9143 | 45.1958 | 3.470434 |
 | L12_TopKCE | CE top 0.25 | complete | 82.4409 | 79.5361 | 80.9625 | 68.0142 | 82.9014 | 45.0187 | 3.470434 |
-| L13_OHEM | OHEM CE | pending | — | — | — | — | — | — | — |
+| L13_OHEM | OHEM CE | complete | 81.9571 | 80.4181 | 81.1803 | 68.3223 | 83.0583 | 45.8753 | 3.470434 |
 | L14_SoftmaxFocal | Softmax Focal gamma 1.0 | pending | — | — | — | — | — | — | — |
 | L15_SoftmaxFocal | Softmax Focal gamma 2.0 | pending | — | — | — | — | — | — | — |
 | L16_CE_Focal | CE + 0.5 Softmax Focal | pending | — | — | — | — | — | — | — |

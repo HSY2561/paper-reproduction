@@ -1,6 +1,6 @@
 # 输出索引
 
-同步说明（2026-10-20）：L05–L12 已完成训练与独立验证，L13 最近状态为 training；Dice 兼容恢复仍等待主队列退出，尚未开始 GPU 运行。以下为生成器记录的本地输出清单，不代表每项都上传：模型权重、进程锁和重复时间戳快照按 `.gitignore` 留在本地；选模 SHA、原始日志和指标保留在 GitHub。
+同步说明（2026-10-20）：L05–L13 已完成训练与独立验证，L14 最近状态为 training；Dice 兼容恢复仍等待主队列退出，尚未开始 GPU 运行。以下为生成器记录的本地输出清单，不代表每项都上传：模型权重、进程锁和重复时间戳快照按 `.gitignore` 留在本地；选模 SHA、原始日志和指标保留在 GitHub。
 
 | 路径 | 字节 |
 |---|---:|
@@ -45,14 +45,14 @@
 | provenance/RUNTIME.md | 2780 |
 | provenance/scheduled_loss_task.xml | 1800 |
 | provenance/source_hashes.json | 20161 |
-| results/active_process.json | 565 |
+| results/active_process.json | 558 |
 | results/C0_profile.json | 1241 |
 | results/C0_recheck.json | 930 |
 | results/C0_recheck_exit.json | 649 |
 | results/C0_recheck_per_image.csv | 40342 |
 | results/C0_val.json | 942 |
 | results/C0_val_per_image.csv | 40342 |
-| results/comparison.json | 17547 |
+| results/comparison.json | 18220 |
 | results/gradient_preflight.json | 24090 |
 | results/gradient_preflight_exit.json | 301 |
 | results/heartbeat.json | 209 |
@@ -132,7 +132,16 @@
 | results/L12_TopKCE_train_exit.json | 807 |
 | results/L12_TopKCE_val.json | 933 |
 | results/L12_TopKCE_val_per_image.csv | 40474 |
-| results/loss_ablation.csv | 2500 |
+| results/L13_OHEM_official_val_exit.json | 585 |
+| results/L13_OHEM_pixel_boundary_exit.json | 651 |
+| results/L13_OHEM_profile.json | 1232 |
+| results/L13_OHEM_profile_exit.json | 454 |
+| results/L13_OHEM_smoke_exit.json | 801 |
+| results/L13_OHEM_status.json | 1528 |
+| results/L13_OHEM_train_exit.json | 803 |
+| results/L13_OHEM_val.json | 929 |
+| results/L13_OHEM_val_per_image.csv | 40327 |
+| results/loss_ablation.csv | 2625 |
 | results/scheduled_loss_registration.json | 459 |
 | logs/C0_recheck.log | 3047 |
 | logs/gradient_preflight.log | 6734 |
@@ -176,7 +185,12 @@
 | logs/L12_TopKCE_profile.log | 2631 |
 | logs/L12_TopKCE_smoke.log | 42474 |
 | logs/L12_TopKCE_train.log | 732916 |
-| logs/runner.log | 1799 |
+| logs/L13_OHEM_official_val.log | 20986 |
+| logs/L13_OHEM_pixel_boundary.log | 2291 |
+| logs/L13_OHEM_profile.log | 2627 |
+| logs/L13_OHEM_smoke.log | 51677 |
+| logs/L13_OHEM_train.log | 815114 |
+| logs/runner.log | 1992 |
 | logs/runner.stderr.log | 0 |
 | checkpoints/L05_CE_Lovasz/model.pdparams | 13898078 |
 | checkpoints/L05_CE_Lovasz/selection.json | 1401 |
@@ -194,9 +208,11 @@
 | checkpoints/L11_TopKCE/selection.json | 1384 |
 | checkpoints/L12_TopKCE/model.pdparams | 13898078 |
 | checkpoints/L12_TopKCE/selection.json | 1384 |
+| checkpoints/L13_OHEM/model.pdparams | 13898078 |
+| checkpoints/L13_OHEM/selection.json | 1376 |
 | refine-logs/EXPERIMENT_PLAN.md | 12629 |
 | refine-logs/PLAN_ADDENDUM_20261020.md | 1401 |
-| refine-logs/RESULTS.md | 2854 |
+| refine-logs/RESULTS.md | 2884 |
 | refine-logs/RESULTS_20261019_230246_550872.md | 2729 |
 | refine-logs/RESULTS_20261019_231018_091063.md | 2542 |
 | refine-logs/RESULTS_20261019_231246_901580.md | 2560 |
@@ -211,3 +227,4 @@
 | refine-logs/RESULTS_20261020_092526_719265.md | 2794 |
 | refine-logs/RESULTS_20261020_104732_934965.md | 2824 |
 | refine-logs/RESULTS_20261020_114526_651706.md | 2854 |
+| refine-logs/RESULTS_20261020_124739_543529.md | 2884 |

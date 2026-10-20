@@ -41,3 +41,8 @@ L12_TopKCE_official_val exit 0 reason None
 L12_TopKCE_pixel_boundary exit 0 reason None
 L12_TopKCE_profile exit 0 reason None
 L13_OHEM_smoke exit 0 reason None
+L13_OHEM_train exit 0 reason None
+L13_OHEM_official_val exit 0 reason None
+L13_OHEM_pixel_boundary exit 0 reason None
+L13_OHEM_profile exit 0 reason None
+L14_SoftmaxFocal_smoke exit 0 reason None
