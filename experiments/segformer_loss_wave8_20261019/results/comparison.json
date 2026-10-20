@@ -462,7 +462,25 @@
       "purpose": "按困难程度降低易样本贡献",
       "risk": "不同于双sigmoid FocalLoss；标量alpha不是前景权重",
       "role": "main",
-      "status": "pending"
+      "status": "complete",
+      "precision": 0.8268190552378268,
+      "recall": 0.789628161138204,
+      "f1": 0.8077957678632846,
+      "crackIoU": 0.6775649222579264,
+      "mIoU": 0.8276781860667652,
+      "boundary_f1": 0.4501755093944755,
+      "params": 3470434,
+      "delta": {
+        "precision": 5.3491278244832685e-05,
+        "recall": -0.0013458786616917795,
+        "f1": -0.0006781009507444979,
+        "crackIoU": -0.0009547070256752388,
+        "mIoU": -0.0005060853642893104,
+        "boundary_f1": 0.0008906851708367358
+      },
+      "main_gate": false,
+      "precision_gate": false,
+      "full_final_status": "pending matched-seed verification and final protocol"
     },
     {
       "id": "L15_SoftmaxFocal",
@@ -613,6 +631,6 @@
       "status": "pending"
     }
   ],
-  "updated_at": "2026-10-20T12:47:39+08:00",
+  "updated_at": "2026-10-20T13:53:19+08:00",
   "test_used": false
 }

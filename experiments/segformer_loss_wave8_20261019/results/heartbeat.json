@@ -1,10 +1,10 @@
 {
-  "tag": "L14_SoftmaxFocal_train",
-  "pid": 115492,
+  "tag": "L15_SoftmaxFocal_train",
+  "pid": 111588,
   "runner_pid": 67728,
-  "timestamp": "2026-10-20T13:41:42+08:00",
+  "timestamp": "2026-10-20T13:58:49+08:00",
   "latest_iter": null,
-  "elapsed_seconds": 3193.1,
-  "log_size": 660163,
-  "free_gb": 5.87
+  "elapsed_seconds": 241.1,
+  "log_size": 40515,
+  "free_gb": 5.78
 }
