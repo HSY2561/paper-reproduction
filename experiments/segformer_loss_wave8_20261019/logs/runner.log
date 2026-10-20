@@ -26,3 +26,8 @@ L09_WeightedCE_official_val exit 0 reason None
 L09_WeightedCE_pixel_boundary exit 0 reason None
 L09_WeightedCE_profile exit 0 reason None
 L10_WeightedCE_smoke exit 0 reason None
+L10_WeightedCE_train exit 0 reason None
+L10_WeightedCE_official_val exit 0 reason None
+L10_WeightedCE_pixel_boundary exit 0 reason None
+L10_WeightedCE_profile exit 0 reason None
+L11_TopKCE_smoke exit 0 reason None

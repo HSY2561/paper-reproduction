@@ -1,6 +1,6 @@
 # 输出索引
 
-同步说明（2026-10-20 07:50）：L05–L09 已完成训练与独立验证，L10 最近状态为 training，实时阶段见状态 JSON 与回执。以下为生成器记录的本地输出清单，不代表每项都上传：模型权重、进程锁和重复时间戳快照按 `.gitignore` 留在本地；选模 SHA、原始日志和指标保留在 GitHub。
+同步说明（2026-10-20 09:35）：L05–L10 已完成训练与独立验证，L11 最近状态为 training；Dice 兼容恢复仍等待主队列退出，尚未开始 GPU 运行。以下为生成器记录的本地输出清单，不代表每项都上传：模型权重、进程锁和重复时间戳快照按 `.gitignore` 留在本地；选模 SHA、原始日志和指标保留在 GitHub。
 
 | 路径 | 字节 |
 |---|---:|
@@ -25,10 +25,14 @@
 | configs/L18_WeightedCE_Dice.yml | 1356 |
 | configs/L19_CE_DualTask.yml | 1335 |
 | configs/L20_CE_RMI.yml | 1430 |
+| provenance/audit_progress_20261020.json | 579 |
 | provenance/config_hashes.json | 1918 |
 | provenance/control.json | 2743 |
 | provenance/data_before.json | 118 |
+| provenance/DICE_COMPAT_REVIEW.md | 8011 |
+| provenance/HUMAN_SCOPE_CONFIRMATION_20261020.json | 240 |
 | provenance/jobs.json | 9629 |
+| provenance/monitor_update_pending_20261020.json | 548 |
 | provenance/old_completed_smoke_cleanup.json | 23726 |
 | provenance/prelaunch_disabled_reserves/R01_BootstrapCE.yml | 1271 |
 | provenance/prelaunch_disabled_reserves/R02_CE_FGLovasz.yml | 1351 |
@@ -38,7 +42,7 @@
 | provenance/protocol.json | 1222 |
 | provenance/RELEASE.json | 946 |
 | provenance/REVIEW.md | 10461 |
-| provenance/RUNTIME.md | 1370 |
+| provenance/RUNTIME.md | 2780 |
 | provenance/scheduled_loss_task.xml | 1800 |
 | provenance/source_hashes.json | 20161 |
 | results/active_process.json | 581 |
@@ -48,7 +52,7 @@
 | results/C0_recheck_per_image.csv | 40342 |
 | results/C0_val.json | 942 |
 | results/C0_val_per_image.csv | 40342 |
-| results/comparison.json | 15512 |
+| results/comparison.json | 16190 |
 | results/gradient_preflight.json | 24090 |
 | results/gradient_preflight_exit.json | 301 |
 | results/heartbeat.json | 218 |
@@ -101,7 +105,16 @@
 | results/L09_WeightedCE_train_exit.json | 815 |
 | results/L09_WeightedCE_val.json | 943 |
 | results/L09_WeightedCE_val_per_image.csv | 40398 |
-| results/loss_ablation.csv | 2120 |
+| results/L10_WeightedCE_official_val_exit.json | 598 |
+| results/L10_WeightedCE_pixel_boundary_exit.json | 668 |
+| results/L10_WeightedCE_profile.json | 1242 |
+| results/L10_WeightedCE_profile_exit.json | 466 |
+| results/L10_WeightedCE_smoke_exit.json | 814 |
+| results/L10_WeightedCE_status.json | 1556 |
+| results/L10_WeightedCE_train_exit.json | 815 |
+| results/L10_WeightedCE_val.json | 942 |
+| results/L10_WeightedCE_val_per_image.csv | 40826 |
+| results/loss_ablation.csv | 2246 |
 | results/scheduled_loss_registration.json | 459 |
 | logs/C0_recheck.log | 3047 |
 | logs/gradient_preflight.log | 6734 |
@@ -130,7 +143,12 @@
 | logs/L09_WeightedCE_profile.log | 3393 |
 | logs/L09_WeightedCE_smoke.log | 69278 |
 | logs/L09_WeightedCE_train.log | 1149410 |
-| logs/runner.log | 1170 |
+| logs/L10_WeightedCE_official_val.log | 35282 |
+| logs/L10_WeightedCE_pixel_boundary.log | 2310 |
+| logs/L10_WeightedCE_profile.log | 2642 |
+| logs/L10_WeightedCE_smoke.log | 70702 |
+| logs/L10_WeightedCE_train.log | 1172357 |
+| logs/runner.log | 1393 |
 | logs/runner.stderr.log | 0 |
 | checkpoints/L05_CE_Lovasz/model.pdparams | 13898078 |
 | checkpoints/L05_CE_Lovasz/selection.json | 1401 |
@@ -142,8 +160,11 @@
 | checkpoints/L08_WeightedCE/selection.json | 1404 |
 | checkpoints/L09_WeightedCE/model.pdparams | 13898078 |
 | checkpoints/L09_WeightedCE/selection.json | 1404 |
+| checkpoints/L10_WeightedCE/model.pdparams | 13898078 |
+| checkpoints/L10_WeightedCE/selection.json | 1404 |
 | refine-logs/EXPERIMENT_PLAN.md | 12629 |
-| refine-logs/RESULTS.md | 2764 |
+| refine-logs/PLAN_ADDENDUM_20261020.md | 1401 |
+| refine-logs/RESULTS.md | 2794 |
 | refine-logs/RESULTS_20261019_230246_550872.md | 2729 |
 | refine-logs/RESULTS_20261019_231018_091063.md | 2542 |
 | refine-logs/RESULTS_20261019_231246_901580.md | 2560 |
@@ -155,3 +176,4 @@
 | refine-logs/RESULTS_20261020_042216_072354.md | 2704 |
 | refine-logs/RESULTS_20261020_060416_976421.md | 2734 |
 | refine-logs/RESULTS_20261020_074244_278950.md | 2764 |
+| refine-logs/RESULTS_20261020_092526_719265.md | 2794 |
