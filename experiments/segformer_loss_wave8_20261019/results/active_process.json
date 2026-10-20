@@ -1,15 +1,15 @@
 {
-  "tag": "L15_SoftmaxFocal_train",
-  "pid": 111588,
+  "tag": "L16_CE_Focal_train",
+  "pid": 111288,
   "runner_pid": 67728,
-  "started_at": "2026-10-20T13:54:48+08:00",
+  "started_at": "2026-10-20T14:27:43+08:00",
   "command": [
     "C:\\venv_bisenet\\Scripts\\python.exe",
     "D:\\论文复现\\experiments\\segformer_loss_wave8_20261019\\src\\PaddleSeg-2.10.0\\tools\\train.py",
     "--config",
-    "D:\\论文复现\\experiments\\segformer_loss_wave8_20261019\\configs\\L15_SoftmaxFocal.yml",
+    "D:\\论文复现\\experiments\\segformer_loss_wave8_20261019\\configs\\L16_CE_Focal.yml",
     "--save_dir",
-    "D:\\论文复现\\experiments\\segformer_loss_wave8_20261019\\training\\L15_SoftmaxFocal",
+    "D:\\论文复现\\experiments\\segformer_loss_wave8_20261019\\training\\L16_CE_Focal",
     "--iters",
     "18000",
     "--do_eval",
@@ -27,6 +27,6 @@
     "--precision",
     "fp32"
   ],
-  "log": "D:\\论文复现\\experiments\\segformer_loss_wave8_20261019\\logs\\L15_SoftmaxFocal_train.log",
+  "log": "D:\\论文复现\\experiments\\segformer_loss_wave8_20261019\\logs\\L16_CE_Focal_train.log",
   "test_used": false
 }

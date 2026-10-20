@@ -13,7 +13,7 @@ L11_TopKCE,CE top 0.5,topK_CE,main,complete,0.8213877450432177,0.798634761174363
 L12_TopKCE,CE top 0.25,topK_CE,main,complete,0.8244090798344859,0.7953613307638431,0.8096247450140062,0.6801424522416945,0.8290140407487735,0.45018672253946423,3470434,False,False
 L13_OHEM,OHEM CE,OHEM,main,complete,0.819570544357898,0.8041814915530433,0.8118030933521466,0.6832226955062602,0.8305833726584828,0.4587526828841806,3470434,False,False
 L14_SoftmaxFocal,Softmax Focal gamma 1.0,softmax_focal,main,complete,0.8268190552378268,0.789628161138204,0.8077957678632846,0.6775649222579264,0.8276781860667652,0.4501755093944755,3470434,False,False
-L15_SoftmaxFocal,Softmax Focal gamma 2.0,softmax_focal,main,pending,,,,,,,,,
+L15_SoftmaxFocal,Softmax Focal gamma 2.0,softmax_focal,main,needs_review,,,,,,,,,
 L16_CE_Focal,CE + 0.5 Softmax Focal,CE_focal,main,pending,,,,,,,,,
 L17_OHEM_Dice,OHEM + 0.25 Dice,OHEM_Dice,main,pending,,,,,,,,,
 L18_WeightedCE_Dice,"Weighted CE [1.5,1] + 0.25 Dice",weighted_CE_Dice,main,pending,,,,,,,,,

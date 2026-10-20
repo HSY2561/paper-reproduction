@@ -494,7 +494,7 @@
       "purpose": "按困难程度降低易样本贡献",
       "risk": "不同于双sigmoid FocalLoss；标量alpha不是前景权重",
       "role": "main",
-      "status": "pending"
+      "status": "needs_review"
     },
     {
       "id": "L16_CE_Focal",
@@ -631,6 +631,6 @@
       "status": "pending"
     }
   ],
-  "updated_at": "2026-10-20T13:53:19+08:00",
+  "updated_at": "2026-10-20T14:25:57+08:00",
   "test_used": false
 }
