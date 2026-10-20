@@ -1,0 +1,17 @@
+{
+  "exit_code": 0,
+  "stop_reason": null,
+  "elapsed_seconds": 18.07,
+  "ended_at": "2026-10-18T23:17:09+08:00",
+  "command": [
+    "C:\\venv_bisenet\\Scripts\\python.exe",
+    "D:\\论文复现\\experiments\\segformer_aligned_wave7_20261018\\evaluate_val_boundary.py",
+    "--config",
+    "D:\\论文复现\\experiments\\segformer_aligned_wave7_20261018\\configs\\A13_EMAU.yml",
+    "--model_path",
+    "D:\\论文复现\\experiments\\segformer_aligned_wave7_20261018\\checkpoints\\A13_EMAU\\model.pdparams",
+    "--output",
+    "D:\\论文复现\\experiments\\segformer_aligned_wave7_20261018\\results\\A13_EMAU_val"
+  ],
+  "test_used": false
+}

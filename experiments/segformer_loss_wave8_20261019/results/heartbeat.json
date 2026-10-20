@@ -1,10 +1,10 @@
 {
-  "tag": "L11_TopKCE_train",
-  "pid": 89660,
+  "tag": "L12_TopKCE_train",
+  "pid": 65400,
   "runner_pid": 67728,
-  "timestamp": "2026-10-20T10:20:43+08:00",
-  "latest_iter": 10100,
-  "elapsed_seconds": 3226.0,
-  "log_size": 573158,
-  "free_gb": 7.02
+  "timestamp": "2026-10-20T11:23:45+08:00",
+  "latest_iter": 11300,
+  "elapsed_seconds": 2127.0,
+  "log_size": 440595,
+  "free_gb": 6.22
 }

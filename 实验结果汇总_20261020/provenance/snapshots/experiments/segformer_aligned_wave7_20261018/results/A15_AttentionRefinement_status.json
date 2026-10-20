@@ -1,0 +1,35 @@
+{
+  "status": "complete",
+  "updated_at": "2026-10-19T00:28:34+08:00",
+  "selection": {
+    "model": "A15_AttentionRefinement",
+    "candidates": [
+      {
+        "variant": "best_model",
+        "mIoU": 0.8283123314025915,
+        "iter": 15000,
+        "weight": "D:\\论文复现\\experiments\\segformer_aligned_wave7_20261018\\training\\A15_AttentionRefinement\\best_model\\model.pdparams",
+        "state_sha256": "e6abf51715fd992289445bfdea9236b3786f7a3ee7bc12bf7c2f8b2f7f24cde5"
+      },
+      {
+        "variant": "ema_best_model",
+        "mIoU": 0.8270700185411508,
+        "iter": 12000,
+        "weight": "D:\\论文复现\\experiments\\segformer_aligned_wave7_20261018\\training\\A15_AttentionRefinement\\ema_best_model\\ema_model.pdparams",
+        "state_sha256": "4cdd6cc76b374fde76547e0f306af1135fccc6ac0fe4ffc4b4cd5bfc8ef0f8eb"
+      }
+    ],
+    "selected": {
+      "variant": "best_model",
+      "mIoU": 0.8283123314025915,
+      "iter": 15000,
+      "weight": "D:\\论文复现\\experiments\\segformer_aligned_wave7_20261018\\training\\A15_AttentionRefinement\\best_model\\model.pdparams",
+      "state_sha256": "e6abf51715fd992289445bfdea9236b3786f7a3ee7bc12bf7c2f8b2f7f24cde5"
+    },
+    "sha256": "f5bab2126a6cd36d6e171ed397f260e277317683a71836d5949eda4bba25a8f5",
+    "checkpoint": "D:\\论文复现\\experiments\\segformer_aligned_wave7_20261018\\checkpoints\\A15_AttentionRefinement\\model.pdparams",
+    "selection": "highest exact validation mIoU from ordinary and EMA state",
+    "test_used": false,
+    "frozen_at": "2026-10-19T00:27:45+08:00"
+  }
+}

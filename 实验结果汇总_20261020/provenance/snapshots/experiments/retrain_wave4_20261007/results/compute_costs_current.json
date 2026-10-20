@@ -1,0 +1,40 @@
+{
+  "hardware": "RTX5060",
+  "input": "validation original-size images; batch_cost reported by official PaddleSeg val.py",
+  "models": [
+    {
+      "model": "SegFormer-B0",
+      "params": 3715170,
+      "flops": 4135182528,
+      "validation_batch_cost_seconds": 0.0175
+    },
+    {
+      "model": "SegFormer-B0+UAFM_SpAtten",
+      "params": 4896968,
+      "flops": 15942862528,
+      "validation_batch_cost_seconds": 0.0215,
+      "eligible_for_test": false
+    },
+    {
+      "model": "OCRNet-HRNet-W18",
+      "params": 12109902,
+      "flops": 32396151832,
+      "validation_batch_cost_seconds": 0.0619
+    },
+    {
+      "model": "SegFormer-B0+PPContextModule",
+      "params": 3914018,
+      "flops": 5625625152,
+      "validation_batch_cost_seconds": 0.0183,
+      "eligible_for_test": false
+    },
+    {
+      "model": "PP-LiteSeg-STDC1",
+      "params": 8039122,
+      "flops": 3567881920,
+      "validation_batch_cost_seconds": 0.0184,
+      "eligible_for_test": false
+    }
+  ],
+  "note": "Batch cost is an in-process validation timing from the same RTX5060 environment; candidates that failed validation or smoke were not evaluated on test."
+}

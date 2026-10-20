@@ -1,0 +1,157 @@
+{
+  "protocol": "Crack500 train/val, RTX5060, seed42, FP32, batch4, AdamW lr6e-5, PolynomialDecay end_lr0, 18000 iter; checkpoint selection by val mIoU only",
+  "test_selection_policy": "A candidate must pass the preregistered validation gate before test evaluation",
+  "models": [
+    {
+      "model": "SegFormer-B0",
+      "status": "baseline_test_complete",
+      "val_mIoU": 0.828020627,
+      "test_mIoU": 0.7694752771,
+      "test_crackIoU": 0.5707024657,
+      "test_precision": 0.728904682,
+      "test_recall": 0.7244775432,
+      "test_F1": 0.7266843698,
+      "checkpoint_sha256": "07f6048e0a6de174a2c3ca1915df4bcd635565a706d978288fba946ef240f2d5"
+    },
+    {
+      "model": "SegFormer-B0+UAFM_SpAtten",
+      "status": "validation_gate_failed_test_not_run",
+      "val_mIoU": 0.8263,
+      "val_crackIoU": 0.6752,
+      "val_precision": 0.8202,
+      "val_recall": 0.7924,
+      "val_F1": 0.8059,
+      "selected_variant": "ema_best_model",
+      "selected_iter": 11000,
+      "checkpoint_sha256": "a96a8e62320f0db0bf5d783d6a28ea6bfea24794d6d3bffa44c1b218be0efa47",
+      "delta_vs_segformer_val": {
+        "mIoU": -0.0017,
+        "crackIoU": 0.003,
+        "precision": 0.0082,
+        "recall": -0.0037,
+        "F1": 0.0029
+      },
+      "gate": {
+        "crackIoU_delta_min": 0.005,
+        "F1_delta_min": 0.003,
+        "max_recall_drop": 0.005,
+        "passed": false
+      },
+      "test_used": false
+    },
+    {
+      "model": "SegFormer-B0+PPContextModule",
+      "status": "validation_gate_failed_test_not_run_compatibility_fixed",
+      "val_mIoU": 0.8249022475,
+      "val_crackIoU": 0.6727544534,
+      "val_precision": 0.810944388,
+      "val_recall": 0.7978959495,
+      "val_F1": 0.8043672543,
+      "val_boundary_F1": 0.5775807443,
+      "selected_variant": "ema_best_model",
+      "selected_iter": 11000,
+      "checkpoint_sha256": "5c8a9ca5765c59896383b2bef2f4e539ef6356d88d499d3d12557160227fb067",
+      "delta_vs_segformer_val": {
+        "mIoU": -0.0031183795,
+        "crackIoU": -0.0054190468,
+        "precision": -0.0173243325,
+        "recall": 0.0087615594,
+        "F1": -0.0038608581,
+        "boundary_F1": -0.0118313155
+      },
+      "gate": {
+        "crackIoU_delta_min": 0.005,
+        "F1_delta_min": 0.003,
+        "max_recall_drop": 0.005,
+        "passed": false
+      },
+      "test_used": false,
+      "compatibility_patch": "official PPContext 1x1 expand + interpolation clone; training completed 18000 iter; launcher exit JSON absent, iter_18000 and final evaluations present"
+    },
+    {
+      "model": "SegFormer-B0+UAFM+PPContextModule",
+      "status": "not_started",
+      "reason": "Neither single-module path satisfied the conditions for joint training",
+      "test_used": false
+    },
+    {
+      "model": "OCRNet-HRNet-W18",
+      "status": "original_public_test_complete",
+      "test_mIoU": 0.7715088888,
+      "test_crackIoU": 0.575709592,
+      "test_precision": 0.7038193827,
+      "test_recall": 0.7597815432,
+      "test_F1": 0.73073058,
+      "checkpoint_sha256": "de78e90ca3d5921c385cc3f82a8a694f8ef4b1d6d055f49e31750c1361416570"
+    },
+    {
+      "model": "PP-LiteSeg-STDC1",
+      "status": "validation_gate_failed_test_not_run_formal_training_complete",
+      "val_mIoU": 0.8205094481314313,
+      "val_crackIoU": 0.6641036699986556,
+      "val_precision": 0.8250009671155241,
+      "val_recall": 0.7729951323946548,
+      "val_F1": 0.7981518002411377,
+      "val_boundary_F1": 0.5643136376374424,
+      "selected_variant": "best_model",
+      "selected_iter": 8000,
+      "checkpoint_sha256": "42da2e8fdb5859589731b494e021fb5705946ac7268462a4618450aad5bd3f12",
+      "training_iters": 18000,
+      "test_used": false,
+      "gate": {
+        "crackIoU_delta_min": 0.005,
+        "F1_delta_min": 0.003,
+        "max_recall_drop": 0.005,
+        "mIoU_delta_min": 0,
+        "boundary_F1_delta_min": 0,
+        "passed": false
+      },
+      "delta_vs_segformer_val": {
+        "mIoU": -0.007511178897457005,
+        "crackIoU": -0.014069830243545467,
+        "precision": -0.003267753325270739,
+        "recall": -0.016139257746073166,
+        "F1": -0.010076312220802741,
+        "boundary_F1": -0.025098422112710517
+      },
+      "compatibility_note": "Formal batch4 smoke passed after disk/compatibility repair; official PPLiteSeg-STDC1 structure retained. No Crack500 test evaluation because validation gate failed.",
+      "frozen_checkpoint": "checkpoints/ppliteseg_stdc1_crack500_formal/model.pdparams"
+    }
+  ],
+  "excluded_from_main_line": [
+    "BiSeNetV2-C4",
+    "all C4 fusion variants"
+  ],
+  "additional_public_models": {
+    "PP-LiteSeg-STDC1": {
+      "historical_current_config_smoke_exit_code": 1,
+      "historical_reason": "Earlier official-config smoke had CUDNN/space failure",
+      "formal_batch4_smoke_exit_code": 0,
+      "formal_training_status": "completed_18000_iter",
+      "formal_val_mIoU": 0.8205094481314313,
+      "formal_selected_variant": "best_model",
+      "formal_selected_iter": 8000,
+      "formal_gate_passed": false,
+      "test_used": false,
+      "selection_json": "results/ppliteseg_stdc1_crack500_formal_selection.json",
+      "formal_exit_json": "results/ppliteseg_stdc1_crack500_formal_exit.json"
+    },
+    "PIDNet-S": {
+      "smoke_exit_code": 1,
+      "test_used": false,
+      "reason": "CUDNN_STATUS_EXECUTION_FAILED"
+    },
+    "DeepLabV3P-ResNet50": {
+      "smoke_exit_code": 1,
+      "test_used": false,
+      "reason": "CUDNN_STATUS_INTERNAL_ERROR"
+    }
+  },
+  "joint_model_status": {
+    "model": "SegFormer-B0+UAFM+PPContextModule",
+    "status": "not_started",
+    "reason": "UAFM failed gate and PPContext compatibility-fixed run also failed gate"
+  },
+  "sota_claim": false,
+  "updated_at": "2026-10-08T12:50:00+08:00"
+}

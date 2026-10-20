@@ -1,0 +1,13 @@
+{
+  "audit_skill": "experiment-audit",
+  "verdict": "BLOCKED",
+  "reason_code": "reviewer_usage_limit",
+  "summary": "The designated independent reviewer did not complete because its usage limit was reached. No independent PASS or FAIL was issued. Deterministic file evidence checks are provided separately.",
+  "agent_id": "/root/report_integrity_audit",
+  "reviewer_model": "gpt-5.6-sol",
+  "reviewer_reasoning": "ultra",
+  "review_independence": "same-family",
+  "acceptance_status": "unavailable",
+  "date": "2026-10-20",
+  "deterministic_checks": "provenance/结果确定性核验.json"
+}

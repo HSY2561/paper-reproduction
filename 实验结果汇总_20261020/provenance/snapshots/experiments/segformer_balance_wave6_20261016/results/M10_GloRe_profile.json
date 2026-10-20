@@ -1,0 +1,67 @@
+{
+  "model": "M10_GloRe",
+  "params_total": 3498978,
+  "params_trainable": 3498210,
+  "latency": [
+    {
+      "input_shape": [
+        1,
+        3,
+        400,
+        400
+      ],
+      "repeat_ms": [
+        19.135917997919023,
+        15.869818003848195,
+        11.462010000832379
+      ],
+      "median_ms": 15.869818003848195
+    },
+    {
+      "input_shape": [
+        1,
+        3,
+        480,
+        480
+      ],
+      "repeat_ms": [
+        13.54663799982518,
+        10.672602001577616,
+        9.663920002058148
+      ],
+      "median_ms": 10.672602001577616
+    }
+  ],
+  "checkpoint": "D:\\论文复现\\experiments\\segformer_balance_wave6_20261016\\checkpoints\\M10_GloRe\\model.pdparams",
+  "feature_shapes_at400": [
+    [
+      1,
+      32,
+      100,
+      100
+    ],
+    [
+      1,
+      64,
+      50,
+      50
+    ],
+    [
+      1,
+      160,
+      25,
+      25
+    ],
+    [
+      1,
+      256,
+      13,
+      13
+    ]
+  ],
+  "hardware": "NVIDIA GeForce RTX 5060",
+  "paddle": "3.4.0",
+  "protocol": "FP32 GPU network forward; batch1; sync; warmup20; 3x50; no I/O/postprocess",
+  "test_used": false,
+  "timestamp": "2026-10-17T12:49:23+08:00"
+}

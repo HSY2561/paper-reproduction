@@ -1,0 +1,32 @@
+{
+  "n": 348,
+  "confusion_matrix": [
+    [
+      76136909,
+      849836
+    ],
+    [
+      903644,
+      3703755
+    ]
+  ],
+  "mIoU": 0.8280874761260236,
+  "crackIoU": 0.6786871007020955,
+  "precision": 0.8133701511620169,
+  "recall": 0.8038711212117726,
+  "f1": 0.8085927394310004,
+  "boundary_counts_pred_gt": [
+    215920,
+    215108,
+    464792,
+    505846
+  ],
+  "boundary_precision": 0.4645518855746226,
+  "boundary_recall": 0.42524404660707016,
+  "boundary_f1": 0.44402972981980016,
+  "empty_predictions": 6,
+  "test_used": false,
+  "boundary_protocol": "inner boundary, zero outside image; exact Euclidean <=2px; global counts then harmonic mean",
+  "config": "D:\\\u8bba\u6587\u590d\u73b0\\experiments\\segformer_aligned_wave7_20261018\\configs\\A11_JPU.yml",
+  "model_path": "D:\\\u8bba\u6587\u590d\u73b0\\experiments\\segformer_aligned_wave7_20261018\\checkpoints\\A11_JPU\\model.pdparams"
+}

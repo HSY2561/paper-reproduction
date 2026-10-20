@@ -148,3 +148,6 @@ Thumbs.db
 /experiments/segformer_loss_wave8_20261019/refine-logs/EXPERIMENT_RESULTS_*.md
 /experiments/segformer_loss_wave8_20261019/refine-logs/EXPERIMENT_TRACKER_*.md
 /experiments/segformer_loss_wave8_20261019/refine-logs/RESULTS_*.md
+
+# Generated timestamp copy of the current report; keep local and publish canonical reports
+/实验结果汇总_20261020/refine-logs/实验结果总报告_20261020_*.md
