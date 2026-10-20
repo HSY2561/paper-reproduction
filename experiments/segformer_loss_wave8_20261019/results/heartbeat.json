@@ -2,9 +2,9 @@
   "tag": "L13_OHEM_train",
   "pid": 110600,
   "runner_pid": 67728,
-  "timestamp": "2026-10-20T12:26:31+08:00",
-  "latest_iter": 12900,
-  "elapsed_seconds": 2408.1,
-  "log_size": 511637,
+  "timestamp": "2026-10-20T12:41:34+08:00",
+  "latest_iter": 16700,
+  "elapsed_seconds": 3311.9,
+  "log_size": 719953,
   "free_gb": 6.04
 }
