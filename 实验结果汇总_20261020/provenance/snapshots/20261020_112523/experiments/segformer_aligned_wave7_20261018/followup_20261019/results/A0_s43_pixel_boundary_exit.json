@@ -1,0 +1,17 @@
+{
+  "exit_code": 0,
+  "stop_reason": null,
+  "elapsed_seconds": 21.22,
+  "ended_at": "2026-10-19T12:29:45+08:00",
+  "command": [
+    "C:\\venv_bisenet\\Scripts\\python.exe",
+    "D:\\论文复现\\experiments\\segformer_aligned_wave7_20261018\\followup_20261019\\evaluate_val_boundary.py",
+    "--config",
+    "D:\\论文复现\\experiments\\segformer_aligned_wave7_20261018\\followup_20261019\\configs\\A0_s43.yml",
+    "--model_path",
+    "D:\\论文复现\\experiments\\segformer_aligned_wave7_20261018\\followup_20261019\\checkpoints\\A0_s43\\model.pdparams",
+    "--output",
+    "D:\\论文复现\\experiments\\segformer_aligned_wave7_20261018\\followup_20261019\\results\\A0_s43_val"
+  ],
+  "test_used": false
+}

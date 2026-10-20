@@ -1,0 +1,17 @@
+{
+  "exit_code": 0,
+  "stop_reason": null,
+  "elapsed_seconds": 43.4,
+  "ended_at": "2026-10-20T06:03:56+08:00",
+  "command": [
+    "C:\\venv_bisenet\\Scripts\\python.exe",
+    "D:\\论文复现\\experiments\\segformer_loss_wave8_20261019\\evaluate_val_boundary.py",
+    "--config",
+    "D:\\论文复现\\experiments\\segformer_loss_wave8_20261019\\configs\\L08_WeightedCE.yml",
+    "--model_path",
+    "D:\\论文复现\\experiments\\segformer_loss_wave8_20261019\\checkpoints\\L08_WeightedCE\\model.pdparams",
+    "--output",
+    "D:\\论文复现\\experiments\\segformer_loss_wave8_20261019\\results\\L08_WeightedCE_val"
+  ],
+  "test_used": false
+}

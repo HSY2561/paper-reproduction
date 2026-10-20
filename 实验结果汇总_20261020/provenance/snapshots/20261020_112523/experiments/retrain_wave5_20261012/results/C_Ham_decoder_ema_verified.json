@@ -1,0 +1,31 @@
+{
+  "n": 348,
+  "confusion_matrix": [
+    [
+      76134573,
+      852172
+    ],
+    [
+      941301,
+      3666098
+    ]
+  ],
+  "mIoU": 0.8242424033286053,
+  "crackIoU": 0.6714992808042977,
+  "precision": 0.8113941840571723,
+  "recall": 0.7956979632109136,
+  "f1": 0.8034694223513914,
+  "boundary_counts_pred_gt": [
+    179663,
+    178290,
+    424848,
+    471716
+  ],
+  "boundary_precision": 0.42288771513576623,
+  "boundary_recall": 0.37796046773906333,
+  "boundary_f1": 0.3991638915632022,
+  "empty_predictions": 1,
+  "test_used": false,
+  "config": "D:\\\u8bba\u6587\u590d\u73b0\\experiments\\retrain_wave5_20261012\\configs\\C_Ham_decoder.yml",
+  "model_path": "D:\\\u8bba\u6587\u590d\u73b0\\experiments\\retrain_wave5_20261012\\training\\C_Ham_decoder\\ema_best_model\\ema_model.pdparams"
+}

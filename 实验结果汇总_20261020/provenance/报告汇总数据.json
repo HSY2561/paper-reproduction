@@ -1,5 +1,5 @@
 {
-  "snapshot_at": "2026-10-20T11:21:00.691586+08:00",
+  "snapshot_at": "2026-10-20T11:25:23.664786+08:00",
   "baseline": {
     "precision": 0.8282687204407948,
     "recall": 0.789134390140728,
@@ -4451,16 +4451,16 @@
     "tag": "L12_TopKCE_train",
     "pid": 65400,
     "runner_pid": 67728,
-    "timestamp": "2026-10-20T11:20:44+08:00",
-    "latest_iter": 10400,
-    "elapsed_seconds": 1946.4,
-    "log_size": 391327,
-    "free_gb": 6.84
+    "timestamp": "2026-10-20T11:25:05+08:00",
+    "latest_iter": 11800,
+    "elapsed_seconds": 2207.3,
+    "log_size": 441750,
+    "free_gb": 6.22
   },
   "dice_recovery": {
     "stage": "waiting_for_parent",
-    "timestamp": "2026-10-20T11:20:56+08:00",
-    "elapsed_seconds": 7707,
+    "timestamp": "2026-10-20T11:25:17+08:00",
+    "elapsed_seconds": 7967,
     "gpu_started": false
   },
   "independent_audit": "BLOCKED: designated reviewer usage limit; deterministic evidence checks completed separately"

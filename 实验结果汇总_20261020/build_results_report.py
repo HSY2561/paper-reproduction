@@ -50,7 +50,7 @@ def read(p, optional=False):
     data = p.read_bytes()
     digest = hashlib.sha256(data).hexdigest()
     rel = str(p.relative_to(ROOT)).replace('\\', '/')
-    dest = OUT / 'provenance/snapshots' / rel
+    dest = OUT / 'provenance/snapshots' / STAMP / rel
     dest.parent.mkdir(parents=True, exist_ok=True)
     dest.write_bytes(data)
     SOURCES[str(p)] = dict(path=str(p), sha256=digest, bytes=len(data), snapshot=str(dest),
@@ -478,7 +478,7 @@ for r in rows8:
     recipes.append([r['id'],r['label'],status_cn(r['status']),('通过' if r.get('main_gate') else '未通过') if r['status']=='complete' else '尚无性能结论','；'.join(failed) if failed else '—'])
 add(table(['编号','配方','真实状态','完整门槛','未满足项'],recipes))
 add('CE＋Lovasz的权重分别是[1,0.1]、[1,0.25]、[1,0.5]，并非归一化到权重和为1；因此也改变总梯度幅值。L06的裂缝IoU由A0的67.8520%到68.6376%，增加0.7856pp，F1增加0.5551pp；但Precision由82.6766%降到80.4899%，损失2.1867pp，超过预登记允许下降0.5pp，仍未通过。L07也提高Recall，但Precision损失更大。不能把这些行称为最终有效配方。')
-add('加权CE类别顺序为[背景,裂缝]。L08/L09增加背景权重，提高Precision却牺牲Recall/IoU；L09的Precision85.3079%不是整体最好模型。L10增加裂缝权重，Recall达到84.4415%，但Precision降至77.4460%，BF1也下降；“Recall最高”不能替代区域与边界的综合质量。TopK/OHEM/Focal/DualTask/RMI等尚无本快照完整结果，不能预判涨点。')
+add('加权CE类别顺序为[背景,裂缝]。L08/L09增加背景权重，提高Precision却牺牲Recall/IoU；L09的Precision85.3079%不是整体最好模型。L10增加裂缝权重，Recall达到84.4415%，但Precision降至77.4460%，BF1也下降；“Recall最高”不能替代区域与边界的综合质量。TopK等方案应按上表的完成状态解释：只有complete行才有性能结论，运行中或pending的配置不预判涨点；当前新增完成的L11也没有通过完整门槛。')
 add('L01–L04在原MixedLoss组合中发生标签原地修改相关梯度版本冲突，未进入合法性能比较；计划中的L18也涉及同类组合路径。独立兼容副本仅在各损失调用处传labels.clone()隔离标签突变，不改变损失数学定义或权重。已通过的CPU预检不等于GPU或正式训练通过。恢复队列当前'+str(recovery.get('stage') if recovery else '未取得心跳')+'，gpu_started='+str(recovery.get('gpu_started') if recovery else None)+'；它等待父队列结束，不应与当前训练重复占GPU。原失败与修复来源必须分别披露，恢复原配置不计新算法。')
 figure('04_loss_tradeoffs','图4 已完成损失配方的区域收益与Precision/Recall代价，参考为同seed42的A0＋CE。')
 add('## 十一 参数和同机推理效率')
@@ -566,7 +566,7 @@ index='''# 复现与文件索引
 
 主报告：refine-logs/实验结果总报告.md；可打印离线版：实验结果总报告.html。
 
-表格：tables/01–14；全部新实验包括小数原值、百分数和百分点涨点。来源文件SHA索引同在tables中。
+表格：tables/01–15；全部新实验包括小数原值、百分数和百分点涨点，另有逐模块优劣与改进方向。来源文件SHA索引同在tables中。
 
 结果依据：provenance/snapshots内是生成时JSON快照；确定性核验见provenance/结果确定性核验.json。第三方审阅见独立审计文件。
 

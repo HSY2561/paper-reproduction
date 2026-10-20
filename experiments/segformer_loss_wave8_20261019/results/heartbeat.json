@@ -2,9 +2,9 @@
   "tag": "L12_TopKCE_train",
   "pid": 65400,
   "runner_pid": 67728,
-  "timestamp": "2026-10-20T11:23:45+08:00",
-  "latest_iter": 11300,
-  "elapsed_seconds": 2127.0,
-  "log_size": 440595,
+  "timestamp": "2026-10-20T11:28:26+08:00",
+  "latest_iter": 12800,
+  "elapsed_seconds": 2408.0,
+  "log_size": 486301,
   "free_gb": 6.22
 }

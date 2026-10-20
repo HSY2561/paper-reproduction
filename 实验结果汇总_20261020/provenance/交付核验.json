@@ -1,0 +1,15 @@
+{
+  "snapshot_at": "2026-10-20T11:25:23.664786+08:00",
+  "report_chars": 49666,
+  "completed_runs_checked": 53,
+  "evidence_errors": 0,
+  "complete_loss_recipes": 7,
+  "csv_files": 17,
+  "mechanism_notes": 26,
+  "figures": 6,
+  "html_tables": 27,
+  "html_all_images_embedded": true,
+  "png_files_visually_inspected": true,
+  "independent_semantic_audit": "BLOCKED: reviewer quota",
+  "source_files": 513
+}

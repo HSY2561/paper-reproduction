@@ -1,0 +1,34 @@
+{
+  "protocol": "Crack500 test, RTX5060, seed42, 18000 iter; checkpoint selected only by val mIoU",
+  "models": [
+    {
+      "model": "SegFormer-B0",
+      "mIoU": 0.7694752771365169,
+      "crackIoU": 0.5707024657425721,
+      "precision": 0.7289046819552426,
+      "recall": 0.7244775431556344,
+      "F1": 0.7266843698150869,
+      "checkpoint": "C:\\retrain_wave4\\checkpoints\\segformer_b0\\model.pdparams",
+      "checkpoint_sha256": "07f6048e0a6de174a2c3ca1915df4bcd635565a706d978288fba946ef240f2d5",
+      "selection": "ordinary best_model iter11000"
+    },
+    {
+      "model": "OCRNet-HRNet-W18",
+      "mIoU": 0.7715088888298939,
+      "crackIoU": 0.5757095920308695,
+      "precision": 0.7038193827249126,
+      "recall": 0.7597815431644758,
+      "F1": 0.7307305799780787,
+      "checkpoint": "C:\\retrain_wave4\\checkpoints\\ocrnet_hrnetw18\\model.pdparams",
+      "checkpoint_sha256": "de78e90ca3d5921c385cc3f82a8a694f8ef4b1d6d055f49e31750c1361416570",
+      "selection": "ordinary best_model iter16000"
+    }
+  ],
+  "test_used": true,
+  "corrected_at": "2026-10-07T19:22:37.1201273+08:00",
+  "previous_summary_note": "Previous summary used EMA weights for SegFormer/OCRNet; this file is corrected to match validation-selected frozen checkpoints.",
+  "excluded_from_main_line": [
+    "BiSeNetV2-C4",
+    "all C4 fusion variants"
+  ]
+}

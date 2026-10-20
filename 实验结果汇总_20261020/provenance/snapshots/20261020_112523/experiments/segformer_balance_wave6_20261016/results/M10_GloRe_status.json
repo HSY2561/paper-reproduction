@@ -1,0 +1,35 @@
+{
+  "status": "complete",
+  "updated_at": "2026-10-17T12:49:24+08:00",
+  "selection": {
+    "model": "M10_GloRe",
+    "candidates": [
+      {
+        "variant": "best_model",
+        "mIoU": 0.8274464508519561,
+        "iter": 15000,
+        "weight": "D:\\论文复现\\experiments\\segformer_balance_wave6_20261016\\training\\M10_GloRe\\best_model\\model.pdparams",
+        "state_sha256": "d596320d669b4dd3ea8a919811bab3297fe5a54669f58a144630c6cc01714563"
+      },
+      {
+        "variant": "ema_best_model",
+        "mIoU": 0.8268535933193064,
+        "iter": 11000,
+        "weight": "D:\\论文复现\\experiments\\segformer_balance_wave6_20261016\\training\\M10_GloRe\\ema_best_model\\ema_model.pdparams",
+        "state_sha256": "0a55a240341f162427ba11a33a1997ee8dd5b8df671fe7b62b62679fce76587c"
+      }
+    ],
+    "selected": {
+      "variant": "best_model",
+      "mIoU": 0.8274464508519561,
+      "iter": 15000,
+      "weight": "D:\\论文复现\\experiments\\segformer_balance_wave6_20261016\\training\\M10_GloRe\\best_model\\model.pdparams",
+      "state_sha256": "d596320d669b4dd3ea8a919811bab3297fe5a54669f58a144630c6cc01714563"
+    },
+    "sha256": "89ad72ce469a43e22a863a01c960ea4acf3d4e1ba27b5c8cc4dfcffcfe0c2abf",
+    "checkpoint": "D:\\论文复现\\experiments\\segformer_balance_wave6_20261016\\checkpoints\\M10_GloRe\\model.pdparams",
+    "selection": "highest exact validation mIoU from ordinary and EMA state",
+    "test_used": false,
+    "frozen_at": "2026-10-17T12:48:25+08:00"
+  }
+}

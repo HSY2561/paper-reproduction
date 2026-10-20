@@ -1,0 +1,67 @@
+{
+  "model": "L05_CE_Lovasz",
+  "params_total": 3470434,
+  "params_trainable": 3470178,
+  "latency": [
+    {
+      "input_shape": [
+        1,
+        3,
+        400,
+        400
+      ],
+      "repeat_ms": [
+        13.867705999873579,
+        12.492003999650478,
+        13.201235998421907
+      ],
+      "median_ms": 13.201235998421907
+    },
+    {
+      "input_shape": [
+        1,
+        3,
+        480,
+        480
+      ],
+      "repeat_ms": [
+        26.56813200097531,
+        12.036296003498137,
+        17.353285998106003
+      ],
+      "median_ms": 17.353285998106003
+    }
+  ],
+  "checkpoint": "D:\\论文复现\\experiments\\segformer_loss_wave8_20261019\\checkpoints\\L05_CE_Lovasz\\model.pdparams",
+  "feature_shapes_at400": [
+    [
+      1,
+      32,
+      100,
+      100
+    ],
+    [
+      1,
+      64,
+      50,
+      50
+    ],
+    [
+      1,
+      160,
+      25,
+      25
+    ],
+    [
+      1,
+      256,
+      13,
+      13
+    ]
+  ],
+  "hardware": "NVIDIA GeForce RTX 5060",
+  "paddle": "3.4.0",
+  "protocol": "FP32 GPU network forward; batch1; sync; warmup20; 3x50; no I/O/postprocess",
+  "test_used": false,
+  "timestamp": "2026-10-20T00:46:30+08:00"
+}

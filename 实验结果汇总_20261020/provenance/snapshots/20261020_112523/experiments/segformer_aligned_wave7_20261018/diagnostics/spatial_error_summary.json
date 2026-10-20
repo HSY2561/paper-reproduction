@@ -1,0 +1,73 @@
+{
+  "models": {
+    "B0": {
+      "confusion_matrix": [
+        [
+          76232895,
+          753850
+        ],
+        [
+          971542,
+          3635857
+        ]
+      ],
+      "counts": {
+        "fp_near_2px": 272718,
+        "fp_2_to_5px": 239663,
+        "fp_far_5px": 241469,
+        "fn_gt_inner_distance_le2": 342034,
+        "fn_gt_inner_distance_gt2": 629508,
+        "empty_pred": 6
+      },
+      "n": 348,
+      "original_confusion_reproduced": true
+    },
+    "M13_Aligned": {
+      "confusion_matrix": [
+        [
+          76223138,
+          763607
+        ],
+        [
+          963066,
+          3644333
+        ]
+      ],
+      "counts": {
+        "fp_near_2px": 288501,
+        "fp_2_to_5px": 249121,
+        "fp_far_5px": 225985,
+        "fn_gt_inner_distance_le2": 327063,
+        "fn_gt_inner_distance_gt2": 636003,
+        "empty_pred": 12
+      },
+      "n": 348,
+      "original_confusion_reproduced": true
+    },
+    "M10_GloRe": {
+      "confusion_matrix": [
+        [
+          76119273,
+          867472
+        ],
+        [
+          897852,
+          3709547
+        ]
+      ],
+      "counts": {
+        "fp_near_2px": 299790,
+        "fp_2_to_5px": 271781,
+        "fp_far_5px": 295901,
+        "fn_gt_inner_distance_le2": 316032,
+        "fn_gt_inner_distance_gt2": 581820,
+        "empty_pred": 7
+      },
+      "n": 348,
+      "original_confusion_reproduced": true
+    }
+  },
+  "test_used": false,
+  "protocol": "official inference argmax and original restoration; exact euclidean distance to GT foreground; FN distance bands describe region interior, not crack width",
+  "limitations": "Far false positives are spatial categories, not automatic shadow/leaf scene labels. No threshold or architecture selection from this audit."
+}
