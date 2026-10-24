@@ -12,6 +12,8 @@
 
 2026-10-23 新增 Dice 兼容恢复候选的 seed43/44：L01/L02 各补齐两个 seed，四项运行均有 `exit_code: 0` 且 `test_used: false`；三 seed 均值与样本标准差见 [three_seed_summary.json](experiments/segformer_loss_wave8_20261019/matched_seeds_20261022/results/three_seed_summary.json)。L01/L02 均值虽改善裂缝 IoU/F1，但仍未通过预登记 precision mean gate，因此不宣称最终 gated model。
 
+2026-10-24 新增独立兼容环境复核：在 RTX5060/Windows 上，PSPNet-ResNet50、DeepLabV3P-ResNet50、Fast-SCNN 的 GPU smoke 仍真实 exit=1；同环境 CPU 三步 smoke exit=0，但不作为 GPU 正式结果。冻结的 SegFormer-B0 + Aligned-A0 已完成 1124 张 test，mIoU 77.1658%、裂缝 IoU 57.4171%、F1 72.9490%，checkpoint SHA 已记录。详情见 [六模型最新对照表](实验结果汇总_20261024/六模型对照表_最新状态.md)、[兼容环境诊断](experiments/segformer_public_wave9_20261023/compat_env_20261024/GPU_BACKEND_DIAGNOSIS_20261024.md) 和更新后的 [Wave9 交付索引](experiments/segformer_public_wave9_20261023/DELIVERY_INDEX.md)。
+
 [全部实验结果总报告](当前全部实验结果总报告_20261020.md)汇总历史结果、三 seed 对照、负结果与局限，附[CSV、图表及来源索引](实验结果汇总_20261020/复现索引.md)。报告快照时间见正文，Wave8 后续进度以上述实时进度表为准。
 
 新增[原始 SegFormer-B0 训练与验证曲线](figures/segformer_training_curve_20261020/绘图说明与图注.md)，附原始 CSV、来源 SHA 和绘图脚本。这是历史 width256、seed42 基线的曲线，不是最新损失候选；蓝线为验证 mIoU，原日志没有记录验证 Loss。

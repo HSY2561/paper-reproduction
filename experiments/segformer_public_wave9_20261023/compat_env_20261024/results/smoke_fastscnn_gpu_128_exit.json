@@ -1,0 +1,8 @@
+{
+  "model": "Fast-SCNN",
+  "device": "gpu",
+  "crop": "128",
+  "exit_code": 1,
+  "log": "D:\\论文复现\\experiments\\segformer_public_wave9_20261023\\compat_env_20261024\\logs\\smoke_fastscnn_gpu_128.log",
+  "ended_at": "2026-10-24T11:05:12.8996972+08:00"
+}

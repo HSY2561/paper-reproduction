@@ -115,6 +115,7 @@ Thumbs.db
 /experiments/segformer_balance_wave6_20261016/**/queue.lock
 /experiments/field_efficiency_20261017/MANIFEST_before_*.md
 /experiments/field_efficiency_20261017/实验建议_*.md
+/experiments/field_10x6p5_20261016/refine-logs/EXPERIMENT_TRACKER_*.md
 
 # Superseded root plans and drafts; retain local copies and Git history
 /PAPER_PLAN_20260920_195554.md
@@ -133,6 +134,7 @@ Thumbs.db
 /experiments/segformer_aligned_wave7_20261018/refine-logs/EXPERIMENT_RESULTS_*.md
 /experiments/segformer_aligned_wave7_20261018/refine-logs/STAGE1_ANALYSIS_*.md
 /experiments/segformer_aligned_wave7_20261018/followup_20261019/refine-logs/RESULTS_*.md
+/experiments/segformer_aligned_wave7_20261018/provenance/RUNTIME_before_followup_*.md
 !/experiments/segformer_aligned_wave7_20261018/figures/screening_20261019/*.pdf
 
 # Retired root plans/redundant progress report; keep local copies and history
@@ -151,3 +153,4 @@ Thumbs.db
 
 # Generated timestamp copy of the current report; keep local and publish canonical reports
 /实验结果汇总_20261020/refine-logs/实验结果总报告_20261020_*.md
+/refine-logs/EXPERIMENT_TRACKER_*.md

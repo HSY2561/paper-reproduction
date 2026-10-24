@@ -1,0 +1,9 @@
+{
+  "model": "Fast-SCNN",
+  "exit_code": 1,
+  "batch": 1,
+  "log": "D:\\论文复现\\experiments\\segformer_public_wave9_20261023\\compat_env_20261024\\logs\\smoke_fastscnn.log",
+  "python": "D:\\论文复现\\envs\\paddle32\\python.exe",
+  "paddle": "3.2.2",
+  "ended_at": "2026-10-24T11:04:07.0102264+08:00"
+}

@@ -1,0 +1,8 @@
+{
+  "model": "Fast-SCNN",
+  "env": "paddle331win",
+  "paddle": "3.3.1",
+  "exit_code": 1,
+  "log": "D:\\论文复现\\experiments\\segformer_public_wave9_20261023\\compat_env_20261024\\logs\\smoke_fastscnn_paddle331win.log",
+  "ended_at": "2026-10-24T11:42:53.2227945+08:00"
+}

@@ -1,0 +1,8 @@
+{
+  "model": "Fast-SCNN",
+  "device": "gpu",
+  "precision": "fp16",
+  "exit_code": 1,
+  "log": "D:\\论文复现\\experiments\\segformer_public_wave9_20261023\\compat_env_20261024\\logs\\smoke_fastscnn_fp16.log",
+  "ended_at": "2026-10-24T11:08:06.1109782+08:00"
+}

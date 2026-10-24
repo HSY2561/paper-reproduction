@@ -1,0 +1,9 @@
+{
+  "model": "Fast-SCNN",
+  "env": "paddle50win",
+  "paddle": "3.0.0.dev20250717",
+  "flags": "FLAGS_conv2d_disable_cudnn=1",
+  "exit_code": 1,
+  "log": "D:\\论文复现\\experiments\\segformer_public_wave9_20261023\\compat_env_20261024\\logs\\smoke_fastscnn_paddle50win_nocudnn.log",
+  "ended_at": "2026-10-24T11:34:16.7644020+08:00"
+}

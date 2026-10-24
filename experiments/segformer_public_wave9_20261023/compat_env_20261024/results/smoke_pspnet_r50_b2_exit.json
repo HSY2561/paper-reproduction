@@ -1,0 +1,7 @@
+{
+  "model": "PSPNet-ResNet50",
+  "exit_code": 1,
+  "batch": 2,
+  "log": "D:\\论文复现\\experiments\\segformer_public_wave9_20261023\\compat_env_20261024\\logs\\smoke_pspnet_r50_b2.log",
+  "ended_at": "2026-10-24T11:03:06.0139950+08:00"
+}

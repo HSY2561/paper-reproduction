@@ -1,0 +1,149 @@
+INFO: Could not find files for the given pattern(s).
+D:\���ĸ���\envs\paddle32\lib\site-packages\paddle\utils\cpp_extension\extension_utils.py:718: UserWarning: No ccache found. Please be aware that recompiling all source files may be required. You can download and install ccache from: https://github.com/ccache/ccache/blob/master/doc/INSTALL.md
+  warnings.warn(warning_message)
+[2026/10/24 10:59:53] INFO: 
+------------Environment Information-------------
+platform: Windows-10-10.0.26200-SP0
+Python: 3.10.21 | packaged by Anaconda, Inc. | (main, Aug 27 2026, 14:35:39) [MSC v.1942 64 bit (AMD64)]
+Paddle compiled with cuda: True
+NVCC: Build cuda_13.4.r13.4/compiler.38657139_0
+cudnn: 90.9
+GPUs used: 1
+CUDA_VISIBLE_DEVICES: None
+GPU: ['GPU 0: NVIDIA GeForce']
+PaddleSeg: 0.0.0.dev0
+PaddlePaddle: 3.2.2
+OpenCV: 5.0.0
+------------------------------------------------
+[2026/10/24 10:59:53] INFO: 
+---------------Config Information---------------
+batch_size: 1
+iters: 20
+train_dataset:
+  dataset_root: C:/Users/user/algolab_data
+  mode: train
+  num_classes: 2
+  train_path: C:/Users/user/algolab_data/train.txt
+  transforms:
+  - max_scale_factor: 1.25
+    min_scale_factor: 0.75
+    scale_step_size: 0.25
+    type: ResizeStepScaling
+  - crop_size:
+    - 400
+    - 400
+    type: RandomPaddingCrop
+  - type: RandomHorizontalFlip
+  - brightness_range: 0.5
+    contrast_range: 0.5
+    saturation_range: 0.5
+    type: RandomDistort
+  - type: Normalize
+  type: Dataset
+val_dataset:
+  dataset_root: C:/Users/user/algolab_data
+  mode: val
+  num_classes: 2
+  transforms:
+  - type: Normalize
+  type: Dataset
+  val_path: C:/Users/user/algolab_data/val.txt
+optimizer:
+  beta1: 0.9
+  beta2: 0.999
+  type: AdamW
+  weight_decay: 0.01
+lr_scheduler:
+  end_lr: 0.0
+  learning_rate: 6.0e-05
+  power: 1
+  type: PolynomialDecay
+loss:
+  coef:
+  - 1
+  - 0.4
+  types:
+  - type: OhemCrossEntropyLoss
+  - type: OhemCrossEntropyLoss
+model:
+  align_corners: false
+  backbone:
+    output_stride: 8
+    pretrained: null
+    type: ResNet50_vd
+  enable_auxiliary_loss: true
+  num_classes: 2
+  pretrained: null
+  type: PSPNet
+------------------------------------------------
+
+[2026/10/24 10:59:53] INFO: Set device: gpu
+[2026/10/24 10:59:53] INFO: Use the following config to build model
+model:
+  align_corners: false
+  backbone:
+    output_stride: 8
+    pretrained: null
+    type: ResNet50_vd
+  enable_auxiliary_loss: true
+  num_classes: 2
+  pretrained: null
+  type: PSPNet
+WARNING: Logging before InitGoogleLogging() is written to STDERR
+W1024 10:59:53.472323 115660 gpu_resources.cc:114] Please NOTE: device: 0, GPU Compute Capability: 12.0, Driver API Version: 13.2, Runtime API Version: 12.9
+[2026/10/24 10:59:53] INFO: No pretrained model to load, ResNet_vd will be trained from scratch.
+[2026/10/24 10:59:53] INFO: Use the following config to build train_dataset
+train_dataset:
+  dataset_root: C:/Users/user/algolab_data
+  mode: train
+  num_classes: 2
+  train_path: C:/Users/user/algolab_data/train.txt
+  transforms:
+  - max_scale_factor: 1.25
+    min_scale_factor: 0.75
+    scale_step_size: 0.25
+    type: ResizeStepScaling
+  - crop_size:
+    - 400
+    - 400
+    type: RandomPaddingCrop
+  - type: RandomHorizontalFlip
+  - brightness_range: 0.5
+    contrast_range: 0.5
+    saturation_range: 0.5
+    type: RandomDistort
+  - type: Normalize
+  type: Dataset
+[2026/10/24 10:59:53] INFO: Use the following config to build optimizer
+optimizer:
+  beta1: 0.9
+  beta2: 0.999
+  type: AdamW
+  weight_decay: 0.01
+[2026/10/24 10:59:53] INFO: Use the following config to build loss
+loss:
+  coef:
+  - 1
+  - 0.4
+  types:
+  - type: OhemCrossEntropyLoss
+  - type: OhemCrossEntropyLoss
+D:\���ĸ���\envs\paddle32\lib\site-packages\paddle\nn\layer\norm.py:818: UserWarning: When training, we now always track global mean and variance.
+  warnings.warn(
+W1024 10:59:54.398188 115660 backward.cc:462] While running Node (Conv2dGradNodeFinal) raises an EnforceNotMet exception
+Traceback (most recent call last):
+  File "D:\���ĸ���\external\PaddleSeg-2.10.0\tools\train.py", line 252, in <module>
+    main(args)
+  File "D:\���ĸ���\external\PaddleSeg-2.10.0\tools\train.py", line 222, in main
+    train(model,
+  File "D:\���ĸ���\external\PaddleSeg-2.10.0\paddleseg\core\train.py", line 264, in train
+    loss.backward()
+  File "D:\���ĸ���\envs\paddle32\lib\site-packages\paddle\base\wrapped_decorator.py", line 50, in wrapper
+    return decorated(*args, **kwargs)
+  File "D:\���ĸ���\envs\paddle32\lib\site-packages\paddle\base\framework.py", line 722, in __impl__
+    return func(*args, **kwargs)
+  File "D:\���ĸ���\envs\paddle32\lib\site-packages\paddle\base\dygraph\tensor_patch_methods.py", line 368, in backward
+    core.eager.run_backward([self], grad_tensor, retain_graph)
+OSError: (External) CUDNN error(4000), CUDNN_STATUS_INTERNAL_ERROR. 
+  [Hint: Please search for the error code(4000) on website (https://docs.nvidia.com/deeplearning/cudnn/api/index.html#cudnnStatus_t) to get Nvidia's official solution and advice about CUDNN Error.] (at ../paddle/phi/kernels/gpudnn/conv_cudnn_v7.h:296)
+
