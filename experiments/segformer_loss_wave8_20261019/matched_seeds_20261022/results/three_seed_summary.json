@@ -1,0 +1,228 @@
+{
+  "groups": {
+    "L01_CE_Dice": {
+      "n": 3,
+      "seeds": [
+        {
+          "seed": 42,
+          "precision": 0.8220214613714869,
+          "recall": 0.8028586193642009,
+          "f1": 0.8123270429478651,
+          "crackIoU": 0.6839652600696596,
+          "mIoU": 0.8310113878812523,
+          "boundary_f1": 0.4564228068163309
+        },
+        {
+          "seed": 43,
+          "precision": 0.8098438312911118,
+          "recall": 0.8223240487745906,
+          "f1": 0.8160362256309391,
+          "crackIoU": 0.6892408731557755,
+          "mIoU": 0.8336427172896469,
+          "boundary_f1": 0.45959079839861045
+        },
+        {
+          "seed": 44,
+          "precision": 0.8110247953885512,
+          "recall": 0.8233471856898003,
+          "f1": 0.8171395380471805,
+          "crackIoU": 0.6908165116096117,
+          "mIoU": 0.8344968887989626,
+          "boundary_f1": 0.45727299180056896
+        }
+      ],
+      "mean": {
+        "precision": 0.81429669601705,
+        "recall": 0.8161766179428639,
+        "f1": 0.8151676022086616,
+        "crackIoU": 0.688007548278349,
+        "mIoU": 0.8330503313232872,
+        "boundary_f1": 0.4577621990051701
+      },
+      "sample_std": {
+        "precision": 0.006715852059544791,
+        "recall": 0.011545064611892359,
+        "f1": 0.002521092473022508,
+        "crackIoU": 0.0035882766902627862,
+        "mIoU": 0.001816692051971021,
+        "boundary_f1": 0.0016396754048054
+      },
+      "mean_delta_vs_seed42": {
+        "precision": -0.007724765354436891,
+        "recall": 0.013317998578663004,
+        "f1": 0.0028405592607965158,
+        "crackIoU": 0.004042288208689349,
+        "mIoU": 0.002038943442034924,
+        "boundary_f1": 0.0013393921888392168
+      }
+    },
+    "L02_CE_Dice": {
+      "n": 3,
+      "seeds": [
+        {
+          "seed": 42,
+          "precision": 0.823967689494686,
+          "recall": 0.8007465817481837,
+          "f1": 0.8121911926447162,
+          "crackIoU": 0.6837726640982743,
+          "mIoU": 0.8309355669581353,
+          "boundary_f1": 0.457274454132324
+        },
+        {
+          "seed": 43,
+          "precision": 0.8106781955786381,
+          "recall": 0.8239310291989037,
+          "f1": 0.8172508877442797,
+          "crackIoU": 0.6909756932183461,
+          "mIoU": 0.8345765007918371,
+          "boundary_f1": 0.4606745888711873
+        },
+        {
+          "seed": 44,
+          "precision": 0.8031660277840248,
+          "recall": 0.8278354012752097,
+          "f1": 0.8153141487861407,
+          "crackIoU": 0.6882112654175359,
+          "mIoU": 0.8329975102274754,
+          "boundary_f1": 0.45409222019460843
+        }
+      ],
+      "mean": {
+        "precision": 0.8126039709524496,
+        "recall": 0.8175043374074323,
+        "f1": 0.8149187430583789,
+        "crackIoU": 0.687653207578052,
+        "mIoU": 0.8328365259924826,
+        "boundary_f1": 0.45734708773270655
+      },
+      "sample_std": {
+        "precision": 0.01053369548515532,
+        "recall": 0.014643353829600319,
+        "f1": 0.0025529175255571595,
+        "crackIoU": 0.0036337967114723696,
+        "mIoU": 0.0018257975622411582,
+        "boundary_f1": 0.003291785393753672
+      },
+      "mean_delta_vs_seed42": {
+        "precision": -0.01136371854223639,
+        "recall": 0.01675775565924864,
+        "f1": 0.0027275504136626827,
+        "crackIoU": 0.0038805434797777316,
+        "mIoU": 0.0019009590343472826,
+        "boundary_f1": 7.263360038256561e-05
+      }
+    }
+  },
+  "rows": [
+    {
+      "id": "L01_CE_Dice_s43",
+      "recipe": "L01_CE_Dice",
+      "source": "L01_CE_Dice",
+      "seed": 43,
+      "modules": [
+        "aligned"
+      ],
+      "status": "complete",
+      "precision": 0.8098438312911118,
+      "recall": 0.8223240487745906,
+      "f1": 0.8160362256309391,
+      "crackIoU": 0.6892408731557755,
+      "mIoU": 0.8336427172896469,
+      "boundary_f1": 0.45959079839861045,
+      "params": 3470434,
+      "boundary_protocol": "inner boundary, zero outside image; exact Euclidean <=2px; global counts then harmonic mean",
+      "delta_vs_seed42": {
+        "precision": -0.01217763008037509,
+        "recall": 0.019465429410389756,
+        "f1": 0.003709182683074075,
+        "crackIoU": 0.0052756130861159045,
+        "mIoU": 0.0026313294083946115,
+        "boundary_f1": 0.003167991582279539
+      },
+      "main_gate_against_seed42": false
+    },
+    {
+      "id": "L01_CE_Dice_s44",
+      "recipe": "L01_CE_Dice",
+      "source": "L01_CE_Dice",
+      "seed": 44,
+      "modules": [
+        "aligned"
+      ],
+      "status": "complete",
+      "precision": 0.8110247953885512,
+      "recall": 0.8233471856898003,
+      "f1": 0.8171395380471805,
+      "crackIoU": 0.6908165116096117,
+      "mIoU": 0.8344968887989626,
+      "boundary_f1": 0.45727299180056896,
+      "params": 3470434,
+      "boundary_protocol": "inner boundary, zero outside image; exact Euclidean <=2px; global counts then harmonic mean",
+      "delta_vs_seed42": {
+        "precision": -0.010996665982935694,
+        "recall": 0.020488566325599367,
+        "f1": 0.0048124950993154725,
+        "crackIoU": 0.00685125153995203,
+        "mIoU": 0.0034855009177102714,
+        "boundary_f1": 0.000850184984238056
+      },
+      "main_gate_against_seed42": false
+    },
+    {
+      "id": "L02_CE_Dice_s43",
+      "recipe": "L02_CE_Dice",
+      "source": "L02_CE_Dice",
+      "seed": 43,
+      "modules": [
+        "aligned"
+      ],
+      "status": "complete",
+      "precision": 0.8106781955786381,
+      "recall": 0.8239310291989037,
+      "f1": 0.8172508877442797,
+      "crackIoU": 0.6909756932183461,
+      "mIoU": 0.8345765007918371,
+      "boundary_f1": 0.4606745888711873,
+      "params": 3470434,
+      "boundary_protocol": "inner boundary, zero outside image; exact Euclidean <=2px; global counts then harmonic mean",
+      "delta_vs_seed42": {
+        "precision": -0.013289493916047945,
+        "recall": 0.023184447450720014,
+        "f1": 0.005059695099563499,
+        "crackIoU": 0.007203029120071758,
+        "mIoU": 0.003640933833701787,
+        "boundary_f1": 0.003400134738863303
+      },
+      "main_gate_against_seed42": false
+    },
+    {
+      "id": "L02_CE_Dice_s44",
+      "recipe": "L02_CE_Dice",
+      "source": "L02_CE_Dice",
+      "seed": 44,
+      "modules": [
+        "aligned"
+      ],
+      "status": "complete",
+      "precision": 0.8031660277840248,
+      "recall": 0.8278354012752097,
+      "f1": 0.8153141487861407,
+      "crackIoU": 0.6882112654175359,
+      "mIoU": 0.8329975102274754,
+      "boundary_f1": 0.45409222019460843,
+      "params": 3470434,
+      "boundary_protocol": "inner boundary, zero outside image; exact Euclidean <=2px; global counts then harmonic mean",
+      "delta_vs_seed42": {
+        "precision": -0.020801661710661223,
+        "recall": 0.02708881952702602,
+        "f1": 0.003122956141424549,
+        "crackIoU": 0.004438601319261548,
+        "mIoU": 0.0020619432693400608,
+        "boundary_f1": -0.0031822339377155506
+      },
+      "main_gate_against_seed42": false
+    }
+  ],
+  "test_used": false,
+  "updated_at": "2026-10-23T01:53:54+08:00"
+}

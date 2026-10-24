@@ -1,0 +1,32 @@
+{
+  "n": 348,
+  "confusion_matrix": [
+    [
+      76197251,
+      789494
+    ],
+    [
+      942159,
+      3665240
+    ]
+  ],
+  "mIoU": 0.8284589854839679,
+  "crackIoU": 0.6791389045511927,
+  "precision": 0.8227741544164029,
+  "recall": 0.7955117410061512,
+  "f1": 0.8089133099238336,
+  "boundary_counts_pred_gt": [
+    221681,
+    220436,
+    468778,
+    505846
+  ],
+  "boundary_precision": 0.47289121929783395,
+  "boundary_recall": 0.43577689652582013,
+  "boundary_f1": 0.4535760952790254,
+  "empty_predictions": 5,
+  "test_used": false,
+  "boundary_protocol": "inner boundary, zero outside image; exact Euclidean <=2px; global counts then harmonic mean",
+  "config": "D:\\\u8bba\u6587\u590d\u73b0\\experiments\\segformer_loss_wave8_20261019\\dice_compat_recovery_20261020\\configs\\L18_WeightedCE_Dice.yml",
+  "model_path": "D:\\\u8bba\u6587\u590d\u73b0\\experiments\\segformer_loss_wave8_20261019\\dice_compat_recovery_20261020\\checkpoints\\L18_WeightedCE_Dice\\model.pdparams"
+}

@@ -1,0 +1,7 @@
+{
+  "model": "SegFormer-B0",
+  "finished_at": "2026-10-23T20:36:35.5354742+08:00",
+  "exit_code": 0,
+  "result": "D:\\论文复现\\experiments\\segformer_public_wave9_20261023\\results\\segformer_b0_test.json",
+  "log": "D:\\论文复现\\experiments\\segformer_public_wave9_20261023\\logs\\SegFormer_B0_test.log"
+}

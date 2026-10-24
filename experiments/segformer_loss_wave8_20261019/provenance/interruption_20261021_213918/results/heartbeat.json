@@ -1,0 +1,10 @@
+{
+  "tag": "L16_CE_Focal_train",
+  "pid": 111288,
+  "runner_pid": 67728,
+  "timestamp": "2026-10-20T14:40:27+08:00",
+  "latest_iter": 2800,
+  "elapsed_seconds": 764.5,
+  "log_size": 96466,
+  "free_gb": 5.55
+}

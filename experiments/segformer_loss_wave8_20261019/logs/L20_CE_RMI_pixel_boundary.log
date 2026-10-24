@@ -1,0 +1,59 @@
+[2026/10/21 23:55:46] INFO: Use the following config to build val_dataset
+val_dataset:
+  dataset_root: C:/Users/user/algolab_data
+  mode: val
+  num_classes: 2
+  transforms:
+  - type: Normalize
+  type: Dataset
+  val_path: C:/Users/user/algolab_data/val.txt
+[2026/10/21 23:55:47] INFO: Set device: gpu
+[2026/10/21 23:55:47] INFO: Use the following config to build model
+model:
+  backbone:
+    pretrained: "D:\\\u8BBA\u6587\u590D\u73B0\\experiments\\segformer_loss_wave8_20261019\\\
+      weights\\mit_b0_imagenet.pdparams"
+    type: MixVisionTransformer_B0
+  balance_modules:
+  - aligned
+  embedding_dim: 128
+  num_classes: 2
+  type: SegFormer
+WARNING: Logging before InitGoogleLogging() is written to STDERR
+W1021 23:55:47.316911 55288 gpu_resources.cc:116] Please NOTE: device: 0, GPU Compute Capability: 12.0, Driver API Version: 13.2, Runtime API Version: 12.9
+[2026/10/21 23:55:47] INFO: Loading pretrained model from D:\论文复现\experiments\segformer_loss_wave8_20261019\weights\mit_b0_imagenet.pdparams
+[2026/10/21 23:55:47] INFO: There are 176/176 variables loaded into MixVisionTransformer.
+[2026/10/21 23:55:47] INFO: Loading pretrained model from D:\论文复现\experiments\segformer_loss_wave8_20261019\checkpoints\L20_CE_RMI\model.pdparams
+[2026/10/21 23:55:47] INFO: There are 194/194 variables loaded into SegFormer.
+{
+  "n": 348,
+  "confusion_matrix": [
+    [
+      76177961,
+      808784
+    ],
+    [
+      920946,
+      3686453
+    ]
+  ],
+  "mIoU": 0.8292172065794239,
+  "crackIoU": 0.6806367140844392,
+  "precision": 0.8200797866719819,
+  "recall": 0.8001158571245945,
+  "f1": 0.8099748248749044,
+  "boundary_counts_pred_gt": [
+    220965,
+    219815,
+    467910,
+    505846
+  ],
+  "boundary_precision": 0.47223825094569466,
+  "boundary_recall": 0.4345492501670469,
+  "boundary_f1": 0.45261051259932467,
+  "empty_predictions": 5,
+  "test_used": false,
+  "boundary_protocol": "inner boundary, zero outside image; exact Euclidean <=2px; global counts then harmonic mean",
+  "config": "D:\\\u8bba\u6587\u590d\u73b0\\experiments\\segformer_loss_wave8_20261019\\configs\\L20_CE_RMI.yml",
+  "model_path": "D:\\\u8bba\u6587\u590d\u73b0\\experiments\\segformer_loss_wave8_20261019\\checkpoints\\L20_CE_RMI\\model.pdparams"
+}

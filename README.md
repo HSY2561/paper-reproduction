@@ -1,12 +1,16 @@
 # 道路裂缝视觉分割与移动机器人精细修复
 
-本仓库提供当前代码、训练证据与论文材料，供导师查看项目进展。最新同步日期：2026-10-20。
+本仓库提供当前代码、训练证据与论文材料，供导师查看项目进展。最新同步日期：2026-10-24。
 
 ## 最新训练结果
 
-最新 [Wave8 损失实验](experiments/segformer_loss_wave8_20261019/README.md)已完成 L05–L14 十项配置的 18k 训练与独立验证。最新完成的 L14（Softmax Focal gamma 1.0）验证裂缝 IoU 67.7565%、F1 80.7796%、mIoU 82.7678%、边界 F1 45.0176%；这是 seed42 单项结果，不代表最终门槛通过。L15 于 2026-10-20 14:25 因写入 heartbeat 的 `PermissionError / WinError 5` 标记为 `needs_review`，尚无正式训练退出回执，性能留空；L16 已进入后续 smoke/训练流程，具体阶段以实时状态为准。L01–L04 原梯度预检失败证据保留。各方案固定同一 Aligned 结构，不能将损失变更写成减参或推理加速。详见[当前进度表](SegFormer损失函数消融进展_20261019.md)和[预登记计划](SegFormer损失函数优化20方案执行计划_20261019.md)。
+最新 [Wave8 损失实验](experiments/segformer_loss_wave8_20261019/README.md)的 20 个预登记配方均已有真实验证结果：主队列 15 项完成，原先因共享标签副作用失败的 5 项通过独立 `compat_clone` 恢复队列完成。L20（CE + 0.01 RMI）当前裂缝 IoU 68.0637%、F1 80.9975%、mIoU 82.9217%、边界 F1 45.2611%；这些仍是 seed42 单项验证结果，不代表最终门槛或多 seed结论。L15/L16 的旧中断证据、正式重跑退出回执及 L17/L19/L20 结果均已保存。主队列与兼容恢复队列均声明未访问 test。详见[当前进度表](SegFormer损失函数消融进展_20261019.md)、[恢复证据](experiments/segformer_loss_wave8_20261019/dice_compat_recovery_20261020/README.md)和[预登记计划](SegFormer损失函数优化20方案执行计划_20261019.md)。
 
-本次快照补充：L16 的 smoke 已真实 exit0，最近状态为 training；L15 在异常后日志仍有增长，但仍无正式训练退出回执，不能将日志增长视为恢复正常或训练完成。本次同步不修复或重启训练。
+本次快照补充：主队列已生成 `queue_done.json`，兼容恢复队列也已生成完成回执；L15/L16 的旧 `WinError 5` 中断证据与之后正式重跑结果均保留，不能把旧 partial 日志与重跑混为一次训练。
+
+2026-10-23 新增 Wave9 公共模型对照：SegFormer-B0、OCRNet-HRNet-W18、PP-LiteSeg-STDC1 已在冻结验证权重后完成 Crack500 test（1124 张）；Fast-SCNN 与 PSPNet-R18 的 GPU smoke 失败，DeepLabV3P-ResNet50 保留历史 smoke 失败证据，均未伪造 test 数值。Wave9 将公开模型 test 与损失候选分开：损失候选仍因严格三 seed precision 门槛未通过而 `test_unused`。详见 [Wave9 交付索引](experiments/segformer_public_wave9_20261023/DELIVERY_INDEX.md) 与 [Wave8/Wave9 总报告](SegFormer损失函数消融总报告_20261023.md)。
+
+2026-10-23 新增 Dice 兼容恢复候选的 seed43/44：L01/L02 各补齐两个 seed，四项运行均有 `exit_code: 0` 且 `test_used: false`；三 seed 均值与样本标准差见 [three_seed_summary.json](experiments/segformer_loss_wave8_20261019/matched_seeds_20261022/results/three_seed_summary.json)。L01/L02 均值虽改善裂缝 IoU/F1，但仍未通过预登记 precision mean gate，因此不宣称最终 gated model。
 
 [全部实验结果总报告](当前全部实验结果总报告_20261020.md)汇总历史结果、三 seed 对照、负结果与局限，附[CSV、图表及来源索引](实验结果汇总_20261020/复现索引.md)。报告快照时间见正文，Wave8 后续进度以上述实时进度表为准。
 

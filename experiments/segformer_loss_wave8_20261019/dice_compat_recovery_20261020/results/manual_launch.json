@@ -1,0 +1,10 @@
+{
+  "launched_at": "2026-10-22T00:16:24.8685162+08:00",
+  "pid": 101828,
+  "wrapper": "run_recovery_queue.ps1",
+  "root": "D:\\论文复现\\experiments\\segformer_loss_wave8_20261019\\dice_compat_recovery_20261020",
+  "training_started_confirmed": false,
+  "smoke_cleanup_manifest": "D:\\论文复现\\experiments\\segformer_loss_wave8_20261019\\provenance\\completed_smoke_cleanup_20261022.json",
+  "smoke_targets_removed": 15,
+  "free_gib": 6.013
+}

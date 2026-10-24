@@ -1,0 +1,38 @@
+[
+  {
+    "id": "L01_CE_Dice_s43",
+    "recipe": "L01_CE_Dice",
+    "source": "L01_CE_Dice",
+    "seed": 43,
+    "modules": [
+      "aligned"
+    ]
+  },
+  {
+    "id": "L01_CE_Dice_s44",
+    "recipe": "L01_CE_Dice",
+    "source": "L01_CE_Dice",
+    "seed": 44,
+    "modules": [
+      "aligned"
+    ]
+  },
+  {
+    "id": "L02_CE_Dice_s43",
+    "recipe": "L02_CE_Dice",
+    "source": "L02_CE_Dice",
+    "seed": 43,
+    "modules": [
+      "aligned"
+    ]
+  },
+  {
+    "id": "L02_CE_Dice_s44",
+    "recipe": "L02_CE_Dice",
+    "source": "L02_CE_Dice",
+    "seed": 44,
+    "modules": [
+      "aligned"
+    ]
+  }
+]

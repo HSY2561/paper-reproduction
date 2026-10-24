@@ -1,0 +1,16 @@
+{
+  "tag": "L02_CE_Dice_s44_profile",
+  "pid": 98732,
+  "runner_pid": 101096,
+  "started_at": "2026-10-23T01:53:45+08:00",
+  "command": [
+    "C:\\venv_bisenet\\Scripts\\python.exe",
+    "D:\\论文复现\\experiments\\segformer_loss_wave8_20261019\\matched_seeds_20261022\\seed_queue.py",
+    "--profile",
+    "L02_CE_Dice_s44",
+    "--weights",
+    "D:\\论文复现\\experiments\\segformer_loss_wave8_20261019\\matched_seeds_20261022\\checkpoints\\L02_CE_Dice_s44\\model.pdparams"
+  ],
+  "log": "D:\\论文复现\\experiments\\segformer_loss_wave8_20261019\\matched_seeds_20261022\\logs\\L02_CE_Dice_s44_profile.log",
+  "test_used": false
+}

@@ -1,0 +1,16 @@
+{
+  "tag": "L18_WeightedCE_Dice_profile",
+  "pid": 16868,
+  "runner_pid": 96496,
+  "started_at": "2026-10-22T02:34:32+08:00",
+  "command": [
+    "C:\\venv_bisenet\\Scripts\\python.exe",
+    "D:\\论文复现\\experiments\\segformer_loss_wave8_20261019\\dice_compat_recovery_20261020\\recovery_queue.py",
+    "--profile",
+    "L18_WeightedCE_Dice",
+    "--weights",
+    "D:\\论文复现\\experiments\\segformer_loss_wave8_20261019\\dice_compat_recovery_20261020\\checkpoints\\L18_WeightedCE_Dice\\model.pdparams"
+  ],
+  "log": "D:\\论文复现\\experiments\\segformer_loss_wave8_20261019\\dice_compat_recovery_20261020\\logs\\L18_WeightedCE_Dice_profile.log",
+  "test_used": false
+}

@@ -1,0 +1,28 @@
+{
+  "states": {
+    "L01_CE_Dice": "gradient_preflight_failed",
+    "L02_CE_Dice": "gradient_preflight_failed",
+    "L03_CE_Dice": "gradient_preflight_failed",
+    "L04_CE_Dice": "gradient_preflight_failed",
+    "L05_CE_Lovasz": "complete",
+    "L06_CE_Lovasz": "complete",
+    "L07_CE_Lovasz": "complete",
+    "L08_WeightedCE": "complete",
+    "L09_WeightedCE": "complete",
+    "L10_WeightedCE": "complete",
+    "L11_TopKCE": "complete",
+    "L12_TopKCE": "complete",
+    "L13_OHEM": "complete",
+    "L14_SoftmaxFocal": "complete",
+    "L15_SoftmaxFocal": "complete",
+    "L16_CE_Focal": "complete",
+    "L17_OHEM_Dice": "complete",
+    "L18_WeightedCE_Dice": "gradient_preflight_failed",
+    "L19_CE_DualTask": "complete",
+    "L20_CE_RMI": "complete"
+  },
+  "complete": 15,
+  "ended_at": "2026-10-21T23:56:07+08:00",
+  "test_used": false,
+  "next_step": "freeze top2 qualifying loss recipes; matched seeds43/44; compare original public models only after this selection"
+}

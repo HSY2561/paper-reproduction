@@ -1,0 +1,32 @@
+{
+  "n": 348,
+  "confusion_matrix": [
+    [
+      76062412,
+      924333
+    ],
+    [
+      863769,
+      3743630
+    ]
+  ],
+  "mIoU": 0.8268935433482496,
+  "crackIoU": 0.6767554899622759,
+  "precision": 0.8019836489706538,
+  "recall": 0.8125256788048962,
+  "f1": 0.807220246498196,
+  "boundary_counts_pred_gt": [
+    211834,
+    210558,
+    462208,
+    505846
+  ],
+  "boundary_precision": 0.45830881334810303,
+  "boundary_recall": 0.4162492141877172,
+  "boundary_f1": 0.4362676401221174,
+  "empty_predictions": 16,
+  "test_used": false,
+  "boundary_protocol": "inner boundary, zero outside image; exact Euclidean <=2px; global counts then harmonic mean",
+  "config": "D:\\\u8bba\u6587\u590d\u73b0\\experiments\\segformer_loss_wave8_20261019\\configs\\L19_CE_DualTask.yml",
+  "model_path": "D:\\\u8bba\u6587\u590d\u73b0\\experiments\\segformer_loss_wave8_20261019\\checkpoints\\L19_CE_DualTask\\model.pdparams"
+}

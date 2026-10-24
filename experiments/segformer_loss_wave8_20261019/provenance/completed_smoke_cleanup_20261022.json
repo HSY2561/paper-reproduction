@@ -1,0 +1,699 @@
+{
+  "created_at": "2026-10-22T00:16:24.5792827+08:00",
+  "scope": "Only completed smoke_* with real exit_code 0; formal training/best/frozen/logs untouched",
+  "targets": [
+    "D:\\论文复现\\experiments\\segformer_loss_wave8_20261019\\training\\smoke_L05_CE_Lovasz",
+    "D:\\论文复现\\experiments\\segformer_loss_wave8_20261019\\training\\smoke_L06_CE_Lovasz",
+    "D:\\论文复现\\experiments\\segformer_loss_wave8_20261019\\training\\smoke_L07_CE_Lovasz",
+    "D:\\论文复现\\experiments\\segformer_loss_wave8_20261019\\training\\smoke_L08_WeightedCE",
+    "D:\\论文复现\\experiments\\segformer_loss_wave8_20261019\\training\\smoke_L09_WeightedCE",
+    "D:\\论文复现\\experiments\\segformer_loss_wave8_20261019\\training\\smoke_L10_WeightedCE",
+    "D:\\论文复现\\experiments\\segformer_loss_wave8_20261019\\training\\smoke_L11_TopKCE",
+    "D:\\论文复现\\experiments\\segformer_loss_wave8_20261019\\training\\smoke_L12_TopKCE",
+    "D:\\论文复现\\experiments\\segformer_loss_wave8_20261019\\training\\smoke_L13_OHEM",
+    "D:\\论文复现\\experiments\\segformer_loss_wave8_20261019\\training\\smoke_L14_SoftmaxFocal",
+    "D:\\论文复现\\experiments\\segformer_loss_wave8_20261019\\training\\smoke_L15_SoftmaxFocal",
+    "D:\\论文复现\\experiments\\segformer_loss_wave8_20261019\\training\\smoke_L16_CE_Focal",
+    "D:\\论文复现\\experiments\\segformer_loss_wave8_20261019\\training\\smoke_L17_OHEM_Dice",
+    "D:\\论文复现\\experiments\\segformer_loss_wave8_20261019\\training\\smoke_L19_CE_DualTask",
+    "D:\\论文复现\\experiments\\segformer_loss_wave8_20261019\\training\\smoke_L20_CE_RMI"
+  ],
+  "files": [
+    {
+      "path": "D:\\论文复现\\experiments\\segformer_loss_wave8_20261019\\training\\smoke_L05_CE_Lovasz\\best_model\\model.pdparams",
+      "bytes": 13898078,
+      "sha256": "88989E17913F932507116144F54A50BDCFC72ACC2B6319DCFC0935C6D7D30554"
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\segformer_loss_wave8_20261019\\training\\smoke_L05_CE_Lovasz\\best_model\\model.pdstates",
+      "bytes": 162,
+      "sha256": "5AA0A42EC03071F66451184442E1F8D0827104AD422D1AFF43AA025E65D5BE18"
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\segformer_loss_wave8_20261019\\training\\smoke_L05_CE_Lovasz\\ema_best_model\\ema_model.pdparams",
+      "bytes": 13900490,
+      "sha256": "E46ED5A74D7562EBEAF247529CC207DE1B5B52F96AC0C804B0B1222922A58D1C"
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\segformer_loss_wave8_20261019\\training\\smoke_L05_CE_Lovasz\\ema_best_model\\ema_model.pdstates",
+      "bytes": 162,
+      "sha256": "B33470D73C812E4B77613342719586A1857DEF05455F56B87CE44C2C09C361FB"
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\segformer_loss_wave8_20261019\\training\\smoke_L05_CE_Lovasz\\iter_20\\ema_model.pdparams",
+      "bytes": 13900490,
+      "sha256": "E46ED5A74D7562EBEAF247529CC207DE1B5B52F96AC0C804B0B1222922A58D1C"
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\segformer_loss_wave8_20261019\\training\\smoke_L05_CE_Lovasz\\iter_20\\ema_model.pdstates",
+      "bytes": 162,
+      "sha256": "B33470D73C812E4B77613342719586A1857DEF05455F56B87CE44C2C09C361FB"
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\segformer_loss_wave8_20261019\\training\\smoke_L05_CE_Lovasz\\iter_20\\model.pdopt",
+      "bytes": 27833458,
+      "sha256": "A2FE71F263DF932BEBDF4CE2F4CF4B25C800401F31CCBD0207DE57963FC80DAB"
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\segformer_loss_wave8_20261019\\training\\smoke_L05_CE_Lovasz\\iter_20\\model.pdparams",
+      "bytes": 13898078,
+      "sha256": "88989E17913F932507116144F54A50BDCFC72ACC2B6319DCFC0935C6D7D30554"
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\segformer_loss_wave8_20261019\\training\\smoke_L05_CE_Lovasz\\iter_20\\model.pdstates",
+      "bytes": 162,
+      "sha256": "5AA0A42EC03071F66451184442E1F8D0827104AD422D1AFF43AA025E65D5BE18"
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\segformer_loss_wave8_20261019\\training\\smoke_L06_CE_Lovasz\\best_model\\model.pdparams",
+      "bytes": 13898078,
+      "sha256": "4BBDC22DB32D6AE7983F8E66B4DC6DBBED6EE095CB75CD6FD6AB674AE70300DA"
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\segformer_loss_wave8_20261019\\training\\smoke_L06_CE_Lovasz\\best_model\\model.pdstates",
+      "bytes": 162,
+      "sha256": "3B26F09A74EB9F85DE860993D59A899E9537C3251E1FC8A6E4C3357D487313C3"
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\segformer_loss_wave8_20261019\\training\\smoke_L06_CE_Lovasz\\ema_best_model\\ema_model.pdparams",
+      "bytes": 13900490,
+      "sha256": "9FD09A522B40A478EC51DFDD3B4B8618F36CD71051EBBF1C7F1F2EA19833E873"
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\segformer_loss_wave8_20261019\\training\\smoke_L06_CE_Lovasz\\ema_best_model\\ema_model.pdstates",
+      "bytes": 162,
+      "sha256": "FA56A7EE3E5A90D91EAD89BF41B08AFDEDC97E552A483D37E92325961A70CA33"
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\segformer_loss_wave8_20261019\\training\\smoke_L06_CE_Lovasz\\iter_20\\ema_model.pdparams",
+      "bytes": 13900490,
+      "sha256": "9FD09A522B40A478EC51DFDD3B4B8618F36CD71051EBBF1C7F1F2EA19833E873"
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\segformer_loss_wave8_20261019\\training\\smoke_L06_CE_Lovasz\\iter_20\\ema_model.pdstates",
+      "bytes": 162,
+      "sha256": "FA56A7EE3E5A90D91EAD89BF41B08AFDEDC97E552A483D37E92325961A70CA33"
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\segformer_loss_wave8_20261019\\training\\smoke_L06_CE_Lovasz\\iter_20\\model.pdopt",
+      "bytes": 27833458,
+      "sha256": "11A1FDAFF64924CF5823011B9882E83DD379C28DE8303A1111BA1C59E9A6A3BF"
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\segformer_loss_wave8_20261019\\training\\smoke_L06_CE_Lovasz\\iter_20\\model.pdparams",
+      "bytes": 13898078,
+      "sha256": "4BBDC22DB32D6AE7983F8E66B4DC6DBBED6EE095CB75CD6FD6AB674AE70300DA"
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\segformer_loss_wave8_20261019\\training\\smoke_L06_CE_Lovasz\\iter_20\\model.pdstates",
+      "bytes": 162,
+      "sha256": "3B26F09A74EB9F85DE860993D59A899E9537C3251E1FC8A6E4C3357D487313C3"
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\segformer_loss_wave8_20261019\\training\\smoke_L07_CE_Lovasz\\best_model\\model.pdparams",
+      "bytes": 13898078,
+      "sha256": "FF9F5E3343CA05A402FA2FABFD52A665326106BBA6282C80C1F3BFE3D5F72B7B"
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\segformer_loss_wave8_20261019\\training\\smoke_L07_CE_Lovasz\\best_model\\model.pdstates",
+      "bytes": 162,
+      "sha256": "87278173BA6805BB8227AC739BD4383696B4BBB7EC08BD62213E0D061EFBC35E"
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\segformer_loss_wave8_20261019\\training\\smoke_L07_CE_Lovasz\\ema_best_model\\ema_model.pdparams",
+      "bytes": 13900490,
+      "sha256": "411530507D28D63B189EB15D268B6B2D84058ACA34DE6FA3CA90F0373FFF559D"
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\segformer_loss_wave8_20261019\\training\\smoke_L07_CE_Lovasz\\ema_best_model\\ema_model.pdstates",
+      "bytes": 162,
+      "sha256": "5FC4C2BDDDF05803A8A9C494D8C831B28200FE9306FA41B83ABF25583C47E65F"
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\segformer_loss_wave8_20261019\\training\\smoke_L07_CE_Lovasz\\iter_20\\ema_model.pdparams",
+      "bytes": 13900490,
+      "sha256": "411530507D28D63B189EB15D268B6B2D84058ACA34DE6FA3CA90F0373FFF559D"
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\segformer_loss_wave8_20261019\\training\\smoke_L07_CE_Lovasz\\iter_20\\ema_model.pdstates",
+      "bytes": 162,
+      "sha256": "5FC4C2BDDDF05803A8A9C494D8C831B28200FE9306FA41B83ABF25583C47E65F"
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\segformer_loss_wave8_20261019\\training\\smoke_L07_CE_Lovasz\\iter_20\\model.pdopt",
+      "bytes": 27833458,
+      "sha256": "FF9509B84E5659E43666CEDEF3CA9EBBD8E0DCDDB973E79B4F2FEE4EEEB45886"
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\segformer_loss_wave8_20261019\\training\\smoke_L07_CE_Lovasz\\iter_20\\model.pdparams",
+      "bytes": 13898078,
+      "sha256": "FF9F5E3343CA05A402FA2FABFD52A665326106BBA6282C80C1F3BFE3D5F72B7B"
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\segformer_loss_wave8_20261019\\training\\smoke_L07_CE_Lovasz\\iter_20\\model.pdstates",
+      "bytes": 162,
+      "sha256": "87278173BA6805BB8227AC739BD4383696B4BBB7EC08BD62213E0D061EFBC35E"
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\segformer_loss_wave8_20261019\\training\\smoke_L08_WeightedCE\\best_model\\model.pdparams",
+      "bytes": 13898078,
+      "sha256": "F6E4489E22CD9512D609C875C353AEA1D6F9D8B9F4F1357C1C5A84B311FF40DD"
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\segformer_loss_wave8_20261019\\training\\smoke_L08_WeightedCE\\best_model\\model.pdstates",
+      "bytes": 162,
+      "sha256": "E90D108C883ECCFCB42520F64D949CC94E6B27837A0D40F8A11E8B92490FA053"
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\segformer_loss_wave8_20261019\\training\\smoke_L08_WeightedCE\\ema_best_model\\ema_model.pdparams",
+      "bytes": 13900490,
+      "sha256": "33C55AC9260B2B51E17EE4B1FAA4C077DB3182FC3DAED17F770672475DEC3934"
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\segformer_loss_wave8_20261019\\training\\smoke_L08_WeightedCE\\ema_best_model\\ema_model.pdstates",
+      "bytes": 162,
+      "sha256": "DACEFD316314C412ADEE078BE4E7B8DC51A5103AB6BEDD36DD7D6A2C2F72923C"
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\segformer_loss_wave8_20261019\\training\\smoke_L08_WeightedCE\\iter_20\\ema_model.pdparams",
+      "bytes": 13900490,
+      "sha256": "33C55AC9260B2B51E17EE4B1FAA4C077DB3182FC3DAED17F770672475DEC3934"
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\segformer_loss_wave8_20261019\\training\\smoke_L08_WeightedCE\\iter_20\\ema_model.pdstates",
+      "bytes": 162,
+      "sha256": "DACEFD316314C412ADEE078BE4E7B8DC51A5103AB6BEDD36DD7D6A2C2F72923C"
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\segformer_loss_wave8_20261019\\training\\smoke_L08_WeightedCE\\iter_20\\model.pdopt",
+      "bytes": 27833458,
+      "sha256": "3F3FE8725CA84F259A6CFA53B980FC961BF97C18EA17EDFAA6609D8229A8B6C6"
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\segformer_loss_wave8_20261019\\training\\smoke_L08_WeightedCE\\iter_20\\model.pdparams",
+      "bytes": 13898078,
+      "sha256": "F6E4489E22CD9512D609C875C353AEA1D6F9D8B9F4F1357C1C5A84B311FF40DD"
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\segformer_loss_wave8_20261019\\training\\smoke_L08_WeightedCE\\iter_20\\model.pdstates",
+      "bytes": 162,
+      "sha256": "E90D108C883ECCFCB42520F64D949CC94E6B27837A0D40F8A11E8B92490FA053"
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\segformer_loss_wave8_20261019\\training\\smoke_L09_WeightedCE\\best_model\\model.pdparams",
+      "bytes": 13898078,
+      "sha256": "42E522EC9AC77B388A6B4CD61F78DA3C18C3B30B477E85103DC7905DC804B625"
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\segformer_loss_wave8_20261019\\training\\smoke_L09_WeightedCE\\best_model\\model.pdstates",
+      "bytes": 162,
+      "sha256": "6B1F73FDF3CA596E0B4773A1931A4FC1B872C25BCEA948E7BF5CCAE930B6BE8E"
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\segformer_loss_wave8_20261019\\training\\smoke_L09_WeightedCE\\ema_best_model\\ema_model.pdparams",
+      "bytes": 13900490,
+      "sha256": "124248A55845B3D4BD2D06B4712DBA9BF47C72200E34C61819E0BD2E202C8433"
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\segformer_loss_wave8_20261019\\training\\smoke_L09_WeightedCE\\ema_best_model\\ema_model.pdstates",
+      "bytes": 162,
+      "sha256": "248A9B1985B1DA5C0E87882B62C8575066AF6331E2883ADCBC599962FCC765DE"
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\segformer_loss_wave8_20261019\\training\\smoke_L09_WeightedCE\\iter_20\\ema_model.pdparams",
+      "bytes": 13900490,
+      "sha256": "124248A55845B3D4BD2D06B4712DBA9BF47C72200E34C61819E0BD2E202C8433"
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\segformer_loss_wave8_20261019\\training\\smoke_L09_WeightedCE\\iter_20\\ema_model.pdstates",
+      "bytes": 162,
+      "sha256": "248A9B1985B1DA5C0E87882B62C8575066AF6331E2883ADCBC599962FCC765DE"
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\segformer_loss_wave8_20261019\\training\\smoke_L09_WeightedCE\\iter_20\\model.pdopt",
+      "bytes": 27833458,
+      "sha256": "1982C41E84CC40C226E85E9B6B66A31006620B32E2DC17A126C9B3D76C47CC89"
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\segformer_loss_wave8_20261019\\training\\smoke_L09_WeightedCE\\iter_20\\model.pdparams",
+      "bytes": 13898078,
+      "sha256": "42E522EC9AC77B388A6B4CD61F78DA3C18C3B30B477E85103DC7905DC804B625"
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\segformer_loss_wave8_20261019\\training\\smoke_L09_WeightedCE\\iter_20\\model.pdstates",
+      "bytes": 162,
+      "sha256": "6B1F73FDF3CA596E0B4773A1931A4FC1B872C25BCEA948E7BF5CCAE930B6BE8E"
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\segformer_loss_wave8_20261019\\training\\smoke_L10_WeightedCE\\best_model\\model.pdparams",
+      "bytes": 13898078,
+      "sha256": "0A6E0A9D601756535AD98E5858254A446C411E465004E82C03A8847E04FFAAE3"
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\segformer_loss_wave8_20261019\\training\\smoke_L10_WeightedCE\\best_model\\model.pdstates",
+      "bytes": 162,
+      "sha256": "6DC20FC3E6B40CCB349DAE167CB20526B5C3599386C96D9AB790A9572479E2D1"
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\segformer_loss_wave8_20261019\\training\\smoke_L10_WeightedCE\\ema_best_model\\ema_model.pdparams",
+      "bytes": 13900490,
+      "sha256": "8E52A19EEB96EBDB286B9CFEED1DBEE6702DCAF65E61C81F28900D6C078B9C6D"
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\segformer_loss_wave8_20261019\\training\\smoke_L10_WeightedCE\\ema_best_model\\ema_model.pdstates",
+      "bytes": 162,
+      "sha256": "8CF5A3FF5E5C75ED4271D58B25E0C57441408AC973DB6540399278BC842E25AB"
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\segformer_loss_wave8_20261019\\training\\smoke_L10_WeightedCE\\iter_20\\ema_model.pdparams",
+      "bytes": 13900490,
+      "sha256": "8E52A19EEB96EBDB286B9CFEED1DBEE6702DCAF65E61C81F28900D6C078B9C6D"
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\segformer_loss_wave8_20261019\\training\\smoke_L10_WeightedCE\\iter_20\\ema_model.pdstates",
+      "bytes": 162,
+      "sha256": "8CF5A3FF5E5C75ED4271D58B25E0C57441408AC973DB6540399278BC842E25AB"
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\segformer_loss_wave8_20261019\\training\\smoke_L10_WeightedCE\\iter_20\\model.pdopt",
+      "bytes": 27833458,
+      "sha256": "72EDF1D935E533A90AFB76D3BC93C98D4E0352C6B126C9238DA44187C3A35E8B"
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\segformer_loss_wave8_20261019\\training\\smoke_L10_WeightedCE\\iter_20\\model.pdparams",
+      "bytes": 13898078,
+      "sha256": "0A6E0A9D601756535AD98E5858254A446C411E465004E82C03A8847E04FFAAE3"
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\segformer_loss_wave8_20261019\\training\\smoke_L10_WeightedCE\\iter_20\\model.pdstates",
+      "bytes": 162,
+      "sha256": "6DC20FC3E6B40CCB349DAE167CB20526B5C3599386C96D9AB790A9572479E2D1"
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\segformer_loss_wave8_20261019\\training\\smoke_L11_TopKCE\\best_model\\model.pdparams",
+      "bytes": 13898078,
+      "sha256": "66050FDB7F4B60DB08BB4BD75EBD14D1D877E1574B078ED78741257B6BEA68DF"
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\segformer_loss_wave8_20261019\\training\\smoke_L11_TopKCE\\best_model\\model.pdstates",
+      "bytes": 162,
+      "sha256": "5AE12A0F798E6C6B1C5D78298317FEF1E566E4E3DD296FCE42E9791CC7236617"
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\segformer_loss_wave8_20261019\\training\\smoke_L11_TopKCE\\ema_best_model\\ema_model.pdparams",
+      "bytes": 13900490,
+      "sha256": "5B360AE3C89E6EB951A961682D28E0707811BDADAFA2D1951521A90B8A3F442D"
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\segformer_loss_wave8_20261019\\training\\smoke_L11_TopKCE\\ema_best_model\\ema_model.pdstates",
+      "bytes": 162,
+      "sha256": "38BB15F358713F835ADA7D9F0EEACD71AC6FD403F3E8171C1425D9F949986E38"
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\segformer_loss_wave8_20261019\\training\\smoke_L11_TopKCE\\iter_20\\ema_model.pdparams",
+      "bytes": 13900490,
+      "sha256": "5B360AE3C89E6EB951A961682D28E0707811BDADAFA2D1951521A90B8A3F442D"
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\segformer_loss_wave8_20261019\\training\\smoke_L11_TopKCE\\iter_20\\ema_model.pdstates",
+      "bytes": 162,
+      "sha256": "38BB15F358713F835ADA7D9F0EEACD71AC6FD403F3E8171C1425D9F949986E38"
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\segformer_loss_wave8_20261019\\training\\smoke_L11_TopKCE\\iter_20\\model.pdopt",
+      "bytes": 27833458,
+      "sha256": "BFD34E24C4F7EFE5777B6D7EDB43FDD317EF8BF73E5410911044794DB29C83EB"
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\segformer_loss_wave8_20261019\\training\\smoke_L11_TopKCE\\iter_20\\model.pdparams",
+      "bytes": 13898078,
+      "sha256": "66050FDB7F4B60DB08BB4BD75EBD14D1D877E1574B078ED78741257B6BEA68DF"
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\segformer_loss_wave8_20261019\\training\\smoke_L11_TopKCE\\iter_20\\model.pdstates",
+      "bytes": 162,
+      "sha256": "5AE12A0F798E6C6B1C5D78298317FEF1E566E4E3DD296FCE42E9791CC7236617"
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\segformer_loss_wave8_20261019\\training\\smoke_L12_TopKCE\\best_model\\model.pdparams",
+      "bytes": 13898078,
+      "sha256": "847A7DBFBA71419DEE13080810A24D93CCBBE15DE7D356C39AFDDF83846FF3BF"
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\segformer_loss_wave8_20261019\\training\\smoke_L12_TopKCE\\best_model\\model.pdstates",
+      "bytes": 162,
+      "sha256": "F132F1C78314DCA862BA5B815CB4FFD1F5B087A1DA1B3D929BD70751D6803DC1"
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\segformer_loss_wave8_20261019\\training\\smoke_L12_TopKCE\\ema_best_model\\ema_model.pdparams",
+      "bytes": 13900490,
+      "sha256": "70044F1475FB806BE4582D2E52DADC37EC830BA05B2E4B8CD6ED902D5C47445A"
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\segformer_loss_wave8_20261019\\training\\smoke_L12_TopKCE\\ema_best_model\\ema_model.pdstates",
+      "bytes": 162,
+      "sha256": "F9197F0DC70BD9B44FC7C9758541FF54001520911883263171F9379AAC58C8E5"
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\segformer_loss_wave8_20261019\\training\\smoke_L12_TopKCE\\iter_20\\ema_model.pdparams",
+      "bytes": 13900490,
+      "sha256": "70044F1475FB806BE4582D2E52DADC37EC830BA05B2E4B8CD6ED902D5C47445A"
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\segformer_loss_wave8_20261019\\training\\smoke_L12_TopKCE\\iter_20\\ema_model.pdstates",
+      "bytes": 162,
+      "sha256": "F9197F0DC70BD9B44FC7C9758541FF54001520911883263171F9379AAC58C8E5"
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\segformer_loss_wave8_20261019\\training\\smoke_L12_TopKCE\\iter_20\\model.pdopt",
+      "bytes": 27833458,
+      "sha256": "3CFD124781E7078E068BEE719F2064187CB544557A9B37965990CB265B2CC72C"
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\segformer_loss_wave8_20261019\\training\\smoke_L12_TopKCE\\iter_20\\model.pdparams",
+      "bytes": 13898078,
+      "sha256": "847A7DBFBA71419DEE13080810A24D93CCBBE15DE7D356C39AFDDF83846FF3BF"
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\segformer_loss_wave8_20261019\\training\\smoke_L12_TopKCE\\iter_20\\model.pdstates",
+      "bytes": 162,
+      "sha256": "F132F1C78314DCA862BA5B815CB4FFD1F5B087A1DA1B3D929BD70751D6803DC1"
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\segformer_loss_wave8_20261019\\training\\smoke_L13_OHEM\\best_model\\model.pdparams",
+      "bytes": 13898078,
+      "sha256": "4422C7E6E31E53F308FB8B4767C2C299C9991487DB35CD522DE2920D46ABE554"
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\segformer_loss_wave8_20261019\\training\\smoke_L13_OHEM\\best_model\\model.pdstates",
+      "bytes": 162,
+      "sha256": "61653C565EBE4C6EB32AEDDB3958281948EF637D424861ABDF51F6055E54F1E9"
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\segformer_loss_wave8_20261019\\training\\smoke_L13_OHEM\\ema_best_model\\ema_model.pdparams",
+      "bytes": 13900490,
+      "sha256": "7D7EEAB30D51B42F34508AEABF9F90DA48AC05C57D968A4F724D1EFC652776F8"
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\segformer_loss_wave8_20261019\\training\\smoke_L13_OHEM\\ema_best_model\\ema_model.pdstates",
+      "bytes": 162,
+      "sha256": "5F139D4B9BA8AC12955CE712F8256184F89FC0F0089D8D2907E9E545FC442897"
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\segformer_loss_wave8_20261019\\training\\smoke_L13_OHEM\\iter_20\\ema_model.pdparams",
+      "bytes": 13900490,
+      "sha256": "7D7EEAB30D51B42F34508AEABF9F90DA48AC05C57D968A4F724D1EFC652776F8"
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\segformer_loss_wave8_20261019\\training\\smoke_L13_OHEM\\iter_20\\ema_model.pdstates",
+      "bytes": 162,
+      "sha256": "5F139D4B9BA8AC12955CE712F8256184F89FC0F0089D8D2907E9E545FC442897"
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\segformer_loss_wave8_20261019\\training\\smoke_L13_OHEM\\iter_20\\model.pdopt",
+      "bytes": 27833458,
+      "sha256": "170226CBA8902A5D6FD8F912984B885D10F37E35F688AC43F1DFC2A1918105BE"
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\segformer_loss_wave8_20261019\\training\\smoke_L13_OHEM\\iter_20\\model.pdparams",
+      "bytes": 13898078,
+      "sha256": "4422C7E6E31E53F308FB8B4767C2C299C9991487DB35CD522DE2920D46ABE554"
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\segformer_loss_wave8_20261019\\training\\smoke_L13_OHEM\\iter_20\\model.pdstates",
+      "bytes": 162,
+      "sha256": "61653C565EBE4C6EB32AEDDB3958281948EF637D424861ABDF51F6055E54F1E9"
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\segformer_loss_wave8_20261019\\training\\smoke_L14_SoftmaxFocal\\best_model\\model.pdparams",
+      "bytes": 13898078,
+      "sha256": "CF2D01BB4DC1F304C1FF01AC3A0528FD882136CE0BE63535124D2496D0808E40"
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\segformer_loss_wave8_20261019\\training\\smoke_L14_SoftmaxFocal\\best_model\\model.pdstates",
+      "bytes": 162,
+      "sha256": "3B855E53E51943A9A69B12B2A8CD068C6BBEAE745283A42BDFBB8196EC6B89E3"
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\segformer_loss_wave8_20261019\\training\\smoke_L14_SoftmaxFocal\\ema_best_model\\ema_model.pdparams",
+      "bytes": 13900490,
+      "sha256": "8EF7947C7A5EC5ED90B6614CD797EEB50D532A6CB564BB4C85FA1333F63DE1BD"
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\segformer_loss_wave8_20261019\\training\\smoke_L14_SoftmaxFocal\\ema_best_model\\ema_model.pdstates",
+      "bytes": 162,
+      "sha256": "DE0C1F152339152B38080693EFFE3309122794ED2B792C550E6F2951D2A38022"
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\segformer_loss_wave8_20261019\\training\\smoke_L14_SoftmaxFocal\\iter_20\\ema_model.pdparams",
+      "bytes": 13900490,
+      "sha256": "8EF7947C7A5EC5ED90B6614CD797EEB50D532A6CB564BB4C85FA1333F63DE1BD"
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\segformer_loss_wave8_20261019\\training\\smoke_L14_SoftmaxFocal\\iter_20\\ema_model.pdstates",
+      "bytes": 162,
+      "sha256": "DE0C1F152339152B38080693EFFE3309122794ED2B792C550E6F2951D2A38022"
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\segformer_loss_wave8_20261019\\training\\smoke_L14_SoftmaxFocal\\iter_20\\model.pdopt",
+      "bytes": 27833458,
+      "sha256": "C68F0E4B972366CBFC99B7B21DEC1CD9E239E5D6CFF5AA049AE75A7DA30D6118"
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\segformer_loss_wave8_20261019\\training\\smoke_L14_SoftmaxFocal\\iter_20\\model.pdparams",
+      "bytes": 13898078,
+      "sha256": "CF2D01BB4DC1F304C1FF01AC3A0528FD882136CE0BE63535124D2496D0808E40"
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\segformer_loss_wave8_20261019\\training\\smoke_L14_SoftmaxFocal\\iter_20\\model.pdstates",
+      "bytes": 162,
+      "sha256": "3B855E53E51943A9A69B12B2A8CD068C6BBEAE745283A42BDFBB8196EC6B89E3"
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\segformer_loss_wave8_20261019\\training\\smoke_L15_SoftmaxFocal\\best_model\\model.pdparams",
+      "bytes": 13898078,
+      "sha256": "3E49AEA1C0A06C9D9C028F4167CEEEC52AD097A650E24731FBC79CDF340755AD"
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\segformer_loss_wave8_20261019\\training\\smoke_L15_SoftmaxFocal\\best_model\\model.pdstates",
+      "bytes": 162,
+      "sha256": "CB027DA06568AE29E4CFDFB69EACC84747DE30E390F1565B64C2485E909C0F6E"
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\segformer_loss_wave8_20261019\\training\\smoke_L15_SoftmaxFocal\\ema_best_model\\ema_model.pdparams",
+      "bytes": 13900490,
+      "sha256": "0EDC1077B770F13F2D44A1A49D7DCD471DFF70F8F1AF8F1C0608FBADEE3A819B"
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\segformer_loss_wave8_20261019\\training\\smoke_L15_SoftmaxFocal\\ema_best_model\\ema_model.pdstates",
+      "bytes": 162,
+      "sha256": "055E824FBCEEBDA904087809C0CED61F965389B6CBC6D094297724B627F9404B"
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\segformer_loss_wave8_20261019\\training\\smoke_L15_SoftmaxFocal\\iter_20\\ema_model.pdparams",
+      "bytes": 13900490,
+      "sha256": "0EDC1077B770F13F2D44A1A49D7DCD471DFF70F8F1AF8F1C0608FBADEE3A819B"
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\segformer_loss_wave8_20261019\\training\\smoke_L15_SoftmaxFocal\\iter_20\\ema_model.pdstates",
+      "bytes": 162,
+      "sha256": "055E824FBCEEBDA904087809C0CED61F965389B6CBC6D094297724B627F9404B"
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\segformer_loss_wave8_20261019\\training\\smoke_L15_SoftmaxFocal\\iter_20\\model.pdopt",
+      "bytes": 27833458,
+      "sha256": "0B74871F6F6706284634272E07990B218BD0C3DC13080E806A9F886FCB27CADF"
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\segformer_loss_wave8_20261019\\training\\smoke_L15_SoftmaxFocal\\iter_20\\model.pdparams",
+      "bytes": 13898078,
+      "sha256": "3E49AEA1C0A06C9D9C028F4167CEEEC52AD097A650E24731FBC79CDF340755AD"
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\segformer_loss_wave8_20261019\\training\\smoke_L15_SoftmaxFocal\\iter_20\\model.pdstates",
+      "bytes": 162,
+      "sha256": "CB027DA06568AE29E4CFDFB69EACC84747DE30E390F1565B64C2485E909C0F6E"
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\segformer_loss_wave8_20261019\\training\\smoke_L16_CE_Focal\\best_model\\model.pdparams",
+      "bytes": 13898078,
+      "sha256": "28E018D72F326D260C7D96549F7B9127F1CE3B93828C20108CB656EF6CAB43A4"
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\segformer_loss_wave8_20261019\\training\\smoke_L16_CE_Focal\\best_model\\model.pdstates",
+      "bytes": 162,
+      "sha256": "276BE8E37E4EBC831F519E61A335AB9BD3629F6F56EDF2E4001CC31254B5E767"
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\segformer_loss_wave8_20261019\\training\\smoke_L16_CE_Focal\\ema_best_model\\ema_model.pdparams",
+      "bytes": 13900490,
+      "sha256": "B1EBD0DB8A0CCBF7A2A66AFD95164F8C10199A38B1B4E7C1C7FA73FE8F8AF175"
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\segformer_loss_wave8_20261019\\training\\smoke_L16_CE_Focal\\ema_best_model\\ema_model.pdstates",
+      "bytes": 162,
+      "sha256": "1E77026FD321BD387899A538AD1F869CBAF21FEA7C4DD269512F3A4470F2D6AA"
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\segformer_loss_wave8_20261019\\training\\smoke_L16_CE_Focal\\iter_20\\ema_model.pdparams",
+      "bytes": 13900490,
+      "sha256": "B1EBD0DB8A0CCBF7A2A66AFD95164F8C10199A38B1B4E7C1C7FA73FE8F8AF175"
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\segformer_loss_wave8_20261019\\training\\smoke_L16_CE_Focal\\iter_20\\ema_model.pdstates",
+      "bytes": 162,
+      "sha256": "1E77026FD321BD387899A538AD1F869CBAF21FEA7C4DD269512F3A4470F2D6AA"
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\segformer_loss_wave8_20261019\\training\\smoke_L16_CE_Focal\\iter_20\\model.pdopt",
+      "bytes": 27833458,
+      "sha256": "40161297C9CCAEE0E6313F10156EA547AEFB7D4CBB2F65313362C163512B4093"
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\segformer_loss_wave8_20261019\\training\\smoke_L16_CE_Focal\\iter_20\\model.pdparams",
+      "bytes": 13898078,
+      "sha256": "28E018D72F326D260C7D96549F7B9127F1CE3B93828C20108CB656EF6CAB43A4"
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\segformer_loss_wave8_20261019\\training\\smoke_L16_CE_Focal\\iter_20\\model.pdstates",
+      "bytes": 162,
+      "sha256": "276BE8E37E4EBC831F519E61A335AB9BD3629F6F56EDF2E4001CC31254B5E767"
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\segformer_loss_wave8_20261019\\training\\smoke_L17_OHEM_Dice\\best_model\\model.pdparams",
+      "bytes": 13898078,
+      "sha256": "165F6DDCD38C9297757A609B5659D10BD6D282580D0214E939EDFE8F7567516E"
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\segformer_loss_wave8_20261019\\training\\smoke_L17_OHEM_Dice\\best_model\\model.pdstates",
+      "bytes": 162,
+      "sha256": "4F36EB7593DA26056B5C52E7E84263B62DF168FA8CD4982A5C4F08EFADC4B758"
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\segformer_loss_wave8_20261019\\training\\smoke_L17_OHEM_Dice\\ema_best_model\\ema_model.pdparams",
+      "bytes": 13900490,
+      "sha256": "D566014C8BA9920157BB69B6C6C8410E512F20126BAD8A51B0BA9D04D3A4835F"
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\segformer_loss_wave8_20261019\\training\\smoke_L17_OHEM_Dice\\ema_best_model\\ema_model.pdstates",
+      "bytes": 162,
+      "sha256": "9EF770B1E8FB6E082BBD22091EB91968445001B96BB19EF7F3454373D2ECA915"
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\segformer_loss_wave8_20261019\\training\\smoke_L17_OHEM_Dice\\iter_20\\ema_model.pdparams",
+      "bytes": 13900490,
+      "sha256": "D566014C8BA9920157BB69B6C6C8410E512F20126BAD8A51B0BA9D04D3A4835F"
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\segformer_loss_wave8_20261019\\training\\smoke_L17_OHEM_Dice\\iter_20\\ema_model.pdstates",
+      "bytes": 162,
+      "sha256": "9EF770B1E8FB6E082BBD22091EB91968445001B96BB19EF7F3454373D2ECA915"
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\segformer_loss_wave8_20261019\\training\\smoke_L17_OHEM_Dice\\iter_20\\model.pdopt",
+      "bytes": 27833458,
+      "sha256": "991E6921C9B36F131F49D2E41860B16E7E5DA9D555CD8B1A108616381F63F18A"
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\segformer_loss_wave8_20261019\\training\\smoke_L17_OHEM_Dice\\iter_20\\model.pdparams",
+      "bytes": 13898078,
+      "sha256": "165F6DDCD38C9297757A609B5659D10BD6D282580D0214E939EDFE8F7567516E"
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\segformer_loss_wave8_20261019\\training\\smoke_L17_OHEM_Dice\\iter_20\\model.pdstates",
+      "bytes": 162,
+      "sha256": "4F36EB7593DA26056B5C52E7E84263B62DF168FA8CD4982A5C4F08EFADC4B758"
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\segformer_loss_wave8_20261019\\training\\smoke_L19_CE_DualTask\\best_model\\model.pdparams",
+      "bytes": 13898078,
+      "sha256": "04DDF189755A5F250741BA51BEC54DE64239402F9C262D5273CD65C046AEF9A9"
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\segformer_loss_wave8_20261019\\training\\smoke_L19_CE_DualTask\\best_model\\model.pdstates",
+      "bytes": 162,
+      "sha256": "43EA036063244920F5D8A87669651C20FF338954FA7AC378C259515DB247AB07"
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\segformer_loss_wave8_20261019\\training\\smoke_L19_CE_DualTask\\ema_best_model\\ema_model.pdparams",
+      "bytes": 13900490,
+      "sha256": "180B5720B314A41BF152AAC50CDF05370466D2FC6BBA58EEEE9DF30339AF4F03"
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\segformer_loss_wave8_20261019\\training\\smoke_L19_CE_DualTask\\ema_best_model\\ema_model.pdstates",
+      "bytes": 162,
+      "sha256": "186B3CA56466D87022585DDF2DB11F42FC16F951FF7C815BA7A50AF8EE52FF9F"
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\segformer_loss_wave8_20261019\\training\\smoke_L19_CE_DualTask\\iter_20\\ema_model.pdparams",
+      "bytes": 13900490,
+      "sha256": "180B5720B314A41BF152AAC50CDF05370466D2FC6BBA58EEEE9DF30339AF4F03"
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\segformer_loss_wave8_20261019\\training\\smoke_L19_CE_DualTask\\iter_20\\ema_model.pdstates",
+      "bytes": 162,
+      "sha256": "186B3CA56466D87022585DDF2DB11F42FC16F951FF7C815BA7A50AF8EE52FF9F"
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\segformer_loss_wave8_20261019\\training\\smoke_L19_CE_DualTask\\iter_20\\model.pdopt",
+      "bytes": 27833458,
+      "sha256": "AE26EE92996A922218B1FCB7A07D2CB568F1E878139A7030450E0519AB111628"
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\segformer_loss_wave8_20261019\\training\\smoke_L19_CE_DualTask\\iter_20\\model.pdparams",
+      "bytes": 13898078,
+      "sha256": "04DDF189755A5F250741BA51BEC54DE64239402F9C262D5273CD65C046AEF9A9"
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\segformer_loss_wave8_20261019\\training\\smoke_L19_CE_DualTask\\iter_20\\model.pdstates",
+      "bytes": 162,
+      "sha256": "43EA036063244920F5D8A87669651C20FF338954FA7AC378C259515DB247AB07"
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\segformer_loss_wave8_20261019\\training\\smoke_L20_CE_RMI\\best_model\\model.pdparams",
+      "bytes": 13898078,
+      "sha256": "11703B24CA3967E343AC10863CDC2D18CCF1E67F53047947DE97F67EFECEE3FB"
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\segformer_loss_wave8_20261019\\training\\smoke_L20_CE_RMI\\best_model\\model.pdstates",
+      "bytes": 162,
+      "sha256": "53D22E6ACB4221CBE01A0B50B1A4086243948728C1D690FAD4108BCA74E51B39"
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\segformer_loss_wave8_20261019\\training\\smoke_L20_CE_RMI\\ema_best_model\\ema_model.pdparams",
+      "bytes": 13900490,
+      "sha256": "0296144545ED23BB3745632DB71645B588979CD85C61ADD45C8C693537CD3E1A"
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\segformer_loss_wave8_20261019\\training\\smoke_L20_CE_RMI\\ema_best_model\\ema_model.pdstates",
+      "bytes": 162,
+      "sha256": "CB3944D61287E0419E73E4D022370322642B97A567AD1A5400D6FE2490B2B12C"
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\segformer_loss_wave8_20261019\\training\\smoke_L20_CE_RMI\\iter_20\\ema_model.pdparams",
+      "bytes": 13900490,
+      "sha256": "0296144545ED23BB3745632DB71645B588979CD85C61ADD45C8C693537CD3E1A"
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\segformer_loss_wave8_20261019\\training\\smoke_L20_CE_RMI\\iter_20\\ema_model.pdstates",
+      "bytes": 162,
+      "sha256": "CB3944D61287E0419E73E4D022370322642B97A567AD1A5400D6FE2490B2B12C"
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\segformer_loss_wave8_20261019\\training\\smoke_L20_CE_RMI\\iter_20\\model.pdopt",
+      "bytes": 27833458,
+      "sha256": "36230FC02487C2915EC9105A585D5E5C3EFA9842C66DACB79B46345129EAC56B"
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\segformer_loss_wave8_20261019\\training\\smoke_L20_CE_RMI\\iter_20\\model.pdparams",
+      "bytes": 13898078,
+      "sha256": "11703B24CA3967E343AC10863CDC2D18CCF1E67F53047947DE97F67EFECEE3FB"
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\segformer_loss_wave8_20261019\\training\\smoke_L20_CE_RMI\\iter_20\\model.pdstates",
+      "bytes": 162,
+      "sha256": "53D22E6ACB4221CBE01A0B50B1A4086243948728C1D690FAD4108BCA74E51B39"
+    }
+  ],
+  "bytes": null
+}

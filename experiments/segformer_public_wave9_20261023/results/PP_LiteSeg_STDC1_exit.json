@@ -1,0 +1,7 @@
+{
+  "model": "PP-LiteSeg-STDC1",
+  "finished_at": "2026-10-23T20:38:14.7167320+08:00",
+  "exit_code": 0,
+  "result": "D:\\论文复现\\experiments\\segformer_public_wave9_20261023\\results\\ppliteseg_stdc1_test.json",
+  "log": "D:\\论文复现\\experiments\\segformer_public_wave9_20261023\\logs\\PP_LiteSeg_STDC1_test.log"
+}

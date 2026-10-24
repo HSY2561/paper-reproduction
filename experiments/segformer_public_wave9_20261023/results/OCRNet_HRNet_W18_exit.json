@@ -1,0 +1,7 @@
+{
+  "model": "OCRNet-HRNet-W18",
+  "finished_at": "2026-10-23T20:37:50.4571801+08:00",
+  "exit_code": 0,
+  "result": "D:\\论文复现\\experiments\\segformer_public_wave9_20261023\\results\\ocrnet_hrnetw18_test.json",
+  "log": "D:\\论文复现\\experiments\\segformer_public_wave9_20261023\\logs\\OCRNet_HRNet_W18_test.log"
+}

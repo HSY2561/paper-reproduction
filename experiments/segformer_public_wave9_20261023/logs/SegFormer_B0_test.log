@@ -1,0 +1,58 @@
+[2026/10/23 20:36:13] INFO: Use the following config to build model
+model:
+  backbone:
+    pretrained: https://bj.bcebos.com/paddleseg/dygraph/backbone/mix_vision_transformer_b0.tar.gz
+    type: MixVisionTransformer_B0
+  embedding_dim: 256
+  num_classes: 2
+  type: SegFormer
+WARNING: Logging before InitGoogleLogging() is written to STDERR
+W1023 20:36:13.609800 93412 gpu_resources.cc:116] Please NOTE: device: 0, GPU Compute Capability: 12.0, Driver API Version: 13.2, Runtime API Version: 12.9
+[2026/10/23 20:36:13] INFO: Loading pretrained model from https://bj.bcebos.com/paddleseg/dygraph/backbone/mix_vision_transformer_b0.tar.gz
+[2026/10/23 20:36:13] INFO: There are 176/176 variables loaded into MixVisionTransformer.
+[2026/10/23 20:36:13] INFO: Loading pretrained model from D:\���ĸ���\experiments\retrain_wave4_20261007\checkpoints\segformer_b0\model.pdparams
+[2026/10/23 20:36:13] INFO: There are 191/191 variables loaded into SegFormer.
+[2026/10/23 20:36:13] INFO: Use the following config to build val_dataset
+val_dataset:
+  dataset_root: C:/Users/user/algolab_data
+  mode: val
+  num_classes: 2
+  transforms:
+  - type: Normalize
+  type: Dataset
+  val_path: C:/Users/user/algolab_data/test.txt
+{
+  "model": "SegFormer-B0",
+  "config": "D:\\\u8bba\u6587\u590d\u73b0\\experiments\\segformer_public_wave9_20261023\\configs\\segformer_b0_test.yml",
+  "checkpoint": "D:\\\u8bba\u6587\u590d\u73b0\\experiments\\retrain_wave4_20261007\\checkpoints\\segformer_b0\\model.pdparams",
+  "checkpoint_sha256": "07f6048e0a6de174a2c3ca1915df4bcd635565a706d978288fba946ef240f2d5",
+  "images": 1124,
+  "confusion_matrix": [
+    [
+      240591323,
+      3900909
+    ],
+    [
+      3988840,
+      10488528
+    ]
+  ],
+  "mIoU": 0.7694752771365169,
+  "crackIoU": 0.5707024657425721,
+  "precision": 0.7289046819552426,
+  "recall": 0.7244775431556344,
+  "f1": 0.7266843698150869,
+  "boundary_counts": [
+    574340,
+    1571651,
+    567263,
+    1682267
+  ],
+  "boundary_precision": 0.3654373649111667,
+  "boundary_recall": 0.33720152627377226,
+  "boundary_F1": 0.3507521110814147,
+  "empty_predictions": 8,
+  "elapsed_s": 20.949418399948627,
+  "ms_per_image": 18.638272597819064,
+  "test_used": true
+}

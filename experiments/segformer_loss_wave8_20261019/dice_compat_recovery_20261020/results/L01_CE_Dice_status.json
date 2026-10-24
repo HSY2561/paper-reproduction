@@ -1,0 +1,36 @@
+{
+  "status": "complete",
+  "updated_at": "2026-10-22T00:44:19+08:00",
+  "selection": {
+    "model": "L01_CE_Dice",
+    "candidates": [
+      {
+        "variant": "best_model",
+        "mIoU": 0.8310113878812523,
+        "iter": 8000,
+        "weight": "D:\\论文复现\\experiments\\segformer_loss_wave8_20261019\\dice_compat_recovery_20261020\\training\\L01_CE_Dice\\best_model\\model.pdparams",
+        "state_sha256": "65085aa09b305bc9f0b01c81d57b9c0b781f4e3623897cdf14da4bde1a269306"
+      },
+      {
+        "variant": "ema_best_model",
+        "mIoU": 0.8291929338749466,
+        "iter": 13000,
+        "weight": "D:\\论文复现\\experiments\\segformer_loss_wave8_20261019\\dice_compat_recovery_20261020\\training\\L01_CE_Dice\\ema_best_model\\ema_model.pdparams",
+        "state_sha256": "19c99ce6678df642da315901a8410af41ed932e652b82b14b9b4a245b1bc20cf"
+      }
+    ],
+    "selected": {
+      "variant": "best_model",
+      "mIoU": 0.8310113878812523,
+      "iter": 8000,
+      "weight": "D:\\论文复现\\experiments\\segformer_loss_wave8_20261019\\dice_compat_recovery_20261020\\training\\L01_CE_Dice\\best_model\\model.pdparams",
+      "state_sha256": "65085aa09b305bc9f0b01c81d57b9c0b781f4e3623897cdf14da4bde1a269306"
+    },
+    "sha256": "7e15bd945d89208a6c05ed13ec97113520fdf2fb93f749de92afa374f90ab03d",
+    "checkpoint": "D:\\论文复现\\experiments\\segformer_loss_wave8_20261019\\dice_compat_recovery_20261020\\checkpoints\\L01_CE_Dice\\model.pdparams",
+    "selection": "highest exact validation mIoU from ordinary and EMA state",
+    "test_used": false,
+    "frozen_at": "2026-10-22T00:43:45+08:00"
+  },
+  "compatibility_version": "labels_clone_only"
+}

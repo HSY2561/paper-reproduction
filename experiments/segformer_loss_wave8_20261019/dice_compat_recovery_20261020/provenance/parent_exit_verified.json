@@ -1,0 +1,63 @@
+{
+  "checked_at": "2026-10-22T00:16:26+08:00",
+  "active": {
+    "tag": "L20_CE_RMI_profile",
+    "pid": 63088,
+    "runner_pid": 87792,
+    "started_at": "2026-10-21T23:55:55+08:00",
+    "command": [
+      "C:\\venv_bisenet\\Scripts\\python.exe",
+      "D:\\论文复现\\experiments\\segformer_loss_wave8_20261019\\loss_queue.py",
+      "--profile",
+      "L20_CE_RMI",
+      "--weights",
+      "D:\\论文复现\\experiments\\segformer_loss_wave8_20261019\\checkpoints\\L20_CE_RMI\\model.pdparams"
+    ],
+    "log": "D:\\论文复现\\experiments\\segformer_loss_wave8_20261019\\logs\\L20_CE_RMI_profile.log",
+    "test_used": false
+  },
+  "final_stage_receipt": {
+    "exit_code": 0,
+    "stop_reason": null,
+    "elapsed_seconds": 9.02,
+    "ended_at": "2026-10-21T23:56:04+08:00",
+    "command": [
+      "C:\\venv_bisenet\\Scripts\\python.exe",
+      "D:\\论文复现\\experiments\\segformer_loss_wave8_20261019\\loss_queue.py",
+      "--profile",
+      "L20_CE_RMI",
+      "--weights",
+      "D:\\论文复现\\experiments\\segformer_loss_wave8_20261019\\checkpoints\\L20_CE_RMI\\model.pdparams"
+    ],
+    "test_used": false
+  },
+  "queue_done": {
+    "states": {
+      "L01_CE_Dice": "gradient_preflight_failed",
+      "L02_CE_Dice": "gradient_preflight_failed",
+      "L03_CE_Dice": "gradient_preflight_failed",
+      "L04_CE_Dice": "gradient_preflight_failed",
+      "L05_CE_Lovasz": "complete",
+      "L06_CE_Lovasz": "complete",
+      "L07_CE_Lovasz": "complete",
+      "L08_WeightedCE": "complete",
+      "L09_WeightedCE": "complete",
+      "L10_WeightedCE": "complete",
+      "L11_TopKCE": "complete",
+      "L12_TopKCE": "complete",
+      "L13_OHEM": "complete",
+      "L14_SoftmaxFocal": "complete",
+      "L15_SoftmaxFocal": "complete",
+      "L16_CE_Focal": "complete",
+      "L17_OHEM_Dice": "complete",
+      "L18_WeightedCE_Dice": "gradient_preflight_failed",
+      "L19_CE_DualTask": "complete",
+      "L20_CE_RMI": "complete"
+    },
+    "complete": 15,
+    "ended_at": "2026-10-21T23:56:07+08:00",
+    "test_used": false,
+    "next_step": "freeze top2 qualifying loss recipes; matched seeds43/44; compare original public models only after this selection"
+  },
+  "note": "Parent lock gone and actual runner/child exited; safe to use GPU"
+}

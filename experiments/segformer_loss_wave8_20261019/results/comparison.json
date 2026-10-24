@@ -494,7 +494,25 @@
       "purpose": "按困难程度降低易样本贡献",
       "risk": "不同于双sigmoid FocalLoss；标量alpha不是前景权重",
       "role": "main",
-      "status": "needs_review"
+      "status": "complete",
+      "precision": 0.8163630338367471,
+      "recall": 0.7950589909838501,
+      "f1": 0.8055701857879467,
+      "crackIoU": 0.6744391141302587,
+      "mIoU": 0.8258745581115681,
+      "boundary_f1": 0.43772106195786903,
+      "params": 3470434,
+      "delta": {
+        "precision": -0.010402530122834874,
+        "recall": 0.004084951183954355,
+        "f1": -0.0029036830260823487,
+        "crackIoU": -0.004080515153342956,
+        "mIoU": -0.002309713319486484,
+        "boundary_f1": -0.011563762265769717
+      },
+      "main_gate": false,
+      "precision_gate": false,
+      "full_final_status": "pending matched-seed verification and final protocol"
     },
     {
       "id": "L16_CE_Focal",
@@ -520,7 +538,25 @@
       "purpose": "保留整体CE并强调困难像素",
       "risk": "复合目标改变梯度幅值；固定学习率并记录",
       "role": "main",
-      "status": "pending"
+      "status": "complete",
+      "precision": 0.8212378350859518,
+      "recall": 0.7968621775539735,
+      "f1": 0.808866404356093,
+      "crackIoU": 0.679072781856038,
+      "mIoU": 0.8284027969893504,
+      "boundary_f1": 0.4491374874811291,
+      "params": 3470434,
+      "delta": {
+        "precision": -0.005527728873630178,
+        "recall": 0.005888137754077705,
+        "f1": 0.00039253554206397645,
+        "crackIoU": 0.0005531525724363773,
+        "mIoU": 0.00021852555829582343,
+        "boundary_f1": -0.00014733674250966278
+      },
+      "main_gate": false,
+      "precision_gate": false,
+      "full_final_status": "pending matched-seed verification and final protocol"
     },
     {
       "id": "L17_OHEM_Dice",
@@ -546,7 +582,25 @@
       "purpose": "难像素和区域约束是否互补",
       "risk": "误检/漏检方向可能冲突；Dice置后",
       "role": "main",
-      "status": "pending"
+      "status": "complete",
+      "precision": 0.8190580641173772,
+      "recall": 0.7995936535993519,
+      "f1": 0.8092088283469001,
+      "crackIoU": 0.6795556161400885,
+      "mIoU": 0.8286289835473384,
+      "boundary_f1": 0.452091610187145,
+      "params": 3470434,
+      "delta": {
+        "precision": -0.007707499842204757,
+        "recall": 0.008619613799456083,
+        "f1": 0.0007349595328710601,
+        "crackIoU": 0.0010359868564868702,
+        "mIoU": 0.00044471211628382967,
+        "boundary_f1": 0.002806785963506253
+      },
+      "main_gate": false,
+      "precision_gate": false,
+      "full_final_status": "pending matched-seed verification and final protocol"
     },
     {
       "id": "L18_WeightedCE_Dice",
@@ -574,7 +628,7 @@
       "purpose": "背景惩罚和前景重叠的取舍",
       "risk": "两项目标强度可能抵消；不改变图像或标签文件",
       "role": "main",
-      "status": "pending"
+      "status": "gradient_preflight_failed"
     },
     {
       "id": "L19_CE_DualTask",
@@ -599,7 +653,25 @@
       "purpose": "官方梯度边界一致性，沿用同一分割头",
       "risk": "额外随机采样/卷积训练开销；必须先验证对logits梯度有效",
       "role": "main",
-      "status": "pending"
+      "status": "complete",
+      "precision": 0.8019836489706538,
+      "recall": 0.8125256788048962,
+      "f1": 0.807220246498196,
+      "crackIoU": 0.6767554899622759,
+      "mIoU": 0.8268935433482496,
+      "boundary_f1": 0.4362676401221174,
+      "params": 3470434,
+      "delta": {
+        "precision": -0.024781914988928233,
+        "recall": 0.021551639005000456,
+        "f1": -0.0012536223158330362,
+        "crackIoU": -0.0017641393213257972,
+        "mIoU": -0.0012907280828049483,
+        "boundary_f1": -0.013017184101521362
+      },
+      "main_gate": false,
+      "precision_gate": false,
+      "full_final_status": "pending matched-seed verification and final protocol"
     },
     {
       "id": "L20_CE_RMI",
@@ -628,9 +700,27 @@
       "purpose": "局部邻域互信息关系约束",
       "risk": "内部float64/矩阵逆开销和数值稳定性；RMI值可为负，不伪称纯FP32损失计算",
       "role": "main",
-      "status": "pending"
+      "status": "complete",
+      "precision": 0.8200797866719819,
+      "recall": 0.8001158571245945,
+      "f1": 0.8099748248749044,
+      "crackIoU": 0.6806367140844392,
+      "mIoU": 0.8292172065794239,
+      "boundary_f1": 0.45261051259932467,
+      "params": 3470434,
+      "delta": {
+        "precision": -0.006685777287600114,
+        "recall": 0.009141817324698764,
+        "f1": 0.0015009560608753025,
+        "crackIoU": 0.0021170848008374987,
+        "mIoU": 0.0010329351483693294,
+        "boundary_f1": 0.00332568837568592
+      },
+      "main_gate": false,
+      "precision_gate": false,
+      "full_final_status": "pending matched-seed verification and final protocol"
     }
   ],
-  "updated_at": "2026-10-20T14:25:57+08:00",
+  "updated_at": "2026-10-21T23:56:07+08:00",
   "test_used": false
 }

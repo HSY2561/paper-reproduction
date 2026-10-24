@@ -1,0 +1,52 @@
+{
+  "L01": {
+    "id": "L01_CE_Dice",
+    "label": "CE + 0.1 Dice",
+    "original_status": "gradient_preflight_failed",
+    "recovery_status": "complete",
+    "status": "complete_compat_clone",
+    "evidence_root": "D:\\论文复现\\experiments\\segformer_loss_wave8_20261019\\dice_compat_recovery_20261020",
+    "test_used": false,
+    "precision": 0.8220214613714869,
+    "recall": 0.8028586193642009,
+    "f1": 0.8123270429478651,
+    "crackIoU": 0.6839652600696596,
+    "mIoU": 0.8310113878812523,
+    "boundary_f1": 0.4564228068163309,
+    "params": 3470434,
+    "delta": {
+      "precision": -0.0047441025880951004,
+      "recall": 0.011884579564305109,
+      "f1": 0.0038531741338360126,
+      "crackIoU": 0.005445630786057976,
+      "mIoU": 0.002827116450197731,
+      "boundary_f1": 0.00713798259269216
+    },
+    "main_gate": true
+  },
+  "L02": {
+    "id": "L02_CE_Dice",
+    "label": "CE + 0.25 Dice",
+    "original_status": "gradient_preflight_failed",
+    "recovery_status": "complete",
+    "status": "complete_compat_clone",
+    "evidence_root": "D:\\论文复现\\experiments\\segformer_loss_wave8_20261019\\dice_compat_recovery_20261020",
+    "test_used": false,
+    "precision": 0.823967689494686,
+    "recall": 0.8007465817481837,
+    "f1": 0.8121911926447162,
+    "crackIoU": 0.6837726640982743,
+    "mIoU": 0.8309355669581353,
+    "boundary_f1": 0.457274454132324,
+    "params": 3470434,
+    "delta": {
+      "precision": -0.0027978744648959886,
+      "recall": 0.009772541948287916,
+      "f1": 0.003717323830687125,
+      "crackIoU": 0.005253034814672652,
+      "mIoU": 0.002751295527080755,
+      "boundary_f1": 0.007989629908685236
+    },
+    "main_gate": true
+  }
+}

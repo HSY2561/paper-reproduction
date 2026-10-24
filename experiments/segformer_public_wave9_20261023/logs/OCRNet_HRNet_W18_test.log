@@ -1,0 +1,57 @@
+[2026/10/23 20:36:39] WARNING: Add the `num_classes` in train_dataset and val_dataset config to model config. We suggest you manually set `num_classes` in model config.
+[2026/10/23 20:36:39] INFO: Use the following config to build model
+model:
+  backbone:
+    type: HRNet_W18
+  backbone_indices:
+  - 0
+  num_classes: 2
+  type: OCRNet
+WARNING: Logging before InitGoogleLogging() is written to STDERR
+W1023 20:36:39.845208 24644 gpu_resources.cc:116] Please NOTE: device: 0, GPU Compute Capability: 12.0, Driver API Version: 13.2, Runtime API Version: 12.9
+[2026/10/23 20:36:40] INFO: Loading pretrained model from D:\���ĸ���\experiments\retrain_wave4_20261007\checkpoints\ocrnet_hrnetw18\model.pdparams
+[2026/10/23 20:36:40] INFO: There are 1583/1583 variables loaded into OCRNet.
+[2026/10/23 20:36:40] INFO: Use the following config to build val_dataset
+val_dataset:
+  dataset_root: C:/Users/user/algolab_data
+  mode: val
+  num_classes: 2
+  transforms:
+  - type: Normalize
+  type: Dataset
+  val_path: C:/Users/user/algolab_data/test.txt
+{
+  "model": "OCRNet-HRNet-W18",
+  "config": "D:\\\u8bba\u6587\u590d\u73b0\\experiments\\segformer_public_wave9_20261023\\configs\\ocrnet_hrnetw18_test.yml",
+  "checkpoint": "D:\\\u8bba\u6587\u590d\u73b0\\experiments\\retrain_wave4_20261007\\checkpoints\\ocrnet_hrnetw18\\model.pdparams",
+  "checkpoint_sha256": "de78e90ca3d5921c385cc3f82a8a694f8ef4b1d6d055f49e31750c1361416570",
+  "images": 1124,
+  "confusion_matrix": [
+    [
+      239863375,
+      4628857
+    ],
+    [
+      3477731,
+      10999637
+    ]
+  ],
+  "mIoU": 0.7715088888298939,
+  "crackIoU": 0.5757095920308695,
+  "precision": 0.7038193827249126,
+  "recall": 0.7597815431644758,
+  "f1": 0.7307305799780787,
+  "boundary_counts": [
+    556304,
+    1562641,
+    556479,
+    1682267
+  ],
+  "boundary_precision": 0.35600243434032514,
+  "boundary_recall": 0.33079112887549955,
+  "boundary_F1": 0.3429340443624841,
+  "empty_predictions": 13,
+  "elapsed_s": 69.44861660012975,
+  "ms_per_image": 61.7870254449553,
+  "test_used": true
+}
