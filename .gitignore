@@ -153,4 +153,12 @@ Thumbs.db
 
 # Generated timestamp copy of the current report; keep local and publish canonical reports
 /实验结果汇总_20261020/refine-logs/实验结果总报告_20261020_*.md
+/实验结果汇总_20261020/
+/当前全部实验结果总报告_20261020.md
+
+# Wave10: retain canonical plan/results, keep timestamped generated snapshots local
+/experiments/segformer_lightfusion_wave10_20261024/refine-logs/EXPERIMENT_RESULTS_*.md
+/experiments/**/results/queue.lock
+/experiments/**/results/*.pid
+/experiments/**/logs/queue.log
 /refine-logs/EXPERIMENT_TRACKER_*.md

@@ -1,0 +1,30 @@
+[2026/10/24 20:30:34] INFO: Use the following config to build model
+model:
+  backbone:
+    pretrained: "D:\\\u8BBA\u6587\u590D\u73B0\\experiments\\segformer_lightfusion_wave10_20261024\\\
+      weights\\mit_b0_imagenet.pdparams"
+    type: MixVisionTransformer_B0
+  balance_modules:
+  - aligned
+  embedding_dim: 128
+  fusion_rank: 32
+  fusion_variant: gated_pair
+  num_classes: 2
+  type: SegFormer
+WARNING: Logging before InitGoogleLogging() is written to STDERR
+W1024 20:30:34.609604 57020 gpu_resources.cc:116] Please NOTE: device: 0, GPU Compute Capability: 12.0, Driver API Version: 13.2, Runtime API Version: 12.9
+[2026/10/24 20:30:34] INFO: Loading pretrained model from D:\论文复现\experiments\segformer_lightfusion_wave10_20261024\weights\mit_b0_imagenet.pdparams
+[2026/10/24 20:30:34] INFO: There are 176/176 variables loaded into MixVisionTransformer.
+[2026/10/24 20:30:34] INFO: Loading pretrained model from D:\论文复现\experiments\segformer_lightfusion_wave10_20261024\checkpoints\F12_GatedPair128\model.pdparams
+[2026/10/24 20:30:34] INFO: There are 195/195 variables loaded into SegFormer.
+D:\论文复现\experiments\segformer_lightfusion_wave10_20261024\wave6_runtime.py:219: VisibleDeprecationWarning: 
+Warning:
+API "paddle.device.cuda.synchronize" is deprecated since 2.5.0, and will be removed in future versions. Please use "paddle.device.synchronize" instead.
+    Reason: synchronize in paddle.device.cuda will be removed in future 
+  paddle.device.cuda.synchronize()
+D:\论文复现\experiments\segformer_lightfusion_wave10_20261024\wave6_runtime.py:223: VisibleDeprecationWarning: 
+Warning:
+API "paddle.device.cuda.synchronize" is deprecated since 2.5.0, and will be removed in future versions. Please use "paddle.device.synchronize" instead.
+    Reason: synchronize in paddle.device.cuda will be removed in future 
+  paddle.device.cuda.synchronize()
+{"model": "F12_GatedPair128", "params_total": 3437670, "params_trainable": 3437414, "latency": [{"input_shape": [1, 3, 400, 400], "repeat_ms": [7.749859999967157, 7.779420000006212, 7.54711400004453], "median_ms": 7.749859999967157}, {"input_shape": [1, 3, 480, 480], "repeat_ms": [7.834749999965425, 7.834849999999278, 7.46058599994285], "median_ms": 7.834749999965425}], "checkpoint": "D:\\论文复现\\experiments\\segformer_lightfusion_wave10_20261024\\checkpoints\\F12_GatedPair128\\model.pdparams", "feature_shapes_at400": [[1, 32, 100, 100], [1, 64, 50, 50], [1, 160, 25, 25], [1, 256, 13, 13]], "hardware": "NVIDIA GeForce RTX 5060", "paddle": "3.4.0", "protocol": "FP32 GPU network forward; batch1; sync; warmup20; 3x50; no I/O/postprocess", "test_used": false, "timestamp": "2026-10-24T20:30:37+08:00"}

@@ -1,0 +1,31 @@
+{
+  "model": "F08_Branch32",
+  "candidates": [
+    {
+      "variant": "best_model",
+      "mIoU": 0.8321874521936112,
+      "iter": 8000,
+      "weight": "D:\\论文复现\\experiments\\segformer_lightfusion_wave10_20261024\\training\\F08_Branch32\\best_model\\model.pdparams",
+      "state_sha256": "aaf53172cbecd9d5370a283c919c655f0d69c4604e24cef08e886996eec9c5be"
+    },
+    {
+      "variant": "ema_best_model",
+      "mIoU": 0.827507544575804,
+      "iter": 11000,
+      "weight": "D:\\论文复现\\experiments\\segformer_lightfusion_wave10_20261024\\training\\F08_Branch32\\ema_best_model\\ema_model.pdparams",
+      "state_sha256": "30b44aa83c2e82ca52d52880c1b84aa3abb87aa75addef1c60fb17a98f1d7cfd"
+    }
+  ],
+  "selected": {
+    "variant": "best_model",
+    "mIoU": 0.8321874521936112,
+    "iter": 8000,
+    "weight": "D:\\论文复现\\experiments\\segformer_lightfusion_wave10_20261024\\training\\F08_Branch32\\best_model\\model.pdparams",
+    "state_sha256": "aaf53172cbecd9d5370a283c919c655f0d69c4604e24cef08e886996eec9c5be"
+  },
+  "sha256": "f8f2c4f78b5ab6e16d1e6ba4f090b46689f142424620537bac41117f63b7573d",
+  "checkpoint": "D:\\论文复现\\experiments\\segformer_lightfusion_wave10_20261024\\checkpoints\\F08_Branch32\\model.pdparams",
+  "selection": "highest exact validation mIoU from ordinary and EMA state",
+  "test_used": false,
+  "frozen_at": "2026-10-24T19:03:00+08:00"
+}

@@ -14,7 +14,11 @@
 
 2026-10-24 新增独立兼容环境复核：在 RTX5060/Windows 上，PSPNet-ResNet50、DeepLabV3P-ResNet50、Fast-SCNN 的 GPU smoke 仍真实 exit=1；同环境 CPU 三步 smoke exit=0，但不作为 GPU 正式结果。冻结的 SegFormer-B0 + Aligned-A0 已完成 1124 张 test，mIoU 77.1658%、裂缝 IoU 57.4171%、F1 72.9490%，checkpoint SHA 已记录。详情见 [六模型最新对照表](实验结果汇总_20261024/六模型对照表_最新状态.md)、[兼容环境诊断](experiments/segformer_public_wave9_20261023/compat_env_20261024/GPU_BACKEND_DIAGNOSIS_20261024.md) 和更新后的 [Wave9 交付索引](experiments/segformer_public_wave9_20261023/DELIVERY_INDEX.md)。
 
-[全部实验结果总报告](当前全部实验结果总报告_20261020.md)汇总历史结果、三 seed 对照、负结果与局限，附[CSV、图表及来源索引](实验结果汇总_20261020/复现索引.md)。报告快照时间见正文，Wave8 后续进度以上述实时进度表为准。
+2026-10-24 新增 [Wave10 轻量多尺度融合](experiments/segformer_lightfusion_wave10_20261024/README.md)：当前已有 A0 控制、W64/W80/W96 宽度对照和 F01–F14 融合候选的真实 train/val/profile 回执；F15 正在训练，F16/F17 尚未开始，队列仍未完成。当前最佳验证 mIoU 为 W96 82.9317%，F08 的裂缝 IoU 68.6164%、mIoU 83.2187%，均为 seed42 验证结果，尚未访问 test，不代表最终门槛或 SOTA。
+
+[当前 Wave8/Wave9 总报告](SegFormer损失函数消融总报告_20261023.md)汇总已冻结的损失候选、三 seed 复核、公开模型 test、负结果与局限；最新 Wave10 以其波次目录和结果表为准。旧的 2026-10-20 生成包已从 GitHub 的当前视图移除，本地副本仍保留以便追溯。
+
+2026-10-24 清理记录见 [cleanup_manifest_20261024.json](cleanup_manifest_20261024.json) 和 [cleanup_result_20261024.json](cleanup_result_20261024.json)：仅删除本地可重建的旧训练权重/中间 smoke 目录及 GitHub 上的重复报告包；配置、结果、原始日志、失败证据和当前 Wave10 活跃实验均保留。权重本体不进入 GitHub。
 
 新增[原始 SegFormer-B0 训练与验证曲线](figures/segformer_training_curve_20261020/绘图说明与图注.md)，附原始 CSV、来源 SHA 和绘图脚本。这是历史 width256、seed42 基线的曲线，不是最新损失候选；蓝线为验证 mIoU，原日志没有记录验证 Loss。
 

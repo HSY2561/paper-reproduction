@@ -1,0 +1,61 @@
+[2026/10/24 16:50:02] INFO: Use the following config to build val_dataset
+val_dataset:
+  dataset_root: C:/Users/user/algolab_data
+  mode: val
+  num_classes: 2
+  transforms:
+  - type: Normalize
+  type: Dataset
+  val_path: C:/Users/user/algolab_data/val.txt
+[2026/10/24 16:50:02] INFO: Set device: gpu
+[2026/10/24 16:50:02] INFO: Use the following config to build model
+model:
+  backbone:
+    pretrained: "D:\\\u8BBA\u6587\u590D\u73B0\\experiments\\segformer_lightfusion_wave10_20261024\\\
+      weights\\mit_b0_imagenet.pdparams"
+    type: MixVisionTransformer_B0
+  balance_modules:
+  - aligned
+  embedding_dim: 128
+  fusion_rank: 32
+  fusion_variant: weighted_sum
+  num_classes: 2
+  type: SegFormer
+WARNING: Logging before InitGoogleLogging() is written to STDERR
+W1024 16:50:02.500609 58100 gpu_resources.cc:116] Please NOTE: device: 0, GPU Compute Capability: 12.0, Driver API Version: 13.2, Runtime API Version: 12.9
+[2026/10/24 16:50:02] INFO: Loading pretrained model from D:\论文复现\experiments\segformer_lightfusion_wave10_20261024\weights\mit_b0_imagenet.pdparams
+[2026/10/24 16:50:02] INFO: There are 176/176 variables loaded into MixVisionTransformer.
+[2026/10/24 16:50:02] INFO: Loading pretrained model from D:\论文复现\experiments\segformer_lightfusion_wave10_20261024\checkpoints\F02_Weighted128\model.pdparams
+[2026/10/24 16:50:02] INFO: There are 195/195 variables loaded into SegFormer.
+{
+  "n": 348,
+  "confusion_matrix": [
+    [
+      76136375,
+      850370
+    ],
+    [
+      910889,
+      3696510
+    ]
+  ],
+  "mIoU": 0.8273416572461989,
+  "crackIoU": 0.6772932309887062,
+  "precision": 0.8129772503342951,
+  "recall": 0.8022986504967337,
+  "f1": 0.807602652267863,
+  "boundary_counts_pred_gt": [
+    206859,
+    206101,
+    447029,
+    505846
+  ],
+  "boundary_precision": 0.4627417908010442,
+  "boundary_recall": 0.40743823218924335,
+  "boundary_f1": 0.43333262594599115,
+  "empty_predictions": 15,
+  "test_used": false,
+  "boundary_protocol": "inner boundary, zero outside image; exact Euclidean <=2px; global counts then harmonic mean",
+  "config": "D:\\\u8bba\u6587\u590d\u73b0\\experiments\\segformer_lightfusion_wave10_20261024\\configs\\F02_Weighted128.yml",
+  "model_path": "D:\\\u8bba\u6587\u590d\u73b0\\experiments\\segformer_lightfusion_wave10_20261024\\checkpoints\\F02_Weighted128\\model.pdparams"
+}

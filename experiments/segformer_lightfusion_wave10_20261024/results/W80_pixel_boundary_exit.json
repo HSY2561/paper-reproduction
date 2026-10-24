@@ -1,0 +1,16 @@
+{
+  "exit_code": 0,
+  "elapsed_seconds": 10.01,
+  "ended_at": "2026-10-24T15:41:40+08:00",
+  "command": [
+    "C:\\venv_bisenet\\Scripts\\python.exe",
+    "D:\\论文复现\\experiments\\segformer_lightfusion_wave10_20261024\\evaluate_val_boundary.py",
+    "--config",
+    "D:\\论文复现\\experiments\\segformer_lightfusion_wave10_20261024\\configs\\W80.yml",
+    "--model_path",
+    "D:\\论文复现\\experiments\\segformer_lightfusion_wave10_20261024\\checkpoints\\W80\\model.pdparams",
+    "--output",
+    "D:\\论文复现\\experiments\\segformer_lightfusion_wave10_20261024\\results\\W80_val"
+  ],
+  "test_used": false
+}

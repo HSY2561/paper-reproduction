@@ -1,0 +1,14 @@
+{
+  "exit_code": 0,
+  "elapsed_seconds": 7.01,
+  "ended_at": "2026-10-24T17:13:09+08:00",
+  "command": [
+    "C:\\venv_bisenet\\Scripts\\python.exe",
+    "D:\\论文复现\\experiments\\segformer_lightfusion_wave10_20261024\\lightfusion_queue.py",
+    "--profile",
+    "F03_ChannelWeighted128",
+    "--weights",
+    "D:\\论文复现\\experiments\\segformer_lightfusion_wave10_20261024\\checkpoints\\F03_ChannelWeighted128\\model.pdparams"
+  ],
+  "test_used": false
+}

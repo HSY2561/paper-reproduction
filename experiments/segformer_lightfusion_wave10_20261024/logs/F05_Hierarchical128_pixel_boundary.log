@@ -1,0 +1,61 @@
+[2026/10/24 17:56:46] INFO: Use the following config to build val_dataset
+val_dataset:
+  dataset_root: C:/Users/user/algolab_data
+  mode: val
+  num_classes: 2
+  transforms:
+  - type: Normalize
+  type: Dataset
+  val_path: C:/Users/user/algolab_data/val.txt
+[2026/10/24 17:56:46] INFO: Set device: gpu
+[2026/10/24 17:56:46] INFO: Use the following config to build model
+model:
+  backbone:
+    pretrained: "D:\\\u8BBA\u6587\u590D\u73B0\\experiments\\segformer_lightfusion_wave10_20261024\\\
+      weights\\mit_b0_imagenet.pdparams"
+    type: MixVisionTransformer_B0
+  balance_modules:
+  - aligned
+  embedding_dim: 128
+  fusion_rank: 32
+  fusion_variant: hierarchical
+  num_classes: 2
+  type: SegFormer
+WARNING: Logging before InitGoogleLogging() is written to STDERR
+W1024 17:56:46.676110 31996 gpu_resources.cc:116] Please NOTE: device: 0, GPU Compute Capability: 12.0, Driver API Version: 13.2, Runtime API Version: 12.9
+[2026/10/24 17:56:46] INFO: Loading pretrained model from D:\论文复现\experiments\segformer_lightfusion_wave10_20261024\weights\mit_b0_imagenet.pdparams
+[2026/10/24 17:56:46] INFO: There are 176/176 variables loaded into MixVisionTransformer.
+[2026/10/24 17:56:46] INFO: Loading pretrained model from D:\论文复现\experiments\segformer_lightfusion_wave10_20261024\checkpoints\F05_Hierarchical128\model.pdparams
+[2026/10/24 17:56:46] INFO: There are 194/194 variables loaded into SegFormer.
+{
+  "n": 348,
+  "confusion_matrix": [
+    [
+      76184393,
+      802352
+    ],
+    [
+      936323,
+      3671076
+    ]
+  ],
+  "mIoU": 0.828145397280839,
+  "crackIoU": 0.6786035068896886,
+  "precision": 0.8206404573852536,
+  "recall": 0.7967783992660501,
+  "f1": 0.8085334078052583,
+  "boundary_counts_pred_gt": [
+    217234,
+    216433,
+    460256,
+    505846
+  ],
+  "boundary_precision": 0.4719851560870472,
+  "boundary_recall": 0.42786342088303553,
+  "boundary_f1": 0.4488425912043901,
+  "empty_predictions": 9,
+  "test_used": false,
+  "boundary_protocol": "inner boundary, zero outside image; exact Euclidean <=2px; global counts then harmonic mean",
+  "config": "D:\\\u8bba\u6587\u590d\u73b0\\experiments\\segformer_lightfusion_wave10_20261024\\configs\\F05_Hierarchical128.yml",
+  "model_path": "D:\\\u8bba\u6587\u590d\u73b0\\experiments\\segformer_lightfusion_wave10_20261024\\checkpoints\\F05_Hierarchical128\\model.pdparams"
+}

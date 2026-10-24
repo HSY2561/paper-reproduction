@@ -1,0 +1,67 @@
+{
+  "model": "F03_ChannelWeighted128",
+  "params_total": 3421794,
+  "params_trainable": 3421538,
+  "latency": [
+    {
+      "input_shape": [
+        1,
+        3,
+        400,
+        400
+      ],
+      "repeat_ms": [
+        8.092180000021472,
+        7.531721999985166,
+        7.432148000007146
+      ],
+      "median_ms": 7.531721999985166
+    },
+    {
+      "input_shape": [
+        1,
+        3,
+        480,
+        480
+      ],
+      "repeat_ms": [
+        7.935405999996874,
+        7.656481999983953,
+        7.4460260000341805
+      ],
+      "median_ms": 7.656481999983953
+    }
+  ],
+  "checkpoint": "D:\\论文复现\\experiments\\segformer_lightfusion_wave10_20261024\\checkpoints\\F03_ChannelWeighted128\\model.pdparams",
+  "feature_shapes_at400": [
+    [
+      1,
+      32,
+      100,
+      100
+    ],
+    [
+      1,
+      64,
+      50,
+      50
+    ],
+    [
+      1,
+      160,
+      25,
+      25
+    ],
+    [
+      1,
+      256,
+      13,
+      13
+    ]
+  ],
+  "hardware": "NVIDIA GeForce RTX 5060",
+  "paddle": "3.4.0",
+  "protocol": "FP32 GPU network forward; batch1; sync; warmup20; 3x50; no I/O/postprocess",
+  "test_used": false,
+  "timestamp": "2026-10-24T17:13:08+08:00"
+}

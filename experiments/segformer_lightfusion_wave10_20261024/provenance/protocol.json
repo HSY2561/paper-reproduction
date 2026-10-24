@@ -1,0 +1,30 @@
+{
+  "created_at": "2026-10-24T14:54:48+08:00",
+  "parent": "A0=width128+Aligned",
+  "seed": 42,
+  "batch_size": 4,
+  "iters": 18000,
+  "precision": "fp32",
+  "optimizer": "AdamW",
+  "learning_rate": 6e-05,
+  "end_lr": 0,
+  "crop": [
+    400,
+    400
+  ],
+  "train": 1896,
+  "val": 348,
+  "test_used": false,
+  "candidate_rule": "one fusion_variant or width change; common ImageNet MiT-B0 initialization",
+  "gate_vs_A0": {
+    "mIoU": -0.002,
+    "crackIoU": -0.002,
+    "f1": -0.002,
+    "precision": -0.005,
+    "recall": -0.005,
+    "boundary_f1": -0.005
+  },
+  "efficiency_target": "params <= 0.99*A0 preferred; balanced Pareto allows accuracy within gate and reports exact latency",
+  "boundary": "zero-extension exact 2px symmetric boundary matching",
+  "selection": "highest exact validation mIoU among ordinary/EMA; freeze SHA; no test until candidate selected"
+}

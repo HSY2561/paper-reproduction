@@ -1,0 +1,16 @@
+{
+  "exit_code": 0,
+  "elapsed_seconds": 9.01,
+  "ended_at": "2026-10-24T19:48:06+08:00",
+  "command": [
+    "C:\\venv_bisenet\\Scripts\\python.exe",
+    "D:\\论文复现\\experiments\\segformer_lightfusion_wave10_20261024\\evaluate_val_boundary.py",
+    "--config",
+    "D:\\论文复现\\experiments\\segformer_lightfusion_wave10_20261024\\configs\\F10_DWSum128.yml",
+    "--model_path",
+    "D:\\论文复现\\experiments\\segformer_lightfusion_wave10_20261024\\checkpoints\\F10_DWSum128\\model.pdparams",
+    "--output",
+    "D:\\论文复现\\experiments\\segformer_lightfusion_wave10_20261024\\results\\F10_DWSum128_val"
+  ],
+  "test_used": false
+}

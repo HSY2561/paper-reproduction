@@ -1,0 +1,171 @@
+{
+  "created_at": "2026-10-24T14:54:48+08:00",
+  "parent": "SegFormer-B0 width128 + Aligned",
+  "jobs": [
+    {
+      "id": "W96",
+      "width": 96,
+      "variant": "base",
+      "rank": 32,
+      "label": "Aligned base width96",
+      "family": "width_control"
+    },
+    {
+      "id": "W80",
+      "width": 80,
+      "variant": "base",
+      "rank": 32,
+      "label": "Aligned base width80",
+      "family": "width_control"
+    },
+    {
+      "id": "W64",
+      "width": 64,
+      "variant": "base",
+      "rank": 32,
+      "label": "Aligned base width64",
+      "family": "width_control"
+    },
+    {
+      "id": "F01_Sum128",
+      "width": 128,
+      "variant": "sum",
+      "rank": 32,
+      "label": "four-branch sum + 1x1",
+      "family": "sum"
+    },
+    {
+      "id": "F02_Weighted128",
+      "width": 128,
+      "variant": "weighted_sum",
+      "rank": 32,
+      "label": "learned scalar weighted sum",
+      "family": "weighted_sum"
+    },
+    {
+      "id": "F03_ChannelWeighted128",
+      "width": 128,
+      "variant": "channel_weighted_sum",
+      "rank": 32,
+      "label": "channel weighted sum",
+      "family": "channel_weighted_sum"
+    },
+    {
+      "id": "F04_Pair128",
+      "width": 128,
+      "variant": "pair_sum",
+      "rank": 32,
+      "label": "pairwise low/high sum",
+      "family": "pair_sum"
+    },
+    {
+      "id": "F05_Hierarchical128",
+      "width": 128,
+      "variant": "hierarchical",
+      "rank": 32,
+      "label": "hierarchical pair fusion",
+      "family": "hierarchical"
+    },
+    {
+      "id": "F06_LowRank32",
+      "width": 128,
+      "variant": "lowrank_concat",
+      "rank": 32,
+      "label": "low-rank concat rank32",
+      "family": "lowrank"
+    },
+    {
+      "id": "F07_LowRank16",
+      "width": 128,
+      "variant": "lowrank_concat16",
+      "rank": 16,
+      "label": "low-rank concat rank16",
+      "family": "lowrank"
+    },
+    {
+      "id": "F08_Branch32",
+      "width": 128,
+      "variant": "branch_bottleneck",
+      "rank": 32,
+      "label": "per-branch bottleneck rank32",
+      "family": "branch_bottleneck"
+    },
+    {
+      "id": "F09_Branch16",
+      "width": 128,
+      "variant": "branch_bottleneck16",
+      "rank": 16,
+      "label": "per-branch bottleneck rank16",
+      "family": "branch_bottleneck"
+    },
+    {
+      "id": "F10_DWSum128",
+      "width": 128,
+      "variant": "dw_sum",
+      "rank": 32,
+      "label": "depthwise sum fusion",
+      "family": "depthwise"
+    },
+    {
+      "id": "F11_Separable128",
+      "width": 128,
+      "variant": "separable_sum",
+      "rank": 32,
+      "label": "separable sum fusion",
+      "family": "separable"
+    },
+    {
+      "id": "F12_GatedPair128",
+      "width": 128,
+      "variant": "gated_pair",
+      "rank": 32,
+      "label": "learned gated pair fusion",
+      "family": "gated_pair"
+    },
+    {
+      "id": "F13_Sum96",
+      "width": 96,
+      "variant": "sum",
+      "rank": 32,
+      "label": "sum fusion width96",
+      "family": "sum_width"
+    },
+    {
+      "id": "F14_LowRank96",
+      "width": 96,
+      "variant": "lowrank_concat",
+      "rank": 24,
+      "label": "low-rank concat width96 rank24",
+      "family": "lowrank_width"
+    },
+    {
+      "id": "F15_DWSum96",
+      "width": 96,
+      "variant": "dw_sum",
+      "rank": 32,
+      "label": "depthwise sum width96",
+      "family": "depthwise_width"
+    },
+    {
+      "id": "F16_Sum64",
+      "width": 64,
+      "variant": "sum",
+      "rank": 32,
+      "label": "sum fusion width64",
+      "family": "sum_width"
+    },
+    {
+      "id": "F17_Branch64",
+      "width": 64,
+      "variant": "branch_bottleneck16",
+      "rank": 16,
+      "label": "branch bottleneck width64 rank16",
+      "family": "branch_width"
+    }
+  ],
+  "controls": [
+    "A0"
+  ],
+  "module_count": 20,
+  "test_used": false
+}

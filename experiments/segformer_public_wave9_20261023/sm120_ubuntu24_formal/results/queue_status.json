@@ -1,0 +1,16 @@
+{
+  "device": "RTX5060 GPU SM12.0",
+  "smoke_exit_codes": {
+    "PSPNet_ResNet50": 0,
+    "FastSCNN": 0,
+    "DeepLabV3P_ResNet50": 0
+  },
+  "generated_at": "2026-10-24T21:16:17.4321949+08:00",
+  "queue_pid": 395,
+  "gpu_util": "99%",
+  "note": "Formal queue running sequentially; no test access before freeze",
+  "current_iter": 100,
+  "target_iters": 18000,
+  "gpu_memory": "7527 MiB / 8151 MiB",
+  "current_model": "PSPNet_ResNet50"
+}

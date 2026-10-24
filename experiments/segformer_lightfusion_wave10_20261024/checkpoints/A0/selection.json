@@ -1,0 +1,9 @@
+{
+  "model": "A0",
+  "source": "wave7 M13_Aligned",
+  "checkpoint": "D:\\论文复现\\experiments\\segformer_lightfusion_wave10_20261024\\checkpoints\\A0\\model.pdparams",
+  "sha256": "000b90f9668e35d0a7cae0fd535134802c5a64a7ced2eab05f869cef726cd5ea",
+  "selection": "reused independent validation selection from wave7",
+  "test_used": false,
+  "frozen_at": "2026-10-24T14:54:48+08:00"
+}

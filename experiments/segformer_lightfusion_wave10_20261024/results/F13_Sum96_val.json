@@ -1,0 +1,32 @@
+{
+  "n": 348,
+  "confusion_matrix": [
+    [
+      76129617,
+      857128
+    ],
+    [
+      899763,
+      3707636
+    ]
+  ],
+  "mIoU": 0.8279672980773132,
+  "crackIoU": 0.6784916608518907,
+  "precision": 0.8122295040882727,
+  "recall": 0.8047134619771372,
+  "f1": 0.808454014609204,
+  "boundary_counts_pred_gt": [
+    215620,
+    214621,
+    461280,
+    505846
+  ],
+  "boundary_precision": 0.46743843218869235,
+  "boundary_recall": 0.42428130300526246,
+  "boundary_f1": 0.4448155160334505,
+  "empty_predictions": 5,
+  "test_used": false,
+  "boundary_protocol": "inner boundary, zero outside image; exact Euclidean <=2px; global counts then harmonic mean",
+  "config": "D:\\\u8bba\u6587\u590d\u73b0\\experiments\\segformer_lightfusion_wave10_20261024\\configs\\F13_Sum96.yml",
+  "model_path": "D:\\\u8bba\u6587\u590d\u73b0\\experiments\\segformer_lightfusion_wave10_20261024\\checkpoints\\F13_Sum96\\model.pdparams"
+}
