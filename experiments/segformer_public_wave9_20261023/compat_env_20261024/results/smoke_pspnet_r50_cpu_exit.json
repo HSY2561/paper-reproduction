@@ -1,7 +1,0 @@
-{
-  "model": "PSPNet-ResNet50",
-  "device": "cpu",
-  "exit_code": 0,
-  "log": "D:\\论文复现\\experiments\\segformer_public_wave9_20261023\\compat_env_20261024\\logs\\smoke_pspnet_r50_cpu.log",
-  "ended_at": "2026-10-24T11:09:13.0851945+08:00"
-}

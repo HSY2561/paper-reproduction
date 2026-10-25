@@ -1,9 +1,0 @@
-{
-  "model": "Fast-SCNN",
-  "device": "cpu",
-  "exit_code": 0,
-  "log": "D:\\论文复现\\experiments\\segformer_public_wave9_20261023\\compat_env_20261024\\logs\\smoke_fastscnn_cpu.log",
-  "python": "D:\\论文复现\\envs\\paddle32\\python.exe",
-  "paddle": "3.2.2",
-  "ended_at": "2026-10-24T11:04:29.7320773+08:00"
-}

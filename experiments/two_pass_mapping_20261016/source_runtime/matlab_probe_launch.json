@@ -1,6 +1,0 @@
-{
-  "command": "-batch \"disp(version); disp(ver); disp(license('test','image_toolbox')); disp(license('test','map_toolbox')); disp(license('test','statistics_toolbox')); disp(which('bwskel')); disp(which('polyshape'));\"",
-  "stderr": "D:\\论文复现\\experiments\\two_pass_mapping_20261016\\source_runtime\\matlab_probe.stderr.log",
-  "stdout": "D:\\论文复现\\experiments\\two_pass_mapping_20261016\\source_runtime\\matlab_probe.stdout.log",
-  "pid": 25256
-}

@@ -1,0 +1,401 @@
+{
+  "snapshot_at": "2026-10-25T16:18:05+08:00",
+  "data_root": "DATA_ROOT",
+  "split_sizes": {
+    "train": 1896,
+    "val": 348,
+    "test": 1124
+  },
+  "working_parent": "A0=SegFormer-B0+width128+Aligned",
+  "parameters": {
+    "B0": 3715170,
+    "A0": 3470434,
+    "W96": 3417314,
+    "F08_Branch32": 3438178
+  },
+  "training_counts": {
+    "wave6": 15,
+    "wave7": 22,
+    "wave7_followup": 9,
+    "loss20": 20,
+    "loss_additional_seed": 4,
+    "fusion20": 20,
+    "fusion_additional_seed": 4,
+    "total_excluding_reused_B0_and_public": 94,
+    "supplementary_verified_B0_control": 1,
+    "total_including_supplementary_control_excluding_prior_public": 95
+  },
+  "count_warning": "Runs and configurations are not independent algorithms; failed/deferred rows retained.",
+  "fusion_recovery": {
+    "state": {
+      "stage": "stages_1_to_4_complete_stage6_protocol_review",
+      "updated_at": "2026-10-25T15:46:58+08:00",
+      "test_used": false,
+      "candidates": [
+        "W96",
+        "F08_Branch32"
+      ],
+      "stage5": "L01 retained separately; no unregistered combination",
+      "next_step": "audit discovered WSL public models and unify frozen evaluations; no test run by recovery workflow"
+    },
+    "wrapper_exit_code": 0,
+    "queue_done_exists": true
+  },
+  "candidate_decisions": [
+    {
+      "id": "W96",
+      "n": 3,
+      "params": 3417314,
+      "seeds": [
+        42,
+        43,
+        44
+      ],
+      "parameter_reduction_vs_A0_pct": 1.5306442940565934,
+      "parameter_reduction_vs_B0_pct": 8.017291267963511,
+      "precision": 0.8256807584751084,
+      "sample_std_precision": 0.0008476142819166027,
+      "matched_A0_delta_precision": 0.007525157388183601,
+      "recall": 0.7952969415788242,
+      "sample_std_recall": 0.005007748819244547,
+      "matched_A0_delta_recall": -0.01064743904315646,
+      "f1": 0.8101980806619723,
+      "sample_std_f1": 0.002511598245734338,
+      "matched_A0_delta_f1": -0.0016919455608281897,
+      "crackIoU": 0.6809570654034786,
+      "sample_std_crackIoU": 0.003549181973821611,
+      "matched_A0_delta_crackIoU": -0.0023958020258668666,
+      "mIoU": 0.8294637772984014,
+      "sample_std_mIoU": 0.0018827480410193414,
+      "matched_A0_delta_mIoU": -0.0011675169815312803,
+      "boundary_f1": 0.4500224652953074,
+      "sample_std_boundary_f1": 0.00567670828902885,
+      "matched_A0_delta_boundary_f1": -0.0016212343361292625,
+      "accuracy_gate_mean": false,
+      "at_least_two_iou_within_tolerance": true,
+      "parameter_only_ge_1pct_gate": true,
+      "combined_gate": false,
+      "decision": "failed matched-A0 accuracy gate"
+    },
+    {
+      "id": "F08_Branch32",
+      "n": 3,
+      "params": 3438178,
+      "seeds": [
+        42,
+        43,
+        44
+      ],
+      "parameter_reduction_vs_A0_pct": 0.9294514749452087,
+      "parameter_reduction_vs_B0_pct": 7.45570189251098,
+      "precision": 0.8179103022211973,
+      "sample_std_precision": 0.007133182215151655,
+      "matched_A0_delta_precision": -0.0002452988657274391,
+      "recall": 0.8113464885502645,
+      "sample_std_recall": 0.01208581772408655,
+      "matched_A0_delta_recall": 0.0054021079282837725,
+      "f1": 0.8145400420541826,
+      "sample_std_f1": 0.002601567798426635,
+      "matched_A0_delta_f1": 0.0026500158313821354,
+      "crackIoU": 0.6871142826478438,
+      "sample_std_crackIoU": 0.0037053968044128706,
+      "matched_A0_delta_crackIoU": 0.0037614152184983762,
+      "mIoU": 0.8326263538284696,
+      "sample_std_mIoU": 0.0018759731734436708,
+      "matched_A0_delta_mIoU": 0.0019950595485369593,
+      "boundary_f1": 0.46114167644270543,
+      "sample_std_boundary_f1": 0.0035116367201212945,
+      "matched_A0_delta_boundary_f1": 0.009497976811268793,
+      "accuracy_gate_mean": true,
+      "at_least_two_iou_within_tolerance": true,
+      "parameter_only_ge_1pct_gate": false,
+      "combined_gate": false,
+      "decision": "accuracy-balance passes; parameter reduction below1%; no stable acceleration"
+    }
+  ],
+  "loss_alternatives": [
+    {
+      "id": "L01_CE_Dice",
+      "n": 3,
+      "params": 3470434,
+      "split": "Crack500_val348",
+      "comparator": "matched A0 seed42/43/44",
+      "mean_gate": true,
+      "label": "CE+0.1Dice",
+      "decision": "effective independent alternative; not combined with F08",
+      "precision": 0.81429669601705,
+      "sample_std_precision": 0.006715852059544791,
+      "matched_A0_delta_precision": -0.0038589050698747407,
+      "recall": 0.8161766179428639,
+      "sample_std_recall": 0.011545064611892359,
+      "matched_A0_delta_recall": 0.010232237320883186,
+      "f1": 0.8151676022086616,
+      "sample_std_f1": 0.002521092473022508,
+      "matched_A0_delta_f1": 0.003277575985861092,
+      "crackIoU": 0.688007548278349,
+      "sample_std_crackIoU": 0.0035882766902627862,
+      "matched_A0_delta_crackIoU": 0.004654680849003556,
+      "mIoU": 0.8330503313232872,
+      "sample_std_mIoU": 0.001816692051971021,
+      "matched_A0_delta_mIoU": 0.002419037043354555,
+      "boundary_f1": 0.4577621990051701,
+      "sample_std_boundary_f1": 0.0016396754048054,
+      "matched_A0_delta_boundary_f1": 0.006118499373733488,
+      "positive_IoU_seeds": 3
+    },
+    {
+      "id": "L02_CE_Dice",
+      "n": 3,
+      "params": 3470434,
+      "split": "Crack500_val348",
+      "comparator": "matched A0 seed42/43/44",
+      "mean_gate": false,
+      "label": "CE+0.25Dice",
+      "decision": "failed full matched-A0 gate",
+      "precision": 0.8126039709524496,
+      "sample_std_precision": 0.01053369548515532,
+      "matched_A0_delta_precision": -0.005551630134475127,
+      "recall": 0.8175043374074323,
+      "sample_std_recall": 0.014643353829600319,
+      "matched_A0_delta_recall": 0.01155995678545163,
+      "f1": 0.8149187430583789,
+      "sample_std_f1": 0.0025529175255571595,
+      "matched_A0_delta_f1": 0.003028716835578371,
+      "crackIoU": 0.687653207578052,
+      "sample_std_crackIoU": 0.0036337967114723696,
+      "matched_A0_delta_crackIoU": 0.004300340148706616,
+      "mIoU": 0.8328365259924826,
+      "sample_std_mIoU": 0.0018257975622411582,
+      "matched_A0_delta_mIoU": 0.0022052317125499377,
+      "boundary_f1": 0.45734708773270655,
+      "sample_std_boundary_f1": 0.003291785393753672,
+      "matched_A0_delta_boundary_f1": 0.005703388101269913,
+      "positive_IoU_seeds": 3
+    }
+  ],
+  "supplementary_B0_control": {
+    "stage": "control_complete_no_test",
+    "completed_at": "2026-10-25T16:15:16+08:00",
+    "train_iters": 18000,
+    "phase_exit_codes": {
+      "smoke": 0,
+      "train": 0,
+      "official_val": 0,
+      "pixel_boundary": 0,
+      "profile": 0
+    },
+    "checkpoint_sha256": "40177c7ec7613afc8b59b94d68f249262a3cd1a39b25f987ab3f5e2456817dd5",
+    "val_mIoU": 0.8271341358489355,
+    "source_record": "results/b0_verified_initialization_control.json",
+    "test_used": false
+  },
+  "unified_evaluation": {
+    "stage": "F08_Branch32_val",
+    "at": "2026-10-25T16:18:02+08:00",
+    "test_used": false
+  },
+  "historical_public_test_completed_count": 6,
+  "current_candidates_unified_test_completed": false,
+  "latency": {
+    "exit_code": 0,
+    "at": "2026-10-25T15:46:35+08:00",
+    "protocol": "same process; FP32; batch1; 50 warmup/model/size; eight interleaved random-order rounds; 100 synchronized forwards; no IO; inference only",
+    "summary": [
+      {
+        "model": "B0",
+        "size": 400,
+        "median_ms": 9.474152499969932,
+        "sample_sd_ms": 1.0826955552556077,
+        "paired_ratio_B0_median": 1.0,
+        "paired_ratio_B0_cv": 0.0,
+        "stable_pair_cv_below_10pct": true,
+        "params": 3715170,
+        "checkpoint_sha256": "07f6048e0a6de174a2c3ca1915df4bcd635565a706d978288fba946ef240f2d5"
+      },
+      {
+        "model": "A0",
+        "size": 400,
+        "median_ms": 10.48718549995101,
+        "sample_sd_ms": 0.7570610747758654,
+        "paired_ratio_B0_median": 1.1945241380060536,
+        "paired_ratio_B0_cv": 0.12050501661530234,
+        "stable_pair_cv_below_10pct": false,
+        "params": 3470434,
+        "checkpoint_sha256": "000b90f9668e35d0a7cae0fd535134802c5a64a7ced2eab05f869cef726cd5ea"
+      },
+      {
+        "model": "W96",
+        "size": 400,
+        "median_ms": 10.708991499996046,
+        "sample_sd_ms": 0.8439742496534218,
+        "paired_ratio_B0_median": 1.1861769422732547,
+        "paired_ratio_B0_cv": 0.10534426442608595,
+        "stable_pair_cv_below_10pct": false,
+        "params": 3417314,
+        "checkpoint_sha256": "3a2391ab69902e65a782803bac4a26858395ec687e7cb358aae52981e6749d37"
+      },
+      {
+        "model": "F08_Branch32",
+        "size": 400,
+        "median_ms": 12.368419000049471,
+        "sample_sd_ms": 1.7814128398871547,
+        "paired_ratio_B0_median": 1.3400842978890428,
+        "paired_ratio_B0_cv": 0.15313428680530972,
+        "stable_pair_cv_below_10pct": false,
+        "params": 3438178,
+        "checkpoint_sha256": "f8f2c4f78b5ab6e16d1e6ba4f090b46689f142424620537bac41117f63b7573d"
+      },
+      {
+        "model": "B0",
+        "size": 480,
+        "median_ms": 9.13434000001871,
+        "sample_sd_ms": 1.5044229022357558,
+        "paired_ratio_B0_median": 1.0,
+        "paired_ratio_B0_cv": 0.0,
+        "stable_pair_cv_below_10pct": true,
+        "params": 3715170,
+        "checkpoint_sha256": "07f6048e0a6de174a2c3ca1915df4bcd635565a706d978288fba946ef240f2d5"
+      },
+      {
+        "model": "A0",
+        "size": 480,
+        "median_ms": 9.643033499960438,
+        "sample_sd_ms": 0.807053369177575,
+        "paired_ratio_B0_median": 1.047586418490777,
+        "paired_ratio_B0_cv": 0.09831027361726337,
+        "stable_pair_cv_below_10pct": true,
+        "params": 3470434,
+        "checkpoint_sha256": "000b90f9668e35d0a7cae0fd535134802c5a64a7ced2eab05f869cef726cd5ea"
+      },
+      {
+        "model": "W96",
+        "size": 480,
+        "median_ms": 9.870857999994769,
+        "sample_sd_ms": 0.9993519181680846,
+        "paired_ratio_B0_median": 1.1189285709503851,
+        "paired_ratio_B0_cv": 0.17992752212895002,
+        "stable_pair_cv_below_10pct": false,
+        "params": 3417314,
+        "checkpoint_sha256": "3a2391ab69902e65a782803bac4a26858395ec687e7cb358aae52981e6749d37"
+      },
+      {
+        "model": "F08_Branch32",
+        "size": 480,
+        "median_ms": 11.804991000026348,
+        "sample_sd_ms": 1.7241994061152726,
+        "paired_ratio_B0_median": 1.2414089078261938,
+        "paired_ratio_B0_cv": 0.1614526951019387,
+        "stable_pair_cv_below_10pct": false,
+        "params": 3438178,
+        "checkpoint_sha256": "f8f2c4f78b5ab6e16d1e6ba4f090b46689f142424620537bac41117f63b7573d"
+      }
+    ],
+    "interpretation": "Measurement completed but W96/F08 paired CV>10% at both sizes; F08 observed slower; no acceleration. B0 self-ratio CV0 is tautological."
+  },
+  "peak_allocated_memory": {
+    "B0_control_s42": {
+      "measurement": {
+        "records": [
+          {
+            "size": 400,
+            "peak_allocated_bytes": 121853696,
+            "baseline_allocated_bytes": 16787456,
+            "increment_bytes": 105066240
+          },
+          {
+            "size": 480,
+            "peak_allocated_bytes": 168889856,
+            "baseline_allocated_bytes": 17632256,
+            "increment_bytes": 151257600
+          }
+        ],
+        "paddle": "3.4.0",
+        "hardware": "NVIDIA GeForce RTX 5060",
+        "checkpoint_sha256": "07f6048e0a6de174a2c3ca1915df4bcd635565a706d978288fba946ef240f2d5",
+        "protocol": "fresh process per model; eval FP32 batch1; peak allocated includes model/input, excludes allocator reserved and display memory",
+        "test_used": false
+      },
+      "exit_code": 0
+    },
+    "A0_recheck": {
+      "measurement": {
+        "records": [
+          {
+            "size": 400,
+            "peak_allocated_bytes": 69588224,
+            "baseline_allocated_bytes": 15808512,
+            "increment_bytes": 53779712
+          },
+          {
+            "size": 480,
+            "peak_allocated_bytes": 123821312,
+            "baseline_allocated_bytes": 16653312,
+            "increment_bytes": 107168000
+          }
+        ],
+        "paddle": "3.4.0",
+        "hardware": "NVIDIA GeForce RTX 5060",
+        "checkpoint_sha256": "000b90f9668e35d0a7cae0fd535134802c5a64a7ced2eab05f869cef726cd5ea",
+        "protocol": "fresh process per model; eval FP32 batch1; peak allocated includes model/input, excludes allocator reserved and display memory",
+        "test_used": false
+      },
+      "exit_code": 0
+    },
+    "W96": {
+      "measurement": {
+        "records": [
+          {
+            "size": 400,
+            "peak_allocated_bytes": 56555264,
+            "baseline_allocated_bytes": 15597056,
+            "increment_bytes": 40958208
+          },
+          {
+            "size": 480,
+            "peak_allocated_bytes": 97661696,
+            "baseline_allocated_bytes": 16441856,
+            "increment_bytes": 81219840
+          }
+        ],
+        "paddle": "3.4.0",
+        "hardware": "NVIDIA GeForce RTX 5060",
+        "checkpoint_sha256": "3a2391ab69902e65a782803bac4a26858395ec687e7cb358aae52981e6749d37",
+        "protocol": "fresh process per model; eval FP32 batch1; peak allocated includes model/input, excludes allocator reserved and display memory",
+        "test_used": false
+      },
+      "exit_code": 0
+    },
+    "F08_Branch32": {
+      "measurement": {
+        "records": [
+          {
+            "size": 400,
+            "peak_allocated_bytes": 59538176,
+            "baseline_allocated_bytes": 15681536,
+            "increment_bytes": 43856640
+          },
+          {
+            "size": 480,
+            "peak_allocated_bytes": 79593216,
+            "baseline_allocated_bytes": 16526336,
+            "increment_bytes": 63066880
+          }
+        ],
+        "paddle": "3.4.0",
+        "hardware": "NVIDIA GeForce RTX 5060",
+        "checkpoint_sha256": "f8f2c4f78b5ab6e16d1e6ba4f090b46689f142424620537bac41117f63b7573d",
+        "protocol": "fresh process per model; eval FP32 batch1; peak allocated includes model/input, excludes allocator reserved and display memory",
+        "test_used": false
+      },
+      "exit_code": 0
+    }
+  },
+  "FLOPs_status": "not fully measured; grid_sample coverage unresolved",
+  "claims": {
+    "SOTA": false,
+    "lowest_parameters": false,
+    "stable_acceleration": false
+  },
+  "historical_test_warning": "Historical test observed; differing recipes/backends and legacy boundary evaluation cannot be called unified final comparison.",
+  "previous_snapshot_at": "2026-10-25T15:57:38+08:00"
+}

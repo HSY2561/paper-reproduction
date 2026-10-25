@@ -1,4 +1,0 @@
-﻿frame_id,capture_relative_s,camera_X_mm,camera_Y_mm,camera_height_mm,yaw_deg,tilt_x_deg,tilt_y_deg,pose_source
-scan_001,0.0,130.00000000000003,124.99999999999999,500.0,0.0,0.0,0.0,synthetic_exact_control_points
-scan_002,5.0,300.0,124.99999999999999,500.0,0.0,0.0,0.0,synthetic_exact_control_points
-scan_003,10.0,470.0,124.99999999999999,500.0,0.0,0.0,0.0,synthetic_exact_control_points

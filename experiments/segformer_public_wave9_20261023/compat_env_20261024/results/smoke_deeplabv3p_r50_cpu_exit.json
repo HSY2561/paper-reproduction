@@ -1,7 +1,0 @@
-{
-  "model": "DeepLabV3P-ResNet50",
-  "device": "cpu",
-  "exit_code": 0,
-  "log": "D:\\论文复现\\experiments\\segformer_public_wave9_20261023\\compat_env_20261024\\logs\\smoke_deeplabv3p_r50_cpu.log",
-  "ended_at": "2026-10-24T11:08:57.1913398+08:00"
-}

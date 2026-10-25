@@ -1,8 +1,0 @@
-{
-  "released": true,
-  "test_used": false,
-  "released_at": "2026-10-18T15:57:25.506297+08:00",
-  "source_hashes_sha256": "b4237f76291b82160432ef7e6a05c71dc5c4ef23cceaba4c56a710779cbe65b6",
-  "config_hashes_sha256": "990b7c4fde793ff8349a55f4a171f383f8114bb4ef608c6a78b24c145ae6db15",
-  "notes": "24 constructors pass; exact frozen A0 CM reproduced; SE completed; full348 spatial audits reproduced all three old CMs; no stable speed claim; 23 formal attempts plus PSP deferred"
-}

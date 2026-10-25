@@ -1,5 +1,0 @@
-{
-  "started": "2026-10-16T00:51:50.5500442+08:00",
-  "pid": 92700,
-  "command": "-batch \"cd('D:/论文复现/experiments/two_pass_mapping_20261016/source_runtime/author_software'); set(groot,'defaultFigureVisible','off'); SCC; save('../scc_result.mat','PathEdge','res','node','edgeList','s','a','pathLength'); disp('SCC_COMPLETE');\""
-}

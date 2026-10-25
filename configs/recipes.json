@@ -1,0 +1,197 @@
+{
+  "schema_version": 1,
+  "scope": "Original recorded recipe fields; only dataset and initialization path values were made portable.",
+  "defaults": {
+    "seed": 42,
+    "save_interval": 1000,
+    "log_iters": 100,
+    "num_workers": 0,
+    "precision": "fp32",
+    "do_eval": true
+  },
+  "recipes": {
+    "A0": {
+      "template": "configs/A0.yml",
+      "source_id": "segformer_lightfusion_wave10_20261024/recovery_20261025/configs/A0_recheck.yml",
+      "source_config_sha256": "9e581be283882d911f3c2d720ae18aa52fd8452c304b71f5ec41d741a3ca1c84",
+      "template_sha256": "e8eaa53eb2ea2f93476a62044a9381cda991d0fd627c41fb74ba97e7fd475f00",
+      "path_only_changes": [
+        "model.backbone.pretrained",
+        "train_dataset.dataset_root",
+        "train_dataset.train_path",
+        "val_dataset.dataset_root",
+        "val_dataset.val_path"
+      ],
+      "model_type": "SegFormer",
+      "use_ema": true,
+      "historical_backend": "Windows / PaddlePaddle GPU 3.4.0",
+      "keep_checkpoint_max": 1
+    },
+    "B0": {
+      "template": "configs/B0.yml",
+      "source_id": "segformer_lightfusion_wave10_20261024/recovery_20261025/control_init_witness_20261025/configs/B0_s42_init_verified.yml",
+      "source_config_sha256": "b73723d58d996e47421efd29203422ea32b287c82dd508f9f85430fe0e40457b",
+      "template_sha256": "9ef1c68295586f289dcfb56e000e24490c241c47b07e956292fa74d3b2f202dc",
+      "path_only_changes": [
+        "model.backbone.pretrained",
+        "train_dataset.dataset_root",
+        "train_dataset.train_path",
+        "val_dataset.dataset_root",
+        "val_dataset.val_path"
+      ],
+      "model_type": "SegFormer",
+      "use_ema": true,
+      "historical_backend": "Windows / PaddlePaddle GPU 3.4.0",
+      "note": "Verified common-initialization B0 seed42 control recipe; distinct from the historical public SegFormer record.",
+      "keep_checkpoint_max": 1
+    },
+    "W96": {
+      "template": "configs/W96.yml",
+      "source_id": "segformer_lightfusion_wave10_20261024/configs/W96.yml",
+      "source_config_sha256": "409500682030fb4f08fb3b140e73cd25d8f411f27e2e2e65f6dcf23ede6c5b71",
+      "template_sha256": "35bd91ca556649a4fc2ec3ea4aedcb525190702caa44e05e4ec5f66576998351",
+      "path_only_changes": [
+        "model.backbone.pretrained",
+        "train_dataset.dataset_root",
+        "train_dataset.train_path",
+        "val_dataset.dataset_root",
+        "val_dataset.val_path"
+      ],
+      "model_type": "SegFormer",
+      "use_ema": true,
+      "historical_backend": "Windows / PaddlePaddle GPU 3.4.0",
+      "keep_checkpoint_max": 1
+    },
+    "F08": {
+      "template": "configs/F08.yml",
+      "source_id": "segformer_lightfusion_wave10_20261024/configs/F08_Branch32.yml",
+      "source_config_sha256": "902c1b239bac0ab8d2c8c5bb62b6facb87b1e852dac5582d7d90e9dd84f51d29",
+      "template_sha256": "8b6bc0ff22883ae6a373205cecb98b9c176bc415c5e344627e5b4aed14d014f3",
+      "path_only_changes": [
+        "model.backbone.pretrained",
+        "train_dataset.dataset_root",
+        "train_dataset.train_path",
+        "val_dataset.dataset_root",
+        "val_dataset.val_path"
+      ],
+      "model_type": "SegFormer",
+      "use_ema": true,
+      "historical_backend": "Windows / PaddlePaddle GPU 3.4.0",
+      "keep_checkpoint_max": 1
+    },
+    "public_segformer_b0": {
+      "template": "configs/public_segformer_b0.yml",
+      "source_id": "retrain_wave4_20261007/configs/public_segformer_b0.yml",
+      "source_config_sha256": "8ce299836a96800369e1eec7e7e9e745f51ca1197b643ded04ffe110e05ac085",
+      "template_sha256": "27b778bc9e49804b2e8749df4b10b8d1e6e65e195b6a137b62bd19a36c12b282",
+      "path_only_changes": [
+        "model.backbone.pretrained",
+        "train_dataset.dataset_root",
+        "train_dataset.train_path",
+        "val_dataset.dataset_root",
+        "val_dataset.val_path"
+      ],
+      "model_type": "SegFormer",
+      "use_ema": true,
+      "historical_backend": "Windows / PaddlePaddle GPU 3.4.0",
+      "note": "Historical public model recipe; original pretrained value was an upstream URL. Using the common local artifact reproduces the nominal recipe but does not retroactively witness its historical initialization hash.",
+      "keep_checkpoint_max": null
+    },
+    "public_ocrnet_hrnetw18": {
+      "template": "configs/public_ocrnet_hrnetw18.yml",
+      "source_id": "retrain_wave4_20261007/configs/public_ocrnet_hrnetw18.yml",
+      "source_config_sha256": "5a4ac96014e880ee19c31b40fb228a92098e1dbdd8c9bc1d7c38e74f132c0d1b",
+      "template_sha256": "6ee927b5f7f017ab2704ab40ee485080cb75dc2addb5363e059e79e68797b2ea",
+      "path_only_changes": [
+        "train_dataset.dataset_root",
+        "train_dataset.train_path",
+        "val_dataset.dataset_root",
+        "val_dataset.val_path"
+      ],
+      "model_type": "OCRNet",
+      "use_ema": true,
+      "historical_backend": "Windows / PaddlePaddle GPU 3.4.0",
+      "keep_checkpoint_max": null
+    },
+    "public_ppliteseg_stdc1": {
+      "template": "configs/public_ppliteseg_stdc1.yml",
+      "source_id": "retrain_wave4_20261007/configs/ppliteseg_stdc1_crack500_formal.yml",
+      "source_config_sha256": "3a599785d65189919fbe907165f1a90c88f62b761700dc40a6df14f07c0b64e5",
+      "template_sha256": "676783f52786b9182b33740be1117718d9ab3c0c7c8d4ea125ae9993b0905030",
+      "path_only_changes": [
+        "model.backbone.pretrained",
+        "train_dataset.dataset_root",
+        "train_dataset.train_path",
+        "val_dataset.dataset_root",
+        "val_dataset.val_path"
+      ],
+      "model_type": "PPLiteSeg",
+      "use_ema": true,
+      "historical_backend": "Windows / PaddlePaddle GPU 3.4.0",
+      "note": "Historical Windows run used additional compatibility changes in pp_liteseg.py and pyramid_pool.py. This minimal runtime intentionally contains only the SegFormer overlay; this recipe is not a claim of byte-identical historical PP-LiteSeg training reproduction.",
+      "keep_checkpoint_max": null
+    },
+    "public_pspnet_resnet50": {
+      "template": "configs/public_pspnet_resnet50.yml",
+      "source_id": "segformer_public_wave9_20261023/sm120_ubuntu24_formal/configs/linux_pspnet_r50_crack500.yml",
+      "source_config_sha256": "16a1e5864a873b84331a2a9834d8ce9eab91330c103699f8a26c90ea6a4052ff",
+      "template_sha256": "2b846fdf913abfa98eee867db7e15475e29d7c1b051a8f1bef50e4c008b41e1f",
+      "path_only_changes": [
+        "train_dataset.dataset_root",
+        "train_dataset.train_path",
+        "val_dataset.dataset_root",
+        "val_dataset.val_path"
+      ],
+      "model_type": "PSPNet",
+      "use_ema": false,
+      "historical_backend": "WSL2 Ubuntu 24.04 / PaddlePaddle GPU 3.3.0.dev20251209",
+      "keep_checkpoint_max": null
+    },
+    "public_deeplabv3p_resnet50": {
+      "template": "configs/public_deeplabv3p_resnet50.yml",
+      "source_id": "segformer_public_wave9_20261023/sm120_ubuntu24_formal/configs/linux_deeplabv3p_r50_crack500.yml",
+      "source_config_sha256": "80ce3de527c97fd99c2e4cb77b91eb660022517be4845d56526743d78a6b5540",
+      "template_sha256": "ad339d8c73447bee92e06ab6c1eb7dae5ed614b650a5f4e3aed01961508e6714",
+      "path_only_changes": [
+        "train_dataset.dataset_root",
+        "train_dataset.train_path",
+        "val_dataset.dataset_root",
+        "val_dataset.val_path"
+      ],
+      "model_type": "DeepLabV3P",
+      "use_ema": false,
+      "historical_backend": "WSL2 Ubuntu 24.04 / PaddlePaddle GPU 3.3.0.dev20251209",
+      "keep_checkpoint_max": null
+    },
+    "public_fastscnn": {
+      "template": "configs/public_fastscnn.yml",
+      "source_id": "segformer_public_wave9_20261023/sm120_ubuntu24_formal/configs/linux_fastscnn_crack500.yml",
+      "source_config_sha256": "b58e4356bcc7757cf5c03f4a7959de2b19d802ab56ef5e5b2feaf81acd7a7c4e",
+      "template_sha256": "977856e8ac170fd4ef96141e23d286e7f1080327378d0f52b1207fca56ebeb69",
+      "path_only_changes": [
+        "train_dataset.dataset_root",
+        "train_dataset.train_path",
+        "val_dataset.dataset_root",
+        "val_dataset.val_path"
+      ],
+      "model_type": "FastSCNN",
+      "use_ema": false,
+      "historical_backend": "WSL2 Ubuntu 24.04 / PaddlePaddle GPU 3.3.0.dev20251209",
+      "keep_checkpoint_max": null
+    }
+  },
+  "artifact_inputs": {
+    "mit_b0_imagenet": {
+      "path": "${ARTIFACT_ROOT}/pretrained/mit_b0_imagenet.pdparams",
+      "sha256": "211e15d5157b8d48b1931102c40094da0b578de1c153c5706360f7ad561a774e",
+      "upstream_url": "https://bj.bcebos.com/paddleseg/dygraph/backbone/mix_vision_transformer_b0.tar.gz",
+      "note": "Hash witnesses the common local initialization used by the current A0 family and verified B0 control; it does not establish the historical public SegFormer run initialization hash."
+    },
+    "stdc1_imagenet": {
+      "path": "${ARTIFACT_ROOT}/pretrained/stdc1_imagenet.pdparams",
+      "sha256": null,
+      "upstream_url": "https://bj.bcebos.com/paddleseg/dygraph/PP_STDCNet1.tar.gz",
+      "note": "Original published initialization URL retained as provenance. Extract the parameter file externally; no binary SHA witness is claimed here."
+    }
+  }
+}

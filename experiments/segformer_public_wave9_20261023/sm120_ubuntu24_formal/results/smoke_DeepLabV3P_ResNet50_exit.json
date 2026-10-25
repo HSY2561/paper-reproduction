@@ -1,8 +1,0 @@
-{
-  "device": "gpu",
-  "iters": 20,
-  "python": "Ubuntu-24.04:/root/sm120/venv/bin/python",
-  "exit_code": 0,
-  "note": "SM120 GPU forward/backward smoke passed; CUDNN 9.17 build vs 9.13 runtime warning",
-  "model": "DeepLabV3P-ResNet50"
-}

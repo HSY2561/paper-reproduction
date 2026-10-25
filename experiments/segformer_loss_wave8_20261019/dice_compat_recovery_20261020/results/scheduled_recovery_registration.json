@@ -1,9 +1,0 @@
-{
-  "task_name": "Codex-SegFormer-loss-dice-recovery-once-20261020",
-  "registered_at": "2026-10-20T09:12:16.2251595+08:00",
-  "start": "2026-10-20T09:12:26",
-  "state": 3,
-  "priority": 4,
-  "gpu_started_confirmed": false,
-  "policy": "Wait for parent queue and actual processes to exit before allocating GPU"
-}

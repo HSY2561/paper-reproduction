@@ -1,9 +1,0 @@
-{
-  "started_at": "2026-10-17T09:04:16.7589640+08:00",
-  "pid": 103940,
-  "stdout": "D:\\论文复现\\experiments\\segformer_balance_wave6_20261016\\logs\\queue_restart_20261017_090416.stdout.log",
-  "stderr": "D:\\论文复现\\experiments\\segformer_balance_wave6_20261016\\logs\\queue_restart_20261017_090416.stderr.log",
-  "archive": "D:\\论文复现\\experiments\\segformer_balance_wave6_20261016\\provenance\\interruption_20261017_090416",
-  "mode": "restart interrupted PSA only then remaining planned jobs",
-  "test_used": false
-}

@@ -1,8 +1,0 @@
-{
-  "name": "Codex-SegFormer-wave7-followup-once-20261019",
-  "registered_at": "2026-10-19T09:04:49.7909037+08:00",
-  "start": "2026-10-19T09:05:09",
-  "state": 3,
-  "script": "D:\\论文复现\\experiments\\segformer_aligned_wave7_20261018\\followup_20261019\\run_followup.ps1",
-  "priority": 4
-}

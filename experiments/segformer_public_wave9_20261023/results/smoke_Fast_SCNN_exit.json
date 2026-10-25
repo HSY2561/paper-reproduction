@@ -1,7 +1,0 @@
-{
-  "model": "Fast-SCNN",
-  "exit_code": 1,
-  "log": "D:\\论文复现\\experiments\\segformer_public_wave9_20261023\\logs\\smoke_Fast_SCNN.log",
-  "test_used": false,
-  "ended_at": "2026-10-23T21:57:50.3462755+08:00"
-}

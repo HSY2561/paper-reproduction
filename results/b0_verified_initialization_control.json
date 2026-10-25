@@ -1,0 +1,247 @@
+{
+  "snapshot_at": "2026-10-25T16:18:05+08:00",
+  "model": "SegFormer_B0_verified_initialization_seed42",
+  "train_iters": 18000,
+  "seed": 42,
+  "params": 3715170,
+  "phase_exit_codes": {
+    "smoke": 0,
+    "train": 0,
+    "official_val": 0,
+    "pixel_boundary": 0,
+    "profile": 0
+  },
+  "wrapper_exit_code": 0,
+  "checkpoint_sha256": "40177c7ec7613afc8b59b94d68f249262a3cd1a39b25f987ab3f5e2456817dd5",
+  "checkpoint_sha_match": true,
+  "selected_iter": 11000,
+  "selected_variant": "best_model",
+  "val": {
+    "n": 348,
+    "confusion_matrix": [
+      [
+        76196144,
+        790601
+      ],
+      [
+        954779,
+        3652620
+      ]
+    ],
+    "mIoU": 0.8271341358489355,
+    "crackIoU": 0.6766617265653946,
+    "precision": 0.8220657941614878,
+    "recall": 0.7927726684838886,
+    "f1": 0.8071535430721873,
+    "boundary_counts_pred_gt": [
+      219438,
+      217972,
+      463515,
+      505846
+    ],
+    "boundary_precision": 0.4734215721174072,
+    "boundary_recall": 0.4309058488156475,
+    "boundary_f1": 0.45116430102364724,
+    "empty_predictions": 6,
+    "test_used": false,
+    "boundary_protocol": "inner boundary, zero outside image; exact Euclidean <=2px; global counts then harmonic mean"
+  },
+  "corrected_control_groups": {
+    "B0": {
+      "n": 3,
+      "seeds": [
+        {
+          "seed": 42,
+          "precision": 0.8220657941614878,
+          "recall": 0.7927726684838886,
+          "f1": 0.8071535430721873,
+          "crackIoU": 0.6766617265653946,
+          "mIoU": 0.8271341358489355,
+          "boundary_f1": 0.45116430102364724
+        },
+        {
+          "seed": 43,
+          "precision": 0.8127118706817363,
+          "recall": 0.8099663172214953,
+          "f1": 0.8113367712286448,
+          "crackIoU": 0.6825623537351884,
+          "mIoU": 0.8301361370584727,
+          "boundary_f1": 0.4496991361167086
+        },
+        {
+          "seed": 44,
+          "precision": 0.8187260000993711,
+          "recall": 0.8011255374236093,
+          "f1": 0.8098301500337164,
+          "crackIoU": 0.6804324190002444,
+          "mIoU": 0.8290899362362512,
+          "boundary_f1": 0.45143837364492007
+        }
+      ],
+      "mean": {
+        "precision": 0.8178345549808651,
+        "recall": 0.801288174376331,
+        "f1": 0.8094401547781829,
+        "crackIoU": 0.6798854997669425,
+        "mIoU": 0.8287867363812198,
+        "boundary_f1": 0.4507672702617586
+      },
+      "sample_std": {
+        "precision": 0.004740250722877724,
+        "recall": 0.00859797809440357,
+        "f1": 0.0021187075486599352,
+        "crackIoU": 0.0029880914870605707,
+        "mIoU": 0.0015237947465403573,
+        "boundary_f1": 0.0009351266568220486
+      },
+      "initialization_SHA_verified": true,
+      "seed42_source": "D:\\\u8bba\u6587\u590d\u73b0\\experiments\\segformer_lightfusion_wave10_20261024\\recovery_20261025\\control_init_witness_20261025",
+      "old_seed42_retained_in_parent_historical_summary": true
+    },
+    "A0": {
+      "n": 3,
+      "seeds": [
+        {
+          "seed": 42,
+          "precision": 0.826765563959582,
+          "recall": 0.7909740397998958,
+          "f1": 0.808473868814029,
+          "crackIoU": 0.6785196292836017,
+          "mIoU": 0.8281842714310546,
+          "boundary_f1": 0.44928482422363875
+        },
+        {
+          "seed": 43,
+          "precision": 0.8082896097532678,
+          "recall": 0.8195495983742671,
+          "f1": 0.8138806606155718,
+          "crackIoU": 0.6861709725076731,
+          "mIoU": 0.8319891163477509,
+          "boundary_f1": 0.45420958974287934
+        },
+        {
+          "seed": 44,
+          "precision": 0.8194116295479243,
+          "recall": 0.8073095036917792,
+          "f1": 0.8133155492388007,
+          "crackIoU": 0.6853680004967614,
+          "mIoU": 0.8317204950609925,
+          "boundary_f1": 0.4514366849277918
+        }
+      ],
+      "mean": {
+        "precision": 0.8181556010869248,
+        "recall": 0.8059443806219807,
+        "f1": 0.8118900262228005,
+        "crackIoU": 0.6833528674293454,
+        "mIoU": 0.8306312942799327,
+        "boundary_f1": 0.45164369963143663
+      },
+      "sample_std": {
+        "precision": 0.009301796954330152,
+        "recall": 0.014336607259254326,
+        "f1": 0.002971941503153658,
+        "crackIoU": 0.00420491786396371,
+        "mIoU": 0.0021234358869821196,
+        "boundary_f1": 0.002468900599562309
+      }
+    },
+    "A21": {
+      "n": 3,
+      "seeds": [
+        {
+          "seed": 42,
+          "precision": 0.8223511579843742,
+          "recall": 0.7981527104555086,
+          "f1": 0.8100712605189366,
+          "crackIoU": 0.6807729182776228,
+          "mIoU": 0.8293207684507415,
+          "boundary_f1": 0.4515421584802928
+        },
+        {
+          "seed": 43,
+          "precision": 0.8116200747149248,
+          "recall": 0.8188311887032141,
+          "f1": 0.815209685153009,
+          "crackIoU": 0.6880624148740518,
+          "mIoU": 0.8330421437774407,
+          "boundary_f1": 0.4542766768918877
+        },
+        {
+          "seed": 44,
+          "precision": 0.8126204374231026,
+          "recall": 0.816240138959096,
+          "f1": 0.8144262662878745,
+          "crackIoU": 0.6869469549884859,
+          "mIoU": 0.8324638530913516,
+          "boundary_f1": 0.4555735682036781
+        }
+      ],
+      "mean": {
+        "precision": 0.8155305567074672,
+        "recall": 0.8110746793726062,
+        "f1": 0.81323573731994,
+        "crackIoU": 0.6852607627133869,
+        "mIoU": 0.8316089217731779,
+        "boundary_f1": 0.4537974678586195
+      },
+      "sample_std": {
+        "precision": 0.005927953501916749,
+        "recall": 0.011265493562864949,
+        "f1": 0.002768369799652618,
+        "crackIoU": 0.00392640082630271,
+        "mIoU": 0.002002583144250674,
+        "boundary_f1": 0.002057983737211213
+      }
+    },
+    "A10": {
+      "n": 3,
+      "seeds": [
+        {
+          "seed": 42,
+          "precision": 0.8255996403271888,
+          "recall": 0.7963271685391259,
+          "f1": 0.810699250218584,
+          "crackIoU": 0.681660421359008,
+          "mIoU": 0.8298360447012223,
+          "boundary_f1": 0.4510570755548329
+        },
+        {
+          "seed": 43,
+          "precision": 0.8254331006885842,
+          "recall": 0.7932538510339565,
+          "f1": 0.8090236165743239,
+          "crackIoU": 0.6792944241658943,
+          "mIoU": 0.8285776627989125,
+          "boundary_f1": 0.4546519744271159
+        },
+        {
+          "seed": 44,
+          "precision": 0.8098961241800018,
+          "recall": 0.8121343517242592,
+          "f1": 0.8110136936955292,
+          "crackIoU": 0.6821051591555067,
+          "mIoU": 0.8298526752768962,
+          "boundary_f1": 0.44087684396304827
+        }
+      ],
+      "mean": {
+        "precision": 0.8203096217319249,
+        "recall": 0.8005717904324472,
+        "f1": 0.8102455201628124,
+        "crackIoU": 0.6810200015601363,
+        "mIoU": 0.8294221275923437,
+        "boundary_f1": 0.44886196464833233
+      },
+      "sample_std": {
+        "precision": 0.009018737844662008,
+        "recall": 0.01013069286090921,
+        "f1": 0.0010698153858115708,
+        "crackIoU": 0.0015108477535966574,
+        "mIoU": 0.0007313752351018861,
+        "boundary_f1": 0.007145098931743301
+      }
+    }
+  },
+  "scope": "New verified-initialization B0 seed42 replaces historical seed42 in this separate corrected-control record. Existing fusion_multiseed B0 rows remain the labelled historical record; A0 matched candidate gates are unchanged. No final test claimed."
+}

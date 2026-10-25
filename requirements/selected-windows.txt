@@ -1,0 +1,15 @@
+# Selected observed Windows packages, captured 2026-10-25. Not a complete installation lock.
+# Python 3.12.10; GPU wheel source and system CUDA dependencies are separate.
+paddlepaddle-gpu==3.4.0
+numpy==2.4.1
+opencv-python-headless==4.11.0.86
+PyYAML==6.0.3
+pillow==12.1.0
+prettytable==3.18.0
+scikit-image==0.26.0
+scikit-learn==1.9.1
+scipy==1.18.1
+tqdm==4.70.1
+visualdl==2.5.3
+filelock==4.0.4
+matplotlib==3.11.2

@@ -1,8 +1,0 @@
-{
-  "batch_size": 4,
-  "run": "A_EMAU_context",
-  "iters": 20,
-  "test_used": false,
-  "exit_code": 0,
-  "ended_at": "2026-10-12T15:42:28.7507772+08:00"
-}

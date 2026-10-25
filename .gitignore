@@ -1,39 +1,34 @@
-# Local environments and generated caches
-envs/
-**/.venv/
-**/__pycache__/
-**/.pytest_cache/
+# Publish only the curated top-level directories; old local mirrors stay private.
+/*
+!/.gitignore
+!/.gitattributes
+!/README.md
+!/configs/
+!/docs/
+!/evidence/
+!/figures/
+!/overlays/
+!/requirements/
+!/results/
+!/runtime/
+!/scripts/
+!/third_party/
+# Local dependencies and outputs; source packages named datasets are intentionally allowed.
+/.cache/
+/.local_runs/
+/data/
+/artifacts/
+/runs/
+/outputs/
+/.venv/
+/venv/
+__pycache__/
 *.py[cod]
-*.bak*
-
-# Local datasets, downloaded references, and temporary workspaces
-data/
-tmp/
-external/
-DeepCrack  、CFD  CrackForest  、S2T-Crack/
-*.zip
-*.7z
-*.rar
-*.tar
-*.tar.gz
-*.pdf
-*.doc
-*.docx
-
-# PaddleSeg local datasets, downloaded weights, and build outputs
-PaddleSeg-release-2.8/dataset/
-PaddleSeg-release-2.8/pretrained/
-PaddleSeg-release-2.8/output/
-PaddleSeg-release-2.8/_tmp/
-PaddleSeg-release-2.8/dist/
-PaddleSeg-release-2.8/*.egg-info/
-PaddleSeg-release-2.8/*.png
-PaddleSeg-release-2.8/*.jpg
-PaddleSeg-release-2.8/*.jpeg
-
-# Experiment checkpoints and model artifacts
-experiments/**/iter_*/
-experiments/**/best_model/
+.env
+.env.*
+*.pem
+*.key
+id_rsa*
 *.pdparams
 *.pdopt
 *.pdstates
@@ -41,124 +36,10 @@ experiments/**/best_model/
 *.pt
 *.ckpt
 *.onnx
-
-# One-off remote administration scripts (some contain local credentials)
-/tmp_*.py
-/tmp_*.ps1
-/tmp_paper*.txt
-
-# Local-only snapshots and downloaded upstream components removed from the project view
-/PaddleSeg-release-2.8/EISeg/
-/PaddleSeg-release-2.8/Matting/
-/PaddleSeg-release-2.8/contrib/
-/PaddleSeg-release-2.8/deploy/
-/PaddleSeg-release-2.8/test_tipc/
-/PaddleSeg-release-2.8/docs/images/
-/PaddleSeg-release-2.8/docs/apis/
-/PaddleSeg-release-2.8/docs/config/
-/PaddleSeg-release-2.8/docs/data/
-/PaddleSeg-release-2.8/docs/evaluation/
-/PaddleSeg-release-2.8/docs/models/
-/PaddleSeg-release-2.8/docs/module/
-/PaddleSeg-release-2.8/docs/predict/
-/PaddleSeg-release-2.8/docs/static/
-/PaddleSeg-release-2.8/docs/train/
-/PaddleSeg-release-2.8/backup/
-/PaddleSeg-release-2.8/tests/benchmark/
-/PaddleSeg-release-2.8/tests/infer/
-/PaddleSeg-release-2.8/tests/install/
-/PaddleSeg-release-2.8/*.jpg
-/PaddleSeg-release-2.8/*.jpeg
-/PaddleSeg-release-2.8/*.png
-/PaddleSeg-release-2.8/*.zip
-/tmp_*.yml
-
-# Reference repositories: keep source/docs, omit downloaded archives and generated media
-/references/*.zip
-/references/**/*.pdf
-/references/**/_tmp_*/
-/references/Crack-Filling-Robot/CrackMaps/
-/references/Crack-Filling-Robot/Results/
-/references/Crack-Filling-Robot/Docs/5.Videos/
-/references/Crack-Filling-Robot/Docs/1.Images/
-/references/Crack-Filling-Robot/Software/*.mat
-
-# Editor and OS files
-.idea/
-.vscode/
+*.tar
+*.tar.gz
+*.zip
+*.whl
+*.log
 .DS_Store
 Thumbs.db
-
-# Publish authored project documents and figure exports
-!/大纲安排草稿_已修改_20261014.docx
-!/论文项目完整复盘报告_20261014.docx
-!/SegFormer_B0_消融实验对照表与图注_20261014.docx
-!/figures/**/*.pdf
-!/P0_real_segformer_trajectory/P0_real_segformer_skeleton_trajectory.pdf
-
-# Downloaded paper text/pages and duplicate upstream source remain local
-/P0_robot_repair_reference.txt
-/experiments/two_pass_mapping_20261016/paper_review/paper_extracted.txt
-/experiments/two_pass_mapping_20261016/paper_review/page_*.png
-/experiments/two_pass_mapping_20261016/source_runtime/author_software/
-
-# Local experiment process lock; keep progress snapshots in version control
-/experiments/segformer_balance_wave6_20261016/results/queue.lock
-
-# Superseded generated documents; preserve original preregistration and raw evidence
-/experiments/segformer_balance_wave6_20261016/refine-logs/EXPERIMENT_RESULTS_*.md
-/experiments/segformer_balance_wave6_20261016/refine-logs/EXPERIMENT_TRACKER_*.md
-/experiments/segformer_balance_wave6_20261016/refine-logs/EXPERIMENT_PLAN_20261017_*.md
-/experiments/segformer_balance_wave6_20261016/refine-logs/RESULT_ANALYSIS_*.md
-/experiments/segformer_balance_wave6_20261016/refine-logs/MAIN_ABLATION_BEFORE_*.md
-/experiments/segformer_balance_wave6_20261016/provenance/RUNTIME_*.md
-/experiments/segformer_balance_wave6_20261016/**/queue.lock
-/experiments/field_efficiency_20261017/MANIFEST_before_*.md
-/experiments/field_efficiency_20261017/实验建议_*.md
-/experiments/field_10x6p5_20261016/refine-logs/EXPERIMENT_TRACKER_*.md
-
-# Superseded root plans and drafts; retain local copies and Git history
-/PAPER_PLAN_20260920_195554.md
-/SegFormer_B0_第4章_实验结果与分析_仿参考论文_20261012.md
-/封闭场地自主巡检与裂缝修复论文规划_20261008.md
-/基线模型选择报告.md
-/实验结果汇总与后续计划.md
-/结构级改进实验计划.md
-/师兄论文消融逻辑借鉴与本论文实验设计.md
-
-# Publish current authored Wave6 figure exports
-!/experiments/segformer_balance_wave6_20261016/figures/results_20261017/*.pdf
-
-# Wave7: keep current reports, initial plans and raw evidence; local snapshots stay local
-/experiments/segformer_aligned_wave7_20261018/**/queue.lock
-/experiments/segformer_aligned_wave7_20261018/refine-logs/EXPERIMENT_RESULTS_*.md
-/experiments/segformer_aligned_wave7_20261018/refine-logs/STAGE1_ANALYSIS_*.md
-/experiments/segformer_aligned_wave7_20261018/followup_20261019/refine-logs/RESULTS_*.md
-/experiments/segformer_aligned_wave7_20261018/provenance/RUNTIME_before_followup_*.md
-!/experiments/segformer_aligned_wave7_20261018/figures/screening_20261019/*.pdf
-
-# Retired root plans/redundant progress report; keep local copies and history
-/PAPER_PLAN.md
-/SegFormer新基线与论文实验规划_20261006.md
-/SegFormer_Aligned第二模块消融进展报告_20261018.md
-
-# Downloaded third-party paper text/pages remain local
-/experiments/repair_options_20261019/source_review/
-
-# Wave8 local process lock and generated duplicate report snapshots
-/experiments/segformer_loss_wave8_20261019/**/queue.lock
-/experiments/segformer_loss_wave8_20261019/refine-logs/EXPERIMENT_RESULTS_*.md
-/experiments/segformer_loss_wave8_20261019/refine-logs/EXPERIMENT_TRACKER_*.md
-/experiments/segformer_loss_wave8_20261019/refine-logs/RESULTS_*.md
-
-# Generated timestamp copy of the current report; keep local and publish canonical reports
-/实验结果汇总_20261020/refine-logs/实验结果总报告_20261020_*.md
-/实验结果汇总_20261020/
-/当前全部实验结果总报告_20261020.md
-
-# Wave10: retain canonical plan/results, keep timestamped generated snapshots local
-/experiments/segformer_lightfusion_wave10_20261024/refine-logs/EXPERIMENT_RESULTS_*.md
-/experiments/**/results/queue.lock
-/experiments/**/results/*.pid
-/experiments/**/logs/queue.log
-/refine-logs/EXPERIMENT_TRACKER_*.md

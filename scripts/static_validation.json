@@ -1,0 +1,60 @@
+{
+  "passed": true,
+  "recipes": [
+    "A0",
+    "B0",
+    "W96",
+    "F08",
+    "public_segformer_b0",
+    "public_ocrnet_hrnetw18",
+    "public_ppliteseg_stdc1",
+    "public_pspnet_resnet50",
+    "public_deeplabv3p_resnet50",
+    "public_fastscnn"
+  ],
+  "source_to_template_only_declared_path_changes": true,
+  "materialized_configurations": 20,
+  "dry_run_commands": 30,
+  "ema_flags_checked": true,
+  "bootstrap_archive_sha256": "8ad8541e3ebb7fe9fc670f4026972be77385e73764f66e94390297e794c268d6",
+  "runtime_files_matching_upstream_or_single_overlay": 184,
+  "unsafe_member_names_rejected": 5,
+  "wrong_archive_sha_rejected_before_extract": true,
+  "dataset_or_weight_files_opened": false,
+  "paddle_imported": false,
+  "training_started": false,
+  "syntax_and_hash_checks": {
+    "passed": true,
+    "compiled_without_import": [
+      "scripts/bootstrap_runtime.py",
+      "scripts/build_figures.py",
+      "scripts/capture_environment.py",
+      "scripts/check_static.py",
+      "scripts/evaluate_exact.py",
+      "scripts/materialize_config.py",
+      "scripts/run_official.py",
+      "overlays/paddleseg/models/segformer.py"
+    ],
+    "source_hashes_verified": [
+      "overlays/paddleseg/models/segformer.py",
+      "scripts/evaluate_exact.py",
+      "third_party/PaddleSeg-LICENSE"
+    ],
+    "recipes_checked": [
+      "A0",
+      "B0",
+      "W96",
+      "F08",
+      "public_segformer_b0",
+      "public_ocrnet_hrnetw18",
+      "public_ppliteseg_stdc1",
+      "public_pspnet_resnet50",
+      "public_deeplabv3p_resnet50",
+      "public_fastscnn"
+    ],
+    "paddle_imported": false,
+    "datasets_read": false,
+    "training_started": false,
+    "scope": "Static checks only; model forward and full training are separate validations."
+  }
+}

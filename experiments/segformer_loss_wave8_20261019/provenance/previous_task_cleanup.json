@@ -1,9 +1,0 @@
-{
-  "task": "Codex-SegFormer-wave7-followup-once-20261019",
-  "state": 3,
-  "last_result": -1073741510,
-  "last_run": "2026-10-19T09:07:56.0000000",
-  "wrapper_exit_unknown": true,
-  "all_9_stages_audited": true,
-  "removed_at": "2026-10-19T23:11:49.4671669+08:00"
-}
