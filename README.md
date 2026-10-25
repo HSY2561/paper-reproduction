@@ -1,8 +1,10 @@
 # 道路裂缝视觉分割与移动机器人精细修复
 
-本仓库提供当前代码、训练证据与论文材料，供导师查看项目进展。最新同步日期：2026-10-24。
+本仓库提供当前代码、训练证据与论文材料，供导师查看项目进展。最新同步日期：2026-10-25。
 
 ## 最新训练结果
+
+2026-10-25 最新回执：[Ubuntu SM120 公共模型补跑](experiments/segformer_public_wave9_20261023/sm120_ubuntu24_formal/README.md)中 PSPNet-ResNet50、DeepLabV3P-ResNet50、Fast-SCNN 均已到达 18,000 步并真实 exit=0，队列于 02:28:21 完成。日志内最佳验证 mIoU 分别为约 81.80%、82.70%、80.19%，仅为训练日志显示值；三项选模权重 SHA256 已保存，权重本体留在本地。本次未发现对应独立验证、边界评估、统一 test 或完整推理测量回执，不能将训练完成等同于通过科学门槛，也不替换既有 Windows 失败证据或旧 test 表。
 
 最新 [Wave8 损失实验](experiments/segformer_loss_wave8_20261019/README.md)的 20 个预登记配方均已有真实验证结果：主队列 15 项完成，原先因共享标签副作用失败的 5 项通过独立 `compat_clone` 恢复队列完成。L20（CE + 0.01 RMI）当前裂缝 IoU 68.0637%、F1 80.9975%、mIoU 82.9217%、边界 F1 45.2611%；这些仍是 seed42 单项验证结果，不代表最终门槛或多 seed结论。L15/L16 的旧中断证据、正式重跑退出回执及 L17/L19/L20 结果均已保存。主队列与兼容恢复队列均声明未访问 test。详见[当前进度表](SegFormer损失函数消融进展_20261019.md)、[恢复证据](experiments/segformer_loss_wave8_20261019/dice_compat_recovery_20261020/README.md)和[预登记计划](SegFormer损失函数优化20方案执行计划_20261019.md)。
 
@@ -14,7 +16,7 @@
 
 2026-10-24 新增独立兼容环境复核：在 RTX5060/Windows 上，PSPNet-ResNet50、DeepLabV3P-ResNet50、Fast-SCNN 的 GPU smoke 仍真实 exit=1；同环境 CPU 三步 smoke exit=0，但不作为 GPU 正式结果。冻结的 SegFormer-B0 + Aligned-A0 已完成 1124 张 test，mIoU 77.1658%、裂缝 IoU 57.4171%、F1 72.9490%，checkpoint SHA 已记录。详情见 [六模型最新对照表](实验结果汇总_20261024/六模型对照表_最新状态.md)、[兼容环境诊断](experiments/segformer_public_wave9_20261023/compat_env_20261024/GPU_BACKEND_DIAGNOSIS_20261024.md) 和更新后的 [Wave9 交付索引](experiments/segformer_public_wave9_20261023/DELIVERY_INDEX.md)。
 
-2026-10-24 新增 [Wave10 轻量多尺度融合](experiments/segformer_lightfusion_wave10_20261024/README.md)：当前已有 A0 控制、W64/W80/W96 宽度对照和 F01–F14 融合候选的真实 train/val/profile 回执；F15 正在训练，F16/F17 尚未开始，队列仍未完成。当前最佳验证 mIoU 为 W96 82.9317%，F08 的裂缝 IoU 68.6164%、mIoU 83.2187%，均为 seed42 验证结果，尚未访问 test，不代表最终门槛或 SOTA。
+2026-10-24 的 [Wave10 轻量多尺度融合快照](experiments/segformer_lightfusion_wave10_20261024/README.md)已有 A0 控制、W64/W80/W96 宽度对照和 F01–F14 融合候选的 train/val/profile 回执。2026-10-25 检查时，F15 状态仍记录为 training，但最后日志停在 10 月 24 日 21:35 的 3600/18000，未见退出回执或队列完成标记；F16/F17 未见运行回执，因此不确认当前存活状态。本次不恢复训练。现有表中 F08 的裂缝 IoU 68.6164%、mIoU 83.2187%，高于 W96 的 mIoU 82.9317%；均为 seed42 验证结果，不能直接当作最终门槛、多 seed 或加速结论。
 
 [当前 Wave8/Wave9 总报告](SegFormer损失函数消融总报告_20261023.md)汇总已冻结的损失候选、三 seed 复核、公开模型 test、负结果与局限；最新 Wave10 以其波次目录和结果表为准。旧的 2026-10-20 生成包已从 GitHub 的当前视图移除，本地副本仍保留以便追溯。
 
