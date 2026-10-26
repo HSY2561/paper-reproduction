@@ -1,0 +1,7 @@
+{
+  "parent_ready": false,
+  "reason": "waiting_parent_queue_done_and_real_wrapper_exit0",
+  "paddle_imported": false,
+  "GPU_started": false,
+  "test_images_read": false
+}

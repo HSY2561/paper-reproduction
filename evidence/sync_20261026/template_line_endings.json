@@ -1,0 +1,62 @@
+[
+  {
+    "recipe": "A0",
+    "original_crlf_sha256": "e8eaa53eb2ea2f93476a62044a9381cda991d0fd627c41fb74ba97e7fd475f00",
+    "published_lf_sha256": "638777003091f71a301e3b9adc9eceb2f3d2931f764298ab1314bc038091aa38",
+    "semantics_modified": false
+  },
+  {
+    "recipe": "B0",
+    "original_crlf_sha256": "9ef1c68295586f289dcfb56e000e24490c241c47b07e956292fa74d3b2f202dc",
+    "published_lf_sha256": "18e2af92fb16576832ea9f9951e6823612765a8adef1e7e9eb478b698d78c402",
+    "semantics_modified": false
+  },
+  {
+    "recipe": "W96",
+    "original_crlf_sha256": "35bd91ca556649a4fc2ec3ea4aedcb525190702caa44e05e4ec5f66576998351",
+    "published_lf_sha256": "9d1fbcc3d7601f514ba4a56c6635634fd27dfd122ea58f2b83a7f23c4a0cce60",
+    "semantics_modified": false
+  },
+  {
+    "recipe": "F08",
+    "original_crlf_sha256": "8b6bc0ff22883ae6a373205cecb98b9c176bc415c5e344627e5b4aed14d014f3",
+    "published_lf_sha256": "832f15975301e69df35711685e8157af54f2b2091b2d583eab9b9b71138ac4f8",
+    "semantics_modified": false
+  },
+  {
+    "recipe": "public_segformer_b0",
+    "original_crlf_sha256": "27b778bc9e49804b2e8749df4b10b8d1e6e65e195b6a137b62bd19a36c12b282",
+    "published_lf_sha256": "6fe6047fd4ec1599aee8ddec8d6d88dfff055fb0399674066be8df8aee775b99",
+    "semantics_modified": false
+  },
+  {
+    "recipe": "public_ocrnet_hrnetw18",
+    "original_crlf_sha256": "6ee927b5f7f017ab2704ab40ee485080cb75dc2addb5363e059e79e68797b2ea",
+    "published_lf_sha256": "47f9d847220d55889c8307d1dbc512d85c1d118497b2da4db48a4384f4c24f3a",
+    "semantics_modified": false
+  },
+  {
+    "recipe": "public_ppliteseg_stdc1",
+    "original_crlf_sha256": "676783f52786b9182b33740be1117718d9ab3c0c7c8d4ea125ae9993b0905030",
+    "published_lf_sha256": "2491d49cc7f324108ab04ff3dd60f05451c7378d8590ea2d891fc212bfee4e66",
+    "semantics_modified": false
+  },
+  {
+    "recipe": "public_pspnet_resnet50",
+    "original_crlf_sha256": "2b846fdf913abfa98eee867db7e15475e29d7c1b051a8f1bef50e4c008b41e1f",
+    "published_lf_sha256": "9dc17dd132b9a2409afd35d988d440714fdd95d33c61564d5b5035c03589784d",
+    "semantics_modified": false
+  },
+  {
+    "recipe": "public_deeplabv3p_resnet50",
+    "original_crlf_sha256": "ad339d8c73447bee92e06ab6c1eb7dae5ed614b650a5f4e3aed01961508e6714",
+    "published_lf_sha256": "371c2b6d4bebde0c6cf06e24f62ea372c366666ceea36081404489048788b85a",
+    "semantics_modified": false
+  },
+  {
+    "recipe": "public_fastscnn",
+    "original_crlf_sha256": "977856e8ac170fd4ef96141e23d286e7f1080327378d0f52b1207fca56ebeb69",
+    "published_lf_sha256": "b51f2f243d1ba054f7f90a05230f50b899ecb3e41c0c4753d6b6cdb72297dd8a",
+    "semantics_modified": false
+  }
+]

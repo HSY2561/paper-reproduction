@@ -1,0 +1,679 @@
+{
+  "at": "2026-10-25T16:15:26+08:00",
+  "selection_uses_test": false,
+  "candidate_rule": "source-three-seed mean_accuracy_gate and at_least_two_iou_within_tolerance; maximum two",
+  "primary_model_frozen_before_test": "F08_Branch32",
+  "primary_rule": "eligible preregistered lightweight track, else eligible secondary, else A0 reference",
+  "eligible_candidates": [
+    {
+      "id": "F08_Branch32",
+      "selection_track": "accuracy_balance",
+      "params": 3438178,
+      "three_seed": {
+        "seeds": [
+          {
+            "seed": 42,
+            "precision": 0.8226324150369871,
+            "recall": 0.8053038167521415,
+            "f1": 0.8138758885970038,
+            "crackIoU": 0.6861641886988691,
+            "mIoU": 0.8321874521936112,
+            "boundary_f1": 0.4606579473148077
+          },
+          {
+            "seed": 43,
+            "precision": 0.8213937754291716,
+            "recall": 0.8034737169496282,
+            "f1": 0.8123349293635921,
+            "crackIoU": 0.6839764420522227,
+            "mIoU": 0.8310087419459157,
+            "boundary_f1": 0.457896981520252
+          },
+          {
+            "seed": 44,
+            "precision": 0.8097047161974333,
+            "recall": 0.8252619319490238,
+            "f1": 0.8174093082019519,
+            "crackIoU": 0.6912022171924397,
+            "mIoU": 0.8346828673458819,
+            "boundary_f1": 0.46487010049305655
+          }
+        ],
+        "mean": {
+          "precision": 0.8179103022211973,
+          "recall": 0.8113464885502645,
+          "f1": 0.8145400420541826,
+          "crackIoU": 0.6871142826478438,
+          "mIoU": 0.8326263538284696,
+          "boundary_f1": 0.46114167644270543
+        },
+        "sample_std": {
+          "precision": 0.007133182215151655,
+          "recall": 0.01208581772408655,
+          "f1": 0.002601567798426635,
+          "crackIoU": 0.0037053968044128706,
+          "mIoU": 0.0018759731734436708,
+          "boundary_f1": 0.0035116367201212945
+        },
+        "paired_deltas": [
+          {
+            "seed": 42,
+            "precision": -0.004133148922594865,
+            "recall": 0.014329776952245687,
+            "f1": 0.005402019782974721,
+            "crackIoU": 0.007644559415267427,
+            "mIoU": 0.0040031807625566795,
+            "boundary_f1": 0.011373123091168946
+          },
+          {
+            "seed": 43,
+            "precision": 0.013104165675903778,
+            "recall": -0.016075881424638894,
+            "f1": -0.001545731251979765,
+            "crackIoU": -0.002194530455450372,
+            "mIoU": -0.0009803744018351823,
+            "boundary_f1": 0.0036873917773726506
+          },
+          {
+            "seed": 44,
+            "precision": -0.009706913350491009,
+            "recall": 0.017952428257244524,
+            "f1": 0.004093758963151228,
+            "crackIoU": 0.005834216695678296,
+            "mIoU": 0.0029623722848893808,
+            "boundary_f1": 0.013433415565264728
+          }
+        ],
+        "paired_sample_std": {
+          "precision": 0.011892134591217024,
+          "recall": 0.018688470258493524,
+          "f1": 0.0036920328795699755,
+          "crackIoU": 0.005236821731151884,
+          "mIoU": 0.0026288259673410115,
+          "boundary_f1": 0.005136474967991876
+        },
+        "mean_delta_A0": {
+          "precision": -0.0002452988657273651,
+          "recall": 0.0054021079282837725,
+          "f1": 0.002650015831382061,
+          "crackIoU": 0.0037614152184984504,
+          "mIoU": 0.0019950595485369593,
+          "boundary_f1": 0.009497976811268774
+        },
+        "mean_accuracy_gate": true,
+        "at_least_two_iou_within_tolerance": true,
+        "params": 3438178,
+        "test_used": false
+      },
+      "passed": true
+    }
+  ],
+  "negative_candidates_validation_only": [
+    {
+      "id": "W96",
+      "selection_track": "lightweight_balance",
+      "params": 3417314,
+      "three_seed": {
+        "seeds": [
+          {
+            "seed": 42,
+            "precision": 0.8247222641446627,
+            "recall": 0.7958392576809605,
+            "f1": 0.8100233723314011,
+            "crackIoU": 0.6807052789922422,
+            "mIoU": 0.8293170980154903,
+            "boundary_f1": 0.447854163302965
+          },
+          {
+            "seed": 43,
+            "precision": 0.8259884934402212,
+            "recall": 0.8000114598279854,
+            "f1": 0.8127924716234374,
+            "crackIoU": 0.6846254359041034,
+            "mIoU": 0.8314155748384897,
+            "boundary_f1": 0.45646374862615463
+          },
+          {
+            "seed": 44,
+            "precision": 0.8263315178404412,
+            "recall": 0.7900401072275268,
+            "f1": 0.8077783980310785,
+            "crackIoU": 0.6775404813140901,
+            "mIoU": 0.8276586590412243,
+            "boundary_f1": 0.4457494839568025
+          }
+        ],
+        "mean": {
+          "precision": 0.8256807584751084,
+          "recall": 0.7952969415788242,
+          "f1": 0.8101980806619723,
+          "crackIoU": 0.6809570654034786,
+          "mIoU": 0.8294637772984014,
+          "boundary_f1": 0.4500224652953074
+        },
+        "sample_std": {
+          "precision": 0.0008476142819166027,
+          "recall": 0.005007748819244547,
+          "f1": 0.002511598245734338,
+          "crackIoU": 0.003549181973821611,
+          "mIoU": 0.0018827480410193414,
+          "boundary_f1": 0.00567670828902885
+        },
+        "paired_deltas": [
+          {
+            "seed": 42,
+            "precision": -0.0020432998149193526,
+            "recall": 0.004865217881064754,
+            "f1": 0.0015495035173720417,
+            "crackIoU": 0.002185649708640547,
+            "mIoU": 0.0011328265844356977,
+            "boundary_f1": -0.001430660920673732
+          },
+          {
+            "seed": 43,
+            "precision": 0.01769888368695338,
+            "recall": -0.019538138546281725,
+            "f1": -0.0010881889921344756,
+            "crackIoU": -0.0015455366035697082,
+            "mIoU": -0.000573541509261144,
+            "boundary_f1": 0.0022541588832752923
+          },
+          {
+            "seed": 44,
+            "precision": 0.006919888292516885,
+            "recall": -0.017269396464252407,
+            "f1": -0.005537151207722135,
+            "crackIoU": -0.007827519182671328,
+            "mIoU": -0.0040618360197682835,
+            "boundary_f1": -0.005687200970989348
+          }
+        ],
+        "paired_sample_std": {
+          "precision": 0.009884999512596393,
+          "recall": 0.013482161966655568,
+          "f1": 0.00358169796239933,
+          "crackIoU": 0.005060444770743926,
+          "mIoU": 0.0026477792655587224,
+          "boundary_f1": 0.003974108422494323
+        },
+        "mean_delta_A0": {
+          "precision": 0.007525157388183638,
+          "recall": -0.01064743904315646,
+          "f1": -0.0016919455608281897,
+          "crackIoU": -0.0023958020258668298,
+          "mIoU": -0.0011675169815312432,
+          "boundary_f1": -0.0016212343361292625
+        },
+        "mean_accuracy_gate": false,
+        "at_least_two_iou_within_tolerance": true,
+        "params": 3417314,
+        "test_used": false
+      },
+      "passed": false
+    }
+  ],
+  "items": [
+    {
+      "id": "SegFormer_B0",
+      "family": "original_public",
+      "config": "${PROJECT_ROOT}\\experiments\\segformer_lightfusion_wave10_20261024\\recovery_20261025\\control_init_witness_20261025\\configs\\B0_s42_init_verified.yml",
+      "checkpoint": "${PROJECT_ROOT}\\experiments\\segformer_lightfusion_wave10_20261024\\recovery_20261025\\control_init_witness_20261025\\checkpoints\\B0_s42_init_verified\\model.pdparams",
+      "checkpoint_sha256": "40177c7ec7613afc8b59b94d68f249262a3cd1a39b25f987ab3f5e2456817dd5",
+      "recipe": {
+        "initialization": "same local ImageNet checkpoint with binary-SHA witness",
+        "loss": "CE",
+        "EMA": true
+      },
+      "historical_val_reference": {
+        "n": 348,
+        "confusion_matrix": [
+          [
+            76196144,
+            790601
+          ],
+          [
+            954779,
+            3652620
+          ]
+        ],
+        "mIoU": 0.8271341358489355,
+        "crackIoU": 0.6766617265653946,
+        "precision": 0.8220657941614878,
+        "recall": 0.7927726684838886,
+        "f1": 0.8071535430721873,
+        "boundary_counts_pred_gt": [
+          219438,
+          217972,
+          463515,
+          505846
+        ],
+        "boundary_precision": 0.4734215721174072,
+        "boundary_recall": 0.4309058488156475,
+        "boundary_f1": 0.45116430102364724,
+        "empty_predictions": 6,
+        "test_used": false,
+        "boundary_protocol": "inner boundary, zero outside image; exact Euclidean <=2px; global counts then harmonic mean",
+        "config": "${PROJECT_ROOT}\\experiments\\segformer_lightfusion_wave10_20261024\\recovery_20261025\\control_init_witness_20261025\\configs\\B0_s42_init_verified.yml",
+        "model_path": "${PROJECT_ROOT}\\experiments\\segformer_lightfusion_wave10_20261024\\recovery_20261025\\control_init_witness_20261025\\checkpoints\\B0_s42_init_verified\\model.pdparams"
+      },
+      "include_in_test": true,
+      "include_in_profile": true,
+      "seed": 42,
+      "baseline_initialization_witness": "${PROJECT_ROOT}\\experiments\\segformer_lightfusion_wave10_20261024\\recovery_20261025\\control_init_witness_20261025",
+      "legacy_B0_seed42_excluded_from_formal_test": true,
+      "source_config_sha256": "b73723d58d996e47421efd29203422ea32b287c82dd508f9f85430fe0e40457b",
+      "val_config_sha256": "863f659b567fc322d91576310578586991a1f63f9fc7042554b2f0209646430e"
+    },
+    {
+      "id": "OCRNet_HRNetW18",
+      "family": "original_public",
+      "config": "${PROJECT_ROOT}\\experiments\\retrain_wave4_20261007\\configs\\public_ocrnet_hrnetw18.yml",
+      "checkpoint": "${PROJECT_ROOT}\\experiments\\retrain_wave4_20261007\\checkpoints\\ocrnet_hrnetw18\\model.pdparams",
+      "checkpoint_sha256": "de78e90ca3d5921c385cc3f82a8a694f8ef4b1d6d055f49e31750c1361416570",
+      "recipe": {
+        "initialization": "random; HRNet_W18 pretrained=None",
+        "loss": "CE main/aux [1,.4]",
+        "EMA": true
+      },
+      "historical_val_reference": {
+        "mIoU": 0.8227357600895859
+      },
+      "include_in_test": true,
+      "include_in_profile": true,
+      "seed": 42,
+      "source_config_sha256": "5a4ac96014e880ee19c31b40fb228a92098e1dbdd8c9bc1d7c38e74f132c0d1b",
+      "val_config_sha256": "0b7751c2cdec1f2434a4e2dab4f57d04424ed9118265d961369ab6262bf39dab"
+    },
+    {
+      "id": "PPLiteSeg_STDC1",
+      "family": "original_public",
+      "config": "${PROJECT_ROOT}\\experiments\\retrain_wave4_20261007\\configs\\ppliteseg_stdc1_crack500_formal.yml",
+      "checkpoint": "${PROJECT_ROOT}\\experiments\\retrain_wave4_20261007\\checkpoints\\ppliteseg_stdc1_crack500_formal\\model.pdparams",
+      "checkpoint_sha256": "42da2e8fdb5859589731b494e021fb5705946ac7268462a4618450aad5bd3f12",
+      "recipe": {
+        "initialization": "official PP_STDCNet1 pretrained",
+        "loss": "OHEM three heads [1,1,1]",
+        "EMA": true
+      },
+      "historical_val_reference": {
+        "mIoU": 0.8205094481314313,
+        "precision": 0.8250009671155241,
+        "recall": 0.7729951323946548,
+        "f1": 0.7981518002411377,
+        "crackIoU": 0.6641036699986556
+      },
+      "include_in_test": true,
+      "include_in_profile": true,
+      "seed": 42,
+      "source_config_sha256": "3a599785d65189919fbe907165f1a90c88f62b761700dc40a6df14f07c0b64e5",
+      "val_config_sha256": "fa2bc2f1a229ea444db3ea7a1a90592e6b372c1d7c16cef4f5b6697b0196f537"
+    },
+    {
+      "id": "PSPNet_ResNet50",
+      "family": "original_public",
+      "config": "${PROJECT_ROOT}\\experiments\\segformer_public_wave9_20261023\\sm120_ubuntu24_formal\\configs\\linux_pspnet_r50_crack500.yml",
+      "checkpoint": "${PROJECT_ROOT}\\experiments\\segformer_public_wave9_20261023\\sm120_ubuntu24_formal\\frozen\\PSPNet_ResNet50\\model.pdparams",
+      "checkpoint_sha256": "15e34909d45674669a0eb0ba3d9680cfb92de4ed0108ef60914f6f48bbf0e6ea",
+      "recipe": {
+        "initialization": "random; pretrained:null",
+        "loss": "OHEM main/aux [1,.4]",
+        "EMA": false
+      },
+      "historical_val_reference": {
+        "mIoU": 0.818031455812831
+      },
+      "include_in_test": true,
+      "include_in_profile": true,
+      "seed": 42,
+      "source_config_sha256": "16a1e5864a873b84331a2a9834d8ce9eab91330c103699f8a26c90ea6a4052ff",
+      "val_config_sha256": "c79095c4866062efc2de91b2109763bc73e915870aeb59eb2d3ab456240b9839"
+    },
+    {
+      "id": "DeepLabV3P_ResNet50",
+      "family": "original_public",
+      "config": "${PROJECT_ROOT}\\experiments\\segformer_public_wave9_20261023\\sm120_ubuntu24_formal\\configs\\linux_deeplabv3p_r50_crack500.yml",
+      "checkpoint": "${PROJECT_ROOT}\\experiments\\segformer_public_wave9_20261023\\sm120_ubuntu24_formal\\frozen\\DeepLabV3P_ResNet50\\model.pdparams",
+      "checkpoint_sha256": "20844a3e24b4e0a3fa5a3c78a4b0dee9fa2ae55d2fbddd248599ea081828e791",
+      "recipe": {
+        "initialization": "random; pretrained:null",
+        "loss": "OHEM single head",
+        "EMA": false
+      },
+      "historical_val_reference": {
+        "mIoU": 0.8270195933057913
+      },
+      "include_in_test": true,
+      "include_in_profile": true,
+      "seed": 42,
+      "source_config_sha256": "80ce3de527c97fd99c2e4cb77b91eb660022517be4845d56526743d78a6b5540",
+      "val_config_sha256": "63f0834f4a7272638a033631f0480c75da3cfa754136aea99091760e309c168b"
+    },
+    {
+      "id": "FastSCNN",
+      "family": "original_public",
+      "config": "${PROJECT_ROOT}\\experiments\\segformer_public_wave9_20261023\\sm120_ubuntu24_formal\\configs\\linux_fastscnn_crack500.yml",
+      "checkpoint": "${PROJECT_ROOT}\\experiments\\segformer_public_wave9_20261023\\sm120_ubuntu24_formal\\frozen\\FastSCNN\\model.pdparams",
+      "checkpoint_sha256": "6790569851afcf62c2d62c75464300b54546757fc3b521fa5aa09557d2bb3f48",
+      "recipe": {
+        "initialization": "random; pretrained:null",
+        "loss": "OHEM main/aux [1,.4]",
+        "EMA": false
+      },
+      "historical_val_reference": {
+        "mIoU": 0.8018752343295693
+      },
+      "include_in_test": true,
+      "include_in_profile": true,
+      "seed": 42,
+      "source_config_sha256": "b58e4356bcc7757cf5c03f4a7959de2b19d802ab56ef5e5b2feaf81acd7a7c4e",
+      "val_config_sha256": "79a0ca33f8e7f982a9fcd7c407ca3b616805ffced68054370cfc2b6b8c7ecaf6"
+    },
+    {
+      "id": "A0",
+      "family": "aligned_control",
+      "config": "${PROJECT_ROOT}\\experiments\\segformer_lightfusion_wave10_20261024\\recovery_20261025\\configs\\A0_recheck.yml",
+      "checkpoint": "${PROJECT_ROOT}\\experiments\\segformer_lightfusion_wave10_20261024\\checkpoints\\A0\\model.pdparams",
+      "checkpoint_sha256": "000b90f9668e35d0a7cae0fd535134802c5a64a7ced2eab05f869cef726cd5ea",
+      "seed": 42,
+      "historical_val_reference": {
+        "n": 348,
+        "confusion_matrix": [
+          [
+            76223138,
+            763607
+          ],
+          [
+            963066,
+            3644333
+          ]
+        ],
+        "mIoU": 0.8281842714310546,
+        "crackIoU": 0.6785196292836017,
+        "precision": 0.826765563959582,
+        "recall": 0.7909740397998958,
+        "f1": 0.808473868814029,
+        "boundary_counts_pred_gt": [
+          217162,
+          215805,
+          457674,
+          505846
+        ],
+        "boundary_precision": 0.47449057626170593,
+        "boundary_recall": 0.42662193632054024,
+        "boundary_f1": 0.44928482422363875,
+        "empty_predictions": 12,
+        "test_used": false,
+        "boundary_protocol": "inner boundary, zero outside image; exact Euclidean <=2px; global counts then harmonic mean",
+        "config": "${PROJECT_ROOT}\\experiments\\segformer_lightfusion_wave10_20261024\\recovery_20261025\\configs\\A0_control_s42.yml",
+        "model_path": "${PROJECT_ROOT}\\experiments\\segformer_lightfusion_wave10_20261024\\checkpoints\\A0\\model.pdparams"
+      },
+      "include_in_test": true,
+      "include_in_profile": true,
+      "recipe": {
+        "initialization": "common MiT-B0 ImageNet",
+        "loss": "CE",
+        "EMA": true
+      },
+      "source_config_sha256": "9e581be283882d911f3c2d720ae18aa52fd8452c304b71f5ec41d741a3ca1c84",
+      "val_config_sha256": "ce197129f1a222e253143b78110d6a31c36707e40cf594d7a169372528f86f7d"
+    },
+    {
+      "id": "A0_s43",
+      "family": "aligned_control",
+      "config": "${PROJECT_ROOT}\\experiments\\segformer_lightfusion_wave10_20261024\\recovery_20261025\\configs\\A0_recheck.yml",
+      "checkpoint": "${PROJECT_ROOT}\\experiments\\segformer_aligned_wave7_20261018\\followup_20261019\\checkpoints\\A0_s43\\model.pdparams",
+      "checkpoint_sha256": "2db07c0ab3d1bc37c6aa6feaa9fe5e2686f413fb30fb7963fa8a1e27234e2248",
+      "seed": 43,
+      "historical_val_reference": {
+        "n": 348,
+        "confusion_matrix": [
+          [
+            76091154,
+            895591
+          ],
+          [
+            831407,
+            3775992
+          ]
+        ],
+        "mIoU": 0.8319891163477509,
+        "crackIoU": 0.6861709725076731,
+        "precision": 0.8082896097532678,
+        "recall": 0.8195495983742671,
+        "f1": 0.8138806606155718,
+        "boundary_counts_pred_gt": [
+          222331,
+          221082,
+          470276,
+          505846
+        ],
+        "boundary_precision": 0.4727670559416173,
+        "boundary_recall": 0.4370539650407436,
+        "boundary_f1": 0.45420958974287934,
+        "empty_predictions": 9,
+        "test_used": false,
+        "boundary_protocol": "inner boundary, zero outside image; exact Euclidean <=2px; global counts then harmonic mean",
+        "config": "${PROJECT_ROOT}\\experiments\\segformer_lightfusion_wave10_20261024\\recovery_20261025\\configs\\A0_control_s43.yml",
+        "model_path": "${PROJECT_ROOT}\\experiments\\segformer_aligned_wave7_20261018\\followup_20261019\\checkpoints\\A0_s43\\model.pdparams"
+      },
+      "include_in_test": false,
+      "include_in_profile": false,
+      "recipe": {
+        "initialization": "common MiT-B0 ImageNet",
+        "loss": "CE",
+        "EMA": true
+      },
+      "source_config_sha256": "9e581be283882d911f3c2d720ae18aa52fd8452c304b71f5ec41d741a3ca1c84",
+      "val_config_sha256": "ce197129f1a222e253143b78110d6a31c36707e40cf594d7a169372528f86f7d"
+    },
+    {
+      "id": "A0_s44",
+      "family": "aligned_control",
+      "config": "${PROJECT_ROOT}\\experiments\\segformer_lightfusion_wave10_20261024\\recovery_20261025\\configs\\A0_recheck.yml",
+      "checkpoint": "${PROJECT_ROOT}\\experiments\\segformer_aligned_wave7_20261018\\followup_20261019\\checkpoints\\A0_s44\\model.pdparams",
+      "checkpoint_sha256": "c8e6dd6e8e58fe9a8d56c37bd577efd63843912838be50030a8b5fa36d7ee1d2",
+      "seed": 44,
+      "historical_val_reference": {
+        "n": 348,
+        "confusion_matrix": [
+          [
+            76166991,
+            819754
+          ],
+          [
+            887802,
+            3719597
+          ]
+        ],
+        "mIoU": 0.8317204950609925,
+        "crackIoU": 0.6853680004967614,
+        "precision": 0.8194116295479243,
+        "recall": 0.8073095036917792,
+        "f1": 0.8133155492388007,
+        "boundary_counts_pred_gt": [
+          216630,
+          215816,
+          451982,
+          505846
+        ],
+        "boundary_precision": 0.479288998234443,
+        "boundary_recall": 0.42664368206924635,
+        "boundary_f1": 0.4514366849277918,
+        "empty_predictions": 6,
+        "test_used": false,
+        "boundary_protocol": "inner boundary, zero outside image; exact Euclidean <=2px; global counts then harmonic mean",
+        "config": "${PROJECT_ROOT}\\experiments\\segformer_lightfusion_wave10_20261024\\recovery_20261025\\configs\\A0_control_s44.yml",
+        "model_path": "${PROJECT_ROOT}\\experiments\\segformer_aligned_wave7_20261018\\followup_20261019\\checkpoints\\A0_s44\\model.pdparams"
+      },
+      "include_in_test": false,
+      "include_in_profile": false,
+      "recipe": {
+        "initialization": "common MiT-B0 ImageNet",
+        "loss": "CE",
+        "EMA": true
+      },
+      "source_config_sha256": "9e581be283882d911f3c2d720ae18aa52fd8452c304b71f5ec41d741a3ca1c84",
+      "val_config_sha256": "ce197129f1a222e253143b78110d6a31c36707e40cf594d7a169372528f86f7d"
+    },
+    {
+      "id": "F08_Branch32",
+      "candidate_id": "F08_Branch32",
+      "family": "final_candidate",
+      "config": "${PROJECT_ROOT}\\experiments\\segformer_lightfusion_wave10_20261024\\configs\\F08_Branch32.yml",
+      "checkpoint": "${PROJECT_ROOT}\\experiments\\segformer_lightfusion_wave10_20261024\\checkpoints\\F08_Branch32\\model.pdparams",
+      "checkpoint_sha256": "f8f2c4f78b5ab6e16d1e6ba4f090b46689f142424620537bac41117f63b7573d",
+      "historical_val_reference": {
+        "n": 348,
+        "confusion_matrix": [
+          [
+            76186756,
+            799989
+          ],
+          [
+            897043,
+            3710356
+          ]
+        ],
+        "mIoU": 0.8321874521936112,
+        "crackIoU": 0.6861641886988691,
+        "precision": 0.8226324150369871,
+        "recall": 0.8053038167521415,
+        "f1": 0.8138758885970038,
+        "boundary_counts_pred_gt": [
+          227702,
+          225091,
+          476881,
+          505846
+        ],
+        "boundary_precision": 0.47748180363654663,
+        "boundary_recall": 0.4449793020010043,
+        "boundary_f1": 0.4606579473148077,
+        "empty_predictions": 6,
+        "test_used": false,
+        "boundary_protocol": "inner boundary, zero outside image; exact Euclidean <=2px; global counts then harmonic mean",
+        "config": "${PROJECT_ROOT}\\experiments\\segformer_lightfusion_wave10_20261024\\configs\\F08_Branch32.yml",
+        "model_path": "${PROJECT_ROOT}\\experiments\\segformer_lightfusion_wave10_20261024\\checkpoints\\F08_Branch32\\model.pdparams"
+      },
+      "seed": 42,
+      "include_in_test": true,
+      "include_in_profile": true,
+      "recipe": {
+        "initialization": "common MiT-B0 ImageNet",
+        "loss": "CE",
+        "EMA": true
+      },
+      "source_config_sha256": "902c1b239bac0ab8d2c8c5bb62b6facb87b1e852dac5582d7d90e9dd84f51d29",
+      "val_config_sha256": "4caed2a5b0c509d689b7046e07a492f567e3e41d4bf5cdb4e054fbfa78cf3d6d"
+    },
+    {
+      "id": "F08_Branch32_s43",
+      "candidate_id": "F08_Branch32",
+      "family": "final_candidate",
+      "config": "${PROJECT_ROOT}\\experiments\\segformer_lightfusion_wave10_20261024\\recovery_20261025\\configs\\F08_Branch32_s43.yml",
+      "checkpoint": "${PROJECT_ROOT}\\experiments\\segformer_lightfusion_wave10_20261024\\recovery_20261025\\checkpoints\\F08_Branch32_s43\\model.pdparams",
+      "checkpoint_sha256": "ba601370c6fbfa27688fcc97cd1f76247fe08beeee40d45d024d57c6f63cabb1",
+      "historical_val_reference": {
+        "n": 348,
+        "confusion_matrix": [
+          [
+            76181788,
+            804957
+          ],
+          [
+            905475,
+            3701924
+          ]
+        ],
+        "mIoU": 0.8310087419459157,
+        "crackIoU": 0.6839764420522227,
+        "precision": 0.8213937754291716,
+        "recall": 0.8034737169496282,
+        "f1": 0.8123349293635921,
+        "boundary_counts_pred_gt": [
+          224061,
+          222436,
+          469111,
+          505846
+        ],
+        "boundary_precision": 0.47762896201538657,
+        "boundary_recall": 0.43973066901784336,
+        "boundary_f1": 0.457896981520252,
+        "empty_predictions": 9,
+        "test_used": false,
+        "boundary_protocol": "inner boundary, zero outside image; exact Euclidean <=2px; global counts then harmonic mean",
+        "config": "${PROJECT_ROOT}\\experiments\\segformer_lightfusion_wave10_20261024\\recovery_20261025\\configs\\F08_Branch32_s43.yml",
+        "model_path": "${PROJECT_ROOT}\\experiments\\segformer_lightfusion_wave10_20261024\\recovery_20261025\\checkpoints\\F08_Branch32_s43\\model.pdparams"
+      },
+      "seed": 43,
+      "include_in_test": false,
+      "include_in_profile": false,
+      "recipe": {
+        "initialization": "common MiT-B0 ImageNet",
+        "loss": "CE",
+        "EMA": true
+      },
+      "source_config_sha256": "902c1b239bac0ab8d2c8c5bb62b6facb87b1e852dac5582d7d90e9dd84f51d29",
+      "val_config_sha256": "4caed2a5b0c509d689b7046e07a492f567e3e41d4bf5cdb4e054fbfa78cf3d6d"
+    },
+    {
+      "id": "F08_Branch32_s44",
+      "candidate_id": "F08_Branch32",
+      "family": "final_candidate",
+      "config": "${PROJECT_ROOT}\\experiments\\segformer_lightfusion_wave10_20261024\\recovery_20261025\\configs\\F08_Branch32_s44.yml",
+      "checkpoint": "${PROJECT_ROOT}\\experiments\\segformer_lightfusion_wave10_20261024\\recovery_20261025\\checkpoints\\F08_Branch32_s44\\model.pdparams",
+      "checkpoint_sha256": "d04170e041989255edad53bc8ed84bc22ea980b4ee0fd67bb92e0a2542b9ebcc",
+      "historical_val_reference": {
+        "n": 348,
+        "confusion_matrix": [
+          [
+            76093133,
+            893612
+          ],
+          [
+            805088,
+            3802311
+          ]
+        ],
+        "mIoU": 0.8346828673458819,
+        "crackIoU": 0.6912022171924397,
+        "precision": 0.8097047161974333,
+        "recall": 0.8252619319490238,
+        "f1": 0.8174093082019519,
+        "boundary_counts_pred_gt": [
+          231503,
+          228991,
+          484595,
+          505846
+        ],
+        "boundary_precision": 0.47772469794364364,
+        "boundary_recall": 0.45268915836044965,
+        "boundary_f1": 0.46487010049305655,
+        "empty_predictions": 12,
+        "test_used": false,
+        "boundary_protocol": "inner boundary, zero outside image; exact Euclidean <=2px; global counts then harmonic mean",
+        "config": "${PROJECT_ROOT}\\experiments\\segformer_lightfusion_wave10_20261024\\recovery_20261025\\configs\\F08_Branch32_s44.yml",
+        "model_path": "${PROJECT_ROOT}\\experiments\\segformer_lightfusion_wave10_20261024\\recovery_20261025\\checkpoints\\F08_Branch32_s44\\model.pdparams"
+      },
+      "seed": 44,
+      "include_in_test": false,
+      "include_in_profile": false,
+      "recipe": {
+        "initialization": "common MiT-B0 ImageNet",
+        "loss": "CE",
+        "EMA": true
+      },
+      "source_config_sha256": "902c1b239bac0ab8d2c8c5bb62b6facb87b1e852dac5582d7d90e9dd84f51d29",
+      "val_config_sha256": "4caed2a5b0c509d689b7046e07a492f567e3e41d4bf5cdb4e054fbfa78cf3d6d"
+    }
+  ],
+  "L01": "independent retained loss alternative; not combined or inserted here",
+  "selection_evidence_sha256": {
+    "${PROJECT_ROOT}\\experiments\\segformer_lightfusion_wave10_20261024\\recovery_20261025\\provenance\\frozen_candidates.json": "5711530b147c2780e0bb12ae766c61722dfb84be6540195afd590a133961387a",
+    "${PROJECT_ROOT}\\experiments\\segformer_lightfusion_wave10_20261024\\recovery_20261025\\results\\three_seed_summary.json": "fdefca7257113cb130bd3859c7f9dcb26616eff4400ae0be24e285d7a48d6ace",
+    "${PROJECT_ROOT}\\experiments\\segformer_lightfusion_wave10_20261024\\recovery_20261025\\results\\queue_done.json": "6aa2f424421265149495e5c16121d71804f5c233b2a878084d23cfae6ca6f73e",
+    "${PROJECT_ROOT}\\experiments\\segformer_lightfusion_wave10_20261024\\recovery_20261025\\results\\wrapper_exit.json": "8fe9dd24897bdc4b1d731bde344dbac77e6afa87a37176b4390665c6ee351352",
+    "${PROJECT_ROOT}\\experiments\\segformer_lightfusion_wave10_20261024\\recovery_20261025\\control_init_witness_20261025\\results\\queue_done.json": "32d3ad67f93fe114acdf1fca16eabaa891cb5bb7da1ecbceeabf42a792baf980",
+    "${PROJECT_ROOT}\\experiments\\segformer_lightfusion_wave10_20261024\\recovery_20261025\\control_init_witness_20261025\\results\\wrapper_exit.json": "523730d716f5db0d40037926a3ccb50fe4cbc1e72d69822c3f178d15d4f1ef0b",
+    "${PROJECT_ROOT}\\experiments\\segformer_lightfusion_wave10_20261024\\recovery_20261025\\control_init_witness_20261025\\results\\corrected_control_groups.json": "95b454d4f9f0dd1446346e54a3b93307fab15e236e8215bcb7323df73556524f"
+  }
+}

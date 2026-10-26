@@ -1,0 +1,657 @@
+{
+  "device": "cpu",
+  "paddle_version": "3.4.0",
+  "started": 1792925057.4535723,
+  "complete": true,
+  "tests": {
+    "E0": {
+      "counts": {
+        "registered": 3202658,
+        "trainable": 3202402,
+        "nontrainable": 256
+      },
+      "forward": [
+        {
+          "input": [
+            1,
+            3,
+            400,
+            400
+          ],
+          "output": [
+            1,
+            2,
+            400,
+            400
+          ],
+          "finite": true,
+          "seconds": 0.35418128967285156
+        },
+        {
+          "input": [
+            1,
+            3,
+            401,
+            397
+          ],
+          "output": [
+            1,
+            2,
+            401,
+            397
+          ],
+          "finite": true,
+          "seconds": 0.34548521041870117
+        },
+        {
+          "input": [
+            1,
+            3,
+            481,
+            479
+          ],
+          "output": [
+            1,
+            2,
+            481,
+            479
+          ],
+          "finite": true,
+          "seconds": 0.5400631427764893
+        },
+        {
+          "input": [
+            1,
+            3,
+            193,
+            257
+          ],
+          "output": [
+            1,
+            2,
+            193,
+            257
+          ],
+          "finite": true,
+          "seconds": 0.10463953018188477
+        },
+        {
+          "input": [
+            4,
+            3,
+            400,
+            400
+          ],
+          "output": [
+            4,
+            2,
+            400,
+            400
+          ],
+          "finite": true,
+          "seconds": 1.3510711193084717
+        }
+      ],
+      "backward": {
+        "shape": [
+          1,
+          3,
+          129,
+          127
+        ],
+        "CE": 0.911134660243988,
+        "missing": [],
+        "nonfinite": [],
+        "zero_gradient_parameters": [
+          "backbone.block3.1.norm2.weight",
+          "backbone.block3.1.norm2.bias",
+          "backbone.block3.1.mlp.fc1.weight",
+          "backbone.block3.1.mlp.fc1.bias",
+          "backbone.block3.1.mlp.dwconv.dwconv.weight",
+          "backbone.block3.1.mlp.dwconv.dwconv.bias",
+          "backbone.block3.1.mlp.fc2.weight",
+          "backbone.block3.1.mlp.fc2.bias",
+          "backbone.block4.0.norm1.weight",
+          "backbone.block4.0.norm1.bias",
+          "backbone.block4.0.attn.q.weight",
+          "backbone.block4.0.attn.q.bias",
+          "backbone.block4.0.attn.kv.weight",
+          "backbone.block4.0.attn.kv.bias",
+          "backbone.block4.0.attn.proj.weight",
+          "backbone.block4.0.attn.proj.bias"
+        ]
+      },
+      "full_resolution_eval_backward": [
+        {
+          "input": [
+            1,
+            3,
+            400,
+            400
+          ],
+          "output": [
+            1,
+            2,
+            400,
+            400
+          ],
+          "CE": 0.8746801018714905,
+          "seconds": 0.7811188697814941,
+          "missing_gradients": [],
+          "nonfinite_gradients": [],
+          "zero_gradient_parameters": []
+        },
+        {
+          "input": [
+            1,
+            3,
+            401,
+            397
+          ],
+          "output": [
+            1,
+            2,
+            401,
+            397
+          ],
+          "CE": 0.9052734375,
+          "seconds": 0.8011829853057861,
+          "missing_gradients": [],
+          "nonfinite_gradients": [],
+          "zero_gradient_parameters": []
+        }
+      ]
+    },
+    "E1": {
+      "counts": {
+        "registered": 3111010,
+        "trainable": 3110178,
+        "nontrainable": 832
+      },
+      "forward": [
+        {
+          "input": [
+            1,
+            3,
+            400,
+            400
+          ],
+          "output": [
+            1,
+            2,
+            400,
+            400
+          ],
+          "finite": true,
+          "seconds": 0.27147459983825684
+        },
+        {
+          "input": [
+            1,
+            3,
+            401,
+            397
+          ],
+          "output": [
+            1,
+            2,
+            401,
+            397
+          ],
+          "finite": true,
+          "seconds": 0.2867763042449951
+        },
+        {
+          "input": [
+            1,
+            3,
+            481,
+            479
+          ],
+          "output": [
+            1,
+            2,
+            481,
+            479
+          ],
+          "finite": true,
+          "seconds": 0.41097068786621094
+        },
+        {
+          "input": [
+            1,
+            3,
+            193,
+            257
+          ],
+          "output": [
+            1,
+            2,
+            193,
+            257
+          ],
+          "finite": true,
+          "seconds": 0.08043527603149414
+        },
+        {
+          "input": [
+            4,
+            3,
+            400,
+            400
+          ],
+          "output": [
+            4,
+            2,
+            400,
+            400
+          ],
+          "finite": true,
+          "seconds": 1.122318983078003
+        }
+      ],
+      "backward": {
+        "shape": [
+          1,
+          3,
+          129,
+          127
+        ],
+        "CE": 0.7925833463668823,
+        "missing": [],
+        "nonfinite": [],
+        "zero_gradient_parameters": [
+          "backbone.block1.1.norm2.weight",
+          "backbone.block1.1.norm2.bias",
+          "backbone.block1.1.mlp.fc1.weight",
+          "backbone.block1.1.mlp.fc1.bias",
+          "backbone.block1.1.mlp.dwconv.dwconv.weight",
+          "backbone.block1.1.mlp.dwconv.dwconv.bias",
+          "backbone.block1.1.mlp.fc2.weight",
+          "backbone.block1.1.mlp.fc2.bias"
+        ]
+      },
+      "full_resolution_eval_backward": [
+        {
+          "input": [
+            1,
+            3,
+            400,
+            400
+          ],
+          "output": [
+            1,
+            2,
+            400,
+            400
+          ],
+          "CE": 0.8631590604782104,
+          "seconds": 0.6731595993041992,
+          "missing_gradients": [],
+          "nonfinite_gradients": [],
+          "zero_gradient_parameters": []
+        },
+        {
+          "input": [
+            1,
+            3,
+            401,
+            397
+          ],
+          "output": [
+            1,
+            2,
+            401,
+            397
+          ],
+          "CE": 0.8673832416534424,
+          "seconds": 0.7009732723236084,
+          "missing_gradients": [],
+          "nonfinite_gradients": [],
+          "zero_gradient_parameters": []
+        }
+      ]
+    },
+    "E2": {
+      "counts": {
+        "registered": 3208148,
+        "trainable": 3207540,
+        "nontrainable": 608
+      },
+      "forward": [
+        {
+          "input": [
+            1,
+            3,
+            400,
+            400
+          ],
+          "output": [
+            1,
+            2,
+            400,
+            400
+          ],
+          "finite": true,
+          "seconds": 0.34952497482299805
+        },
+        {
+          "input": [
+            1,
+            3,
+            401,
+            397
+          ],
+          "output": [
+            1,
+            2,
+            401,
+            397
+          ],
+          "finite": true,
+          "seconds": 0.3573448657989502
+        },
+        {
+          "input": [
+            1,
+            3,
+            481,
+            479
+          ],
+          "output": [
+            1,
+            2,
+            481,
+            479
+          ],
+          "finite": true,
+          "seconds": 0.527895450592041
+        },
+        {
+          "input": [
+            1,
+            3,
+            193,
+            257
+          ],
+          "output": [
+            1,
+            2,
+            193,
+            257
+          ],
+          "finite": true,
+          "seconds": 0.10515379905700684
+        },
+        {
+          "input": [
+            4,
+            3,
+            400,
+            400
+          ],
+          "output": [
+            4,
+            2,
+            400,
+            400
+          ],
+          "finite": true,
+          "seconds": 1.3874056339263916
+        }
+      ],
+      "backward": {
+        "shape": [
+          1,
+          3,
+          129,
+          127
+        ],
+        "CE": 0.8594409823417664,
+        "missing": [],
+        "nonfinite": [],
+        "zero_gradient_parameters": []
+      },
+      "M2_alpha_zero_identity_maxabs": 0.0,
+      "full_resolution_eval_backward": [
+        {
+          "input": [
+            1,
+            3,
+            400,
+            400
+          ],
+          "output": [
+            1,
+            2,
+            400,
+            400
+          ],
+          "CE": 0.8175240755081177,
+          "seconds": 0.8026883602142334,
+          "missing_gradients": [],
+          "nonfinite_gradients": [],
+          "zero_gradient_parameters": []
+        },
+        {
+          "input": [
+            1,
+            3,
+            401,
+            397
+          ],
+          "output": [
+            1,
+            2,
+            401,
+            397
+          ],
+          "CE": 0.8041103482246399,
+          "seconds": 0.8161985874176025,
+          "missing_gradients": [],
+          "nonfinite_gradients": [],
+          "zero_gradient_parameters": []
+        }
+      ]
+    },
+    "E3": {
+      "counts": {
+        "registered": 3116500,
+        "trainable": 3115316,
+        "nontrainable": 1184
+      },
+      "forward": [
+        {
+          "input": [
+            1,
+            3,
+            400,
+            400
+          ],
+          "output": [
+            1,
+            2,
+            400,
+            400
+          ],
+          "finite": true,
+          "seconds": 0.2955441474914551
+        },
+        {
+          "input": [
+            1,
+            3,
+            401,
+            397
+          ],
+          "output": [
+            1,
+            2,
+            401,
+            397
+          ],
+          "finite": true,
+          "seconds": 0.29935359954833984
+        },
+        {
+          "input": [
+            1,
+            3,
+            481,
+            479
+          ],
+          "output": [
+            1,
+            2,
+            481,
+            479
+          ],
+          "finite": true,
+          "seconds": 0.4198014736175537
+        },
+        {
+          "input": [
+            1,
+            3,
+            193,
+            257
+          ],
+          "output": [
+            1,
+            2,
+            193,
+            257
+          ],
+          "finite": true,
+          "seconds": 0.08414363861083984
+        },
+        {
+          "input": [
+            4,
+            3,
+            400,
+            400
+          ],
+          "output": [
+            4,
+            2,
+            400,
+            400
+          ],
+          "finite": true,
+          "seconds": 1.185753583908081
+        }
+      ],
+      "backward": {
+        "shape": [
+          1,
+          3,
+          129,
+          127
+        ],
+        "CE": 0.8701146841049194,
+        "missing": [],
+        "nonfinite": [],
+        "zero_gradient_parameters": [
+          "backbone.block2.1.norm2.weight",
+          "backbone.block2.1.norm2.bias",
+          "backbone.block2.1.mlp.fc1.weight",
+          "backbone.block2.1.mlp.fc1.bias",
+          "backbone.block2.1.mlp.dwconv.dwconv.weight",
+          "backbone.block2.1.mlp.dwconv.dwconv.bias",
+          "backbone.block2.1.mlp.fc2.weight",
+          "backbone.block2.1.mlp.fc2.bias"
+        ]
+      },
+      "M2_alpha_zero_identity_maxabs": 0.0,
+      "full_resolution_eval_backward": [
+        {
+          "input": [
+            1,
+            3,
+            400,
+            400
+          ],
+          "output": [
+            1,
+            2,
+            400,
+            400
+          ],
+          "CE": 1.799997091293335,
+          "seconds": 0.6559665203094482,
+          "missing_gradients": [],
+          "nonfinite_gradients": [],
+          "zero_gradient_parameters": []
+        },
+        {
+          "input": [
+            1,
+            3,
+            401,
+            397
+          ],
+          "output": [
+            1,
+            2,
+            401,
+            397
+          ],
+          "CE": 1.8231866359710693,
+          "seconds": 0.7014355659484863,
+          "missing_gradients": [],
+          "nonfinite_gradients": [],
+          "zero_gradient_parameters": []
+        }
+      ]
+    },
+    "A0_helper_exact_maxabs": 0.0,
+    "warp_coordinates": {
+      "same_method_object": true,
+      "probes": [
+        {
+          "flow_xy": [
+            0.0,
+            0.0
+          ],
+          "maxabs_vs_original": 0.0
+        },
+        {
+          "flow_xy": [
+            1.0,
+            0.0
+          ],
+          "maxabs_vs_original": 0.0
+        },
+        {
+          "flow_xy": [
+            0.0,
+            1.0
+          ],
+          "maxabs_vs_original": 0.0
+        },
+        {
+          "flow_xy": [
+            -1.0,
+            1.0
+          ],
+          "maxabs_vs_original": 0.0
+        }
+      ],
+      "zero_flow_ones_corner": 1.0,
+      "zero_flow_identity": true,
+      "normalization": "flow/(W,H) on linspace[-1,1], original grid_sample defaults preserved; zero-flow is not identity at border",
+      "asymmetric_batch2_forward_backward": true
+    }
+  },
+  "source_files": {
+    "src\\PaddleSeg-2.10.0\\paddleseg\\models\\segformer_complementarity.py": "dd1b6634ff9d1f36b4b8986ad117db3c72b8afca6e544553d952e40e39fe2dfa",
+    "src\\PaddleSeg-2.10.0\\paddleseg\\models\\backbones\\mit_b0_s4ffn768.py": "9216dc98c89d9f2cf0815ea077ddbf51b42e87f46ee81ecaf657fa5f41523f19"
+  },
+  "completed": 1792925126.9686155,
+  "notes": [
+    "Training-mode zero gradients in the first test are retained as evidence; stochastic DropPath may drop complete blocks. Additional eval-mode full400/odd-size backwards disable DropPath and check finite gradient coverage.",
+    "CPU-only complete model smoke; no GPU or formal training performed.",
+    "Original SFNet warp semantics intentionally retained: zero-flow is not exact identity at image border; no one-sided coordinate repair."
+  ]
+}

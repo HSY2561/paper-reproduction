@@ -1,0 +1,22 @@
+{
+  "tag": "W11_E3_s43_pixel_boundary",
+  "pid": 56960,
+  "exit_code": 0,
+  "guard_reason": null,
+  "ended_at": "2026-10-25T22:45:44+08:00",
+  "elapsed_seconds": 19.02,
+  "command": [
+    "${WINDOWS_ENV}\\Scripts\\python.exe",
+    "${PROJECT_ROOT}\\experiments\\segformer_complementarity_wave11_20261025\\evaluate_val_boundary.py",
+    "--config",
+    "${PROJECT_ROOT}\\experiments\\segformer_complementarity_wave11_20261025\\configs\\W11_E3_s43.yml",
+    "--model_path",
+    "${PROJECT_ROOT}\\experiments\\segformer_complementarity_wave11_20261025\\checkpoints\\W11_E3_s43\\model.pdparams",
+    "--output",
+    "${PROJECT_ROOT}\\experiments\\segformer_complementarity_wave11_20261025\\results\\W11_E3_s43_val"
+  ],
+  "stdout": "${PROJECT_ROOT}\\experiments\\segformer_complementarity_wave11_20261025\\logs\\W11_E3_s43_pixel_boundary.stdout.log",
+  "stderr": "${PROJECT_ROOT}\\experiments\\segformer_complementarity_wave11_20261025\\logs\\W11_E3_s43_pixel_boundary.stderr.log",
+  "release_sha256": "f5f2cf5e774111dbbdbf365f6279ee57641d39f5da0400e3f2fe951dc5d664ef",
+  "test_used": false
+}

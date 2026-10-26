@@ -1,0 +1,25 @@
+{
+  "exit_code": 0,
+  "started_epoch": 1792917003.3825297,
+  "ended_at": "2026-10-25T16:30:09+08:00",
+  "elapsed_seconds": 6.014168739318848,
+  "command": [
+    "wsl.exe",
+    "--distribution",
+    "Ubuntu-24.04",
+    "--exec",
+    "bash",
+    "-lc",
+    "export LD_LIBRARY_PATH=/usr/lib/wsl/lib:${WSL_ENV}/venv/lib/python3.10/site-packages/nvidia/cu13/lib:${WSL_ENV}/venv/lib/python3.10/site-packages/nvidia/cudnn/lib:${WSL_ENV}/venv/lib/python3.10/site-packages/nvidia/nccl/lib:${WSL_ENV}/venv/lib/python3.10/site-packages/nvidia/cusparselt/lib; export PYTHONPATH='${PROJECT_ROOT}/experiments/segformer_lightfusion_wave10_20261024/src/PaddleSeg-2.10.0'; export PYTHONUNBUFFERED=1; exec timeout --signal=TERM --kill-after=30s 900s ${WSL_ENV}/venv/bin/python -u '${PROJECT_ROOT}/experiments/segformer_lightfusion_wave10_20261024/recovery_20261025/stage6_unified/profile_models.py' --one F08_Branch32"
+  ],
+  "context": {
+    "manifest_sha256": "9bb752e5f60a61dea3e3230b98b6e8011c007ecd31e5f19d47d36c7ca12f9d40",
+    "script_sha256": "9ab80b80969679014987bc3a588b7f928754b71422cd8864ed30a1880fefc64f",
+    "args": [
+      "--one",
+      "F08_Branch32"
+    ]
+  },
+  "log_sha256": "81fd73c5503525a659762ea8d42dbafc92c65cd7a19203a066727d6879c2405c",
+  "output_sha256": "1d423701400fe50a48ca53604baf31486fe5168f0b4024b92d516619ce58cab0"
+}

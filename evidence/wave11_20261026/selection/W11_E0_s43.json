@@ -1,0 +1,42 @@
+{
+  "run_id": "W11_E0_s43",
+  "group": "E0",
+  "seed": 43,
+  "candidates": [
+    {
+      "variant": "ordinary",
+      "mIoU": 0.8285055345969718,
+      "iter": 8000,
+      "weight": "${PROJECT_ROOT}\\experiments\\segformer_complementarity_wave11_20261025\\training\\W11_E0_s43\\best_model\\model.pdparams",
+      "weight_sha256": "697349b94e5e0166e1b9acad276b4ed031c72303af300e47fe21dc77ebe6daef",
+      "state_path": "${PROJECT_ROOT}\\experiments\\segformer_complementarity_wave11_20261025\\training\\W11_E0_s43\\best_model\\model.pdstates",
+      "state_sha256": "73e4510bb2a44c87d5634a847b31a6215c21e86fa785360ddd09d6037f4f97e4"
+    },
+    {
+      "variant": "ema",
+      "mIoU": 0.8278726728287169,
+      "iter": 18000,
+      "weight": "${PROJECT_ROOT}\\experiments\\segformer_complementarity_wave11_20261025\\training\\W11_E0_s43\\ema_best_model\\ema_model.pdparams",
+      "weight_sha256": "d1c6cdf3879589ba1cb5d9691ec119f7d3c74e28a4b35a8505ae9219faf9d12a",
+      "state_path": "${PROJECT_ROOT}\\experiments\\segformer_complementarity_wave11_20261025\\training\\W11_E0_s43\\ema_best_model\\ema_model.pdstates",
+      "state_sha256": "f20ad8fdee64d2acd7b20072934cc4cb9b85c545f151a5162e9d233e7cf3053d"
+    }
+  ],
+  "selected": {
+    "variant": "ordinary",
+    "mIoU": 0.8285055345969718,
+    "iter": 8000,
+    "weight": "${PROJECT_ROOT}\\experiments\\segformer_complementarity_wave11_20261025\\training\\W11_E0_s43\\best_model\\model.pdparams",
+    "weight_sha256": "697349b94e5e0166e1b9acad276b4ed031c72303af300e47fe21dc77ebe6daef",
+    "state_path": "${PROJECT_ROOT}\\experiments\\segformer_complementarity_wave11_20261025\\training\\W11_E0_s43\\best_model\\model.pdstates",
+    "state_sha256": "73e4510bb2a44c87d5634a847b31a6215c21e86fa785360ddd09d6037f4f97e4"
+  },
+  "checkpoint": "${PROJECT_ROOT}\\experiments\\segformer_complementarity_wave11_20261025\\checkpoints\\W11_E0_s43\\model.pdparams",
+  "sha256": "697349b94e5e0166e1b9acad276b4ed031c72303af300e47fe21dc77ebe6daef",
+  "initialization_sha256": "1d0fa4ab3f262f3c3861e534da3731991541bf8eae23b33070745467b9472841",
+  "config_sha256": "b99288badab268d3889998228e4bb773c83563bf6e784d5bd658b723bd722559",
+  "frozen_at": "2026-10-25T21:19:43+08:00",
+  "selection": "exact val mIoU desc; iteration asc; ordinary before EMA; no boundary selection",
+  "release_sha256": "f5f2cf5e774111dbbdbf365f6279ee57641d39f5da0400e3f2fe951dc5d664ef",
+  "test_used": false
+}

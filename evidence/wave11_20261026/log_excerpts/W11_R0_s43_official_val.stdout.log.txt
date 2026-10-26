@@ -1,0 +1,5 @@
+EXCERPT ONLY. Full raw log retained locally; see source manifest.
+[2026/10/26 01:34:52] INFO: [EVAL] #Images: 348 mIoU: 0.8312 Acc: 0.9792 Kappa: 0.8015 Dice: 0.9007
+[2026/10/26 01:34:52] INFO: [EVAL] Class IoU: 
+[2026/10/26 01:34:52] INFO: [EVAL] Class Precision: 
+[2026/10/26 01:34:52] INFO: [EVAL] Class Recall: 

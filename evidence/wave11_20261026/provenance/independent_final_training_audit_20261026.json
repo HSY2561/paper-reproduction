@@ -1,0 +1,1105 @@
+{
+  "at": "2026-10-26T09:06:47.405611+08:00",
+  "auditor": "independent collaboration agent w11_final_training_audit; CPU-only file/evidence audit; not external cross-model skill verdict",
+  "scope": "15 training runs and validation-only; no GPU, no test/custom data read; source/summary unchanged",
+  "release_sha256": "f5f2cf5e774111dbbdbf365f6279ee57641d39f5da0400e3f2fe951dc5d664ef",
+  "summary_sha256": "61358498e3f45b46fe9432b82bf623590c7cd9b74a5967af5afaa43057843329",
+  "release_files_checked": 272,
+  "complete_runs": 15,
+  "issues": [],
+  "rows": [
+    {
+      "id": "W11_E0_s42",
+      "checks": {
+        "complete": true,
+        "train_exit0": true,
+        "official_val_exit0": true,
+        "pixel_boundary_exit0": true,
+        "full18000_log": true,
+        "final18k_checkpoint": true,
+        "frozen_sha": true,
+        "config_sha": true,
+        "init_sha": true,
+        "exact_normal_ema_selection": true,
+        "CSV_global_metrics": true,
+        "CM": true,
+        "summary_values": true,
+        "unique348": true,
+        "rng_full72000": true
+      },
+      "states": [
+        {
+          "variant": "ordinary",
+          "mIoU": 0.8280317774283685,
+          "iter": 17000,
+          "preserved_path": "${PROJECT_ROOT}\\experiments\\segformer_complementarity_wave11_20261025\\checkpoints\\W11_E0_s42\\ordinary_model.pdstates",
+          "sha256": "970201071d2430a8297249b63c4dd3508b216ae651cb57d069859914d0b31644"
+        },
+        {
+          "variant": "ema",
+          "mIoU": 0.8276775316182294,
+          "iter": 12000,
+          "preserved_path": "${PROJECT_ROOT}\\experiments\\segformer_complementarity_wave11_20261025\\checkpoints\\W11_E0_s42\\ema_ema_model.pdstates",
+          "sha256": "0f541c067f07f49fbeb0a51207e7f7a7d8c7e9727a07bd789f1863a02dab0afa"
+        }
+      ],
+      "global_metrics_recomputed_from_CSV": {
+        "precision": 0.8108003411539173,
+        "recall": 0.806347572676037,
+        "f1": 0.8085678266324755,
+        "crackIoU": 0.6786519994227604,
+        "mIoU": 0.8280317774283685,
+        "boundary_f1_1px": 0.31603369179458113,
+        "boundary_f1_2px": 0.4491491920946296,
+        "hard_cldice": 0.867065378637575
+      },
+      "train_log_sha256": "3385d59eb5481bec79620e990b39dc04c69f0bc5ba6b689264662cf3e2960c6c",
+      "final18k_weight_sha256": "7e04bb262ef86df98e88945b71835e75371736e133efeb7b00c89560a981c1dd",
+      "selection_sha256": "9fab944c2c42c507d70cfd613624ee05e41dd53f9c131c213ce9bd0b1511baf5",
+      "per_image_sha256": "81c8576073b4b0feb84375d17e972bb2e87bb818caaabf342d718de8d08592bb"
+    },
+    {
+      "id": "W11_E1_s42",
+      "checks": {
+        "complete": true,
+        "train_exit0": true,
+        "official_val_exit0": true,
+        "pixel_boundary_exit0": true,
+        "full18000_log": true,
+        "final18k_checkpoint": true,
+        "frozen_sha": true,
+        "config_sha": true,
+        "init_sha": true,
+        "exact_normal_ema_selection": true,
+        "CSV_global_metrics": true,
+        "CM": true,
+        "summary_values": true,
+        "unique348": true,
+        "rng_full72000": true
+      },
+      "states": [
+        {
+          "variant": "ordinary",
+          "mIoU": 0.824962192176784,
+          "iter": 8000,
+          "preserved_path": "${PROJECT_ROOT}\\experiments\\segformer_complementarity_wave11_20261025\\checkpoints\\W11_E1_s42\\ordinary_model.pdstates",
+          "sha256": "5444ef4dd902ad60ab512d110d7ff4186a1e920581a717a40e817d81539fa2a7"
+        },
+        {
+          "variant": "ema",
+          "mIoU": 0.8247681908151046,
+          "iter": 12000,
+          "preserved_path": "${PROJECT_ROOT}\\experiments\\segformer_complementarity_wave11_20261025\\checkpoints\\W11_E1_s42\\ema_ema_model.pdstates",
+          "sha256": "e87673a45e0ea8cb61efdd6b740b74d17cdc94f50e09b8f724fc238a5f02e8dc"
+        }
+      ],
+      "global_metrics_recomputed_from_CSV": {
+        "precision": 0.8114940137461553,
+        "recall": 0.7975020179498238,
+        "f1": 0.8044371779271656,
+        "crackIoU": 0.6728522860324933,
+        "mIoU": 0.824962192176784,
+        "boundary_f1_1px": 0.31329241928675367,
+        "boundary_f1_2px": 0.4466720991289122,
+        "hard_cldice": 0.8459196458443323
+      },
+      "train_log_sha256": "d1eb65e70db660318c61d58d6316899f72c94c6102f26d484747388d6d8880e6",
+      "final18k_weight_sha256": "401bcd01f42ded74a23a57043500c8d461ec0e33e20d6a568fd95978c4e71f9f",
+      "selection_sha256": "d8a637bcf4351b5953e409685f87fe908c4b65b2e8457dc627a8cd562c3c106b",
+      "per_image_sha256": "0615b9b970d95ce36e78ca4e35be674bad767830eec32334c6edbdc450ff59a8"
+    },
+    {
+      "id": "W11_E2_s42",
+      "checks": {
+        "complete": true,
+        "train_exit0": true,
+        "official_val_exit0": true,
+        "pixel_boundary_exit0": true,
+        "full18000_log": true,
+        "final18k_checkpoint": true,
+        "frozen_sha": true,
+        "config_sha": true,
+        "init_sha": true,
+        "exact_normal_ema_selection": true,
+        "CSV_global_metrics": true,
+        "CM": true,
+        "summary_values": true,
+        "unique348": true,
+        "rng_full72000": true
+      },
+      "states": [
+        {
+          "variant": "ordinary",
+          "mIoU": 0.8289680212337033,
+          "iter": 8000,
+          "preserved_path": "${PROJECT_ROOT}\\experiments\\segformer_complementarity_wave11_20261025\\checkpoints\\W11_E2_s42\\ordinary_model.pdstates",
+          "sha256": "8cc0d7a0d0a9603e5ada3596f2819147a4720b20b8998ab5d4a4640bacf04628"
+        },
+        {
+          "variant": "ema",
+          "mIoU": 0.8277905333297197,
+          "iter": 12000,
+          "preserved_path": "${PROJECT_ROOT}\\experiments\\segformer_complementarity_wave11_20261025\\checkpoints\\W11_E2_s42\\ema_ema_model.pdstates",
+          "sha256": "7e42eaaa706c1226997097b6e7c16f3f9ea6aae8606af8636f76a213318f8747"
+        }
+      ],
+      "global_metrics_recomputed_from_CSV": {
+        "precision": 0.8117677104956789,
+        "recall": 0.8078399548204963,
+        "f1": 0.8097990700032255,
+        "crackIoU": 0.6803885374257101,
+        "mIoU": 0.8289680212337033,
+        "boundary_f1_1px": 0.31636784032609533,
+        "boundary_f1_2px": 0.45138636278979966,
+        "hard_cldice": 0.8642366332563428
+      },
+      "train_log_sha256": "0519d76bce4b6712953da51354abea46a70b8c0c70215dac8f69bebd19ae4fb9",
+      "final18k_weight_sha256": "66832966584830e8f6779aff65e0942688ba76227bdff918506cd36b36e1c2ea",
+      "selection_sha256": "8595cf41022002cbf28a9d3ba04e55d4c11281921c6fa9416feae4d5f5665692",
+      "per_image_sha256": "1e1d76205de87dd3336ed3ec6f8d72525efd2238c9abb82c2b46e06e73a196f3"
+    },
+    {
+      "id": "W11_E3_s42",
+      "checks": {
+        "complete": true,
+        "train_exit0": true,
+        "official_val_exit0": true,
+        "pixel_boundary_exit0": true,
+        "full18000_log": true,
+        "final18k_checkpoint": true,
+        "frozen_sha": true,
+        "config_sha": true,
+        "init_sha": true,
+        "exact_normal_ema_selection": true,
+        "CSV_global_metrics": true,
+        "CM": true,
+        "summary_values": true,
+        "unique348": true,
+        "rng_full72000": true
+      },
+      "states": [
+        {
+          "variant": "ordinary",
+          "mIoU": 0.8267580434363172,
+          "iter": 8000,
+          "preserved_path": "${PROJECT_ROOT}\\experiments\\segformer_complementarity_wave11_20261025\\checkpoints\\W11_E3_s42\\ordinary_model.pdstates",
+          "sha256": "727d1f597dcd8becbf5e1931c45897d332788f668a34487a55079d7fc2c41097"
+        },
+        {
+          "variant": "ema",
+          "mIoU": 0.8236039105338484,
+          "iter": 10000,
+          "preserved_path": "${PROJECT_ROOT}\\experiments\\segformer_complementarity_wave11_20261025\\checkpoints\\W11_E3_s42\\ema_ema_model.pdstates",
+          "sha256": "5a607766fa91b3b72b0260eeefebad40b59bed1eec3af5b89b41632da785bde9"
+        }
+      ],
+      "global_metrics_recomputed_from_CSV": {
+        "precision": 0.8068015172919251,
+        "recall": 0.8070820434696452,
+        "f1": 0.8069417560001736,
+        "crackIoU": 0.6763640920788868,
+        "mIoU": 0.8267580434363172,
+        "boundary_f1_1px": 0.311723161880844,
+        "boundary_f1_2px": 0.4447246682194321,
+        "hard_cldice": 0.8531019292583197
+      },
+      "train_log_sha256": "8ef8507df1c3807addec6e715718bb95c4a7312c5a51c8e98ad5b6d3bf9d85f7",
+      "final18k_weight_sha256": "8490389c5c4e6f2e38d307ea1caa80ec118afa2bbf4d2c4bd1ead7f935b81e54",
+      "selection_sha256": "13eaf0956c7e0bec56bed3126e2969df0130a577e6e85458417969cdea66441c",
+      "per_image_sha256": "1f031f16acf024596a7a226a4b0317bb0975e79d5fc47c08a8fd2e7a047755b6"
+    },
+    {
+      "id": "W11_E0_s43",
+      "checks": {
+        "complete": true,
+        "train_exit0": true,
+        "official_val_exit0": true,
+        "pixel_boundary_exit0": true,
+        "full18000_log": true,
+        "final18k_checkpoint": true,
+        "frozen_sha": true,
+        "config_sha": true,
+        "init_sha": true,
+        "exact_normal_ema_selection": true,
+        "CSV_global_metrics": true,
+        "CM": true,
+        "summary_values": true,
+        "unique348": true,
+        "rng_full72000": true
+      },
+      "states": [
+        {
+          "variant": "ordinary",
+          "mIoU": 0.8285055345969718,
+          "iter": 8000,
+          "preserved_path": "${PROJECT_ROOT}\\experiments\\segformer_complementarity_wave11_20261025\\checkpoints\\W11_E0_s43\\ordinary_model.pdstates",
+          "sha256": "73e4510bb2a44c87d5634a847b31a6215c21e86fa785360ddd09d6037f4f97e4"
+        },
+        {
+          "variant": "ema",
+          "mIoU": 0.8278726728287169,
+          "iter": 18000,
+          "preserved_path": "${PROJECT_ROOT}\\experiments\\segformer_complementarity_wave11_20261025\\checkpoints\\W11_E0_s43\\ema_ema_model.pdstates",
+          "sha256": "f20ad8fdee64d2acd7b20072934cc4cb9b85c545f151a5162e9d233e7cf3053d"
+        }
+      ],
+      "global_metrics_recomputed_from_CSV": {
+        "precision": 0.8210294612617776,
+        "recall": 0.7973325079942067,
+        "f1": 0.8090074926636377,
+        "crackIoU": 0.6792716895196691,
+        "mIoU": 0.8285055345969718,
+        "boundary_f1_1px": 0.31467678687401646,
+        "boundary_f1_2px": 0.44579913879340455,
+        "hard_cldice": 0.8649594071783017
+      },
+      "train_log_sha256": "268573205d42efe41bf43f2ed22358c99b21ec82d24a1d321ee145b60e40c7d3",
+      "final18k_weight_sha256": "ac7a3ff281678c3a22c724fadae49d7cac404e63e4dfaf98cefb0e72a597d8e3",
+      "selection_sha256": "22773ac6ab728d0ec7468a29127a749376565ddf1324ba5316344ebc7c9e942f",
+      "per_image_sha256": "6a963272f9ed83d54512e169b12dc09b6aa06940ff7735107170400694e394c7"
+    },
+    {
+      "id": "W11_E1_s43",
+      "checks": {
+        "complete": true,
+        "train_exit0": true,
+        "official_val_exit0": true,
+        "pixel_boundary_exit0": true,
+        "full18000_log": true,
+        "final18k_checkpoint": true,
+        "frozen_sha": true,
+        "config_sha": true,
+        "init_sha": true,
+        "exact_normal_ema_selection": true,
+        "CSV_global_metrics": true,
+        "CM": true,
+        "summary_values": true,
+        "unique348": true,
+        "rng_full72000": true
+      },
+      "states": [
+        {
+          "variant": "ordinary",
+          "mIoU": 0.8298016591115145,
+          "iter": 8000,
+          "preserved_path": "${PROJECT_ROOT}\\experiments\\segformer_complementarity_wave11_20261025\\checkpoints\\W11_E1_s43\\ordinary_model.pdstates",
+          "sha256": "5ec78a4a002bcfc57e7780290076fd018445cab2813bcbd851982866f183afa0"
+        },
+        {
+          "variant": "ema",
+          "mIoU": 0.8244455432053277,
+          "iter": 7000,
+          "preserved_path": "${PROJECT_ROOT}\\experiments\\segformer_complementarity_wave11_20261025\\checkpoints\\W11_E1_s43\\ema_ema_model.pdstates",
+          "sha256": "acbf328468dd45befad0ee5c9ebc1a91a075ab385476941018a590b429466bb1"
+        }
+      ],
+      "global_metrics_recomputed_from_CSV": {
+        "precision": 0.804819893520988,
+        "recall": 0.8173676731709149,
+        "f1": 0.8110452541939052,
+        "crackIoU": 0.6821498102049526,
+        "mIoU": 0.8298016591115145,
+        "boundary_f1_1px": 0.31462719912130344,
+        "boundary_f1_2px": 0.44617768730055896,
+        "hard_cldice": 0.8590565916792045
+      },
+      "train_log_sha256": "789a60821c2cb7bf107697a297dfe2fefd581f54934e2a21b25d5638964ea099",
+      "final18k_weight_sha256": "0bdfcfa5cdfce6fe026f3a1518737b9ec73fd7069176c5212f6d0246d8b28c8f",
+      "selection_sha256": "4a2470425fbd234498eda86670a2b3cc550f38f6d60d5c2b3560eeb473d5f8f9",
+      "per_image_sha256": "d5fa400669bbee079eb1b966e61485483408bc83665f809e81a84fcbaa715269"
+    },
+    {
+      "id": "W11_E2_s43",
+      "checks": {
+        "complete": true,
+        "train_exit0": true,
+        "official_val_exit0": true,
+        "pixel_boundary_exit0": true,
+        "full18000_log": true,
+        "final18k_checkpoint": true,
+        "frozen_sha": true,
+        "config_sha": true,
+        "init_sha": true,
+        "exact_normal_ema_selection": true,
+        "CSV_global_metrics": true,
+        "CM": true,
+        "summary_values": true,
+        "unique348": true,
+        "rng_full72000": true
+      },
+      "states": [
+        {
+          "variant": "ordinary",
+          "mIoU": 0.8299195023006563,
+          "iter": 8000,
+          "preserved_path": "${PROJECT_ROOT}\\experiments\\segformer_complementarity_wave11_20261025\\checkpoints\\W11_E2_s43\\ordinary_model.pdstates",
+          "sha256": "9ffa730f37385332872a6052d75261e87a5848464b9727bbfb61efa5f34c75b3"
+        },
+        {
+          "variant": "ema",
+          "mIoU": 0.8282368311433196,
+          "iter": 18000,
+          "preserved_path": "${PROJECT_ROOT}\\experiments\\segformer_complementarity_wave11_20261025\\checkpoints\\W11_E2_s43\\ema_ema_model.pdstates",
+          "sha256": "a4c2a22ec7c4c8a93da772b39808072854a57c971b6bbb1f828d859b66400521"
+        }
+      ],
+      "global_metrics_recomputed_from_CSV": {
+        "precision": 0.8204433733911987,
+        "recall": 0.8015837135008277,
+        "f1": 0.8109039007729485,
+        "crackIoU": 0.6819498451807726,
+        "mIoU": 0.8299195023006563,
+        "boundary_f1_1px": 0.31660517857659504,
+        "boundary_f1_2px": 0.4492062715517859,
+        "hard_cldice": 0.8677126888672988
+      },
+      "train_log_sha256": "cb2e1968068849f4c6bf804562315c95b4f63df169a4baaabfa59cc47c8d0e43",
+      "final18k_weight_sha256": "d740b754ee6c6e41c885babc7cad9293091399456e57706ce93e46238675ed25",
+      "selection_sha256": "9937dac4e86f038bf1cece799f10fd560e15f372daed1ea54a8ae9f6c29f21f5",
+      "per_image_sha256": "73cefe9787fcdf96928fac9c3fe48a3acc446e332bba315b7772b1851e791003"
+    },
+    {
+      "id": "W11_E3_s43",
+      "checks": {
+        "complete": true,
+        "train_exit0": true,
+        "official_val_exit0": true,
+        "pixel_boundary_exit0": true,
+        "full18000_log": true,
+        "final18k_checkpoint": true,
+        "frozen_sha": true,
+        "config_sha": true,
+        "init_sha": true,
+        "exact_normal_ema_selection": true,
+        "CSV_global_metrics": true,
+        "CM": true,
+        "summary_values": true,
+        "unique348": true,
+        "rng_full72000": true
+      },
+      "states": [
+        {
+          "variant": "ordinary",
+          "mIoU": 0.8290606056210721,
+          "iter": 8000,
+          "preserved_path": "${PROJECT_ROOT}\\experiments\\segformer_complementarity_wave11_20261025\\checkpoints\\W11_E3_s43\\ordinary_model.pdstates",
+          "sha256": "0091ce52986a12152eee215befce926d767786de9272aa1c3a10600db64f67fe"
+        },
+        {
+          "variant": "ema",
+          "mIoU": 0.8233633641224248,
+          "iter": 11000,
+          "preserved_path": "${PROJECT_ROOT}\\experiments\\segformer_complementarity_wave11_20261025\\checkpoints\\W11_E3_s43\\ema_ema_model.pdstates",
+          "sha256": "d8319de44eea5060919cef5293f45e772b63b37e9e2d3f61a0d73762e048c626"
+        }
+      ],
+      "global_metrics_recomputed_from_CSV": {
+        "precision": 0.8107050945420979,
+        "recall": 0.809182360807041,
+        "f1": 0.8099430119711358,
+        "crackIoU": 0.6805917868796137,
+        "mIoU": 0.8290606056210721,
+        "boundary_f1_1px": 0.31551262019752246,
+        "boundary_f1_2px": 0.448613286905259,
+        "hard_cldice": 0.8595063813447309
+      },
+      "train_log_sha256": "9b6f34fafb616bd920c79df94550826018a4d34c576729fbfeb08914d15b212e",
+      "final18k_weight_sha256": "2e59df301988ea250e09535e1c1f53a03f21d4b43026b73fcb26131284688977",
+      "selection_sha256": "bf019380f439aa5b24f064c55903e934367cd0cff97076e745c2548f5ad87104",
+      "per_image_sha256": "2a7b17c26ee8ae8cd4a2382f36aa82c41786a791122e5d347a24c85a1c4894a6"
+    },
+    {
+      "id": "W11_E0_s44",
+      "checks": {
+        "complete": true,
+        "train_exit0": true,
+        "official_val_exit0": true,
+        "pixel_boundary_exit0": true,
+        "full18000_log": true,
+        "final18k_checkpoint": true,
+        "frozen_sha": true,
+        "config_sha": true,
+        "init_sha": true,
+        "exact_normal_ema_selection": true,
+        "CSV_global_metrics": true,
+        "CM": true,
+        "summary_values": true,
+        "unique348": true,
+        "rng_full72000": true
+      },
+      "states": [
+        {
+          "variant": "ordinary",
+          "mIoU": 0.8284457887014768,
+          "iter": 13000,
+          "preserved_path": "${PROJECT_ROOT}\\experiments\\segformer_complementarity_wave11_20261025\\checkpoints\\W11_E0_s44\\ordinary_model.pdstates",
+          "sha256": "2550630ef2f4c3a23beb4e0dc674da169343212e5cdf8a795b2efa5033beb4a4"
+        },
+        {
+          "variant": "ema",
+          "mIoU": 0.8265053726667764,
+          "iter": 14000,
+          "preserved_path": "${PROJECT_ROOT}\\experiments\\segformer_complementarity_wave11_20261025\\checkpoints\\W11_E0_s44\\ema_ema_model.pdstates",
+          "sha256": "ce0aacbcdd4c4770c19c900c390bdade561536a653ea5a807f5225e5b2bc6311"
+        }
+      ],
+      "global_metrics_recomputed_from_CSV": {
+        "precision": 0.8265725662563934,
+        "recall": 0.791827232675095,
+        "f1": 0.8088269266667879,
+        "crackIoU": 0.6790171342636883,
+        "mIoU": 0.8284457887014768,
+        "boundary_f1_1px": 0.31732696817912354,
+        "boundary_f1_2px": 0.4513285279465979,
+        "hard_cldice": 0.8638932960531024
+      },
+      "train_log_sha256": "e37a503b4dc133043537b282d64a6afb79c8239b57fc68f98f702b04ecf6d1e6",
+      "final18k_weight_sha256": "c90ee9dd4c7954d42fd42f27fac4f9d4c0af9dc15b5f5c68a0df6eb4836dbf71",
+      "selection_sha256": "440e5d83ffa092486af76a779f23b51e52463d44ef235eba0259609f87002915",
+      "per_image_sha256": "78c5d38b65c096be16defcfa4ac96deee071716833dd882b76fcf40be2a5e8d4"
+    },
+    {
+      "id": "W11_E1_s44",
+      "checks": {
+        "complete": true,
+        "train_exit0": true,
+        "official_val_exit0": true,
+        "pixel_boundary_exit0": true,
+        "full18000_log": true,
+        "final18k_checkpoint": true,
+        "frozen_sha": true,
+        "config_sha": true,
+        "init_sha": true,
+        "exact_normal_ema_selection": true,
+        "CSV_global_metrics": true,
+        "CM": true,
+        "summary_values": true,
+        "unique348": true,
+        "rng_full72000": true
+      },
+      "states": [
+        {
+          "variant": "ordinary",
+          "mIoU": 0.8268745061777734,
+          "iter": 8000,
+          "preserved_path": "${PROJECT_ROOT}\\experiments\\segformer_complementarity_wave11_20261025\\checkpoints\\W11_E1_s44\\ordinary_model.pdstates",
+          "sha256": "7af0ab50a6aab7d25f5518be88cf3e212f00fbcd3a973d1224106616dec525a1"
+        },
+        {
+          "variant": "ema",
+          "mIoU": 0.8228175421066053,
+          "iter": 14000,
+          "preserved_path": "${PROJECT_ROOT}\\experiments\\segformer_complementarity_wave11_20261025\\checkpoints\\W11_E1_s44\\ema_ema_model.pdstates",
+          "sha256": "0f9793124917a108bb5ef37fab54bcda4924e08690ac4f13e31c5f780198cdbc"
+        }
+      ],
+      "global_metrics_recomputed_from_CSV": {
+        "precision": 0.8224390870783667,
+        "recall": 0.7917419350917947,
+        "f1": 0.8067986246339502,
+        "crackIoU": 0.6761630025664704,
+        "mIoU": 0.8268745061777734,
+        "boundary_f1_1px": 0.31973737295777666,
+        "boundary_f1_2px": 0.45506971438502136,
+        "hard_cldice": 0.8520214175260448
+      },
+      "train_log_sha256": "b445d67940db9f351de28586c9c86f83d5abd8ebaea86536d4f5b18dfd5b2239",
+      "final18k_weight_sha256": "99c743f2aa89a3f9a469a427362be758fc79cf81f80003f02aeee0867fd4fde6",
+      "selection_sha256": "1a95017454fd3743df858e220f91c9cf749e9a93817decbbf6ec78034ca4a44f",
+      "per_image_sha256": "1f4bd1cc1c7f366ad152f37c0c7cee8a85cf3b78ce7a325c611c1ae2def6eca2"
+    },
+    {
+      "id": "W11_E2_s44",
+      "checks": {
+        "complete": true,
+        "train_exit0": true,
+        "official_val_exit0": true,
+        "pixel_boundary_exit0": true,
+        "full18000_log": true,
+        "final18k_checkpoint": true,
+        "frozen_sha": true,
+        "config_sha": true,
+        "init_sha": true,
+        "exact_normal_ema_selection": true,
+        "CSV_global_metrics": true,
+        "CM": true,
+        "summary_values": true,
+        "unique348": true,
+        "rng_full72000": true
+      },
+      "states": [
+        {
+          "variant": "ordinary",
+          "mIoU": 0.8284653996928719,
+          "iter": 13000,
+          "preserved_path": "${PROJECT_ROOT}\\experiments\\segformer_complementarity_wave11_20261025\\checkpoints\\W11_E2_s44\\ordinary_model.pdstates",
+          "sha256": "0284cbce219fbb5f9a446db38f1edb58240a85cf62ab6fdd380fb8ce476b2774"
+        },
+        {
+          "variant": "ema",
+          "mIoU": 0.8263047852770707,
+          "iter": 8000,
+          "preserved_path": "${PROJECT_ROOT}\\experiments\\segformer_complementarity_wave11_20261025\\checkpoints\\W11_E2_s44\\ema_ema_model.pdstates",
+          "sha256": "c5f502af2b23ab055e897f65eba14659dc7c50e1308e6fedd2236f5b7bf19098"
+        }
+      ],
+      "global_metrics_recomputed_from_CSV": {
+        "precision": 0.8258186762827261,
+        "recall": 0.7925966472623708,
+        "f1": 0.808866679085295,
+        "crackIoU": 0.6790731691261422,
+        "mIoU": 0.8284653996928719,
+        "boundary_f1_1px": 0.31870768493128476,
+        "boundary_f1_2px": 0.45262655662212553,
+        "hard_cldice": 0.8644906828643337
+      },
+      "train_log_sha256": "94c4c54baba17e0994fd7c6aa114edf4a5b4d0e85a5c7c0ddb6abe50b2c3b889",
+      "final18k_weight_sha256": "a6e07c05f319e832bc18baa0dfab098263df7d360c3ee07f2b08a070e9e195a3",
+      "selection_sha256": "fe98238186c02c23251c847077de8f2a166713182710d08d0b4a90e997120ee5",
+      "per_image_sha256": "e368ccee96623732eed13490d6e853fc474c95c90c1ba9aa6eddb3552e810f79"
+    },
+    {
+      "id": "W11_E3_s44",
+      "checks": {
+        "complete": true,
+        "train_exit0": true,
+        "official_val_exit0": true,
+        "pixel_boundary_exit0": true,
+        "full18000_log": true,
+        "final18k_checkpoint": true,
+        "frozen_sha": true,
+        "config_sha": true,
+        "init_sha": true,
+        "exact_normal_ema_selection": true,
+        "CSV_global_metrics": true,
+        "CM": true,
+        "summary_values": true,
+        "unique348": true,
+        "rng_full72000": true
+      },
+      "states": [
+        {
+          "variant": "ordinary",
+          "mIoU": 0.8251059293485492,
+          "iter": 8000,
+          "preserved_path": "${PROJECT_ROOT}\\experiments\\segformer_complementarity_wave11_20261025\\checkpoints\\W11_E3_s44\\ordinary_model.pdstates",
+          "sha256": "15543a2e0a985204ab9e304016c910757b84432a6b20a55d3f58d7d3856fd8ac"
+        },
+        {
+          "variant": "ema",
+          "mIoU": 0.8223567597293613,
+          "iter": 7000,
+          "preserved_path": "${PROJECT_ROOT}\\experiments\\segformer_complementarity_wave11_20261025\\checkpoints\\W11_E3_s44\\ema_ema_model.pdstates",
+          "sha256": "3ccfe0f679809f0605535e845b0464202cf6723a2426114b3afeab991b57fb9e"
+        }
+      ],
+      "global_metrics_recomputed_from_CSV": {
+        "precision": 0.8280263355674958,
+        "recall": 0.7819331470966591,
+        "f1": 0.8043199166450945,
+        "crackIoU": 0.6726882280988482,
+        "mIoU": 0.8251059293485492,
+        "boundary_f1_1px": 0.31819731663642825,
+        "boundary_f1_2px": 0.4536141374995773,
+        "hard_cldice": 0.8507878053487048
+      },
+      "train_log_sha256": "898d5ab2aad85c13ecf33e33fc0e228ba47a491beb5de53098d64d2c7e45f1ff",
+      "final18k_weight_sha256": "dd374e39b3183f3f1b80284941bce3ee274ee65414270f734e90f67938a02699",
+      "selection_sha256": "640982db378a0839241608069f8c5911101dd5a9ca792e01fe348294b9388a59",
+      "per_image_sha256": "1284b842c55ac880bcda914b4023d39cd1f9cb77e4a3bf209313ffd38403bf9d"
+    },
+    {
+      "id": "W11_R0_s42",
+      "checks": {
+        "complete": true,
+        "train_exit0": true,
+        "official_val_exit0": true,
+        "pixel_boundary_exit0": true,
+        "full18000_log": true,
+        "final18k_checkpoint": true,
+        "frozen_sha": true,
+        "config_sha": true,
+        "init_sha": true,
+        "exact_normal_ema_selection": true,
+        "CSV_global_metrics": true,
+        "CM": true,
+        "summary_values": true,
+        "unique348": true,
+        "rng_full72000": true
+      },
+      "states": [
+        {
+          "variant": "ordinary",
+          "mIoU": 0.8284907202239657,
+          "iter": 5000,
+          "preserved_path": "${PROJECT_ROOT}\\experiments\\segformer_complementarity_wave11_20261025\\checkpoints\\W11_R0_s42\\ordinary_model.pdstates",
+          "sha256": "094c8134f84e8176bd20570c6fe5edf9c8884c6e165a040c27dd7cd330db978d"
+        },
+        {
+          "variant": "ema",
+          "mIoU": 0.827551377993901,
+          "iter": 12000,
+          "preserved_path": "${PROJECT_ROOT}\\experiments\\segformer_complementarity_wave11_20261025\\checkpoints\\W11_R0_s42\\ema_ema_model.pdstates",
+          "sha256": "8c3be37641e71119c2573a53db817a159ec0b3f71b69931b51ef648da4cc6318"
+        }
+      ],
+      "global_metrics_recomputed_from_CSV": {
+        "precision": 0.8080179153013405,
+        "recall": 0.8104559644172341,
+        "f1": 0.8092351035357093,
+        "crackIoU": 0.6795926768907543,
+        "mIoU": 0.8284907202239657,
+        "boundary_f1_1px": 0.31385207491161293,
+        "boundary_f1_2px": 0.4491741743010051,
+        "hard_cldice": 0.8635173225867355
+      },
+      "train_log_sha256": "5119c04430dec1da4bb1a68a59c0d0ef7dd7c98a0067a468ec83f90dc163f798",
+      "final18k_weight_sha256": "12b2761605c39ddd40a07eead68dc317dbc2d7a7d70e50f5308decb6832815f6",
+      "selection_sha256": "141fa70f0455268da0ecdb9cb0d8d671371c31288f03b2cffc4ec885fb3a1f3d",
+      "per_image_sha256": "347424b7a51e4899af564cb8fc0ce0e4fc458ad8c16748a53e94ed832a7072a7"
+    },
+    {
+      "id": "W11_R0_s43",
+      "checks": {
+        "complete": true,
+        "train_exit0": true,
+        "official_val_exit0": true,
+        "pixel_boundary_exit0": true,
+        "full18000_log": true,
+        "final18k_checkpoint": true,
+        "frozen_sha": true,
+        "config_sha": true,
+        "init_sha": true,
+        "exact_normal_ema_selection": true,
+        "CSV_global_metrics": true,
+        "CM": true,
+        "summary_values": true,
+        "unique348": true,
+        "rng_full72000": true
+      },
+      "states": [
+        {
+          "variant": "ordinary",
+          "mIoU": 0.8312070449008027,
+          "iter": 8000,
+          "preserved_path": "${PROJECT_ROOT}\\experiments\\segformer_complementarity_wave11_20261025\\checkpoints\\W11_R0_s43\\ordinary_model.pdstates",
+          "sha256": "6b2107338d65b128dccbe42e7babe06a702a31ba8069f5a1b13d3f3616bc5696"
+        },
+        {
+          "variant": "ema",
+          "mIoU": 0.8283820882515798,
+          "iter": 8000,
+          "preserved_path": "${PROJECT_ROOT}\\experiments\\segformer_complementarity_wave11_20261025\\checkpoints\\W11_R0_s43\\ema_ema_model.pdstates",
+          "sha256": "986d23e6d1bf28a756e3bf10b1f891da998a9e747fff5309747bd81252a93776"
+        }
+      ],
+      "global_metrics_recomputed_from_CSV": {
+        "precision": 0.8273815443391705,
+        "recall": 0.7981268824341022,
+        "f1": 0.8124909618312819,
+        "crackIoU": 0.6841977077363897,
+        "mIoU": 0.8312070449008027,
+        "boundary_f1_1px": 0.3231043121755511,
+        "boundary_f1_2px": 0.45695432565061445,
+        "hard_cldice": 0.8674182273569616
+      },
+      "train_log_sha256": "d08e48c0b5954a419db602b73a1c10f4b78cce9997fa6d23b6ab3d61f6791a8c",
+      "final18k_weight_sha256": "536d8847f0052e5a915acc38eb682e95c6de0f65c26c720712e3d0d037179e86",
+      "selection_sha256": "2548cb233ec792f8b5648c38513c85c7d3fd2187f2c37363b3f6be285d7328b2",
+      "per_image_sha256": "a1b9830c3cbbe540b76d51c881da640012e28a2257cc9f1b62b5646afd7d7c60"
+    },
+    {
+      "id": "W11_R0_s44",
+      "checks": {
+        "complete": true,
+        "train_exit0": true,
+        "official_val_exit0": true,
+        "pixel_boundary_exit0": true,
+        "full18000_log": true,
+        "final18k_checkpoint": true,
+        "frozen_sha": true,
+        "config_sha": true,
+        "init_sha": true,
+        "exact_normal_ema_selection": true,
+        "CSV_global_metrics": true,
+        "CM": true,
+        "summary_values": true,
+        "unique348": true,
+        "rng_full72000": true
+      },
+      "states": [
+        {
+          "variant": "ordinary",
+          "mIoU": 0.8303046236897962,
+          "iter": 13000,
+          "preserved_path": "${PROJECT_ROOT}\\experiments\\segformer_complementarity_wave11_20261025\\checkpoints\\W11_R0_s44\\ordinary_model.pdstates",
+          "sha256": "11de6a23163649cdcbe3c88a3b85d9a828cd7ddf97fbae15ea0969784b503a99"
+        },
+        {
+          "variant": "ema",
+          "mIoU": 0.8277345182791309,
+          "iter": 13000,
+          "preserved_path": "${PROJECT_ROOT}\\experiments\\segformer_complementarity_wave11_20261025\\checkpoints\\W11_R0_s44\\ema_ema_model.pdstates",
+          "sha256": "babd8ec7d16020627ff2d4b4e18fbea68cd5712c2f5d4c8fefb1ff3a1fe0ed1e"
+        }
+      ],
+      "global_metrics_recomputed_from_CSV": {
+        "precision": 0.8211862031439178,
+        "recall": 0.801849807233973,
+        "f1": 0.8114028209895822,
+        "crackIoU": 0.6826558528980577,
+        "mIoU": 0.8303046236897962,
+        "boundary_f1_1px": 0.3206214837820198,
+        "boundary_f1_2px": 0.4549618294245879,
+        "hard_cldice": 0.8656859995860039
+      },
+      "train_log_sha256": "9b410d954e7bc7869686aef2e786bad5c0624598ee336d4ded1b18caeb4ed068",
+      "final18k_weight_sha256": "e2d4ec57295bc4a3071a77b7e76efdfec781e6646c78ccb5645a4b5495632e00",
+      "selection_sha256": "3d5e7eb2870c99ba61bdd1239292945312398cdffe71b01a8940a3b839c28f14",
+      "per_image_sha256": "ded9ba6a384e37a01c49b2804217b26e01ef42d11cea07c992e9be32ddb897f6"
+    }
+  ],
+  "rng_comparison": [
+    {
+      "seed": 42,
+      "ids": [
+        "W11_E0_s42",
+        "W11_E1_s42",
+        "W11_E2_s42",
+        "W11_E3_s42",
+        "W11_R0_s42"
+      ],
+      "passed": true,
+      "fields": [
+        "actual_training_indices_sha256",
+        "training_budget_numpy_state_sha256",
+        "training_budget_python_state_sha256",
+        "start_numpy_state_sha256",
+        "start_python_state_sha256"
+      ]
+    },
+    {
+      "seed": 43,
+      "ids": [
+        "W11_E0_s43",
+        "W11_E1_s43",
+        "W11_E2_s43",
+        "W11_E3_s43",
+        "W11_R0_s43"
+      ],
+      "passed": true,
+      "fields": [
+        "actual_training_indices_sha256",
+        "training_budget_numpy_state_sha256",
+        "training_budget_python_state_sha256",
+        "start_numpy_state_sha256",
+        "start_python_state_sha256"
+      ]
+    },
+    {
+      "seed": 44,
+      "ids": [
+        "W11_E0_s44",
+        "W11_E1_s44",
+        "W11_E2_s44",
+        "W11_E3_s44",
+        "W11_R0_s44"
+      ],
+      "passed": true,
+      "fields": [
+        "actual_training_indices_sha256",
+        "training_budget_numpy_state_sha256",
+        "training_budget_python_state_sha256",
+        "start_numpy_state_sha256",
+        "start_python_state_sha256"
+      ]
+    }
+  ],
+  "recomputed_grouped": {
+    "R0": {
+      "precision": {
+        "mean": 0.8188618875948096,
+        "sample_sd": 0.00988885051244802
+      },
+      "recall": {
+        "mean": 0.8034775513617698,
+        "sample_sd": 0.006323664194585238
+      },
+      "f1": {
+        "mean": 0.8110429621188577,
+        "sample_sd": 0.0016574912112411156
+      },
+      "crackIoU": {
+        "mean": 0.6821487458417339,
+        "sample_sd": 0.002344023346138713
+      },
+      "mIoU": {
+        "mean": 0.8300007962715216,
+        "sample_sd": 0.0013834154338339113
+      },
+      "boundary_f1": {
+        "mean": 0.4536967764587358,
+        "sample_sd": 0.004041405449904209
+      },
+      "hard_cldice": {
+        "mean": 0.8655405165099004,
+        "sample_sd": 0.001954517459801159
+      }
+    },
+    "E0": {
+      "precision": {
+        "mean": 0.8194674562240294,
+        "sample_sd": 0.008001291519139727
+      },
+      "recall": {
+        "mean": 0.7985024377817795,
+        "sample_sd": 0.007330526598862203
+      },
+      "f1": {
+        "mean": 0.8088007486543004,
+        "sample_sd": 0.00022099891627070474
+      },
+      "crackIoU": {
+        "mean": 0.6789802744020392,
+        "sample_sd": 0.00031148505759065134
+      },
+      "mIoU": {
+        "mean": 0.8283277002422724,
+        "sample_sd": 0.0002580118734645925
+      },
+      "boundary_f1": {
+        "mean": 0.44875895294487733,
+        "sample_sd": 0.0027852739627122094
+      },
+      "hard_cldice": {
+        "mean": 0.8653060272896597,
+        "sample_sd": 0.0016141982861089513
+      }
+    },
+    "E1": {
+      "precision": {
+        "mean": 0.8129176647818367,
+        "sample_sd": 0.008895452889349738
+      },
+      "recall": {
+        "mean": 0.8022038754041778,
+        "sample_sd": 0.013444337494488728
+      },
+      "f1": {
+        "mean": 0.8074270189183403,
+        "sample_sd": 0.003348556034957784
+      },
+      "crackIoU": {
+        "mean": 0.6770550329346388,
+        "sample_sd": 0.004712512871883455
+      },
+      "mIoU": {
+        "mean": 0.827212785822024,
+        "sample_sd": 0.0024374033091331283
+      },
+      "boundary_f1": {
+        "mean": 0.4493065002714975,
+        "sample_sd": 0.004997208065784765
+      },
+      "hard_cldice": {
+        "mean": 0.8523325516831939,
+        "sample_sd": 0.006573997247862192
+      }
+    },
+    "E2": {
+      "precision": {
+        "mean": 0.8193432533898679,
+        "sample_sd": 0.007089788988410656
+      },
+      "recall": {
+        "mean": 0.8006734385278983,
+        "sample_sd": 0.007662314057949986
+      },
+      "f1": {
+        "mean": 0.809856549953823,
+        "sample_sd": 0.0010198264605813998
+      },
+      "crackIoU": {
+        "mean": 0.6804705172442084,
+        "sample_sd": 0.001440089163490128
+      },
+      "mIoU": {
+        "mean": 0.8291176410757438,
+        "sample_sd": 0.0007385073942354796
+      },
+      "boundary_f1": {
+        "mean": 0.45107306365457034,
+        "sample_sd": 0.0017315324864693236
+      },
+      "hard_cldice": {
+        "mean": 0.8654800016626585,
+        "sample_sd": 0.0019377317709511933
+      }
+    },
+    "E3": {
+      "precision": {
+        "mean": 0.8151776491338396,
+        "sample_sd": 0.011297169386170716
+      },
+      "recall": {
+        "mean": 0.7993991837911151,
+        "sample_sd": 0.015162442467772276
+      },
+      "f1": {
+        "mean": 0.807068228205468,
+        "sample_sd": 0.0028136802724316374
+      },
+      "crackIoU": {
+        "mean": 0.6765480356857829,
+        "sample_sd": 0.003954988848042745
+      },
+      "mIoU": {
+        "mean": 0.8269748594686461,
+        "sample_sd": 0.0019862333697277437
+      },
+      "boundary_f1": {
+        "mean": 0.44898403087475613,
+        "sample_sd": 0.00445631622967337
+      },
+      "hard_cldice": {
+        "mean": 0.8544653719839185,
+        "sample_sd": 0.004516372869805119
+      }
+    }
+  },
+  "conclusions": {
+    "all_main_module_gates_fail": true,
+    "all_matched_R0_balanced_gates_fail": true,
+    "interaction": {
+      "mean": -0.0019972400910249024,
+      "sample_sd": 0.003286069050781684,
+      "positive_seeds": 1,
+      "consistent_positive_interaction": false,
+      "statistical_significance_claim": false
+    },
+    "supports_two_modules_plus_combination": false
+  },
+  "notes": [
+    "GPU postprocessing and qualitative rendering not audited as complete. All original normal/EMA weights/states and preserved state copies are SHA-verified."
+  ],
+  "independently_recomputed_module_gates": {
+    "E1-E0": {
+      "mean_delta": {
+        "crackIoU": -0.0019252414674005107,
+        "f1": -0.0013737297359600238,
+        "mIoU": -0.0011149144202484325,
+        "precision": -0.006549791442192772,
+        "recall": 0.0037014376223981995,
+        "boundary_f1": 0.0005475473266201569
+      },
+      "mean_gate": false,
+      "direction_gate": false
+    },
+    "E2-E0": {
+      "mean_delta": {
+        "crackIoU": 0.0014902428421690688,
+        "f1": 0.0010558012995226147,
+        "mIoU": 0.000789940833471429,
+        "precision": -0.00012420283416155384,
+        "recall": 0.002171000746118682,
+        "boundary_f1": 0.002314110709693007
+      },
+      "mean_gate": false,
+      "direction_gate": true
+    },
+    "E3-E0": {
+      "mean_delta": {
+        "crackIoU": -0.0024322387162563444,
+        "f1": -0.0017325204488323938,
+        "mIoU": -0.001352840773626222,
+        "precision": -0.004289807090189816,
+        "recall": 0.0008967460093354992,
+        "boundary_f1": 0.00022507792987876604
+      },
+      "mean_gate": false,
+      "direction_gate": false
+    },
+    "E3-E1": {
+      "mean_delta": {
+        "crackIoU": -0.0005069972488558339,
+        "f1": -0.00035879071287236997,
+        "mIoU": -0.00023792635337778942,
+        "precision": 0.0022599843520029563,
+        "recall": -0.0028046916130627006,
+        "boundary_f1": -0.0003224693967413909
+      },
+      "mean_gate": false,
+      "direction_gate": false
+    },
+    "E3-E2": {
+      "mean_delta": {
+        "crackIoU": -0.003922481558425413,
+        "f1": -0.0027883217483550085,
+        "mIoU": -0.002142781607097651,
+        "precision": -0.004165604256028262,
+        "recall": -0.0012742547367831831,
+        "boundary_f1": -0.0020890327798142407
+      },
+      "mean_gate": false,
+      "direction_gate": false
+    }
+  },
+  "independently_recomputed_resource_gates": {
+    "E0": {
+      "mean_delta": {
+        "crackIoU": -0.0031684714396946387,
+        "f1": -0.002242213464557404,
+        "mIoU": -0.0016730960292491437,
+        "precision": 0.0006055686292198251,
+        "recall": -0.004975113579990216,
+        "boundary_f1": -0.004937823513858464
+      },
+      "registered_ratio": 0.9228407743815327,
+      "trainable_ratio": 0.9228350822349747,
+      "within_tolerance_seeds": 1,
+      "passed": false
+    },
+    "E1": {
+      "mean_delta": {
+        "crackIoU": -0.005093712907095149,
+        "f1": -0.0036159432005174277,
+        "mIoU": -0.0027880104494975764,
+        "precision": -0.0059442228129729475,
+        "recall": -0.001273675957592017,
+        "boundary_f1": -0.004390276187238307
+      },
+      "registered_ratio": 0.8964325499346768,
+      "trainable_ratio": 0.8962589238938176,
+      "within_tolerance_seeds": 0,
+      "passed": false
+    },
+    "E2": {
+      "mean_delta": {
+        "crackIoU": -0.00167822859752557,
+        "f1": -0.0011864121650347892,
+        "mIoU": -0.0008831551957777147,
+        "precision": 0.0004813657950582713,
+        "recall": -0.002804112833871534,
+        "boundary_f1": -0.0026237128041654567
+      },
+      "registered_ratio": 0.9244227090905633,
+      "trainable_ratio": 0.9243156979267346,
+      "within_tolerance_seeds": 1,
+      "passed": false
+    },
+    "E3": {
+      "mean_delta": {
+        "crackIoU": -0.005600710155950983,
+        "f1": -0.003974733913389798,
+        "mIoU": -0.0030259368028753655,
+        "precision": -0.0036842384609699907,
+        "recall": -0.004078367570654717,
+        "boundary_f1": -0.004712745583979698
+      },
+      "registered_ratio": 0.8980144846437074,
+      "trainable_ratio": 0.8977395395855775,
+      "within_tolerance_seeds": 0,
+      "passed": false
+    }
+  }
+}

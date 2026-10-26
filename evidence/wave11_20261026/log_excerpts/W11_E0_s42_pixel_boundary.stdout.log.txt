@@ -1,0 +1,2 @@
+EXCERPT ONLY. Full raw log retained locally; see source manifest.
+  "mIoU": 0.8280317774283685,

@@ -1,0 +1,44 @@
+{
+  "id": "PPLiteSeg_STDC1",
+  "split": "test",
+  "n": 1124,
+  "confusion_matrix": [
+    [
+      241053089,
+      3439143
+    ],
+    [
+      4374285,
+      10103083
+    ]
+  ],
+  "boundary_counts_pred_gt": [
+    589761,
+    591143,
+    1497078,
+    1785064
+  ],
+  "precision": 0.7460430065190169,
+  "recall": 0.69785357393692,
+  "f1": 0.7211441393476293,
+  "crackIoU": 0.5638979040059753,
+  "mIoU": 0.766250922203342,
+  "boundary_precision": 0.39394139784299814,
+  "boundary_recall": 0.33116067547157974,
+  "boundary_f1": 0.359833199233752,
+  "empty_predictions": 26,
+  "params": 8150485,
+  "checkpoint": "${PROJECT_ROOT}\\experiments\\retrain_wave4_20261007\\checkpoints\\ppliteseg_stdc1_crack500_formal\\model.pdparams",
+  "checkpoint_sha256": "42da2e8fdb5859589731b494e021fb5705946ac7268462a4618450aad5bd3f12",
+  "config_sha256": "e0d0ffccc591733f33a3d106079ffc1dad63f5428fd098ae07d626703a8e1c3d",
+  "per_image_sha256": "dc0884b960a01a48e894696eb668ccb801e7a649e4eeef4bc0837a3a369a75af",
+  "source": "${PROJECT_ROOT}/experiments/segformer_lightfusion_wave10_20261024/src/PaddleSeg-2.10.0",
+  "paddle": "3.3.0.dev20251209",
+  "opencv": "5.0.0",
+  "hardware": "NVIDIA GeForce RTX 5060",
+  "boundary_protocol": "inner 3x3; border constant0; DIST_L2 DIST_MASK_PRECISE; <=2px+1e-6; symmetric global counts",
+  "test_used": true,
+  "selection_uses_test": false,
+  "elapsed_seconds_with_IO_postprocess": 21.658011646999967,
+  "at": "2026-10-25T16:20:38+08:00"
+}

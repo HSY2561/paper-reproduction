@@ -1,5 +1,5 @@
 {
-  "snapshot_at": "2026-10-25T16:18:05+08:00",
+  "snapshot_at": "2026-10-26",
   "data_root": "DATA_ROOT",
   "split_sizes": {
     "train": 1896,
@@ -21,9 +21,10 @@
     "loss_additional_seed": 4,
     "fusion20": 20,
     "fusion_additional_seed": 4,
-    "total_excluding_reused_B0_and_public": 94,
+    "total_excluding_reused_B0_and_public": 109,
     "supplementary_verified_B0_control": 1,
-    "total_including_supplementary_control_excluding_prior_public": 95
+    "total_including_supplementary_control_excluding_prior_public": 110,
+    "wave11": 15
   },
   "count_warning": "Runs and configurations are not independent algorithms; failed/deferred rows retained.",
   "fusion_recovery": {
@@ -190,12 +191,18 @@
     "test_used": false
   },
   "unified_evaluation": {
-    "stage": "F08_Branch32_val",
-    "at": "2026-10-25T16:18:02+08:00",
-    "test_used": false
+    "stage": "complete",
+    "at": "2026-10-25T16:30:09+08:00",
+    "evaluation_complete": true,
+    "test_used_for_selection": false,
+    "original_public_count": 6,
+    "final_candidate_count": 1,
+    "fallback_A0_reference": false,
+    "profile_requested": true,
+    "source": "results/unified_evaluation_20261025/comparison.json"
   },
   "historical_public_test_completed_count": 6,
-  "current_candidates_unified_test_completed": false,
+  "current_candidates_unified_test_completed": true,
   "latency": {
     "exit_code": 0,
     "at": "2026-10-25T15:46:35+08:00",
@@ -397,5 +404,19 @@
     "stable_acceleration": false
   },
   "historical_test_warning": "Historical test observed; differing recipes/backends and legacy boundary evaluation cannot be called unified final comparison.",
-  "previous_snapshot_at": "2026-10-25T15:57:38+08:00"
+  "previous_snapshot_at": "2026-10-25T16:18:05+08:00",
+  "snapshot_timezone": "Asia/Shanghai",
+  "wave11": {
+    "at": "2026-10-26T02:03:10+08:00",
+    "complete_runs": 15,
+    "full_training_complete": true,
+    "profile_pending": true,
+    "test_used": false,
+    "source": "results/wave11_20261026/four_cell_three_seed_summary.json",
+    "recorded_supports_two_modules_plus_combination": false,
+    "recorded_thresholds_relaxed": false,
+    "quality_judgment_by_sync": false,
+    "profile_scope_note": "profile_pending is from training queue marker; this sync does not execute postprocessing."
+  },
+  "latest_sync_evidence": "evidence/sync_20261026/machine_checks.json"
 }

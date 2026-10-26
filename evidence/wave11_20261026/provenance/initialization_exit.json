@@ -1,0 +1,7 @@
+{
+  "exit_code": 0,
+  "completed_utc": "2026-10-25T10:47:30.3204357Z",
+  "python": "${WINDOWS_ENV}\\Scripts\\python.exe",
+  "script": "prepare_initialization.py",
+  "log": "logs/prepare_initialization.log"
+}

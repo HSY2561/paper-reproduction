@@ -1,0 +1,8 @@
+{
+  "syntax_compile": true,
+  "GPU_launched": false,
+  "Paddle_imported": false,
+  "test_images_read": false,
+  "source_review": "4 exact hashes plus precisely reviewed PP-LiteSeg value-equivalent compatibility patch",
+  "registered_tasks": false
+}

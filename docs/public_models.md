@@ -1,5 +1,7 @@
 # A0 与六个公开模型：历史 Crack500 test 对照
 
+2026-10-26 更新：8 行同后端终评已经完成，见[最新进度说明](progress_20261026.md)和[统一结果 CSV](../results/unified_evaluation_20261025/comparison.csv)。本页数字继续保留为历史 test，旧“等待终评”文字仅描述当时快照，不代表当前状态。
+
 整理日期：2026-10-25T15:52:38+08:00。本表读取已有结果，不重新训练或推理。当前基准是 **SegFormer-B0＋width128＋Aligned（A0）**；原始 SegFormer-B0 width256 是公开对照。
 
 **本表不是尚待完成的统一后端终评。** 该表审计时统一评价记录为 `waiting_additional_B0_initialization_witness_control`，记录时间 `2026-10-25T15:52:20+08:00`，没有读取新的 test 图像。
@@ -52,4 +54,4 @@ Crack500 test 共1124张裁剪图。P、R、F1、IoU、mIoU均为百分数；IoU
 
 A0采用公开SegFormer及Aligned模块构建；不声称基础模型或模块由本项目首次提出。所有本地来源路径在JSON中均为工作区相对的溯源标识，不包含个人绝对路径。PP-LiteSeg总参数口径已补CPU核验；部署有效参数、延迟和显存仍需统一profile，参数减少不等于加速。更多限制见[limitations.md](limitations.md)。
 
-补充状态：共同初始化B0补控已于16:15完成，统一评价已启动；当前动态快照见[状态JSON](../results/current_status.json)。本页历史test数字保持原来源，不预填新终评。
+补充状态：共同初始化B0补控已于16:15完成，统一评价已于16:30:09结束；当前快照见[状态JSON](../results/current_status.json)。本页历史test数字保持原来源，新终评另表发布。

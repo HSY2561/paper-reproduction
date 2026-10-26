@@ -1,0 +1,362 @@
+{
+  "note": "CPU primitive container counting only; E0-E3 complete network forward not implemented or run. Existing A0 and two backbone constructors were instantiated; no training/GPU/data read.",
+  "device": "cpu",
+  "paddle_version": "3.4.0",
+  "source": "${PROJECT_ROOT}\\experiments\\segformer_lightfusion_wave10_20261024\\src\\PaddleSeg-2.10.0",
+  "A0": {
+    "registered": 3470434,
+    "trainable": 3470178,
+    "nontrainable": 256
+  },
+  "backbone_original": {
+    "registered": 3319392,
+    "trainable": 3319392,
+    "nontrainable": 0
+  },
+  "backbone_compressed": {
+    "registered": 3051616,
+    "trainable": 3051616,
+    "nontrainable": 0
+  },
+  "original_A0_decoder": {
+    "registered": 151042,
+    "trainable": 150786,
+    "nontrainable": 256
+  },
+  "S4_reduction": 267776,
+  "M1_CBR": {
+    "registered": 59394,
+    "trainable": 58562,
+    "nontrainable": 832
+  },
+  "M1_linear_projection_alternative": {
+    "registered": 58722,
+    "trainable": 58338,
+    "nontrainable": 384
+  },
+  "M1_components": {
+    "c1": {
+      "registered": 4608,
+      "trainable": 4352,
+      "nontrainable": 256
+    },
+    "c2": {
+      "registered": 2176,
+      "trainable": 2112,
+      "nontrainable": 64
+    },
+    "c3": {
+      "registered": 5248,
+      "trainable": 5184,
+      "nontrainable": 64
+    },
+    "c4": {
+      "registered": 8320,
+      "trainable": 8256,
+      "nontrainable": 64
+    },
+    "sem_fuse": {
+      "registered": 6400,
+      "trainable": 6272,
+      "nontrainable": 128
+    },
+    "align_low": {
+      "registered": 4096,
+      "trainable": 4096,
+      "nontrainable": 0
+    },
+    "align_high": {
+      "registered": 2048,
+      "trainable": 2048,
+      "nontrainable": 0
+    },
+    "align_flow": {
+      "registered": 1152,
+      "trainable": 1152,
+      "nontrainable": 0
+    },
+    "out_fuse": {
+      "registered": 25088,
+      "trainable": 24832,
+      "nontrainable": 256
+    },
+    "classifier": {
+      "registered": 258,
+      "trainable": 258,
+      "nontrainable": 0
+    }
+  },
+  "M2": {
+    "registered": 5490,
+    "trainable": 5138,
+    "nontrainable": 352
+  },
+  "M2_components": {
+    "detail": {
+      "registered": 576,
+      "trainable": 544,
+      "nontrainable": 32
+    },
+    "semantic": {
+      "registered": 2112,
+      "trainable": 2080,
+      "nontrainable": 32
+    },
+    "gate": {
+      "registered": 33,
+      "trainable": 33,
+      "nontrainable": 0
+    },
+    "depthwise": {
+      "registered": 208,
+      "trainable": 176,
+      "nontrainable": 32
+    },
+    "output": {
+      "registered": 2560,
+      "trainable": 2304,
+      "nontrainable": 256
+    }
+  },
+  "M2_alpha_initial": 0.10000000149011612,
+  "models_budget": {
+    "R0": {
+      "registered": 3470434,
+      "trainable": 3470178,
+      "nontrainable": 256,
+      "reduction_vs_A0_percent": 0.0
+    },
+    "E0": {
+      "registered": 3202658,
+      "trainable": 3202402,
+      "nontrainable": 256,
+      "reduction_vs_A0_percent": 7.7159225618467335
+    },
+    "E1": {
+      "registered": 3111010,
+      "trainable": 3110178,
+      "nontrainable": 832,
+      "reduction_vs_A0_percent": 10.35674500653232
+    },
+    "E2": {
+      "registered": 3208148,
+      "trainable": 3207540,
+      "nontrainable": 608,
+      "reduction_vs_A0_percent": 7.557729090943665
+    },
+    "E3": {
+      "registered": 3116500,
+      "trainable": 3115316,
+      "nontrainable": 1184,
+      "reduction_vs_A0_percent": 10.198551535629264
+    }
+  },
+  "S4_state_shapes": {
+    "block4.0.mlp.fc1.weight": {
+      "original": [
+        256,
+        1024
+      ],
+      "compressed": [
+        256,
+        768
+      ]
+    },
+    "block4.0.mlp.fc1.bias": {
+      "original": [
+        1024
+      ],
+      "compressed": [
+        768
+      ]
+    },
+    "block4.0.mlp.dwconv.dwconv.weight": {
+      "original": [
+        1024,
+        1,
+        3,
+        3
+      ],
+      "compressed": [
+        768,
+        1,
+        3,
+        3
+      ]
+    },
+    "block4.0.mlp.dwconv.dwconv.bias": {
+      "original": [
+        1024
+      ],
+      "compressed": [
+        768
+      ]
+    },
+    "block4.0.mlp.fc2.weight": {
+      "original": [
+        1024,
+        256
+      ],
+      "compressed": [
+        768,
+        256
+      ]
+    },
+    "block4.0.mlp.fc2.bias": {
+      "original": [
+        256
+      ],
+      "compressed": [
+        256
+      ]
+    },
+    "block4.1.mlp.fc1.weight": {
+      "original": [
+        256,
+        1024
+      ],
+      "compressed": [
+        256,
+        768
+      ]
+    },
+    "block4.1.mlp.fc1.bias": {
+      "original": [
+        1024
+      ],
+      "compressed": [
+        768
+      ]
+    },
+    "block4.1.mlp.dwconv.dwconv.weight": {
+      "original": [
+        1024,
+        1,
+        3,
+        3
+      ],
+      "compressed": [
+        768,
+        1,
+        3,
+        3
+      ]
+    },
+    "block4.1.mlp.dwconv.dwconv.bias": {
+      "original": [
+        1024
+      ],
+      "compressed": [
+        768
+      ]
+    },
+    "block4.1.mlp.fc2.weight": {
+      "original": [
+        1024,
+        256
+      ],
+      "compressed": [
+        768,
+        256
+      ]
+    },
+    "block4.1.mlp.fc2.bias": {
+      "original": [
+        256
+      ],
+      "compressed": [
+        256
+      ]
+    }
+  },
+  "pretrain_S4_shapes": {
+    "block4.0.mlp.fc1.weight": [
+      256,
+      1024
+    ],
+    "block4.0.mlp.fc1.bias": [
+      1024
+    ],
+    "block4.0.mlp.dwconv.dwconv.weight": [
+      1024,
+      1,
+      3,
+      3
+    ],
+    "block4.0.mlp.dwconv.dwconv.bias": [
+      1024
+    ],
+    "block4.0.mlp.fc2.weight": [
+      1024,
+      256
+    ],
+    "block4.0.mlp.fc2.bias": [
+      256
+    ],
+    "block4.1.mlp.fc1.weight": [
+      256,
+      1024
+    ],
+    "block4.1.mlp.fc1.bias": [
+      1024
+    ],
+    "block4.1.mlp.dwconv.dwconv.weight": [
+      1024,
+      1,
+      3,
+      3
+    ],
+    "block4.1.mlp.dwconv.dwconv.bias": [
+      1024
+    ],
+    "block4.1.mlp.fc2.weight": [
+      1024,
+      256
+    ],
+    "block4.1.mlp.fc2.bias": [
+      256
+    ]
+  },
+  "pretrain_sha256": "211e15d5157b8d48b1931102c40094da0b578de1c153c5706360f7ad561a774e",
+  "B0_custom_ratio_call": "paddleseg.models.backbones.mix_transformer.MixVisionTransformer() got multiple values for keyword argument 'mlp_ratios'",
+  "BN_parameters_example": [
+    {
+      "name": "_conv.weight",
+      "shape": [
+        16,
+        32,
+        1,
+        1
+      ],
+      "stop_gradient": false
+    },
+    {
+      "name": "_batch_norm.weight",
+      "shape": [
+        16
+      ],
+      "stop_gradient": false
+    },
+    {
+      "name": "_batch_norm.bias",
+      "shape": [
+        16
+      ],
+      "stop_gradient": false
+    },
+    {
+      "name": "_batch_norm._mean",
+      "shape": [
+        16
+      ],
+      "stop_gradient": true
+    },
+    {
+      "name": "_batch_norm._variance",
+      "shape": [
+        16
+      ],
+      "stop_gradient": true
+    }
+  ]
+}

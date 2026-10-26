@@ -1,0 +1,57 @@
+batch_size: 4
+iters: 18000
+model:
+  type: SegFormerComplementarity
+  backbone:
+    type: MixVisionTransformer_B0_S4FFN768
+    pretrained: null
+  embedding_dim: 128
+  num_classes: 2
+  align_corners: false
+  use_m1: true
+  use_m2: true
+  pretrained: ${PROJECT_ROOT}\experiments\segformer_complementarity_wave11_20261025\weights\init\E3_s44.pdparams
+optimizer:
+  type: AdamW
+  beta1: 0.9
+  beta2: 0.999
+  weight_decay: 0.01
+lr_scheduler:
+  type: PolynomialDecay
+  learning_rate: 6.0e-05
+  end_lr: 0.0
+  power: 1
+loss:
+  types:
+  - type: CrossEntropyLoss
+  coef:
+  - 1
+train_dataset:
+  type: Dataset
+  dataset_root: ${DATA_ROOT}
+  train_path: ${DATA_ROOT}/train.txt
+  num_classes: 2
+  mode: train
+  transforms:
+  - type: ResizeStepScaling
+    min_scale_factor: 0.75
+    max_scale_factor: 1.25
+    scale_step_size: 0.25
+  - type: RandomPaddingCrop
+    crop_size:
+    - 400
+    - 400
+  - type: RandomHorizontalFlip
+  - type: RandomDistort
+    brightness_range: 0.5
+    contrast_range: 0.5
+    saturation_range: 0.5
+  - type: Normalize
+val_dataset:
+  type: Dataset
+  dataset_root: ${DATA_ROOT}
+  val_path: ${DATA_ROOT}/val.txt
+  num_classes: 2
+  mode: val
+  transforms:
+  - type: Normalize

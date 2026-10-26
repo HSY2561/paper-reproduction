@@ -1,0 +1,57 @@
+{
+  "approved": true,
+  "at": "2026-10-25T18:56:28.763689+08:00",
+  "user_authorization": "provenance/start_authorization.json",
+  "scope": "Original 12 four-cell runs plus 3 preregistered matched R0 references; official val-only source reproduction and four GPU smoke must still pass",
+  "evidence": [
+    {
+      "path": "${PROJECT_ROOT}\\experiments\\segformer_complementarity_wave11_20261025\\provenance\\model_preflight.json",
+      "sha256": "5e6a80b8206bcc420d73c1f2124ce35440ae6c1dfc7604a395850010795304a4"
+    },
+    {
+      "path": "${PROJECT_ROOT}\\experiments\\segformer_complementarity_wave11_20261025\\provenance\\kernel_witness.json",
+      "sha256": "4c5e79dec7dfa63bdd2d6f413e5b89ecc047a06cdc87c881018f64972f8a4b55"
+    },
+    {
+      "path": "${PROJECT_ROOT}\\experiments\\segformer_complementarity_wave11_20261025\\provenance\\env_spec.json",
+      "sha256": "da3194b85b09bbfe19e1ef045ccf0039cc98587976cf823f13768fcd5cb93086"
+    },
+    {
+      "path": "${PROJECT_ROOT}\\experiments\\segformer_complementarity_wave11_20261025\\provenance\\data_preflight.json",
+      "sha256": "c7acb46b2b8e91dbdab537110af5ea052fe8558482e94e0f19c091ac96800601"
+    },
+    {
+      "path": "${PROJECT_ROOT}\\experiments\\segformer_complementarity_wave11_20261025\\provenance\\runtime_cpu_audit.json",
+      "sha256": "7e0cda670c53b2d80f99ded5e4bd17d2bf1992235e68713131fd3cc01ff0b424"
+    },
+    {
+      "path": "${PROJECT_ROOT}\\experiments\\segformer_complementarity_wave11_20261025\\provenance\\runtime_independent_review.json",
+      "sha256": "477dae8b954c0ee541e2f485c37058ad59d121639a284e56ca62737a0bc0d0b1"
+    },
+    {
+      "path": "${PROJECT_ROOT}\\experiments\\segformer_complementarity_wave11_20261025\\provenance\\sampler_order_audit.json",
+      "sha256": "1e5abbd58f818f6982664a731f2b58a9a5244d3d580854c5b7bcf2b26e3fa237"
+    },
+    {
+      "path": "${PROJECT_ROOT}\\experiments\\segformer_complementarity_wave11_20261025\\provenance\\initialization_manifest.json",
+      "sha256": "6fa79fb3d02c5570b8df5db3113da1c62cfaefbe6987154717b50de0fceb99df"
+    },
+    {
+      "path": "${PROJECT_ROOT}\\experiments\\segformer_complementarity_wave11_20261025\\provenance\\matched_R0_initialization.json",
+      "sha256": "e3086df2f0fd884af9ca097ad3be74cf2e1fb4cbee0c1777e1ab593988e706b5"
+    },
+    {
+      "path": "${PROJECT_ROOT}\\experiments\\segformer_complementarity_wave11_20261025\\provenance\\execution_addendum.json",
+      "sha256": "1ea1307e88e5514482626718ad1c8e07154b65d062841bc59c94a9172c0bb7cf"
+    },
+    {
+      "path": "${PROJECT_ROOT}\\experiments\\segformer_complementarity_wave11_20261025\\provenance\\R0_reuse_audit.json",
+      "sha256": "330eec6c659b7f0103aeaa7aceb65170abc29d71063ba2154424d820ff09a0fd"
+    }
+  ],
+  "runtime_sha256": "e8dfb83d64be4e877053b0ab3bd4425cfa5cf830839529246a62740f55ae9e1a",
+  "core_groups": 12,
+  "matched_R0": 3,
+  "formal_training_started": false,
+  "test_read": false
+}

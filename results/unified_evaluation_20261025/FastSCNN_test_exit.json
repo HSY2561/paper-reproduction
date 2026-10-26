@@ -1,0 +1,28 @@
+{
+  "exit_code": 0,
+  "started_epoch": 1792916591.7490551,
+  "ended_at": "2026-10-25T16:23:37+08:00",
+  "elapsed_seconds": 26.022945404052734,
+  "command": [
+    "wsl.exe",
+    "--distribution",
+    "Ubuntu-24.04",
+    "--exec",
+    "bash",
+    "-lc",
+    "export LD_LIBRARY_PATH=/usr/lib/wsl/lib:${WSL_ENV}/venv/lib/python3.10/site-packages/nvidia/cu13/lib:${WSL_ENV}/venv/lib/python3.10/site-packages/nvidia/cudnn/lib:${WSL_ENV}/venv/lib/python3.10/site-packages/nvidia/nccl/lib:${WSL_ENV}/venv/lib/python3.10/site-packages/nvidia/cusparselt/lib; export PYTHONPATH='${PROJECT_ROOT}/experiments/segformer_lightfusion_wave10_20261024/src/PaddleSeg-2.10.0'; export PYTHONUNBUFFERED=1; exec timeout --signal=TERM --kill-after=30s 3600s ${WSL_ENV}/venv/bin/python -u '${PROJECT_ROOT}/experiments/segformer_lightfusion_wave10_20261024/recovery_20261025/stage6_unified/evaluate_exact.py' --id FastSCNN --split test"
+  ],
+  "context": {
+    "manifest_sha256": "9bb752e5f60a61dea3e3230b98b6e8011c007ecd31e5f19d47d36c7ca12f9d40",
+    "script_sha256": "9f91abb78a6de4214b6a3794d526a45036eac5459f9240953aa26e38928060d2",
+    "args": [
+      "--id",
+      "FastSCNN",
+      "--split",
+      "test"
+    ],
+    "config_sha256": "196cd1ef95575d12729e393f9d51738b34d5791aff9359cd2818c0177fe16929"
+  },
+  "log_sha256": "9c2b63b96d58b61afff2a61a2ae22a756a07023bcdf64ea5cc68e8dbc3005d3b",
+  "output_sha256": "4c9bf87350a46bd123779fadceac43a5215dd3d6307950a9c284b3dc2b2a4bc5"
+}

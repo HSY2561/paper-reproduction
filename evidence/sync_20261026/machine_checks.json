@@ -1,0 +1,176 @@
+{
+  "date": "2026-10-26",
+  "training_started": false,
+  "datasets_or_splits_modified": false,
+  "wave11_training_checks": [
+    {
+      "run": "W11_E0_s42",
+      "train_exit": 0,
+      "official_val_exit": 0,
+      "pixel_boundary_exit": 0,
+      "train_log_reaches_18000": true,
+      "selected_checkpoint_sha256_verified": "07122e56c57178423f400058b909fcb1530010745a0c6a486e777083816cb7f9"
+    },
+    {
+      "run": "W11_E1_s42",
+      "train_exit": 0,
+      "official_val_exit": 0,
+      "pixel_boundary_exit": 0,
+      "train_log_reaches_18000": true,
+      "selected_checkpoint_sha256_verified": "2cf446c1fc4a1fe402d300ebdb4b55527e196746b2d873810bde6732a668ded8"
+    },
+    {
+      "run": "W11_E2_s42",
+      "train_exit": 0,
+      "official_val_exit": 0,
+      "pixel_boundary_exit": 0,
+      "train_log_reaches_18000": true,
+      "selected_checkpoint_sha256_verified": "e251c5127c2cfbf3d56eeafc31d23f62fe868ab891d7cddfca2241216e7b2147"
+    },
+    {
+      "run": "W11_E3_s42",
+      "train_exit": 0,
+      "official_val_exit": 0,
+      "pixel_boundary_exit": 0,
+      "train_log_reaches_18000": true,
+      "selected_checkpoint_sha256_verified": "e1c9ef70162af6d9b8f688e9d39578c4d79c1f6fd0347fa16ed519cc16f780b9"
+    },
+    {
+      "run": "W11_E0_s43",
+      "train_exit": 0,
+      "official_val_exit": 0,
+      "pixel_boundary_exit": 0,
+      "train_log_reaches_18000": true,
+      "selected_checkpoint_sha256_verified": "697349b94e5e0166e1b9acad276b4ed031c72303af300e47fe21dc77ebe6daef"
+    },
+    {
+      "run": "W11_E1_s43",
+      "train_exit": 0,
+      "official_val_exit": 0,
+      "pixel_boundary_exit": 0,
+      "train_log_reaches_18000": true,
+      "selected_checkpoint_sha256_verified": "4743dcb4d66eab4563796f56dbe05250bb3e2ea5ce6489c9b2766f939e4ab4bd"
+    },
+    {
+      "run": "W11_E2_s43",
+      "train_exit": 0,
+      "official_val_exit": 0,
+      "pixel_boundary_exit": 0,
+      "train_log_reaches_18000": true,
+      "selected_checkpoint_sha256_verified": "aeb2b17eb609521e9d534b96d11d444c472d7b65aef47009de301e63085a2f81"
+    },
+    {
+      "run": "W11_E3_s43",
+      "train_exit": 0,
+      "official_val_exit": 0,
+      "pixel_boundary_exit": 0,
+      "train_log_reaches_18000": true,
+      "selected_checkpoint_sha256_verified": "c9f6c95ccef47478d8a638399a5c7aab30a9341c1e64882b97d8fe5e6ce8cbee"
+    },
+    {
+      "run": "W11_E0_s44",
+      "train_exit": 0,
+      "official_val_exit": 0,
+      "pixel_boundary_exit": 0,
+      "train_log_reaches_18000": true,
+      "selected_checkpoint_sha256_verified": "3382437de9dcfe07b59223f088f21ed159dd89358d6826962812b2ea02f4ac56"
+    },
+    {
+      "run": "W11_E1_s44",
+      "train_exit": 0,
+      "official_val_exit": 0,
+      "pixel_boundary_exit": 0,
+      "train_log_reaches_18000": true,
+      "selected_checkpoint_sha256_verified": "8b5ffc44d59ffcdb2823aaecda0ef36ba7feaf6dfb0d70b780bf62d44aaab8b0"
+    },
+    {
+      "run": "W11_E2_s44",
+      "train_exit": 0,
+      "official_val_exit": 0,
+      "pixel_boundary_exit": 0,
+      "train_log_reaches_18000": true,
+      "selected_checkpoint_sha256_verified": "2685882d924d18856312f2dc676879a858ba0f2a24eb37e1ddc8275497a52026"
+    },
+    {
+      "run": "W11_E3_s44",
+      "train_exit": 0,
+      "official_val_exit": 0,
+      "pixel_boundary_exit": 0,
+      "train_log_reaches_18000": true,
+      "selected_checkpoint_sha256_verified": "cf2a9c0f913fc1288601eae52c717e4801033ad7e13f6e45c3665ecf1baddfc6"
+    },
+    {
+      "run": "W11_R0_s42",
+      "train_exit": 0,
+      "official_val_exit": 0,
+      "pixel_boundary_exit": 0,
+      "train_log_reaches_18000": true,
+      "selected_checkpoint_sha256_verified": "e8b7d8d20a6123d3ec0594be2056d11abeea493cfcbe280139f145be22065ffa"
+    },
+    {
+      "run": "W11_R0_s43",
+      "train_exit": 0,
+      "official_val_exit": 0,
+      "pixel_boundary_exit": 0,
+      "train_log_reaches_18000": true,
+      "selected_checkpoint_sha256_verified": "df463d759ffd3d6c4bebdcfbdefc7248a14522e1a944470066ee8b67b37e9ceb"
+    },
+    {
+      "run": "W11_R0_s44",
+      "train_exit": 0,
+      "official_val_exit": 0,
+      "pixel_boundary_exit": 0,
+      "train_log_reaches_18000": true,
+      "selected_checkpoint_sha256_verified": "5e122f9eb9c93e3471592f7d8ca5b4cfaed74ff890f3dea320f1b19366350e4f"
+    }
+  ],
+  "wave11_queue": {
+    "at": "2026-10-26T02:03:10+08:00",
+    "complete_runs": 15,
+    "full_training_complete": true,
+    "profile_pending": true,
+    "test_used": false
+  },
+  "unified_evaluation_queue": {
+    "at": "2026-10-25T16:30:09+08:00",
+    "evaluation_complete": true,
+    "test_used_for_selection": false,
+    "original_public_count": 6,
+    "final_candidate_count": 1,
+    "fallback_A0_reference": false,
+    "profile_requested": true
+  },
+  "unified_exit_receipts_verified": [
+    "A0_memory_profile_exit.json",
+    "A0_s43_val_exit.json",
+    "A0_s44_val_exit.json",
+    "A0_test_exit.json",
+    "A0_val_exit.json",
+    "DeepLabV3P_ResNet50_memory_profile_exit.json",
+    "DeepLabV3P_ResNet50_test_exit.json",
+    "DeepLabV3P_ResNet50_val_exit.json",
+    "F08_Branch32_memory_profile_exit.json",
+    "F08_Branch32_s43_val_exit.json",
+    "F08_Branch32_s44_val_exit.json",
+    "F08_Branch32_test_exit.json",
+    "F08_Branch32_val_exit.json",
+    "FastSCNN_memory_profile_exit.json",
+    "FastSCNN_test_exit.json",
+    "FastSCNN_val_exit.json",
+    "interleaved_profile_exit.json",
+    "OCRNet_HRNetW18_memory_profile_exit.json",
+    "OCRNet_HRNetW18_test_exit.json",
+    "OCRNet_HRNetW18_val_exit.json",
+    "PPLiteSeg_STDC1_memory_profile_exit.json",
+    "PPLiteSeg_STDC1_test_exit.json",
+    "PPLiteSeg_STDC1_val_exit.json",
+    "PSPNet_ResNet50_memory_profile_exit.json",
+    "PSPNet_ResNet50_test_exit.json",
+    "PSPNet_ResNet50_val_exit.json",
+    "SegFormer_B0_memory_profile_exit.json",
+    "SegFormer_B0_test_exit.json",
+    "SegFormer_B0_val_exit.json",
+    "wrapper_exit.json"
+  ],
+  "scope": "Execution completeness and artifact consistency only; not an independent scientific verdict."
+}

@@ -1,0 +1,13 @@
+EXCERPT ONLY. Full raw log retained locally; see source manifest.
+[2026/10/25 22:44:49] INFO: [TRAIN] epoch: 38, iter: 17900/18000, loss: 0.0556, lr: 0.000000, batch_cost: 0.0661, reader_cost: 0.00014, ips: 60.5140 samples/sec, max_mem_reserved: 963 MB, max_mem_allocated: 844 MB | ETA 00:00:06
+[2026/10/25 22:44:58] INFO: [TRAIN] epoch: 38, iter: 18000/18000, loss: 0.0595, lr: 0.000000, batch_cost: 0.0663, reader_cost: 0.00004, ips: 60.2936 samples/sec, max_mem_reserved: 963 MB, max_mem_allocated: 844 MB | ETA 00:00:00
+[2026/10/25 22:45:04] INFO: [EVAL] #Images: 348 mIoU: 0.8230 Acc: 0.9780 Kappa: 0.7900 Dice: 0.8950
+[2026/10/25 22:45:04] INFO: [EVAL] Class IoU: 
+[2026/10/25 22:45:04] INFO: [EVAL] Class Precision: 
+[2026/10/25 22:45:04] INFO: [EVAL] Class Recall: 
+[2026/10/25 22:45:10] INFO: [EVAL] #Images: 348 mIoU: 0.8230 Acc: 0.9780 Kappa: 0.7901 Dice: 0.8950
+[2026/10/25 22:45:10] INFO: [EVAL] Class IoU: 
+[2026/10/25 22:45:10] INFO: [EVAL] Class Precision: 
+[2026/10/25 22:45:10] INFO: [EVAL] Class Recall: 
+[2026/10/25 22:45:10] INFO: [EVAL] The model with the best validation mIoU (0.8291) was saved at iter 8000.
+[2026/10/25 22:45:10] INFO: [EVAL] The EMA model with the best validation mIoU (0.8234) was saved at iter 11000.

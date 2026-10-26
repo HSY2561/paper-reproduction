@@ -1,0 +1,16 @@
+{
+  "reuse": "existing_local_environment_no_install_changes",
+  "python": "${WINDOWS_ENV}\\Scripts\\python.exe",
+  "python_version": "3.12.10",
+  "paddle": "3.4.0",
+  "numpy": "2.4.1",
+  "cuda_runtime": "12.9",
+  "cudnn": "9.9.0",
+  "gpu": "NVIDIA GeForce RTX 5060",
+  "precision": "fp32",
+  "device": "gpu:0",
+  "PYTHONPATH": "${PROJECT_ROOT}\\experiments\\segformer_complementarity_wave11_20261025\\src\\PaddleSeg-2.10.0",
+  "PYTHONIOENCODING": "utf-8",
+  "witness": "provenance/kernel_witness.json",
+  "witness_exit": 0
+}

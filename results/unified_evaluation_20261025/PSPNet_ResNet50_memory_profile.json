@@ -1,0 +1,61 @@
+{
+  "at": "2026-10-25T16:29:43+08:00",
+  "model": "PSPNet_ResNet50",
+  "records": [
+    {
+      "size": 400,
+      "baseline_allocated_bytes": 283769856,
+      "peak_allocated_bytes": 411769856,
+      "increment_allocated_bytes": 128000000,
+      "baseline_reserved_bytes": 424701952,
+      "peak_reserved_bytes": 424701952
+    },
+    {
+      "size": 480,
+      "baseline_allocated_bytes": 289120256,
+      "peak_allocated_bytes": 473440256,
+      "increment_allocated_bytes": 184320000,
+      "baseline_reserved_bytes": 452096000,
+      "peak_reserved_bytes": 540569600
+    }
+  ],
+  "params": 67902052,
+  "checkpoint_sha256": "15e34909d45674669a0eb0ba3d9680cfb92de4ed0108ef60914f6f48bbf0e6ea",
+  "hardware": "NVIDIA GeForce RTX 5060",
+  "paddle": "3.3.0.dev20251209",
+  "telemetry_before": {
+    "at": "2026-10-25T16:29:36+08:00",
+    "linux_pid": 12039,
+    "gpu": {
+      "exit_code": 0,
+      "stdout": "NVIDIA GeForce RTX 5060, 596.21, P0, 51, 2880 MHz, 14001 MHz, 36.45 W, 145.00 W, 2 %, 2028 MiB\n",
+      "stderr": ""
+    },
+    "compute_processes": {
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    }
+  },
+  "telemetry_after": {
+    "at": "2026-10-25T16:29:43+08:00",
+    "linux_pid": 12039,
+    "gpu": {
+      "exit_code": 0,
+      "stdout": "NVIDIA GeForce RTX 5060, 596.21, P1, 63, 2685 MHz, 13801 MHz, 143.84 W, 145.00 W, 91 %, 2689 MiB\n",
+      "stderr": ""
+    },
+    "compute_processes": {
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    }
+  },
+  "protocol": "Fresh process/model; eval FP32 batch1; peak Paddle allocated and reserved after warmup, not total display/context memory",
+  "FLOPs": {
+    "status": "not_measured",
+    "grid_sample_present": false,
+    "total_supported": false,
+    "reason": "No verified complete counter for grid_sample/interpolation/pooling/custom fusion. Do not present partial convolution counts as total FLOPs."
+  }
+}

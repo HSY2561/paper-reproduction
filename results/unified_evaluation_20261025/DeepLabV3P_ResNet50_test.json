@@ -1,0 +1,44 @@
+{
+  "id": "DeepLabV3P_ResNet50",
+  "split": "test",
+  "n": 1124,
+  "confusion_matrix": [
+    [
+      240397341,
+      4094891
+    ],
+    [
+      3827808,
+      10649560
+    ]
+  ],
+  "boundary_counts_pred_gt": [
+    629707,
+    628957,
+    1598485,
+    1785064
+  ],
+  "precision": 0.7222757903973501,
+  "recall": 0.7356005594387046,
+  "f1": 0.7288772817325301,
+  "crackIoU": 0.5734122058065204,
+  "mIoU": 0.7707535060045161,
+  "boundary_precision": 0.3939398868303425,
+  "boundary_recall": 0.3523442296746783,
+  "boundary_f1": 0.3719828491416999,
+  "empty_predictions": 13,
+  "params": 26789874,
+  "checkpoint": "${PROJECT_ROOT}\\experiments\\segformer_public_wave9_20261023\\sm120_ubuntu24_formal\\frozen\\DeepLabV3P_ResNet50\\model.pdparams",
+  "checkpoint_sha256": "20844a3e24b4e0a3fa5a3c78a4b0dee9fa2ae55d2fbddd248599ea081828e791",
+  "config_sha256": "5db89f7f460971305adaeef4753db0f64ad8524567449694c9561d487ba900d8",
+  "per_image_sha256": "43632a6877e1e651d10069e5b0810b72d58412fa347e2e0e92fe793bfa830ab8",
+  "source": "${PROJECT_ROOT}/experiments/segformer_lightfusion_wave10_20261024/src/PaddleSeg-2.10.0",
+  "paddle": "3.3.0.dev20251209",
+  "opencv": "5.0.0",
+  "hardware": "NVIDIA GeForce RTX 5060",
+  "boundary_protocol": "inner 3x3; border constant0; DIST_L2 DIST_MASK_PRECISE; <=2px+1e-6; symmetric global counts",
+  "test_used": true,
+  "selection_uses_test": false,
+  "elapsed_seconds_with_IO_postprocess": 44.45966665200001,
+  "at": "2026-10-25T16:23:10+08:00"
+}
