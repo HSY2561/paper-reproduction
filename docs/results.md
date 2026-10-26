@@ -2,6 +2,10 @@
 
 筛选指标快照：2026-10-25T15:57:38+08:00。2026-10-26 已补充[统一 test 完成表及 Wave11 新结果](progress_20261026.md)；以下原筛选表仍为 Crack500 验证集348张结果，不与统一 test 或 Wave11 新匹配控制混用。
 
+## W11最终补充
+
+15组训练、独立val、效率与24固定图已完成，见[完整新报告](wave11_final_20261026.md)。M2有小幅一致收益但未过幅度门槛，E3不采用；下方仍为此前W10/Loss筛选快照，不能混用匹配控制。
+
 ## 当前结论
 
 - A0固定为SegFormer-B0 + width128 + Aligned。原始B0为3.715170M参数；A0为3.470434M。
@@ -68,11 +72,11 @@ F08 peak allocated memory在400/480输入分别59,538,176/79,593,216 bytes；A0�
 
 搜索及匹配种子合计94次完整训练，不含复用B0与六个公开模型；另已完成1次B0初始化补控，同范围含补控共95次，均不代表相同数量的独立算法。
 
-B0初始化补控已于2026-10-25 16:15完成18k，五阶段及wrapper真实exit0，冻结SHA与独立验证均通过，val mIoU为82.7134%。新补控结果与修正后的B0三seed控制另见[记录](../results/b0_verified_initialization_control.json)，既有B0行保留为历史控制。统一评价已启动，完整终评尚未生成。
+B0初始化补控已于2026-10-25 16:15完成18k，五阶段及wrapper真实exit0，冻结SHA与独立验证均通过，val mIoU为82.7134%。新补控结果与修正后的B0三seed控制另见[记录](../results/b0_verified_initialization_control.json)，既有B0行保留为历史控制。该筛选快照之后统一评价已完成，完整终表见[统一冻结评价](progress_20261026.md#统一冻结评价完成)。
 
 ## 公开历史test与统一test必须分开
 
-六个原始公开模型已有历史test：SegFormer-B0、OCRNet-HRNet-W18、PP-LiteSeg-STDC1、PSPNet-ResNet50、DeepLabV3+-ResNet50、FastSCNN；另有A0历史test。训练初始化、配方、后端以及历史边界实现不完全一致，不能当作严格同配方最终表。F08/W96当前没有完成新的统一test。
+六个原始公开模型已有历史test：SegFormer-B0、OCRNet-HRNet-W18、PP-LiteSeg-STDC1、PSPNet-ResNet50、DeepLabV3+-ResNet50、FastSCNN；另有A0历史test。训练初始化、配方、后端以及历史边界实现不完全一致，不能当作严格同配方最终表。此为旧历史表的边界说明；随后预先冻结的F08已完成统一test，W96未通过完整门槛且不因此访问test，见[统一终表](progress_20261026.md#统一冻结评价完成)。
 
 |原始模型|历史F1(%)|历史裂缝IoU(%)|历史mIoU(%)|
 |---|---:|---:|---:|
@@ -109,5 +113,5 @@ B0补控已完成，继续依据已冻结验证结论执行统一评价；不能
 
 ![已测延迟与波动，不宣称稳定加速](../figures/latency_measured_unstable.png)
 
-![历史test与参数；不代表尚待完成的统一终评](../figures/public_historical_test.png)
+![历史test与参数；与随后已完成的统一终评分表保留](../figures/public_historical_test.png)
 

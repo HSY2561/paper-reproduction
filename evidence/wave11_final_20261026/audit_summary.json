@@ -1,0 +1,48 @@
+{
+  "published_at": "2026-10-26T23:33:02+08:00",
+  "publication_only": true,
+  "training_or_inference_executed_by_publication": false,
+  "training": {
+    "complete_runs": 15,
+    "full_iters": 18000,
+    "genuine_train_exit0": 15,
+    "genuine_official_val_exit0": 15,
+    "genuine_pixel_boundary_exit0": 15,
+    "checkpoint_and_config_sha_verified": true,
+    "ordinary_EMA_exact_selection_verified": true,
+    "frozen_source_files_verified": 272,
+    "all_seed_paired_RNG_verified": true
+  },
+  "quantitative": {
+    "scientific_child_exit_code": 0,
+    "memory_children_exit0": 10,
+    "original_transport_wrapper_exit_code": null,
+    "transport_note": "Original outer PowerShell wrapper exit remained unknown; retained as null. A separate real CPU exit0 handoff verified the completed scientific child, artifacts, hashes and exited processes; no old exit code was relabelled.",
+    "independent_audit_passed": true
+  },
+  "qualitative": {
+    "actual_render_exit_code": 0,
+    "fixed_cases": 24,
+    "frozen_seed": 42,
+    "verified_model_case_pairs": 120,
+    "mismatches": 0,
+    "panels": 24,
+    "overviews": 4,
+    "prediction_GT_hash_and_CM_match_full348": true,
+    "source_train_val_files_checked_before_and_after": 4488,
+    "data_hash_unchanged": true,
+    "independent_audit_passed": true
+  },
+  "source_hashes": {
+    "independent_final_training_audit_20261026.json": "8d013c2ce625644380f152db03ff040eaad011afb10002c5aa2e92833edfdcff",
+    "independent_delivery_audit_20261026.json": "5e53da70fbb03f386cdf77140d81ba17ab5a9ed0f438a12f973efe7a52baca16",
+    "independent_qualitative_audit_20261026.json": "ff3a7d9db7578b0ee94fd830542fde7e4a8fc2ea51bb1f3e29b8d224e1f20dab",
+    "qualitative_v5_independent_review.json": "210c20997f681fecd68e844e8bf5740f58fd90b384629840a361ade92fa88807"
+  },
+  "original_training_release_sha256": "f5f2cf5e774111dbbdbf365f6279ee57641d39f5da0400e3f2fe951dc5d664ef",
+  "original_summary_sha256": "61358498e3f45b46fe9432b82bf623590c7cd9b74a5967af5afaa43057843329",
+  "test_used": false,
+  "thresholds_relaxed": false,
+  "SOTA_claim": false,
+  "excluded": "No raw dataset files, independent original input exports, checkpoints, archives, desktop process inventory, task XML, local credentials, locks or full machine telemetry."
+}

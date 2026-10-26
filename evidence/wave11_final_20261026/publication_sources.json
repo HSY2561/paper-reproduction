@@ -1,0 +1,374 @@
+{
+  "base_commit": "ab194f23c5d3dd542571551223a732c57003f32f",
+  "publication_only": true,
+  "source_evidence_modified": false,
+  "files": [
+    {
+      "source_relative": "experiments/segformer_complementarity_wave11_20261025/results/postprocess/20261026_091342_901909/ablation_three_seed.csv",
+      "published_relative": "results/wave11_20261026/final/ablation_three_seed.csv",
+      "source_sha256": "911e1b70d72e1018c5420509e13465050b748220a95746a8a280ddbec71a28e7",
+      "published_sha256": "f91cb37af9db56e2704881999ac13a794589dff2554b08adcaaa35d958452cab",
+      "transformation": "UTF-8/LF; removed columns="
+    },
+    {
+      "source_relative": "experiments/segformer_complementarity_wave11_20261025/results/postprocess/20261026_091342_901909/all_seed_runs.csv",
+      "published_relative": "results/wave11_20261026/final/all_seed_runs.csv",
+      "source_sha256": "04921caf540a0422ed078b78b6606c34272ae0dbdd1c41e72537960896b18942",
+      "published_sha256": "501cb02fe07c81f6ff2281707f779865f93be7c1db7b16943e76b91b96874d8b",
+      "transformation": "UTF-8/LF; removed columns="
+    },
+    {
+      "source_relative": "experiments/segformer_complementarity_wave11_20261025/results/postprocess/20261026_091342_901909/gates_and_interactions.json",
+      "published_relative": "results/wave11_20261026/final/gates_and_interactions.json",
+      "source_sha256": "e6ebf8c8bd4fa1f876ec7caa75ecdfb2e6775b7c2b997475acfcdf79664a3129",
+      "published_sha256": "e84815a64657b285c7a4f8e96858bb9ea64dfd52a423f39b90eec7889bfd0eca",
+      "transformation": "UTF-8/LF JSON; values unchanged"
+    },
+    {
+      "source_relative": "experiments/segformer_complementarity_wave11_20261025/results/W11_E0_s42_val_per_image.csv",
+      "published_relative": "results/wave11_20261026/final/per_image/W11_E0_s42.csv",
+      "source_sha256": "81c8576073b4b0feb84375d17e972bb2e87bb818caaabf342d718de8d08592bb",
+      "published_sha256": "5ad1adc6c910b131cbcdb882401728594ce79c6f1ce3930924ee68f7b028b280",
+      "transformation": "UTF-8/LF; removed columns=image_path"
+    },
+    {
+      "source_relative": "experiments/segformer_complementarity_wave11_20261025/results/W11_E1_s42_val_per_image.csv",
+      "published_relative": "results/wave11_20261026/final/per_image/W11_E1_s42.csv",
+      "source_sha256": "0615b9b970d95ce36e78ca4e35be674bad767830eec32334c6edbdc450ff59a8",
+      "published_sha256": "4680f39df753ecbd4b0bbdb06e47ffa80cc180c5d226f65cff34eae61cc5ec4d",
+      "transformation": "UTF-8/LF; removed columns=image_path"
+    },
+    {
+      "source_relative": "experiments/segformer_complementarity_wave11_20261025/results/W11_E2_s42_val_per_image.csv",
+      "published_relative": "results/wave11_20261026/final/per_image/W11_E2_s42.csv",
+      "source_sha256": "1e1d76205de87dd3336ed3ec6f8d72525efd2238c9abb82c2b46e06e73a196f3",
+      "published_sha256": "26bc1ae4fe9748b39af2800bccc365ab772fa83a3ac83a87eb4b0ecb939bbc10",
+      "transformation": "UTF-8/LF; removed columns=image_path"
+    },
+    {
+      "source_relative": "experiments/segformer_complementarity_wave11_20261025/results/W11_E3_s42_val_per_image.csv",
+      "published_relative": "results/wave11_20261026/final/per_image/W11_E3_s42.csv",
+      "source_sha256": "1f031f16acf024596a7a226a4b0317bb0975e79d5fc47c08a8fd2e7a047755b6",
+      "published_sha256": "10bfb50efb655aef5ead3f504e68485316d099c3db167d8ff544d765c699d02b",
+      "transformation": "UTF-8/LF; removed columns=image_path"
+    },
+    {
+      "source_relative": "experiments/segformer_complementarity_wave11_20261025/results/W11_E0_s43_val_per_image.csv",
+      "published_relative": "results/wave11_20261026/final/per_image/W11_E0_s43.csv",
+      "source_sha256": "6a963272f9ed83d54512e169b12dc09b6aa06940ff7735107170400694e394c7",
+      "published_sha256": "78a2f4ecd1bc0e29982c1663eb7505c3ee41b871f62a2f8492fb3753f54f05e2",
+      "transformation": "UTF-8/LF; removed columns=image_path"
+    },
+    {
+      "source_relative": "experiments/segformer_complementarity_wave11_20261025/results/W11_E1_s43_val_per_image.csv",
+      "published_relative": "results/wave11_20261026/final/per_image/W11_E1_s43.csv",
+      "source_sha256": "d5fa400669bbee079eb1b966e61485483408bc83665f809e81a84fcbaa715269",
+      "published_sha256": "a704c76887ec86be978dfd99b612d509d62b24403761a4417dc71d202c874b76",
+      "transformation": "UTF-8/LF; removed columns=image_path"
+    },
+    {
+      "source_relative": "experiments/segformer_complementarity_wave11_20261025/results/W11_E2_s43_val_per_image.csv",
+      "published_relative": "results/wave11_20261026/final/per_image/W11_E2_s43.csv",
+      "source_sha256": "73cefe9787fcdf96928fac9c3fe48a3acc446e332bba315b7772b1851e791003",
+      "published_sha256": "75d639871078bb71355a96622d42908eed9072ef6272b09fa04dab584a76d508",
+      "transformation": "UTF-8/LF; removed columns=image_path"
+    },
+    {
+      "source_relative": "experiments/segformer_complementarity_wave11_20261025/results/W11_E3_s43_val_per_image.csv",
+      "published_relative": "results/wave11_20261026/final/per_image/W11_E3_s43.csv",
+      "source_sha256": "2a7b17c26ee8ae8cd4a2382f36aa82c41786a791122e5d347a24c85a1c4894a6",
+      "published_sha256": "ae7a7482b4577f2f45d1b5e7b2786b79be71294024159759a7f6205831370aed",
+      "transformation": "UTF-8/LF; removed columns=image_path"
+    },
+    {
+      "source_relative": "experiments/segformer_complementarity_wave11_20261025/results/W11_E0_s44_val_per_image.csv",
+      "published_relative": "results/wave11_20261026/final/per_image/W11_E0_s44.csv",
+      "source_sha256": "78c5d38b65c096be16defcfa4ac96deee071716833dd882b76fcf40be2a5e8d4",
+      "published_sha256": "67cc26a7f87d801b1f523772929f1fd01c8b9337b80a7462ffd157b844592c17",
+      "transformation": "UTF-8/LF; removed columns=image_path"
+    },
+    {
+      "source_relative": "experiments/segformer_complementarity_wave11_20261025/results/W11_E1_s44_val_per_image.csv",
+      "published_relative": "results/wave11_20261026/final/per_image/W11_E1_s44.csv",
+      "source_sha256": "1f4bd1cc1c7f366ad152f37c0c7cee8a85cf3b78ce7a325c611c1ae2def6eca2",
+      "published_sha256": "21349f881370b1ec8bd6c4d7f8e4f1b4275b65018e18e02e10718ca412551bad",
+      "transformation": "UTF-8/LF; removed columns=image_path"
+    },
+    {
+      "source_relative": "experiments/segformer_complementarity_wave11_20261025/results/W11_E2_s44_val_per_image.csv",
+      "published_relative": "results/wave11_20261026/final/per_image/W11_E2_s44.csv",
+      "source_sha256": "e368ccee96623732eed13490d6e853fc474c95c90c1ba9aa6eddb3552e810f79",
+      "published_sha256": "8fd7d8eb21613aabe5ccbcbb51569eea13c89265d86e621c8f11d7d7902c31bd",
+      "transformation": "UTF-8/LF; removed columns=image_path"
+    },
+    {
+      "source_relative": "experiments/segformer_complementarity_wave11_20261025/results/W11_E3_s44_val_per_image.csv",
+      "published_relative": "results/wave11_20261026/final/per_image/W11_E3_s44.csv",
+      "source_sha256": "1284b842c55ac880bcda914b4023d39cd1f9cb77e4a3bf209313ffd38403bf9d",
+      "published_sha256": "f86651e1deea7804cbc6b6f0e0c4fff5998be196c9b970add503f0ce9e4cdadb",
+      "transformation": "UTF-8/LF; removed columns=image_path"
+    },
+    {
+      "source_relative": "experiments/segformer_complementarity_wave11_20261025/results/W11_R0_s42_val_per_image.csv",
+      "published_relative": "results/wave11_20261026/final/per_image/W11_R0_s42.csv",
+      "source_sha256": "347424b7a51e4899af564cb8fc0ce0e4fc458ad8c16748a53e94ed832a7072a7",
+      "published_sha256": "f6e1e67eed8796859584b915359d0e516225bd224c8336a4744aed253fa180c9",
+      "transformation": "UTF-8/LF; removed columns=image_path"
+    },
+    {
+      "source_relative": "experiments/segformer_complementarity_wave11_20261025/results/W11_R0_s43_val_per_image.csv",
+      "published_relative": "results/wave11_20261026/final/per_image/W11_R0_s43.csv",
+      "source_sha256": "a1b9830c3cbbe540b76d51c881da640012e28a2257cc9f1b62b5646afd7d7c60",
+      "published_sha256": "cda10991da0d515bfa9e810f4fd2f59cb1996f491e6a2b5e855ba04d9701c6ee",
+      "transformation": "UTF-8/LF; removed columns=image_path"
+    },
+    {
+      "source_relative": "experiments/segformer_complementarity_wave11_20261025/results/W11_R0_s44_val_per_image.csv",
+      "published_relative": "results/wave11_20261026/final/per_image/W11_R0_s44.csv",
+      "source_sha256": "ded9ba6a384e37a01c49b2804217b26e01ef42d11cea07c992e9be32ddb897f6",
+      "published_sha256": "de0a54f13c3ed69e1244ba8d3607b3aeac31a921b7fa0f59fb7250ccbb2a2f83",
+      "transformation": "UTF-8/LF; removed columns=image_path"
+    },
+    {
+      "source_relative": "experiments/segformer_complementarity_wave11_20261025/results/qualitative/20261026_092425_816083/per_image_verification.csv",
+      "published_relative": "results/wave11_20261026/final/fixed24_verification.csv",
+      "source_sha256": "f31a3ebcf4e300dc0f0e77c549a93c3f1cc1647f9d8565374a98be9f1639fabc",
+      "published_sha256": "190afc2bb4f4ab70661578986bbca4ead5ffecdbd9e1e3f6cbd2ae5c560dd4d8",
+      "transformation": "UTF-8/LF; removed columns="
+    },
+    {
+      "source_relative": "experiments/segformer_complementarity_wave11_20261025/results/postprocess/20261026_091342_901909/interaction_iou_three_seeds.png",
+      "published_relative": "figures/wave11_final_20261026/interaction_iou_three_seeds.png",
+      "source_sha256": "723d481408782540695e498689637ef45231f8a8026f90aa47c5da782fdce3b6",
+      "published_sha256": "723d481408782540695e498689637ef45231f8a8026f90aa47c5da782fdce3b6",
+      "transformation": "identical scientific figure bytes"
+    },
+    {
+      "source_relative": "experiments/segformer_complementarity_wave11_20261025/results/postprocess/20261026_091342_901909/pareto_latency_iou_400.png",
+      "published_relative": "figures/wave11_final_20261026/pareto_latency_iou_400.png",
+      "source_sha256": "7d5a5c4f470372a15337f3a813c94ff19fb55ead52c94b8fa034caf5ba5dfd82",
+      "published_sha256": "7d5a5c4f470372a15337f3a813c94ff19fb55ead52c94b8fa034caf5ba5dfd82",
+      "transformation": "identical scientific figure bytes"
+    },
+    {
+      "source_relative": "experiments/segformer_complementarity_wave11_20261025/results/postprocess/20261026_091342_901909/pareto_latency_iou_480.png",
+      "published_relative": "figures/wave11_final_20261026/pareto_latency_iou_480.png",
+      "source_sha256": "d8cfd30c386bbaaf619d3c0e98db5c829aec12ab5a782617d8fc135899095dd4",
+      "published_sha256": "d8cfd30c386bbaaf619d3c0e98db5c829aec12ab5a782617d8fc135899095dd4",
+      "transformation": "identical scientific figure bytes"
+    },
+    {
+      "source_relative": "experiments/segformer_complementarity_wave11_20261025/results/postprocess/20261026_091342_901909/pareto_parameters_iou.png",
+      "published_relative": "figures/wave11_final_20261026/pareto_parameters_iou.png",
+      "source_sha256": "f8853b2fe0929eaab2773c88cfba18e1f5c8b9b78d4930bb49a158485703c723",
+      "published_sha256": "f8853b2fe0929eaab2773c88cfba18e1f5c8b9b78d4930bb49a158485703c723",
+      "transformation": "identical scientific figure bytes"
+    },
+    {
+      "source_relative": "experiments/segformer_complementarity_wave11_20261025/results/qualitative/20261026_092425_816083/overview_all24.png",
+      "published_relative": "figures/wave11_qualitative_20261026/overview_all24.png",
+      "source_sha256": "7374da7a9ad0d1f8c119d8c0aa40adf1e13a5a56b2458c60fcdd35aeaf6e8cc5",
+      "published_sha256": "7374da7a9ad0d1f8c119d8c0aa40adf1e13a5a56b2458c60fcdd35aeaf6e8cc5",
+      "transformation": "identical scientific figure bytes"
+    },
+    {
+      "source_relative": "experiments/segformer_complementarity_wave11_20261025/results/qualitative/20261026_092425_816083/overview_page1.png",
+      "published_relative": "figures/wave11_qualitative_20261026/overview_page1.png",
+      "source_sha256": "c679fa51be113850ad2eb91d698362bce3b666f853daa04fc60b5350dc01d4b7",
+      "published_sha256": "c679fa51be113850ad2eb91d698362bce3b666f853daa04fc60b5350dc01d4b7",
+      "transformation": "identical scientific figure bytes"
+    },
+    {
+      "source_relative": "experiments/segformer_complementarity_wave11_20261025/results/qualitative/20261026_092425_816083/overview_page2.png",
+      "published_relative": "figures/wave11_qualitative_20261026/overview_page2.png",
+      "source_sha256": "cf56754acac4417bea03cc90fd1d755f7dcff7a2310ba5d3fdfe25443e750a87",
+      "published_sha256": "cf56754acac4417bea03cc90fd1d755f7dcff7a2310ba5d3fdfe25443e750a87",
+      "transformation": "identical scientific figure bytes"
+    },
+    {
+      "source_relative": "experiments/segformer_complementarity_wave11_20261025/results/qualitative/20261026_092425_816083/overview_page3.png",
+      "published_relative": "figures/wave11_qualitative_20261026/overview_page3.png",
+      "source_sha256": "39e2229f691551fa7762a361001b4561d2e968318f70500e515c87a3210b1664",
+      "published_sha256": "39e2229f691551fa7762a361001b4561d2e968318f70500e515c87a3210b1664",
+      "transformation": "identical scientific figure bytes"
+    },
+    {
+      "source_relative": "experiments/segformer_complementarity_wave11_20261025/results/qualitative/20261026_092425_816083/cases/01_20160222_165225_1281_361/comparison.png",
+      "published_relative": "figures/wave11_qualitative_20261026/01_20160222_165225_1281_361.png",
+      "source_sha256": "e9c6de212997704c40104d398d1a928cd15b6a71cc720fb463066874f616028d",
+      "published_sha256": "e9c6de212997704c40104d398d1a928cd15b6a71cc720fb463066874f616028d",
+      "transformation": "identical scientific figure bytes"
+    },
+    {
+      "source_relative": "experiments/segformer_complementarity_wave11_20261025/results/qualitative/20261026_092425_816083/cases/02_20160222_080850_1921_361/comparison.png",
+      "published_relative": "figures/wave11_qualitative_20261026/02_20160222_080850_1921_361.png",
+      "source_sha256": "53f2602618168a7536c06556c767e599ba954ffa457de96e80453ad612ea6f4e",
+      "published_sha256": "53f2602618168a7536c06556c767e599ba954ffa457de96e80453ad612ea6f4e",
+      "transformation": "identical scientific figure bytes"
+    },
+    {
+      "source_relative": "experiments/segformer_complementarity_wave11_20261025/results/qualitative/20261026_092425_816083/cases/03_20160222_080850_1281_361/comparison.png",
+      "published_relative": "figures/wave11_qualitative_20261026/03_20160222_080850_1281_361.png",
+      "source_sha256": "15334b466b89516227b2d9585291f77e03600e63f67a8eebf2f3de451da9c10a",
+      "published_sha256": "15334b466b89516227b2d9585291f77e03600e63f67a8eebf2f3de451da9c10a",
+      "transformation": "identical scientific figure bytes"
+    },
+    {
+      "source_relative": "experiments/segformer_complementarity_wave11_20261025/results/qualitative/20261026_092425_816083/cases/04_20160222_164851_641_1081/comparison.png",
+      "published_relative": "figures/wave11_qualitative_20261026/04_20160222_164851_641_1081.png",
+      "source_sha256": "8cde531ea39948ba2ec42a10fd9ef9894d05aa4f06f1029527767fdc2634cb9d",
+      "published_sha256": "8cde531ea39948ba2ec42a10fd9ef9894d05aa4f06f1029527767fdc2634cb9d",
+      "transformation": "identical scientific figure bytes"
+    },
+    {
+      "source_relative": "experiments/segformer_complementarity_wave11_20261025/results/qualitative/20261026_092425_816083/cases/05_20160222_115224_1921_1081/comparison.png",
+      "published_relative": "figures/wave11_qualitative_20261026/05_20160222_115224_1921_1081.png",
+      "source_sha256": "5c76a97ddfd68ed990af0b9ed7b6d5f78a80cb227d778531bb9cc138969302a3",
+      "published_sha256": "5c76a97ddfd68ed990af0b9ed7b6d5f78a80cb227d778531bb9cc138969302a3",
+      "transformation": "identical scientific figure bytes"
+    },
+    {
+      "source_relative": "experiments/segformer_complementarity_wave11_20261025/results/qualitative/20261026_092425_816083/cases/06_20160222_080850_1281_721/comparison.png",
+      "published_relative": "figures/wave11_qualitative_20261026/06_20160222_080850_1281_721.png",
+      "source_sha256": "055c11a94665d55220eb301fd541f13fe3ea7f1949be89231e28705e5b565e6c",
+      "published_sha256": "055c11a94665d55220eb301fd541f13fe3ea7f1949be89231e28705e5b565e6c",
+      "transformation": "identical scientific figure bytes"
+    },
+    {
+      "source_relative": "experiments/segformer_complementarity_wave11_20261025/results/qualitative/20261026_092425_816083/cases/07_20160222_080850_1921_1/comparison.png",
+      "published_relative": "figures/wave11_qualitative_20261026/07_20160222_080850_1921_1.png",
+      "source_sha256": "ddbba0d104617e90afacd5611bafe94398c5285bebb7e2bd736c34df4a399f7d",
+      "published_sha256": "ddbba0d104617e90afacd5611bafe94398c5285bebb7e2bd736c34df4a399f7d",
+      "transformation": "identical scientific figure bytes"
+    },
+    {
+      "source_relative": "experiments/segformer_complementarity_wave11_20261025/results/qualitative/20261026_092425_816083/cases/08_20160222_080850_641_721/comparison.png",
+      "published_relative": "figures/wave11_qualitative_20261026/08_20160222_080850_641_721.png",
+      "source_sha256": "afb2c4f4ef8c2d9bae959e5c0919ba9220dd9653a0f61175540f65e19c2a7e1e",
+      "published_sha256": "afb2c4f4ef8c2d9bae959e5c0919ba9220dd9653a0f61175540f65e19c2a7e1e",
+      "transformation": "identical scientific figure bytes"
+    },
+    {
+      "source_relative": "experiments/segformer_complementarity_wave11_20261025/results/qualitative/20261026_092425_816083/cases/09_20160222_115224_1281_1/comparison.png",
+      "published_relative": "figures/wave11_qualitative_20261026/09_20160222_115224_1281_1.png",
+      "source_sha256": "87f093936f5cce831bc92f5bc8ac7f42009f8ce47cc63f90dcffdee9823d93b2",
+      "published_sha256": "87f093936f5cce831bc92f5bc8ac7f42009f8ce47cc63f90dcffdee9823d93b2",
+      "transformation": "identical scientific figure bytes"
+    },
+    {
+      "source_relative": "experiments/segformer_complementarity_wave11_20261025/results/qualitative/20261026_092425_816083/cases/10_20160222_165225_1_361/comparison.png",
+      "published_relative": "figures/wave11_qualitative_20261026/10_20160222_165225_1_361.png",
+      "source_sha256": "36bf5bc79baf7a6b5cd8fbf999e2c71908bb48cc7298be982a0b8394dd17bdf2",
+      "published_sha256": "36bf5bc79baf7a6b5cd8fbf999e2c71908bb48cc7298be982a0b8394dd17bdf2",
+      "transformation": "identical scientific figure bytes"
+    },
+    {
+      "source_relative": "experiments/segformer_complementarity_wave11_20261025/results/qualitative/20261026_092425_816083/cases/11_20160222_164851_641_1/comparison.png",
+      "published_relative": "figures/wave11_qualitative_20261026/11_20160222_164851_641_1.png",
+      "source_sha256": "c80a362cfa97ea66880d46ddf8b1524104aa12c4cedbb1d22a251d9fd322f5dd",
+      "published_sha256": "c80a362cfa97ea66880d46ddf8b1524104aa12c4cedbb1d22a251d9fd322f5dd",
+      "transformation": "identical scientific figure bytes"
+    },
+    {
+      "source_relative": "experiments/segformer_complementarity_wave11_20261025/results/qualitative/20261026_092425_816083/cases/12_20160222_080850_1_361/comparison.png",
+      "published_relative": "figures/wave11_qualitative_20261026/12_20160222_080850_1_361.png",
+      "source_sha256": "ee05daf17963a186cbd6cdfbff738219cc6511010798c4f77c3ef795df0e2c39",
+      "published_sha256": "ee05daf17963a186cbd6cdfbff738219cc6511010798c4f77c3ef795df0e2c39",
+      "transformation": "identical scientific figure bytes"
+    },
+    {
+      "source_relative": "experiments/segformer_complementarity_wave11_20261025/results/qualitative/20261026_092425_816083/cases/13_20160222_165225_1921_721/comparison.png",
+      "published_relative": "figures/wave11_qualitative_20261026/13_20160222_165225_1921_721.png",
+      "source_sha256": "d5f72e8f7699f7b2cb1e55e8b3cc25a2c3b8880d0f8c6a71cae3627f55faf781",
+      "published_sha256": "d5f72e8f7699f7b2cb1e55e8b3cc25a2c3b8880d0f8c6a71cae3627f55faf781",
+      "transformation": "identical scientific figure bytes"
+    },
+    {
+      "source_relative": "experiments/segformer_complementarity_wave11_20261025/results/qualitative/20261026_092425_816083/cases/14_20160222_165926_1921_721/comparison.png",
+      "published_relative": "figures/wave11_qualitative_20261026/14_20160222_165926_1921_721.png",
+      "source_sha256": "841c3736ab2944411471ee8f51aebae1ff80b4a30cc6e5b5e0b84d8582480667",
+      "published_sha256": "841c3736ab2944411471ee8f51aebae1ff80b4a30cc6e5b5e0b84d8582480667",
+      "transformation": "identical scientific figure bytes"
+    },
+    {
+      "source_relative": "experiments/segformer_complementarity_wave11_20261025/results/qualitative/20261026_092425_816083/cases/15_20160222_080850_641_361/comparison.png",
+      "published_relative": "figures/wave11_qualitative_20261026/15_20160222_080850_641_361.png",
+      "source_sha256": "404964b7325620b09f63c26463f851f030b6756e191a081d6c7b1b00b77ff089",
+      "published_sha256": "404964b7325620b09f63c26463f851f030b6756e191a081d6c7b1b00b77ff089",
+      "transformation": "identical scientific figure bytes"
+    },
+    {
+      "source_relative": "experiments/segformer_complementarity_wave11_20261025/results/qualitative/20261026_092425_816083/cases/16_20160222_165225_1281_721/comparison.png",
+      "published_relative": "figures/wave11_qualitative_20261026/16_20160222_165225_1281_721.png",
+      "source_sha256": "0820ef6d41bbba49e3860b47abba4760f99273f8a2cff16788622bc571b0c7fe",
+      "published_sha256": "0820ef6d41bbba49e3860b47abba4760f99273f8a2cff16788622bc571b0c7fe",
+      "transformation": "identical scientific figure bytes"
+    },
+    {
+      "source_relative": "experiments/segformer_complementarity_wave11_20261025/results/qualitative/20261026_092425_816083/cases/17_20160222_115224_641_1/comparison.png",
+      "published_relative": "figures/wave11_qualitative_20261026/17_20160222_115224_641_1.png",
+      "source_sha256": "a7148dcf57b1084ec90684d94fa2fd16d309bb3c1b7bc7f1fa8ac9a98c3165d8",
+      "published_sha256": "a7148dcf57b1084ec90684d94fa2fd16d309bb3c1b7bc7f1fa8ac9a98c3165d8",
+      "transformation": "identical scientific figure bytes"
+    },
+    {
+      "source_relative": "experiments/segformer_complementarity_wave11_20261025/results/qualitative/20261026_092425_816083/cases/18_20160222_115224_1281_361/comparison.png",
+      "published_relative": "figures/wave11_qualitative_20261026/18_20160222_115224_1281_361.png",
+      "source_sha256": "3c9d14ec6d679c4cfceeeff816cfa9f80ecfb05c4be9458c96cc092ba5f9fb7c",
+      "published_sha256": "3c9d14ec6d679c4cfceeeff816cfa9f80ecfb05c4be9458c96cc092ba5f9fb7c",
+      "transformation": "identical scientific figure bytes"
+    },
+    {
+      "source_relative": "experiments/segformer_complementarity_wave11_20261025/results/qualitative/20261026_092425_816083/cases/19_20160222_165402_1281_1/comparison.png",
+      "published_relative": "figures/wave11_qualitative_20261026/19_20160222_165402_1281_1.png",
+      "source_sha256": "43ed3cede28102f8a4589c16f69b7e139e198ff4c582581e2e40df29765ed5a8",
+      "published_sha256": "43ed3cede28102f8a4589c16f69b7e139e198ff4c582581e2e40df29765ed5a8",
+      "transformation": "identical scientific figure bytes"
+    },
+    {
+      "source_relative": "experiments/segformer_complementarity_wave11_20261025/results/qualitative/20261026_092425_816083/cases/20_20160222_164851_641_721/comparison.png",
+      "published_relative": "figures/wave11_qualitative_20261026/20_20160222_164851_641_721.png",
+      "source_sha256": "6b4c2f5a9f061e6ead42bb33ea026ef332dffbf9e444b5e073acc9bcd4221188",
+      "published_sha256": "6b4c2f5a9f061e6ead42bb33ea026ef332dffbf9e444b5e073acc9bcd4221188",
+      "transformation": "identical scientific figure bytes"
+    },
+    {
+      "source_relative": "experiments/segformer_complementarity_wave11_20261025/results/qualitative/20261026_092425_816083/cases/21_20160222_115224_1281_1081/comparison.png",
+      "published_relative": "figures/wave11_qualitative_20261026/21_20160222_115224_1281_1081.png",
+      "source_sha256": "a80c0e2d1a656aa256d8fb37c99ae4401c34ca07c1798779798b4ffac25a1e98",
+      "published_sha256": "a80c0e2d1a656aa256d8fb37c99ae4401c34ca07c1798779798b4ffac25a1e98",
+      "transformation": "identical scientific figure bytes"
+    },
+    {
+      "source_relative": "experiments/segformer_complementarity_wave11_20261025/results/qualitative/20261026_092425_816083/cases/22_20160222_165225_641_361/comparison.png",
+      "published_relative": "figures/wave11_qualitative_20261026/22_20160222_165225_641_361.png",
+      "source_sha256": "cf79920beb557e71358f1f95d1be4e1dbbc5595dc92688ce518ea3874835a7d4",
+      "published_sha256": "cf79920beb557e71358f1f95d1be4e1dbbc5595dc92688ce518ea3874835a7d4",
+      "transformation": "identical scientific figure bytes"
+    },
+    {
+      "source_relative": "experiments/segformer_complementarity_wave11_20261025/results/qualitative/20261026_092425_816083/cases/23_20160222_165926_641_361/comparison.png",
+      "published_relative": "figures/wave11_qualitative_20261026/23_20160222_165926_641_361.png",
+      "source_sha256": "7a9f2a379bd69b118cfc032a18ee759705fe2493f7b564d7b1002be1a216ae07",
+      "published_sha256": "7a9f2a379bd69b118cfc032a18ee759705fe2493f7b564d7b1002be1a216ae07",
+      "transformation": "identical scientific figure bytes"
+    },
+    {
+      "source_relative": "experiments/segformer_complementarity_wave11_20261025/results/qualitative/20261026_092425_816083/cases/24_20160222_115224_641_361/comparison.png",
+      "published_relative": "figures/wave11_qualitative_20261026/24_20160222_115224_641_361.png",
+      "source_sha256": "b43fe165467299f3c1554bf00178e4ccc5a50a21ee605d5464c6a20907411eb5",
+      "published_sha256": "b43fe165467299f3c1554bf00178e4ccc5a50a21ee605d5464c6a20907411eb5",
+      "transformation": "identical scientific figure bytes"
+    },
+    {
+      "source_relative": "SegFormer_E0-E3两模块互补实验报告_20261025.md",
+      "published_relative": "docs/wave11_final_20261026.md",
+      "source_sha256": "2e8ff047e450c6561cd10a6d96bb59b52c6dc2adb6c1f4b991222bb73135c3d9",
+      "published_sha256": "2c437779c90f72ac0c00b08e69eaf4d86ae30f840037e9d2646c483bed895d78",
+      "transformation": "repository-relative links and public result/audit sections; measured values unchanged"
+    }
+  ],
+  "exclusions": "No raw dataset files, independent original input exports, checkpoints, archives, desktop process inventory, task XML, local credentials, locks or full machine telemetry.",
+  "numerical_values_unchanged": true,
+  "text_bytes_canonicalized_to": "UTF-8 LF without BOM"
+}
