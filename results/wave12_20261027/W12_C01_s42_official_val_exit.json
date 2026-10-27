@@ -1,0 +1,30 @@
+{
+  "tag": "W12_C01_s42_official_val",
+  "pid": 61224,
+  "exit_code": 0,
+  "identity": {
+    "pid": 61224,
+    "running": true,
+    "creation_time_filetime": 134375152957131714,
+    "executable_path": "<local path omitted>",
+    "observed_exit_code": 259,
+    "identity_source": "OpenProcess_GetProcessTimes"
+  },
+  "guard_reason": null,
+  "ended_at": "2026-10-27T03:08:26+08:00",
+  "elapsed_seconds": 11.02,
+  "command": [
+    "<local path omitted>",
+    "<local path omitted>",
+    "--config",
+    "<local path omitted>",
+    "--model_path",
+    "<local path omitted>",
+    "--num_workers",
+    "0"
+  ],
+  "stdout": "<local path omitted>",
+  "stderr": "<local path omitted>",
+  "release_sha256": "157d0af16466f15e0b274174260fb5380e0cafca5690cd5ceeb50cbfc6d17cbe",
+  "test_used": false
+}

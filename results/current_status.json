@@ -604,6 +604,19 @@
     ],
     "qualitative_gallery": "figures/wave11_qualitative_20261026/README.md"
   },
-  "latest_sync_evidence": "evidence/sync_20261026/machine_checks.json",
-  "latest_final_publication": "evidence/wave11_final_20261026/publication_sources.json"
+  "latest_sync_evidence": "evidence/sync_20261027/machine_checks.json",
+  "latest_final_publication": "evidence/wave11_final_20261026/publication_sources.json",
+  "wave12": {
+    "at": "2026-10-27T09:11:34+08:00",
+    "registered_primary_runs": 12,
+    "complete_train_val_boundary_runs": 12,
+    "train_val_boundary_exit_code": 0,
+    "profile_stage": "phase2_failed_after_deferred_memory_child",
+    "profile_exit_code": 1,
+    "test_used": false,
+    "accuracy_gate_passed_rows": 0,
+    "source": "results/wave12_20261027/comparison.json",
+    "failure_receipt": "results/wave12_20261027/workflow_failure.json",
+    "selection_status": "no final selection; validation-only snapshot"
+  }
 }

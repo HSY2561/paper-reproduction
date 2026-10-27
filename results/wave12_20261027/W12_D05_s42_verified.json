@@ -1,0 +1,64 @@
+{
+  "id": "W12_D05_s42",
+  "group": "D05",
+  "seed": 42,
+  "status": "complete",
+  "stage": "primary",
+  "registered_numel": 3456418,
+  "trainable_numel": 3456162,
+  "metrics": {
+    "precision": 0.8038633190631996,
+    "recall": 0.8132996512783026,
+    "f1": 0.8085539541280217,
+    "crackIoU": 0.6786324541756894,
+    "mIoU": 0.827918920927557,
+    "boundary_f1": 0.4426046914914537,
+    "boundary_f1_1px": 0.3108079083853965,
+    "hard_cldice": 0.8668315180010044,
+    "skeleton_recall": 0.8469661390031424,
+    "thin_radius_le1_recall": 0.46961932650073207
+  },
+  "checkpoint": "<local artifact omitted; see SHA256 fields>",
+  "checkpoint_sha256": "5068138b41f12631a717511a1a56b6a8d586cb9c0c3972e25d8bc337e611f441",
+  "config": "<local path omitted>",
+  "config_sha256": "44eeb82064f4750f19fcb9d6420d2826c916393f38de20f6038e1467e5887ccf",
+  "selection": "<local artifact omitted; see SHA256 fields>",
+  "metric_file": "W12_D05_s42_val.json",
+  "per_image_csv": "W12_D05_s42_val_per_image.csv",
+  "selected_variant": "ordinary",
+  "selected_iteration": 8000,
+  "terminal": {
+    "terminal_iteration": 18000,
+    "final_checkpoint": "<local artifact omitted; see SHA256 fields>",
+    "final_checkpoint_sha256": "ddd60462157360bd98a39f4d2dffdb0e9ceacd8f6cfb6c96eadcb251c386c23c"
+  },
+  "rng_audit_sha256": "0cb50e784ead7c749f86cc9b014ff165b6a82be66a6e7311ab37be248ec5d56f",
+  "accuracy": {
+    "passed": false,
+    "delta": {
+      "crackIoU": -0.0009602227150649068,
+      "f1": -0.0006811494076875979,
+      "mIoU": -0.0005717992964087149,
+      "precision": -0.004154596238140851,
+      "recall": 0.002843686861068506,
+      "boundary_f1": -0.006569482809551386,
+      "hard_cldice": 0.0033141954142689167,
+      "thin_radius_le1_recall": -0.018118594436310365
+    },
+    "thresholds": {
+      "crackIoU": -0.002,
+      "f1": -0.002,
+      "mIoU": -0.002,
+      "precision": -0.005,
+      "recall": -0.005,
+      "boundary_f1": -0.005,
+      "hard_cldice": -0.005,
+      "thin_radius_le1_recall": -0.005
+    },
+    "failures": [
+      "boundary_f1",
+      "thin_radius_le1_recall"
+    ]
+  },
+  "test_used": false
+}

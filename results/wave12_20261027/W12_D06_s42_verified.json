@@ -1,0 +1,64 @@
+{
+  "id": "W12_D06_s42",
+  "group": "D06",
+  "seed": 42,
+  "status": "complete",
+  "stage": "primary",
+  "registered_numel": 3460642,
+  "trainable_numel": 3460386,
+  "metrics": {
+    "precision": 0.8142686967466355,
+    "recall": 0.8023314238684343,
+    "f1": 0.8082559867973478,
+    "crackIoU": 0.6782127519359366,
+    "mIoU": 0.8278484319853623,
+    "boundary_f1": 0.44902594148727565,
+    "boundary_f1_1px": 0.31542932773371724,
+    "hard_cldice": 0.8627423248018373,
+    "skeleton_recall": 0.840122364337855,
+    "thin_radius_le1_recall": 0.4582723279648609
+  },
+  "checkpoint": "<local artifact omitted; see SHA256 fields>",
+  "checkpoint_sha256": "2452c9ffc094404c548c94fa5b023d88493c3a3144302eca4ac85ed3e0c72d20",
+  "config": "<local path omitted>",
+  "config_sha256": "968b5f113383a16455bd30ecb39625f60a19a1f74077bfe161be7bf4a999a762",
+  "selection": "<local artifact omitted; see SHA256 fields>",
+  "metric_file": "W12_D06_s42_val.json",
+  "per_image_csv": "W12_D06_s42_val_per_image.csv",
+  "selected_variant": "ema",
+  "selected_iteration": 8000,
+  "terminal": {
+    "terminal_iteration": 18000,
+    "final_checkpoint": "<local artifact omitted; see SHA256 fields>",
+    "final_checkpoint_sha256": "38ee6a142ade22bbf8caf508ee4259e513718b2f5cfa380201f060485c5ef6e2"
+  },
+  "rng_audit_sha256": "c173a6b676b9d1cd80afb6ea56d8458e7c3652087e189befffd0b9df2e9f96d0",
+  "accuracy": {
+    "passed": false,
+    "delta": {
+      "crackIoU": -0.0013799249548177572,
+      "f1": -0.0009791167383614852,
+      "mIoU": -0.0006422882386034612,
+      "precision": 0.006250781445295006,
+      "recall": -0.008124540548799852,
+      "boundary_f1": -0.00014823281372944308,
+      "hard_cldice": -0.0007749977848982015,
+      "thin_radius_le1_recall": -0.029465592972181542
+    },
+    "thresholds": {
+      "crackIoU": -0.002,
+      "f1": -0.002,
+      "mIoU": -0.002,
+      "precision": -0.005,
+      "recall": -0.005,
+      "boundary_f1": -0.005,
+      "hard_cldice": -0.005,
+      "thin_radius_le1_recall": -0.005
+    },
+    "failures": [
+      "recall",
+      "thin_radius_le1_recall"
+    ]
+  },
+  "test_used": false
+}

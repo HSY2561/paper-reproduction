@@ -1,0 +1,139 @@
+{
+  "n": 348,
+  "confusion_matrix": [
+    [
+      76072457,
+      914288
+    ],
+    [
+      860203,
+      3747196
+    ]
+  ],
+  "mIoU": 0.827918920927557,
+  "crackIoU": 0.6786324541756894,
+  "precision": 0.8038633190631996,
+  "recall": 0.8132996512783026,
+  "f1": 0.8085539541280217,
+  "empty_predictions": 11,
+  "empty_gt": 0,
+  "empty_both": 0,
+  "zero_foreground_overlap": 12,
+  "negative_sample_fp": 0,
+  "boundary_f1_1px": 0.3108079083853965,
+  "boundary_precision_1px": 0.32844896679095376,
+  "boundary_recall_1px": 0.2949652661086576,
+  "boundary_f1_2px": 0.4426046914914537,
+  "boundary_precision_2px": 0.46641852806913614,
+  "boundary_recall_2px": 0.4211044468079218,
+  "boundary_f1": 0.4426046914914537,
+  "boundary_precision": 0.46641852806913614,
+  "boundary_recall": 0.4211044468079218,
+  "hard_cldice": 0.8668315180010044,
+  "skeleton_precision": 0.8876511538483612,
+  "skeleton_recall": 0.8469661390031424,
+  "global_counts": {
+    "boundary_pred": 459152,
+    "boundary_gt": 505846,
+    "pred_skeleton_count": 174243,
+    "gt_skeleton_count": 203981,
+    "pred_skeleton_in_gt": 154667,
+    "gt_skeleton_in_pred": 172765,
+    "gt_crop_border_skeleton_count": 1759,
+    "gt_crop_border_skeleton_in_pred": 517,
+    "boundary_match_pred_1px": 150808,
+    "boundary_match_pred_2px": 214157,
+    "boundary_match_gt_1px": 149207,
+    "boundary_match_gt_2px": 213014,
+    "r_le1_gt": 5464,
+    "r_le1_hit": 2566,
+    "r_le1_border_gt": 1759,
+    "r_le1_border_hit": 517,
+    "r_1to2_gt": 7623,
+    "r_1to2_hit": 4176,
+    "r_1to2_border_gt": 0,
+    "r_1to2_border_hit": 0,
+    "r_gt2_gt": 190894,
+    "r_gt2_hit": 166023,
+    "r_gt2_border_gt": 0,
+    "r_gt2_border_hit": 0
+  },
+  "gt_radius_strata": {
+    "r_le1": {
+      "gt": 5464,
+      "hit": 2566,
+      "recall": 0.46961932650073207,
+      "crop_border_gt": 1759,
+      "crop_border_hit": 517,
+      "crop_border_recall": 0.2939169982944855
+    },
+    "r_1to2": {
+      "gt": 7623,
+      "hit": 4176,
+      "recall": 0.5478158205430933,
+      "crop_border_gt": 0,
+      "crop_border_hit": 0,
+      "crop_border_recall": null
+    },
+    "r_gt2": {
+      "gt": 190894,
+      "hit": 166023,
+      "recall": 0.8697130344589143,
+      "crop_border_gt": 0,
+      "crop_border_hit": 0,
+      "crop_border_recall": null
+    }
+  },
+  "crop_border_skeleton_recall": 0.2939169982944855,
+  "test_used": false,
+  "config": "<local path omitted>",
+  "config_sha256": "44eeb82064f4750f19fcb9d6420d2826c916393f38de20f6038e1467e5887ccf",
+  "model_path": "<local path omitted>",
+  "checkpoint_sha256": "5068138b41f12631a717511a1a56b6a8d586cb9c0c3972e25d8bc337e611f441",
+  "versions": {
+    "packages": {
+      "scikit-image": "0.26.0",
+      "opencv-python-headless": "4.11.0.86",
+      "numpy": "2.4.1"
+    },
+    "cv2": "4.11.0",
+    "skimage": "0.26.0",
+    "skeleton_algorithm": "skimage.morphology.skeletonize(method=zhang)",
+    "boundary_distance": "cv2.DIST_L2 / DIST_MASK_PRECISE",
+    "gt_radius_border": "pad1 constant0; exact distanceTransform; crop1",
+    "test_used": false
+  },
+  "fixed24_cases": {
+    "path": "<local path omitted>",
+    "sha256": "8ba37712a2a4a15ed2db42f13f65c7150530896f09f1c36ec37134978943c619",
+    "selected_images": [
+      "20160222_165225_1281_361.jpg",
+      "20160222_080850_1921_361.jpg",
+      "20160222_080850_1281_361.jpg",
+      "20160222_164851_641_1081.jpg",
+      "20160222_115224_1921_1081.jpg",
+      "20160222_080850_1281_721.jpg",
+      "20160222_080850_1921_1.jpg",
+      "20160222_080850_641_721.jpg",
+      "20160222_115224_1281_1.jpg",
+      "20160222_165225_1_361.jpg",
+      "20160222_164851_641_1.jpg",
+      "20160222_080850_1_361.jpg",
+      "20160222_165225_1921_721.jpg",
+      "20160222_165926_1921_721.jpg",
+      "20160222_080850_641_361.jpg",
+      "20160222_165225_1281_721.jpg",
+      "20160222_115224_641_1.jpg",
+      "20160222_115224_1281_361.jpg",
+      "20160222_165402_1281_1.jpg",
+      "20160222_164851_641_721.jpg",
+      "20160222_115224_1281_1081.jpg",
+      "20160222_165225_641_361.jpg",
+      "20160222_165926_641_361.jpg",
+      "20160222_115224_641_361.jpg"
+    ]
+  },
+  "boundary_protocol": "inner3x3 constant0; exact Euclidean<=1/2px; accumulate match counts then harmonic mean",
+  "skeleton_protocol": "hard global counts: skeleton(pred) in GT; skeleton(GT) in pred; Zhang0.26.0; argmax masks",
+  "radius_protocol": "GT pad1 constant0 exact distance then crop; radius<=1,1<r<=2,r>2; crop-border points separately"
+}

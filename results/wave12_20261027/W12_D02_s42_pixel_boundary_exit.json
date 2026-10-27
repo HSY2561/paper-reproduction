@@ -1,0 +1,30 @@
+{
+  "tag": "W12_D02_s42_pixel_boundary",
+  "pid": 57784,
+  "exit_code": 0,
+  "identity": {
+    "pid": 57784,
+    "running": true,
+    "creation_time_filetime": 134375085120481890,
+    "executable_path": "<local path omitted>",
+    "observed_exit_code": 259,
+    "identity_source": "OpenProcess_GetProcessTimes"
+  },
+  "guard_reason": null,
+  "ended_at": "2026-10-27T01:15:31+08:00",
+  "elapsed_seconds": 19.03,
+  "command": [
+    "<local path omitted>",
+    "<local path omitted>",
+    "--config",
+    "<local path omitted>",
+    "--model_path",
+    "<local path omitted>",
+    "--output",
+    "<local path omitted>"
+  ],
+  "stdout": "<local path omitted>",
+  "stderr": "<local path omitted>",
+  "release_sha256": "157d0af16466f15e0b274174260fb5380e0cafca5690cd5ceeb50cbfc6d17cbe",
+  "test_used": false
+}
