@@ -1,0 +1,127 @@
+{
+  "snapshot_at": "2026-10-27T09:11:34+08:00",
+  "weights_bundled": false,
+  "note": "Checkpoint binaries remain outside GitHub; verify a local file before software use.",
+  "items": [
+    {
+      "id": "W12_D02_s42",
+      "bundled": false,
+      "local_checkpoint": "${CHECKPOINT_ROOT}/W12_D02_s42/model.pdparams",
+      "sha256": "abd68dc9927e359fe945856a5abbc5f5acc7dd9342b774955b1889f143daf34e",
+      "selected_variant": "ema",
+      "selected_iteration": 12000,
+      "config_sha256": "7b7c863b4fc9c9b42b5cf8e8f8d9338bbbb31c9bd6bc9d64a1827b19417338a3",
+      "test_used": false
+    },
+    {
+      "id": "W12_D04_s42",
+      "bundled": false,
+      "local_checkpoint": "${CHECKPOINT_ROOT}/W12_D04_s42/model.pdparams",
+      "sha256": "2b8b783c3e6b6c3d8d17bb0f090d710e4681fa1626503906fa291602157b7ccb",
+      "selected_variant": "ordinary",
+      "selected_iteration": 12000,
+      "config_sha256": "268ba0ff0575ca4a90fec36dafd0b6eb6a9cbee72cd2ac79a0e39c497e011f8e",
+      "test_used": false
+    },
+    {
+      "id": "W12_D05_s42",
+      "bundled": false,
+      "local_checkpoint": "${CHECKPOINT_ROOT}/W12_D05_s42/model.pdparams",
+      "sha256": "5068138b41f12631a717511a1a56b6a8d586cb9c0c3972e25d8bc337e611f441",
+      "selected_variant": "ordinary",
+      "selected_iteration": 8000,
+      "config_sha256": "44eeb82064f4750f19fcb9d6420d2826c916393f38de20f6038e1467e5887ccf",
+      "test_used": false
+    },
+    {
+      "id": "W12_D08_s42",
+      "bundled": false,
+      "local_checkpoint": "${CHECKPOINT_ROOT}/W12_D08_s42/model.pdparams",
+      "sha256": "30eabd7e03cd076e4de902f1d7a9eeaa6d3f480931250a95762fc8528be0fecb",
+      "selected_variant": "ordinary",
+      "selected_iteration": 17000,
+      "config_sha256": "cbb2332263099d4a7a92dbff3f86d7df93807e9faf2bbec887cca2ef718736e3",
+      "test_used": false
+    },
+    {
+      "id": "W12_C01_s42",
+      "bundled": false,
+      "local_checkpoint": "${CHECKPOINT_ROOT}/W12_C01_s42/model.pdparams",
+      "sha256": "1d1420293d2c0bf9c5259a879b45736549e2cedbbbaf77dd7da2580193c57954",
+      "selected_variant": "ordinary",
+      "selected_iteration": 8000,
+      "config_sha256": "bfe7766d84e59e3e61800dcdc03417d2ba3a1e010fbdadd47533be7a9c4f46df",
+      "test_used": false
+    },
+    {
+      "id": "W12_C02_s42",
+      "bundled": false,
+      "local_checkpoint": "${CHECKPOINT_ROOT}/W12_C02_s42/model.pdparams",
+      "sha256": "933de4e61e7b9f526bbcc054731f3c30ec86def77e96b097467e7dbc7559a496",
+      "selected_variant": "ordinary",
+      "selected_iteration": 5000,
+      "config_sha256": "3c87f6854c0fefa0665c22774b456b4f3869599c0364a00e3282ad9b74dddb67",
+      "test_used": false
+    },
+    {
+      "id": "W12_D06_s42",
+      "bundled": false,
+      "local_checkpoint": "${CHECKPOINT_ROOT}/W12_D06_s42/model.pdparams",
+      "sha256": "2452c9ffc094404c548c94fa5b023d88493c3a3144302eca4ac85ed3e0c72d20",
+      "selected_variant": "ema",
+      "selected_iteration": 8000,
+      "config_sha256": "968b5f113383a16455bd30ecb39625f60a19a1f74077bfe161be7bf4a999a762",
+      "test_used": false
+    },
+    {
+      "id": "W12_D07_s42",
+      "bundled": false,
+      "local_checkpoint": "${CHECKPOINT_ROOT}/W12_D07_s42/model.pdparams",
+      "sha256": "57a1f6ba9f2ab68630b54fc12a1bbb0312fd87742617838a768d9a941b0abccd",
+      "selected_variant": "ordinary",
+      "selected_iteration": 8000,
+      "config_sha256": "bd34dc12a718e87e840fc3548afec4a653f9d4b4a62f8c5ac46a3c8ec34ec1af",
+      "test_used": false
+    },
+    {
+      "id": "W12_D01_s42",
+      "bundled": false,
+      "local_checkpoint": "${CHECKPOINT_ROOT}/W12_D01_s42/model.pdparams",
+      "sha256": "6662fb44516cfb0627b9464a418127e649e6b3969c656d364cee697f34474b6b",
+      "selected_variant": "ordinary",
+      "selected_iteration": 12000,
+      "config_sha256": "a15d9c5792460918abb5b30046e05bd4d0f6a97f4468061e5fe460b2a5a99d77",
+      "test_used": false
+    },
+    {
+      "id": "W12_D03_s42",
+      "bundled": false,
+      "local_checkpoint": "${CHECKPOINT_ROOT}/W12_D03_s42/model.pdparams",
+      "sha256": "8398a7f7175fa8de9412b039680c917757465163c35a1872479f034b29bb4fe2",
+      "selected_variant": "ordinary",
+      "selected_iteration": 17000,
+      "config_sha256": "3aa0ac10746b391e657cecf7ee666cdcf80c5446c8ad4527b01f697d5f034743",
+      "test_used": false
+    },
+    {
+      "id": "W12_D09_s42",
+      "bundled": false,
+      "local_checkpoint": "${CHECKPOINT_ROOT}/W12_D09_s42/model.pdparams",
+      "sha256": "44b157bfac71dc8b53801e895ee0afbbf113b2b9f785dcd280c40edfb3c8b0d6",
+      "selected_variant": "ema",
+      "selected_iteration": 12000,
+      "config_sha256": "ab39d2061f3af246137d5c6e0aa60cf40b01e788e3007d29c092ae4d941c0309",
+      "test_used": false
+    },
+    {
+      "id": "W12_D10_s42",
+      "bundled": false,
+      "local_checkpoint": "${CHECKPOINT_ROOT}/W12_D10_s42/model.pdparams",
+      "sha256": "da9461808fae56d88c12f73c24970133338b8233308f5f3f33a4fde78deef21d",
+      "selected_variant": "ordinary",
+      "selected_iteration": 17000,
+      "config_sha256": "45b2511485a3510450e832b8fc2a22e4fe562ec3874bae777deb212b6613a0d2",
+      "test_used": false
+    }
+  ]
+}

@@ -42,6 +42,9 @@ B0共同初始化补控已于16:15完成，其验证mIoU为82.7134%；更新后�
 
 ![轻量融合与参数折中](figures/fusion20_pareto.png)
 
+
+> 软件接入：环境、checkpoint 外部放置、SHA 校验和左侧模型选择器约定见 [checkpoint 与 Python 环境说明](docs/checkpoint_and_environment.md)。仓库不内置权重或完整虚拟环境。
+
 ## 从哪里开始
 
 | 内容 | 入口 |
