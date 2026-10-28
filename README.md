@@ -1,20 +1,12 @@
+# Crack500 裂缝分割：SegFormer 精度与效率改进
+
+当前研发基准固定为 **A0 = SegFormer-B0 + width128 + Aligned**。目标是兼顾裂缝分割精度、参数量和机器人部署效率。原始SegFormer-B0（width256）保留为公开模型对照。
+
 ## 最新进度（2026-10-27）
 
 - **Wave12 首轮验证快照**：D01-D10、C01/C02 共 12 个 seed42 配置完成 18,000 iter 训练、官方验证和像素/边界核验，相关回执均 exit=0；全部为 val348，`test_used=false`。
 - **测速阶段未形成可用放行结论**：phase2 profile 在一次内存子进程延期后失败（workflow exit=1），失败回执保留；没有最终模型选择，也没有加速声明。
-- **门槛结果**：12 行当前 `accuracy.passed=false`，因此不把 C01 等较高单次 val 分数称为候选或最终模型。权重、数据集、原始日志、缓存和 profile 目录未上传。详见 [Wave12 快照](docs/wave12_snapshot/README.md) 与 [结果索引](results/wave12_20261027/comparison.json)。
-
-- **Wave12 首轮验证快照**：D01-D10、C01/C02 共 12 个 seed42 配置完成 18,000 iter 训练、官方验证和像素/边界核验，相关回执均 exit=0；全部为 val348，`test_used=false`。
-- **测速阶段未形成可用放行结论**：phase2 profile 在一次内存子进程延期后失败（workflow exit=1），失败回执保留；没有最终模型选择，也没有加速声明。
-- **门槛结果**：12 行当前 `accuracy.passed=false`，因此不把 C01 等较高单次 val 分数称为候选或最终模型。权重、数据集、原始日志、缓存和 profile 目录未上传。详见 [Wave12 快照](docs/wave12_snapshot/README.md) 与 [结果索引](results/wave12_20261027/comparison.json)。
-
-- **Wave12 首轮验证快照**：D01-D10、C01/C02 共 12 个 seed42 配置完成 18,000 iter 训练、官方验证和像素/边界核验，相关回执均 exit=0；全部为 val348，`test_used=false`。
-- **测速阶段未形成可用放行结论**：phase2 profile 在一次内存子进程延期后失败（workflow exit=1），失败回执保留；没有最终模型选择，也没有加速声明。
-- **门槛结果**：12 行当前 `accuracy.passed=false`，因此不把 C01 等较高单次 val 分数称为候选或最终模型。权重、数据集、原始日志、缓存和 profile 目录未上传。详见 [Wave12 快照](docs/wave12_snapshot/README.md) 与 [结果索引](results/wave12_20261027/comparison.json)。
-
-# Crack500 裂缝分割：SegFormer 精度与效率改进
-
-当前研发基准固定为 **A0 = SegFormer-B0 + width128 + Aligned**。目标是兼顾裂缝分割精度、参数量和机器人部署效率。原始SegFormer-B0（width256）保留为公开模型对照。
+- **门槛结果**：12 行当前 `accuracy.passed=false`，不把单次 val 分数称为候选或最终模型。权重、数据集、原始日志、缓存和 profile 目录未上传。详见 [Wave12 快照](docs/wave12_snapshot/README.md) 与 [结果索引](results/wave12_20261027/comparison.json)。
 
 ## 最新进度（2026-10-26）
 
