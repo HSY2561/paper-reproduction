@@ -1,0 +1,7 @@
+{
+  "status": "completed",
+  "id": "C2_WTConv",
+  "exit_code": 0,
+  "config": "D:\\论文复现\\experiments\\segformer_crack500_aligned_wtconv_ablation_wave17_20261030\\configs\\C2_WTConv.yml",
+  "completed": "2026-10-31T01:19:02.9392396+08:00"
+}

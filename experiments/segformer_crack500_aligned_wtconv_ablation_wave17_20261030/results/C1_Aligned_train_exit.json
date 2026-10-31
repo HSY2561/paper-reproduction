@@ -1,0 +1,8 @@
+{
+  "save_dir": "D:\\论文复现\\experiments\\segformer_crack500_aligned_wtconv_ablation_wave17_20261030\\training\\C1_Aligned",
+  "log": "D:\\论文复现\\experiments\\segformer_crack500_aligned_wtconv_ablation_wave17_20261030\\logs\\C1_Aligned_train.log",
+  "completed": "2026-10-31T00:56:27.4818779+08:00",
+  "exit_code": 0,
+  "expected_iters": 18000,
+  "id": "C1_Aligned"
+}

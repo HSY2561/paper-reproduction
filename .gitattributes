@@ -1,13 +1,2 @@
+# Auto detect text files and perform LF normalization
 * text=auto
-*.py text eol=lf
-*.md text eol=lf
-*.yml text eol=lf
-*.json text eol=lf
-*.csv text eol=lf
-*.svg text eol=lf
-*.png binary
-# These artifacts have byte-level provenance hashes; preserve the original bytes.
-overlays/paddleseg/models/segformer.py -text
-scripts/evaluate_exact.py -text
-third_party/PaddleSeg-LICENSE -text
-results/per_image/**/*.csv -text

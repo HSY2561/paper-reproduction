@@ -1,6 +1,0 @@
-{
-  "entry": "${PROJECT_ROOT}\\experiments\\segformer_lightfusion_wave10_20261024\\recovery_20261025\\stage6_unified\\run_stage6_once.ps1",
-  "registered_at": "2026-10-25T12:43:38.8568165+08:00",
-  "repeat_trigger": false,
-  "task_name": "Codex-SegFormer-unified-eval-once-20261025"
-}

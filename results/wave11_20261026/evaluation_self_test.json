@@ -1,8 +1,0 @@
-{
-  "passed": true,
-  "cases": 6,
-  "zero_border": true,
-  "exact_euclidean": true,
-  "empty_semantics": true,
-  "test_used": false
-}

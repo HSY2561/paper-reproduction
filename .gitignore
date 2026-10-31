@@ -1,45 +1,26 @@
-# Publish only the curated top-level directories; old local mirrors stay private.
-/*
-!/.gitignore
-!/.gitattributes
-!/README.md
-!/configs/
-!/docs/
-!/evidence/
-!/figures/
-!/overlays/
-!/requirements/
-!/results/
-!/runtime/
-!/scripts/
-!/third_party/
-# Local dependencies and outputs; source packages named datasets are intentionally allowed.
-/.cache/
-/.local_runs/
-/data/
-/artifacts/
-/runs/
-/outputs/
-/.venv/
-/venv/
-__pycache__/
+# Local datasets, caches, logs, and training intermediates
+data/
+**/__pycache__/
+**/.pytest_cache/
 *.py[cod]
-.env
-.env.*
-*.pem
-*.key
-id_rsa*
-*.pdparams
+experiments/**/training/
+experiments/**/logs/
+experiments/**/iter_*/
 *.pdopt
 *.pdstates
 *.pth
 *.pt
 *.ckpt
 *.onnx
-*.tar
-*.tar.gz
-*.zip
-*.whl
-*.log
+
+# Keep only the explicitly selected final checkpoint in this release.
+experiments/**/checkpoints/*
+!experiments/segformer_crack500_aligned_wtconv_ablation_wave17_20261030/checkpoints/
+!experiments/segformer_crack500_aligned_wtconv_ablation_wave17_20261030/checkpoints/C3_Aligned_WTConv/
+!experiments/segformer_crack500_aligned_wtconv_ablation_wave17_20261030/checkpoints/C3_Aligned_WTConv/model.pdparams
+
+# Local editor and OS files
+.idea/
+.vscode/
 .DS_Store
 Thumbs.db

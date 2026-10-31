@@ -1,0 +1,7 @@
+{
+  "status": "completed",
+  "id": "C1_Aligned",
+  "exit_code": 0,
+  "config": "D:\\论文复现\\experiments\\segformer_crack500_aligned_wtconv_ablation_wave17_20261030\\configs\\C1_Aligned.yml",
+  "completed": "2026-10-31T00:56:27.4848098+08:00"
+}
