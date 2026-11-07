@@ -1,0 +1,19 @@
+{
+  "at": "2026-10-26T09:12:29+08:00",
+  "original_frozen_files_unchanged": {
+    "release.json": 272,
+    "postprocess_release.json": 6,
+    "postprocess_release_v3.json": 11,
+    "qualitative_release.json": 10,
+    "qualitative_release_v3.json": 10
+  },
+  "new_paths": [
+    "postprocess_w11_v4.py",
+    "run_postprocess_v4.ps1",
+    "qualitative_w11_v4.py",
+    "QUALITATIVE_API_v4.md"
+  ],
+  "training_changed": false,
+  "GPU_started": false,
+  "release_created": false
+}

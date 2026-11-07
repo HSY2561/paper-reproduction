@@ -1,0 +1,25 @@
+{
+  "at": "2026-10-27T00:30:50+08:00",
+  "passed": true,
+  "CPU_only": true,
+  "GPU_started": false,
+  "Paddle_imported": false,
+  "checks": "percentile/CV/spec schema/output containment/PID-birth reuse/desktop binary SHA/CPU console narrow exception",
+  "entry_sha256": "d489652019f76fb04e3f1791a240aa2b44b4f3d4cdddb755d2afcb9831728102",
+  "no_apps_stopped": true,
+  "protected_birth_fallback": {
+    "valid": true,
+    "own_validation": {
+      "pid": 29328,
+      "GetProcessTimes_FILETIME": 134375058503953000,
+      "NtQuery_FILETIME": 134375058503953000,
+      "exact_equal": true,
+      "basename": "python.exe"
+    },
+    "record_count": 709,
+    "structure_bounds_checked": true,
+    "unicode_pointer_bounds_checked": true,
+    "simulated_access_denied_passed": true,
+    "invalid_layout_failed_closed": true
+  }
+}

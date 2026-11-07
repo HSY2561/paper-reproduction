@@ -1,0 +1,70 @@
+{
+  "at": "2026-10-27T00:19:13.014412+08:00",
+  "passed": true,
+  "issues": [],
+  "CPU_only": true,
+  "GPU_started": false,
+  "datasets_read": false,
+  "initialization_generation_repeated": false,
+  "original_or_generated_initializations_modified": false,
+  "registered_definition_count": 32,
+  "complete_init_and_ledger_SHA_checked": 96,
+  "complete_count_formulas_checked": 96,
+  "conditional_ledgers_only_ten_S4_tensors_changed": 60,
+  "all_three_R0_plain128_exact": true,
+  "Flow32_Flow16_high_low_mapping_exact": true,
+  "Flow32_CoarseFlow32_same_initial_tensors_all_three_seeds": true,
+  "fixed_ImageNet_nested_indices_verified": true,
+  "conditional_capacity_D03_not_selection_eligible": true,
+  "finite_tensor_sample_files": 21,
+  "sampled_every_tensor_comparisons": [
+    {
+      "child": "C01_s42",
+      "parent": "W11_R0",
+      "every_tensor_exact": true,
+      "changed_S4_only": true
+    },
+    {
+      "child": "C02_s44",
+      "parent": "W11_R0",
+      "every_tensor_exact": true,
+      "changed_S4_only": true
+    },
+    {
+      "child": "D01_H960_s42",
+      "parent": "D01_s42",
+      "every_tensor_exact": true,
+      "changed_S4_only": true
+    },
+    {
+      "child": "D07_H896_s43",
+      "parent": "D07_s43",
+      "every_tensor_exact": true,
+      "changed_S4_only": true
+    },
+    {
+      "child": "D10_H960_s44",
+      "parent": "D10_s44",
+      "every_tensor_exact": true,
+      "changed_S4_only": true
+    }
+  ],
+  "Native128_independent_algebra_seeds": [
+    42,
+    44
+  ],
+  "width_prefix_checked": [
+    96,
+    160
+  ],
+  "DW_named_seed_reproduction": true,
+  "source_review": "prepare_initialization_w12.py and model helpers read; no model/GPU execution, only tiny CPU DW constructors",
+  "manifest_sha256": "a819cb5a807c718f4f96d80925dc41f3c8c04b958f5c1fec02735674883d958a",
+  "specs_sha256": "58f8457156fc3b76c77d3d5f454b274cbaf8d65a818c191d4a0074928a8e3921",
+  "initialization_script_sha256": "e55f067cae05fcef9615a37ec9724ebef6c73becbc2403156034ad9a2770339d",
+  "model_source_hashes": {
+    "D:\\论文复现\\experiments\\segformer_simplify_wave12_20261026\\src\\PaddleSeg-2.10.0\\paddleseg\\models\\segformer_simplify.py": "9872d088e7e081a9dafa069a42ff163b3ea69a2c7a7d01d1aff875dd6d1bd45f",
+    "D:\\论文复现\\experiments\\segformer_simplify_wave12_20261026\\src\\PaddleSeg-2.10.0\\paddleseg\\models\\backbones\\mit_b0_s4ffn_controlled.py": "b8df5cc445643402b48f5ffa605f825e3da6d8cba51c10619cb26f99e5124d6d"
+  },
+  "limitations": "All96 file/ledger hashes and metadata reviewed; numeric tensor sampling is deliberately bounded, not a second full initialization generation. Shared data RNG still requires formal entry witness. Width-specific dropout masks are not asserted identical."
+}

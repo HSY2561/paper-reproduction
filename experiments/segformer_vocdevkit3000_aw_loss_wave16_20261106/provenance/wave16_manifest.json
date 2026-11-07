@@ -1,0 +1,54 @@
+{
+  "experiment": "VOCdevkit3000 AW structure and loss correction",
+  "created_at": "2026-11-07T00:00:00+08:00",
+  "dataset": {
+    "original": "C:/Users/user/Desktop/VOCdevkit3000/VOCdevkit/VOC2007",
+    "original_untouched": true,
+    "staged": "C:/Users/user/AppData/Local/Temp/voc3000_stage_wave16/VOCdevkit/VOC2007",
+    "train_images": 2345,
+    "val_images": 587,
+    "train_list_sha256": "bb3b4f7bbf2f32a90e32c0e5f8ce4569e084397fbfd644c46c1a54639bd76353",
+    "val_list_sha256": "4c8f887b3366e17a7efb3e3c8122a00fb186dc2fb7b4224d1cdc091380819a77",
+    "mask_mapping": "derived staging maps 255 to 1 and keeps 0 as background",
+    "test_used": false
+  },
+  "protocol": {
+    "hardware": "RTX5060",
+    "paddle": "3.4",
+    "python": "C:/venv_bisenet/Scripts/python.exe",
+    "seed": 42,
+    "batch_size": 4,
+    "precision": "fp32",
+    "optimizer": "AdamW",
+    "learning_rate": 0.00006,
+    "schedule": "PolynomialDecay end_lr=0",
+    "iterations": 18000,
+    "ema": true,
+    "workers": 0,
+    "checkpoint_selection": "ordinary/EMA highest exact val mIoU",
+    "validation_count": 587
+  },
+  "source": {
+    "structure": "full Aligned 1024-to-256 fusion followed by 256-channel identity-initialized residual WTConv",
+    "dice_compatibility": "MixedLoss passes labels.clone() to each component",
+    "boundary_loss": "differentiable local transition weighting with NHWC CE axis=-1"
+  },
+  "runs": {
+    "C6_AW_CE_Dice": {
+      "config_sha256": "65f83125d9e4f3320bc668177a1ba02eeb283029883cae187ac71b53aa5c4db1",
+      "checkpoint_sha256": "aaf094716174564b4d6d0c00ae3050b430bbb9c58c0c1bfb80d9bc5032247fe5",
+      "selected": "ordinary@13000",
+      "train_exit": 0,
+      "official_val_exit": 0,
+      "custom_val_exit": 0
+    },
+    "C7_AW_BoundaryWeightedCE": {
+      "config_sha256": "98879ad3485f2880cce1e32424268d5ed47046e6579b52bf262aa9ffc7455618",
+      "checkpoint_sha256": "8aa5e1ddcee45d40de9c3a997780cfab89724da9d4d15f1bb117dccc25d08ed8",
+      "selected": "ordinary@13000",
+      "train_exit": 0,
+      "official_val_exit": 0,
+      "custom_val_exit": 0
+    }
+  }
+}

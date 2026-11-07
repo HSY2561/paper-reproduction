@@ -1,0 +1,124 @@
+{
+  "at": "2026-10-26T09:21:18+08:00",
+  "passed": true,
+  "CPU_only": true,
+  "GPU_started": false,
+  "training_restarted": false,
+  "all_owned_processes_exited": true,
+  "bundle_sha256_verified": true,
+  "all_bundle_manifest_files": 724,
+  "original_wrapper_exit_code": null,
+  "old_wrapper_path": "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\results\\postprocess_waiter_20261026_091336_exit.json",
+  "old_wrapper_sha256": "4c9ce80b79b96a9fb9c71a70f9e86400b4cc4c486c3dbab7e154700c10ea811b",
+  "automatic_child_receipt_sha256": "512b25ad0fda29726452685c6c9c88fc03c927562d53c9f922c2a68dbbe00858",
+  "final_delivery_sha256": "ae678f5b2e98d24a90db13387901d171dde49c2719d332d7b8dd28eed6eac887",
+  "process_checks": [
+    {
+      "pid": 60168,
+      "running": false,
+      "winerror": 87,
+      "reason": "OpenProcess read-only query"
+    },
+    {
+      "pid": 47672,
+      "running": false,
+      "winerror": 87,
+      "reason": "OpenProcess read-only query"
+    },
+    {
+      "pid": 64344,
+      "running": false,
+      "winerror": 87,
+      "reason": "OpenProcess read-only query"
+    },
+    {
+      "pid": 61280,
+      "running": false,
+      "winerror": 87,
+      "reason": "OpenProcess read-only query"
+    },
+    {
+      "pid": 54404,
+      "running": false,
+      "winerror": 87,
+      "reason": "OpenProcess read-only query"
+    },
+    {
+      "pid": 26492,
+      "running": false,
+      "winerror": 87,
+      "reason": "OpenProcess read-only query"
+    },
+    {
+      "pid": 60136,
+      "running": false,
+      "winerror": 87,
+      "reason": "OpenProcess read-only query"
+    },
+    {
+      "pid": 64648,
+      "running": false,
+      "winerror": 87,
+      "reason": "OpenProcess read-only query"
+    },
+    {
+      "pid": 63964,
+      "running": false,
+      "winerror": 87,
+      "reason": "OpenProcess read-only query"
+    },
+    {
+      "pid": 40508,
+      "running": false,
+      "winerror": 87,
+      "reason": "OpenProcess read-only query"
+    },
+    {
+      "pid": 39384,
+      "running": false,
+      "winerror": 87,
+      "reason": "OpenProcess read-only query"
+    },
+    {
+      "pid": 59052,
+      "running": false,
+      "winerror": 87,
+      "reason": "OpenProcess read-only query"
+    },
+    {
+      "pid": 63512,
+      "running": false,
+      "winerror": 87,
+      "reason": "OpenProcess read-only query"
+    },
+    {
+      "pid": 41180,
+      "running": false,
+      "winerror": 87,
+      "reason": "OpenProcess read-only query"
+    },
+    {
+      "pid": 56288,
+      "running": false,
+      "winerror": 87,
+      "reason": "OpenProcess read-only query"
+    }
+  ],
+  "mutable_transport_snapshots": [
+    {
+      "path": "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\logs\\postprocess_after_training.stdout.log",
+      "archived_sha256": "a44d54ffcf2a7655ba237f3667d868f7f749bcfa189904a7d949eb30a246fcb3",
+      "final_sha256": "309c9f68f942a48f27218a9a9362cd6f61b873e744d9e172c4aa5a6210ee0cde",
+      "reason": "Owned postprocess final stdout/last wait-state necessarily written after package snapshot; archived bytes independently verified"
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\results\\postprocess_wait_state.json",
+      "archived_sha256": "6c6ff9c7f98fc3f7e6f7c615c5718d9cd5e85185542cf2d2296e53b5598cb98c",
+      "final_sha256": "fcce4e303c8c69c5bf9023bdf1eec3aabf2feb3b3b31f3bc98870a8384f37880",
+      "reason": "Owned postprocess final stdout/last wait-state necessarily written after package snapshot; archived bytes independently verified"
+    }
+  ],
+  "disclosure": "Original v4 wrapper exit remains unknown/null. Separate CPU handoff after actual profile child0, 10 memory0, complete artifacts and all owned exits; original wrapper is not relabelled. First audit probe exit1 was an overstrict comparison against final mutable stdout; only the two declared transport snapshots may differ, no model/config/CSV differs.",
+  "test_read": false,
+  "custom_read": false
+}

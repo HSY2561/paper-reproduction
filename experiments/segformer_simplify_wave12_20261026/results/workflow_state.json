@@ -1,0 +1,7 @@
+{
+  "stage": "failed",
+  "updated_at": "2026-10-27T09:11:34+08:00",
+  "test_used": false,
+  "error": "RuntimeError('Actual profile failed; preserve all evidence: D:\\\\论文复现\\\\experiments\\\\segformer_simplify_wave12_20261026\\\\profile\\\\phase2\\\\attempt_129')",
+  "evidence_preserved": true
+}

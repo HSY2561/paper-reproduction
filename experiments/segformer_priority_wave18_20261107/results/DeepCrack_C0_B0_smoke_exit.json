@@ -1,0 +1,7 @@
+{
+  "dataset": "DeepCrack",
+  "exit_code": 2,
+  "log": "D:\\论文复现\\experiments\\segformer_priority_wave18_20261107\\logs\\DeepCrack_C0_B0_smoke.log",
+  "id": "C0_B0",
+  "smoke": true
+}

@@ -1,0 +1,38 @@
+{
+  "at": "2026-10-26T09:17:03+08:00",
+  "complete": true,
+  "postprocess": {
+    "at": "2026-10-26T09:17:02+08:00",
+    "exit_code": 0,
+    "stage": "full_profile_and_report_complete",
+    "completed_training_runs": 15,
+    "directory": "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\results\\postprocess\\20261026_091342_901909",
+    "delivery": {
+      "local_report": "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\results\\postprocess\\20261026_091342_901909\\EXPERIMENT_RESULTS.md",
+      "experiment_report": "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\refine-logs\\EXPERIMENT_RESULTS.md",
+      "root_report": "D:\\论文复现\\SegFormer_E0-E3两模块互补实验报告_20261025.md",
+      "figures": [
+        "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\results\\postprocess\\20261026_091342_901909\\pareto_parameters_iou.png",
+        "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\results\\postprocess\\20261026_091342_901909\\pareto_latency_iou_400.png",
+        "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\results\\postprocess\\20261026_091342_901909\\pareto_latency_iou_480.png",
+        "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\results\\postprocess\\20261026_091342_901909\\interaction_iou_three_seeds.png"
+      ],
+      "csv": "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\results\\postprocess\\20261026_091342_901909\\ablation_three_seed.csv"
+    },
+    "bundle": {
+      "path": "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\results\\postprocess\\20261026_091342_901909\\W11_reports_and_reproduction.zip",
+      "sha256": "458d831f9d897a40556056b24b04078059d0c1879aad027121aac0832d32a96f",
+      "size_bytes": 8571377,
+      "manifest": "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\results\\postprocess\\20261026_091342_901909\\bundle_manifest.json",
+      "manifest_sha256": "b55241c81d26ee0c70261307cbfeb23c47846d06bfe58e62dee473f69d5a9108",
+      "files": 724,
+      "raw_data_included": false,
+      "large_weights_included": false
+    },
+    "images_read": false,
+    "test_read": false
+  },
+  "actual_child_exit_code": 0,
+  "notification_sent": false,
+  "original_controller_profile_pending_unchanged": true
+}

@@ -1,0 +1,14 @@
+{
+  "at": "2026-10-26T09:24:44+08:00",
+  "exit_code": 0,
+  "complete": true,
+  "directory": "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\results\\qualitative\\20261026_092425_816083",
+  "manifest": "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\results\\qualitative\\20261026_092425_816083\\manifest.json",
+  "manifest_sha256": "5e78c695d207ee47ba9354e7f4b424f314a0dd9a2325ed486af0b1a4db194a9a",
+  "archive": "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\results\\qualitative\\20261026_092425_816083\\W11_fixed24_qualitative_supplement.zip",
+  "archive_sha256": "ab0a8fc33a8ad4bc5cb93cedd978dca0ab2e76d87e8b23d132e79602b21cf2df",
+  "rows": 120,
+  "failed_verifications": 0,
+  "original_report_bundle_unchanged": true,
+  "test_read": false
+}

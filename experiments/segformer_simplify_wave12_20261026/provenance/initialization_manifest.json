@@ -1,0 +1,2908 @@
+{
+  "version": "W12-explicit-initialization-v1",
+  "status": "passed",
+  "completed_at": "2026-10-26T16:10:43.733828+00:00",
+  "device": "cpu",
+  "GPU_execution": false,
+  "dataset_read": false,
+  "new_training_started": false,
+  "CPU_thread_limit": 4,
+  "full_initial_states": 96,
+  "registered_definitions": 32,
+  "formal_training_limit": 18,
+  "source_script_sha256": "e55f067cae05fcef9615a37ec9724ebef6c73becbc2403156034ad9a2770339d",
+  "input_hashes": {
+    "specs_sha256": "58f8457156fc3b76c77d3d5f454b274cbaf8d65a818c191d4a0074928a8e3921",
+    "R0_manifest_sha256": "e3086df2f0fd884af9ca097ad3be74cf2e1fb4cbee0c1777e1ab593988e706b5",
+    "ImageNet_sha256": "211e15d5157b8d48b1931102c40094da0b578de1c153c5706360f7ad561a774e",
+    "W11_indices_sha256": "b3f070c23686a76cbc24b253c11abfcbd122c96074363ee9c0d0df200feeb1e8"
+  },
+  "model_source_hashes": {
+    "D:\\论文复现\\experiments\\segformer_simplify_wave12_20261026\\src\\PaddleSeg-2.10.0\\paddleseg\\models\\segformer_simplify.py": "9872d088e7e081a9dafa069a42ff163b3ea69a2c7a7d01d1aff875dd6d1bd45f",
+    "D:\\论文复现\\experiments\\segformer_simplify_wave12_20261026\\src\\PaddleSeg-2.10.0\\paddleseg\\models\\backbones\\mit_b0_s4ffn_controlled.py": "b8df5cc445643402b48f5ffa605f825e3da6d8cba51c10619cb26f99e5124d6d"
+  },
+  "runs": {
+    "D01_s42": {
+      "path": "D:\\论文复现\\experiments\\segformer_simplify_wave12_20261026\\weights\\init\\D01_s42.pdparams",
+      "sha256": "4029fa2f18cd460be161127ba1fc07369ab2ed7697b37af2669df0580bad40da",
+      "tensor_sha256": "114da60b13b8d6c6bed3490405ec3a2469bb58b75a028af6d7f7082608c6f3a3",
+      "tensor_count": 191,
+      "registered_numel": 3406370,
+      "trainable_numel": 3406178,
+      "source_R0": {
+        "path": "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\weights\\init\\R0_s42.pdparams",
+        "sha256": "54c8014f52bf6b54cd62454968a1f6d6975ed5e91ee2c8be6913cf08fed1a116"
+      },
+      "source_imagenet_sha256": "211e15d5157b8d48b1931102c40094da0b578de1c153c5706360f7ad561a774e",
+      "tensor_ledger": "D:\\论文复现\\experiments\\segformer_simplify_wave12_20261026\\provenance\\init_tensors\\D01_s42.json",
+      "tensor_ledger_sha256": "ac630a33f4c91bf213859f5c686fad0fcc218e802af645077b69acdcac33be1b",
+      "spec_id": "D01",
+      "seed": 42,
+      "stage": "primary",
+      "model": {
+        "embedding_dim": 96,
+        "decoder_kind": "concat",
+        "alignment": "none",
+        "s4_hidden": 1024
+      },
+      "dataset_read": false,
+      "GPU_execution": false
+    },
+    "D02_s42": {
+      "path": "D:\\论文复现\\experiments\\segformer_simplify_wave12_20261026\\weights\\init\\D02_s42.pdparams",
+      "sha256": "bd06df3506e62abf3afdce0216e4be86810f9826b0640603393a45ff9b38415c",
+      "tensor_sha256": "3fbc21744916570ab91419b9df09fc58d7ca4fbbe7f0ce24d895a29ebcee1391",
+      "tensor_count": 191,
+      "registered_numel": 3451746,
+      "trainable_numel": 3451490,
+      "source_R0": {
+        "path": "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\weights\\init\\R0_s42.pdparams",
+        "sha256": "54c8014f52bf6b54cd62454968a1f6d6975ed5e91ee2c8be6913cf08fed1a116"
+      },
+      "source_imagenet_sha256": "211e15d5157b8d48b1931102c40094da0b578de1c153c5706360f7ad561a774e",
+      "tensor_ledger": "D:\\论文复现\\experiments\\segformer_simplify_wave12_20261026\\provenance\\init_tensors\\D02_s42.json",
+      "tensor_ledger_sha256": "efb958a06a0377bed1a0d7b419105cd40b6a2abb40a0e568a32b68f4175e98ce",
+      "spec_id": "D02",
+      "seed": 42,
+      "stage": "primary",
+      "model": {
+        "embedding_dim": 128,
+        "decoder_kind": "concat",
+        "alignment": "none",
+        "s4_hidden": 1024
+      },
+      "dataset_read": false,
+      "GPU_execution": false
+    },
+    "D03_s42": {
+      "path": "D:\\论文复现\\experiments\\segformer_simplify_wave12_20261026\\weights\\init\\D03_s42.pdparams",
+      "sha256": "7cbfa5d8c699677e0e5f4b4554834f1b597b9b91689aed9d846fdebd4ed60fb2",
+      "tensor_sha256": "58a8d5cf21a7efee2ebb575b8098991035a05a2b7f1d1127a8ef44517a47e34a",
+      "tensor_count": 191,
+      "registered_numel": 3505314,
+      "trainable_numel": 3504994,
+      "source_R0": {
+        "path": "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\weights\\init\\R0_s42.pdparams",
+        "sha256": "54c8014f52bf6b54cd62454968a1f6d6975ed5e91ee2c8be6913cf08fed1a116"
+      },
+      "source_imagenet_sha256": "211e15d5157b8d48b1931102c40094da0b578de1c153c5706360f7ad561a774e",
+      "tensor_ledger": "D:\\论文复现\\experiments\\segformer_simplify_wave12_20261026\\provenance\\init_tensors\\D03_s42.json",
+      "tensor_ledger_sha256": "b766fa9c7d9d83fc8cef06d0fa9e18c9d2f4389f6b41bdaf56f28c7b5061f646",
+      "spec_id": "D03",
+      "seed": 42,
+      "stage": "primary",
+      "model": {
+        "embedding_dim": 160,
+        "decoder_kind": "concat",
+        "alignment": "none",
+        "s4_hidden": 1024
+      },
+      "dataset_read": false,
+      "GPU_execution": false
+    },
+    "D04_s42": {
+      "path": "D:\\论文复现\\experiments\\segformer_simplify_wave12_20261026\\weights\\init\\D04_s42.pdparams",
+      "sha256": "a207375eb5e0a5bea4da563eeb029c31746bf886e0abe0241dbcc272c2057f2d",
+      "tensor_sha256": "7ece2fcbffcad8d8cc32109ae5f5bad07d6d666819dda9bab53ad13d304364f0",
+      "tensor_count": 194,
+      "registered_numel": 3461090,
+      "trainable_numel": 3460834,
+      "source_R0": {
+        "path": "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\weights\\init\\R0_s42.pdparams",
+        "sha256": "54c8014f52bf6b54cd62454968a1f6d6975ed5e91ee2c8be6913cf08fed1a116"
+      },
+      "source_imagenet_sha256": "211e15d5157b8d48b1931102c40094da0b578de1c153c5706360f7ad561a774e",
+      "tensor_ledger": "D:\\论文复现\\experiments\\segformer_simplify_wave12_20261026\\provenance\\init_tensors\\D04_s42.json",
+      "tensor_ledger_sha256": "3065d59b0d47125254ad13a6b20cc31ab57cc246799e2344df0ce537d752b8d0",
+      "spec_id": "D04",
+      "seed": 42,
+      "stage": "primary",
+      "model": {
+        "embedding_dim": 128,
+        "decoder_kind": "concat",
+        "alignment": "flow32",
+        "s4_hidden": 1024
+      },
+      "dataset_read": false,
+      "GPU_execution": false
+    },
+    "D05_s42": {
+      "path": "D:\\论文复现\\experiments\\segformer_simplify_wave12_20261026\\weights\\init\\D05_s42.pdparams",
+      "sha256": "53ba84b651d3d5b13f51886e8b56d8ba4e5fdeebf5800c9de119fcba445d0c3b",
+      "tensor_sha256": "335f5c5e6f836b0efcc6f34961263eec5d5abd07fddccb0a8478ab5aac8827f7",
+      "tensor_count": 194,
+      "registered_numel": 3456418,
+      "trainable_numel": 3456162,
+      "source_R0": {
+        "path": "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\weights\\init\\R0_s42.pdparams",
+        "sha256": "54c8014f52bf6b54cd62454968a1f6d6975ed5e91ee2c8be6913cf08fed1a116"
+      },
+      "source_imagenet_sha256": "211e15d5157b8d48b1931102c40094da0b578de1c153c5706360f7ad561a774e",
+      "tensor_ledger": "D:\\论文复现\\experiments\\segformer_simplify_wave12_20261026\\provenance\\init_tensors\\D05_s42.json",
+      "tensor_ledger_sha256": "cadb9a2e05a292d42400f64e44ee2c436da1ae8acb0cef33f95825142fb0ea16",
+      "spec_id": "D05",
+      "seed": 42,
+      "stage": "primary",
+      "model": {
+        "embedding_dim": 128,
+        "decoder_kind": "concat",
+        "alignment": "flow16",
+        "s4_hidden": 1024
+      },
+      "dataset_read": false,
+      "GPU_execution": false
+    },
+    "D06_s42": {
+      "path": "D:\\论文复现\\experiments\\segformer_simplify_wave12_20261026\\weights\\init\\D06_s42.pdparams",
+      "sha256": "ade2280835e5cdf2101622f33a28e85132482fae6ce63fc104668335d1845792",
+      "tensor_sha256": "5939da0ebce6222e2bfbb881bd144d69bc97528fac959e9a9bbf2a8b5b546c7a",
+      "tensor_count": 195,
+      "registered_numel": 3460642,
+      "trainable_numel": 3460386,
+      "source_R0": {
+        "path": "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\weights\\init\\R0_s42.pdparams",
+        "sha256": "54c8014f52bf6b54cd62454968a1f6d6975ed5e91ee2c8be6913cf08fed1a116"
+      },
+      "source_imagenet_sha256": "211e15d5157b8d48b1931102c40094da0b578de1c153c5706360f7ad561a774e",
+      "tensor_ledger": "D:\\论文复现\\experiments\\segformer_simplify_wave12_20261026\\provenance\\init_tensors\\D06_s42.json",
+      "tensor_ledger_sha256": "3f7773df6e4d6498377881d6e9e1fad353360665a2f8e3ee1038d681f13ae9f9",
+      "spec_id": "D06",
+      "seed": 42,
+      "stage": "primary",
+      "model": {
+        "embedding_dim": 128,
+        "decoder_kind": "concat",
+        "alignment": "dwflow32",
+        "s4_hidden": 1024
+      },
+      "dataset_read": false,
+      "GPU_execution": false
+    },
+    "D07_s42": {
+      "path": "D:\\论文复现\\experiments\\segformer_simplify_wave12_20261026\\weights\\init\\D07_s42.pdparams",
+      "sha256": "554480fc40b7dde0de04b4bc4bdad1cf3e7827a2218287188c9287661f04a770",
+      "tensor_sha256": "7ece2fcbffcad8d8cc32109ae5f5bad07d6d666819dda9bab53ad13d304364f0",
+      "tensor_count": 194,
+      "registered_numel": 3461090,
+      "trainable_numel": 3460834,
+      "source_R0": {
+        "path": "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\weights\\init\\R0_s42.pdparams",
+        "sha256": "54c8014f52bf6b54cd62454968a1f6d6975ed5e91ee2c8be6913cf08fed1a116"
+      },
+      "source_imagenet_sha256": "211e15d5157b8d48b1931102c40094da0b578de1c153c5706360f7ad561a774e",
+      "tensor_ledger": "D:\\论文复现\\experiments\\segformer_simplify_wave12_20261026\\provenance\\init_tensors\\D07_s42.json",
+      "tensor_ledger_sha256": "23954355a34db27617107a363626d9fbc8e6dbc3ffc7d0885142afa94c79181e",
+      "spec_id": "D07",
+      "seed": 42,
+      "stage": "primary",
+      "model": {
+        "embedding_dim": 128,
+        "decoder_kind": "concat",
+        "alignment": "coarseflow32",
+        "s4_hidden": 1024
+      },
+      "dataset_read": false,
+      "GPU_execution": false
+    },
+    "D08_s42": {
+      "path": "D:\\论文复现\\experiments\\segformer_simplify_wave12_20261026\\weights\\init\\D08_s42.pdparams",
+      "sha256": "0fa55eefcc77a48ef575999776ba0a5d678388ba7bc2965fe4105b7c8e2a7478",
+      "tensor_sha256": "eb36cd9e768d849454fa7a8bed5d87898669b2818527f809f6f32ecc7c259482",
+      "tensor_count": 190,
+      "registered_numel": 3386210,
+      "trainable_numel": 3385954,
+      "source_R0": {
+        "path": "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\weights\\init\\R0_s42.pdparams",
+        "sha256": "54c8014f52bf6b54cd62454968a1f6d6975ed5e91ee2c8be6913cf08fed1a116"
+      },
+      "source_imagenet_sha256": "211e15d5157b8d48b1931102c40094da0b578de1c153c5706360f7ad561a774e",
+      "tensor_ledger": "D:\\论文复现\\experiments\\segformer_simplify_wave12_20261026\\provenance\\init_tensors\\D08_s42.json",
+      "tensor_ledger_sha256": "844da31a478523ebc4f8103bc693067d83b559196e653a07e90cba6079a483b3",
+      "spec_id": "D08",
+      "seed": 42,
+      "stage": "primary",
+      "model": {
+        "embedding_dim": 128,
+        "decoder_kind": "native_sum",
+        "alignment": "none",
+        "s4_hidden": 1024
+      },
+      "dataset_read": false,
+      "GPU_execution": false
+    },
+    "D09_s42": {
+      "path": "D:\\论文复现\\experiments\\segformer_simplify_wave12_20261026\\weights\\init\\D09_s42.pdparams",
+      "sha256": "c4aa6c50d09b07031059b93162e2abeb58d52aa57699853cacf9f8096047477c",
+      "tensor_sha256": "7b6d69334a228826ad440d612d13c657321abbd6059ab9e2e5aebf58e415a354",
+      "tensor_count": 190,
+      "registered_numel": 3419618,
+      "trainable_numel": 3419234,
+      "source_R0": {
+        "path": "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\weights\\init\\R0_s42.pdparams",
+        "sha256": "54c8014f52bf6b54cd62454968a1f6d6975ed5e91ee2c8be6913cf08fed1a116"
+      },
+      "source_imagenet_sha256": "211e15d5157b8d48b1931102c40094da0b578de1c153c5706360f7ad561a774e",
+      "tensor_ledger": "D:\\论文复现\\experiments\\segformer_simplify_wave12_20261026\\provenance\\init_tensors\\D09_s42.json",
+      "tensor_ledger_sha256": "bcf3dda6b6ff3ff6b68aa034a3148bc2a011c73261afdf1bc566eebfc72172e7",
+      "spec_id": "D09",
+      "seed": 42,
+      "stage": "primary",
+      "model": {
+        "embedding_dim": 192,
+        "decoder_kind": "native_sum",
+        "alignment": "none",
+        "s4_hidden": 1024
+      },
+      "dataset_read": false,
+      "GPU_execution": false
+    },
+    "D10_s42": {
+      "path": "D:\\论文复现\\experiments\\segformer_simplify_wave12_20261026\\weights\\init\\D10_s42.pdparams",
+      "sha256": "bfffff7de43e5d36c7ae06fa8b2839c2afaa8311faef0835bc552c505f21dc25",
+      "tensor_sha256": "ea89221884fea46846d68f7f948bad5fe8a21ed49f41230973de3ea62c51a0e2",
+      "tensor_count": 190,
+      "registered_numel": 3453026,
+      "trainable_numel": 3452514,
+      "source_R0": {
+        "path": "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\weights\\init\\R0_s42.pdparams",
+        "sha256": "54c8014f52bf6b54cd62454968a1f6d6975ed5e91ee2c8be6913cf08fed1a116"
+      },
+      "source_imagenet_sha256": "211e15d5157b8d48b1931102c40094da0b578de1c153c5706360f7ad561a774e",
+      "tensor_ledger": "D:\\论文复现\\experiments\\segformer_simplify_wave12_20261026\\provenance\\init_tensors\\D10_s42.json",
+      "tensor_ledger_sha256": "563e8042edefac513ad94e285589a0f35b9afa18c9e5368546d8661649ae85db",
+      "spec_id": "D10",
+      "seed": 42,
+      "stage": "primary",
+      "model": {
+        "embedding_dim": 256,
+        "decoder_kind": "native_sum",
+        "alignment": "none",
+        "s4_hidden": 1024
+      },
+      "dataset_read": false,
+      "GPU_execution": false
+    },
+    "C01_s42": {
+      "path": "D:\\论文复现\\experiments\\segformer_simplify_wave12_20261026\\weights\\init\\C01_s42.pdparams",
+      "sha256": "0f64a2f55983221c813fc6e0de8aaa52b15277dde81d9188c84b500ff36609fc",
+      "tensor_sha256": "51757698d58e89c5e6d20daf739015a1622939193f3a112fd41bfcc1934bd821",
+      "tensor_count": 194,
+      "registered_numel": 3403490,
+      "trainable_numel": 3403234,
+      "source_R0": {
+        "path": "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\weights\\init\\R0_s42.pdparams",
+        "sha256": "54c8014f52bf6b54cd62454968a1f6d6975ed5e91ee2c8be6913cf08fed1a116"
+      },
+      "source_imagenet_sha256": "211e15d5157b8d48b1931102c40094da0b578de1c153c5706360f7ad561a774e",
+      "tensor_ledger": "D:\\论文复现\\experiments\\segformer_simplify_wave12_20261026\\provenance\\init_tensors\\C01_s42.json",
+      "tensor_ledger_sha256": "69a2493dd4ee0f822bad32f7d294dbfe25f07470fd9b9d00875ac8967eda66c5",
+      "spec_id": "C01",
+      "seed": 42,
+      "stage": "primary",
+      "model": {
+        "embedding_dim": 128,
+        "decoder_kind": "concat",
+        "alignment": "full",
+        "s4_hidden": 960
+      },
+      "dataset_read": false,
+      "GPU_execution": false
+    },
+    "C02_s42": {
+      "path": "D:\\论文复现\\experiments\\segformer_simplify_wave12_20261026\\weights\\init\\C02_s42.pdparams",
+      "sha256": "606009c9324b4c2ce0a73d4169bf8f282edba6d7ded44169f6e4a1a79cd8c15e",
+      "tensor_sha256": "4ca58cdb8c00a0660052c3e7b2dcc426c183e0f15b7a74832dde63cc56fa3f9b",
+      "tensor_count": 194,
+      "registered_numel": 3336546,
+      "trainable_numel": 3336290,
+      "source_R0": {
+        "path": "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\weights\\init\\R0_s42.pdparams",
+        "sha256": "54c8014f52bf6b54cd62454968a1f6d6975ed5e91ee2c8be6913cf08fed1a116"
+      },
+      "source_imagenet_sha256": "211e15d5157b8d48b1931102c40094da0b578de1c153c5706360f7ad561a774e",
+      "tensor_ledger": "D:\\论文复现\\experiments\\segformer_simplify_wave12_20261026\\provenance\\init_tensors\\C02_s42.json",
+      "tensor_ledger_sha256": "011a023ef7aee0499b2a03bd893e67e833a9bb9de445df6ddc7072a83ac3be63",
+      "spec_id": "C02",
+      "seed": 42,
+      "stage": "primary",
+      "model": {
+        "embedding_dim": 128,
+        "decoder_kind": "concat",
+        "alignment": "full",
+        "s4_hidden": 896
+      },
+      "dataset_read": false,
+      "GPU_execution": false
+    },
+    "D01_H896_s42": {
+      "path": "D:\\论文复现\\experiments\\segformer_simplify_wave12_20261026\\weights\\init\\D01_H896_s42.pdparams",
+      "sha256": "3058a28ab4599d8d16ce4c37378db91ae44d499d296ceb2758242c3bf57a708c",
+      "tensor_sha256": "e3e44f2d6efdb51d7f0befa746c7623d01f504e5c15077bc5e0a1d589cb9bab1",
+      "tensor_count": 191,
+      "registered_numel": 3272482,
+      "trainable_numel": 3272290,
+      "source_R0": {
+        "path": "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\weights\\init\\R0_s42.pdparams",
+        "sha256": "54c8014f52bf6b54cd62454968a1f6d6975ed5e91ee2c8be6913cf08fed1a116"
+      },
+      "source_imagenet_sha256": "211e15d5157b8d48b1931102c40094da0b578de1c153c5706360f7ad561a774e",
+      "tensor_ledger": "D:\\论文复现\\experiments\\segformer_simplify_wave12_20261026\\provenance\\init_tensors\\D01_H896_s42.json",
+      "tensor_ledger_sha256": "f0b137a416c462e3b4a805c19b727e30ed953477abd58e1891ed6d519240d278",
+      "spec_id": "D01_H896",
+      "seed": 42,
+      "stage": "conditional",
+      "model": {
+        "embedding_dim": 96,
+        "decoder_kind": "concat",
+        "alignment": "none",
+        "s4_hidden": 896
+      },
+      "dataset_read": false,
+      "GPU_execution": false
+    },
+    "D01_H960_s42": {
+      "path": "D:\\论文复现\\experiments\\segformer_simplify_wave12_20261026\\weights\\init\\D01_H960_s42.pdparams",
+      "sha256": "7bf57cee10258b7b2f766945a85deeae8db42ab8b5e9282fb6112d86c4829b29",
+      "tensor_sha256": "fb524e7aa26224855acf3b7dbdd48aa97a93978429cabe735c69a1fd1faa4836",
+      "tensor_count": 191,
+      "registered_numel": 3339426,
+      "trainable_numel": 3339234,
+      "source_R0": {
+        "path": "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\weights\\init\\R0_s42.pdparams",
+        "sha256": "54c8014f52bf6b54cd62454968a1f6d6975ed5e91ee2c8be6913cf08fed1a116"
+      },
+      "source_imagenet_sha256": "211e15d5157b8d48b1931102c40094da0b578de1c153c5706360f7ad561a774e",
+      "tensor_ledger": "D:\\论文复现\\experiments\\segformer_simplify_wave12_20261026\\provenance\\init_tensors\\D01_H960_s42.json",
+      "tensor_ledger_sha256": "fc8b396fb7e2dc230eb35da49940cc78e655ff837f58e88191a386d429f34bf7",
+      "spec_id": "D01_H960",
+      "seed": 42,
+      "stage": "conditional",
+      "model": {
+        "embedding_dim": 96,
+        "decoder_kind": "concat",
+        "alignment": "none",
+        "s4_hidden": 960
+      },
+      "dataset_read": false,
+      "GPU_execution": false
+    },
+    "D02_H896_s42": {
+      "path": "D:\\论文复现\\experiments\\segformer_simplify_wave12_20261026\\weights\\init\\D02_H896_s42.pdparams",
+      "sha256": "5d11c4bc352fb10882ad83617d4f7dd9e306785e752e34933d0f327ed820d208",
+      "tensor_sha256": "179c9c56c3e9fb410bb7e5391c3bba515876e7ac45a8f4dc31e168ec7602dfd9",
+      "tensor_count": 191,
+      "registered_numel": 3317858,
+      "trainable_numel": 3317602,
+      "source_R0": {
+        "path": "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\weights\\init\\R0_s42.pdparams",
+        "sha256": "54c8014f52bf6b54cd62454968a1f6d6975ed5e91ee2c8be6913cf08fed1a116"
+      },
+      "source_imagenet_sha256": "211e15d5157b8d48b1931102c40094da0b578de1c153c5706360f7ad561a774e",
+      "tensor_ledger": "D:\\论文复现\\experiments\\segformer_simplify_wave12_20261026\\provenance\\init_tensors\\D02_H896_s42.json",
+      "tensor_ledger_sha256": "936364687efcb5bdef57fc90aa5147976d2a50cd69a9ba88a9a05c224a4bb63b",
+      "spec_id": "D02_H896",
+      "seed": 42,
+      "stage": "conditional",
+      "model": {
+        "embedding_dim": 128,
+        "decoder_kind": "concat",
+        "alignment": "none",
+        "s4_hidden": 896
+      },
+      "dataset_read": false,
+      "GPU_execution": false
+    },
+    "D02_H960_s42": {
+      "path": "D:\\论文复现\\experiments\\segformer_simplify_wave12_20261026\\weights\\init\\D02_H960_s42.pdparams",
+      "sha256": "674e4a81e263cc1fc57838e9b24e105b6217b765fd66530a738a0fe971fdd855",
+      "tensor_sha256": "c18b9d2225c26d301cfd66094264403bdd6af182e9e099aa411a4f02ec63e581",
+      "tensor_count": 191,
+      "registered_numel": 3384802,
+      "trainable_numel": 3384546,
+      "source_R0": {
+        "path": "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\weights\\init\\R0_s42.pdparams",
+        "sha256": "54c8014f52bf6b54cd62454968a1f6d6975ed5e91ee2c8be6913cf08fed1a116"
+      },
+      "source_imagenet_sha256": "211e15d5157b8d48b1931102c40094da0b578de1c153c5706360f7ad561a774e",
+      "tensor_ledger": "D:\\论文复现\\experiments\\segformer_simplify_wave12_20261026\\provenance\\init_tensors\\D02_H960_s42.json",
+      "tensor_ledger_sha256": "5cf41f1e8f62cbb5bd2103a5210a54bba1c5d35e0bde4c25a06bf4ee80b756fb",
+      "spec_id": "D02_H960",
+      "seed": 42,
+      "stage": "conditional",
+      "model": {
+        "embedding_dim": 128,
+        "decoder_kind": "concat",
+        "alignment": "none",
+        "s4_hidden": 960
+      },
+      "dataset_read": false,
+      "GPU_execution": false
+    },
+    "D03_H896_s42": {
+      "path": "D:\\论文复现\\experiments\\segformer_simplify_wave12_20261026\\weights\\init\\D03_H896_s42.pdparams",
+      "sha256": "ee1975f4494001ad234be3b0ff477ac1b69aa82080c3dfc2ca8f19aa83a8d531",
+      "tensor_sha256": "e0a8dd6e4e34b8708a780cbc22c8c42ec332489e57feb5e1029bd1d6fa74914e",
+      "tensor_count": 191,
+      "registered_numel": 3371426,
+      "trainable_numel": 3371106,
+      "source_R0": {
+        "path": "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\weights\\init\\R0_s42.pdparams",
+        "sha256": "54c8014f52bf6b54cd62454968a1f6d6975ed5e91ee2c8be6913cf08fed1a116"
+      },
+      "source_imagenet_sha256": "211e15d5157b8d48b1931102c40094da0b578de1c153c5706360f7ad561a774e",
+      "tensor_ledger": "D:\\论文复现\\experiments\\segformer_simplify_wave12_20261026\\provenance\\init_tensors\\D03_H896_s42.json",
+      "tensor_ledger_sha256": "685c1d55666315f5dab43925357938a2bdf84efa612f7d0f3d62383c1b3f2b59",
+      "spec_id": "D03_H896",
+      "seed": 42,
+      "stage": "conditional",
+      "model": {
+        "embedding_dim": 160,
+        "decoder_kind": "concat",
+        "alignment": "none",
+        "s4_hidden": 896
+      },
+      "dataset_read": false,
+      "GPU_execution": false
+    },
+    "D03_H960_s42": {
+      "path": "D:\\论文复现\\experiments\\segformer_simplify_wave12_20261026\\weights\\init\\D03_H960_s42.pdparams",
+      "sha256": "6f239b7cac22b3329863f6eada1a071da54292ede5e1d5d1d6487ff585fe9cf7",
+      "tensor_sha256": "5a13091fd97f4f54cfb2d4df8497b96ae4bda819a04a66805d7995aafe78b041",
+      "tensor_count": 191,
+      "registered_numel": 3438370,
+      "trainable_numel": 3438050,
+      "source_R0": {
+        "path": "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\weights\\init\\R0_s42.pdparams",
+        "sha256": "54c8014f52bf6b54cd62454968a1f6d6975ed5e91ee2c8be6913cf08fed1a116"
+      },
+      "source_imagenet_sha256": "211e15d5157b8d48b1931102c40094da0b578de1c153c5706360f7ad561a774e",
+      "tensor_ledger": "D:\\论文复现\\experiments\\segformer_simplify_wave12_20261026\\provenance\\init_tensors\\D03_H960_s42.json",
+      "tensor_ledger_sha256": "aeb0e6e3c80199d98d02dc57ce607b20853c922c018d33ea0fa3c4dfffabdaef",
+      "spec_id": "D03_H960",
+      "seed": 42,
+      "stage": "conditional",
+      "model": {
+        "embedding_dim": 160,
+        "decoder_kind": "concat",
+        "alignment": "none",
+        "s4_hidden": 960
+      },
+      "dataset_read": false,
+      "GPU_execution": false
+    },
+    "D04_H896_s42": {
+      "path": "D:\\论文复现\\experiments\\segformer_simplify_wave12_20261026\\weights\\init\\D04_H896_s42.pdparams",
+      "sha256": "1730413f43881bd6529b42527ca7db97c85c45c13be9d367bbac140b312913b7",
+      "tensor_sha256": "cc74191e7b527e4ac4cb3b49e76d4d646d192bd6270b3f8c62d878d8cc2fc327",
+      "tensor_count": 194,
+      "registered_numel": 3327202,
+      "trainable_numel": 3326946,
+      "source_R0": {
+        "path": "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\weights\\init\\R0_s42.pdparams",
+        "sha256": "54c8014f52bf6b54cd62454968a1f6d6975ed5e91ee2c8be6913cf08fed1a116"
+      },
+      "source_imagenet_sha256": "211e15d5157b8d48b1931102c40094da0b578de1c153c5706360f7ad561a774e",
+      "tensor_ledger": "D:\\论文复现\\experiments\\segformer_simplify_wave12_20261026\\provenance\\init_tensors\\D04_H896_s42.json",
+      "tensor_ledger_sha256": "37d8af45a03b364c448b7b54cf363343844107d7dacba0eb3dcda8de520a67d8",
+      "spec_id": "D04_H896",
+      "seed": 42,
+      "stage": "conditional",
+      "model": {
+        "embedding_dim": 128,
+        "decoder_kind": "concat",
+        "alignment": "flow32",
+        "s4_hidden": 896
+      },
+      "dataset_read": false,
+      "GPU_execution": false
+    },
+    "D04_H960_s42": {
+      "path": "D:\\论文复现\\experiments\\segformer_simplify_wave12_20261026\\weights\\init\\D04_H960_s42.pdparams",
+      "sha256": "85d359d6aecf05c247737aa4d1f658f0f91963beb90b168f3253f3a6cc0d67af",
+      "tensor_sha256": "d8b9eb15583658aec7e955d4288aebead1048cf4ce194878a4006d220295c852",
+      "tensor_count": 194,
+      "registered_numel": 3394146,
+      "trainable_numel": 3393890,
+      "source_R0": {
+        "path": "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\weights\\init\\R0_s42.pdparams",
+        "sha256": "54c8014f52bf6b54cd62454968a1f6d6975ed5e91ee2c8be6913cf08fed1a116"
+      },
+      "source_imagenet_sha256": "211e15d5157b8d48b1931102c40094da0b578de1c153c5706360f7ad561a774e",
+      "tensor_ledger": "D:\\论文复现\\experiments\\segformer_simplify_wave12_20261026\\provenance\\init_tensors\\D04_H960_s42.json",
+      "tensor_ledger_sha256": "49c2f1ae44653ca6ba34170e3f8e0881f16a217a1652655e197141a300302233",
+      "spec_id": "D04_H960",
+      "seed": 42,
+      "stage": "conditional",
+      "model": {
+        "embedding_dim": 128,
+        "decoder_kind": "concat",
+        "alignment": "flow32",
+        "s4_hidden": 960
+      },
+      "dataset_read": false,
+      "GPU_execution": false
+    },
+    "D05_H896_s42": {
+      "path": "D:\\论文复现\\experiments\\segformer_simplify_wave12_20261026\\weights\\init\\D05_H896_s42.pdparams",
+      "sha256": "86db72aecc2760a2f35f41f05b055deb10427c885fca4918ad40a9551ba64d0c",
+      "tensor_sha256": "2be3369a141dbf84d6e85dee8ff0c8848dadd8a7a210269c542faa09ffaa5ce2",
+      "tensor_count": 194,
+      "registered_numel": 3322530,
+      "trainable_numel": 3322274,
+      "source_R0": {
+        "path": "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\weights\\init\\R0_s42.pdparams",
+        "sha256": "54c8014f52bf6b54cd62454968a1f6d6975ed5e91ee2c8be6913cf08fed1a116"
+      },
+      "source_imagenet_sha256": "211e15d5157b8d48b1931102c40094da0b578de1c153c5706360f7ad561a774e",
+      "tensor_ledger": "D:\\论文复现\\experiments\\segformer_simplify_wave12_20261026\\provenance\\init_tensors\\D05_H896_s42.json",
+      "tensor_ledger_sha256": "6b05721dac517a5e89f63719199412bc07bc94afee1ad1408e506407327626f6",
+      "spec_id": "D05_H896",
+      "seed": 42,
+      "stage": "conditional",
+      "model": {
+        "embedding_dim": 128,
+        "decoder_kind": "concat",
+        "alignment": "flow16",
+        "s4_hidden": 896
+      },
+      "dataset_read": false,
+      "GPU_execution": false
+    },
+    "D05_H960_s42": {
+      "path": "D:\\论文复现\\experiments\\segformer_simplify_wave12_20261026\\weights\\init\\D05_H960_s42.pdparams",
+      "sha256": "225084986488bfcb50fde86d083224f34a467602a9634b9603b96130738794c9",
+      "tensor_sha256": "b45acd059b76533e50aa5803d4ee5754dc4bcc15533cfdcb85ad69404cc92442",
+      "tensor_count": 194,
+      "registered_numel": 3389474,
+      "trainable_numel": 3389218,
+      "source_R0": {
+        "path": "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\weights\\init\\R0_s42.pdparams",
+        "sha256": "54c8014f52bf6b54cd62454968a1f6d6975ed5e91ee2c8be6913cf08fed1a116"
+      },
+      "source_imagenet_sha256": "211e15d5157b8d48b1931102c40094da0b578de1c153c5706360f7ad561a774e",
+      "tensor_ledger": "D:\\论文复现\\experiments\\segformer_simplify_wave12_20261026\\provenance\\init_tensors\\D05_H960_s42.json",
+      "tensor_ledger_sha256": "eb2bea341b519d02a4834a6000b566be4c1f283e60cc6e310bbdd3ab0625ff63",
+      "spec_id": "D05_H960",
+      "seed": 42,
+      "stage": "conditional",
+      "model": {
+        "embedding_dim": 128,
+        "decoder_kind": "concat",
+        "alignment": "flow16",
+        "s4_hidden": 960
+      },
+      "dataset_read": false,
+      "GPU_execution": false
+    },
+    "D06_H896_s42": {
+      "path": "D:\\论文复现\\experiments\\segformer_simplify_wave12_20261026\\weights\\init\\D06_H896_s42.pdparams",
+      "sha256": "9f767eee9156ce1dcc725fbf8aad4073b34e013a36d2d393f55c7dd5d543b911",
+      "tensor_sha256": "422937463a195b4f8eba915dcabfdb1812e630f2a306df8372436985970ad529",
+      "tensor_count": 195,
+      "registered_numel": 3326754,
+      "trainable_numel": 3326498,
+      "source_R0": {
+        "path": "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\weights\\init\\R0_s42.pdparams",
+        "sha256": "54c8014f52bf6b54cd62454968a1f6d6975ed5e91ee2c8be6913cf08fed1a116"
+      },
+      "source_imagenet_sha256": "211e15d5157b8d48b1931102c40094da0b578de1c153c5706360f7ad561a774e",
+      "tensor_ledger": "D:\\论文复现\\experiments\\segformer_simplify_wave12_20261026\\provenance\\init_tensors\\D06_H896_s42.json",
+      "tensor_ledger_sha256": "7b55fbc39151c852b12e63e653b9d659ce68aece1bc151d54cf9d4aad0b3b380",
+      "spec_id": "D06_H896",
+      "seed": 42,
+      "stage": "conditional",
+      "model": {
+        "embedding_dim": 128,
+        "decoder_kind": "concat",
+        "alignment": "dwflow32",
+        "s4_hidden": 896
+      },
+      "dataset_read": false,
+      "GPU_execution": false
+    },
+    "D06_H960_s42": {
+      "path": "D:\\论文复现\\experiments\\segformer_simplify_wave12_20261026\\weights\\init\\D06_H960_s42.pdparams",
+      "sha256": "976428928b84b329129f43fba3db7958ea8431e9c775da111f0c49487aad0b76",
+      "tensor_sha256": "cd0fef70d5c90aa5bb8696b877d45bf0f18eaad30d6238686473ee7588885a22",
+      "tensor_count": 195,
+      "registered_numel": 3393698,
+      "trainable_numel": 3393442,
+      "source_R0": {
+        "path": "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\weights\\init\\R0_s42.pdparams",
+        "sha256": "54c8014f52bf6b54cd62454968a1f6d6975ed5e91ee2c8be6913cf08fed1a116"
+      },
+      "source_imagenet_sha256": "211e15d5157b8d48b1931102c40094da0b578de1c153c5706360f7ad561a774e",
+      "tensor_ledger": "D:\\论文复现\\experiments\\segformer_simplify_wave12_20261026\\provenance\\init_tensors\\D06_H960_s42.json",
+      "tensor_ledger_sha256": "9122d828f11910923a4285efc759c71b0bec7d3cb5552dd132d5b8e541ba770b",
+      "spec_id": "D06_H960",
+      "seed": 42,
+      "stage": "conditional",
+      "model": {
+        "embedding_dim": 128,
+        "decoder_kind": "concat",
+        "alignment": "dwflow32",
+        "s4_hidden": 960
+      },
+      "dataset_read": false,
+      "GPU_execution": false
+    },
+    "D07_H896_s42": {
+      "path": "D:\\论文复现\\experiments\\segformer_simplify_wave12_20261026\\weights\\init\\D07_H896_s42.pdparams",
+      "sha256": "9fd912a6b61e68c9c11ddf531c5b17e2e06ac71cec952fda45c99457d23f70c8",
+      "tensor_sha256": "cc74191e7b527e4ac4cb3b49e76d4d646d192bd6270b3f8c62d878d8cc2fc327",
+      "tensor_count": 194,
+      "registered_numel": 3327202,
+      "trainable_numel": 3326946,
+      "source_R0": {
+        "path": "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\weights\\init\\R0_s42.pdparams",
+        "sha256": "54c8014f52bf6b54cd62454968a1f6d6975ed5e91ee2c8be6913cf08fed1a116"
+      },
+      "source_imagenet_sha256": "211e15d5157b8d48b1931102c40094da0b578de1c153c5706360f7ad561a774e",
+      "tensor_ledger": "D:\\论文复现\\experiments\\segformer_simplify_wave12_20261026\\provenance\\init_tensors\\D07_H896_s42.json",
+      "tensor_ledger_sha256": "8d3819042a75a065b940a76432535191ff5341c60925d81ccb64b8f0a26060f2",
+      "spec_id": "D07_H896",
+      "seed": 42,
+      "stage": "conditional",
+      "model": {
+        "embedding_dim": 128,
+        "decoder_kind": "concat",
+        "alignment": "coarseflow32",
+        "s4_hidden": 896
+      },
+      "dataset_read": false,
+      "GPU_execution": false
+    },
+    "D07_H960_s42": {
+      "path": "D:\\论文复现\\experiments\\segformer_simplify_wave12_20261026\\weights\\init\\D07_H960_s42.pdparams",
+      "sha256": "9fc58ffcc4087ea1fc957f78e1dd57ce15656265b8708a0875c0f6b9d2be7264",
+      "tensor_sha256": "d8b9eb15583658aec7e955d4288aebead1048cf4ce194878a4006d220295c852",
+      "tensor_count": 194,
+      "registered_numel": 3394146,
+      "trainable_numel": 3393890,
+      "source_R0": {
+        "path": "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\weights\\init\\R0_s42.pdparams",
+        "sha256": "54c8014f52bf6b54cd62454968a1f6d6975ed5e91ee2c8be6913cf08fed1a116"
+      },
+      "source_imagenet_sha256": "211e15d5157b8d48b1931102c40094da0b578de1c153c5706360f7ad561a774e",
+      "tensor_ledger": "D:\\论文复现\\experiments\\segformer_simplify_wave12_20261026\\provenance\\init_tensors\\D07_H960_s42.json",
+      "tensor_ledger_sha256": "14c4f668e275a67bf90ed1845bb47535ca5ac72c37216417b44bb17201522111",
+      "spec_id": "D07_H960",
+      "seed": 42,
+      "stage": "conditional",
+      "model": {
+        "embedding_dim": 128,
+        "decoder_kind": "concat",
+        "alignment": "coarseflow32",
+        "s4_hidden": 960
+      },
+      "dataset_read": false,
+      "GPU_execution": false
+    },
+    "D08_H896_s42": {
+      "path": "D:\\论文复现\\experiments\\segformer_simplify_wave12_20261026\\weights\\init\\D08_H896_s42.pdparams",
+      "sha256": "b580db87f1668cabbabb53c1f9c3171c749748b9b99848482b55817970aea328",
+      "tensor_sha256": "8d12c8f1e698f78f6c1c05da4dda7f315f672ca5be66d0035df519549b7a4681",
+      "tensor_count": 190,
+      "registered_numel": 3252322,
+      "trainable_numel": 3252066,
+      "source_R0": {
+        "path": "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\weights\\init\\R0_s42.pdparams",
+        "sha256": "54c8014f52bf6b54cd62454968a1f6d6975ed5e91ee2c8be6913cf08fed1a116"
+      },
+      "source_imagenet_sha256": "211e15d5157b8d48b1931102c40094da0b578de1c153c5706360f7ad561a774e",
+      "tensor_ledger": "D:\\论文复现\\experiments\\segformer_simplify_wave12_20261026\\provenance\\init_tensors\\D08_H896_s42.json",
+      "tensor_ledger_sha256": "bf8208c182d226c8733394ec2b2d489656ac5e49f16b8b679b9008202546f59b",
+      "spec_id": "D08_H896",
+      "seed": 42,
+      "stage": "conditional",
+      "model": {
+        "embedding_dim": 128,
+        "decoder_kind": "native_sum",
+        "alignment": "none",
+        "s4_hidden": 896
+      },
+      "dataset_read": false,
+      "GPU_execution": false
+    },
+    "D08_H960_s42": {
+      "path": "D:\\论文复现\\experiments\\segformer_simplify_wave12_20261026\\weights\\init\\D08_H960_s42.pdparams",
+      "sha256": "a84436f9da911204d77ef5f2db2821519f3f10212551e73c3fc5db195205b52d",
+      "tensor_sha256": "371f5522d5a5f28830c68d73f54ea3f72c53eb53a8035b20683a57e2749c428c",
+      "tensor_count": 190,
+      "registered_numel": 3319266,
+      "trainable_numel": 3319010,
+      "source_R0": {
+        "path": "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\weights\\init\\R0_s42.pdparams",
+        "sha256": "54c8014f52bf6b54cd62454968a1f6d6975ed5e91ee2c8be6913cf08fed1a116"
+      },
+      "source_imagenet_sha256": "211e15d5157b8d48b1931102c40094da0b578de1c153c5706360f7ad561a774e",
+      "tensor_ledger": "D:\\论文复现\\experiments\\segformer_simplify_wave12_20261026\\provenance\\init_tensors\\D08_H960_s42.json",
+      "tensor_ledger_sha256": "b5e5e6994250f8971ee199c997a4cb3b196f3fc6c9c708b68922784ee87488e2",
+      "spec_id": "D08_H960",
+      "seed": 42,
+      "stage": "conditional",
+      "model": {
+        "embedding_dim": 128,
+        "decoder_kind": "native_sum",
+        "alignment": "none",
+        "s4_hidden": 960
+      },
+      "dataset_read": false,
+      "GPU_execution": false
+    },
+    "D09_H896_s42": {
+      "path": "D:\\论文复现\\experiments\\segformer_simplify_wave12_20261026\\weights\\init\\D09_H896_s42.pdparams",
+      "sha256": "491a299423cd59d19170ea3205bd5f140987e7ba347a6eef68f7eb9c6614b6ac",
+      "tensor_sha256": "64b348819ecc463edcfb55b5f0bebe8c25758499157ff42b7c38284ebe8d1368",
+      "tensor_count": 190,
+      "registered_numel": 3285730,
+      "trainable_numel": 3285346,
+      "source_R0": {
+        "path": "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\weights\\init\\R0_s42.pdparams",
+        "sha256": "54c8014f52bf6b54cd62454968a1f6d6975ed5e91ee2c8be6913cf08fed1a116"
+      },
+      "source_imagenet_sha256": "211e15d5157b8d48b1931102c40094da0b578de1c153c5706360f7ad561a774e",
+      "tensor_ledger": "D:\\论文复现\\experiments\\segformer_simplify_wave12_20261026\\provenance\\init_tensors\\D09_H896_s42.json",
+      "tensor_ledger_sha256": "c5314c5aa26535b15ca393f7cfac286283f73ae17e72e48b21a1b186d988595e",
+      "spec_id": "D09_H896",
+      "seed": 42,
+      "stage": "conditional",
+      "model": {
+        "embedding_dim": 192,
+        "decoder_kind": "native_sum",
+        "alignment": "none",
+        "s4_hidden": 896
+      },
+      "dataset_read": false,
+      "GPU_execution": false
+    },
+    "D09_H960_s42": {
+      "path": "D:\\论文复现\\experiments\\segformer_simplify_wave12_20261026\\weights\\init\\D09_H960_s42.pdparams",
+      "sha256": "29922d78a4f50f392d25bfd3dcca184b15a57c3ad3745af2730553944ee2bf72",
+      "tensor_sha256": "2bcd58df7856c9a3800f85e42e47b24dd131f55594c29c3503d0dce0f8a52e49",
+      "tensor_count": 190,
+      "registered_numel": 3352674,
+      "trainable_numel": 3352290,
+      "source_R0": {
+        "path": "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\weights\\init\\R0_s42.pdparams",
+        "sha256": "54c8014f52bf6b54cd62454968a1f6d6975ed5e91ee2c8be6913cf08fed1a116"
+      },
+      "source_imagenet_sha256": "211e15d5157b8d48b1931102c40094da0b578de1c153c5706360f7ad561a774e",
+      "tensor_ledger": "D:\\论文复现\\experiments\\segformer_simplify_wave12_20261026\\provenance\\init_tensors\\D09_H960_s42.json",
+      "tensor_ledger_sha256": "386f0544730d5eb9788d8553420e2e0a660f1abd63c9d421f9f27285b5927f0e",
+      "spec_id": "D09_H960",
+      "seed": 42,
+      "stage": "conditional",
+      "model": {
+        "embedding_dim": 192,
+        "decoder_kind": "native_sum",
+        "alignment": "none",
+        "s4_hidden": 960
+      },
+      "dataset_read": false,
+      "GPU_execution": false
+    },
+    "D10_H896_s42": {
+      "path": "D:\\论文复现\\experiments\\segformer_simplify_wave12_20261026\\weights\\init\\D10_H896_s42.pdparams",
+      "sha256": "75d9d380f75bce4356c0aee4112c6f06c4b5228cc9216151f63a7a5e5aeb1f49",
+      "tensor_sha256": "551ddf5355da170e6d63a07f00f332d415e78a6f98481bd4821a92022214d372",
+      "tensor_count": 190,
+      "registered_numel": 3319138,
+      "trainable_numel": 3318626,
+      "source_R0": {
+        "path": "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\weights\\init\\R0_s42.pdparams",
+        "sha256": "54c8014f52bf6b54cd62454968a1f6d6975ed5e91ee2c8be6913cf08fed1a116"
+      },
+      "source_imagenet_sha256": "211e15d5157b8d48b1931102c40094da0b578de1c153c5706360f7ad561a774e",
+      "tensor_ledger": "D:\\论文复现\\experiments\\segformer_simplify_wave12_20261026\\provenance\\init_tensors\\D10_H896_s42.json",
+      "tensor_ledger_sha256": "a206f0323d2a5eb2566153ecbe058d809e1e0f5b11757dc36d093b88a1a07666",
+      "spec_id": "D10_H896",
+      "seed": 42,
+      "stage": "conditional",
+      "model": {
+        "embedding_dim": 256,
+        "decoder_kind": "native_sum",
+        "alignment": "none",
+        "s4_hidden": 896
+      },
+      "dataset_read": false,
+      "GPU_execution": false
+    },
+    "D10_H960_s42": {
+      "path": "D:\\论文复现\\experiments\\segformer_simplify_wave12_20261026\\weights\\init\\D10_H960_s42.pdparams",
+      "sha256": "d3dc156410d9fef6af75b9a96b4be5c148f7033b23afee36fddbfb91f88b0e7d",
+      "tensor_sha256": "5c8bb87e512e69229878b286d10853dbd951461e4554533e9fca91ae199d07dc",
+      "tensor_count": 190,
+      "registered_numel": 3386082,
+      "trainable_numel": 3385570,
+      "source_R0": {
+        "path": "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\weights\\init\\R0_s42.pdparams",
+        "sha256": "54c8014f52bf6b54cd62454968a1f6d6975ed5e91ee2c8be6913cf08fed1a116"
+      },
+      "source_imagenet_sha256": "211e15d5157b8d48b1931102c40094da0b578de1c153c5706360f7ad561a774e",
+      "tensor_ledger": "D:\\论文复现\\experiments\\segformer_simplify_wave12_20261026\\provenance\\init_tensors\\D10_H960_s42.json",
+      "tensor_ledger_sha256": "e6ee27d59cafefc3b61e623a7ac67a8135368204d46f7e26b21577fcdf87c15e",
+      "spec_id": "D10_H960",
+      "seed": 42,
+      "stage": "conditional",
+      "model": {
+        "embedding_dim": 256,
+        "decoder_kind": "native_sum",
+        "alignment": "none",
+        "s4_hidden": 960
+      },
+      "dataset_read": false,
+      "GPU_execution": false
+    },
+    "D01_s43": {
+      "path": "D:\\论文复现\\experiments\\segformer_simplify_wave12_20261026\\weights\\init\\D01_s43.pdparams",
+      "sha256": "bc9d556f4a72d472424d299a919684e514eb916024a1843ee7f69035edd2430e",
+      "tensor_sha256": "69f0299e78c696ca446d024e7d5f6742423350188424f2e499edca0e89071d5b",
+      "tensor_count": 191,
+      "registered_numel": 3406370,
+      "trainable_numel": 3406178,
+      "source_R0": {
+        "path": "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\weights\\init\\R0_s43.pdparams",
+        "sha256": "5dafacb502c2391bfb5e0571147cedbc4f3d45e30bc5a4e2d60143415b72efa1"
+      },
+      "source_imagenet_sha256": "211e15d5157b8d48b1931102c40094da0b578de1c153c5706360f7ad561a774e",
+      "tensor_ledger": "D:\\论文复现\\experiments\\segformer_simplify_wave12_20261026\\provenance\\init_tensors\\D01_s43.json",
+      "tensor_ledger_sha256": "7a865922f723b4f453ec1fc98523d2777e48a5025d168e9b57ddd77256bb41fa",
+      "spec_id": "D01",
+      "seed": 43,
+      "stage": "primary",
+      "model": {
+        "embedding_dim": 96,
+        "decoder_kind": "concat",
+        "alignment": "none",
+        "s4_hidden": 1024
+      },
+      "dataset_read": false,
+      "GPU_execution": false
+    },
+    "D02_s43": {
+      "path": "D:\\论文复现\\experiments\\segformer_simplify_wave12_20261026\\weights\\init\\D02_s43.pdparams",
+      "sha256": "5431ad09cdd01829ce27b9e59e4bf66ea8feaa03662508ea529423ea9f0b4d57",
+      "tensor_sha256": "de14e8e8990dafd6fb6e338ec38a30406975667c85b6700152a3d7cf883065a7",
+      "tensor_count": 191,
+      "registered_numel": 3451746,
+      "trainable_numel": 3451490,
+      "source_R0": {
+        "path": "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\weights\\init\\R0_s43.pdparams",
+        "sha256": "5dafacb502c2391bfb5e0571147cedbc4f3d45e30bc5a4e2d60143415b72efa1"
+      },
+      "source_imagenet_sha256": "211e15d5157b8d48b1931102c40094da0b578de1c153c5706360f7ad561a774e",
+      "tensor_ledger": "D:\\论文复现\\experiments\\segformer_simplify_wave12_20261026\\provenance\\init_tensors\\D02_s43.json",
+      "tensor_ledger_sha256": "937f9a8ed62005791228d569e35b3c42e51658d5a20d255841e190f83a91da1d",
+      "spec_id": "D02",
+      "seed": 43,
+      "stage": "primary",
+      "model": {
+        "embedding_dim": 128,
+        "decoder_kind": "concat",
+        "alignment": "none",
+        "s4_hidden": 1024
+      },
+      "dataset_read": false,
+      "GPU_execution": false
+    },
+    "D03_s43": {
+      "path": "D:\\论文复现\\experiments\\segformer_simplify_wave12_20261026\\weights\\init\\D03_s43.pdparams",
+      "sha256": "f3131b77aad8efbbc98330ff6c179a77486931a8c41f567132c48c9c7fdc1818",
+      "tensor_sha256": "aecef5a3744ba545721af8d80f62f9739086254de0bce1a2b82718b2692825ed",
+      "tensor_count": 191,
+      "registered_numel": 3505314,
+      "trainable_numel": 3504994,
+      "source_R0": {
+        "path": "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\weights\\init\\R0_s43.pdparams",
+        "sha256": "5dafacb502c2391bfb5e0571147cedbc4f3d45e30bc5a4e2d60143415b72efa1"
+      },
+      "source_imagenet_sha256": "211e15d5157b8d48b1931102c40094da0b578de1c153c5706360f7ad561a774e",
+      "tensor_ledger": "D:\\论文复现\\experiments\\segformer_simplify_wave12_20261026\\provenance\\init_tensors\\D03_s43.json",
+      "tensor_ledger_sha256": "fa959b2f4de0595da2f316bf91ae28ed22a23608779f7b922152819fb1671ab8",
+      "spec_id": "D03",
+      "seed": 43,
+      "stage": "primary",
+      "model": {
+        "embedding_dim": 160,
+        "decoder_kind": "concat",
+        "alignment": "none",
+        "s4_hidden": 1024
+      },
+      "dataset_read": false,
+      "GPU_execution": false
+    },
+    "D04_s43": {
+      "path": "D:\\论文复现\\experiments\\segformer_simplify_wave12_20261026\\weights\\init\\D04_s43.pdparams",
+      "sha256": "6f9494506aa54b948efcc844275dcb64858faf02d3e9885317a419a1344c4afa",
+      "tensor_sha256": "94c1cc28dda9021e18c0421b3f943feb12fb21d74a63e5877df546de26c2b721",
+      "tensor_count": 194,
+      "registered_numel": 3461090,
+      "trainable_numel": 3460834,
+      "source_R0": {
+        "path": "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\weights\\init\\R0_s43.pdparams",
+        "sha256": "5dafacb502c2391bfb5e0571147cedbc4f3d45e30bc5a4e2d60143415b72efa1"
+      },
+      "source_imagenet_sha256": "211e15d5157b8d48b1931102c40094da0b578de1c153c5706360f7ad561a774e",
+      "tensor_ledger": "D:\\论文复现\\experiments\\segformer_simplify_wave12_20261026\\provenance\\init_tensors\\D04_s43.json",
+      "tensor_ledger_sha256": "5ca14568de193a9ddb4bec79c8f6daa5c2fa9fe3ed928b1e8d2d37d3d88f442a",
+      "spec_id": "D04",
+      "seed": 43,
+      "stage": "primary",
+      "model": {
+        "embedding_dim": 128,
+        "decoder_kind": "concat",
+        "alignment": "flow32",
+        "s4_hidden": 1024
+      },
+      "dataset_read": false,
+      "GPU_execution": false
+    },
+    "D05_s43": {
+      "path": "D:\\论文复现\\experiments\\segformer_simplify_wave12_20261026\\weights\\init\\D05_s43.pdparams",
+      "sha256": "b7d27c640eac15160e77c3e088f04b54a58986a5091343323e85485eaaf68b73",
+      "tensor_sha256": "1bee624539feae3c53feb6ae9ad4e371049beb56a54cc7cb3afde3342a59e3fa",
+      "tensor_count": 194,
+      "registered_numel": 3456418,
+      "trainable_numel": 3456162,
+      "source_R0": {
+        "path": "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\weights\\init\\R0_s43.pdparams",
+        "sha256": "5dafacb502c2391bfb5e0571147cedbc4f3d45e30bc5a4e2d60143415b72efa1"
+      },
+      "source_imagenet_sha256": "211e15d5157b8d48b1931102c40094da0b578de1c153c5706360f7ad561a774e",
+      "tensor_ledger": "D:\\论文复现\\experiments\\segformer_simplify_wave12_20261026\\provenance\\init_tensors\\D05_s43.json",
+      "tensor_ledger_sha256": "2512c4763555c43ae5246f19b7ae1873644448e16fbdad2ff59d173a14e9cefd",
+      "spec_id": "D05",
+      "seed": 43,
+      "stage": "primary",
+      "model": {
+        "embedding_dim": 128,
+        "decoder_kind": "concat",
+        "alignment": "flow16",
+        "s4_hidden": 1024
+      },
+      "dataset_read": false,
+      "GPU_execution": false
+    },
+    "D06_s43": {
+      "path": "D:\\论文复现\\experiments\\segformer_simplify_wave12_20261026\\weights\\init\\D06_s43.pdparams",
+      "sha256": "17303827b647d4d6539af32fa59d548409ce466c078daad921830ef642ad2de1",
+      "tensor_sha256": "4f6d59938c9132e4f2f64a424cd7ac1d301b2007db020ab5480381f6526e525e",
+      "tensor_count": 195,
+      "registered_numel": 3460642,
+      "trainable_numel": 3460386,
+      "source_R0": {
+        "path": "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\weights\\init\\R0_s43.pdparams",
+        "sha256": "5dafacb502c2391bfb5e0571147cedbc4f3d45e30bc5a4e2d60143415b72efa1"
+      },
+      "source_imagenet_sha256": "211e15d5157b8d48b1931102c40094da0b578de1c153c5706360f7ad561a774e",
+      "tensor_ledger": "D:\\论文复现\\experiments\\segformer_simplify_wave12_20261026\\provenance\\init_tensors\\D06_s43.json",
+      "tensor_ledger_sha256": "450aefe8c6f9fa8d7e47b03d7b8bd8cb6411c75a9af8b87b963fdd01fd976e22",
+      "spec_id": "D06",
+      "seed": 43,
+      "stage": "primary",
+      "model": {
+        "embedding_dim": 128,
+        "decoder_kind": "concat",
+        "alignment": "dwflow32",
+        "s4_hidden": 1024
+      },
+      "dataset_read": false,
+      "GPU_execution": false
+    },
+    "D07_s43": {
+      "path": "D:\\论文复现\\experiments\\segformer_simplify_wave12_20261026\\weights\\init\\D07_s43.pdparams",
+      "sha256": "f3738e0216c587342b78ed602c652a886ec9543eebade5c3991521fa011d724f",
+      "tensor_sha256": "94c1cc28dda9021e18c0421b3f943feb12fb21d74a63e5877df546de26c2b721",
+      "tensor_count": 194,
+      "registered_numel": 3461090,
+      "trainable_numel": 3460834,
+      "source_R0": {
+        "path": "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\weights\\init\\R0_s43.pdparams",
+        "sha256": "5dafacb502c2391bfb5e0571147cedbc4f3d45e30bc5a4e2d60143415b72efa1"
+      },
+      "source_imagenet_sha256": "211e15d5157b8d48b1931102c40094da0b578de1c153c5706360f7ad561a774e",
+      "tensor_ledger": "D:\\论文复现\\experiments\\segformer_simplify_wave12_20261026\\provenance\\init_tensors\\D07_s43.json",
+      "tensor_ledger_sha256": "3b65a3f678821805cc03650eb30f071cc797c894edefae1fa6ce4a899548af0b",
+      "spec_id": "D07",
+      "seed": 43,
+      "stage": "primary",
+      "model": {
+        "embedding_dim": 128,
+        "decoder_kind": "concat",
+        "alignment": "coarseflow32",
+        "s4_hidden": 1024
+      },
+      "dataset_read": false,
+      "GPU_execution": false
+    },
+    "D08_s43": {
+      "path": "D:\\论文复现\\experiments\\segformer_simplify_wave12_20261026\\weights\\init\\D08_s43.pdparams",
+      "sha256": "0ccd8e6630ae8692f2dc7db1f05495858d85f71c53f46299bb69f78399492914",
+      "tensor_sha256": "53a74473378b0f50a183f867074d109f0feb64b4a2533c9f7d1403d9b6a60bce",
+      "tensor_count": 190,
+      "registered_numel": 3386210,
+      "trainable_numel": 3385954,
+      "source_R0": {
+        "path": "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\weights\\init\\R0_s43.pdparams",
+        "sha256": "5dafacb502c2391bfb5e0571147cedbc4f3d45e30bc5a4e2d60143415b72efa1"
+      },
+      "source_imagenet_sha256": "211e15d5157b8d48b1931102c40094da0b578de1c153c5706360f7ad561a774e",
+      "tensor_ledger": "D:\\论文复现\\experiments\\segformer_simplify_wave12_20261026\\provenance\\init_tensors\\D08_s43.json",
+      "tensor_ledger_sha256": "fb9625d9b812b5b1aec86ae8e7fd3af2fb44c06774d47d424b635caa9a4f28c9",
+      "spec_id": "D08",
+      "seed": 43,
+      "stage": "primary",
+      "model": {
+        "embedding_dim": 128,
+        "decoder_kind": "native_sum",
+        "alignment": "none",
+        "s4_hidden": 1024
+      },
+      "dataset_read": false,
+      "GPU_execution": false
+    },
+    "D09_s43": {
+      "path": "D:\\论文复现\\experiments\\segformer_simplify_wave12_20261026\\weights\\init\\D09_s43.pdparams",
+      "sha256": "16b302b6dc97f24c634b4ff82faebb827cd86d1f74bdcd6dfa34dc0df507d70d",
+      "tensor_sha256": "dc739553000184a9cb56bd8dd1ece171715fb50ed7539d426a2e173bddfb1137",
+      "tensor_count": 190,
+      "registered_numel": 3419618,
+      "trainable_numel": 3419234,
+      "source_R0": {
+        "path": "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\weights\\init\\R0_s43.pdparams",
+        "sha256": "5dafacb502c2391bfb5e0571147cedbc4f3d45e30bc5a4e2d60143415b72efa1"
+      },
+      "source_imagenet_sha256": "211e15d5157b8d48b1931102c40094da0b578de1c153c5706360f7ad561a774e",
+      "tensor_ledger": "D:\\论文复现\\experiments\\segformer_simplify_wave12_20261026\\provenance\\init_tensors\\D09_s43.json",
+      "tensor_ledger_sha256": "18dc36fc1bc501a86a2ee8ca9acfb3a1591d9be06333a1370d87433a378da219",
+      "spec_id": "D09",
+      "seed": 43,
+      "stage": "primary",
+      "model": {
+        "embedding_dim": 192,
+        "decoder_kind": "native_sum",
+        "alignment": "none",
+        "s4_hidden": 1024
+      },
+      "dataset_read": false,
+      "GPU_execution": false
+    },
+    "D10_s43": {
+      "path": "D:\\论文复现\\experiments\\segformer_simplify_wave12_20261026\\weights\\init\\D10_s43.pdparams",
+      "sha256": "0093e702a4f3ed3b47a4489c32d9d008d9415e2d6b55f84b6e049149b6fa872e",
+      "tensor_sha256": "1537f9ae6defbad54774aded7f566adb95a34f54f5b1aa8502b2a01e760a6455",
+      "tensor_count": 190,
+      "registered_numel": 3453026,
+      "trainable_numel": 3452514,
+      "source_R0": {
+        "path": "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\weights\\init\\R0_s43.pdparams",
+        "sha256": "5dafacb502c2391bfb5e0571147cedbc4f3d45e30bc5a4e2d60143415b72efa1"
+      },
+      "source_imagenet_sha256": "211e15d5157b8d48b1931102c40094da0b578de1c153c5706360f7ad561a774e",
+      "tensor_ledger": "D:\\论文复现\\experiments\\segformer_simplify_wave12_20261026\\provenance\\init_tensors\\D10_s43.json",
+      "tensor_ledger_sha256": "c86f35e3f0d2a0a8ccb192e76a7ec9508d07b8d4568d469b9fb6e771f7967f01",
+      "spec_id": "D10",
+      "seed": 43,
+      "stage": "primary",
+      "model": {
+        "embedding_dim": 256,
+        "decoder_kind": "native_sum",
+        "alignment": "none",
+        "s4_hidden": 1024
+      },
+      "dataset_read": false,
+      "GPU_execution": false
+    },
+    "C01_s43": {
+      "path": "D:\\论文复现\\experiments\\segformer_simplify_wave12_20261026\\weights\\init\\C01_s43.pdparams",
+      "sha256": "d8b34cd7e440eacc904623357a8feddecf4c9df8ada91896c0e6b8657c9e13ad",
+      "tensor_sha256": "ecb4abfd9e74e9fb7cbd1d5fba9963ddda04cf02a2accf9c776b2994c3bd220d",
+      "tensor_count": 194,
+      "registered_numel": 3403490,
+      "trainable_numel": 3403234,
+      "source_R0": {
+        "path": "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\weights\\init\\R0_s43.pdparams",
+        "sha256": "5dafacb502c2391bfb5e0571147cedbc4f3d45e30bc5a4e2d60143415b72efa1"
+      },
+      "source_imagenet_sha256": "211e15d5157b8d48b1931102c40094da0b578de1c153c5706360f7ad561a774e",
+      "tensor_ledger": "D:\\论文复现\\experiments\\segformer_simplify_wave12_20261026\\provenance\\init_tensors\\C01_s43.json",
+      "tensor_ledger_sha256": "d87eac98c5ef35142df42c985457fd99f6e2243d5d5ce2b67af61b091b16f282",
+      "spec_id": "C01",
+      "seed": 43,
+      "stage": "primary",
+      "model": {
+        "embedding_dim": 128,
+        "decoder_kind": "concat",
+        "alignment": "full",
+        "s4_hidden": 960
+      },
+      "dataset_read": false,
+      "GPU_execution": false
+    },
+    "C02_s43": {
+      "path": "D:\\论文复现\\experiments\\segformer_simplify_wave12_20261026\\weights\\init\\C02_s43.pdparams",
+      "sha256": "4aa493937962a89f58816bc93e2eac36496fff186f94f3b9568389f984d4f8fb",
+      "tensor_sha256": "1a9f6e7ed2017aec34f7c3f42e6441a2de1e26da4fa331137677e65bdaffaaa5",
+      "tensor_count": 194,
+      "registered_numel": 3336546,
+      "trainable_numel": 3336290,
+      "source_R0": {
+        "path": "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\weights\\init\\R0_s43.pdparams",
+        "sha256": "5dafacb502c2391bfb5e0571147cedbc4f3d45e30bc5a4e2d60143415b72efa1"
+      },
+      "source_imagenet_sha256": "211e15d5157b8d48b1931102c40094da0b578de1c153c5706360f7ad561a774e",
+      "tensor_ledger": "D:\\论文复现\\experiments\\segformer_simplify_wave12_20261026\\provenance\\init_tensors\\C02_s43.json",
+      "tensor_ledger_sha256": "a64ef5059d2d0a6512c6468c4589232c0b42c6e748568674a4b55fc3ec0a16b6",
+      "spec_id": "C02",
+      "seed": 43,
+      "stage": "primary",
+      "model": {
+        "embedding_dim": 128,
+        "decoder_kind": "concat",
+        "alignment": "full",
+        "s4_hidden": 896
+      },
+      "dataset_read": false,
+      "GPU_execution": false
+    },
+    "D01_H896_s43": {
+      "path": "D:\\论文复现\\experiments\\segformer_simplify_wave12_20261026\\weights\\init\\D01_H896_s43.pdparams",
+      "sha256": "aacad1a4e3b7a087afad5d0f1423a43a02a975231248170c5e243c6e3aaea58c",
+      "tensor_sha256": "3ae92117ff5ea3433938333ea60230b5f546d75882094c6a16be132771246270",
+      "tensor_count": 191,
+      "registered_numel": 3272482,
+      "trainable_numel": 3272290,
+      "source_R0": {
+        "path": "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\weights\\init\\R0_s43.pdparams",
+        "sha256": "5dafacb502c2391bfb5e0571147cedbc4f3d45e30bc5a4e2d60143415b72efa1"
+      },
+      "source_imagenet_sha256": "211e15d5157b8d48b1931102c40094da0b578de1c153c5706360f7ad561a774e",
+      "tensor_ledger": "D:\\论文复现\\experiments\\segformer_simplify_wave12_20261026\\provenance\\init_tensors\\D01_H896_s43.json",
+      "tensor_ledger_sha256": "3e0806d9ba98ff4658ccc8b20ce465eddfed3847fb484ed84007bf4b87f0b75c",
+      "spec_id": "D01_H896",
+      "seed": 43,
+      "stage": "conditional",
+      "model": {
+        "embedding_dim": 96,
+        "decoder_kind": "concat",
+        "alignment": "none",
+        "s4_hidden": 896
+      },
+      "dataset_read": false,
+      "GPU_execution": false
+    },
+    "D01_H960_s43": {
+      "path": "D:\\论文复现\\experiments\\segformer_simplify_wave12_20261026\\weights\\init\\D01_H960_s43.pdparams",
+      "sha256": "efcebc8d6caa95fd33c85fd4dbe519f4e4dac89e1c6c0b5a89d4a71cfbfd3516",
+      "tensor_sha256": "d02d189d21e7f66a32046bc3305bd3f4aa1bf30f9629a916a5d4f387c8bf374d",
+      "tensor_count": 191,
+      "registered_numel": 3339426,
+      "trainable_numel": 3339234,
+      "source_R0": {
+        "path": "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\weights\\init\\R0_s43.pdparams",
+        "sha256": "5dafacb502c2391bfb5e0571147cedbc4f3d45e30bc5a4e2d60143415b72efa1"
+      },
+      "source_imagenet_sha256": "211e15d5157b8d48b1931102c40094da0b578de1c153c5706360f7ad561a774e",
+      "tensor_ledger": "D:\\论文复现\\experiments\\segformer_simplify_wave12_20261026\\provenance\\init_tensors\\D01_H960_s43.json",
+      "tensor_ledger_sha256": "ffeb44246861a6bcead1a15bc30d9215a50c2c0f85f3670cd26fa7813dd2cf19",
+      "spec_id": "D01_H960",
+      "seed": 43,
+      "stage": "conditional",
+      "model": {
+        "embedding_dim": 96,
+        "decoder_kind": "concat",
+        "alignment": "none",
+        "s4_hidden": 960
+      },
+      "dataset_read": false,
+      "GPU_execution": false
+    },
+    "D02_H896_s43": {
+      "path": "D:\\论文复现\\experiments\\segformer_simplify_wave12_20261026\\weights\\init\\D02_H896_s43.pdparams",
+      "sha256": "f6ac2635e1fcda6da59e4c8dc8ff22118f41a9efa0cb66b263a1989986d187f6",
+      "tensor_sha256": "328a3da19281719aff8edcf5290ac9661e3e533f6bb5f2aca72d4602526676cd",
+      "tensor_count": 191,
+      "registered_numel": 3317858,
+      "trainable_numel": 3317602,
+      "source_R0": {
+        "path": "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\weights\\init\\R0_s43.pdparams",
+        "sha256": "5dafacb502c2391bfb5e0571147cedbc4f3d45e30bc5a4e2d60143415b72efa1"
+      },
+      "source_imagenet_sha256": "211e15d5157b8d48b1931102c40094da0b578de1c153c5706360f7ad561a774e",
+      "tensor_ledger": "D:\\论文复现\\experiments\\segformer_simplify_wave12_20261026\\provenance\\init_tensors\\D02_H896_s43.json",
+      "tensor_ledger_sha256": "36b1c15ec9c17b9b8df630ab19dd694f8369de747d13dad8f5b28bf375c140cd",
+      "spec_id": "D02_H896",
+      "seed": 43,
+      "stage": "conditional",
+      "model": {
+        "embedding_dim": 128,
+        "decoder_kind": "concat",
+        "alignment": "none",
+        "s4_hidden": 896
+      },
+      "dataset_read": false,
+      "GPU_execution": false
+    },
+    "D02_H960_s43": {
+      "path": "D:\\论文复现\\experiments\\segformer_simplify_wave12_20261026\\weights\\init\\D02_H960_s43.pdparams",
+      "sha256": "648aeaac341f87bd51c23d35069a196642f75955e0eb332de37c9992c7b8a5d8",
+      "tensor_sha256": "737cb15996039c7a73312eb8057fd46dfdb9cdbfe01b0d6cd958b0c6810f6ea0",
+      "tensor_count": 191,
+      "registered_numel": 3384802,
+      "trainable_numel": 3384546,
+      "source_R0": {
+        "path": "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\weights\\init\\R0_s43.pdparams",
+        "sha256": "5dafacb502c2391bfb5e0571147cedbc4f3d45e30bc5a4e2d60143415b72efa1"
+      },
+      "source_imagenet_sha256": "211e15d5157b8d48b1931102c40094da0b578de1c153c5706360f7ad561a774e",
+      "tensor_ledger": "D:\\论文复现\\experiments\\segformer_simplify_wave12_20261026\\provenance\\init_tensors\\D02_H960_s43.json",
+      "tensor_ledger_sha256": "ea6f5919c6f6a7395032b1e9cb0e69fb6110c4e0ae61f4b0e70aae1eae1690f9",
+      "spec_id": "D02_H960",
+      "seed": 43,
+      "stage": "conditional",
+      "model": {
+        "embedding_dim": 128,
+        "decoder_kind": "concat",
+        "alignment": "none",
+        "s4_hidden": 960
+      },
+      "dataset_read": false,
+      "GPU_execution": false
+    },
+    "D03_H896_s43": {
+      "path": "D:\\论文复现\\experiments\\segformer_simplify_wave12_20261026\\weights\\init\\D03_H896_s43.pdparams",
+      "sha256": "e92611717645975edde3b07fb14a008a48eb6b766ad8d0594fb5756c6031e830",
+      "tensor_sha256": "ab8682542436a4d059c6069e0d9b517cf61a7f7c6e8549dc5dbd309c23de6a0a",
+      "tensor_count": 191,
+      "registered_numel": 3371426,
+      "trainable_numel": 3371106,
+      "source_R0": {
+        "path": "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\weights\\init\\R0_s43.pdparams",
+        "sha256": "5dafacb502c2391bfb5e0571147cedbc4f3d45e30bc5a4e2d60143415b72efa1"
+      },
+      "source_imagenet_sha256": "211e15d5157b8d48b1931102c40094da0b578de1c153c5706360f7ad561a774e",
+      "tensor_ledger": "D:\\论文复现\\experiments\\segformer_simplify_wave12_20261026\\provenance\\init_tensors\\D03_H896_s43.json",
+      "tensor_ledger_sha256": "0f1569c3384974cd7ffdfb41f57fc6e8b6752aed2c8fbc2e6f9e6e694cc002b6",
+      "spec_id": "D03_H896",
+      "seed": 43,
+      "stage": "conditional",
+      "model": {
+        "embedding_dim": 160,
+        "decoder_kind": "concat",
+        "alignment": "none",
+        "s4_hidden": 896
+      },
+      "dataset_read": false,
+      "GPU_execution": false
+    },
+    "D03_H960_s43": {
+      "path": "D:\\论文复现\\experiments\\segformer_simplify_wave12_20261026\\weights\\init\\D03_H960_s43.pdparams",
+      "sha256": "bf0eef45f85d84d66de591cfbda0d89da6dbbad4d8b4a99de587255306132ec8",
+      "tensor_sha256": "9c03ad99b807e38da3171550a6111ffc9584aeb01a227ad73680eecb125fd121",
+      "tensor_count": 191,
+      "registered_numel": 3438370,
+      "trainable_numel": 3438050,
+      "source_R0": {
+        "path": "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\weights\\init\\R0_s43.pdparams",
+        "sha256": "5dafacb502c2391bfb5e0571147cedbc4f3d45e30bc5a4e2d60143415b72efa1"
+      },
+      "source_imagenet_sha256": "211e15d5157b8d48b1931102c40094da0b578de1c153c5706360f7ad561a774e",
+      "tensor_ledger": "D:\\论文复现\\experiments\\segformer_simplify_wave12_20261026\\provenance\\init_tensors\\D03_H960_s43.json",
+      "tensor_ledger_sha256": "2be89174206ff55e582daf364fbfee1473a7768510fe15e75aac345a729c1773",
+      "spec_id": "D03_H960",
+      "seed": 43,
+      "stage": "conditional",
+      "model": {
+        "embedding_dim": 160,
+        "decoder_kind": "concat",
+        "alignment": "none",
+        "s4_hidden": 960
+      },
+      "dataset_read": false,
+      "GPU_execution": false
+    },
+    "D04_H896_s43": {
+      "path": "D:\\论文复现\\experiments\\segformer_simplify_wave12_20261026\\weights\\init\\D04_H896_s43.pdparams",
+      "sha256": "9cba7bbb3d7f45bc3725ff01b70ae37185ad87b3a3ae0fa53abadd3f7a070f33",
+      "tensor_sha256": "5e8550f4d03823f9af021a07bf751d87b78c1b18194a5293f407ebed25307b4c",
+      "tensor_count": 194,
+      "registered_numel": 3327202,
+      "trainable_numel": 3326946,
+      "source_R0": {
+        "path": "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\weights\\init\\R0_s43.pdparams",
+        "sha256": "5dafacb502c2391bfb5e0571147cedbc4f3d45e30bc5a4e2d60143415b72efa1"
+      },
+      "source_imagenet_sha256": "211e15d5157b8d48b1931102c40094da0b578de1c153c5706360f7ad561a774e",
+      "tensor_ledger": "D:\\论文复现\\experiments\\segformer_simplify_wave12_20261026\\provenance\\init_tensors\\D04_H896_s43.json",
+      "tensor_ledger_sha256": "090c82ff96c818061073646862e628e7c11a4d4302472f09353fbf1c765dc292",
+      "spec_id": "D04_H896",
+      "seed": 43,
+      "stage": "conditional",
+      "model": {
+        "embedding_dim": 128,
+        "decoder_kind": "concat",
+        "alignment": "flow32",
+        "s4_hidden": 896
+      },
+      "dataset_read": false,
+      "GPU_execution": false
+    },
+    "D04_H960_s43": {
+      "path": "D:\\论文复现\\experiments\\segformer_simplify_wave12_20261026\\weights\\init\\D04_H960_s43.pdparams",
+      "sha256": "327272a781d745022f456bfd1c08692defb7f70e401aefdf92f8dfd049234e6b",
+      "tensor_sha256": "6a22d801ff9b275e946ad4255af5d0035f7f9721d181caa1d31e6656b3485213",
+      "tensor_count": 194,
+      "registered_numel": 3394146,
+      "trainable_numel": 3393890,
+      "source_R0": {
+        "path": "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\weights\\init\\R0_s43.pdparams",
+        "sha256": "5dafacb502c2391bfb5e0571147cedbc4f3d45e30bc5a4e2d60143415b72efa1"
+      },
+      "source_imagenet_sha256": "211e15d5157b8d48b1931102c40094da0b578de1c153c5706360f7ad561a774e",
+      "tensor_ledger": "D:\\论文复现\\experiments\\segformer_simplify_wave12_20261026\\provenance\\init_tensors\\D04_H960_s43.json",
+      "tensor_ledger_sha256": "efc5a84095205f12daa7cc89791ec10c9edf2cd567fbb9e1889521adc6ab8fa8",
+      "spec_id": "D04_H960",
+      "seed": 43,
+      "stage": "conditional",
+      "model": {
+        "embedding_dim": 128,
+        "decoder_kind": "concat",
+        "alignment": "flow32",
+        "s4_hidden": 960
+      },
+      "dataset_read": false,
+      "GPU_execution": false
+    },
+    "D05_H896_s43": {
+      "path": "D:\\论文复现\\experiments\\segformer_simplify_wave12_20261026\\weights\\init\\D05_H896_s43.pdparams",
+      "sha256": "cda49f7c5f36ccc01010d03e9aa7418a49b4a62944afea3980ffad45061d3c5f",
+      "tensor_sha256": "4ae07fd762d9eb4ab0cb98c7656de81cb8f79c91bba95d43057f0d8c83eaf199",
+      "tensor_count": 194,
+      "registered_numel": 3322530,
+      "trainable_numel": 3322274,
+      "source_R0": {
+        "path": "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\weights\\init\\R0_s43.pdparams",
+        "sha256": "5dafacb502c2391bfb5e0571147cedbc4f3d45e30bc5a4e2d60143415b72efa1"
+      },
+      "source_imagenet_sha256": "211e15d5157b8d48b1931102c40094da0b578de1c153c5706360f7ad561a774e",
+      "tensor_ledger": "D:\\论文复现\\experiments\\segformer_simplify_wave12_20261026\\provenance\\init_tensors\\D05_H896_s43.json",
+      "tensor_ledger_sha256": "6944b4ab79a1cb73fbef454b0bce317dc308b315559d7951afef980eea1df294",
+      "spec_id": "D05_H896",
+      "seed": 43,
+      "stage": "conditional",
+      "model": {
+        "embedding_dim": 128,
+        "decoder_kind": "concat",
+        "alignment": "flow16",
+        "s4_hidden": 896
+      },
+      "dataset_read": false,
+      "GPU_execution": false
+    },
+    "D05_H960_s43": {
+      "path": "D:\\论文复现\\experiments\\segformer_simplify_wave12_20261026\\weights\\init\\D05_H960_s43.pdparams",
+      "sha256": "d78f35babede3c1b4a841093cb7aee21e0fa0f9b595c22ca2f55a1d289393c9e",
+      "tensor_sha256": "2a628b240cc78166397117e81bd836fcd12d3314fd66a347bb2bb31d6b62f38c",
+      "tensor_count": 194,
+      "registered_numel": 3389474,
+      "trainable_numel": 3389218,
+      "source_R0": {
+        "path": "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\weights\\init\\R0_s43.pdparams",
+        "sha256": "5dafacb502c2391bfb5e0571147cedbc4f3d45e30bc5a4e2d60143415b72efa1"
+      },
+      "source_imagenet_sha256": "211e15d5157b8d48b1931102c40094da0b578de1c153c5706360f7ad561a774e",
+      "tensor_ledger": "D:\\论文复现\\experiments\\segformer_simplify_wave12_20261026\\provenance\\init_tensors\\D05_H960_s43.json",
+      "tensor_ledger_sha256": "e3575697929bd15a31ed19a19c750625dc5eee8ed7a96556bd20c0ee5451d438",
+      "spec_id": "D05_H960",
+      "seed": 43,
+      "stage": "conditional",
+      "model": {
+        "embedding_dim": 128,
+        "decoder_kind": "concat",
+        "alignment": "flow16",
+        "s4_hidden": 960
+      },
+      "dataset_read": false,
+      "GPU_execution": false
+    },
+    "D06_H896_s43": {
+      "path": "D:\\论文复现\\experiments\\segformer_simplify_wave12_20261026\\weights\\init\\D06_H896_s43.pdparams",
+      "sha256": "42c532f8d893c11c87fc96ec61d543b96d1774559150b1715bbb9d6abe66210a",
+      "tensor_sha256": "62e917615483d83554c8426f898cfc116a4c29bc1d6b2810027d07c242f657d7",
+      "tensor_count": 195,
+      "registered_numel": 3326754,
+      "trainable_numel": 3326498,
+      "source_R0": {
+        "path": "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\weights\\init\\R0_s43.pdparams",
+        "sha256": "5dafacb502c2391bfb5e0571147cedbc4f3d45e30bc5a4e2d60143415b72efa1"
+      },
+      "source_imagenet_sha256": "211e15d5157b8d48b1931102c40094da0b578de1c153c5706360f7ad561a774e",
+      "tensor_ledger": "D:\\论文复现\\experiments\\segformer_simplify_wave12_20261026\\provenance\\init_tensors\\D06_H896_s43.json",
+      "tensor_ledger_sha256": "0287c94b777b3ac97092016ffe8d4e3a83504ec00309b6282477607d21788607",
+      "spec_id": "D06_H896",
+      "seed": 43,
+      "stage": "conditional",
+      "model": {
+        "embedding_dim": 128,
+        "decoder_kind": "concat",
+        "alignment": "dwflow32",
+        "s4_hidden": 896
+      },
+      "dataset_read": false,
+      "GPU_execution": false
+    },
+    "D06_H960_s43": {
+      "path": "D:\\论文复现\\experiments\\segformer_simplify_wave12_20261026\\weights\\init\\D06_H960_s43.pdparams",
+      "sha256": "105d9f11bf13bd260a4e3253104e1af962cc5ec9d48f45274b7c109de2714484",
+      "tensor_sha256": "a23394d668178aa9ad6da4fcfc6fc88c351463c3f6b7e30ac12270626ebe1419",
+      "tensor_count": 195,
+      "registered_numel": 3393698,
+      "trainable_numel": 3393442,
+      "source_R0": {
+        "path": "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\weights\\init\\R0_s43.pdparams",
+        "sha256": "5dafacb502c2391bfb5e0571147cedbc4f3d45e30bc5a4e2d60143415b72efa1"
+      },
+      "source_imagenet_sha256": "211e15d5157b8d48b1931102c40094da0b578de1c153c5706360f7ad561a774e",
+      "tensor_ledger": "D:\\论文复现\\experiments\\segformer_simplify_wave12_20261026\\provenance\\init_tensors\\D06_H960_s43.json",
+      "tensor_ledger_sha256": "59ac2df1646384ea895a906ca2860f0f4dab20ab06d827c81117d313b042073a",
+      "spec_id": "D06_H960",
+      "seed": 43,
+      "stage": "conditional",
+      "model": {
+        "embedding_dim": 128,
+        "decoder_kind": "concat",
+        "alignment": "dwflow32",
+        "s4_hidden": 960
+      },
+      "dataset_read": false,
+      "GPU_execution": false
+    },
+    "D07_H896_s43": {
+      "path": "D:\\论文复现\\experiments\\segformer_simplify_wave12_20261026\\weights\\init\\D07_H896_s43.pdparams",
+      "sha256": "8381f3757701f2db8bf2cf9072981101cda02cc44e55c3d9aa673406e050d732",
+      "tensor_sha256": "5e8550f4d03823f9af021a07bf751d87b78c1b18194a5293f407ebed25307b4c",
+      "tensor_count": 194,
+      "registered_numel": 3327202,
+      "trainable_numel": 3326946,
+      "source_R0": {
+        "path": "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\weights\\init\\R0_s43.pdparams",
+        "sha256": "5dafacb502c2391bfb5e0571147cedbc4f3d45e30bc5a4e2d60143415b72efa1"
+      },
+      "source_imagenet_sha256": "211e15d5157b8d48b1931102c40094da0b578de1c153c5706360f7ad561a774e",
+      "tensor_ledger": "D:\\论文复现\\experiments\\segformer_simplify_wave12_20261026\\provenance\\init_tensors\\D07_H896_s43.json",
+      "tensor_ledger_sha256": "95cff4aab9151198b7c9f4acf7ff977c0ed2e653fe1d7f1b0406839deec024a7",
+      "spec_id": "D07_H896",
+      "seed": 43,
+      "stage": "conditional",
+      "model": {
+        "embedding_dim": 128,
+        "decoder_kind": "concat",
+        "alignment": "coarseflow32",
+        "s4_hidden": 896
+      },
+      "dataset_read": false,
+      "GPU_execution": false
+    },
+    "D07_H960_s43": {
+      "path": "D:\\论文复现\\experiments\\segformer_simplify_wave12_20261026\\weights\\init\\D07_H960_s43.pdparams",
+      "sha256": "2b81f5e2c18b3b150a3e1bfc1b71e6efc7aa86c673db0d8d0c89b0e7ddf2bff1",
+      "tensor_sha256": "6a22d801ff9b275e946ad4255af5d0035f7f9721d181caa1d31e6656b3485213",
+      "tensor_count": 194,
+      "registered_numel": 3394146,
+      "trainable_numel": 3393890,
+      "source_R0": {
+        "path": "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\weights\\init\\R0_s43.pdparams",
+        "sha256": "5dafacb502c2391bfb5e0571147cedbc4f3d45e30bc5a4e2d60143415b72efa1"
+      },
+      "source_imagenet_sha256": "211e15d5157b8d48b1931102c40094da0b578de1c153c5706360f7ad561a774e",
+      "tensor_ledger": "D:\\论文复现\\experiments\\segformer_simplify_wave12_20261026\\provenance\\init_tensors\\D07_H960_s43.json",
+      "tensor_ledger_sha256": "4ced4ae1f513f9869d4052df277342ce2773aba392f26053728e32d4f3db54f3",
+      "spec_id": "D07_H960",
+      "seed": 43,
+      "stage": "conditional",
+      "model": {
+        "embedding_dim": 128,
+        "decoder_kind": "concat",
+        "alignment": "coarseflow32",
+        "s4_hidden": 960
+      },
+      "dataset_read": false,
+      "GPU_execution": false
+    },
+    "D08_H896_s43": {
+      "path": "D:\\论文复现\\experiments\\segformer_simplify_wave12_20261026\\weights\\init\\D08_H896_s43.pdparams",
+      "sha256": "d658ab7f33b661d36408b61d92dcfc85be5dbdeb5b0791dac0157810966a6ff9",
+      "tensor_sha256": "edffbf63fafee103897d0b122f86c76a2701a0a3eb980db92965f42f0735151c",
+      "tensor_count": 190,
+      "registered_numel": 3252322,
+      "trainable_numel": 3252066,
+      "source_R0": {
+        "path": "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\weights\\init\\R0_s43.pdparams",
+        "sha256": "5dafacb502c2391bfb5e0571147cedbc4f3d45e30bc5a4e2d60143415b72efa1"
+      },
+      "source_imagenet_sha256": "211e15d5157b8d48b1931102c40094da0b578de1c153c5706360f7ad561a774e",
+      "tensor_ledger": "D:\\论文复现\\experiments\\segformer_simplify_wave12_20261026\\provenance\\init_tensors\\D08_H896_s43.json",
+      "tensor_ledger_sha256": "476da8d459035880b0e075c9ad119f32bbc4f89d6a029018459716cf09c4f310",
+      "spec_id": "D08_H896",
+      "seed": 43,
+      "stage": "conditional",
+      "model": {
+        "embedding_dim": 128,
+        "decoder_kind": "native_sum",
+        "alignment": "none",
+        "s4_hidden": 896
+      },
+      "dataset_read": false,
+      "GPU_execution": false
+    },
+    "D08_H960_s43": {
+      "path": "D:\\论文复现\\experiments\\segformer_simplify_wave12_20261026\\weights\\init\\D08_H960_s43.pdparams",
+      "sha256": "56f721c17a72d4c6b0d23ff5862fda3c397c165ff3c0c239e4b0f94e1626644c",
+      "tensor_sha256": "64df691d44cf9a20fb1338764711b52a8a00b5b0447c8e3f64731d4ec1b61b88",
+      "tensor_count": 190,
+      "registered_numel": 3319266,
+      "trainable_numel": 3319010,
+      "source_R0": {
+        "path": "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\weights\\init\\R0_s43.pdparams",
+        "sha256": "5dafacb502c2391bfb5e0571147cedbc4f3d45e30bc5a4e2d60143415b72efa1"
+      },
+      "source_imagenet_sha256": "211e15d5157b8d48b1931102c40094da0b578de1c153c5706360f7ad561a774e",
+      "tensor_ledger": "D:\\论文复现\\experiments\\segformer_simplify_wave12_20261026\\provenance\\init_tensors\\D08_H960_s43.json",
+      "tensor_ledger_sha256": "7e2ff895e03a37564816b5bfedab22c8526fe42bd43261e3e4669d5633a030d5",
+      "spec_id": "D08_H960",
+      "seed": 43,
+      "stage": "conditional",
+      "model": {
+        "embedding_dim": 128,
+        "decoder_kind": "native_sum",
+        "alignment": "none",
+        "s4_hidden": 960
+      },
+      "dataset_read": false,
+      "GPU_execution": false
+    },
+    "D09_H896_s43": {
+      "path": "D:\\论文复现\\experiments\\segformer_simplify_wave12_20261026\\weights\\init\\D09_H896_s43.pdparams",
+      "sha256": "6e691c0cddf3a5c6593fc93aece3e01ef2f318bfff97ae43eb7c8d8e1fe929e7",
+      "tensor_sha256": "4b6b2bdd6ffb6e48961ba3115c7f615fd0debe24811416cbf751f2f245a151b1",
+      "tensor_count": 190,
+      "registered_numel": 3285730,
+      "trainable_numel": 3285346,
+      "source_R0": {
+        "path": "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\weights\\init\\R0_s43.pdparams",
+        "sha256": "5dafacb502c2391bfb5e0571147cedbc4f3d45e30bc5a4e2d60143415b72efa1"
+      },
+      "source_imagenet_sha256": "211e15d5157b8d48b1931102c40094da0b578de1c153c5706360f7ad561a774e",
+      "tensor_ledger": "D:\\论文复现\\experiments\\segformer_simplify_wave12_20261026\\provenance\\init_tensors\\D09_H896_s43.json",
+      "tensor_ledger_sha256": "3ff7c356fa974877bac06feb41bdb71f6e833599859b6232a655ef3b0d33dad8",
+      "spec_id": "D09_H896",
+      "seed": 43,
+      "stage": "conditional",
+      "model": {
+        "embedding_dim": 192,
+        "decoder_kind": "native_sum",
+        "alignment": "none",
+        "s4_hidden": 896
+      },
+      "dataset_read": false,
+      "GPU_execution": false
+    },
+    "D09_H960_s43": {
+      "path": "D:\\论文复现\\experiments\\segformer_simplify_wave12_20261026\\weights\\init\\D09_H960_s43.pdparams",
+      "sha256": "613ed9e473053b400578c73d93effb5c8153b8e74726ca457e2aa8898d57ebcc",
+      "tensor_sha256": "8a818e23f42db5421b1fb092dc858cf6ac0d88bf6bd700bc438e489edb0e4ace",
+      "tensor_count": 190,
+      "registered_numel": 3352674,
+      "trainable_numel": 3352290,
+      "source_R0": {
+        "path": "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\weights\\init\\R0_s43.pdparams",
+        "sha256": "5dafacb502c2391bfb5e0571147cedbc4f3d45e30bc5a4e2d60143415b72efa1"
+      },
+      "source_imagenet_sha256": "211e15d5157b8d48b1931102c40094da0b578de1c153c5706360f7ad561a774e",
+      "tensor_ledger": "D:\\论文复现\\experiments\\segformer_simplify_wave12_20261026\\provenance\\init_tensors\\D09_H960_s43.json",
+      "tensor_ledger_sha256": "64bda1a0e00a4fdcb92b5fbecda18b1348659e4903c221b64073592a70c1403c",
+      "spec_id": "D09_H960",
+      "seed": 43,
+      "stage": "conditional",
+      "model": {
+        "embedding_dim": 192,
+        "decoder_kind": "native_sum",
+        "alignment": "none",
+        "s4_hidden": 960
+      },
+      "dataset_read": false,
+      "GPU_execution": false
+    },
+    "D10_H896_s43": {
+      "path": "D:\\论文复现\\experiments\\segformer_simplify_wave12_20261026\\weights\\init\\D10_H896_s43.pdparams",
+      "sha256": "ae6292515074bc74630174d6b5067d35add5484b1c95fe42c12f556f6084b3d2",
+      "tensor_sha256": "c2dfc66ce8150f4656ef857480480a3563fabed9178c7cbda5747af16049a55b",
+      "tensor_count": 190,
+      "registered_numel": 3319138,
+      "trainable_numel": 3318626,
+      "source_R0": {
+        "path": "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\weights\\init\\R0_s43.pdparams",
+        "sha256": "5dafacb502c2391bfb5e0571147cedbc4f3d45e30bc5a4e2d60143415b72efa1"
+      },
+      "source_imagenet_sha256": "211e15d5157b8d48b1931102c40094da0b578de1c153c5706360f7ad561a774e",
+      "tensor_ledger": "D:\\论文复现\\experiments\\segformer_simplify_wave12_20261026\\provenance\\init_tensors\\D10_H896_s43.json",
+      "tensor_ledger_sha256": "6188567b562974202fdbc853a104b669623de75b721503ec9e36aef1d39181b9",
+      "spec_id": "D10_H896",
+      "seed": 43,
+      "stage": "conditional",
+      "model": {
+        "embedding_dim": 256,
+        "decoder_kind": "native_sum",
+        "alignment": "none",
+        "s4_hidden": 896
+      },
+      "dataset_read": false,
+      "GPU_execution": false
+    },
+    "D10_H960_s43": {
+      "path": "D:\\论文复现\\experiments\\segformer_simplify_wave12_20261026\\weights\\init\\D10_H960_s43.pdparams",
+      "sha256": "15c6c96999eb137c1d24a56f8f1fd6f5a9755462aa730da7a137f1707babbc57",
+      "tensor_sha256": "5333e6d7a2ba06c52d7d87a542a5633020736f38df26f991a022d2656350e2be",
+      "tensor_count": 190,
+      "registered_numel": 3386082,
+      "trainable_numel": 3385570,
+      "source_R0": {
+        "path": "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\weights\\init\\R0_s43.pdparams",
+        "sha256": "5dafacb502c2391bfb5e0571147cedbc4f3d45e30bc5a4e2d60143415b72efa1"
+      },
+      "source_imagenet_sha256": "211e15d5157b8d48b1931102c40094da0b578de1c153c5706360f7ad561a774e",
+      "tensor_ledger": "D:\\论文复现\\experiments\\segformer_simplify_wave12_20261026\\provenance\\init_tensors\\D10_H960_s43.json",
+      "tensor_ledger_sha256": "87f09ab6ccea0d066bae5cdff3537360115a6fbef5a7e068f3782349e0afd211",
+      "spec_id": "D10_H960",
+      "seed": 43,
+      "stage": "conditional",
+      "model": {
+        "embedding_dim": 256,
+        "decoder_kind": "native_sum",
+        "alignment": "none",
+        "s4_hidden": 960
+      },
+      "dataset_read": false,
+      "GPU_execution": false
+    },
+    "D01_s44": {
+      "path": "D:\\论文复现\\experiments\\segformer_simplify_wave12_20261026\\weights\\init\\D01_s44.pdparams",
+      "sha256": "77e88fbe310ec5b9d5f223fe7d38d76c8a4a8b4eb2ae915f50073116b78c7a80",
+      "tensor_sha256": "427f486e5de75cf0f80c569261e26298d0c663a551ebdf1036f126a8bde5dab2",
+      "tensor_count": 191,
+      "registered_numel": 3406370,
+      "trainable_numel": 3406178,
+      "source_R0": {
+        "path": "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\weights\\init\\R0_s44.pdparams",
+        "sha256": "74aaeb8651e7b4b03fe40b9d644edf4bb761af5cfa7db56d34be19076eb96a32"
+      },
+      "source_imagenet_sha256": "211e15d5157b8d48b1931102c40094da0b578de1c153c5706360f7ad561a774e",
+      "tensor_ledger": "D:\\论文复现\\experiments\\segformer_simplify_wave12_20261026\\provenance\\init_tensors\\D01_s44.json",
+      "tensor_ledger_sha256": "bff6e3e9350a89929b0587748ec83b562209a7a29cf4ee6ad066dddab9ee9de4",
+      "spec_id": "D01",
+      "seed": 44,
+      "stage": "primary",
+      "model": {
+        "embedding_dim": 96,
+        "decoder_kind": "concat",
+        "alignment": "none",
+        "s4_hidden": 1024
+      },
+      "dataset_read": false,
+      "GPU_execution": false
+    },
+    "D02_s44": {
+      "path": "D:\\论文复现\\experiments\\segformer_simplify_wave12_20261026\\weights\\init\\D02_s44.pdparams",
+      "sha256": "632ece76b2e8db9d0c8c93bd356e965ee26427d99a0a252849eccba8c90bbfd1",
+      "tensor_sha256": "984cdc5ea117c78a0b0da8faf0dc4f0577f67d8e4007025b5bbc20cd29f16a75",
+      "tensor_count": 191,
+      "registered_numel": 3451746,
+      "trainable_numel": 3451490,
+      "source_R0": {
+        "path": "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\weights\\init\\R0_s44.pdparams",
+        "sha256": "74aaeb8651e7b4b03fe40b9d644edf4bb761af5cfa7db56d34be19076eb96a32"
+      },
+      "source_imagenet_sha256": "211e15d5157b8d48b1931102c40094da0b578de1c153c5706360f7ad561a774e",
+      "tensor_ledger": "D:\\论文复现\\experiments\\segformer_simplify_wave12_20261026\\provenance\\init_tensors\\D02_s44.json",
+      "tensor_ledger_sha256": "5b50fc6b35f2ec34f7f75bed2f7fc3448187bcfb013e44e9a48baefd321ab95b",
+      "spec_id": "D02",
+      "seed": 44,
+      "stage": "primary",
+      "model": {
+        "embedding_dim": 128,
+        "decoder_kind": "concat",
+        "alignment": "none",
+        "s4_hidden": 1024
+      },
+      "dataset_read": false,
+      "GPU_execution": false
+    },
+    "D03_s44": {
+      "path": "D:\\论文复现\\experiments\\segformer_simplify_wave12_20261026\\weights\\init\\D03_s44.pdparams",
+      "sha256": "03afdb47e3d14f48c30be831aa45344c14b677ef978b7a478953b1dacff66086",
+      "tensor_sha256": "cf3fc914c812fa374e50732452b2f9c317a02b1680547d39e9db85b61fbee097",
+      "tensor_count": 191,
+      "registered_numel": 3505314,
+      "trainable_numel": 3504994,
+      "source_R0": {
+        "path": "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\weights\\init\\R0_s44.pdparams",
+        "sha256": "74aaeb8651e7b4b03fe40b9d644edf4bb761af5cfa7db56d34be19076eb96a32"
+      },
+      "source_imagenet_sha256": "211e15d5157b8d48b1931102c40094da0b578de1c153c5706360f7ad561a774e",
+      "tensor_ledger": "D:\\论文复现\\experiments\\segformer_simplify_wave12_20261026\\provenance\\init_tensors\\D03_s44.json",
+      "tensor_ledger_sha256": "0cb7e30ab2efc14eafbe1384f33d33474559b54a3349e3a003cc4406cdb487b8",
+      "spec_id": "D03",
+      "seed": 44,
+      "stage": "primary",
+      "model": {
+        "embedding_dim": 160,
+        "decoder_kind": "concat",
+        "alignment": "none",
+        "s4_hidden": 1024
+      },
+      "dataset_read": false,
+      "GPU_execution": false
+    },
+    "D04_s44": {
+      "path": "D:\\论文复现\\experiments\\segformer_simplify_wave12_20261026\\weights\\init\\D04_s44.pdparams",
+      "sha256": "b148a11ef12e68b1f4980be2aa0d3183a2406653b7f283c563a5bbec813f897b",
+      "tensor_sha256": "2d151f2aa7589fc5f2917a4bf84ceb121dcfbf751beebf7b366aedf1000dc3c1",
+      "tensor_count": 194,
+      "registered_numel": 3461090,
+      "trainable_numel": 3460834,
+      "source_R0": {
+        "path": "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\weights\\init\\R0_s44.pdparams",
+        "sha256": "74aaeb8651e7b4b03fe40b9d644edf4bb761af5cfa7db56d34be19076eb96a32"
+      },
+      "source_imagenet_sha256": "211e15d5157b8d48b1931102c40094da0b578de1c153c5706360f7ad561a774e",
+      "tensor_ledger": "D:\\论文复现\\experiments\\segformer_simplify_wave12_20261026\\provenance\\init_tensors\\D04_s44.json",
+      "tensor_ledger_sha256": "457b244020425be3bccf88c8fd95ee0f20bc36099006b00f3514fa0b9c59a91d",
+      "spec_id": "D04",
+      "seed": 44,
+      "stage": "primary",
+      "model": {
+        "embedding_dim": 128,
+        "decoder_kind": "concat",
+        "alignment": "flow32",
+        "s4_hidden": 1024
+      },
+      "dataset_read": false,
+      "GPU_execution": false
+    },
+    "D05_s44": {
+      "path": "D:\\论文复现\\experiments\\segformer_simplify_wave12_20261026\\weights\\init\\D05_s44.pdparams",
+      "sha256": "cc105e039775c50cb4c15c07e22a36925cc94207077b9900c2ee678312331909",
+      "tensor_sha256": "516b2a07bedccb64d3a22bc854e7b2964ff7e6dd35bf7e651e9c1f531a91431b",
+      "tensor_count": 194,
+      "registered_numel": 3456418,
+      "trainable_numel": 3456162,
+      "source_R0": {
+        "path": "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\weights\\init\\R0_s44.pdparams",
+        "sha256": "74aaeb8651e7b4b03fe40b9d644edf4bb761af5cfa7db56d34be19076eb96a32"
+      },
+      "source_imagenet_sha256": "211e15d5157b8d48b1931102c40094da0b578de1c153c5706360f7ad561a774e",
+      "tensor_ledger": "D:\\论文复现\\experiments\\segformer_simplify_wave12_20261026\\provenance\\init_tensors\\D05_s44.json",
+      "tensor_ledger_sha256": "e58846a51203a2cf296fd057291db26e5c16e23ec0d66f6bac7e9637ec8b094a",
+      "spec_id": "D05",
+      "seed": 44,
+      "stage": "primary",
+      "model": {
+        "embedding_dim": 128,
+        "decoder_kind": "concat",
+        "alignment": "flow16",
+        "s4_hidden": 1024
+      },
+      "dataset_read": false,
+      "GPU_execution": false
+    },
+    "D06_s44": {
+      "path": "D:\\论文复现\\experiments\\segformer_simplify_wave12_20261026\\weights\\init\\D06_s44.pdparams",
+      "sha256": "a1c64c0f5573ed02c404ee8063f70a34d765c129f76181cf5b006d10f0861d0d",
+      "tensor_sha256": "88d82bdcf5bd91b086d9b24026e6915dc3ead91e5cf8869e8683fc886dde6f4d",
+      "tensor_count": 195,
+      "registered_numel": 3460642,
+      "trainable_numel": 3460386,
+      "source_R0": {
+        "path": "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\weights\\init\\R0_s44.pdparams",
+        "sha256": "74aaeb8651e7b4b03fe40b9d644edf4bb761af5cfa7db56d34be19076eb96a32"
+      },
+      "source_imagenet_sha256": "211e15d5157b8d48b1931102c40094da0b578de1c153c5706360f7ad561a774e",
+      "tensor_ledger": "D:\\论文复现\\experiments\\segformer_simplify_wave12_20261026\\provenance\\init_tensors\\D06_s44.json",
+      "tensor_ledger_sha256": "013d5c3900d478f18585aeaeb32cef4ce9d2f2cd2809a4a358d914a9414bbad7",
+      "spec_id": "D06",
+      "seed": 44,
+      "stage": "primary",
+      "model": {
+        "embedding_dim": 128,
+        "decoder_kind": "concat",
+        "alignment": "dwflow32",
+        "s4_hidden": 1024
+      },
+      "dataset_read": false,
+      "GPU_execution": false
+    },
+    "D07_s44": {
+      "path": "D:\\论文复现\\experiments\\segformer_simplify_wave12_20261026\\weights\\init\\D07_s44.pdparams",
+      "sha256": "dda1275d4d995ff9cddb06cd6646d272608f780e5792d23cc59c82e9f721a6d5",
+      "tensor_sha256": "2d151f2aa7589fc5f2917a4bf84ceb121dcfbf751beebf7b366aedf1000dc3c1",
+      "tensor_count": 194,
+      "registered_numel": 3461090,
+      "trainable_numel": 3460834,
+      "source_R0": {
+        "path": "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\weights\\init\\R0_s44.pdparams",
+        "sha256": "74aaeb8651e7b4b03fe40b9d644edf4bb761af5cfa7db56d34be19076eb96a32"
+      },
+      "source_imagenet_sha256": "211e15d5157b8d48b1931102c40094da0b578de1c153c5706360f7ad561a774e",
+      "tensor_ledger": "D:\\论文复现\\experiments\\segformer_simplify_wave12_20261026\\provenance\\init_tensors\\D07_s44.json",
+      "tensor_ledger_sha256": "434547bca4ad30a21495d202c3072ac6dcba9a7e3feb3ecdb91bf155dbe5118b",
+      "spec_id": "D07",
+      "seed": 44,
+      "stage": "primary",
+      "model": {
+        "embedding_dim": 128,
+        "decoder_kind": "concat",
+        "alignment": "coarseflow32",
+        "s4_hidden": 1024
+      },
+      "dataset_read": false,
+      "GPU_execution": false
+    },
+    "D08_s44": {
+      "path": "D:\\论文复现\\experiments\\segformer_simplify_wave12_20261026\\weights\\init\\D08_s44.pdparams",
+      "sha256": "5fbd0153a35fe38d94aa71e343c5eda3c65c804bd1670cdd5a9509d5ce3755e9",
+      "tensor_sha256": "ab581c912991415e016a5c4bef8dd9e6ce0a937dd46148fd657a03c6bf74b0e8",
+      "tensor_count": 190,
+      "registered_numel": 3386210,
+      "trainable_numel": 3385954,
+      "source_R0": {
+        "path": "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\weights\\init\\R0_s44.pdparams",
+        "sha256": "74aaeb8651e7b4b03fe40b9d644edf4bb761af5cfa7db56d34be19076eb96a32"
+      },
+      "source_imagenet_sha256": "211e15d5157b8d48b1931102c40094da0b578de1c153c5706360f7ad561a774e",
+      "tensor_ledger": "D:\\论文复现\\experiments\\segformer_simplify_wave12_20261026\\provenance\\init_tensors\\D08_s44.json",
+      "tensor_ledger_sha256": "4b40c5382e50afe11d3aae47453f7a1c3e4d315a56ba3d883cc276070709d57e",
+      "spec_id": "D08",
+      "seed": 44,
+      "stage": "primary",
+      "model": {
+        "embedding_dim": 128,
+        "decoder_kind": "native_sum",
+        "alignment": "none",
+        "s4_hidden": 1024
+      },
+      "dataset_read": false,
+      "GPU_execution": false
+    },
+    "D09_s44": {
+      "path": "D:\\论文复现\\experiments\\segformer_simplify_wave12_20261026\\weights\\init\\D09_s44.pdparams",
+      "sha256": "66ea4f5a13313ad137c6853d87f82e9c55a61f786875229aed2f2629d428e4fc",
+      "tensor_sha256": "298b350e967ad5d42bb5df8c67bcd0835aefae2858f853ec64a041f750f5bb03",
+      "tensor_count": 190,
+      "registered_numel": 3419618,
+      "trainable_numel": 3419234,
+      "source_R0": {
+        "path": "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\weights\\init\\R0_s44.pdparams",
+        "sha256": "74aaeb8651e7b4b03fe40b9d644edf4bb761af5cfa7db56d34be19076eb96a32"
+      },
+      "source_imagenet_sha256": "211e15d5157b8d48b1931102c40094da0b578de1c153c5706360f7ad561a774e",
+      "tensor_ledger": "D:\\论文复现\\experiments\\segformer_simplify_wave12_20261026\\provenance\\init_tensors\\D09_s44.json",
+      "tensor_ledger_sha256": "a15fe3b24c2e7d5cf763b34904227e3ed35e3da3320d0cfbc077a01a7a1b7c88",
+      "spec_id": "D09",
+      "seed": 44,
+      "stage": "primary",
+      "model": {
+        "embedding_dim": 192,
+        "decoder_kind": "native_sum",
+        "alignment": "none",
+        "s4_hidden": 1024
+      },
+      "dataset_read": false,
+      "GPU_execution": false
+    },
+    "D10_s44": {
+      "path": "D:\\论文复现\\experiments\\segformer_simplify_wave12_20261026\\weights\\init\\D10_s44.pdparams",
+      "sha256": "00fae145c5dc79b7179855084b1a018681460257c46a6a665fc63e9a05630716",
+      "tensor_sha256": "fa2067718b7296351a671567b9f7821c7d9439c49ee4a55fdefc760259e81748",
+      "tensor_count": 190,
+      "registered_numel": 3453026,
+      "trainable_numel": 3452514,
+      "source_R0": {
+        "path": "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\weights\\init\\R0_s44.pdparams",
+        "sha256": "74aaeb8651e7b4b03fe40b9d644edf4bb761af5cfa7db56d34be19076eb96a32"
+      },
+      "source_imagenet_sha256": "211e15d5157b8d48b1931102c40094da0b578de1c153c5706360f7ad561a774e",
+      "tensor_ledger": "D:\\论文复现\\experiments\\segformer_simplify_wave12_20261026\\provenance\\init_tensors\\D10_s44.json",
+      "tensor_ledger_sha256": "27b9aecd855edd7aa19ce42cb5750cc8695c7ee0b1f3df3030bdfc1c893ec6dd",
+      "spec_id": "D10",
+      "seed": 44,
+      "stage": "primary",
+      "model": {
+        "embedding_dim": 256,
+        "decoder_kind": "native_sum",
+        "alignment": "none",
+        "s4_hidden": 1024
+      },
+      "dataset_read": false,
+      "GPU_execution": false
+    },
+    "C01_s44": {
+      "path": "D:\\论文复现\\experiments\\segformer_simplify_wave12_20261026\\weights\\init\\C01_s44.pdparams",
+      "sha256": "1ee81b55babba92484479072b06796295682bbb6a80ac5fa0164b9bc137f5e45",
+      "tensor_sha256": "dababe58a3ef55b4924b68dc5effd3056962ad92b2f26640897203e7c439aff8",
+      "tensor_count": 194,
+      "registered_numel": 3403490,
+      "trainable_numel": 3403234,
+      "source_R0": {
+        "path": "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\weights\\init\\R0_s44.pdparams",
+        "sha256": "74aaeb8651e7b4b03fe40b9d644edf4bb761af5cfa7db56d34be19076eb96a32"
+      },
+      "source_imagenet_sha256": "211e15d5157b8d48b1931102c40094da0b578de1c153c5706360f7ad561a774e",
+      "tensor_ledger": "D:\\论文复现\\experiments\\segformer_simplify_wave12_20261026\\provenance\\init_tensors\\C01_s44.json",
+      "tensor_ledger_sha256": "816852eec98c2bdb7b1e121508eeafac38f9ac0e4fdb9a21c2f4ea3a0fccb68d",
+      "spec_id": "C01",
+      "seed": 44,
+      "stage": "primary",
+      "model": {
+        "embedding_dim": 128,
+        "decoder_kind": "concat",
+        "alignment": "full",
+        "s4_hidden": 960
+      },
+      "dataset_read": false,
+      "GPU_execution": false
+    },
+    "C02_s44": {
+      "path": "D:\\论文复现\\experiments\\segformer_simplify_wave12_20261026\\weights\\init\\C02_s44.pdparams",
+      "sha256": "e2b854c391c7d46a1dcc6d78381ea4ed9b6ece5429f16f24c1eb50e244018fbf",
+      "tensor_sha256": "58d7f734ea8b63df0441709ef130664fa705064ddd4c7d8a133f6f15494ab4b5",
+      "tensor_count": 194,
+      "registered_numel": 3336546,
+      "trainable_numel": 3336290,
+      "source_R0": {
+        "path": "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\weights\\init\\R0_s44.pdparams",
+        "sha256": "74aaeb8651e7b4b03fe40b9d644edf4bb761af5cfa7db56d34be19076eb96a32"
+      },
+      "source_imagenet_sha256": "211e15d5157b8d48b1931102c40094da0b578de1c153c5706360f7ad561a774e",
+      "tensor_ledger": "D:\\论文复现\\experiments\\segformer_simplify_wave12_20261026\\provenance\\init_tensors\\C02_s44.json",
+      "tensor_ledger_sha256": "16e11a8db213b90f8207c01d6a512a9c59702a194f01491e5d0306644ee15a34",
+      "spec_id": "C02",
+      "seed": 44,
+      "stage": "primary",
+      "model": {
+        "embedding_dim": 128,
+        "decoder_kind": "concat",
+        "alignment": "full",
+        "s4_hidden": 896
+      },
+      "dataset_read": false,
+      "GPU_execution": false
+    },
+    "D01_H896_s44": {
+      "path": "D:\\论文复现\\experiments\\segformer_simplify_wave12_20261026\\weights\\init\\D01_H896_s44.pdparams",
+      "sha256": "37066c3171570c98538389bb97352140ffab3e1f13105053dd05347eea755430",
+      "tensor_sha256": "bcc2169627bed66a8f7fc6ac3077314e328be8265d14c8057cfbf439893f5514",
+      "tensor_count": 191,
+      "registered_numel": 3272482,
+      "trainable_numel": 3272290,
+      "source_R0": {
+        "path": "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\weights\\init\\R0_s44.pdparams",
+        "sha256": "74aaeb8651e7b4b03fe40b9d644edf4bb761af5cfa7db56d34be19076eb96a32"
+      },
+      "source_imagenet_sha256": "211e15d5157b8d48b1931102c40094da0b578de1c153c5706360f7ad561a774e",
+      "tensor_ledger": "D:\\论文复现\\experiments\\segformer_simplify_wave12_20261026\\provenance\\init_tensors\\D01_H896_s44.json",
+      "tensor_ledger_sha256": "57cc661224deb79c78d7df7c17b4790b74c4b5e27824594b731d799915f54d07",
+      "spec_id": "D01_H896",
+      "seed": 44,
+      "stage": "conditional",
+      "model": {
+        "embedding_dim": 96,
+        "decoder_kind": "concat",
+        "alignment": "none",
+        "s4_hidden": 896
+      },
+      "dataset_read": false,
+      "GPU_execution": false
+    },
+    "D01_H960_s44": {
+      "path": "D:\\论文复现\\experiments\\segformer_simplify_wave12_20261026\\weights\\init\\D01_H960_s44.pdparams",
+      "sha256": "c24844fe6e7487641bfec1157365fef9a313ba4a082a40b810de88802932b250",
+      "tensor_sha256": "fe8a27426b9c84375fbbd0b1a3a79d3f83193dfaa6345cc3fea81f792caf9fc9",
+      "tensor_count": 191,
+      "registered_numel": 3339426,
+      "trainable_numel": 3339234,
+      "source_R0": {
+        "path": "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\weights\\init\\R0_s44.pdparams",
+        "sha256": "74aaeb8651e7b4b03fe40b9d644edf4bb761af5cfa7db56d34be19076eb96a32"
+      },
+      "source_imagenet_sha256": "211e15d5157b8d48b1931102c40094da0b578de1c153c5706360f7ad561a774e",
+      "tensor_ledger": "D:\\论文复现\\experiments\\segformer_simplify_wave12_20261026\\provenance\\init_tensors\\D01_H960_s44.json",
+      "tensor_ledger_sha256": "4457bc374cc9ff535269fea554d9c528e651ab5eb902d33b397ce26735b85147",
+      "spec_id": "D01_H960",
+      "seed": 44,
+      "stage": "conditional",
+      "model": {
+        "embedding_dim": 96,
+        "decoder_kind": "concat",
+        "alignment": "none",
+        "s4_hidden": 960
+      },
+      "dataset_read": false,
+      "GPU_execution": false
+    },
+    "D02_H896_s44": {
+      "path": "D:\\论文复现\\experiments\\segformer_simplify_wave12_20261026\\weights\\init\\D02_H896_s44.pdparams",
+      "sha256": "91fa2f1ee2fbd47c5dffbb86ba350c6c8afdaa6fb1e0095adb8cd431f6544678",
+      "tensor_sha256": "fade1bb6952704bc88ecfa593fe53bf53d887cf65f3ada6cda1555ec077a59c4",
+      "tensor_count": 191,
+      "registered_numel": 3317858,
+      "trainable_numel": 3317602,
+      "source_R0": {
+        "path": "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\weights\\init\\R0_s44.pdparams",
+        "sha256": "74aaeb8651e7b4b03fe40b9d644edf4bb761af5cfa7db56d34be19076eb96a32"
+      },
+      "source_imagenet_sha256": "211e15d5157b8d48b1931102c40094da0b578de1c153c5706360f7ad561a774e",
+      "tensor_ledger": "D:\\论文复现\\experiments\\segformer_simplify_wave12_20261026\\provenance\\init_tensors\\D02_H896_s44.json",
+      "tensor_ledger_sha256": "00ab818c5b42b83454b3710710a046f03bdf4299ea18fea7e1a11096bbe15f55",
+      "spec_id": "D02_H896",
+      "seed": 44,
+      "stage": "conditional",
+      "model": {
+        "embedding_dim": 128,
+        "decoder_kind": "concat",
+        "alignment": "none",
+        "s4_hidden": 896
+      },
+      "dataset_read": false,
+      "GPU_execution": false
+    },
+    "D02_H960_s44": {
+      "path": "D:\\论文复现\\experiments\\segformer_simplify_wave12_20261026\\weights\\init\\D02_H960_s44.pdparams",
+      "sha256": "9804ee83a68fb293ac3a279242c0a7bb8b055c55fc88f286e850b63e27f2d49d",
+      "tensor_sha256": "ef39553bba1b6c4769bdeca31b7fa5afd950dd83fc6129053c9e880c8e9eb030",
+      "tensor_count": 191,
+      "registered_numel": 3384802,
+      "trainable_numel": 3384546,
+      "source_R0": {
+        "path": "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\weights\\init\\R0_s44.pdparams",
+        "sha256": "74aaeb8651e7b4b03fe40b9d644edf4bb761af5cfa7db56d34be19076eb96a32"
+      },
+      "source_imagenet_sha256": "211e15d5157b8d48b1931102c40094da0b578de1c153c5706360f7ad561a774e",
+      "tensor_ledger": "D:\\论文复现\\experiments\\segformer_simplify_wave12_20261026\\provenance\\init_tensors\\D02_H960_s44.json",
+      "tensor_ledger_sha256": "8b43bc6879baf20bf20715986d912a43a2a64c079f8877426053ac42899d2410",
+      "spec_id": "D02_H960",
+      "seed": 44,
+      "stage": "conditional",
+      "model": {
+        "embedding_dim": 128,
+        "decoder_kind": "concat",
+        "alignment": "none",
+        "s4_hidden": 960
+      },
+      "dataset_read": false,
+      "GPU_execution": false
+    },
+    "D03_H896_s44": {
+      "path": "D:\\论文复现\\experiments\\segformer_simplify_wave12_20261026\\weights\\init\\D03_H896_s44.pdparams",
+      "sha256": "cdf9e855bd0eb18a1f8c71be078c32550f98784d32efab112f5c32ab4c3c25a7",
+      "tensor_sha256": "6ad5ddc9a08607554d3c5b1c621a477b62f1f6c1a2f4c5d386c1f51c41e97b06",
+      "tensor_count": 191,
+      "registered_numel": 3371426,
+      "trainable_numel": 3371106,
+      "source_R0": {
+        "path": "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\weights\\init\\R0_s44.pdparams",
+        "sha256": "74aaeb8651e7b4b03fe40b9d644edf4bb761af5cfa7db56d34be19076eb96a32"
+      },
+      "source_imagenet_sha256": "211e15d5157b8d48b1931102c40094da0b578de1c153c5706360f7ad561a774e",
+      "tensor_ledger": "D:\\论文复现\\experiments\\segformer_simplify_wave12_20261026\\provenance\\init_tensors\\D03_H896_s44.json",
+      "tensor_ledger_sha256": "479cfcdae77cfbc21afd01492d98f514945b43efbbbdb41207654994bea9d315",
+      "spec_id": "D03_H896",
+      "seed": 44,
+      "stage": "conditional",
+      "model": {
+        "embedding_dim": 160,
+        "decoder_kind": "concat",
+        "alignment": "none",
+        "s4_hidden": 896
+      },
+      "dataset_read": false,
+      "GPU_execution": false
+    },
+    "D03_H960_s44": {
+      "path": "D:\\论文复现\\experiments\\segformer_simplify_wave12_20261026\\weights\\init\\D03_H960_s44.pdparams",
+      "sha256": "29b97417c5fc849fa5ab6978d381783a599cb452e6cea03c02988eb1a1318699",
+      "tensor_sha256": "c122fe010b96945749beda076e8761ebdd1cb1ed7e6ff700282646b23d31652e",
+      "tensor_count": 191,
+      "registered_numel": 3438370,
+      "trainable_numel": 3438050,
+      "source_R0": {
+        "path": "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\weights\\init\\R0_s44.pdparams",
+        "sha256": "74aaeb8651e7b4b03fe40b9d644edf4bb761af5cfa7db56d34be19076eb96a32"
+      },
+      "source_imagenet_sha256": "211e15d5157b8d48b1931102c40094da0b578de1c153c5706360f7ad561a774e",
+      "tensor_ledger": "D:\\论文复现\\experiments\\segformer_simplify_wave12_20261026\\provenance\\init_tensors\\D03_H960_s44.json",
+      "tensor_ledger_sha256": "c353880646917551239f24a9b8bf8c9913dfe5d4b48f4621db6472c913fb3401",
+      "spec_id": "D03_H960",
+      "seed": 44,
+      "stage": "conditional",
+      "model": {
+        "embedding_dim": 160,
+        "decoder_kind": "concat",
+        "alignment": "none",
+        "s4_hidden": 960
+      },
+      "dataset_read": false,
+      "GPU_execution": false
+    },
+    "D04_H896_s44": {
+      "path": "D:\\论文复现\\experiments\\segformer_simplify_wave12_20261026\\weights\\init\\D04_H896_s44.pdparams",
+      "sha256": "953b95b024324fa8fa6a5a2ae85fde0559456d8ec0dd81ac697959fe0ef83cf5",
+      "tensor_sha256": "50d98e42b3c9cc368db189113016b4eabfff300fb2f40a57da650210e87d9ac2",
+      "tensor_count": 194,
+      "registered_numel": 3327202,
+      "trainable_numel": 3326946,
+      "source_R0": {
+        "path": "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\weights\\init\\R0_s44.pdparams",
+        "sha256": "74aaeb8651e7b4b03fe40b9d644edf4bb761af5cfa7db56d34be19076eb96a32"
+      },
+      "source_imagenet_sha256": "211e15d5157b8d48b1931102c40094da0b578de1c153c5706360f7ad561a774e",
+      "tensor_ledger": "D:\\论文复现\\experiments\\segformer_simplify_wave12_20261026\\provenance\\init_tensors\\D04_H896_s44.json",
+      "tensor_ledger_sha256": "626c3a532fff43b66ae0b660a3bc2ccae23eba2dacf322586600c75be10227b0",
+      "spec_id": "D04_H896",
+      "seed": 44,
+      "stage": "conditional",
+      "model": {
+        "embedding_dim": 128,
+        "decoder_kind": "concat",
+        "alignment": "flow32",
+        "s4_hidden": 896
+      },
+      "dataset_read": false,
+      "GPU_execution": false
+    },
+    "D04_H960_s44": {
+      "path": "D:\\论文复现\\experiments\\segformer_simplify_wave12_20261026\\weights\\init\\D04_H960_s44.pdparams",
+      "sha256": "d11701500e75f553953d5a7c519fe73cc1334359bdcd1d78b17f77e78ce2bb0a",
+      "tensor_sha256": "be8cb9b51a67623e50136e4234379cf4e277a661e989e7941e0756301d9fca25",
+      "tensor_count": 194,
+      "registered_numel": 3394146,
+      "trainable_numel": 3393890,
+      "source_R0": {
+        "path": "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\weights\\init\\R0_s44.pdparams",
+        "sha256": "74aaeb8651e7b4b03fe40b9d644edf4bb761af5cfa7db56d34be19076eb96a32"
+      },
+      "source_imagenet_sha256": "211e15d5157b8d48b1931102c40094da0b578de1c153c5706360f7ad561a774e",
+      "tensor_ledger": "D:\\论文复现\\experiments\\segformer_simplify_wave12_20261026\\provenance\\init_tensors\\D04_H960_s44.json",
+      "tensor_ledger_sha256": "da593fce13fa781c0af0c0ac363636ec66f33dc741bbc5a0a9176f4ebcfd44f1",
+      "spec_id": "D04_H960",
+      "seed": 44,
+      "stage": "conditional",
+      "model": {
+        "embedding_dim": 128,
+        "decoder_kind": "concat",
+        "alignment": "flow32",
+        "s4_hidden": 960
+      },
+      "dataset_read": false,
+      "GPU_execution": false
+    },
+    "D05_H896_s44": {
+      "path": "D:\\论文复现\\experiments\\segformer_simplify_wave12_20261026\\weights\\init\\D05_H896_s44.pdparams",
+      "sha256": "10ba0ba4df8f4657a529f44ae5b698d2262dcf9960b48cb8b680d4a5d4263dca",
+      "tensor_sha256": "5201d194d862e46173449054198ada987695a8c5e54ba38757a8481239ba15e1",
+      "tensor_count": 194,
+      "registered_numel": 3322530,
+      "trainable_numel": 3322274,
+      "source_R0": {
+        "path": "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\weights\\init\\R0_s44.pdparams",
+        "sha256": "74aaeb8651e7b4b03fe40b9d644edf4bb761af5cfa7db56d34be19076eb96a32"
+      },
+      "source_imagenet_sha256": "211e15d5157b8d48b1931102c40094da0b578de1c153c5706360f7ad561a774e",
+      "tensor_ledger": "D:\\论文复现\\experiments\\segformer_simplify_wave12_20261026\\provenance\\init_tensors\\D05_H896_s44.json",
+      "tensor_ledger_sha256": "11372e0077bc9e0278d843a08c0c624f8f643d11deb9c5c6c6ede8307e4c23a7",
+      "spec_id": "D05_H896",
+      "seed": 44,
+      "stage": "conditional",
+      "model": {
+        "embedding_dim": 128,
+        "decoder_kind": "concat",
+        "alignment": "flow16",
+        "s4_hidden": 896
+      },
+      "dataset_read": false,
+      "GPU_execution": false
+    },
+    "D05_H960_s44": {
+      "path": "D:\\论文复现\\experiments\\segformer_simplify_wave12_20261026\\weights\\init\\D05_H960_s44.pdparams",
+      "sha256": "e49cc2431057d9f9e4583ab12349ae3d42e961252771ce3e08d779ca751a0ecd",
+      "tensor_sha256": "1234f5dbe304113c1cc4c5dc7bd896c92ed24e72f9082ca6c0690d84f4dc98a7",
+      "tensor_count": 194,
+      "registered_numel": 3389474,
+      "trainable_numel": 3389218,
+      "source_R0": {
+        "path": "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\weights\\init\\R0_s44.pdparams",
+        "sha256": "74aaeb8651e7b4b03fe40b9d644edf4bb761af5cfa7db56d34be19076eb96a32"
+      },
+      "source_imagenet_sha256": "211e15d5157b8d48b1931102c40094da0b578de1c153c5706360f7ad561a774e",
+      "tensor_ledger": "D:\\论文复现\\experiments\\segformer_simplify_wave12_20261026\\provenance\\init_tensors\\D05_H960_s44.json",
+      "tensor_ledger_sha256": "6f435033bd53d846708c74acc6480d3a709cc6db3b319213f83cf39e6a35c1a0",
+      "spec_id": "D05_H960",
+      "seed": 44,
+      "stage": "conditional",
+      "model": {
+        "embedding_dim": 128,
+        "decoder_kind": "concat",
+        "alignment": "flow16",
+        "s4_hidden": 960
+      },
+      "dataset_read": false,
+      "GPU_execution": false
+    },
+    "D06_H896_s44": {
+      "path": "D:\\论文复现\\experiments\\segformer_simplify_wave12_20261026\\weights\\init\\D06_H896_s44.pdparams",
+      "sha256": "630f91f332d18a627c11b71902fb8a4865160f5e8c7b94fc9c9469072f1684bb",
+      "tensor_sha256": "335eb90825ebc0c573388cd75ba1adfeea950a266c2996af95cb084f28d85983",
+      "tensor_count": 195,
+      "registered_numel": 3326754,
+      "trainable_numel": 3326498,
+      "source_R0": {
+        "path": "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\weights\\init\\R0_s44.pdparams",
+        "sha256": "74aaeb8651e7b4b03fe40b9d644edf4bb761af5cfa7db56d34be19076eb96a32"
+      },
+      "source_imagenet_sha256": "211e15d5157b8d48b1931102c40094da0b578de1c153c5706360f7ad561a774e",
+      "tensor_ledger": "D:\\论文复现\\experiments\\segformer_simplify_wave12_20261026\\provenance\\init_tensors\\D06_H896_s44.json",
+      "tensor_ledger_sha256": "cc6f0593bbc38bbe96211e46c296a81532433193df554795a9580978cc95c281",
+      "spec_id": "D06_H896",
+      "seed": 44,
+      "stage": "conditional",
+      "model": {
+        "embedding_dim": 128,
+        "decoder_kind": "concat",
+        "alignment": "dwflow32",
+        "s4_hidden": 896
+      },
+      "dataset_read": false,
+      "GPU_execution": false
+    },
+    "D06_H960_s44": {
+      "path": "D:\\论文复现\\experiments\\segformer_simplify_wave12_20261026\\weights\\init\\D06_H960_s44.pdparams",
+      "sha256": "3091d2590f973c398a73ebfb3f958392daa269ae3500e6cf1bc20af8bd43666b",
+      "tensor_sha256": "0e4e1dba0684fdbac8651857e0a7314edeff6615d2d6dae7cfdf7a5140fe3f3d",
+      "tensor_count": 195,
+      "registered_numel": 3393698,
+      "trainable_numel": 3393442,
+      "source_R0": {
+        "path": "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\weights\\init\\R0_s44.pdparams",
+        "sha256": "74aaeb8651e7b4b03fe40b9d644edf4bb761af5cfa7db56d34be19076eb96a32"
+      },
+      "source_imagenet_sha256": "211e15d5157b8d48b1931102c40094da0b578de1c153c5706360f7ad561a774e",
+      "tensor_ledger": "D:\\论文复现\\experiments\\segformer_simplify_wave12_20261026\\provenance\\init_tensors\\D06_H960_s44.json",
+      "tensor_ledger_sha256": "bde4468717edc3d15d2bf9689509b1b67e19e1c41bfe3055deb803deb71630d9",
+      "spec_id": "D06_H960",
+      "seed": 44,
+      "stage": "conditional",
+      "model": {
+        "embedding_dim": 128,
+        "decoder_kind": "concat",
+        "alignment": "dwflow32",
+        "s4_hidden": 960
+      },
+      "dataset_read": false,
+      "GPU_execution": false
+    },
+    "D07_H896_s44": {
+      "path": "D:\\论文复现\\experiments\\segformer_simplify_wave12_20261026\\weights\\init\\D07_H896_s44.pdparams",
+      "sha256": "0a47fb0cd33abf89b55fca55f89dae1de1b4a1994b825ff109db5c16476adfc9",
+      "tensor_sha256": "50d98e42b3c9cc368db189113016b4eabfff300fb2f40a57da650210e87d9ac2",
+      "tensor_count": 194,
+      "registered_numel": 3327202,
+      "trainable_numel": 3326946,
+      "source_R0": {
+        "path": "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\weights\\init\\R0_s44.pdparams",
+        "sha256": "74aaeb8651e7b4b03fe40b9d644edf4bb761af5cfa7db56d34be19076eb96a32"
+      },
+      "source_imagenet_sha256": "211e15d5157b8d48b1931102c40094da0b578de1c153c5706360f7ad561a774e",
+      "tensor_ledger": "D:\\论文复现\\experiments\\segformer_simplify_wave12_20261026\\provenance\\init_tensors\\D07_H896_s44.json",
+      "tensor_ledger_sha256": "55e81b8f6d7995cef3cc24cb96a1a56295bb7cda3ccad6803090c41d482b3c78",
+      "spec_id": "D07_H896",
+      "seed": 44,
+      "stage": "conditional",
+      "model": {
+        "embedding_dim": 128,
+        "decoder_kind": "concat",
+        "alignment": "coarseflow32",
+        "s4_hidden": 896
+      },
+      "dataset_read": false,
+      "GPU_execution": false
+    },
+    "D07_H960_s44": {
+      "path": "D:\\论文复现\\experiments\\segformer_simplify_wave12_20261026\\weights\\init\\D07_H960_s44.pdparams",
+      "sha256": "d21c6b45fa6d809c948770d4d6c09d4a09d648e4092387a5512deb82d2cab0da",
+      "tensor_sha256": "be8cb9b51a67623e50136e4234379cf4e277a661e989e7941e0756301d9fca25",
+      "tensor_count": 194,
+      "registered_numel": 3394146,
+      "trainable_numel": 3393890,
+      "source_R0": {
+        "path": "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\weights\\init\\R0_s44.pdparams",
+        "sha256": "74aaeb8651e7b4b03fe40b9d644edf4bb761af5cfa7db56d34be19076eb96a32"
+      },
+      "source_imagenet_sha256": "211e15d5157b8d48b1931102c40094da0b578de1c153c5706360f7ad561a774e",
+      "tensor_ledger": "D:\\论文复现\\experiments\\segformer_simplify_wave12_20261026\\provenance\\init_tensors\\D07_H960_s44.json",
+      "tensor_ledger_sha256": "ef9496ef3ca5b4781d38d2229c793ca9c93f12f314b7eea4f8440c2a26eb9bab",
+      "spec_id": "D07_H960",
+      "seed": 44,
+      "stage": "conditional",
+      "model": {
+        "embedding_dim": 128,
+        "decoder_kind": "concat",
+        "alignment": "coarseflow32",
+        "s4_hidden": 960
+      },
+      "dataset_read": false,
+      "GPU_execution": false
+    },
+    "D08_H896_s44": {
+      "path": "D:\\论文复现\\experiments\\segformer_simplify_wave12_20261026\\weights\\init\\D08_H896_s44.pdparams",
+      "sha256": "ad39bd7606c8191da92c20e533ab6d0b39a9b8430bd0a4946158dc4d761ac764",
+      "tensor_sha256": "bec354924ab59e2fe95e1cd877e09b6860ca375bc8a78238ef158abb9c6381da",
+      "tensor_count": 190,
+      "registered_numel": 3252322,
+      "trainable_numel": 3252066,
+      "source_R0": {
+        "path": "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\weights\\init\\R0_s44.pdparams",
+        "sha256": "74aaeb8651e7b4b03fe40b9d644edf4bb761af5cfa7db56d34be19076eb96a32"
+      },
+      "source_imagenet_sha256": "211e15d5157b8d48b1931102c40094da0b578de1c153c5706360f7ad561a774e",
+      "tensor_ledger": "D:\\论文复现\\experiments\\segformer_simplify_wave12_20261026\\provenance\\init_tensors\\D08_H896_s44.json",
+      "tensor_ledger_sha256": "4d162180e8c4c38c6ff691d0d5987c55b4ccd2a1ff511d0c76461eb3320a3b4d",
+      "spec_id": "D08_H896",
+      "seed": 44,
+      "stage": "conditional",
+      "model": {
+        "embedding_dim": 128,
+        "decoder_kind": "native_sum",
+        "alignment": "none",
+        "s4_hidden": 896
+      },
+      "dataset_read": false,
+      "GPU_execution": false
+    },
+    "D08_H960_s44": {
+      "path": "D:\\论文复现\\experiments\\segformer_simplify_wave12_20261026\\weights\\init\\D08_H960_s44.pdparams",
+      "sha256": "b6e3bbef9e8e8314a18a9aa9eeb20baf3f61048708e045ef7d915ec4b8c83266",
+      "tensor_sha256": "d4f2090c6810cdfe7d2f36a5a733d4cf913dbc057c3a58c63b588a6a0ff53908",
+      "tensor_count": 190,
+      "registered_numel": 3319266,
+      "trainable_numel": 3319010,
+      "source_R0": {
+        "path": "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\weights\\init\\R0_s44.pdparams",
+        "sha256": "74aaeb8651e7b4b03fe40b9d644edf4bb761af5cfa7db56d34be19076eb96a32"
+      },
+      "source_imagenet_sha256": "211e15d5157b8d48b1931102c40094da0b578de1c153c5706360f7ad561a774e",
+      "tensor_ledger": "D:\\论文复现\\experiments\\segformer_simplify_wave12_20261026\\provenance\\init_tensors\\D08_H960_s44.json",
+      "tensor_ledger_sha256": "061ca466cc9d6aaeaf2403ea9a25e4c937652fa545594bb691a49209e5f3e264",
+      "spec_id": "D08_H960",
+      "seed": 44,
+      "stage": "conditional",
+      "model": {
+        "embedding_dim": 128,
+        "decoder_kind": "native_sum",
+        "alignment": "none",
+        "s4_hidden": 960
+      },
+      "dataset_read": false,
+      "GPU_execution": false
+    },
+    "D09_H896_s44": {
+      "path": "D:\\论文复现\\experiments\\segformer_simplify_wave12_20261026\\weights\\init\\D09_H896_s44.pdparams",
+      "sha256": "8ff626094b9e0873139ee7c60f0d644d9186396c78708bcc698648842c6483ac",
+      "tensor_sha256": "be5e960f038e7730b9d4910d73bf2d14047aaee3035547f2c424cd13ef0d4487",
+      "tensor_count": 190,
+      "registered_numel": 3285730,
+      "trainable_numel": 3285346,
+      "source_R0": {
+        "path": "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\weights\\init\\R0_s44.pdparams",
+        "sha256": "74aaeb8651e7b4b03fe40b9d644edf4bb761af5cfa7db56d34be19076eb96a32"
+      },
+      "source_imagenet_sha256": "211e15d5157b8d48b1931102c40094da0b578de1c153c5706360f7ad561a774e",
+      "tensor_ledger": "D:\\论文复现\\experiments\\segformer_simplify_wave12_20261026\\provenance\\init_tensors\\D09_H896_s44.json",
+      "tensor_ledger_sha256": "94d50d51a81d124c97572603c779637a62526a77c368adefa8b96c25c5e59434",
+      "spec_id": "D09_H896",
+      "seed": 44,
+      "stage": "conditional",
+      "model": {
+        "embedding_dim": 192,
+        "decoder_kind": "native_sum",
+        "alignment": "none",
+        "s4_hidden": 896
+      },
+      "dataset_read": false,
+      "GPU_execution": false
+    },
+    "D09_H960_s44": {
+      "path": "D:\\论文复现\\experiments\\segformer_simplify_wave12_20261026\\weights\\init\\D09_H960_s44.pdparams",
+      "sha256": "d5de7bf2d023689f03a0a620f2d9022104d4fc3d0a93c96f236c5a41f5407844",
+      "tensor_sha256": "8cce50bc1a731ee29aadba6ecd7560a0d9c8193cee1376ca6bf1d6c8ff8ed130",
+      "tensor_count": 190,
+      "registered_numel": 3352674,
+      "trainable_numel": 3352290,
+      "source_R0": {
+        "path": "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\weights\\init\\R0_s44.pdparams",
+        "sha256": "74aaeb8651e7b4b03fe40b9d644edf4bb761af5cfa7db56d34be19076eb96a32"
+      },
+      "source_imagenet_sha256": "211e15d5157b8d48b1931102c40094da0b578de1c153c5706360f7ad561a774e",
+      "tensor_ledger": "D:\\论文复现\\experiments\\segformer_simplify_wave12_20261026\\provenance\\init_tensors\\D09_H960_s44.json",
+      "tensor_ledger_sha256": "e9fd80efe40713714b97109c9cbc278ffe366d2c58eece0f65ddc257b9339d0b",
+      "spec_id": "D09_H960",
+      "seed": 44,
+      "stage": "conditional",
+      "model": {
+        "embedding_dim": 192,
+        "decoder_kind": "native_sum",
+        "alignment": "none",
+        "s4_hidden": 960
+      },
+      "dataset_read": false,
+      "GPU_execution": false
+    },
+    "D10_H896_s44": {
+      "path": "D:\\论文复现\\experiments\\segformer_simplify_wave12_20261026\\weights\\init\\D10_H896_s44.pdparams",
+      "sha256": "fca80d1bc44238313f91e9a1dfb659283151f3aa4f62b9d5169f161a895db5eb",
+      "tensor_sha256": "46444e5bcc53a7f94b753e21c38e66d88d8e6fb5758f61c71c6db0ade062ad01",
+      "tensor_count": 190,
+      "registered_numel": 3319138,
+      "trainable_numel": 3318626,
+      "source_R0": {
+        "path": "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\weights\\init\\R0_s44.pdparams",
+        "sha256": "74aaeb8651e7b4b03fe40b9d644edf4bb761af5cfa7db56d34be19076eb96a32"
+      },
+      "source_imagenet_sha256": "211e15d5157b8d48b1931102c40094da0b578de1c153c5706360f7ad561a774e",
+      "tensor_ledger": "D:\\论文复现\\experiments\\segformer_simplify_wave12_20261026\\provenance\\init_tensors\\D10_H896_s44.json",
+      "tensor_ledger_sha256": "0cc69c4555f737392311b22c387075434a7932649f5320d9fa2b26a892d82b44",
+      "spec_id": "D10_H896",
+      "seed": 44,
+      "stage": "conditional",
+      "model": {
+        "embedding_dim": 256,
+        "decoder_kind": "native_sum",
+        "alignment": "none",
+        "s4_hidden": 896
+      },
+      "dataset_read": false,
+      "GPU_execution": false
+    },
+    "D10_H960_s44": {
+      "path": "D:\\论文复现\\experiments\\segformer_simplify_wave12_20261026\\weights\\init\\D10_H960_s44.pdparams",
+      "sha256": "975b6423493601509799db8cd245b3ea636d3d7db56cfd5958e852bee9a3babe",
+      "tensor_sha256": "5c47f0ac229321a60727c8e7186e193453723e6db772809ff3b8e9457ad07301",
+      "tensor_count": 190,
+      "registered_numel": 3386082,
+      "trainable_numel": 3385570,
+      "source_R0": {
+        "path": "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\weights\\init\\R0_s44.pdparams",
+        "sha256": "74aaeb8651e7b4b03fe40b9d644edf4bb761af5cfa7db56d34be19076eb96a32"
+      },
+      "source_imagenet_sha256": "211e15d5157b8d48b1931102c40094da0b578de1c153c5706360f7ad561a774e",
+      "tensor_ledger": "D:\\论文复现\\experiments\\segformer_simplify_wave12_20261026\\provenance\\init_tensors\\D10_H960_s44.json",
+      "tensor_ledger_sha256": "b17939d9aaa473db68399ac3a5e085a6a6c6fa12a4b130797d29589be9755add",
+      "spec_id": "D10_H960",
+      "seed": 44,
+      "stage": "conditional",
+      "model": {
+        "embedding_dim": 256,
+        "decoder_kind": "native_sum",
+        "alignment": "none",
+        "s4_hidden": 960
+      },
+      "dataset_read": false,
+      "GPU_execution": false
+    }
+  },
+  "virtual_same_width_plain_sources": {
+    "Plain96_s42": {
+      "tensor_sha256": "114da60b13b8d6c6bed3490405ec3a2469bb58b75a028af6d7f7082608c6f3a3",
+      "note": "Deterministic virtual head only, not a formal training run; full shared128 source R0 or structured prefixes"
+    },
+    "Plain128_s42": {
+      "tensor_sha256": "3fbc21744916570ab91419b9df09fc58d7ca4fbbe7f0ce24d895a29ebcee1391",
+      "note": "Deterministic virtual head only, not a formal training run; full shared128 source R0 or structured prefixes"
+    },
+    "Plain160_s42": {
+      "tensor_sha256": "58a8d5cf21a7efee2ebb575b8098991035a05a2b7f1d1127a8ef44517a47e34a",
+      "note": "Deterministic virtual head only, not a formal training run; full shared128 source R0 or structured prefixes"
+    },
+    "Plain192_s42": {
+      "tensor_sha256": "7018d23dabb4decd51a64732b3af837c9c183b68309eca5f04fddf476ea191fc",
+      "note": "Deterministic virtual head only, not a formal training run; full shared128 source R0 or structured prefixes"
+    },
+    "Plain256_s42": {
+      "tensor_sha256": "19b65601d51f3936eaf6402ddc3e44b82d54da9dca17953d0ae70694be865878",
+      "note": "Deterministic virtual head only, not a formal training run; full shared128 source R0 or structured prefixes"
+    },
+    "Plain96_s43": {
+      "tensor_sha256": "69f0299e78c696ca446d024e7d5f6742423350188424f2e499edca0e89071d5b",
+      "note": "Deterministic virtual head only, not a formal training run; full shared128 source R0 or structured prefixes"
+    },
+    "Plain128_s43": {
+      "tensor_sha256": "de14e8e8990dafd6fb6e338ec38a30406975667c85b6700152a3d7cf883065a7",
+      "note": "Deterministic virtual head only, not a formal training run; full shared128 source R0 or structured prefixes"
+    },
+    "Plain160_s43": {
+      "tensor_sha256": "aecef5a3744ba545721af8d80f62f9739086254de0bce1a2b82718b2692825ed",
+      "note": "Deterministic virtual head only, not a formal training run; full shared128 source R0 or structured prefixes"
+    },
+    "Plain192_s43": {
+      "tensor_sha256": "503d72bccad7e71b239489e517c3367f75f1d1d8e858643060836aa1766ce465",
+      "note": "Deterministic virtual head only, not a formal training run; full shared128 source R0 or structured prefixes"
+    },
+    "Plain256_s43": {
+      "tensor_sha256": "44ef3c25584e51dc4ac46387a718d66e2554a8294d3f5a8f03327c53e827c577",
+      "note": "Deterministic virtual head only, not a formal training run; full shared128 source R0 or structured prefixes"
+    },
+    "Plain96_s44": {
+      "tensor_sha256": "427f486e5de75cf0f80c569261e26298d0c663a551ebdf1036f126a8bde5dab2",
+      "note": "Deterministic virtual head only, not a formal training run; full shared128 source R0 or structured prefixes"
+    },
+    "Plain128_s44": {
+      "tensor_sha256": "984cdc5ea117c78a0b0da8faf0dc4f0577f67d8e4007025b5bbc20cd29f16a75",
+      "note": "Deterministic virtual head only, not a formal training run; full shared128 source R0 or structured prefixes"
+    },
+    "Plain160_s44": {
+      "tensor_sha256": "cf3fc914c812fa374e50732452b2f9c317a02b1680547d39e9db85b61fbee097",
+      "note": "Deterministic virtual head only, not a formal training run; full shared128 source R0 or structured prefixes"
+    },
+    "Plain192_s44": {
+      "tensor_sha256": "f10a166ad7c3ce1455065320dd6a9e9f60818dd16f72fbedcda9b03bd2be0ad8",
+      "note": "Deterministic virtual head only, not a formal training run; full shared128 source R0 or structured prefixes"
+    },
+    "Plain256_s44": {
+      "tensor_sha256": "1ef83d907763f6b68b189de61fec644c76876cdccd384949f64db115498683ef",
+      "note": "Deterministic virtual head only, not a formal training run; full shared128 source R0 or structured prefixes"
+    }
+  },
+  "source_R0_manifest": "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\provenance\\matched_R0_initialization.json",
+  "original_imagenet": "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\weights\\mit_b0_imagenet.pdparams",
+  "controlled_S4_indices": "D:\\论文复现\\experiments\\segformer_simplify_wave12_20261026\\provenance\\s4_compression_indices.json",
+  "controlled_S4_indices_sha256": "4fbbdbe762986ce90e415c900f11180850f21e74479d008d62eebdd5998afc41",
+  "masked_original_FFN_equivalence": [
+    {
+      "hidden": 896,
+      "block": 0,
+      "input_shape": [
+        1,
+        169,
+        256
+      ],
+      "spatial_shape": [
+        13,
+        13
+      ],
+      "max_abs_error": 5.960464477539062e-07,
+      "atol": 1e-05,
+      "rtol": 1e-05,
+      "passed": true,
+      "device": "cpu"
+    },
+    {
+      "hidden": 896,
+      "block": 0,
+      "input_shape": [
+        2,
+        63,
+        256
+      ],
+      "spatial_shape": [
+        7,
+        9
+      ],
+      "max_abs_error": 2.682209014892578e-07,
+      "atol": 1e-05,
+      "rtol": 1e-05,
+      "passed": true,
+      "device": "cpu"
+    },
+    {
+      "hidden": 896,
+      "block": 0,
+      "input_shape": [
+        1,
+        1,
+        256
+      ],
+      "spatial_shape": [
+        1,
+        1
+      ],
+      "max_abs_error": 1.7881393432617188e-07,
+      "atol": 1e-05,
+      "rtol": 1e-05,
+      "passed": true,
+      "device": "cpu"
+    },
+    {
+      "hidden": 896,
+      "block": 1,
+      "input_shape": [
+        1,
+        169,
+        256
+      ],
+      "spatial_shape": [
+        13,
+        13
+      ],
+      "max_abs_error": 3.814697265625e-06,
+      "atol": 1e-05,
+      "rtol": 1e-05,
+      "passed": true,
+      "device": "cpu"
+    },
+    {
+      "hidden": 896,
+      "block": 1,
+      "input_shape": [
+        2,
+        63,
+        256
+      ],
+      "spatial_shape": [
+        7,
+        9
+      ],
+      "max_abs_error": 1.9073486328125e-06,
+      "atol": 1e-05,
+      "rtol": 1e-05,
+      "passed": true,
+      "device": "cpu"
+    },
+    {
+      "hidden": 896,
+      "block": 1,
+      "input_shape": [
+        1,
+        1,
+        256
+      ],
+      "spatial_shape": [
+        1,
+        1
+      ],
+      "max_abs_error": 9.5367431640625e-07,
+      "atol": 1e-05,
+      "rtol": 1e-05,
+      "passed": true,
+      "device": "cpu"
+    },
+    {
+      "hidden": 960,
+      "block": 0,
+      "input_shape": [
+        1,
+        169,
+        256
+      ],
+      "spatial_shape": [
+        13,
+        13
+      ],
+      "max_abs_error": 5.960464477539062e-07,
+      "atol": 1e-05,
+      "rtol": 1e-05,
+      "passed": true,
+      "device": "cpu"
+    },
+    {
+      "hidden": 960,
+      "block": 0,
+      "input_shape": [
+        2,
+        63,
+        256
+      ],
+      "spatial_shape": [
+        7,
+        9
+      ],
+      "max_abs_error": 2.682209014892578e-07,
+      "atol": 1e-05,
+      "rtol": 1e-05,
+      "passed": true,
+      "device": "cpu"
+    },
+    {
+      "hidden": 960,
+      "block": 0,
+      "input_shape": [
+        1,
+        1,
+        256
+      ],
+      "spatial_shape": [
+        1,
+        1
+      ],
+      "max_abs_error": 1.4901161193847656e-07,
+      "atol": 1e-05,
+      "rtol": 1e-05,
+      "passed": true,
+      "device": "cpu"
+    },
+    {
+      "hidden": 960,
+      "block": 1,
+      "input_shape": [
+        1,
+        169,
+        256
+      ],
+      "spatial_shape": [
+        13,
+        13
+      ],
+      "max_abs_error": 3.337860107421875e-06,
+      "atol": 1e-05,
+      "rtol": 1e-05,
+      "passed": true,
+      "device": "cpu"
+    },
+    {
+      "hidden": 960,
+      "block": 1,
+      "input_shape": [
+        2,
+        63,
+        256
+      ],
+      "spatial_shape": [
+        7,
+        9
+      ],
+      "max_abs_error": 1.9073486328125e-06,
+      "atol": 1e-05,
+      "rtol": 1e-05,
+      "passed": true,
+      "device": "cpu"
+    },
+    {
+      "hidden": 960,
+      "block": 1,
+      "input_shape": [
+        1,
+        1,
+        256
+      ],
+      "spatial_shape": [
+        1,
+        1
+      ],
+      "max_abs_error": 1.341104507446289e-07,
+      "atol": 1e-05,
+      "rtol": 1e-05,
+      "passed": true,
+      "device": "cpu"
+    }
+  ],
+  "native128_plain128_initial_equivalence": [
+    {
+      "seed": 42,
+      "shape": [
+        1,
+        3,
+        65,
+        61
+      ],
+      "device": "cpu",
+      "max_abs_error": 4.172325134277344e-06,
+      "atol": 2e-05,
+      "rtol": 2e-05,
+      "passed": true,
+      "generated_in_memory_input": true,
+      "dataset_read": false
+    },
+    {
+      "seed": 42,
+      "shape": [
+        2,
+        3,
+        41,
+        45
+      ],
+      "device": "cpu",
+      "max_abs_error": 4.0531158447265625e-06,
+      "atol": 2e-05,
+      "rtol": 2e-05,
+      "passed": true,
+      "generated_in_memory_input": true,
+      "dataset_read": false
+    },
+    {
+      "seed": 43,
+      "shape": [
+        1,
+        3,
+        65,
+        61
+      ],
+      "device": "cpu",
+      "max_abs_error": 4.0531158447265625e-06,
+      "atol": 2e-05,
+      "rtol": 2e-05,
+      "passed": true,
+      "generated_in_memory_input": true,
+      "dataset_read": false
+    },
+    {
+      "seed": 43,
+      "shape": [
+        2,
+        3,
+        41,
+        45
+      ],
+      "device": "cpu",
+      "max_abs_error": 4.291534423828125e-06,
+      "atol": 2e-05,
+      "rtol": 2e-05,
+      "passed": true,
+      "generated_in_memory_input": true,
+      "dataset_read": false
+    },
+    {
+      "seed": 44,
+      "shape": [
+        1,
+        3,
+        65,
+        61
+      ],
+      "device": "cpu",
+      "max_abs_error": 2.86102294921875e-06,
+      "atol": 2e-05,
+      "rtol": 2e-05,
+      "passed": true,
+      "generated_in_memory_input": true,
+      "dataset_read": false
+    },
+    {
+      "seed": 44,
+      "shape": [
+        2,
+        3,
+        41,
+        45
+      ],
+      "device": "cpu",
+      "max_abs_error": 2.6226043701171875e-06,
+      "atol": 2e-05,
+      "rtol": 2e-05,
+      "passed": true,
+      "generated_in_memory_input": true,
+      "dataset_read": false
+    }
+  ],
+  "common_initialization_rule": "Same seed R0 full initial state; shared128/prefix or structured blocks overwrite independently named new components; Native sum folds same-width virtual plain only.",
+  "reused_init_files_never_overwritten": true,
+  "training_randomness_note": "This script does not alter training RNG protocol. Width-changing dropout masks are not claimed bitwise identical across architectures; data RNG pairing is audited separately.",
+  "unrun_initial_states_are_not_training_results": true
+}

@@ -1,0 +1,135 @@
+[2026/10/31 23:18:13] INFO: 
+------------Environment Information-------------
+platform: Windows-11-10.0.26200-SP0
+Python: 3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]
+Paddle compiled with cuda: True
+NVCC: Build cuda_13.4.r13.4/compiler.38657139_0
+cudnn: 90.9
+GPUs used: 1
+CUDA_VISIBLE_DEVICES: None
+GPU: ['GPU 0: NVIDIA GeForce']
+PaddleSeg: 0.0.0.dev0
+PaddlePaddle: 3.4.0
+OpenCV: 4.11.0
+------------------------------------------------
+[2026/10/31 23:18:13] INFO: 
+---------------Config Information---------------
+batch_size: 4
+iters: 20
+train_dataset:
+  dataset_root: "D:/\u8BBA\u6587\u590D\u73B0/experiments/vocdevkit3000_stage_20261031/VOCdevkit/VOC2007"
+  mode: train
+  num_classes: 2
+  train_path: "D:/\u8BBA\u6587\u590D\u73B0/experiments/segformer_vocdevkit3000_aligned_wtconv_ablation_20261031/configs/train.txt"
+  transforms:
+  - max_scale_factor: 1.25
+    min_scale_factor: 0.75
+    scale_step_size: 0.25
+    type: ResizeStepScaling
+  - crop_size:
+    - 400
+    - 400
+    type: RandomPaddingCrop
+  - type: RandomHorizontalFlip
+  - brightness_range: 0.5
+    contrast_range: 0.5
+    saturation_range: 0.5
+    type: RandomDistort
+  - type: Normalize
+  type: Dataset
+val_dataset:
+  dataset_root: "D:/\u8BBA\u6587\u590D\u73B0/experiments/vocdevkit3000_stage_20261031/VOCdevkit/VOC2007"
+  mode: val
+  num_classes: 2
+  transforms:
+  - type: Normalize
+  type: Dataset
+  val_path: "D:/\u8BBA\u6587\u590D\u73B0/experiments/segformer_vocdevkit3000_aligned_wtconv_ablation_20261031/configs/val.txt"
+optimizer:
+  beta1: 0.9
+  beta2: 0.999
+  type: AdamW
+  weight_decay: 0.01
+lr_scheduler:
+  end_lr: 0.0
+  learning_rate: 6.0e-05
+  power: 1
+  type: PolynomialDecay
+loss:
+  coef:
+  - 1
+  types:
+  - type: CrossEntropyLoss
+model:
+  align_corners: false
+  alignment: none
+  backbone:
+    hidden: 1024
+    pretrained: "D:/\u8BBA\u6587\u590D\u73B0/experiments/segformer_vocdevkit3000_aligned_wtconv_ablation_20261031/weights/mit_b0_imagenet_backbone.pdparams"
+    type: MixVisionTransformer_B0_S4FFNControlled
+  decoder_kind: concat
+  embedding_dim: 256
+  fusion_layout: standard
+  num_classes: 2
+  pretrained: null
+  type: SegFormerSimplify
+------------------------------------------------
+
+[2026/10/31 23:18:13] INFO: Set device: gpu
+[2026/10/31 23:18:13] INFO: Use the following config to build model
+model:
+  align_corners: false
+  alignment: none
+  backbone:
+    hidden: 1024
+    pretrained: "D:/\u8BBA\u6587\u590D\u73B0/experiments/segformer_vocdevkit3000_aligned_wtconv_ablation_20261031/weights/mit_b0_imagenet_backbone.pdparams"
+    type: MixVisionTransformer_B0_S4FFNControlled
+  decoder_kind: concat
+  embedding_dim: 256
+  fusion_layout: standard
+  num_classes: 2
+  pretrained: null
+  type: SegFormerSimplify
+[2026/10/31 23:18:13] INFO: Use the following config to build train_dataset
+train_dataset:
+  dataset_root: "D:/\u8BBA\u6587\u590D\u73B0/experiments/vocdevkit3000_stage_20261031/VOCdevkit/VOC2007"
+  mode: train
+  num_classes: 2
+  train_path: "D:/\u8BBA\u6587\u590D\u73B0/experiments/segformer_vocdevkit3000_aligned_wtconv_ablation_20261031/configs/train.txt"
+  transforms:
+  - max_scale_factor: 1.25
+    min_scale_factor: 0.75
+    scale_step_size: 0.25
+    type: ResizeStepScaling
+  - crop_size:
+    - 400
+    - 400
+    type: RandomPaddingCrop
+  - type: RandomHorizontalFlip
+  - brightness_range: 0.5
+    contrast_range: 0.5
+    saturation_range: 0.5
+    type: RandomDistort
+  - type: Normalize
+  type: Dataset
+[2026/10/31 23:18:13] INFO: Use the following config to build val_dataset
+val_dataset:
+  dataset_root: "D:/\u8BBA\u6587\u590D\u73B0/experiments/vocdevkit3000_stage_20261031/VOCdevkit/VOC2007"
+  mode: val
+  num_classes: 2
+  transforms:
+  - type: Normalize
+  type: Dataset
+  val_path: "D:/\u8BBA\u6587\u590D\u73B0/experiments/segformer_vocdevkit3000_aligned_wtconv_ablation_20261031/configs/val.txt"
+[2026/10/31 23:18:13] INFO: Use the following config to build optimizer
+optimizer:
+  beta1: 0.9
+  beta2: 0.999
+  type: AdamW
+  weight_decay: 0.01
+[2026/10/31 23:18:13] INFO: Use the following config to build loss
+loss:
+  coef:
+  - 1
+  types:
+  - type: CrossEntropyLoss

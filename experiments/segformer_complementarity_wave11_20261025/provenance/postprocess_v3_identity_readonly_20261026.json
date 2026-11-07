@@ -1,0 +1,50 @@
+[
+  {
+    "ProcessId": 60444,
+    "ParentProcessId": 60008,
+    "Name": "python.exe",
+    "ExecutablePath": "C:\\python312\\python.exe",
+    "CommandLine": "\"C:\\python312\\python.exe\" D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\postprocess_w11.py --wait-and-profile",
+    "CreationDate": "2026-10-25T19:12:31.291868+08:00"
+  },
+  {
+    "ProcessId": 61200,
+    "ParentProcessId": 12408,
+    "Name": "Weixin.exe",
+    "ExecutablePath": "C:\\Program Files\\Tencent\\Weixin\\Weixin.exe",
+    "CommandLine": "\"C:\\Program Files\\Tencent\\Weixin\\Weixin.exe\" ",
+    "CreationDate": "2026-10-25T20:24:03.802255+08:00"
+  },
+  {
+    "ProcessId": 26536,
+    "ParentProcessId": 60292,
+    "Name": "LenovoAppStore.exe",
+    "ExecutablePath": null,
+    "CommandLine": null,
+    "CreationDate": "2026-10-25T21:57:21.176166+08:00"
+  },
+  {
+    "ProcessId": 22716,
+    "ParentProcessId": 63244,
+    "Name": "WeChatAppEx.exe",
+    "ExecutablePath": "C:\\Users\\user\\AppData\\Roaming\\Tencent\\xwechat\\xplugin\\plugins\\RadiumWMPF\\WeChatAppEx.exe",
+    "CommandLine": "\"C:\\Users\\user\\AppData\\Roaming\\Tencent\\xwechat\\xplugin\\plugins\\RadiumWMPF\\WeChatAppEx.exe\" --type=gpu-process --client_version=4065599288 --enable-crash-reporter --wmpf_root_dir=\"C:\\Users\\user\\AppData\\Roaming\\Tencent\\xwechat\\radium\" --instance-index=0 --flue-runtime-dir=\"C:\\Users\\user\\AppData\\Roaming\\Tencent\\xwechat\\xplugin\\plugins\\RadiumWMPF\\25799\\extracted\\runtime\" --product-id=1002 --gpu-preferences=SAAAAAAAAADgAAAEAAAAAAAAAAAAAGAAAQAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAQAAAAAAAAABAAAAAAAAAACAAAAAAAAAAIAAAAAAAAAA== --disable-mojo-broker --field-trial-handle=2764,i,8649231256652496654,9923063219141824036,262144 --enable-features=FluentOverlayScrollbar,WinSystemLocationPermission,XWorker --disable-features=AudioServiceOutOfProcess,AutoupgradeMixedContent,BackForwardCache,DigitalGoodsApi,PeriodicBackgroundSync,TFLiteLanguageDetectionEnabled,Vulkan,WebOTP --variations-seed-version --trace-process-track-uuid=3190708989122997041 --log-level=2 --mojo-platform-channel-handle=3032 /prefetch:2",
+    "CreationDate": "2026-10-25T22:05:20.010797+08:00"
+  },
+  {
+    "ProcessId": 53264,
+    "ParentProcessId": 1340,
+    "Name": "LogonUI.exe",
+    "ExecutablePath": null,
+    "CommandLine": null,
+    "CreationDate": "2026-10-26T00:24:41.317607+08:00"
+  },
+  {
+    "ProcessId": 65624,
+    "ParentProcessId": 4068,
+    "Name": "TabTip.exe",
+    "ExecutablePath": null,
+    "CommandLine": null,
+    "CreationDate": "2026-10-26T00:24:42.389861+08:00"
+  }
+]

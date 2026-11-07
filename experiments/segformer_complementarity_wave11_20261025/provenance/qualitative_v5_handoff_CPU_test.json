@@ -1,0 +1,40 @@
+{
+  "at": "2026-10-26T09:23:30+08:00",
+  "passed": true,
+  "checks": {
+    "actual_handoff_accepted_original_null_unchanged": true,
+    "missing_exec_receipt_rejected": "QUALITATIVE_RENDER_REFUSED: CPU handoff exec receipt is absent/invalid",
+    "mismatched_exit_code_rejected": "QUALITATIVE_RENDER_REFUSED: CPU handoff lacks genuine recorded exec exit0",
+    "mismatched_CPU_only_rejected": "QUALITATIVE_RENDER_REFUSED: CPU handoff lacks genuine recorded exec exit0",
+    "mismatched_source_rejected": "QUALITATIVE_RENDER_REFUSED: CPU handoff lacks genuine recorded exec exit0",
+    "mismatched_witness_sha256_rejected": "QUALITATIVE_RENDER_REFUSED: CPU handoff witness SHA mismatch",
+    "mismatched_old_wrapper_sha256_rejected": "QUALITATIVE_RENDER_REFUSED: handoff input SHA/path does not match current completion evidence",
+    "mismatched_automatic_child_receipt_sha_rejected": "QUALITATIVE_RENDER_REFUSED: handoff input SHA/path does not match current completion evidence",
+    "mismatched_final_delivery_sha_rejected": "QUALITATIVE_RENDER_REFUSED: handoff input SHA/path does not match current completion evidence",
+    "wrapper_nonzero_rejected": "QUALITATIVE_RENDER_REFUSED: unknown wrapper version or nonzero exit is not handoff-eligible",
+    "wrong_wrapper_version_rejected": "QUALITATIVE_RENDER_REFUSED: unknown wrapper version or nonzero exit is not handoff-eligible",
+    "witness_failure_rejected": "QUALITATIVE_RENDER_REFUSED: CPU handoff witness did not verify the exact completed inputs",
+    "full_original_completion_and_all_owned_PID_gates_passed": true
+  },
+  "CPU_only": true,
+  "GPU_started": false,
+  "Paddle_imported": false,
+  "release_created": false,
+  "training_modified": false,
+  "original_wrapper_exit_code": null,
+  "script_sha256": "964e590058f623f97165a7edcd416ce794252d606b931a21e7c02a0eee3dd279",
+  "actual_handoff": {
+    "mode": "verified_CPU_handoff_after_transport_exit_unknown",
+    "original_wrapper_exit_code": null,
+    "original_wrapper_exit_code_rewritten": false,
+    "original_wrapper_path": "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\results\\postprocess_waiter_20261026_091336_exit.json",
+    "original_wrapper_sha256": "4c9ce80b79b96a9fb9c71a70f9e86400b4cc4c486c3dbab7e154700c10ea811b",
+    "actual_handoff_exec_exit_code": 0,
+    "exec_receipt_path": "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\results\\postprocess_handoff_exec_receipt.json",
+    "exec_receipt_sha256": "d70737aedd523ed62ac0e78dab67231e314243243ae91c7b92ac7cf7bcca59f7",
+    "witness_path": "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\results\\postprocess_handoff_witness.json",
+    "witness_sha256": "a75d1880ef49b85289e207cf8ce932dfbf3853d511bb20deecde3aaf4fdc1b6f",
+    "original_report_bundle_sha256": "458d831f9d897a40556056b24b04078059d0c1879aad027121aac0832d32a96f",
+    "disclosure": "Original v4 wrapper exit remains unknown/null. Separate CPU handoff after actual profile child0, 10 memory0, complete artifacts and all owned exits; original wrapper is not relabelled. First audit probe exit1 was an overstrict comparison against final mutable stdout; only the two declared transport snapshots may differ, no model/config/CSV differs."
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "version": "W11-qualitative-v5-verified-handoff",
+  "frozen_at": "2026-10-26T09:24:02+08:00",
+  "files": {
+    "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\qualitative_w11_v5.py": "964e590058f623f97165a7edcd416ce794252d606b931a21e7c02a0eee3dd279",
+    "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\provenance\\fixed24_val_cases.json": "8ba37712a2a4a15ed2db42f13f65c7150530896f09f1c36ec37134978943c619",
+    "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\postprocess_w11_v4.py": "2a6efc2d0e6a3bc8a98812412a1969b79f8a571f61d5ecc8040b62a8f789f9f7",
+    "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\provenance\\release.json": "f5f2cf5e774111dbbdbf365f6279ee57641d39f5da0400e3f2fe951dc5d664ef",
+    "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\provenance\\postprocess_release_v4.json": "2c9c5ef3405d4a16e98e7132336944ff16e62425ff5b64adcb46419e78d90401",
+    "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\provenance\\evaluation_versions.json": "01e490078fe9ef52ac2f139bf01304c8638938949c4c7d99b31c026a83b35da4",
+    "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\provenance\\postprocess_desktop_baseline_v4.json": "c62909df59a28b50ecda4ea41bc182ba685b1dd89a95bf8e4ab9abebd42b0219",
+    "D:\\论文复现\\experiments\\local_structure_20260930\\provenance\\train_val_manifest.json": "55ba5746e33c6bcc082f0129fac18cd75d9671ff1483c10d15455c915f3cc1e4",
+    "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\provenance\\qualitative_self_test_v5.json": "71f12b4c59b72426473044385b4f3b94e8e93ae03585e6b58c99cd02a5ebbe45",
+    "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\QUALITATIVE_API_v5.md": "5b277ea50d8829ca2b01c458fe00e7a46a254c760aa1a945fba44246b0c913ec",
+    "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\results\\postprocess_handoff_exec_receipt.json": "d70737aedd523ed62ac0e78dab67231e314243243ae91c7b92ac7cf7bcca59f7",
+    "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\results\\postprocess_handoff_witness.json": "a75d1880ef49b85289e207cf8ce932dfbf3853d511bb20deecde3aaf4fdc1b6f"
+  },
+  "independent_of_training_and_postprocess": true,
+  "purpose": "fixed24 val / frozen five models seed42 / official infer.inference / no new threshold",
+  "render_requires": "15 complete + profile/report child exit0 + wrapper exit0 or exact verified CPU handoff + all owned PID exited + WDDM guard",
+  "GPU_execution_in_preparation": false,
+  "training_modified": false,
+  "test_read": false
+}

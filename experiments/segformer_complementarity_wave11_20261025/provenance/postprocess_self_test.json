@@ -1,0 +1,13 @@
+{
+  "at": "2026-10-25T19:11:09+08:00",
+  "passed": true,
+  "scope": "Python syntax/import and pure arithmetic/PID query; no Paddle/GPU/imported images",
+  "file_sha256": "0c32b46b99cc3cba907cf10158a7aee3697b0a6f2823a1506f3ff0587e1006a2",
+  "GPU_started": false,
+  "training_started": false,
+  "full_profile_ready": false,
+  "incomplete_training_blocks_GPU": true,
+  "WDDM_type_policy_tests_passed": true,
+  "recorded_desktop_CplusG_count": 39,
+  "desktop_baseline_sha256": "2a217371e62c788e6e4ef92f1e589b7a38893938d4243b752b0b2bb7fd0173f3"
+}

@@ -1,0 +1,10 @@
+{
+  "at": "2026-10-27T00:45:14+08:00",
+  "approved": true,
+  "release_sha256": "157d0af16466f15e0b274174260fb5380e0cafca5690cd5ceeb50cbfc6d17cbe",
+  "independent_review": "D:\\论文复现\\experiments\\segformer_simplify_wave12_20261026\\provenance\\independent_workflow_review_d3348d35_v2_approved.json",
+  "independent_review_sha256": "40d34f22ccfd4c806a684ed43b85d4c20da208eb0e3140c158acf79cedfc87d8",
+  "authorized_scope": "User-authorized replacement, Aligned simplification and controlled S4 experiments",
+  "GPU_training_already_started": false,
+  "test_used": false
+}

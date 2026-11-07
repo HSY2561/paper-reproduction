@@ -1,0 +1,40 @@
+{
+  "at": "2026-10-27T00:43:08.960291+08:00",
+  "approved": false,
+  "CPU_only": true,
+  "GPU_started": false,
+  "source_changes": false,
+  "source_sha256": {
+    "workflow_w12.py": "d3348d355cf7e3d92f40c78ee74c567d67b9a017e14e31526c197416981e1495",
+    "queue_common.py": "3cf9e382e998b68c3bfbafb61ebbeca197e4bd9716260b4633693d7a970c8ed4",
+    "launch_once.py": "745568a6cc25138bc80aa7e9b1db5c3e99afa943611f96f4c1346c5126ce090e",
+    "profile_w12.py": "d489652019f76fb04e3f1791a240aa2b44b4f3d4cdddb755d2afcb9831728102"
+  },
+  "blocking_findings": [
+    {
+      "id": "W12-CONTROLS-LOCAL-INIT",
+      "path": "workflow_w12.py:153",
+      "trigger": "controls() real CPU call",
+      "problem": "weights/init/R0_s42.pdparams and matching43/44 were not copied, while controls() requires them. FileNotFoundError prevents any GPU launch.",
+      "remediation": "Copy exact borrowed R0 three initial binaries and verify registered SHA before static freeze; no algorithm/source change required."
+    }
+  ],
+  "fixed_findings": [
+    "profile output mkdir parent/child collision",
+    "barePID termination of stage child",
+    "unbound external4488manifest",
+    "execution approval did not bind releaseSHA",
+    "null/live owned child could continue next candidate"
+  ],
+  "CPU_checks_passed_before_control_failure": [
+    "96 config/init hashes",
+    "72000 planned indices",
+    "mocked full18 orchestration",
+    "metric gate edges",
+    "Pareto",
+    "three-seed mean and2of3",
+    "profile nonexistent inner measurement output",
+    "profile arbitrary2model schema"
+  ],
+  "mock_fixture_note": "One prior synthetic profile fixture omitted profile_exit.json presence; fixture corrected without source changes. No true performance evidence generated."
+}

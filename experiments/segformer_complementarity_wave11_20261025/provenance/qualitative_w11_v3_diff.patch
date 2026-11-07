@@ -1,0 +1,55 @@
+--- qualitative_w11.py
++++ qualitative_w11_v3.py
+@@ -29,7 +29,7 @@
+ DATA = Path(r'C:\Users\user\algolab_data')
+ REFERENCE = ROOT.parent / 'local_structure_20260930/provenance/train_val_manifest.json'
+ FIXED = ROOT / 'provenance/fixed24_val_cases.json'
+-RELEASE = ROOT / 'provenance/qualitative_release.json'
++RELEASE = ROOT / 'provenance/qualitative_release_v3.json'
+ GROUPS = ('R0', 'E0', 'E1', 'E2', 'E3')
+ 
+ 
+@@ -69,7 +69,7 @@
+ 
+ 
+ def postprocess():
+-    spec = importlib.util.spec_from_file_location('w11_frozen_postprocess', ROOT / 'postprocess_w11.py')
++    spec = importlib.util.spec_from_file_location('w11_frozen_postprocess', ROOT / 'postprocess_w11_v3.py')
+     module = importlib.util.module_from_spec(spec)
+     spec.loader.exec_module(module)
+     return module
+@@ -313,17 +313,17 @@
+                      fixed_case_count=len(cases['cases']), training_incomplete_render_refusal=refused,
+                      real_images_read=False, GPU_imported=False, GPU_inference=False, test_read=False,
+                      script_sha256=sha(__file__))
+-    self_path = ROOT / 'provenance/qualitative_self_test.json'
++    self_path = ROOT / 'provenance/qualitative_self_test_v3.json'
+     if self_path.exists():
+         raise RuntimeError('Prior qualitative preparation evidence exists; isolate before a new version')
+     write(self_path, self_test)
+-    files = [Path(__file__), FIXED, ROOT / 'postprocess_w11.py', ROOT / 'provenance/release.json',
+-             ROOT / 'provenance/postprocess_release.json', ROOT / 'provenance/evaluation_versions.json',
+-             ROOT / 'provenance/postprocess_desktop_baseline.json', REFERENCE, self_path,
+-             ROOT / 'QUALITATIVE_API.md']
++    files = [Path(__file__), FIXED, ROOT / 'postprocess_w11_v3.py', ROOT / 'provenance/release.json',
++             ROOT / 'provenance/postprocess_release_v3.json', ROOT / 'provenance/evaluation_versions.json',
++             ROOT / 'provenance/postprocess_desktop_baseline_v3.json', REFERENCE, self_path,
++             ROOT / 'QUALITATIVE_API_v3.md']
+     if RELEASE.exists():
+         raise RuntimeError('Prior qualitative release exists; preserve before making a new version')
+-    write(RELEASE, dict(version='W11-qualitative-v2', frozen_at=now(),
++    write(RELEASE, dict(version='W11-qualitative-v3-desktop-baseline', frozen_at=now(),
+           files={str(path.resolve()): sha(path) for path in files},
+           independent_of_training_and_postprocess=True,
+           purpose='fixed24 val / frozen five models seed42 / official infer.inference / no new threshold',
+@@ -357,8 +357,8 @@
+               data_list_created=False, argmax_only=True, threshold_search=False, test_read=False))
+         provenance_folder = directory / 'provenance'
+         provenance_folder.mkdir()
+-        for source in (Path(__file__), ROOT / 'QUALITATIVE_API.md', RELEASE,
+-                       ROOT / 'provenance/qualitative_self_test.json'):
++        for source in (Path(__file__), ROOT / 'QUALITATIVE_API_v3.md', RELEASE,
++                       ROOT / 'provenance/qualitative_self_test_v3.json'):
+             shutil.copy2(source, provenance_folder / source.name)
+         fixed_record = fixed_cases()
+         write(provenance_folder / 'fixed24_selection.json', dict(

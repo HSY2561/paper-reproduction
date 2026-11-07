@@ -1,0 +1,172 @@
+{
+  "at": "2026-10-26T09:30:28.437071+08:00",
+  "scope": "W11 all15 matched-seed val-only experiment, quantitative and fixed24 visual supplement; no new test",
+  "files": [
+    {
+      "path": "D:\\论文复现\\SegFormer_W11实验结论与交付索引_20261026.md",
+      "archive_name": "00_结论与交付索引.md",
+      "size_bytes": 10253,
+      "sha256": "daa9d9abdb839cf50b54fab4415a17c33dd4584c23ff4ce5ebae6863f8182ee7"
+    },
+    {
+      "path": "D:\\论文复现\\SegFormer_E0-E3两模块互补实验报告_20261025.md",
+      "archive_name": "01_三seed与效率完整报告.md",
+      "size_bytes": 6679,
+      "sha256": "2e8ff047e450c6561cd10a6d96bb59b52c6dc2adb6c1f4b991222bb73135c3d9"
+    },
+    {
+      "path": "D:\\论文复现\\模型消融文档.md",
+      "archive_name": "02_模型消融文档含历史与本轮.md",
+      "size_bytes": 19576,
+      "sha256": "e9523e2a5c281152ec88caa07be8758f678a8e3ce85d00c2f35406151be46b2b"
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\results\\postprocess\\20261026_091342_901909\\W11_reports_and_reproduction.zip",
+      "archive_name": "archives/W11_reports_and_reproduction.zip",
+      "size_bytes": 8571377,
+      "sha256": "458d831f9d897a40556056b24b04078059d0c1879aad027121aac0832d32a96f"
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\results\\qualitative\\20261026_092425_816083\\W11_fixed24_qualitative_supplement.zip",
+      "archive_name": "archives/W11_fixed24_qualitative_supplement.zip",
+      "size_bytes": 33827403,
+      "sha256": "ab0a8fc33a8ad4bc5cb93cedd978dca0ab2e76d87e8b23d132e79602b21cf2df"
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\provenance\\independent_final_training_audit_20261026.json",
+      "archive_name": "audits/independent_final_training_audit_20261026.json",
+      "size_bytes": 41530,
+      "sha256": "8d013c2ce625644380f152db03ff040eaad011afb10002c5aa2e92833edfdcff"
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\provenance\\independent_final_training_audit_20261026.py",
+      "archive_name": "audits/independent_final_training_audit_20261026.py",
+      "size_bytes": 11548,
+      "sha256": "b7038d5baaa315788b78ed36c05be1ca76fb1b4f6d132c4e3e614b4276e24521"
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\provenance\\independent_delivery_audit_20261026.json",
+      "archive_name": "audits/independent_delivery_audit_20261026.json",
+      "size_bytes": 8820,
+      "sha256": "5e53da70fbb03f386cdf77140d81ba17ab5a9ed0f438a12f973efe7a52baca16"
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\provenance\\independent_qualitative_audit_20261026.json",
+      "archive_name": "audits/independent_qualitative_audit_20261026.json",
+      "size_bytes": 46471,
+      "sha256": "ff3a7d9db7578b0ee94fd830542fde7e4a8fc2ea51bb1f3e29b8d224e1f20dab"
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\provenance\\postprocess_v3_independent_review.json",
+      "archive_name": "audits/postprocess_v3_independent_review.json",
+      "size_bytes": 2489,
+      "sha256": "1a0d75a61db3dcf1c110be43b2aada88bf3896a2857cecea1a3b90397561a6ad"
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\provenance\\postprocess_v4_independent_review.json",
+      "archive_name": "audits/postprocess_v4_independent_review.json",
+      "size_bytes": 2047,
+      "sha256": "90656c6bfcc217a6a16476c7423b7bd03d04689205adb47c262dab75fea22526"
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\provenance\\qualitative_v5_independent_review.json",
+      "archive_name": "audits/qualitative_v5_independent_review.json",
+      "size_bytes": 2057,
+      "sha256": "210c20997f681fecd68e844e8bf5740f58fd90b384629840a361ade92fa88807"
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\provenance\\qualitative_v5_handoff_CPU_test.json",
+      "archive_name": "audits/qualitative_v5_handoff_CPU_test.json",
+      "size_bytes": 3308,
+      "sha256": "c9d7ef1ed14693bc230de66944b42f319289abd5ca16d6b2fe978fdd65a9d7e1"
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\provenance\\qualitative_release_v5.json",
+      "archive_name": "audits/qualitative_release_v5.json",
+      "size_bytes": 2721,
+      "sha256": "7fcfc9a0ac1f1280c3bd55a91c8fea2fdf2f6bd84e78bbe87f9157481b9a0c32"
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\results\\postprocess_handoff_witness.json",
+      "archive_name": "handoff/postprocess_handoff_witness.json",
+      "size_bytes": 4150,
+      "sha256": "a75d1880ef49b85289e207cf8ce932dfbf3853d511bb20deecde3aaf4fdc1b6f"
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\results\\postprocess_handoff_exec_receipt.json",
+      "archive_name": "handoff/postprocess_handoff_exec_receipt.json",
+      "size_bytes": 894,
+      "sha256": "d70737aedd523ed62ac0e78dab67231e314243243ae91c7b92ac7cf7bcca59f7"
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\results\\qualitative_v5_actual_exec_receipt.json",
+      "archive_name": "handoff/qualitative_v5_actual_exec_receipt.json",
+      "size_bytes": 333,
+      "sha256": "d7cd3b7684491dad149169563df6906cdb8e99ce1acdc6bceae79f9dabccff34"
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\results\\own_task_cleanup_20261026.json",
+      "archive_name": "handoff/own_task_cleanup_20261026.json",
+      "size_bytes": 1511,
+      "sha256": "020c6d1ff89778d190cebafdfa8511662fe7fbae9733dae061bdcd8a6725fce3"
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\results\\postprocess_waiter_20261026_091336_exit.json",
+      "archive_name": "handoff/postprocess_waiter_20261026_091336_exit.json",
+      "size_bytes": 621,
+      "sha256": "4c9ce80b79b96a9fb9c71a70f9e86400b4cc4c486c3dbab7e154700c10ea811b"
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\results\\automatic_postprocess_child_exit.json",
+      "archive_name": "handoff/automatic_postprocess_child_exit.json",
+      "size_bytes": 600,
+      "sha256": "512b25ad0fda29726452685c6c9c88fc03c927562d53c9f922c2a68dbbe00858"
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\results\\final_delivery_done.json",
+      "archive_name": "handoff/final_delivery_done.json",
+      "size_bytes": 2472,
+      "sha256": "ae678f5b2e98d24a90db13387901d171dde49c2719d332d7b8dd28eed6eac887"
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\results\\qualitative_latest.json",
+      "archive_name": "handoff/qualitative_latest.json",
+      "size_bytes": 840,
+      "sha256": "02f81534924ac1c16ae5f5c17454ff10c048178462dabf99c332cea78b5205c9"
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\provenance\\cleanup_Codex-SegFormer-W11-fourcell-once-20261025_20261026.xml",
+      "archive_name": "handoff/cleanup_Codex-SegFormer-W11-fourcell-once-20261025_20261026.xml",
+      "size_bytes": 1907,
+      "sha256": "59a1db637d1387fc60479b9aee6bafd6c9a08c8ccc37b3610d0215aa34644137"
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\provenance\\cleanup_Codex-SegFormer-W11-postprocess-once-20261025_20261026.xml",
+      "archive_name": "handoff/cleanup_Codex-SegFormer-W11-postprocess-once-20261025_20261026.xml",
+      "size_bytes": 1810,
+      "sha256": "7ca65c1eb2e4ae3b3d746cc2f70b2c77b927d18db66ec8f8c469ce4fc88f071e"
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\qualitative_w11_v5.py",
+      "archive_name": "handoff/qualitative_w11_v5.py",
+      "size_bytes": 36239,
+      "sha256": "964e590058f623f97165a7edcd416ce794252d606b931a21e7c02a0eee3dd279"
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\QUALITATIVE_API_v5.md",
+      "archive_name": "handoff/QUALITATIVE_API_v5.md",
+      "size_bytes": 5417,
+      "sha256": "5b277ea50d8829ca2b01c458fe00e7a46a254c760aa1a945fba44246b0c913ec"
+    },
+    {
+      "path": "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\provenance\\qualitative_w11_v5_diff.patch",
+      "archive_name": "handoff/qualitative_w11_v5_diff.patch",
+      "size_bytes": 10686,
+      "sha256": "6aa84449775f1e0c2e71e12cb5f4c3ad6e5d35f17c1ad849fce40e8b61f7c8c8"
+    }
+  ],
+  "full_raw_dataset_included": false,
+  "large_weights_included": false,
+  "qualitative_fixed24_export_included": true,
+  "original_wrapper_unknown_preserved": true
+}

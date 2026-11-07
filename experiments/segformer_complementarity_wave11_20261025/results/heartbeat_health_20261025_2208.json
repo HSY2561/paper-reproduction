@@ -1,0 +1,53 @@
+{
+  "at": "2026-10-25T22:09:11.085384+08:00",
+  "complete": 6,
+  "rows": [
+    {
+      "id": "W11_E0_s42",
+      "train_exit": 0,
+      "mIoU": 0.8280317774283685,
+      "checkpoint_sha256": "07122e56c57178423f400058b909fcb1530010745a0c6a486e777083816cb7f9"
+    },
+    {
+      "id": "W11_E1_s42",
+      "train_exit": 0,
+      "mIoU": 0.824962192176784,
+      "checkpoint_sha256": "2cf446c1fc4a1fe402d300ebdb4b55527e196746b2d873810bde6732a668ded8"
+    },
+    {
+      "id": "W11_E2_s42",
+      "train_exit": 0,
+      "mIoU": 0.8289680212337033,
+      "checkpoint_sha256": "e251c5127c2cfbf3d56eeafc31d23f62fe868ab891d7cddfca2241216e7b2147"
+    },
+    {
+      "id": "W11_E3_s42",
+      "train_exit": 0,
+      "mIoU": 0.8267580434363172,
+      "checkpoint_sha256": "e1c9ef70162af6d9b8f688e9d39578c4d79c1f6fd0347fa16ed519cc16f780b9"
+    },
+    {
+      "id": "W11_E0_s43",
+      "train_exit": 0,
+      "mIoU": 0.8285055345969718,
+      "checkpoint_sha256": "697349b94e5e0166e1b9acad276b4ed031c72303af300e47fe21dc77ebe6daef"
+    },
+    {
+      "id": "W11_E1_s43",
+      "train_exit": 0,
+      "mIoU": 0.8298016591115145,
+      "checkpoint_sha256": "4743dcb4d66eab4563796f56dbe05250bb3e2ea5ce6489c9b2766f939e4ab4bd"
+    }
+  ],
+  "training_release_verified": true,
+  "postprocess_release_verified": true,
+  "qualitative_release_verified": true,
+  "active": "W11_E2_s43_train",
+  "latest_real_iter": 13700,
+  "active_train_exit": "unknown_running",
+  "free_gib": 15.441,
+  "log_stall_seconds": 1.0,
+  "postprocess": "waiting",
+  "test_read": false,
+  "notification_required": false
+}

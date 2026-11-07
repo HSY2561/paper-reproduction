@@ -1,0 +1,13 @@
+{
+  "at": "2026-10-26T09:13:17+08:00",
+  "passed": true,
+  "image_array_tests": true,
+  "PNG_roundtrip_exact": true,
+  "fixed_case_count": 24,
+  "training_incomplete_render_refusal": null,
+  "real_images_read": false,
+  "GPU_imported": false,
+  "GPU_inference": false,
+  "test_read": false,
+  "script_sha256": "6ccf98d401c12622330a7720529ad47ecb088bd55dd379959deb680ede26f70f"
+}

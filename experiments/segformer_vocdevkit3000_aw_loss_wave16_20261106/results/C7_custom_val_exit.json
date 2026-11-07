@@ -1,0 +1,7 @@
+{
+  "tag": "C7_AW_BoundaryWeightedCE_custom_val",
+  "exit_code": 0,
+  "result": "results/C7_custom_val.json",
+  "expected_count": 587,
+  "test_used": false
+}

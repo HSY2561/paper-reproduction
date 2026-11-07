@@ -1,0 +1,9 @@
+{
+  "tag": "C6_AW_CE_Dice_train",
+  "exit_code": 0,
+  "seed": 42,
+  "iters": 18000,
+  "selected": "ordinary@13000",
+  "command": "C:\\venv_bisenet\\Scripts\\python.exe src/PaddleSeg-2.10.0/tools/train.py --config configs/C6_AW_CE_Dice.yml --save_dir training/C6_AW_CE_Dice --iters 18000 --do_eval --use_ema --save_interval 1000 --seed 42 --log_iters 100 --num_workers 0",
+  "test_used": false
+}

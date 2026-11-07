@@ -1,0 +1,16 @@
+{
+  "at": "2026-10-25T20:15:47.769337",
+  "passed": true,
+  "command": [
+    "C:/venv_bisenet/Scripts/python.exe",
+    "qualitative_w11.py",
+    "--render"
+  ],
+  "actual_exit_code": 1,
+  "expected_refusal": true,
+  "stderr": "Traceback (most recent call last):\n  File \"D:\\���ĸ���\\experiments\\segformer_complementarity_wave11_20261025\\qualitative_w11.py\", line 558, in <module>\n    sys.exit(main())\n             ^^^^^^\n  File \"D:\\���ĸ���\\experiments\\segformer_complementarity_wave11_20261025\\qualitative_w11.py\", line 554, in main\n    return render()\n           ^^^^^^^^\n  File \"D:\\���ĸ���\\experiments\\segformer_complementarity_wave11_20261025\\qualitative_w11.py\", line 338, in render\n    finished = require_finished(pp)\n               ^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\���ĸ���\\experiments\\segformer_complementarity_wave11_20261025\\qualitative_w11.py\", line 111, in require_finished\n    raise RuntimeError('QUALITATIVE_RENDER_REFUSED: training is incomplete ('\nRuntimeError: QUALITATIVE_RENDER_REFUSED: training is incomplete (2/15); no GPU import/inference\n",
+  "stdout": "",
+  "GPU_import_or_inference": false,
+  "training_and_postprocess_releases_unchanged": true,
+  "qualitative_release_sha256": "333c1c065c0d04a953a5e5a3d244bb0982837fd4ec751a43557c5af9d212cb21"
+}

@@ -1,0 +1,44 @@
+{
+  "at": "2026-10-27T09:20:36+08:00",
+  "stage": "phase2_profile",
+  "workflow_exit_code": 1,
+  "failure": {
+    "at": "2026-10-27T09:11:34+08:00",
+    "error": "RuntimeError('Actual profile failed; preserve all evidence: D:\\\\论文复现\\\\experiments\\\\segformer_simplify_wave12_20261026\\\\profile\\\\phase2\\\\attempt_129')",
+    "traceback": "Traceback (most recent call last):\n  File \"D:\\论文复现\\experiments\\segformer_simplify_wave12_20261026\\workflow_w12.py\", line 707, in run\n    p2=run_profile('phase2',profile_models(records,matched))\n       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\论文复现\\experiments\\segformer_simplify_wave12_20261026\\workflow_w12.py\", line 468, in run_profile\n    raise RuntimeError('Actual profile failed; preserve all evidence: ' + str(directory))\nRuntimeError: Actual profile failed; preserve all evidence: D:\\论文复现\\experiments\\segformer_simplify_wave12_20261026\\profile\\phase2\\attempt_129\n",
+    "integrity_failure": false,
+    "test_used": false
+  },
+  "last_profile_active_receipt": {
+    "at": "2026-10-27T09:11:32+08:00",
+    "exit_code": 3,
+    "guard_reason": "disk_below4GiB",
+    "elapsed_seconds": 0.81,
+    "command": [
+      "C:\\venv_bisenet\\Scripts\\python.exe",
+      "D:\\论文复现\\experiments\\segformer_simplify_wave12_20261026\\profile_w12.py",
+      "--spec",
+      "D:\\论文复现\\experiments\\segformer_simplify_wave12_20261026\\provenance\\phase2_profile_spec.json",
+      "--output",
+      "D:\\论文复现\\experiments\\segformer_simplify_wave12_20261026\\profile\\phase2\\attempt_129\\measurement"
+    ],
+    "identity": {
+      "pid": 49564,
+      "running": true,
+      "creation_time_filetime": 134375370919844201,
+      "executable_path": "C:\\Users\\user\\算法实验\\venv_bisenet\\Scripts\\python.exe",
+      "observed_exit_code": 259,
+      "identity_source": "OpenProcess_GetProcessTimes"
+    },
+    "release_sha256": "157d0af16466f15e0b274174260fb5380e0cafca5690cd5ceeb50cbfc6d17cbe",
+    "test_used": false,
+    "active": false
+  },
+  "profile_attempts": 129,
+  "phase1_profile_receipt": "D:\\论文复现\\experiments\\segformer_simplify_wave12_20261026\\results\\phase1_profile_receipt.json",
+  "training_results_preserved": true,
+  "test_used": false,
+  "current_free_gib": 10.451210021972656,
+  "required_user_action": "Do not restart or delete evidence automatically; inspect/free disk and resolve protected GPU background before any separately reviewed recovery.",
+  "restart_not_started": true
+}

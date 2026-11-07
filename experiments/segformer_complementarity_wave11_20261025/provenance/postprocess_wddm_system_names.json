@@ -1,0 +1,16 @@
+{
+  "observed_before": "2026-10-25T19:07:55+08:00",
+  "source": "Actual approved global read-only Get-Process -Id 1404,21012,24132,59368; exit0; exact query timestamp was not recorded",
+  "reason": "nvidia-smi on this WDDM driver returns desktop C+G entries in query-compute-apps; these are not automatically foreign training jobs",
+  "observed_names": [
+    {"pid": 1404, "process_name": "dwm", "path": null, "nvidia_type": "C+G"},
+    {"pid": 21012, "process_name": "LenovoAppStore", "path": null, "nvidia_type": "C+G"},
+    {"pid": 24132, "process_name": "TabTip", "path": null, "nvidia_type": "C+G"},
+    {"pid": 59368, "process_name": "ToDesk", "path": null, "nvidia_type": "C+G"}
+  ],
+  "actual_training": {"controller_pid": 61280, "venv_launcher_pid": 2996, "gpu_python_pid": 54632, "gpu_type": "C"},
+  "permit_unknown_foreign_compute": false,
+  "terminate_user_applications": false,
+  "profiling_during_training_allowed": false,
+  "desktop_background_load_must_be_reported": true
+}

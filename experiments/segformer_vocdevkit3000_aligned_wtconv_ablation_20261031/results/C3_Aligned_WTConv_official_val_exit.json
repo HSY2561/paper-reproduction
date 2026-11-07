@@ -1,0 +1,19 @@
+{
+  "tag": "C3_Aligned_WTConv_official_val",
+  "exit_code": 0,
+  "guard_reason": null,
+  "ended_at": "2026-11-01T01:24:58+08:00",
+  "command": [
+    "C:\\venv_bisenet\\Scripts\\python.exe",
+    "D:\\论文复现\\experiments\\segformer_vocdevkit3000_aligned_wtconv_ablation_20261031\\src\\PaddleSeg-2.10.0\\tools\\val.py",
+    "--config",
+    "D:\\论文复现\\experiments\\segformer_vocdevkit3000_aligned_wtconv_ablation_20261031\\configs\\C3_Aligned_WTConv.yml",
+    "--model_path",
+    "D:\\论文复现\\experiments\\segformer_vocdevkit3000_aligned_wtconv_ablation_20261031\\checkpoints\\C3_Aligned_WTConv\\model.pdparams",
+    "--num_workers",
+    "0"
+  ],
+  "stdout": "D:\\论文复现\\experiments\\segformer_vocdevkit3000_aligned_wtconv_ablation_20261031\\logs\\C3_Aligned_WTConv_official_val.stdout.log",
+  "stderr": "D:\\论文复现\\experiments\\segformer_vocdevkit3000_aligned_wtconv_ablation_20261031\\logs\\C3_Aligned_WTConv_official_val.stderr.log",
+  "test_used": false
+}

@@ -1,0 +1,14 @@
+{
+  "at": "2026-10-27T00:41:21.3531346+08:00",
+  "source": "tools.exec_command actual CPU self-test exit",
+  "command": "C:\\venv_bisenet\\Scripts\\python.exe workflow_w12.py --self-test",
+  "exit_code": 0,
+  "chunk_id": "5f3272",
+  "source_sha256": "d3348d355cf7e3d92f40c78ee74c567d67b9a017e14e31526c197416981e1495",
+  "queue_common_sha256": "3cf9e382e998b68c3bfbafb61ebbeca197e4bd9716260b4633693d7a970c8ed4",
+  "CPU_only": true,
+  "GPU_started": false,
+  "formal_training_started": false,
+  "revision": "Profile nested output, SHA-bound execution approval, process identity + unresolved-child fatal guards",
+  "preserved_previous_receipt": "D:\\论文复现\\experiments\\segformer_simplify_wave12_20261026\\provenance\\workflow_actual_cpu_receipt_v2.json"
+}

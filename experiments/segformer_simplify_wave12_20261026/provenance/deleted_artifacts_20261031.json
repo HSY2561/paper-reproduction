@@ -1,0 +1,20 @@
+{
+  "date": "2026-10-31",
+  "reason": "User-authorized cleanup of failed W12 artifacts to make disk space for the new VOCdevkit3000 run",
+  "deleted_directories": [
+    "training",
+    "weights",
+    "checkpoints",
+    "profile"
+  ],
+  "preserved": [
+    "provenance",
+    "results",
+    "logs",
+    "refine-logs",
+    "configs",
+    "src"
+  ],
+  "original_experiment_status": "failed at phase2 efficiency profile with real workflow exit1 and disk guard",
+  "original_test_used": false
+}

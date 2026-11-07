@@ -1,0 +1,570 @@
+{
+  "version": "W11-postprocess-v4-pinned-desktop-binary-identity",
+  "created_at": "2026-10-26T09:10:01+08:00",
+  "source_xml": "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\provenance\\postprocess_wddm_observed_v4_20261026.xml",
+  "source_xml_sha256": "d1c3a54db96f2b7eff3b2a985589e5e46881f9dfda7bdeeb0508b662443c5c02",
+  "processes": [
+    {
+      "pid": 1404,
+      "type": "C+G",
+      "process_name": "",
+      "basename": "dwm.exe",
+      "gpu_id": "00000000:01:00.0",
+      "name_source": "Toolhelp32_read_only",
+      "used_memory": "N/A"
+    },
+    {
+      "pid": 5332,
+      "type": "C+G",
+      "process_name": "C:\\Users\\user\\AppData\\Roaming\\baidu\\BaiduNetdisk\\module\\BrowserEngine\\BaiduNetdiskUnite.exe",
+      "basename": "BaiduNetdiskUnite.exe",
+      "gpu_id": "00000000:01:00.0",
+      "name_source": "nvidia_xml",
+      "used_memory": "N/A"
+    },
+    {
+      "pid": 5616,
+      "type": "C+G",
+      "process_name": "C:\\Program Files\\LogiOptionsPlus\\logioptionsplus_agent.exe",
+      "basename": "logioptionsplus_agent.exe",
+      "gpu_id": "00000000:01:00.0",
+      "name_source": "nvidia_xml",
+      "used_memory": "N/A"
+    },
+    {
+      "pid": 7260,
+      "type": "C+G",
+      "process_name": "C:\\Windows\\SystemApps\\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\\TextInputHost.exe",
+      "basename": "TextInputHost.exe",
+      "gpu_id": "00000000:01:00.0",
+      "name_source": "nvidia_xml",
+      "used_memory": "N/A"
+    },
+    {
+      "pid": 9264,
+      "type": "C+G",
+      "process_name": "C:\\Program Files (x86)\\Microsoft\\EdgeWebView\\Application\\156.0.4314.42\\msedgewebview2.exe",
+      "basename": "msedgewebview2.exe",
+      "gpu_id": "00000000:01:00.0",
+      "name_source": "nvidia_xml",
+      "used_memory": "N/A"
+    },
+    {
+      "pid": 12408,
+      "type": "C+G",
+      "process_name": "C:\\Windows\\explorer.exe",
+      "basename": "explorer.exe",
+      "gpu_id": "00000000:01:00.0",
+      "name_source": "nvidia_xml",
+      "used_memory": "N/A"
+    },
+    {
+      "pid": 12824,
+      "type": "C+G",
+      "process_name": "C:\\Program Files\\Tencent\\WeType\\3.0.0.38\\wetype_update.exe",
+      "basename": "wetype_update.exe",
+      "gpu_id": "00000000:01:00.0",
+      "name_source": "nvidia_xml",
+      "used_memory": "N/A"
+    },
+    {
+      "pid": 14292,
+      "type": "C+G",
+      "process_name": "C:\\Windows\\System32\\ShellHost.exe",
+      "basename": "ShellHost.exe",
+      "gpu_id": "00000000:01:00.0",
+      "name_source": "nvidia_xml",
+      "used_memory": "N/A"
+    },
+    {
+      "pid": 14784,
+      "type": "C+G",
+      "process_name": "C:\\Windows\\SystemApps\\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\\CrossDeviceResume.exe",
+      "basename": "CrossDeviceResume.exe",
+      "gpu_id": "00000000:01:00.0",
+      "name_source": "nvidia_xml",
+      "used_memory": "N/A"
+    },
+    {
+      "pid": 15736,
+      "type": "C+G",
+      "process_name": "C:\\Windows\\SystemApps\\ShellExperienceHost_cw5n1h2txyewy\\ShellExperienceHost.exe",
+      "basename": "ShellExperienceHost.exe",
+      "gpu_id": "00000000:01:00.0",
+      "name_source": "nvidia_xml",
+      "used_memory": "N/A"
+    },
+    {
+      "pid": 17356,
+      "type": "C+G",
+      "process_name": "C:\\Program Files (x86)\\Microsoft\\Copilot\\Application\\undocked_copilot\\copilotapphost.exe",
+      "basename": "copilotapphost.exe",
+      "gpu_id": "00000000:01:00.0",
+      "name_source": "nvidia_xml",
+      "used_memory": "N/A"
+    },
+    {
+      "pid": 17428,
+      "type": "C+G",
+      "process_name": "C:\\Program Files\\Oray\\AweSun\\flutter\\AweSun.exe",
+      "basename": "AweSun.exe",
+      "gpu_id": "00000000:01:00.0",
+      "name_source": "nvidia_xml",
+      "used_memory": "N/A"
+    },
+    {
+      "pid": 19080,
+      "type": "C+G",
+      "process_name": "C:\\Windows\\SystemApps\\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\\SearchHost.exe",
+      "basename": "SearchHost.exe",
+      "gpu_id": "00000000:01:00.0",
+      "name_source": "nvidia_xml",
+      "used_memory": "N/A"
+    },
+    {
+      "pid": 19096,
+      "type": "C+G",
+      "process_name": "C:\\Windows\\SystemApps\\Microsoft.Windows.StartMenuExperienceHost_cw5n1h2txyewy\\StartMenuExperienceHost.exe",
+      "basename": "StartMenuExperienceHost.exe",
+      "gpu_id": "00000000:01:00.0",
+      "name_source": "nvidia_xml",
+      "used_memory": "N/A"
+    },
+    {
+      "pid": 20520,
+      "type": "C+G",
+      "process_name": "C:\\Users\\user\\AppData\\Local\\OpenAI\\Codex\\runtimes\\cua_node\\1fb7137c46617d50\\bin\\node_modules\\@oai\\sky\\bin\\windows\\swift\\x64\\codex-computer-use-swift.exe",
+      "basename": "codex-computer-use-swift.exe",
+      "gpu_id": "00000000:01:00.0",
+      "name_source": "nvidia_xml",
+      "used_memory": "N/A"
+    },
+    {
+      "pid": 20548,
+      "type": "C+G",
+      "process_name": "C:\\Program Files (x86)\\Microsoft\\EdgeWebView\\Application\\156.0.4314.42\\msedgewebview2.exe",
+      "basename": "msedgewebview2.exe",
+      "gpu_id": "00000000:01:00.0",
+      "name_source": "nvidia_xml",
+      "used_memory": "N/A"
+    },
+    {
+      "pid": 21012,
+      "type": "C+G",
+      "process_name": "",
+      "basename": "LenovoAppStore.exe",
+      "gpu_id": "00000000:01:00.0",
+      "name_source": "Toolhelp32_read_only",
+      "used_memory": "N/A"
+    },
+    {
+      "pid": 22364,
+      "type": "C+G",
+      "process_name": "C:\\Program Files (x86)\\Microsoft\\EdgeWebView\\Application\\156.0.4314.42\\msedgewebview2.exe",
+      "basename": "msedgewebview2.exe",
+      "gpu_id": "00000000:01:00.0",
+      "name_source": "nvidia_xml",
+      "used_memory": "N/A"
+    },
+    {
+      "pid": 22716,
+      "type": "C+G",
+      "process_name": "C:\\Users\\user\\AppData\\Roaming\\Tencent\\xwechat\\XPlugin\\Plugins\\RadiumWMPF\\WeChatAppEx.exe",
+      "basename": "WeChatAppEx.exe",
+      "gpu_id": "00000000:01:00.0",
+      "name_source": "nvidia_xml",
+      "used_memory": "N/A"
+    },
+    {
+      "pid": 23312,
+      "type": "C+G",
+      "process_name": "C:\\Users\\user\\AppData\\Local\\Mathpix\\Mathpix Snipping Tool\\mathpix-snipping-tool.exe",
+      "basename": "mathpix-snipping-tool.exe",
+      "gpu_id": "00000000:01:00.0",
+      "name_source": "nvidia_xml",
+      "used_memory": "N/A"
+    },
+    {
+      "pid": 24132,
+      "type": "C+G",
+      "process_name": "",
+      "basename": "TabTip.exe",
+      "gpu_id": "00000000:01:00.0",
+      "name_source": "Toolhelp32_read_only",
+      "used_memory": "N/A"
+    },
+    {
+      "pid": 24308,
+      "type": "C+G",
+      "process_name": "C:\\Program Files (x86)\\Microsoft\\EdgeWebView\\Application\\156.0.4314.42\\msedgewebview2.exe",
+      "basename": "msedgewebview2.exe",
+      "gpu_id": "00000000:01:00.0",
+      "name_source": "nvidia_xml",
+      "used_memory": "N/A"
+    },
+    {
+      "pid": 24384,
+      "type": "C+G",
+      "process_name": "C:\\Program Files (x86)\\Microsoft\\EdgeWebView\\Application\\156.0.4314.42\\msedgewebview2.exe",
+      "basename": "msedgewebview2.exe",
+      "gpu_id": "00000000:01:00.0",
+      "name_source": "nvidia_xml",
+      "used_memory": "N/A"
+    },
+    {
+      "pid": 26048,
+      "type": "C+G",
+      "process_name": "C:\\Program Files\\WindowsApps\\Microsoft.YourPhone_1.26082.121.0_x64__8wekyb3d8bbwe\\PhoneExperienceHost.exe",
+      "basename": "PhoneExperienceHost.exe",
+      "gpu_id": "00000000:01:00.0",
+      "name_source": "nvidia_xml",
+      "used_memory": "N/A"
+    },
+    {
+      "pid": 26536,
+      "type": "C+G",
+      "process_name": "",
+      "basename": "LenovoAppStore.exe",
+      "gpu_id": "00000000:01:00.0",
+      "name_source": "Toolhelp32_read_only",
+      "used_memory": "N/A"
+    },
+    {
+      "pid": 27332,
+      "type": "C+G",
+      "process_name": "C:\\Snipaste-2.10.5-x86\\Snipaste.exe",
+      "basename": "Snipaste.exe",
+      "gpu_id": "00000000:01:00.0",
+      "name_source": "nvidia_xml",
+      "used_memory": "N/A"
+    },
+    {
+      "pid": 28064,
+      "type": "C+G",
+      "process_name": "C:\\Program Files (x86)\\Microsoft\\EdgeWebView\\Application\\156.0.4314.42\\msedgewebview2.exe",
+      "basename": "msedgewebview2.exe",
+      "gpu_id": "00000000:01:00.0",
+      "name_source": "nvidia_xml",
+      "used_memory": "N/A"
+    },
+    {
+      "pid": 28420,
+      "type": "C+G",
+      "process_name": "C:\\Users\\user\\AppData\\Local\\Programs\\SakuraCat\\SakuraCat.exe",
+      "basename": "SakuraCat.exe",
+      "gpu_id": "00000000:01:00.0",
+      "name_source": "nvidia_xml",
+      "used_memory": "N/A"
+    },
+    {
+      "pid": 28748,
+      "type": "C+G",
+      "process_name": "C:\\Program Files\\Tencent\\QQNT\\QQ.exe",
+      "basename": "QQ.exe",
+      "gpu_id": "00000000:01:00.0",
+      "name_source": "nvidia_xml",
+      "used_memory": "N/A"
+    },
+    {
+      "pid": 30824,
+      "type": "C+G",
+      "process_name": "C:\\Program Files\\LogiOptionsPlus\\logivoice\\logioptionsplus_logivoice.exe",
+      "basename": "logioptionsplus_logivoice.exe",
+      "gpu_id": "00000000:01:00.0",
+      "name_source": "nvidia_xml",
+      "used_memory": "N/A"
+    },
+    {
+      "pid": 35296,
+      "type": "C+G",
+      "process_name": "C:\\Users\\user\\AppData\\Local\\Feishu\\app\\Feishu.exe",
+      "basename": "Feishu.exe",
+      "gpu_id": "00000000:01:00.0",
+      "name_source": "nvidia_xml",
+      "used_memory": "N/A"
+    },
+    {
+      "pid": 38768,
+      "type": "C+G",
+      "process_name": "C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe",
+      "basename": "msedge.exe",
+      "gpu_id": "00000000:01:00.0",
+      "name_source": "nvidia_xml",
+      "used_memory": "N/A"
+    },
+    {
+      "pid": 39496,
+      "type": "C+G",
+      "process_name": "C:\\Program Files\\WindowsApps\\OpenAI.Codex_26.1021.3705.0_x64__2p2nqsd0c76g0\\app\\ChatGPT.exe",
+      "basename": "ChatGPT.exe",
+      "gpu_id": "00000000:01:00.0",
+      "name_source": "nvidia_xml",
+      "used_memory": "N/A"
+    },
+    {
+      "pid": 45920,
+      "type": "C+G",
+      "process_name": "C:\\STEAM\\bin\\cef\\cef.win64\\steamwebhelper.exe",
+      "basename": "steamwebhelper.exe",
+      "gpu_id": "00000000:01:00.0",
+      "name_source": "nvidia_xml",
+      "used_memory": "N/A"
+    },
+    {
+      "pid": 46676,
+      "type": "C+G",
+      "process_name": "C:\\Users\\user\\AppData\\Local\\Google\\Chrome\\Application\\chrome.exe",
+      "basename": "chrome.exe",
+      "gpu_id": "00000000:01:00.0",
+      "name_source": "nvidia_xml",
+      "used_memory": "N/A"
+    },
+    {
+      "pid": 47976,
+      "type": "C+G",
+      "process_name": "C:\\Users\\user\\AppData\\Local\\Google\\Chrome\\Application\\chrome.exe",
+      "basename": "chrome.exe",
+      "gpu_id": "00000000:01:00.0",
+      "name_source": "nvidia_xml",
+      "used_memory": "N/A"
+    },
+    {
+      "pid": 49716,
+      "type": "C+G",
+      "process_name": "C:\\Program Files (x86)\\Microsoft\\Copilot\\Application\\copilotapp.exe",
+      "basename": "copilotapp.exe",
+      "gpu_id": "00000000:01:00.0",
+      "name_source": "nvidia_xml",
+      "used_memory": "N/A"
+    },
+    {
+      "pid": 53264,
+      "type": "C+G",
+      "process_name": "",
+      "basename": "LogonUI.exe",
+      "gpu_id": "00000000:01:00.0",
+      "name_source": "Toolhelp32_read_only",
+      "used_memory": "N/A"
+    },
+    {
+      "pid": 56432,
+      "type": "C+G",
+      "process_name": "C:\\Users\\user\\AppData\\Local\\Kingsoft\\WPS Office\\12.1.0.28802\\office6\\promecefpluginhost.exe",
+      "basename": "promecefpluginhost.exe",
+      "gpu_id": "00000000:01:00.0",
+      "name_source": "nvidia_xml",
+      "used_memory": "N/A"
+    },
+    {
+      "pid": 56584,
+      "type": "C+G",
+      "process_name": "C:\\Windows\\SystemApps\\Microsoft.LockApp_cw5n1h2txyewy\\LockApp.exe",
+      "basename": "LockApp.exe",
+      "gpu_id": "00000000:01:00.0",
+      "name_source": "nvidia_xml",
+      "used_memory": "N/A"
+    },
+    {
+      "pid": 61200,
+      "type": "C+G",
+      "process_name": "C:\\Program Files\\Tencent\\Weixin\\Weixin.exe",
+      "basename": "Weixin.exe",
+      "gpu_id": "00000000:01:00.0",
+      "name_source": "nvidia_xml",
+      "used_memory": "N/A"
+    },
+    {
+      "pid": 65360,
+      "type": "C+G",
+      "process_name": "C:\\Program Files\\WindowsApps\\Microsoft.WindowsTerminal_1.24.12741.0_x64__8wekyb3d8bbwe\\WindowsTerminal.exe",
+      "basename": "WindowsTerminal.exe",
+      "gpu_id": "00000000:01:00.0",
+      "name_source": "nvidia_xml",
+      "used_memory": "N/A"
+    },
+    {
+      "pid": 65624,
+      "type": "C+G",
+      "process_name": "",
+      "basename": "TabTip.exe",
+      "gpu_id": "00000000:01:00.0",
+      "name_source": "Toolhelp32_read_only",
+      "used_memory": "N/A"
+    }
+  ],
+  "binary_identities": [
+    {
+      "process_name": "C:\\Users\\user\\AppData\\Roaming\\baidu\\BaiduNetdisk\\module\\BrowserEngine\\BaiduNetdiskUnite.exe",
+      "basename": "BaiduNetdiskUnite.exe",
+      "sha256": "2b619249754608589448d717f517238e5b7698ac0c1755634fcadc6fae2d80ea"
+    },
+    {
+      "process_name": "C:\\Program Files\\LogiOptionsPlus\\logioptionsplus_agent.exe",
+      "basename": "logioptionsplus_agent.exe",
+      "sha256": "0d7149a8ded851cb492f75e3b78306cc68b60dc623b2341267db17bb15b1f03c"
+    },
+    {
+      "process_name": "C:\\Windows\\SystemApps\\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\\TextInputHost.exe",
+      "basename": "TextInputHost.exe",
+      "sha256": "d0e70f62928d634e3866a2599fa21ae42d7f1c5b053ee4c8c6fdcac7ae9e1385"
+    },
+    {
+      "process_name": "C:\\Program Files (x86)\\Microsoft\\EdgeWebView\\Application\\156.0.4314.42\\msedgewebview2.exe",
+      "basename": "msedgewebview2.exe",
+      "sha256": "337a496fffec9940ef7142e67162f80e40c878cb8fc2af66e5bd9aa75ffcdbae"
+    },
+    {
+      "process_name": "C:\\Windows\\explorer.exe",
+      "basename": "explorer.exe",
+      "sha256": "87811a107eed62900b230c49a252170d6a7307e94a08307ce972f9b9b8155d54"
+    },
+    {
+      "process_name": "C:\\Program Files\\Tencent\\WeType\\3.0.0.38\\wetype_update.exe",
+      "basename": "wetype_update.exe",
+      "sha256": "30c235d59ca403c0fdad6c1cae57001d450fc71c5bbcf2e48d59d4d0a82dbffe"
+    },
+    {
+      "process_name": "C:\\Windows\\System32\\ShellHost.exe",
+      "basename": "ShellHost.exe",
+      "sha256": "75268bc04679fdddbea23e72274351641e44bd7019d8c625d61fbdc574ec0353"
+    },
+    {
+      "process_name": "C:\\Windows\\SystemApps\\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\\CrossDeviceResume.exe",
+      "basename": "CrossDeviceResume.exe",
+      "sha256": "b15e9da33402779e60c43a358c6aae5aa071a8c7723f200cda50e87ba650ff8a"
+    },
+    {
+      "process_name": "C:\\Windows\\SystemApps\\ShellExperienceHost_cw5n1h2txyewy\\ShellExperienceHost.exe",
+      "basename": "ShellExperienceHost.exe",
+      "sha256": "9d6d7b37ba8f6db67c3c33111ab32842abb5b4a940ff61c106899b4be5ecfc00"
+    },
+    {
+      "process_name": "C:\\Program Files (x86)\\Microsoft\\Copilot\\Application\\undocked_copilot\\copilotapphost.exe",
+      "basename": "copilotapphost.exe",
+      "sha256": "516d742998fdfb3f6438cf623b34ae85007b5720763bffb6785df1e972b2096d"
+    },
+    {
+      "process_name": "C:\\Program Files\\Oray\\AweSun\\flutter\\AweSun.exe",
+      "basename": "AweSun.exe",
+      "sha256": "165c76a7e888323decf7553f3c29ac2557a173dc150ae62f5cc4a442fb06d0cb"
+    },
+    {
+      "process_name": "C:\\Windows\\SystemApps\\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\\SearchHost.exe",
+      "basename": "SearchHost.exe",
+      "sha256": "2ab7ed99d701862391461f3efdc8f71df8435851bf647cb4b00cb4d145887183"
+    },
+    {
+      "process_name": "C:\\Windows\\SystemApps\\Microsoft.Windows.StartMenuExperienceHost_cw5n1h2txyewy\\StartMenuExperienceHost.exe",
+      "basename": "StartMenuExperienceHost.exe",
+      "sha256": "b012b84674ae63052c368227ce41be39e5586d759b5eff8e3fbf01f53bfd00f1"
+    },
+    {
+      "process_name": "C:\\Users\\user\\AppData\\Local\\OpenAI\\Codex\\runtimes\\cua_node\\1fb7137c46617d50\\bin\\node_modules\\@oai\\sky\\bin\\windows\\swift\\x64\\codex-computer-use-swift.exe",
+      "basename": "codex-computer-use-swift.exe",
+      "sha256": "108305fa71d93925eb86bb1efad65b171a2b83b23aaa3a19eb006f8b29e78966"
+    },
+    {
+      "process_name": "C:\\Users\\user\\AppData\\Roaming\\Tencent\\xwechat\\XPlugin\\Plugins\\RadiumWMPF\\WeChatAppEx.exe",
+      "basename": "WeChatAppEx.exe",
+      "sha256": "13251a0787f88f1bfdf48c7a636973b0620575df7aa41b131ddf78c3d6089bea"
+    },
+    {
+      "process_name": "C:\\Users\\user\\AppData\\Local\\Mathpix\\Mathpix Snipping Tool\\mathpix-snipping-tool.exe",
+      "basename": "mathpix-snipping-tool.exe",
+      "sha256": "1da6aa4bb4110288550ddeaa6a1c1eccd67deb564f7c5ed6970661b89a441204"
+    },
+    {
+      "process_name": "C:\\Program Files\\WindowsApps\\Microsoft.YourPhone_1.26082.121.0_x64__8wekyb3d8bbwe\\PhoneExperienceHost.exe",
+      "basename": "PhoneExperienceHost.exe",
+      "sha256": "0faeb5d8bd77d89851a25866083ef732b77452b96ce34040f3069be1d3b5ef4e"
+    },
+    {
+      "process_name": "C:\\Snipaste-2.10.5-x86\\Snipaste.exe",
+      "basename": "Snipaste.exe",
+      "sha256": "a49e28ca5f5b519444209703080e19d1821d6cd173d67a6c06b0dac5bbe5a3c7"
+    },
+    {
+      "process_name": "C:\\Users\\user\\AppData\\Local\\Programs\\SakuraCat\\SakuraCat.exe",
+      "basename": "SakuraCat.exe",
+      "sha256": "5c04d4dff088c48bdd60d19324e42687c161023a31f4306856b0938eaa6e78b2"
+    },
+    {
+      "process_name": "C:\\Program Files\\Tencent\\QQNT\\QQ.exe",
+      "basename": "QQ.exe",
+      "sha256": "fb2d3b4ee2a372752edd1fda620e9aae27b7dea9903f7ecf5b84cb6483ecd7c5"
+    },
+    {
+      "process_name": "C:\\Program Files\\LogiOptionsPlus\\logivoice\\logioptionsplus_logivoice.exe",
+      "basename": "logioptionsplus_logivoice.exe",
+      "sha256": "278325dbaada7e32860d3bb5dbd319d88baf0ed0610e7d2e49717121d94524c5"
+    },
+    {
+      "process_name": "C:\\Users\\user\\AppData\\Local\\Feishu\\app\\Feishu.exe",
+      "basename": "Feishu.exe",
+      "sha256": "bfb524359edab1eb98b9ec3760db6aecc1f95065a502b0c5592e7e51f4b68f61"
+    },
+    {
+      "process_name": "C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe",
+      "basename": "msedge.exe",
+      "sha256": "bb74db4c753133706f4ab0a483a87aa28a90ddd6eeb305fe001376ba73a40fc3"
+    },
+    {
+      "process_name": "C:\\Program Files\\WindowsApps\\OpenAI.Codex_26.1021.3705.0_x64__2p2nqsd0c76g0\\app\\ChatGPT.exe",
+      "basename": "ChatGPT.exe",
+      "sha256": "c5a6ea0f6d99d696e9976c0ecefb6b8410a7dd5b17d96fb69a72c83a8192b649"
+    },
+    {
+      "process_name": "C:\\STEAM\\bin\\cef\\cef.win64\\steamwebhelper.exe",
+      "basename": "steamwebhelper.exe",
+      "sha256": "5ee6df1a5a2237dd3efb7d7042b02ba20f2238ba15d961b1a10ef6d575c59362"
+    },
+    {
+      "process_name": "C:\\Users\\user\\AppData\\Local\\Google\\Chrome\\Application\\chrome.exe",
+      "basename": "chrome.exe",
+      "sha256": "e8bce39747ea63c9c7d4306f7635d2916c9ecb0cf913fbcf5e7acc4539b5b8a0"
+    },
+    {
+      "process_name": "C:\\Program Files (x86)\\Microsoft\\Copilot\\Application\\copilotapp.exe",
+      "basename": "copilotapp.exe",
+      "sha256": "a0844740beedb35139c0d8b96285f9213c983cb316ad8bbbb3448b91f2ec63d1"
+    },
+    {
+      "process_name": "C:\\Program Files\\WindowsApps\\Microsoft.WindowsTerminal_1.24.12741.0_x64__8wekyb3d8bbwe\\WindowsTerminal.exe",
+      "basename": "WindowsTerminal.exe",
+      "sha256": "4ad317d9dacedca1e68dcc2405d6d364a20599b646b8205feae829cf18ef4958"
+    },
+    {
+      "process_name": "C:\\Users\\user\\AppData\\Local\\Kingsoft\\WPS Office\\12.1.0.28802\\office6\\promecefpluginhost.exe",
+      "basename": "promecefpluginhost.exe",
+      "sha256": "9f0c61eb2e6f0e84189cce926c7619c3f4e58df14adf5771777b3e730bd87ac5"
+    },
+    {
+      "process_name": "C:\\Windows\\SystemApps\\Microsoft.LockApp_cw5n1h2txyewy\\LockApp.exe",
+      "basename": "LockApp.exe",
+      "sha256": "76643b5929faebb04e67e1f5421363f3ec327fe555c596245abba4586d5cf322"
+    },
+    {
+      "process_name": "C:\\Program Files\\Tencent\\Weixin\\Weixin.exe",
+      "basename": "Weixin.exe",
+      "sha256": "932125cf49bd995345d2c3b1ace0ca8b6cfe5af9ab3f61413a4816a3845312ea"
+    }
+  ],
+  "binary_hash_unavailable": [],
+  "prior_baseline": "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\provenance\\postprocess_desktop_baseline_v3.json",
+  "prior_baseline_sha256": "1215c2d913bb415d555f3c82a05b3483caa5ea231f5a978a0bdf9fc2627db91f",
+  "new_exact_desktop": [
+    {
+      "pid": 65360,
+      "type": "C+G",
+      "process_name": "C:\\Program Files\\WindowsApps\\Microsoft.WindowsTerminal_1.24.12741.0_x64__8wekyb3d8bbwe\\WindowsTerminal.exe",
+      "basename": "WindowsTerminal.exe",
+      "gpu_id": "00000000:01:00.0",
+      "name_source": "nvidia_xml",
+      "used_memory": "N/A",
+      "reason": "foreign compute, unknown/changed C+G desktop identity, or unknown type"
+    }
+  ],
+  "policy": "existing PID C+G remains checked; changed PID only if same registered nonempty absolute binary path, basename and current exe SHA; reject C, Python/suspicious, unknown path or changed hash; same low stable measured background",
+  "applications_stopped": false,
+  "training_restarted": false
+}

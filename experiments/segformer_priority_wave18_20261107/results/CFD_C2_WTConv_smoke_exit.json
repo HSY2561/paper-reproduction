@@ -1,0 +1,7 @@
+{
+  "dataset": "CFD",
+  "exit_code": 2,
+  "log": "D:\\论文复现\\experiments\\segformer_priority_wave18_20261107\\logs\\CFD_C2_WTConv_smoke.log",
+  "id": "C2_WTConv",
+  "smoke": true
+}

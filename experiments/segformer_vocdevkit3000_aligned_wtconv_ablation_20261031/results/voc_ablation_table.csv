@@ -1,0 +1,5 @@
+variant,structure,params_m,flops_g,precision_pct,recall_pct,f1_pct,crack_iou_pct,miou_pct,bf1_1px_pct,bf1_2px_pct,hard_cldice_pct,thin_recall_r_le1_pct,selected_variant,selected_iter,train_exit,official_val_exit,custom_val_exit,test_used
+C0_B0,SegFormer-B0,3.715170,4.135183,87.1711,91.6342,89.3469,80.7451,89.7776,53.8799,69.4743,91.0367,85.6530,ordinary,18000,0,0,0,false
+C1_Aligned,SegFormer-B0+Aligned,3.785314,4.514480,87.5129,90.8692,89.1595,80.4394,89.6183,54.1530,69.6768,90.5840,84.4688,ordinary,15000,0,0,0,false
+C2_WTConv,SegFormer-B0+WTConv-only,3.653346,3.391823,87.5961,90.9355,89.2346,80.5618,89.6837,53.9309,69.5061,90.9089,84.8429,ordinary,15000,0,0,0,false
+C3_Aligned_WTConv,SegFormer-B0+Aligned+WTConv,3.723490,3.771120,86.7247,91.9242,89.2488,80.5849,89.6894,51.9231,67.3322,91.1510,86.0960,ordinary,13000,0,0,0,false

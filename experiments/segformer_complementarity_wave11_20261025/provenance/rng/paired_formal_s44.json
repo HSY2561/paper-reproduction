@@ -1,0 +1,20 @@
+{
+  "at": "2026-10-26T00:39:06+08:00",
+  "passed": true,
+  "smoke": false,
+  "full_training": true,
+  "runs": [
+    "W11_E0_s44",
+    "W11_E1_s44",
+    "W11_E2_s44",
+    "W11_E3_s44"
+  ],
+  "first_two_batches_identical": true,
+  "witness_files": [
+    "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\provenance\\rng\\W11_E0_s44.json",
+    "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\provenance\\rng\\W11_E1_s44.json",
+    "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\provenance\\rng\\W11_E2_s44.json",
+    "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\provenance\\rng\\W11_E3_s44.json"
+  ],
+  "test_used": false
+}

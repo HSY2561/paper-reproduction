@@ -1,0 +1,116 @@
+{
+  "passed": true,
+  "runs": [
+    {
+      "config": "T_CAA.yml",
+      "shape": [
+        1,
+        2,
+        65,
+        63
+      ],
+      "params": 3695906,
+      "loss": 0.881602942943573
+    },
+    {
+      "config": "T_CG.yml",
+      "shape": [
+        1,
+        2,
+        65,
+        63
+      ],
+      "params": 3706210,
+      "loss": 0.8779319524765015
+    },
+    {
+      "config": "T_CoordinateAttention.yml",
+      "shape": [
+        1,
+        2,
+        65,
+        63
+      ],
+      "params": 3690466,
+      "loss": 0.884344756603241
+    },
+    {
+      "config": "T_DWR.yml",
+      "shape": [
+        1,
+        2,
+        65,
+        63
+      ],
+      "params": 3740130,
+      "loss": 0.8439328074455261
+    },
+    {
+      "config": "T_InceptionDWConv.yml",
+      "shape": [
+        1,
+        2,
+        65,
+        63
+      ],
+      "params": 3704402,
+      "loss": 0.8952162265777588
+    },
+    {
+      "config": "T_LSKA.yml",
+      "shape": [
+        1,
+        2,
+        65,
+        63
+      ],
+      "params": 3711458,
+      "loss": 1.0383392572402954
+    },
+    {
+      "config": "T_MSCA.yml",
+      "shape": [
+        1,
+        2,
+        65,
+        63
+      ],
+      "params": 3746658,
+      "loss": 0.9886072874069214
+    },
+    {
+      "config": "T_SAFM.yml",
+      "shape": [
+        1,
+        2,
+        65,
+        63
+      ],
+      "params": 3704770,
+      "loss": 0.922669529914856
+    },
+    {
+      "config": "T_StripPooling.yml",
+      "shape": [
+        1,
+        2,
+        65,
+        63
+      ],
+      "params": 3720290,
+      "loss": 0.7830796241760254
+    },
+    {
+      "config": "T_WTConv.yml",
+      "shape": [
+        1,
+        2,
+        65,
+        63
+      ],
+      "params": 3723490,
+      "loss": 0.8111081123352051
+    }
+  ],
+  "test_used": false
+}

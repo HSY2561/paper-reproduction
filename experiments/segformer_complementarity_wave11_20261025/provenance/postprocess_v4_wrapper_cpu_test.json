@@ -1,0 +1,11 @@
+{
+  "at": "2026-10-26T09:11:44.8770524+08:00",
+  "passed": true,
+  "expected_exit": 7,
+  "actual_exit": 7,
+  "child_pid": 49472,
+  "stdout": "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\provenance\\postprocess_v4_wrapper_cpu_probe.stdout.log",
+  "stderr": "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\provenance\\postprocess_v4_wrapper_cpu_probe.stderr.log",
+  "GPU_started": false,
+  "training_started": false
+}

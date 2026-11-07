@@ -1,0 +1,129 @@
+--- postprocess_w11_v3.py
++++ postprocess_w11_v4.py
+@@ -1,6 +1,6 @@
+ """Dataset-free W11 efficiency measurements and evidence/report packaging.
+ 
+-This v3 is a separately versioned postprocessing tool with a refreshed, verified desktop PID baseline. It neither changes the
++This v4 is a separately versioned postprocessing tool with verified desktop PID and exact executable-SHA identities. It neither changes the
+ training controller/release nor starts training. GPU commands require all 15
+ registered runs to be completed and their frozen checkpoints to be verified.
+ """
+@@ -35,7 +35,7 @@
+ FINAL_REPORT = ROOT.parent.parent / 'SegFormer_E0-E3两模块互补实验报告_20261025.md'
+ RESULT_REPORT = ROOT / 'refine-logs' / 'EXPERIMENT_RESULTS.md'
+ LATEST = ROOT / 'results' / 'postprocess_latest.json'
+-DESKTOP_BASELINE = ROOT / 'provenance' / 'postprocess_desktop_baseline_v3.json'
++DESKTOP_BASELINE = ROOT / 'provenance' / 'postprocess_desktop_baseline_v4.json'
+ 
+ 
+ def now():
+@@ -134,9 +134,22 @@
+ 
+ 
+ def classify_processes(processes, baseline, own_pid):
+-    """Allow only recorded desktop C+G identities, never arbitrary foreign compute."""
++    """Allow recorded PID identities or exact frozen path/name/binary SHA C+G identities.
++
++    A changed PID alone is not evidence of foreign compute on Windows WDDM.
++    Only the preregistered executable identity can authorize that new PID;
++    pure C, suspicious executables, missing paths and unknown hashes still block.
++    No applications are stopped and no global idle-GPU claim is made.
++    """
+     approved = {item['pid']: item for item in baseline['processes']}
++    binary_identities = baseline.get('binary_identities', [])
++    if not isinstance(binary_identities, list):
++        raise RuntimeError('Frozen desktop binary identities must be an explicit list')
+     allowed, blocked, own = [], [], []
++    def normalized_path(value):
++        if not isinstance(value, str) or not value.strip() or not Path(value).is_absolute():
++            return None
++        return os.path.normcase(os.path.normpath(value))
+     for item in processes:
+         if item['pid'] == own_pid:
+             own.append(item)
+@@ -149,13 +162,54 @@
+                      and basename == old.get('basename', '').casefold())
+         same_path = (old is not None and (not old.get('process_name') or
+                      item.get('process_name', '').casefold() == old['process_name'].casefold()))
++        evidence = dict(rule='blocked_by_default', baseline_pid_record_present=old is not None,
++                        executable_sha_checked=False, suspicious_name=suspicious)
+         if item['type'] == 'C+G' and same_name and same_path and not suspicious:
+-            allowed.append(item)
+-        else:
+-            blocked.append(dict(**item, reason='foreign compute, unknown/changed C+G desktop identity, or unknown type'))
++            evidence.update(rule='recorded_same_PID_name_path')
++            permitted = dict(item)
++            permitted.update(classification_reason='recorded same PID/name/path desktop C+G',
++                             identity_evidence=evidence)
++            allowed.append(permitted)
++            continue
++        actual_path = normalized_path(item.get('process_name'))
++        # A newly seen PID must present a known absolute executable path.
++        if item['type'] == 'C+G' and not suspicious and actual_path and basename:
++            for identity in binary_identities:
++                known_path = normalized_path(identity.get('process_name'))
++                expected_sha = identity.get('sha256', '')
++                if (known_path != actual_path or basename != identity.get('basename', '').casefold()
++                        or Path(item['process_name']).name.casefold() != basename
++                        or not isinstance(expected_sha, str) or len(expected_sha) != 64):
++                    continue
++                evidence.update(rule='frozen_binary_identity_candidate',
++                    registered_process_name=identity['process_name'], registered_basename=identity['basename'],
++                    expected_sha256=expected_sha, executable_sha_checked=True)
++                try:
++                    actual_sha = sha(Path(item['process_name']))
++                except (OSError, ValueError) as error:
++                    evidence.update(executable_read_error=repr(error))
++                    break
++                evidence['actual_sha256'] = actual_sha
++                if actual_sha == expected_sha:
++                    evidence.update(rule='recorded_exact_path_basename_binary_SHA256')
++                    permitted = dict(item)
++                    permitted.update(classification_reason='recorded exact executable path/name/SHA256 desktop C+G; PID may differ',
++                                     identity_evidence=evidence)
++                    allowed.append(permitted)
++                    break
++                evidence['binary_sha_mismatch'] = True
++                break
++            else:
++                evidence['registered_binary_identity_found'] = False
++        if evidence['rule'] == 'recorded_exact_path_basename_binary_SHA256':
++            continue
++        refused = dict(item)
++        refused.update(reason='foreign C, suspicious/unknown C+G, changed identity/hash, or unknown type',
++                       identity_evidence=evidence)
++        blocked.append(refused)
+     return dict(allowed_recorded_desktop_CplusG=allowed, blocked_foreign=blocked,
+                 own_processes=own, absolute_idle_claim=False,
+-                condition='Recorded WDDM desktop applications remain open; no foreign C/unknown C+G allowed.')
++                condition='Recorded desktop C+G remains open; require recorded PID/name/path or exact frozen executable path/name/SHA256; block foreign C and unknown C+G.')
+ 
+ 
+ def telemetry():
+@@ -251,7 +305,7 @@
+ 
+ 
+ def verify_postprocess_release():
+-    path = ROOT / 'provenance' / 'postprocess_release_v3.json'
++    path = ROOT / 'provenance' / 'postprocess_release_v4.json'
+     release = read(path)
+     bad = [name for name, expected in release['files'].items()
+            if not Path(name).is_file() or sha(name) != expected]
+@@ -843,7 +897,7 @@
+         lines += ['FP32、batch1、400/480，所有五组同进程；每模型每尺寸100预热，5轮轮换顺序，'
+                   '每轮100次逐次CUDA同步。P50/P95统计单次延迟，配对比值由同轮P50相对R0得到；'
+                   '样本CV≤5%才标稳定。完整温度/时钟/功率与外部进程回执保留。'
+-                  'WDDM返回的已核桌面C+G基线应用保持打开，XML类型/同PID和名称逐次核对；'
++                  'WDDM返回的已核桌面C+G基线应用保持打开，XML类型及登记PID/名称/路径或特定可执行文件路径/名称/SHA256逐次核对；'
+                   '外部C/未知C+G阻止测量。测量前以5次采样确认低且稳定的桌面背景负载，'
+                   '不宣称绝对空闲GPU。', '',
+                   '|输入|模型|P50 ms|P95 ms|配对P50/R0|比值CV|CV≤5%|', '|---|---|---:|---:|---:|---:|---|']
+@@ -953,7 +1007,7 @@
+                   incomplete_training_blocks_GPU=incomplete_rejected,
+                   WDDM_type_policy_tests_passed=True, recorded_desktop_CplusG_count=len(desktop),
+                   desktop_baseline_sha256=sha(DESKTOP_BASELINE))
+-    write(ROOT / 'provenance' / 'postprocess_self_test_v3.json', result)
++    write(ROOT / 'provenance' / 'postprocess_self_test_v4.json', result)
+     return result
+ 
+ 

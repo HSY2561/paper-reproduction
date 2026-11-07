@@ -1,0 +1,20 @@
+{
+  "at": "2026-10-25T19:00:05+08:00",
+  "passed": true,
+  "smoke": true,
+  "full_training": false,
+  "runs": [
+    "smoke_W11_E0_s42",
+    "smoke_W11_E1_s42",
+    "smoke_W11_E2_s42",
+    "smoke_W11_E3_s42"
+  ],
+  "first_two_batches_identical": true,
+  "witness_files": [
+    "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\provenance\\rng\\smoke_W11_E0_s42.json",
+    "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\provenance\\rng\\smoke_W11_E1_s42.json",
+    "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\provenance\\rng\\smoke_W11_E2_s42.json",
+    "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\provenance\\rng\\smoke_W11_E3_s42.json"
+  ],
+  "test_used": false
+}

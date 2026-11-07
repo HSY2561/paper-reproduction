@@ -1,0 +1,40 @@
+{
+  "version": "W11-postprocess-v2-WDDM",
+  "frozen_at": "2026-10-25T19:11:09.490326+08:00",
+  "separate_from_training_release": true,
+  "files": {
+    "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\postprocess_w11.py": "0c32b46b99cc3cba907cf10158a7aee3697b0a6f2823a1506f3ff0587e1006a2",
+    "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\run_postprocess.ps1": "757933490c68aad08c201aaffab912a771b30d6a97ecbd9e88f7d5a6473a75b1",
+    "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\provenance\\postprocess_self_test.json": "288e2de7dd4ce0c2ec1c35baa4cb8c80351d36c2cbaceb4eeae3900e108774c3",
+    "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\provenance\\postprocess_desktop_baseline.json": "2a217371e62c788e6e4ef92f1e589b7a38893938d4243b752b0b2bb7fd0173f3",
+    "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\provenance\\postprocess_wddm_observed_20261025.xml": "de9067b1effda30eeec17cdf65b1f4b9fd5ef12f8734b4e21c1b328c5ce7fddf",
+    "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\provenance\\postprocess_wddm_observed_20261025.json": "77fc494c4846ab2e37aae9474e7d6ea2ae6317b8f9b67020c0852f32126b535a"
+  },
+  "commands": {
+    "wait": "run_postprocess.ps1 or python postprocess_w11.py --wait-and-profile",
+    "full": "python postprocess_w11.py --profile-and-report",
+    "partial": "python postprocess_w11.py --report-only",
+    "memory": "python postprocess_w11.py --memory-one GROUP 400 --output PATH",
+    "CPU_selftest": "python postprocess_w11.py --self-test"
+  },
+  "CPU_selftest_passed": true,
+  "GPU_execution_in_preparation": false,
+  "training_controller_changed": false,
+  "waiter_poll_seconds": 30,
+  "maximum_wait_and_profile_seconds": 86400,
+  "profile_requires": "15 genuine complete runs, queue_done full, workflow_exit0, no workflow.lock, real controller/last-child/wrapper PID exit, final wrapper receipt exit0",
+  "completion_receipt": "results/final_delivery_done.json",
+  "notification_sent_by_waiter": false,
+  "previous_release_preserved": "provenance/postprocess_v1_preserved_20261025_190618",
+  "WDDM_policy": "XML typed; actual 39 recorded desktop C+G baseline with samePID/name/path only; block foreignC or unknownC+G/Python; 5-sample low/stable background window; no absolute idle or application shutdown claim",
+  "background_window": {
+    "samples": 5,
+    "interval_seconds": 1,
+    "max_GPU_utilization_percent": 10,
+    "max_utilization_range_pp": 5,
+    "max_SM_clock_range_MHz": 600,
+    "max_power_range_W": 10
+  },
+  "telemetry_is_read_only": true,
+  "GPU_inference_in_preparation": false
+}

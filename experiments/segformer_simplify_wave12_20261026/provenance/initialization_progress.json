@@ -1,0 +1,9 @@
+{
+  "at": "2026-10-26T16:10:43.738334+00:00",
+  "status": "complete",
+  "complete": 96,
+  "total": 96,
+  "GPU_execution": false,
+  "manifest": "D:\\论文复现\\experiments\\segformer_simplify_wave12_20261026\\provenance\\initialization_manifest.json",
+  "manifest_sha256": "a819cb5a807c718f4f96d80925dc41f3c8c04b958f5c1fec02735674883d958a"
+}

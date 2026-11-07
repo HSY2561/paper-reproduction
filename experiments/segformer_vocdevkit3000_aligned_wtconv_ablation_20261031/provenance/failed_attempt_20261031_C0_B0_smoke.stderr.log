@@ -1,0 +1,21 @@
+WARNING: Logging before InitGoogleLogging() is written to STDERR
+W1031 23:18:13.292601 52280 gpu_resources.cc:116] Please NOTE: device: 0, GPU Compute Capability: 12.0, Driver API Version: 13.2, Runtime API Version: 12.9
+[ WARN:0@4.042] global loadsave.cpp:268 cv::findDecoder imread_('D:/论文复现/experiments/vocdevkit3000_stage_20261031/VOCdevkit/VOC2007\JPEGImages/011_2_3.jpg'): can't open/read file: check file path/integrity
+Exception in thread Thread-1 (_thread_loop):
+Traceback (most recent call last):
+  File "C:\python312\Lib\threading.py", line 1075, in _bootstrap_inner
+    self.run()
+  File "C:\python312\Lib\threading.py", line 1012, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\venv_bisenet\Lib\site-packages\paddle\io\dataloader\dataloader_iter.py", line 251, in _thread_loop
+    batch = self._dataset_fetcher.fetch(
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\venv_bisenet\Lib\site-packages\paddle\io\dataloader\fetcher.py", line 77, in fetch
+    data.append(self.dataset[idx])
+                ~~~~~~~~~~~~^^^^^
+  File "D:\论文复现\experiments\segformer_vocdevkit3000_aligned_wtconv_ablation_20261031\src\PaddleSeg-2.10.0\paddleseg\datasets\dataset.py", line 163, in __getitem__
+    data = self.transforms(data)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\论文复现\experiments\segformer_vocdevkit3000_aligned_wtconv_ablation_20261031\src\PaddleSeg-2.10.0\paddleseg\transforms\transforms.py", line 69, in __call__
+    raise ValueError('Can\'t read The image file {}!'.format(data['img']))
+ValueError: Can't read The image file D:/论文复现/experiments/vocdevkit3000_stage_20261031/VOCdevkit/VOC2007\JPEGImages/011_2_3.jpg!

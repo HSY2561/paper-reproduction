@@ -1,0 +1,25 @@
+{
+  "tag": "C0_B0_custom_val_exact",
+  "exit_code": 0,
+  "guard_reason": null,
+  "ended_at": "2026-10-31T23:53:11+08:00",
+  "command": [
+    "C:\\venv_bisenet\\Scripts\\python.exe",
+    "D:\\论文复现\\experiments\\segformer_vocdevkit3000_aligned_wtconv_ablation_20261031\\evaluate_custom_boundary.py",
+    "--config",
+    "D:\\论文复现\\experiments\\segformer_vocdevkit3000_aligned_wtconv_ablation_20261031\\configs\\C0_B0.yml",
+    "--model_path",
+    "D:\\论文复现\\experiments\\segformer_vocdevkit3000_aligned_wtconv_ablation_20261031\\checkpoints\\C0_B0\\model.pdparams",
+    "--output",
+    "D:\\论文复现\\experiments\\segformer_vocdevkit3000_aligned_wtconv_ablation_20261031\\results\\C0_B0_custom_val",
+    "--expected_val_path",
+    "D:\\论文复现\\experiments\\segformer_vocdevkit3000_aligned_wtconv_ablation_20261031\\configs\\val.txt",
+    "--expected_count",
+    "587",
+    "--dataset_name",
+    "custom_in_domain_C0_B0"
+  ],
+  "stdout": "D:\\论文复现\\experiments\\segformer_vocdevkit3000_aligned_wtconv_ablation_20261031\\logs\\C0_B0_custom_val_exact.stdout.log",
+  "stderr": "D:\\论文复现\\experiments\\segformer_vocdevkit3000_aligned_wtconv_ablation_20261031\\logs\\C0_B0_custom_val_exact.stderr.log",
+  "test_used": false
+}

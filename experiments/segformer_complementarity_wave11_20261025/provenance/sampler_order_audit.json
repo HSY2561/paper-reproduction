@@ -1,0 +1,9 @@
+{
+  "passed": true,
+  "actual_official_sampler_full18000_batches_compared": true,
+  "samples": 72000,
+  "source_sha256": "e9d22aee15a6dea90ae8394a4475276425801ee9a15a033a98322042addd2ab2",
+  "data_read": false,
+  "gpu_execution": false,
+  "test_used": false
+}

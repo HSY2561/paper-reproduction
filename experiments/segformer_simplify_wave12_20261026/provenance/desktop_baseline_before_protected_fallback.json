@@ -1,0 +1,848 @@
+{
+  "at": "2026-10-27T00:25:03+08:00",
+  "processes": [
+    {
+      "pid": 1404,
+      "type": "C+G",
+      "process_name": "",
+      "basename": "dwm.exe",
+      "identity": {
+        "pid": 1404,
+        "running": null,
+        "creation_time_filetime": null,
+        "executable_path": null,
+        "winerror": 5
+      },
+      "gpu_id": "00000000:01:00.0",
+      "used_memory": "N/A"
+    },
+    {
+      "pid": 5332,
+      "type": "C+G",
+      "process_name": "C:\\Users\\user\\AppData\\Roaming\\baidu\\BaiduNetdisk\\module\\BrowserEngine\\BaiduNetdiskUnite.exe",
+      "basename": "BaiduNetdiskUnite.exe",
+      "identity": {
+        "pid": 5332,
+        "running": true,
+        "creation_time_filetime": 134372942760036918,
+        "executable_path": "C:\\Users\\user\\AppData\\Roaming\\baidu\\BaiduNetdisk\\module\\BrowserEngine\\BaiduNetdiskUnite.exe",
+        "observed_exit_code": 259
+      },
+      "gpu_id": "00000000:01:00.0",
+      "used_memory": "N/A"
+    },
+    {
+      "pid": 5616,
+      "type": "C+G",
+      "process_name": "C:\\Program Files\\LogiOptionsPlus\\logioptionsplus_agent.exe",
+      "basename": "logioptionsplus_agent.exe",
+      "identity": {
+        "pid": 5616,
+        "running": true,
+        "creation_time_filetime": 134372942559704533,
+        "executable_path": "C:\\Program Files\\LogiOptionsPlus\\logioptionsplus_agent.exe",
+        "observed_exit_code": 259
+      },
+      "gpu_id": "00000000:01:00.0",
+      "used_memory": "N/A"
+    },
+    {
+      "pid": 7260,
+      "type": "C+G",
+      "process_name": "C:\\Windows\\SystemApps\\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\\TextInputHost.exe",
+      "basename": "TextInputHost.exe",
+      "identity": {
+        "pid": 7260,
+        "running": true,
+        "creation_time_filetime": 134372941671320996,
+        "executable_path": "C:\\Windows\\SystemApps\\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\\TextInputHost.exe",
+        "observed_exit_code": 259
+      },
+      "gpu_id": "00000000:01:00.0",
+      "used_memory": "N/A"
+    },
+    {
+      "pid": 9264,
+      "type": "C+G",
+      "process_name": "C:\\Program Files (x86)\\Microsoft\\EdgeWebView\\Application\\156.0.4314.42\\msedgewebview2.exe",
+      "basename": "msedgewebview2.exe",
+      "identity": {
+        "pid": 9264,
+        "running": true,
+        "creation_time_filetime": 134372943374375990,
+        "executable_path": "C:\\Program Files (x86)\\Microsoft\\EdgeWebView\\Application\\156.0.4314.42\\msedgewebview2.exe",
+        "observed_exit_code": 259
+      },
+      "gpu_id": "00000000:01:00.0",
+      "used_memory": "N/A"
+    },
+    {
+      "pid": 12408,
+      "type": "C+G",
+      "process_name": "C:\\Windows\\explorer.exe",
+      "basename": "explorer.exe",
+      "identity": {
+        "pid": 12408,
+        "running": true,
+        "creation_time_filetime": 134372941515308254,
+        "executable_path": "C:\\Windows\\explorer.exe",
+        "observed_exit_code": 259
+      },
+      "gpu_id": "00000000:01:00.0",
+      "used_memory": "N/A"
+    },
+    {
+      "pid": 12824,
+      "type": "C+G",
+      "process_name": "C:\\Program Files\\Tencent\\WeType\\3.0.0.38\\wetype_update.exe",
+      "basename": "wetype_update.exe",
+      "identity": {
+        "pid": 12824,
+        "running": true,
+        "creation_time_filetime": 134372941663614571,
+        "executable_path": "C:\\Program Files\\Tencent\\WeType\\3.0.0.38\\wetype_update.exe",
+        "observed_exit_code": 259
+      },
+      "gpu_id": "00000000:01:00.0",
+      "used_memory": "N/A"
+    },
+    {
+      "pid": 14292,
+      "type": "C+G",
+      "process_name": "C:\\Windows\\System32\\ShellHost.exe",
+      "basename": "ShellHost.exe",
+      "identity": {
+        "pid": 14292,
+        "running": true,
+        "creation_time_filetime": 134372941515563125,
+        "executable_path": "C:\\Windows\\System32\\ShellHost.exe",
+        "observed_exit_code": 259
+      },
+      "gpu_id": "00000000:01:00.0",
+      "used_memory": "N/A"
+    },
+    {
+      "pid": 14784,
+      "type": "C+G",
+      "process_name": "C:\\Windows\\SystemApps\\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\\CrossDeviceResume.exe",
+      "basename": "CrossDeviceResume.exe",
+      "identity": {
+        "pid": 14784,
+        "running": true,
+        "creation_time_filetime": 134372941519866970,
+        "executable_path": "C:\\Windows\\SystemApps\\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\\CrossDeviceResume.exe",
+        "observed_exit_code": 259
+      },
+      "gpu_id": "00000000:01:00.0",
+      "used_memory": "N/A"
+    },
+    {
+      "pid": 15736,
+      "type": "C+G",
+      "process_name": "C:\\Windows\\SystemApps\\ShellExperienceHost_cw5n1h2txyewy\\ShellExperienceHost.exe",
+      "basename": "ShellExperienceHost.exe",
+      "identity": {
+        "pid": 15736,
+        "running": true,
+        "creation_time_filetime": 134372941641179824,
+        "executable_path": "C:\\Windows\\SystemApps\\ShellExperienceHost_cw5n1h2txyewy\\ShellExperienceHost.exe",
+        "observed_exit_code": 259
+      },
+      "gpu_id": "00000000:01:00.0",
+      "used_memory": "N/A"
+    },
+    {
+      "pid": 17428,
+      "type": "C+G",
+      "process_name": "C:\\Program Files\\Oray\\AweSun\\flutter\\AweSun.exe",
+      "basename": "AweSun.exe",
+      "identity": {
+        "pid": 17428,
+        "running": true,
+        "creation_time_filetime": 134372942344580625,
+        "executable_path": "C:\\Program Files\\Oray\\AweSun\\flutter\\AweSun.exe",
+        "observed_exit_code": 259
+      },
+      "gpu_id": "00000000:01:00.0",
+      "used_memory": "N/A"
+    },
+    {
+      "pid": 19080,
+      "type": "C+G",
+      "process_name": "C:\\Windows\\SystemApps\\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\\SearchHost.exe",
+      "basename": "SearchHost.exe",
+      "identity": {
+        "pid": 19080,
+        "running": true,
+        "creation_time_filetime": 134372941571993906,
+        "executable_path": "C:\\Windows\\SystemApps\\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\\SearchHost.exe",
+        "observed_exit_code": 259
+      },
+      "gpu_id": "00000000:01:00.0",
+      "used_memory": "N/A"
+    },
+    {
+      "pid": 19096,
+      "type": "C+G",
+      "process_name": "C:\\Windows\\SystemApps\\Microsoft.Windows.StartMenuExperienceHost_cw5n1h2txyewy\\StartMenuExperienceHost.exe",
+      "basename": "StartMenuExperienceHost.exe",
+      "identity": {
+        "pid": 19096,
+        "running": true,
+        "creation_time_filetime": 134372941572004690,
+        "executable_path": "C:\\Windows\\SystemApps\\Microsoft.Windows.StartMenuExperienceHost_cw5n1h2txyewy\\StartMenuExperienceHost.exe",
+        "observed_exit_code": 259
+      },
+      "gpu_id": "00000000:01:00.0",
+      "used_memory": "N/A"
+    },
+    {
+      "pid": 20520,
+      "type": "C+G",
+      "process_name": "C:\\Users\\user\\AppData\\Local\\OpenAI\\Codex\\runtimes\\cua_node\\1fb7137c46617d50\\bin\\node_modules\\@oai\\sky\\bin\\windows\\swift\\x64\\codex-computer-use-swift.exe",
+      "basename": "codex-computer-use-swift.exe",
+      "identity": {
+        "pid": 20520,
+        "running": true,
+        "creation_time_filetime": 134372946257112577,
+        "executable_path": "C:\\Users\\user\\AppData\\Local\\OpenAI\\Codex\\runtimes\\cua_node\\1fb7137c46617d50\\bin\\node_modules\\@oai\\sky\\bin\\windows\\swift\\x64\\codex-computer-use-swift.exe",
+        "observed_exit_code": 259
+      },
+      "gpu_id": "00000000:01:00.0",
+      "used_memory": "N/A"
+    },
+    {
+      "pid": 20548,
+      "type": "C+G",
+      "process_name": "C:\\Program Files (x86)\\Microsoft\\EdgeWebView\\Application\\156.0.4314.42\\msedgewebview2.exe",
+      "basename": "msedgewebview2.exe",
+      "identity": {
+        "pid": 20548,
+        "running": true,
+        "creation_time_filetime": 134372942247799351,
+        "executable_path": "C:\\Program Files (x86)\\Microsoft\\EdgeWebView\\Application\\156.0.4314.42\\msedgewebview2.exe",
+        "observed_exit_code": 259
+      },
+      "gpu_id": "00000000:01:00.0",
+      "used_memory": "N/A"
+    },
+    {
+      "pid": 21012,
+      "type": "C+G",
+      "process_name": "C:\\Program Files (x86)\\Lenovo\\LeAppStore\\LenovoAppStore.exe",
+      "basename": "LenovoAppStore.exe",
+      "identity": {
+        "pid": 21012,
+        "running": true,
+        "creation_time_filetime": 134372941585390307,
+        "executable_path": "C:\\Program Files (x86)\\Lenovo\\LeAppStore\\LenovoAppStore.exe",
+        "observed_exit_code": 259
+      },
+      "gpu_id": "00000000:01:00.0",
+      "used_memory": "N/A"
+    },
+    {
+      "pid": 22364,
+      "type": "C+G",
+      "process_name": "C:\\Program Files (x86)\\Microsoft\\EdgeWebView\\Application\\156.0.4314.42\\msedgewebview2.exe",
+      "basename": "msedgewebview2.exe",
+      "identity": {
+        "pid": 22364,
+        "running": true,
+        "creation_time_filetime": 134372941591166445,
+        "executable_path": "C:\\Program Files (x86)\\Microsoft\\EdgeWebView\\Application\\156.0.4314.42\\msedgewebview2.exe",
+        "observed_exit_code": 259
+      },
+      "gpu_id": "00000000:01:00.0",
+      "used_memory": "N/A"
+    },
+    {
+      "pid": 23312,
+      "type": "C+G",
+      "process_name": "C:\\Users\\user\\AppData\\Local\\Mathpix\\Mathpix Snipping Tool\\mathpix-snipping-tool.exe",
+      "basename": "mathpix-snipping-tool.exe",
+      "identity": {
+        "pid": 23312,
+        "running": true,
+        "creation_time_filetime": 134372943515440174,
+        "executable_path": "C:\\Users\\user\\AppData\\Local\\Mathpix\\Mathpix Snipping Tool\\mathpix-snipping-tool.exe",
+        "observed_exit_code": 259
+      },
+      "gpu_id": "00000000:01:00.0",
+      "used_memory": "N/A"
+    },
+    {
+      "pid": 24132,
+      "type": "C+G",
+      "process_name": "C:\\Program Files\\Common Files\\microsoft shared\\ink\\TabTip.exe",
+      "basename": "TabTip.exe",
+      "identity": {
+        "pid": 24132,
+        "running": true,
+        "creation_time_filetime": 134372941676801618,
+        "executable_path": "C:\\Program Files\\Common Files\\microsoft shared\\ink\\TabTip.exe",
+        "observed_exit_code": 259
+      },
+      "gpu_id": "00000000:01:00.0",
+      "used_memory": "N/A"
+    },
+    {
+      "pid": 24308,
+      "type": "C+G",
+      "process_name": "C:\\Program Files (x86)\\Microsoft\\EdgeWebView\\Application\\156.0.4314.42\\msedgewebview2.exe",
+      "basename": "msedgewebview2.exe",
+      "identity": {
+        "pid": 24308,
+        "running": true,
+        "creation_time_filetime": 134372941677579082,
+        "executable_path": "C:\\Program Files (x86)\\Microsoft\\EdgeWebView\\Application\\156.0.4314.42\\msedgewebview2.exe",
+        "observed_exit_code": 259
+      },
+      "gpu_id": "00000000:01:00.0",
+      "used_memory": "N/A"
+    },
+    {
+      "pid": 24384,
+      "type": "C+G",
+      "process_name": "C:\\Program Files (x86)\\Microsoft\\EdgeWebView\\Application\\156.0.4314.42\\msedgewebview2.exe",
+      "basename": "msedgewebview2.exe",
+      "identity": {
+        "pid": 24384,
+        "running": true,
+        "creation_time_filetime": 134372941677737619,
+        "executable_path": "C:\\Program Files (x86)\\Microsoft\\EdgeWebView\\Application\\156.0.4314.42\\msedgewebview2.exe",
+        "observed_exit_code": 259
+      },
+      "gpu_id": "00000000:01:00.0",
+      "used_memory": "N/A"
+    },
+    {
+      "pid": 26048,
+      "type": "C+G",
+      "process_name": "C:\\Program Files\\WindowsApps\\Microsoft.YourPhone_1.26082.121.0_x64__8wekyb3d8bbwe\\PhoneExperienceHost.exe",
+      "basename": "PhoneExperienceHost.exe",
+      "identity": {
+        "pid": 26048,
+        "running": true,
+        "creation_time_filetime": 134373485557170389,
+        "executable_path": "C:\\Program Files\\WindowsApps\\Microsoft.YourPhone_1.26082.121.0_x64__8wekyb3d8bbwe\\PhoneExperienceHost.exe",
+        "observed_exit_code": 259
+      },
+      "gpu_id": "00000000:01:00.0",
+      "used_memory": "N/A"
+    },
+    {
+      "pid": 27104,
+      "type": "C+G",
+      "process_name": "",
+      "basename": "ToDesk.exe",
+      "identity": {
+        "pid": 27104,
+        "running": null,
+        "creation_time_filetime": null,
+        "executable_path": null,
+        "winerror": 5
+      },
+      "gpu_id": "00000000:01:00.0",
+      "used_memory": "N/A"
+    },
+    {
+      "pid": 27332,
+      "type": "C+G",
+      "process_name": "C:\\Snipaste-2.10.5-x86\\Snipaste.exe",
+      "basename": "Snipaste.exe",
+      "identity": {
+        "pid": 27332,
+        "running": true,
+        "creation_time_filetime": 134373899133718916,
+        "executable_path": "C:\\Snipaste-2.10.5-x86\\Snipaste.exe",
+        "observed_exit_code": 259
+      },
+      "gpu_id": "00000000:01:00.0",
+      "used_memory": "N/A"
+    },
+    {
+      "pid": 28064,
+      "type": "C+G",
+      "process_name": "C:\\Program Files (x86)\\Microsoft\\EdgeWebView\\Application\\156.0.4314.42\\msedgewebview2.exe",
+      "basename": "msedgewebview2.exe",
+      "identity": {
+        "pid": 28064,
+        "running": true,
+        "creation_time_filetime": 134372945990204743,
+        "executable_path": "C:\\Program Files (x86)\\Microsoft\\EdgeWebView\\Application\\156.0.4314.42\\msedgewebview2.exe",
+        "observed_exit_code": 259
+      },
+      "gpu_id": "00000000:01:00.0",
+      "used_memory": "N/A"
+    },
+    {
+      "pid": 28420,
+      "type": "C+G",
+      "process_name": "C:\\Users\\user\\AppData\\Local\\Programs\\SakuraCat\\SakuraCat.exe",
+      "basename": "SakuraCat.exe",
+      "identity": {
+        "pid": 28420,
+        "running": true,
+        "creation_time_filetime": 134372943252316107,
+        "executable_path": "C:\\Users\\user\\AppData\\Local\\Programs\\SakuraCat\\SakuraCat.exe",
+        "observed_exit_code": 259
+      },
+      "gpu_id": "00000000:01:00.0",
+      "used_memory": "N/A"
+    },
+    {
+      "pid": 28748,
+      "type": "C+G",
+      "process_name": "C:\\Program Files\\Tencent\\QQNT\\QQ.exe",
+      "basename": "QQ.exe",
+      "identity": {
+        "pid": 28748,
+        "running": true,
+        "creation_time_filetime": 134372942529179241,
+        "executable_path": "C:\\Program Files\\Tencent\\QQNT\\QQ.exe",
+        "observed_exit_code": 259
+      },
+      "gpu_id": "00000000:01:00.0",
+      "used_memory": "N/A"
+    },
+    {
+      "pid": 30824,
+      "type": "C+G",
+      "process_name": "C:\\Program Files\\LogiOptionsPlus\\logivoice\\logioptionsplus_logivoice.exe",
+      "basename": "logioptionsplus_logivoice.exe",
+      "identity": {
+        "pid": 30824,
+        "running": true,
+        "creation_time_filetime": 134372942574519583,
+        "executable_path": "C:\\Program Files\\LogiOptionsPlus\\logivoice\\logioptionsplus_logivoice.exe",
+        "observed_exit_code": 259
+      },
+      "gpu_id": "00000000:01:00.0",
+      "used_memory": "N/A"
+    },
+    {
+      "pid": 35296,
+      "type": "C+G",
+      "process_name": "C:\\Users\\user\\AppData\\Local\\Feishu\\app\\Feishu.exe",
+      "basename": "Feishu.exe",
+      "identity": {
+        "pid": 35296,
+        "running": true,
+        "creation_time_filetime": 134372942965325566,
+        "executable_path": "C:\\Users\\user\\AppData\\Local\\Feishu\\app\\Feishu.exe",
+        "observed_exit_code": 259
+      },
+      "gpu_id": "00000000:01:00.0",
+      "used_memory": "N/A"
+    },
+    {
+      "pid": 38768,
+      "type": "C+G",
+      "process_name": "C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe",
+      "basename": "msedge.exe",
+      "identity": {
+        "pid": 38768,
+        "running": true,
+        "creation_time_filetime": 134372943297277869,
+        "executable_path": "C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe",
+        "observed_exit_code": 259
+      },
+      "gpu_id": "00000000:01:00.0",
+      "used_memory": "N/A"
+    },
+    {
+      "pid": 39496,
+      "type": "C+G",
+      "process_name": "C:\\Program Files\\WindowsApps\\OpenAI.Codex_26.1021.3705.0_x64__2p2nqsd0c76g0\\app\\ChatGPT.exe",
+      "basename": "ChatGPT.exe",
+      "identity": {
+        "pid": 39496,
+        "running": true,
+        "creation_time_filetime": 134372945867878502,
+        "executable_path": "C:\\Program Files\\WindowsApps\\OpenAI.Codex_26.1021.3705.0_x64__2p2nqsd0c76g0\\app\\ChatGPT.exe",
+        "observed_exit_code": 259
+      },
+      "gpu_id": "00000000:01:00.0",
+      "used_memory": "N/A"
+    },
+    {
+      "pid": 45032,
+      "type": "C+G",
+      "process_name": "C:\\Program Files (x86)\\Microsoft\\Copilot\\Application\\copilotapp.exe",
+      "basename": "copilotapp.exe",
+      "identity": {
+        "pid": 45032,
+        "running": true,
+        "creation_time_filetime": 134374855461337029,
+        "executable_path": "C:\\Program Files (x86)\\Microsoft\\Copilot\\Application\\copilotapp.exe",
+        "observed_exit_code": 259
+      },
+      "gpu_id": "00000000:01:00.0",
+      "used_memory": "N/A"
+    },
+    {
+      "pid": 45920,
+      "type": "C+G",
+      "process_name": "C:\\STEAM\\bin\\cef\\cef.win64\\steamwebhelper.exe",
+      "basename": "steamwebhelper.exe",
+      "identity": {
+        "pid": 45920,
+        "running": true,
+        "creation_time_filetime": 134372974640139752,
+        "executable_path": "C:\\STEAM\\bin\\cef\\cef.win64\\steamwebhelper.exe",
+        "observed_exit_code": 259
+      },
+      "gpu_id": "00000000:01:00.0",
+      "used_memory": "N/A"
+    },
+    {
+      "pid": 46676,
+      "type": "C+G",
+      "process_name": "C:\\Users\\user\\AppData\\Local\\Google\\Chrome\\Application\\chrome.exe",
+      "basename": "chrome.exe",
+      "identity": {
+        "pid": 46676,
+        "running": true,
+        "creation_time_filetime": 134372946609127280,
+        "executable_path": "C:\\Users\\user\\AppData\\Local\\Google\\Chrome\\Application\\chrome.exe",
+        "observed_exit_code": 259
+      },
+      "gpu_id": "00000000:01:00.0",
+      "used_memory": "N/A"
+    },
+    {
+      "pid": 47976,
+      "type": "C+G",
+      "process_name": "C:\\Users\\user\\AppData\\Local\\Google\\Chrome\\Application\\chrome.exe",
+      "basename": "chrome.exe",
+      "identity": {
+        "pid": 47976,
+        "running": true,
+        "creation_time_filetime": 134372946601379922,
+        "executable_path": "C:\\Users\\user\\AppData\\Local\\Google\\Chrome\\Application\\chrome.exe",
+        "observed_exit_code": 259
+      },
+      "gpu_id": "00000000:01:00.0",
+      "used_memory": "N/A"
+    },
+    {
+      "pid": 56432,
+      "type": "C+G",
+      "process_name": "C:\\Users\\user\\AppData\\Local\\Kingsoft\\WPS Office\\12.1.0.28802\\office6\\promecefpluginhost.exe",
+      "basename": "promecefpluginhost.exe",
+      "identity": {
+        "pid": 56432,
+        "running": true,
+        "creation_time_filetime": 134373032830403788,
+        "executable_path": "C:\\Users\\user\\AppData\\Local\\Kingsoft\\WPS Office\\12.1.0.28802\\office6\\promecefpluginhost.exe",
+        "observed_exit_code": 259
+      },
+      "gpu_id": "00000000:01:00.0",
+      "used_memory": "N/A"
+    },
+    {
+      "pid": 56584,
+      "type": "C+G",
+      "process_name": "C:\\Windows\\SystemApps\\Microsoft.LockApp_cw5n1h2txyewy\\LockApp.exe",
+      "basename": "LockApp.exe",
+      "identity": {
+        "pid": 56584,
+        "running": true,
+        "creation_time_filetime": 134373071654203113,
+        "executable_path": "C:\\Windows\\SystemApps\\Microsoft.LockApp_cw5n1h2txyewy\\LockApp.exe",
+        "observed_exit_code": 259
+      },
+      "gpu_id": "00000000:01:00.0",
+      "used_memory": "N/A"
+    },
+    {
+      "pid": 60780,
+      "type": "C+G",
+      "process_name": "C:\\Program Files\\sw2025\\SOLIDWORKS Corp 2025\\SOLIDWORKS\\SLDWORKS.exe",
+      "basename": "SLDWORKS.exe",
+      "identity": {
+        "pid": 60780,
+        "running": true,
+        "creation_time_filetime": 134374747204509264,
+        "executable_path": "C:\\Program Files\\sw2025\\SOLIDWORKS Corp 2025\\SOLIDWORKS\\SLDWORKS.exe",
+        "observed_exit_code": 259
+      },
+      "gpu_id": "00000000:01:00.0",
+      "used_memory": "N/A"
+    },
+    {
+      "pid": 63576,
+      "type": "C+G",
+      "process_name": "C:\\Program Files\\sw2025\\SOLIDWORKS Corp 2025\\SOLIDWORKS\\sldProcMon.exe",
+      "basename": "sldProcMon.exe",
+      "identity": {
+        "pid": 63576,
+        "running": true,
+        "creation_time_filetime": 134374747207180425,
+        "executable_path": "C:\\Program Files\\sw2025\\SOLIDWORKS Corp 2025\\SOLIDWORKS\\sldProcMon.exe",
+        "observed_exit_code": 259
+      },
+      "gpu_id": "00000000:01:00.0",
+      "used_memory": "N/A"
+    },
+    {
+      "pid": 65532,
+      "type": "C+G",
+      "process_name": "C:\\Program Files\\Bambu Studio\\bambu-studio.exe",
+      "basename": "bambu-studio.exe",
+      "identity": {
+        "pid": 65532,
+        "running": true,
+        "creation_time_filetime": 134374835663555451,
+        "executable_path": "C:\\Program Files\\Bambu Studio\\bambu-studio.exe",
+        "observed_exit_code": 259
+      },
+      "gpu_id": "00000000:01:00.0",
+      "used_memory": "N/A"
+    },
+    {
+      "pid": 66380,
+      "type": "C+G",
+      "process_name": "C:\\Users\\user\\AppData\\Local\\OpenAI\\Codex\\runtimes\\cua_node\\1fb7137c46617d50\\bin\\node_modules\\@oai\\sky\\bin\\windows\\codex-computer-use.exe",
+      "basename": "codex-computer-use.exe",
+      "identity": {
+        "pid": 66380,
+        "running": true,
+        "creation_time_filetime": 134374759556490544,
+        "executable_path": "C:\\Users\\user\\AppData\\Local\\OpenAI\\Codex\\runtimes\\cua_node\\1fb7137c46617d50\\bin\\node_modules\\@oai\\sky\\bin\\windows\\codex-computer-use.exe",
+        "observed_exit_code": 259
+      },
+      "gpu_id": "00000000:01:00.0",
+      "used_memory": "N/A"
+    },
+    {
+      "pid": 69028,
+      "type": "C+G",
+      "process_name": "C:\\Program Files (x86)\\Microsoft\\EdgeWebView\\Application\\156.0.4314.42\\msedgewebview2.exe",
+      "basename": "msedgewebview2.exe",
+      "identity": {
+        "pid": 69028,
+        "running": true,
+        "creation_time_filetime": 134374835776425448,
+        "executable_path": "C:\\Program Files (x86)\\Microsoft\\EdgeWebView\\Application\\156.0.4314.42\\msedgewebview2.exe",
+        "observed_exit_code": 259
+      },
+      "gpu_id": "00000000:01:00.0",
+      "used_memory": "N/A"
+    }
+  ],
+  "binary_identities": [
+    {
+      "process_name": "C:\\Users\\user\\AppData\\Roaming\\baidu\\BaiduNetdisk\\module\\BrowserEngine\\BaiduNetdiskUnite.exe",
+      "basename": "BaiduNetdiskUnite.exe",
+      "sha256": "2b619249754608589448d717f517238e5b7698ac0c1755634fcadc6fae2d80ea"
+    },
+    {
+      "process_name": "C:\\Program Files\\LogiOptionsPlus\\logioptionsplus_agent.exe",
+      "basename": "logioptionsplus_agent.exe",
+      "sha256": "0d7149a8ded851cb492f75e3b78306cc68b60dc623b2341267db17bb15b1f03c"
+    },
+    {
+      "process_name": "C:\\Windows\\SystemApps\\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\\TextInputHost.exe",
+      "basename": "TextInputHost.exe",
+      "sha256": "d0e70f62928d634e3866a2599fa21ae42d7f1c5b053ee4c8c6fdcac7ae9e1385"
+    },
+    {
+      "process_name": "C:\\Program Files (x86)\\Microsoft\\EdgeWebView\\Application\\156.0.4314.42\\msedgewebview2.exe",
+      "basename": "msedgewebview2.exe",
+      "sha256": "337a496fffec9940ef7142e67162f80e40c878cb8fc2af66e5bd9aa75ffcdbae"
+    },
+    {
+      "process_name": "C:\\Windows\\explorer.exe",
+      "basename": "explorer.exe",
+      "sha256": "87811a107eed62900b230c49a252170d6a7307e94a08307ce972f9b9b8155d54"
+    },
+    {
+      "process_name": "C:\\Program Files\\Tencent\\WeType\\3.0.0.38\\wetype_update.exe",
+      "basename": "wetype_update.exe",
+      "sha256": "30c235d59ca403c0fdad6c1cae57001d450fc71c5bbcf2e48d59d4d0a82dbffe"
+    },
+    {
+      "process_name": "C:\\Windows\\System32\\ShellHost.exe",
+      "basename": "ShellHost.exe",
+      "sha256": "75268bc04679fdddbea23e72274351641e44bd7019d8c625d61fbdc574ec0353"
+    },
+    {
+      "process_name": "C:\\Windows\\SystemApps\\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\\CrossDeviceResume.exe",
+      "basename": "CrossDeviceResume.exe",
+      "sha256": "b15e9da33402779e60c43a358c6aae5aa071a8c7723f200cda50e87ba650ff8a"
+    },
+    {
+      "process_name": "C:\\Windows\\SystemApps\\ShellExperienceHost_cw5n1h2txyewy\\ShellExperienceHost.exe",
+      "basename": "ShellExperienceHost.exe",
+      "sha256": "9d6d7b37ba8f6db67c3c33111ab32842abb5b4a940ff61c106899b4be5ecfc00"
+    },
+    {
+      "process_name": "C:\\Program Files\\Oray\\AweSun\\flutter\\AweSun.exe",
+      "basename": "AweSun.exe",
+      "sha256": "165c76a7e888323decf7553f3c29ac2557a173dc150ae62f5cc4a442fb06d0cb"
+    },
+    {
+      "process_name": "C:\\Windows\\SystemApps\\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\\SearchHost.exe",
+      "basename": "SearchHost.exe",
+      "sha256": "2ab7ed99d701862391461f3efdc8f71df8435851bf647cb4b00cb4d145887183"
+    },
+    {
+      "process_name": "C:\\Windows\\SystemApps\\Microsoft.Windows.StartMenuExperienceHost_cw5n1h2txyewy\\StartMenuExperienceHost.exe",
+      "basename": "StartMenuExperienceHost.exe",
+      "sha256": "b012b84674ae63052c368227ce41be39e5586d759b5eff8e3fbf01f53bfd00f1"
+    },
+    {
+      "process_name": "C:\\Users\\user\\AppData\\Local\\OpenAI\\Codex\\runtimes\\cua_node\\1fb7137c46617d50\\bin\\node_modules\\@oai\\sky\\bin\\windows\\swift\\x64\\codex-computer-use-swift.exe",
+      "basename": "codex-computer-use-swift.exe",
+      "sha256": "108305fa71d93925eb86bb1efad65b171a2b83b23aaa3a19eb006f8b29e78966"
+    },
+    {
+      "process_name": "C:\\Program Files (x86)\\Lenovo\\LeAppStore\\LenovoAppStore.exe",
+      "basename": "LenovoAppStore.exe",
+      "sha256": "97dc50bab38cbef2ff944fa9785630223e51ef0cbdf3cdeba9636a9e7a7c42d5"
+    },
+    {
+      "process_name": "C:\\Users\\user\\AppData\\Local\\Mathpix\\Mathpix Snipping Tool\\mathpix-snipping-tool.exe",
+      "basename": "mathpix-snipping-tool.exe",
+      "sha256": "1da6aa4bb4110288550ddeaa6a1c1eccd67deb564f7c5ed6970661b89a441204"
+    },
+    {
+      "process_name": "C:\\Program Files\\Common Files\\microsoft shared\\ink\\TabTip.exe",
+      "basename": "TabTip.exe",
+      "sha256": "295be98eb13ef0a5482d568bbc6212ef422ad139ccff652a2fe0e5779767d450"
+    },
+    {
+      "process_name": "C:\\Program Files\\WindowsApps\\Microsoft.YourPhone_1.26082.121.0_x64__8wekyb3d8bbwe\\PhoneExperienceHost.exe",
+      "basename": "PhoneExperienceHost.exe",
+      "sha256": "0faeb5d8bd77d89851a25866083ef732b77452b96ce34040f3069be1d3b5ef4e"
+    },
+    {
+      "process_name": "C:\\Snipaste-2.10.5-x86\\Snipaste.exe",
+      "basename": "Snipaste.exe",
+      "sha256": "a49e28ca5f5b519444209703080e19d1821d6cd173d67a6c06b0dac5bbe5a3c7"
+    },
+    {
+      "process_name": "C:\\Users\\user\\AppData\\Local\\Programs\\SakuraCat\\SakuraCat.exe",
+      "basename": "SakuraCat.exe",
+      "sha256": "5c04d4dff088c48bdd60d19324e42687c161023a31f4306856b0938eaa6e78b2"
+    },
+    {
+      "process_name": "C:\\Program Files\\Tencent\\QQNT\\QQ.exe",
+      "basename": "QQ.exe",
+      "sha256": "fb2d3b4ee2a372752edd1fda620e9aae27b7dea9903f7ecf5b84cb6483ecd7c5"
+    },
+    {
+      "process_name": "C:\\Program Files\\LogiOptionsPlus\\logivoice\\logioptionsplus_logivoice.exe",
+      "basename": "logioptionsplus_logivoice.exe",
+      "sha256": "278325dbaada7e32860d3bb5dbd319d88baf0ed0610e7d2e49717121d94524c5"
+    },
+    {
+      "process_name": "C:\\Users\\user\\AppData\\Local\\Feishu\\app\\Feishu.exe",
+      "basename": "Feishu.exe",
+      "sha256": "bfb524359edab1eb98b9ec3760db6aecc1f95065a502b0c5592e7e51f4b68f61"
+    },
+    {
+      "process_name": "C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe",
+      "basename": "msedge.exe",
+      "sha256": "bb74db4c753133706f4ab0a483a87aa28a90ddd6eeb305fe001376ba73a40fc3"
+    },
+    {
+      "process_name": "C:\\Program Files\\WindowsApps\\OpenAI.Codex_26.1021.3705.0_x64__2p2nqsd0c76g0\\app\\ChatGPT.exe",
+      "basename": "ChatGPT.exe",
+      "sha256": "c5a6ea0f6d99d696e9976c0ecefb6b8410a7dd5b17d96fb69a72c83a8192b649"
+    },
+    {
+      "process_name": "C:\\Program Files (x86)\\Microsoft\\Copilot\\Application\\copilotapp.exe",
+      "basename": "copilotapp.exe",
+      "sha256": "a0844740beedb35139c0d8b96285f9213c983cb316ad8bbbb3448b91f2ec63d1"
+    },
+    {
+      "process_name": "C:\\STEAM\\bin\\cef\\cef.win64\\steamwebhelper.exe",
+      "basename": "steamwebhelper.exe",
+      "sha256": "5ee6df1a5a2237dd3efb7d7042b02ba20f2238ba15d961b1a10ef6d575c59362"
+    },
+    {
+      "process_name": "C:\\Users\\user\\AppData\\Local\\Google\\Chrome\\Application\\chrome.exe",
+      "basename": "chrome.exe",
+      "sha256": "e8bce39747ea63c9c7d4306f7635d2916c9ecb0cf913fbcf5e7acc4539b5b8a0"
+    },
+    {
+      "process_name": "C:\\Users\\user\\AppData\\Local\\Kingsoft\\WPS Office\\12.1.0.28802\\office6\\promecefpluginhost.exe",
+      "basename": "promecefpluginhost.exe",
+      "sha256": "9f0c61eb2e6f0e84189cce926c7619c3f4e58df14adf5771777b3e730bd87ac5"
+    },
+    {
+      "process_name": "C:\\Windows\\SystemApps\\Microsoft.LockApp_cw5n1h2txyewy\\LockApp.exe",
+      "basename": "LockApp.exe",
+      "sha256": "76643b5929faebb04e67e1f5421363f3ec327fe555c596245abba4586d5cf322"
+    },
+    {
+      "process_name": "C:\\Program Files\\sw2025\\SOLIDWORKS Corp 2025\\SOLIDWORKS\\SLDWORKS.exe",
+      "basename": "SLDWORKS.exe",
+      "sha256": "911309f7494e806f22914bab40aa65531c01b45888ec482ac555fbd8b4f0a18b"
+    },
+    {
+      "process_name": "C:\\Program Files\\sw2025\\SOLIDWORKS Corp 2025\\SOLIDWORKS\\sldProcMon.exe",
+      "basename": "sldProcMon.exe",
+      "sha256": "69c582e0e0f96d00567b327df79e30b0ba51e0cda39af4a8adc7e4b3f333964d"
+    },
+    {
+      "process_name": "C:\\Program Files\\Bambu Studio\\bambu-studio.exe",
+      "basename": "bambu-studio.exe",
+      "sha256": "7680dac4a953cb4f8a96cc2b4ad4ea0b8bfc62f937d3491256922ff24dbb8268"
+    },
+    {
+      "process_name": "C:\\Users\\user\\AppData\\Local\\OpenAI\\Codex\\runtimes\\cua_node\\1fb7137c46617d50\\bin\\node_modules\\@oai\\sky\\bin\\windows\\codex-computer-use.exe",
+      "basename": "codex-computer-use.exe",
+      "sha256": "11825cb78575d9099aed8f13d16f78b03c20a1a0ebc809cf78b406fb2f25f5f8"
+    }
+  ],
+  "known_cpu_services": [
+    {
+      "identity": {
+        "pid": 60740,
+        "running": true,
+        "creation_time_filetime": 134374911752567143,
+        "executable_path": "C:\\python312\\python.exe",
+        "observed_exit_code": 259
+      },
+      "command_line": "\"C:\\python312\\python.exe\" .\\crack_console\\server.py --port 8765",
+      "source_files": {
+        "D:\\论文复现\\crack_console\\server.py": "52d356ab53c735b512ef61d6756d23738d69fae8f6c362e44ed6521690c99038",
+        "D:\\论文复现\\crack_console\\inference.py": "877deba8d5fb6985feabec2cd86e4192256b5ecef7756bd94abc90470224b6e4"
+      },
+      "status_url": "http://127.0.0.1:8765/api/status",
+      "verified_cpu_status": {
+        "ok": true,
+        "device": "cpu",
+        "ready": true
+      },
+      "identity_source": "Win32_Process plus read-only FILETIME/executable identity and live /api/status"
+    },
+    {
+      "identity": {
+        "pid": 61000,
+        "running": true,
+        "creation_time_filetime": 134374911752415663,
+        "executable_path": "C:\\Users\\user\\算法实验\\venv_bisenet\\Scripts\\python.exe",
+        "observed_exit_code": 259
+      },
+      "command_line": "\"C:\\venv_bisenet\\Scripts\\python.exe\" .\\crack_console\\server.py --port 8765",
+      "source_files": {
+        "D:\\论文复现\\crack_console\\server.py": "52d356ab53c735b512ef61d6756d23738d69fae8f6c362e44ed6521690c99038",
+        "D:\\论文复现\\crack_console\\inference.py": "877deba8d5fb6985feabec2cd86e4192256b5ecef7756bd94abc90470224b6e4"
+      },
+      "status_url": "http://127.0.0.1:8765/api/status",
+      "verified_cpu_status": {
+        "ok": true,
+        "device": "cpu",
+        "ready": true
+      },
+      "identity_source": "Win32_Process plus read-only FILETIME/executable identity and live /api/status"
+    }
+  ],
+  "policy": "exact observed identities or pinned desktop binary identity; known CPU console requires unchanged source/creation/command and live status; no application termination",
+  "no_GPU_model_built": true
+}

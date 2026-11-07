@@ -1,0 +1,151 @@
+{
+  "id": "T_CoordinateAttention",
+  "group": "T_CoordinateAttention",
+  "status": "complete",
+  "registered_numel": 3690466,
+  "metrics": {
+    "n": 348,
+    "confusion_matrix": [
+      [
+        76174365,
+        812380
+      ],
+      [
+        889982,
+        3717417
+      ]
+    ],
+    "mIoU": 0.8320192806092997,
+    "crackIoU": 0.6858982626413365,
+    "precision": 0.8206586299562652,
+    "recall": 0.8068363517029891,
+    "f1": 0.8136887946805562,
+    "empty_predictions": 7,
+    "empty_gt": 0,
+    "empty_both": 0,
+    "zero_foreground_overlap": 9,
+    "negative_sample_fp": 0,
+    "boundary_f1_1px": 0.3220727446119449,
+    "boundary_precision_1px": 0.33824767144754486,
+    "boundary_recall_1px": 0.3073741810748726,
+    "boundary_f1_2px": 0.4582127195602047,
+    "boundary_precision_2px": 0.4798486306367975,
+    "boundary_recall_2px": 0.4384437160716898,
+    "boundary_f1": 0.4582127195602047,
+    "boundary_precision": 0.4798486306367975,
+    "boundary_recall": 0.4384437160716898,
+    "hard_cldice": 0.8704574353645665,
+    "skeleton_precision": 0.892680028338323,
+    "skeleton_recall": 0.8493143969291258,
+    "global_counts": {
+      "boundary_pred": 464559,
+      "boundary_gt": 505846,
+      "pred_skeleton_count": 175028,
+      "gt_skeleton_count": 203981,
+      "pred_skeleton_in_gt": 156244,
+      "gt_skeleton_in_pred": 173244,
+      "gt_crop_border_skeleton_count": 1759,
+      "gt_crop_border_skeleton_in_pred": 521,
+      "boundary_match_pred_1px": 157136,
+      "boundary_match_pred_2px": 222918,
+      "boundary_match_gt_1px": 155484,
+      "boundary_match_gt_2px": 221785,
+      "r_le1_gt": 5464,
+      "r_le1_hit": 2509,
+      "r_le1_border_gt": 1759,
+      "r_le1_border_hit": 521,
+      "r_1to2_gt": 7623,
+      "r_1to2_hit": 4148,
+      "r_1to2_border_gt": 0,
+      "r_1to2_border_hit": 0,
+      "r_gt2_gt": 190894,
+      "r_gt2_hit": 166587,
+      "r_gt2_border_gt": 0,
+      "r_gt2_border_hit": 0
+    },
+    "gt_radius_strata": {
+      "r_le1": {
+        "gt": 5464,
+        "hit": 2509,
+        "recall": 0.4591874084919473,
+        "crop_border_gt": 1759,
+        "crop_border_hit": 521,
+        "crop_border_recall": 0.2961910176236498
+      },
+      "r_1to2": {
+        "gt": 7623,
+        "hit": 4148,
+        "recall": 0.5441427259609077,
+        "crop_border_gt": 0,
+        "crop_border_hit": 0,
+        "crop_border_recall": null
+      },
+      "r_gt2": {
+        "gt": 190894,
+        "hit": 166587,
+        "recall": 0.8726675537209132,
+        "crop_border_gt": 0,
+        "crop_border_hit": 0,
+        "crop_border_recall": null
+      }
+    },
+    "crop_border_skeleton_recall": 0.2961910176236498,
+    "test_used": false,
+    "config": "D:\\论文复现\\experiments\\segformer_ten_aligned_wave14_20261028\\configs\\T_CoordinateAttention.yml",
+    "config_sha256": "75c547fea0c53717c6d997688351d526f50b3835ccbd12b1ac9abe59b5967a8e",
+    "model_path": "D:\\论文复现\\experiments\\segformer_ten_aligned_wave14_20261028\\checkpoints\\T_CoordinateAttention\\model.pdparams",
+    "checkpoint_sha256": "f464416a35d11a849ffa9a958341b78a15059314a9c8161620acd9918ecaf6ea",
+    "versions": {
+      "packages": {
+        "scikit-image": "0.26.0",
+        "opencv-python-headless": "4.11.0.86",
+        "numpy": "2.4.1"
+      },
+      "cv2": "4.11.0",
+      "skimage": "0.26.0",
+      "skeleton_algorithm": "skimage.morphology.skeletonize(method=zhang)",
+      "boundary_distance": "cv2.DIST_L2 / DIST_MASK_PRECISE",
+      "gt_radius_border": "pad1 constant0; exact distanceTransform; crop1",
+      "test_used": false
+    },
+    "fixed24_cases": {
+      "path": "D:\\论文复现\\experiments\\segformer_ten_aligned_wave14_20261028\\provenance\\fixed24_val_cases.json",
+      "sha256": "8ba37712a2a4a15ed2db42f13f65c7150530896f09f1c36ec37134978943c619",
+      "selected_images": [
+        "20160222_165225_1281_361.jpg",
+        "20160222_080850_1921_361.jpg",
+        "20160222_080850_1281_361.jpg",
+        "20160222_164851_641_1081.jpg",
+        "20160222_115224_1921_1081.jpg",
+        "20160222_080850_1281_721.jpg",
+        "20160222_080850_1921_1.jpg",
+        "20160222_080850_641_721.jpg",
+        "20160222_115224_1281_1.jpg",
+        "20160222_165225_1_361.jpg",
+        "20160222_164851_641_1.jpg",
+        "20160222_080850_1_361.jpg",
+        "20160222_165225_1921_721.jpg",
+        "20160222_165926_1921_721.jpg",
+        "20160222_080850_641_361.jpg",
+        "20160222_165225_1281_721.jpg",
+        "20160222_115224_641_1.jpg",
+        "20160222_115224_1281_361.jpg",
+        "20160222_165402_1281_1.jpg",
+        "20160222_164851_641_721.jpg",
+        "20160222_115224_1281_1081.jpg",
+        "20160222_165225_641_361.jpg",
+        "20160222_165926_641_361.jpg",
+        "20160222_115224_641_361.jpg"
+      ]
+    },
+    "boundary_protocol": "inner3x3 constant0; exact Euclidean<=1/2px; accumulate match counts then harmonic mean",
+    "skeleton_protocol": "hard global counts: skeleton(pred) in GT; skeleton(GT) in pred; Zhang0.26.0; argmax masks",
+    "radius_protocol": "GT pad1 constant0 exact distance then crop; radius<=1,1<r<=2,r>2; crop-border points separately"
+  },
+  "checkpoint": "D:\\论文复现\\experiments\\segformer_ten_aligned_wave14_20261028\\checkpoints\\T_CoordinateAttention\\model.pdparams",
+  "checkpoint_sha256": "f464416a35d11a849ffa9a958341b78a15059314a9c8161620acd9918ecaf6ea",
+  "selected_variant": "ordinary",
+  "selected_iteration": 8000,
+  "selection": "D:\\论文复现\\experiments\\segformer_ten_aligned_wave14_20261028\\checkpoints\\T_CoordinateAttention\\selection.json",
+  "test_used": false
+}

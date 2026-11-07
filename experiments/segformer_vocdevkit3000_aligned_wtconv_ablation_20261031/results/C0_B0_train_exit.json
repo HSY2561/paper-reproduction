@@ -1,0 +1,33 @@
+{
+  "tag": "C0_B0_train",
+  "exit_code": 0,
+  "guard_reason": null,
+  "ended_at": "2026-10-31T23:52:31+08:00",
+  "command": [
+    "C:\\venv_bisenet\\Scripts\\python.exe",
+    "D:\\论文复现\\experiments\\segformer_vocdevkit3000_aligned_wtconv_ablation_20261031\\src\\PaddleSeg-2.10.0\\tools\\train.py",
+    "--config",
+    "D:\\论文复现\\experiments\\segformer_vocdevkit3000_aligned_wtconv_ablation_20261031\\configs\\C0_B0.yml",
+    "--save_dir",
+    "D:\\论文复现\\experiments\\segformer_vocdevkit3000_aligned_wtconv_ablation_20261031\\training\\C0_B0",
+    "--iters",
+    "18000",
+    "--do_eval",
+    "--use_ema",
+    "--save_interval",
+    "1000",
+    "--seed",
+    "42",
+    "--log_iters",
+    "100",
+    "--num_workers",
+    "0",
+    "--keep_checkpoint_max",
+    "1",
+    "--precision",
+    "fp32"
+  ],
+  "stdout": "D:\\论文复现\\experiments\\segformer_vocdevkit3000_aligned_wtconv_ablation_20261031\\logs\\C0_B0_train.stdout.log",
+  "stderr": "D:\\论文复现\\experiments\\segformer_vocdevkit3000_aligned_wtconv_ablation_20261031\\logs\\C0_B0_train.stderr.log",
+  "test_used": false
+}

@@ -1,0 +1,21 @@
+{
+  "tag": "W13_P03A_PDC_pixel_boundary",
+  "pid": 72096,
+  "exit_code": 0,
+  "guard_reason": null,
+  "ended_at": "2026-10-27T23:04:03+08:00",
+  "command": [
+    "C:\\venv_bisenet\\Scripts\\python.exe",
+    "D:\\论文复现\\experiments\\segformer_aligned_pair_wave13_20261027\\evaluate_val_boundary.py",
+    "--config",
+    "D:\\论文复现\\experiments\\segformer_aligned_pair_wave13_20261027\\configs\\P03A_PDC.yml",
+    "--model_path",
+    "D:\\论文复现\\experiments\\segformer_aligned_pair_wave13_20261027\\checkpoints\\P03A_PDC\\model.pdparams",
+    "--output",
+    "D:\\论文复现\\experiments\\segformer_aligned_pair_wave13_20261027\\results\\P03A_PDC_val"
+  ],
+  "stdout": "D:\\论文复现\\experiments\\segformer_aligned_pair_wave13_20261027\\logs\\W13_P03A_PDC_pixel_boundary.stdout.log",
+  "stderr": "D:\\论文复现\\experiments\\segformer_aligned_pair_wave13_20261027\\logs\\W13_P03A_PDC_pixel_boundary.stderr.log",
+  "test_used": false,
+  "active": false
+}

@@ -1,0 +1,7 @@
+{
+  "passed": false,
+  "evidence_sha256": "9d730759c44bc8d81db7cbdc5af53e854da257abe435e972f25a6924583bd8a4",
+  "failed_gate_rejects_deployment_only": true,
+  "new_training": false,
+  "test_used": false
+}

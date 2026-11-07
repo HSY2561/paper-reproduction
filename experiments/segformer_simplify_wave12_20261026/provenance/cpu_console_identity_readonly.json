@@ -1,0 +1,18 @@
+[
+  {
+    "ProcessId": 61000,
+    "ParentProcessId": 61288,
+    "Name": "python.exe",
+    "ExecutablePath": "C:\\venv_bisenet\\Scripts\\python.exe",
+    "CommandLine": "\"C:\\venv_bisenet\\Scripts\\python.exe\" .\\crack_console\\server.py --port 8765",
+    "CreationDate": "2026-10-26T20:26:15.241566+08:00"
+  },
+  {
+    "ProcessId": 60740,
+    "ParentProcessId": 61000,
+    "Name": "python.exe",
+    "ExecutablePath": "C:\\python312\\python.exe",
+    "CommandLine": "\"C:\\python312\\python.exe\" .\\crack_console\\server.py --port 8765",
+    "CreationDate": "2026-10-26T20:26:15.256714+08:00"
+  }
+]

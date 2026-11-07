@@ -1,0 +1,403 @@
+{
+  "at": "2026-10-25T21:05:44+08:00",
+  "scope": "Independent read-only seed42 phase audit; no summary refresh, GPU, image, or test access",
+  "passed": true,
+  "seed": 42,
+  "runs": [
+    {
+      "group": "E0",
+      "passed": true,
+      "exit_code": 0,
+      "elapsed_seconds": 1553.08,
+      "last_logged_iter": 18000,
+      "final_checkpoint_sha256": "7e04bb262ef86df98e88945b71835e75371736e133efeb7b00c89560a981c1dd",
+      "candidates": [
+        {
+          "variant": "ordinary",
+          "mIoU": 0.8280317774283685,
+          "iter": 17000,
+          "weight_sha256": "07122e56c57178423f400058b909fcb1530010745a0c6a486e777083816cb7f9",
+          "state_sha256": "970201071d2430a8297249b63c4dd3508b216ae651cb57d069859914d0b31644"
+        },
+        {
+          "variant": "ema",
+          "mIoU": 0.8276775316182294,
+          "iter": 12000,
+          "weight_sha256": "434f3838750ea489b3171423b7701c52be533cc500615eaf8dbc44509457cd3d",
+          "state_sha256": "0f541c067f07f49fbeb0a51207e7f7a7d8c7e9727a07bd789f1863a02dab0afa"
+        }
+      ],
+      "selected": {
+        "variant": "ordinary",
+        "mIoU": 0.8280317774283685,
+        "iter": 17000,
+        "weight_sha256": "07122e56c57178423f400058b909fcb1530010745a0c6a486e777083816cb7f9",
+        "state_sha256": "970201071d2430a8297249b63c4dd3508b216ae651cb57d069859914d0b31644"
+      },
+      "checkpoint_sha256": "07122e56c57178423f400058b909fcb1530010745a0c6a486e777083816cb7f9",
+      "initialization_sha256": "586e9fb97b8221f50f56f33bdafd6eb793fb9f4f5f198a4a588f56c52344442f",
+      "CM": [
+        [
+          76119814,
+          866931
+        ],
+        [
+          892234,
+          3715165
+        ]
+      ],
+      "metrics": {
+        "precision": 0.8108003411539173,
+        "recall": 0.806347572676037,
+        "f1": 0.8085678266324755,
+        "crackIoU": 0.6786519994227604,
+        "mIoU": 0.8280317774283685,
+        "boundary_f1": 0.4491491920946296,
+        "boundary_f1_1px": 0.31603369179458113,
+        "hard_cldice": 0.867065378637575,
+        "skeleton_precision": 0.8868302223244845,
+        "skeleton_recall": 0.8481623288443532
+      },
+      "independent348_csv_global_counts_exact": true,
+      "official_val_rounded_mIoU": 0.828,
+      "all348_prediction_hashes_present": true,
+      "empty_predictions": 6,
+      "zero_foreground_overlap": 7,
+      "actual_data_samples_including_prefetch": 72024,
+      "training_prefix_indices_sha256": "3e396799c96dda5cbf87f06470c03dc3e2819327121737c91c647bfe3d5b037f"
+    },
+    {
+      "group": "E1",
+      "passed": true,
+      "exit_code": 0,
+      "elapsed_seconds": 1656.15,
+      "last_logged_iter": 18000,
+      "final_checkpoint_sha256": "401bcd01f42ded74a23a57043500c8d461ec0e33e20d6a568fd95978c4e71f9f",
+      "candidates": [
+        {
+          "variant": "ordinary",
+          "mIoU": 0.824962192176784,
+          "iter": 8000,
+          "weight_sha256": "2cf446c1fc4a1fe402d300ebdb4b55527e196746b2d873810bde6732a668ded8",
+          "state_sha256": "5444ef4dd902ad60ab512d110d7ff4186a1e920581a717a40e817d81539fa2a7"
+        },
+        {
+          "variant": "ema",
+          "mIoU": 0.8247681908151046,
+          "iter": 12000,
+          "weight_sha256": "ba7d63a5e43b749b000a59f4e59b21d7d90e59432cc9e07c4d5fb6c0c964851e",
+          "state_sha256": "e87673a45e0ea8cb61efdd6b740b74d17cdc94f50e09b8f724fc238a5f02e8dc"
+        }
+      ],
+      "selected": {
+        "variant": "ordinary",
+        "mIoU": 0.824962192176784,
+        "iter": 8000,
+        "weight_sha256": "2cf446c1fc4a1fe402d300ebdb4b55527e196746b2d873810bde6732a668ded8",
+        "state_sha256": "5444ef4dd902ad60ab512d110d7ff4186a1e920581a717a40e817d81539fa2a7"
+      },
+      "checkpoint_sha256": "2cf446c1fc4a1fe402d300ebdb4b55527e196746b2d873810bde6732a668ded8",
+      "initialization_sha256": "45819777ff7374eb67016eecb1ca0eae21475a22e457a40d88f9a1fed5919fd0",
+      "CM": [
+        [
+          76133198,
+          853547
+        ],
+        [
+          932989,
+          3674410
+        ]
+      ],
+      "metrics": {
+        "precision": 0.8114940137461553,
+        "recall": 0.7975020179498238,
+        "f1": 0.8044371779271656,
+        "crackIoU": 0.6728522860324933,
+        "mIoU": 0.824962192176784,
+        "boundary_f1": 0.4466720991289122,
+        "boundary_f1_1px": 0.31329241928675367,
+        "hard_cldice": 0.8459196458443323,
+        "skeleton_precision": 0.8513343473800704,
+        "skeleton_recall": 0.840573386737
+      },
+      "independent348_csv_global_counts_exact": true,
+      "official_val_rounded_mIoU": 0.825,
+      "all348_prediction_hashes_present": true,
+      "empty_predictions": 7,
+      "zero_foreground_overlap": 10,
+      "actual_data_samples_including_prefetch": 72024,
+      "training_prefix_indices_sha256": "3e396799c96dda5cbf87f06470c03dc3e2819327121737c91c647bfe3d5b037f"
+    },
+    {
+      "group": "E2",
+      "passed": true,
+      "exit_code": 0,
+      "elapsed_seconds": 1606.15,
+      "last_logged_iter": 18000,
+      "final_checkpoint_sha256": "66832966584830e8f6779aff65e0942688ba76227bdff918506cd36b36e1c2ea",
+      "candidates": [
+        {
+          "variant": "ordinary",
+          "mIoU": 0.8289680212337033,
+          "iter": 8000,
+          "weight_sha256": "e251c5127c2cfbf3d56eeafc31d23f62fe868ab891d7cddfca2241216e7b2147",
+          "state_sha256": "8cc0d7a0d0a9603e5ada3596f2819147a4720b20b8998ab5d4a4640bacf04628"
+        },
+        {
+          "variant": "ema",
+          "mIoU": 0.8277905333297197,
+          "iter": 12000,
+          "weight_sha256": "a05f215c95dddab5f939234e7c6d19077d37a38468c25cd9d75156cbe473ce96",
+          "state_sha256": "7e42eaaa706c1226997097b6e7c16f3f9ea6aae8606af8636f76a213318f8747"
+        }
+      ],
+      "selected": {
+        "variant": "ordinary",
+        "mIoU": 0.8289680212337033,
+        "iter": 8000,
+        "weight_sha256": "e251c5127c2cfbf3d56eeafc31d23f62fe868ab891d7cddfca2241216e7b2147",
+        "state_sha256": "8cc0d7a0d0a9603e5ada3596f2819147a4720b20b8998ab5d4a4640bacf04628"
+      },
+      "checkpoint_sha256": "e251c5127c2cfbf3d56eeafc31d23f62fe868ab891d7cddfca2241216e7b2147",
+      "initialization_sha256": "8522d43363a345d6cbeae1b630222d34dfab9756e6dfe87e89237bf0c5e0456f",
+      "CM": [
+        [
+          76123680,
+          863065
+        ],
+        [
+          885358,
+          3722041
+        ]
+      ],
+      "metrics": {
+        "precision": 0.8117677104956789,
+        "recall": 0.8078399548204963,
+        "f1": 0.8097990700032255,
+        "crackIoU": 0.6803885374257101,
+        "mIoU": 0.8289680212337033,
+        "boundary_f1": 0.45138636278979966,
+        "boundary_f1_1px": 0.31636784032609533,
+        "hard_cldice": 0.8642366332563428,
+        "skeleton_precision": 0.8880395477639951,
+        "skeleton_recall": 0.8416764306479525
+      },
+      "independent348_csv_global_counts_exact": true,
+      "official_val_rounded_mIoU": 0.829,
+      "all348_prediction_hashes_present": true,
+      "empty_predictions": 7,
+      "zero_foreground_overlap": 10,
+      "actual_data_samples_including_prefetch": 72024,
+      "training_prefix_indices_sha256": "3e396799c96dda5cbf87f06470c03dc3e2819327121737c91c647bfe3d5b037f"
+    },
+    {
+      "group": "E3",
+      "passed": true,
+      "exit_code": 0,
+      "elapsed_seconds": 1785.33,
+      "last_logged_iter": 18000,
+      "final_checkpoint_sha256": "8490389c5c4e6f2e38d307ea1caa80ec118afa2bbf4d2c4bd1ead7f935b81e54",
+      "candidates": [
+        {
+          "variant": "ordinary",
+          "mIoU": 0.8267580434363172,
+          "iter": 8000,
+          "weight_sha256": "e1c9ef70162af6d9b8f688e9d39578c4d79c1f6fd0347fa16ed519cc16f780b9",
+          "state_sha256": "727d1f597dcd8becbf5e1931c45897d332788f668a34487a55079d7fc2c41097"
+        },
+        {
+          "variant": "ema",
+          "mIoU": 0.8236039105338484,
+          "iter": 10000,
+          "weight_sha256": "25678ae01db6a8a58faa34f2083ce3b43967e4d541708939e994810e7811dc53",
+          "state_sha256": "5a607766fa91b3b72b0260eeefebad40b59bed1eec3af5b89b41632da785bde9"
+        }
+      ],
+      "selected": {
+        "variant": "ordinary",
+        "mIoU": 0.8267580434363172,
+        "iter": 8000,
+        "weight_sha256": "e1c9ef70162af6d9b8f688e9d39578c4d79c1f6fd0347fa16ed519cc16f780b9",
+        "state_sha256": "727d1f597dcd8becbf5e1931c45897d332788f668a34487a55079d7fc2c41097"
+      },
+      "checkpoint_sha256": "e1c9ef70162af6d9b8f688e9d39578c4d79c1f6fd0347fa16ed519cc16f780b9",
+      "initialization_sha256": "6f1f706550b60825836896010875801d0f5ffefe900aa775889968ad8f60f944",
+      "CM": [
+        [
+          76096293,
+          890452
+        ],
+        [
+          888850,
+          3718549
+        ]
+      ],
+      "metrics": {
+        "precision": 0.8068015172919251,
+        "recall": 0.8070820434696452,
+        "f1": 0.8069417560001736,
+        "crackIoU": 0.6763640920788868,
+        "mIoU": 0.8267580434363172,
+        "boundary_f1": 0.4447246682194321,
+        "boundary_f1_1px": 0.311723161880844,
+        "hard_cldice": 0.8531019292583197,
+        "skeleton_precision": 0.8530802843800934,
+        "skeleton_recall": 0.8531235752349483
+      },
+      "independent348_csv_global_counts_exact": true,
+      "official_val_rounded_mIoU": 0.8268,
+      "all348_prediction_hashes_present": true,
+      "empty_predictions": 8,
+      "zero_foreground_overlap": 9,
+      "actual_data_samples_including_prefetch": 72024,
+      "training_prefix_indices_sha256": "3e396799c96dda5cbf87f06470c03dc3e2819327121737c91c647bfe3d5b037f"
+    }
+  ],
+  "contrasts": {
+    "E1-E0": {
+      "precision": 0.0006936725922379594,
+      "recall": -0.008845554726213178,
+      "f1": -0.004130648705309881,
+      "crackIoU": -0.005799713390267192,
+      "mIoU": -0.0030695852515845168,
+      "boundary_f1": -0.002477092965717409,
+      "boundary_f1_1px": -0.0027412725078274636,
+      "hard_cldice": -0.021145732793242722,
+      "skeleton_precision": -0.035495874944414085,
+      "skeleton_recall": -0.007588942107353169
+    },
+    "E2-E0": {
+      "precision": 0.0009673693417615592,
+      "recall": 0.0014923821444593477,
+      "f1": 0.0012312433707499792,
+      "crackIoU": 0.0017365380029497057,
+      "mIoU": 0.0009362438053347466,
+      "boundary_f1": 0.002237170695170043,
+      "boundary_f1_1px": 0.0003341485315142001,
+      "hard_cldice": -0.002828745381232234,
+      "skeleton_precision": 0.001209325439510578,
+      "skeleton_recall": -0.0064858981964006635
+    },
+    "E3-E0": {
+      "precision": -0.00399882386199224,
+      "recall": 0.0007344707936082218,
+      "f1": -0.0016260706323019125,
+      "crackIoU": -0.0022879073438736297,
+      "mIoU": -0.001273733992051329,
+      "boundary_f1": -0.004424523875197539,
+      "boundary_f1_1px": -0.004310529913737149,
+      "hard_cldice": -0.01396344937925531,
+      "skeleton_precision": -0.03374993794439107,
+      "skeleton_recall": 0.004961246390595142
+    },
+    "E3-E1": {
+      "precision": -0.0046924964542301995,
+      "recall": 0.0095800255198214,
+      "f1": 0.002504578073007968,
+      "crackIoU": 0.003511806046393562,
+      "mIoU": 0.0017958512595331877,
+      "boundary_f1": -0.00194743090948013,
+      "boundary_f1_1px": -0.0015692574059096853,
+      "hard_cldice": 0.0071822834139874114,
+      "skeleton_precision": 0.0017459370000230123,
+      "skeleton_recall": 0.012550188497948311
+    },
+    "E3-E2": {
+      "precision": -0.004966193203753799,
+      "recall": -0.0007579113508511259,
+      "f1": -0.0028573140030518918,
+      "crackIoU": -0.0040244453468233354,
+      "mIoU": -0.0022099777973860757,
+      "boundary_f1": -0.006661694570367582,
+      "boundary_f1_1px": -0.004644678445251349,
+      "hard_cldice": -0.011134703998023077,
+      "skeleton_precision": -0.03495926338390165,
+      "skeleton_recall": 0.011447144586995806
+    }
+  },
+  "interaction_E3_minus_E1_minus_E2_plus_E0": {
+    "precision": -0.005659865795991759,
+    "recall": 0.008087643375362052,
+    "f1": 0.0012733347022579888,
+    "crackIoU": 0.0017752680434438561,
+    "mIoU": 0.0008596074541984411,
+    "boundary_f1": -0.004184601604650173,
+    "boundary_f1_1px": -0.0019034059374238854,
+    "hard_cldice": 0.010011028795219645,
+    "skeleton_precision": 0.0005366115605124344,
+    "skeleton_recall": 0.019036086694348975
+  },
+  "paired_data_rng": {
+    "passed": true,
+    "actual_training_prefix_samples": 72000,
+    "indices_sha256": "3e396799c96dda5cbf87f06470c03dc3e2819327121737c91c647bfe3d5b037f",
+    "index_text_hash_normalization": "ASCII sample index plus LF; Windows file CRLF normalized before comparing sequence witness",
+    "first8_samples_equal": true,
+    "epoch_prefix_witnesses_equal": true,
+    "numpy_budget_state_equal": true,
+    "python_budget_state_equal": true,
+    "paired_receipt_sha256": "4601bf79a334afff73ec6573f1548329e59373cc2ca99fc02fb3018eb51b66e9"
+  },
+  "release_files_checked": 272,
+  "release_sha256": "f5f2cf5e774111dbbdbf365f6279ee57641d39f5da0400e3f2fe951dc5d664ef",
+  "evidence_sha256": {
+    "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\provenance\\release.json": "f5f2cf5e774111dbbdbf365f6279ee57641d39f5da0400e3f2fe951dc5d664ef",
+    "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\training\\W11_E0_s42\\best_model\\model.pdstates": "970201071d2430a8297249b63c4dd3508b216ae651cb57d069859914d0b31644",
+    "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\training\\W11_E0_s42\\ema_best_model\\ema_model.pdstates": "0f541c067f07f49fbeb0a51207e7f7a7d8c7e9727a07bd789f1863a02dab0afa",
+    "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\results\\W11_E0_s42_official_val_exit.json": "a42394644e78655a9716df4ee373d714000e05f12067a53f26f209ab22f7bce6",
+    "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\results\\W11_E0_s42_pixel_boundary_exit.json": "6c100c432ebc33297b6ceafcbd0d3a25d76d24798ef32b279434093c8eb44c7e",
+    "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\results\\W11_E0_s42_status.json": "8eecf89aa6216c51f48b55c2170c824783792a00b2ebefc58c1f15f096e972a8",
+    "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\results\\W11_E0_s42_train_exit.json": "1804463009f6c87c7d45157d6ef8e3d8ed99e53660e51f9ea3c71bdcdb083f90",
+    "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\checkpoints\\W11_E0_s42\\selection.json": "9fab944c2c42c507d70cfd613624ee05e41dd53f9c131c213ce9bd0b1511baf5",
+    "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\results\\W11_E0_s42_val.json": "08e586828800fe08465f21cca84dcdfae69478e7bf121d75dc0e73d96b134bdf",
+    "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\results\\W11_E0_s42_val_per_image.csv": "81c8576073b4b0feb84375d17e972bb2e87bb818caaabf342d718de8d08592bb",
+    "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\provenance\\rng\\W11_E0_s42.json": "4c2a9ea11951edb4274f0a7134a5a44530b9f895d0f357be04d0fdd66a31b041",
+    "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\provenance\\rng\\W11_E0_s42_actual_indices.jsonl": "9adddfc4802c3113c312f8765bc2121c3a00e8bb192687e094fb060f6f3ad407",
+    "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\logs\\W11_E0_s42_train.stdout.log": "3385d59eb5481bec79620e990b39dc04c69f0bc5ba6b689264662cf3e2960c6c",
+    "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\logs\\W11_E0_s42_train.stderr.log": "897e5c2bb68ad42e5f082da1ee5b34b88d4bc93573ac9de89d4adaf5ee929568",
+    "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\training\\W11_E1_s42\\best_model\\model.pdstates": "5444ef4dd902ad60ab512d110d7ff4186a1e920581a717a40e817d81539fa2a7",
+    "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\training\\W11_E1_s42\\ema_best_model\\ema_model.pdstates": "e87673a45e0ea8cb61efdd6b740b74d17cdc94f50e09b8f724fc238a5f02e8dc",
+    "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\results\\W11_E1_s42_official_val_exit.json": "bd32b19466b8481e93054110588484b05ebe4357d420556ca4e2038d25277377",
+    "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\results\\W11_E1_s42_pixel_boundary_exit.json": "c8736395b7d5e8aff6cb2c305b9863855e63ec0cb1ab05164a1f477d39493bec",
+    "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\results\\W11_E1_s42_status.json": "a2844abf1ee38841bd8cb57ddf0fc961b388f0a33ea1fef3597a0c5b4a1e9a16",
+    "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\results\\W11_E1_s42_train_exit.json": "12c664097a9d9aa39220dbb0444d089fa921ef78d3e1cf0b2ed3db7139764fc5",
+    "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\checkpoints\\W11_E1_s42\\selection.json": "d8a637bcf4351b5953e409685f87fe908c4b65b2e8457dc627a8cd562c3c106b",
+    "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\results\\W11_E1_s42_val.json": "f1d2976f9b83c770bf73e71f84e022ab9501ef26f0981c23cb3a7378a0a6a06a",
+    "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\results\\W11_E1_s42_val_per_image.csv": "0615b9b970d95ce36e78ca4e35be674bad767830eec32334c6edbdc450ff59a8",
+    "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\provenance\\rng\\W11_E1_s42.json": "3b543918d9838f946fbf88cf1df27e69002686fff16ae4be7968eb1ea920c073",
+    "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\provenance\\rng\\W11_E1_s42_actual_indices.jsonl": "9adddfc4802c3113c312f8765bc2121c3a00e8bb192687e094fb060f6f3ad407",
+    "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\logs\\W11_E1_s42_train.stdout.log": "d1eb65e70db660318c61d58d6316899f72c94c6102f26d484747388d6d8880e6",
+    "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\logs\\W11_E1_s42_train.stderr.log": "4d1f23a1020d78400874256524d5dbf8bdf370b5180753d27801584a511a749f",
+    "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\training\\W11_E2_s42\\best_model\\model.pdstates": "8cc0d7a0d0a9603e5ada3596f2819147a4720b20b8998ab5d4a4640bacf04628",
+    "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\training\\W11_E2_s42\\ema_best_model\\ema_model.pdstates": "7e42eaaa706c1226997097b6e7c16f3f9ea6aae8606af8636f76a213318f8747",
+    "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\results\\W11_E2_s42_official_val_exit.json": "de1076664d27598537c46784e28493362f2d2b79ffa16ecfa926fbaaee59b718",
+    "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\results\\W11_E2_s42_pixel_boundary_exit.json": "f0dd54b6cea771ecb66a48a2a82773a72a6c7dadc31af8a189614686d3715c48",
+    "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\results\\W11_E2_s42_status.json": "43f1ea503f60a784150481b78c1907e9ba0c394f001610c05d9df2bd41c16050",
+    "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\results\\W11_E2_s42_train_exit.json": "4cc183cbf299b52975b0588a0390b8b1b3f0d32255a561d4f91f71d069c270a5",
+    "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\checkpoints\\W11_E2_s42\\selection.json": "8595cf41022002cbf28a9d3ba04e55d4c11281921c6fa9416feae4d5f5665692",
+    "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\results\\W11_E2_s42_val.json": "578449aa8ba7d48422af5df734f3a1e6ac1741a928afd1f15df2ddc7072d8996",
+    "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\results\\W11_E2_s42_val_per_image.csv": "1e1d76205de87dd3336ed3ec6f8d72525efd2238c9abb82c2b46e06e73a196f3",
+    "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\provenance\\rng\\W11_E2_s42.json": "d0aae6c7a8c1c962d9453d2f15aa5ecc70a598eaa3a42dd02eaa236af94df729",
+    "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\provenance\\rng\\W11_E2_s42_actual_indices.jsonl": "9adddfc4802c3113c312f8765bc2121c3a00e8bb192687e094fb060f6f3ad407",
+    "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\logs\\W11_E2_s42_train.stdout.log": "0519d76bce4b6712953da51354abea46a70b8c0c70215dac8f69bebd19ae4fb9",
+    "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\logs\\W11_E2_s42_train.stderr.log": "e20680b3cfbe881dcaa039d0438cc9ea8a5140d2476f486e5bd4ba477e81a43e",
+    "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\training\\W11_E3_s42\\best_model\\model.pdstates": "727d1f597dcd8becbf5e1931c45897d332788f668a34487a55079d7fc2c41097",
+    "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\training\\W11_E3_s42\\ema_best_model\\ema_model.pdstates": "5a607766fa91b3b72b0260eeefebad40b59bed1eec3af5b89b41632da785bde9",
+    "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\results\\W11_E3_s42_official_val_exit.json": "d79d2a50fd3af624c407f0845955143ca695cf2298f782082814c7d8b02e74f2",
+    "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\results\\W11_E3_s42_pixel_boundary_exit.json": "fa12ce0320c9322d9b0766919daa9b83d326cac24838391ed87f2d35e53d6a56",
+    "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\results\\W11_E3_s42_status.json": "93eedf88e7bbf32cfdfb7ed35f0460a28d07edfefaec2d2f5b62843c5629c0a3",
+    "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\results\\W11_E3_s42_train_exit.json": "a29b110234275fbcdf1a15afc2f44687dc0c7b02080198fddbabc73140a5fb76",
+    "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\checkpoints\\W11_E3_s42\\selection.json": "13eaf0956c7e0bec56bed3126e2969df0130a577e6e85458417969cdea66441c",
+    "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\results\\W11_E3_s42_val.json": "ea8d81ba9008be087a55efa28ea9f62a16f32ec69c454d5d0d76d1e57a5548a2",
+    "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\results\\W11_E3_s42_val_per_image.csv": "1f031f16acf024596a7a226a4b0317bb0975e79d5fc47c08a8fd2e7a047755b6",
+    "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\provenance\\rng\\W11_E3_s42.json": "857fe0436ff3fdb7e96372ab3880177547f0be9479300fa6b317202665719260",
+    "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\provenance\\rng\\W11_E3_s42_actual_indices.jsonl": "9adddfc4802c3113c312f8765bc2121c3a00e8bb192687e094fb060f6f3ad407",
+    "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\logs\\W11_E3_s42_train.stdout.log": "8ef8507df1c3807addec6e715718bb95c4a7312c5a51c8e98ad5b6d3bf9d85f7",
+    "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\logs\\W11_E3_s42_train.stderr.log": "55e611a177755b437aaafd9f77f718a7bc6af8f5e544bde323831bdec86362b5"
+  },
+  "single_seed_only": true,
+  "three_seed_claim": false,
+  "GPU_imported": false,
+  "images_read": false,
+  "test_read": false
+}

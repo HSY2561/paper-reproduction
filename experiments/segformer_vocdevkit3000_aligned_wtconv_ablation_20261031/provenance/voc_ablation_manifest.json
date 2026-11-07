@@ -1,0 +1,58 @@
+{
+  "experiment": "VOCdevkit3000 SegFormer-B0 Aligned WTConv domain ablation",
+  "created_at": "2026-11-01T01:25:24+08:00",
+  "source_dataset_original": "C:/Users/user/Desktop/VOCdevkit3000/VOCdevkit/VOC2007",
+  "source_dataset_original_untouched": true,
+  "staged_dataset": "C:/Users/user/AppData/Local/Temp/voc3000_stage_20261031/VOCdevkit/VOC2007",
+  "staging_rule": "mask value 255 mapped to foreground class 1; value 0 retained as background",
+  "dataset": {
+    "image_mask_pairs": 2932,
+    "train_images": 2345,
+    "val_images": 587,
+    "test_list_entries": 0,
+    "image_shape": "448x448 RGB",
+    "mask_shape": "448x448 L",
+    "original_mask_values": [0, 255],
+    "staged_mask_values": [0, 1],
+    "train_foreground_ratio": 0.051160,
+    "val_foreground_ratio": 0.051866,
+    "train_list_sha256": "bb3b4f7bbf2f32a90e32c0e5f8ce4569e084397fbfd644c46c1a54639bd76353",
+    "val_list_sha256": "4c8f887b3366e17a7efb3e3c8122a00fb186dc2fb7b4224d1cdc091380819a77"
+  },
+  "protocol": {
+    "hardware": "RTX5060",
+    "paddle": "3.4",
+    "python": "C:/venv_bisenet/Scripts/python.exe",
+    "seed": 42,
+    "batch_size": 4,
+    "precision": "fp32",
+    "optimizer": "AdamW",
+    "learning_rate": 0.00006,
+    "schedule": "PolynomialDecay end_lr=0",
+    "iterations": 18000,
+    "loss": "CrossEntropyLoss",
+    "ema": true,
+    "workers": 0,
+    "augmentation": "ResizeStepScaling 0.75-1.25; RandomPaddingCrop 400x400; RandomHorizontalFlip; RandomDistort; Normalize",
+    "checkpoint_selection": "ordinary/EMA highest exact validation mIoU",
+    "test_used": false
+  },
+  "source_snapshot": {
+    "paddleseg_segformer_py_sha256": "ad292bca4d0171028360ec00bbd1f7b87214c03a494ed2d13a02871e9c57d362",
+    "imagenet_backbone_sha256": "d2f9d0b8ce3e0d7a7e414e0c34fece27ee9e196d41145d6ca20ddc99c4412f7a",
+    "source_lineage": "Wave17 Crack500 source snapshot copied into this independent project"
+  },
+  "variants": {
+    "C0_B0": {"config_sha256": "f264315b710c36a7af79f8faf13aea8afae6d49bdf8a8d7caae7ddfee291d254", "checkpoint_sha256": "dec2524294710eed1a8e5f0b56f2d2e570fb1309a8aaa123c6c22514ee542722", "train_exit": 0, "official_val_exit": 0, "custom_val_exit": 0, "selected": "ordinary@18000"},
+    "C1_Aligned": {"config_sha256": "1c61c6030b50e8459f4071f1058c55b448e37e676cda4e314cd048c5460f9b7e", "checkpoint_sha256": "3be7734c7ef2d634ec7cee0b5461c01b30d00a9de0c121b9cf48505c34d544fa", "train_exit": 0, "official_val_exit": 0, "custom_val_exit": 0, "selected": "ordinary@15000"},
+    "C2_WTConv": {"config_sha256": "1718bb12161df38f4b6350301ffee3ed05f493e035e18a2d67b16aa14d7ae9f2", "checkpoint_sha256": "a690d9ea83cb56f6e888db1a19c7ba1e11f2722f16b12fabd54b2c5a16d84fac", "train_exit": 0, "official_val_exit": 0, "custom_val_exit": 0, "selected": "ordinary@15000"},
+    "C3_Aligned_WTConv": {"config_sha256": "82c6353bd8f902141f74eba50dca3c1774a89d56b5e9ec6f93374af97273ac3b", "checkpoint_sha256": "06f78c6612ff69dc1953d32bfb46e432e810015310538c9f5c9539ec63b1bff0", "train_exit": 0, "official_val_exit": 0, "custom_val_exit": 0, "selected": "ordinary@13000"}
+  },
+  "failed_attempt": {
+    "cause": "OpenCV could not read the Chinese-character D drive path during the first C0 smoke",
+    "evidence": "provenance/failed_attempt_20261031_C0_B0_smoke*.log and failed_attempt_20261031_smoke_C0_B0",
+    "recovery": "ASCII temporary staging path; no model or dataset content was changed"
+  },
+  "deleted_old_artifacts": "D:/论文复现/experiments/segformer_simplify_wave12_20261026/provenance/deleted_artifacts_20261031.json",
+  "report_scope": "validation-only domain ablation; no test set exists"
+}

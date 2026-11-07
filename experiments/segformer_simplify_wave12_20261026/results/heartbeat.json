@@ -1,0 +1,11 @@
+{
+  "at": "2026-10-27T09:10:26+08:00",
+  "stage": "profile",
+  "pid": 25764,
+  "runner_pid": 52104,
+  "output": "D:\\论文复现\\experiments\\segformer_simplify_wave12_20261026\\profile\\phase2\\attempt_128",
+  "elapsed_seconds": 0.02,
+  "evidence_bytes": 0,
+  "free_gib": 6.4337921142578125,
+  "test_used": false
+}

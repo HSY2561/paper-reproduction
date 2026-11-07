@@ -1,0 +1,13 @@
+{
+  "at": "2026-10-25T20:15:26+08:00",
+  "passed": true,
+  "image_array_tests": true,
+  "PNG_roundtrip_exact": true,
+  "fixed_case_count": 24,
+  "training_incomplete_render_refusal": "QUALITATIVE_RENDER_REFUSED: training is incomplete (2/15); no GPU import/inference",
+  "real_images_read": false,
+  "GPU_imported": false,
+  "GPU_inference": false,
+  "test_read": false,
+  "script_sha256": "fa4783f207c6fb26be7e182d24eda40c86d11fc437a1d7c15b0e5cffd4dbc603"
+}

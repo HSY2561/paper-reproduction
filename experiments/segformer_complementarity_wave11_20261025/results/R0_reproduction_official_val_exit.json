@@ -1,0 +1,22 @@
+{
+  "tag": "R0_reproduction_official_val",
+  "pid": 27592,
+  "exit_code": 0,
+  "guard_reason": null,
+  "ended_at": "2026-10-25T18:58:20+08:00",
+  "elapsed_seconds": 10.02,
+  "command": [
+    "C:\\venv_bisenet\\Scripts\\python.exe",
+    "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\src\\PaddleSeg-2.10.0\\tools\\val.py",
+    "--config",
+    "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\configs\\R0_reproduction.yml",
+    "--model_path",
+    "D:\\论文复现\\experiments\\segformer_lightfusion_wave10_20261024\\checkpoints\\A0\\model.pdparams",
+    "--num_workers",
+    "0"
+  ],
+  "stdout": "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\logs\\R0_reproduction_official_val.stdout.log",
+  "stderr": "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\logs\\R0_reproduction_official_val.stderr.log",
+  "release_sha256": "f5f2cf5e774111dbbdbf365f6279ee57641d39f5da0400e3f2fe951dc5d664ef",
+  "test_used": false
+}

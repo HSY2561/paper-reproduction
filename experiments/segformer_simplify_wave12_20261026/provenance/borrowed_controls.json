@@ -1,0 +1,39 @@
+{
+  "parent": "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025",
+  "controls": {
+    "42": {
+      "selection": "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\checkpoints\\W11_R0_s42\\selection.json",
+      "checkpoint": "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\checkpoints\\W11_R0_s42\\model.pdparams",
+      "checkpoint_sha256": "e8b7d8d20a6123d3ec0594be2056d11abeea493cfcbe280139f145be22065ffa",
+      "initialization": "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\weights\\init\\R0_s42.pdparams",
+      "initialization_sha256": "54c8014f52bf6b54cd62454968a1f6d6975ed5e91ee2c8be6913cf08fed1a116",
+      "metrics": "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\results\\W11_R0_s42_val.json",
+      "per_image": "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\results\\W11_R0_s42_val_per_image.csv",
+      "rng": "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\provenance\\rng\\W11_R0_s42.json",
+      "train_exit": "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\results\\W11_R0_s42_train_exit.json"
+    },
+    "43": {
+      "selection": "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\checkpoints\\W11_R0_s43\\selection.json",
+      "checkpoint": "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\checkpoints\\W11_R0_s43\\model.pdparams",
+      "checkpoint_sha256": "df463d759ffd3d6c4bebdcfbdefc7248a14522e1a944470066ee8b67b37e9ceb",
+      "initialization": "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\weights\\init\\R0_s43.pdparams",
+      "initialization_sha256": "5dafacb502c2391bfb5e0571147cedbc4f3d45e30bc5a4e2d60143415b72efa1",
+      "metrics": "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\results\\W11_R0_s43_val.json",
+      "per_image": "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\results\\W11_R0_s43_val_per_image.csv",
+      "rng": "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\provenance\\rng\\W11_R0_s43.json",
+      "train_exit": "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\results\\W11_R0_s43_train_exit.json"
+    },
+    "44": {
+      "selection": "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\checkpoints\\W11_R0_s44\\selection.json",
+      "checkpoint": "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\checkpoints\\W11_R0_s44\\model.pdparams",
+      "checkpoint_sha256": "5e122f9eb9c93e3471592f7d8ca5b4cfaed74ff890f3dea320f1b19366350e4f",
+      "initialization": "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\weights\\init\\R0_s44.pdparams",
+      "initialization_sha256": "74aaeb8651e7b4b03fe40b9d644edf4bb761af5cfa7db56d34be19076eb96a32",
+      "metrics": "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\results\\W11_R0_s44_val.json",
+      "per_image": "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\results\\W11_R0_s44_val_per_image.csv",
+      "rng": "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\provenance\\rng\\W11_R0_s44.json",
+      "train_exit": "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\results\\W11_R0_s44_train_exit.json"
+    }
+  },
+  "reuse_is_conditional_on_new_source_full348_and_data_rng": true
+}

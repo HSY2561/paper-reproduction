@@ -1,0 +1,6 @@
+{
+  "at": "2026-10-26T09:01:46.3597220+08:00",
+  "reason": "Intentional owned v2 waiter stop for isolated desktop PID baseline refresh; all 15 trainings complete; do not restart training",
+  "owned_waiter_pid": 60444,
+  "user_applications_stopped": false
+}

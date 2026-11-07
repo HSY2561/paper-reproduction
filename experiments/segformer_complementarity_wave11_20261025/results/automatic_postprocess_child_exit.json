@@ -1,0 +1,14 @@
+{
+  "at": "2026-10-26T09:17:03+08:00",
+  "command": [
+    "C:\\venv_bisenet\\Scripts\\python.exe",
+    "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\postprocess_w11_v4.py",
+    "--profile-and-report"
+  ],
+  "pid": 64344,
+  "exit_code": 0,
+  "timed_out": false,
+  "stdout": "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\logs\\postprocess_after_training.stdout.log",
+  "stderr": "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\logs\\postprocess_after_training.stderr.log",
+  "training_restarted": false
+}

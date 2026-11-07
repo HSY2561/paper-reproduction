@@ -1,0 +1,16 @@
+{
+  "passed": true,
+  "failures": [],
+  "seed": 42,
+  "complete_training": false,
+  "compared_paddle_end_rng": false,
+  "compared_prefetch_tail": false,
+  "at": "2026-10-27T05:55:23+08:00",
+  "run": "smoke_W12_D10_s42",
+  "witness": "D:\\论文复现\\experiments\\segformer_simplify_wave12_20261026\\provenance\\rng\\smoke_W12_D10_s42.json",
+  "witness_sha256": "1ea5d4a92d3065ff7db79e5ef2f968040159ee60f9d59909694dc9175d87c63a",
+  "reference_sha256": "914e863dc7b4e904d240b7e6e7edd288576fa0ca172efc07bcfdd160436347d2",
+  "planned_indices_sha256": "3e396799c96dda5cbf87f06470c03dc3e2819327121737c91c647bfe3d5b037f",
+  "compared_actual_indices": 80,
+  "test_used": false
+}

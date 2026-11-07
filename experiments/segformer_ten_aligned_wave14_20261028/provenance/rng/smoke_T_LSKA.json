@@ -1,0 +1,474 @@
+{
+  "run": "smoke_T_LSKA",
+  "seed": 42,
+  "status": "complete",
+  "test_used": false,
+  "source_root": "D:\\论文复现\\experiments\\segformer_ten_aligned_wave14_20261028\\src\\PaddleSeg-2.10.0",
+  "official_train_sha256": "29b13ba912d43c2872cc76c22b016dca43dd1688666b3870f28500050ca0dec3",
+  "protocol": "official trainer; post-construction set_seed; unchanged transforms/sampler",
+  "data_audit_only": false,
+  "start_numpy_state_sha256": "a7f5f1d23152cfb723e961fc900954baa7f903054a4fa500eebefb5d5aff780b",
+  "start_python_state_sha256": "21feb557e3da2a52be59d0a03105f7314322a903b4cca49a0e125c43cf2885d0",
+  "first_samples": [
+    {
+      "sample_no": 0,
+      "batch": 0,
+      "index": 289,
+      "image": "C:/Users/user/algolab_data\\traincrop/20160307_144924_1921_361.jpg",
+      "label": "C:/Users/user/algolab_data\\traincrop/20160307_144924_1921_361.png",
+      "img": {
+        "shape": [
+          3,
+          400,
+          400
+        ],
+        "dtype": "float32",
+        "sha256": "6ac26506470917af4a2d3c0658e906c77b12b6ec37e7325dfc7cffbddc52e5c7"
+      },
+      "transformed_label": {
+        "shape": [
+          400,
+          400
+        ],
+        "dtype": "uint8",
+        "sha256": "a4fc3a4faf97bbcca7013893aff2340223b40b1cdc67be2c901e1dee786bb60a"
+      },
+      "numpy_before": "a7f5f1d23152cfb723e961fc900954baa7f903054a4fa500eebefb5d5aff780b",
+      "python_before": "21feb557e3da2a52be59d0a03105f7314322a903b4cca49a0e125c43cf2885d0",
+      "numpy_after": "41e31a376859d46715b474819c1e1e58208e50c7e76df91f21cb2ab7e2373eb8",
+      "python_after": "ac4b4cce0cf2be2b7f685f8b2c6b7352748fb7f0006845b44a302fecd03c6c72"
+    },
+    {
+      "sample_no": 1,
+      "batch": 0,
+      "index": 326,
+      "image": "C:/Users/user/algolab_data\\traincrop/20160307_145255_361_1281.jpg",
+      "label": "C:/Users/user/algolab_data\\traincrop/20160307_145255_361_1281.png",
+      "img": {
+        "shape": [
+          3,
+          400,
+          400
+        ],
+        "dtype": "float32",
+        "sha256": "132050de36ccbd7108c6aad97fb7f2b3458f5a68e69722408fc789e608c2032f"
+      },
+      "transformed_label": {
+        "shape": [
+          400,
+          400
+        ],
+        "dtype": "uint8",
+        "sha256": "6a2bed427c311218856afb498523b4713a62dbaba95772eafd2899e9903ce88c"
+      },
+      "numpy_before": "41e31a376859d46715b474819c1e1e58208e50c7e76df91f21cb2ab7e2373eb8",
+      "python_before": "ac4b4cce0cf2be2b7f685f8b2c6b7352748fb7f0006845b44a302fecd03c6c72",
+      "numpy_after": "54918a13a57efed54bce078f6104aeb8ad50fd348e1d2a6ee16f727eb473ef6d",
+      "python_after": "f414d480296cbab556d17b3040096d2fb281c99ef5dbe36bad99d9f2a6404273"
+    },
+    {
+      "sample_no": 2,
+      "batch": 0,
+      "index": 1502,
+      "image": "C:/Users/user/algolab_data\\traincrop/20160330_165644_1281_1081.jpg",
+      "label": "C:/Users/user/algolab_data\\traincrop/20160330_165644_1281_1081.png",
+      "img": {
+        "shape": [
+          3,
+          400,
+          400
+        ],
+        "dtype": "float32",
+        "sha256": "b306ebefe38634b7758c2ca8fa79546deb4b491746506c40452c58eb654e3207"
+      },
+      "transformed_label": {
+        "shape": [
+          400,
+          400
+        ],
+        "dtype": "uint8",
+        "sha256": "af9444769d7d215e620653a4f5a2009b1ce26997d7878d76cea3670ad8468f7f"
+      },
+      "numpy_before": "54918a13a57efed54bce078f6104aeb8ad50fd348e1d2a6ee16f727eb473ef6d",
+      "python_before": "f414d480296cbab556d17b3040096d2fb281c99ef5dbe36bad99d9f2a6404273",
+      "numpy_after": "1a5da851d1616b2b341953f7a4c8a505779bd7406b95e27bdc223b969c4a6132",
+      "python_after": "21db6fe987a8c77910757f0c30f0aa2fa937305ecbc68fe09f1b32dcf0e173be"
+    },
+    {
+      "sample_no": 3,
+      "batch": 0,
+      "index": 1600,
+      "image": "C:/Users/user/algolab_data\\traincrop/20160330_170922_1281_721.jpg",
+      "label": "C:/Users/user/algolab_data\\traincrop/20160330_170922_1281_721.png",
+      "img": {
+        "shape": [
+          3,
+          400,
+          400
+        ],
+        "dtype": "float32",
+        "sha256": "0a1c769cd6ad009335fb81af11b0d114a0cdeb0a6a6f656a7859ede2ea9ea1b4"
+      },
+      "transformed_label": {
+        "shape": [
+          400,
+          400
+        ],
+        "dtype": "uint8",
+        "sha256": "9854d7781ab6c1e3756ed5cd3fe250cc11a1009d94fd94ac37855fb187189f56"
+      },
+      "numpy_before": "1a5da851d1616b2b341953f7a4c8a505779bd7406b95e27bdc223b969c4a6132",
+      "python_before": "21db6fe987a8c77910757f0c30f0aa2fa937305ecbc68fe09f1b32dcf0e173be",
+      "numpy_after": "35c05a0ca7a8a27bf64e826800c570217f206269013fcac57373c282efa06ead",
+      "python_after": "64ca13d7923cc760c7542d96319467d6b4533bab8fcd4d18381ab2c8dc22744c"
+    },
+    {
+      "sample_no": 4,
+      "batch": 1,
+      "index": 1103,
+      "image": "C:/Users/user/algolab_data\\traincrop/20160328_153533_1_1081.jpg",
+      "label": "C:/Users/user/algolab_data\\traincrop/20160328_153533_1_1081.png",
+      "img": {
+        "shape": [
+          3,
+          400,
+          400
+        ],
+        "dtype": "float32",
+        "sha256": "6800aed11ce6a3138c3a42a4097d8e6223956f8594b576eebe22bc70d455cd8e"
+      },
+      "transformed_label": {
+        "shape": [
+          400,
+          400
+        ],
+        "dtype": "uint8",
+        "sha256": "2c71389741df53e831fa5ad9bc00c781e7b71aa7118f5b78d0c4a901237d9fd4"
+      },
+      "numpy_before": "35c05a0ca7a8a27bf64e826800c570217f206269013fcac57373c282efa06ead",
+      "python_before": "64ca13d7923cc760c7542d96319467d6b4533bab8fcd4d18381ab2c8dc22744c",
+      "numpy_after": "7fb68acde8a86c3b843699a31e9e432ca210a4b29273293be1d7e850eb84e752",
+      "python_after": "4961e0e28d432a76436a98204a37606fa173c6d6d2f192c2f8fe77b4377be47f"
+    },
+    {
+      "sample_no": 5,
+      "batch": 1,
+      "index": 1797,
+      "image": "C:/Users/user/algolab_data\\traincrop/20160405_172908_641_1081.jpg",
+      "label": "C:/Users/user/algolab_data\\traincrop/20160405_172908_641_1081.png",
+      "img": {
+        "shape": [
+          3,
+          400,
+          400
+        ],
+        "dtype": "float32",
+        "sha256": "c53bba2abc24ea063972c2498c8f944bad25204aebaf022cabf41cf0c40a29cc"
+      },
+      "transformed_label": {
+        "shape": [
+          400,
+          400
+        ],
+        "dtype": "uint8",
+        "sha256": "fdee875bdb3dbdfca37c80395dca571db89c4ee417b9ae62c0624bcd200165b5"
+      },
+      "numpy_before": "7fb68acde8a86c3b843699a31e9e432ca210a4b29273293be1d7e850eb84e752",
+      "python_before": "4961e0e28d432a76436a98204a37606fa173c6d6d2f192c2f8fe77b4377be47f",
+      "numpy_after": "2f70a99f5473982879ada38adcc4f9c7b31df48291438ac0988bb84fa027df02",
+      "python_after": "56184cfca3d6ccc7da0b16ca071bd517493262eebed5a2714a16bf9806435643"
+    },
+    {
+      "sample_no": 6,
+      "batch": 1,
+      "index": 748,
+      "image": "C:/Users/user/algolab_data\\traincrop/20160328_150827_1281_1.jpg",
+      "label": "C:/Users/user/algolab_data\\traincrop/20160328_150827_1281_1.png",
+      "img": {
+        "shape": [
+          3,
+          400,
+          400
+        ],
+        "dtype": "float32",
+        "sha256": "bfd8f05f614102941a44e076b3073daa2e9a52ab0db1b6ee86cc9dcbf5aad25c"
+      },
+      "transformed_label": {
+        "shape": [
+          400,
+          400
+        ],
+        "dtype": "uint8",
+        "sha256": "b9ce164d30e4101b009fe4be765a070593cfbdd48f897853de159a8c177fabe8"
+      },
+      "numpy_before": "2f70a99f5473982879ada38adcc4f9c7b31df48291438ac0988bb84fa027df02",
+      "python_before": "56184cfca3d6ccc7da0b16ca071bd517493262eebed5a2714a16bf9806435643",
+      "numpy_after": "f6273956485869bc70dbaaf1c6162a9bf6673051ef12b3e3d41786125c1c7b22",
+      "python_after": "16f31f2cfa1b1be47aad8f74e3a7185b6daf2f582451a73087e1cda9f2a73a4d"
+    },
+    {
+      "sample_no": 7,
+      "batch": 1,
+      "index": 871,
+      "image": "C:/Users/user/algolab_data\\traincrop/20160328_151247_1921_1.jpg",
+      "label": "C:/Users/user/algolab_data\\traincrop/20160328_151247_1921_1.png",
+      "img": {
+        "shape": [
+          3,
+          400,
+          400
+        ],
+        "dtype": "float32",
+        "sha256": "f457b275eec124bab691e0e6fbaa7f06283dc92f0b18e4d70427a90c002edcaf"
+      },
+      "transformed_label": {
+        "shape": [
+          400,
+          400
+        ],
+        "dtype": "uint8",
+        "sha256": "f6110e3bff18bd78930ce05a49b07da4200319007afc7ef140ee9382d1c6333a"
+      },
+      "numpy_before": "f6273956485869bc70dbaaf1c6162a9bf6673051ef12b3e3d41786125c1c7b22",
+      "python_before": "16f31f2cfa1b1be47aad8f74e3a7185b6daf2f582451a73087e1cda9f2a73a4d",
+      "numpy_after": "a4a2ac50399e0c72dfe881ddd63a4a3815eb4c1aee845b9647d59a8f58c07737",
+      "python_after": "1ebdc6ba9100f020dabe89a902ae00029aac1e97b1a6267741268a75f33be960"
+    }
+  ],
+  "epoch_first_samples": [
+    {
+      "sample_no": 0,
+      "batch": 0,
+      "index": 289,
+      "image": "C:/Users/user/algolab_data\\traincrop/20160307_144924_1921_361.jpg",
+      "label": "C:/Users/user/algolab_data\\traincrop/20160307_144924_1921_361.png",
+      "img": {
+        "shape": [
+          3,
+          400,
+          400
+        ],
+        "dtype": "float32",
+        "sha256": "6ac26506470917af4a2d3c0658e906c77b12b6ec37e7325dfc7cffbddc52e5c7"
+      },
+      "transformed_label": {
+        "shape": [
+          400,
+          400
+        ],
+        "dtype": "uint8",
+        "sha256": "a4fc3a4faf97bbcca7013893aff2340223b40b1cdc67be2c901e1dee786bb60a"
+      },
+      "numpy_before": "a7f5f1d23152cfb723e961fc900954baa7f903054a4fa500eebefb5d5aff780b",
+      "python_before": "21feb557e3da2a52be59d0a03105f7314322a903b4cca49a0e125c43cf2885d0",
+      "numpy_after": "41e31a376859d46715b474819c1e1e58208e50c7e76df91f21cb2ab7e2373eb8",
+      "python_after": "ac4b4cce0cf2be2b7f685f8b2c6b7352748fb7f0006845b44a302fecd03c6c72"
+    },
+    {
+      "sample_no": 1,
+      "batch": 0,
+      "index": 326,
+      "image": "C:/Users/user/algolab_data\\traincrop/20160307_145255_361_1281.jpg",
+      "label": "C:/Users/user/algolab_data\\traincrop/20160307_145255_361_1281.png",
+      "img": {
+        "shape": [
+          3,
+          400,
+          400
+        ],
+        "dtype": "float32",
+        "sha256": "132050de36ccbd7108c6aad97fb7f2b3458f5a68e69722408fc789e608c2032f"
+      },
+      "transformed_label": {
+        "shape": [
+          400,
+          400
+        ],
+        "dtype": "uint8",
+        "sha256": "6a2bed427c311218856afb498523b4713a62dbaba95772eafd2899e9903ce88c"
+      },
+      "numpy_before": "41e31a376859d46715b474819c1e1e58208e50c7e76df91f21cb2ab7e2373eb8",
+      "python_before": "ac4b4cce0cf2be2b7f685f8b2c6b7352748fb7f0006845b44a302fecd03c6c72",
+      "numpy_after": "54918a13a57efed54bce078f6104aeb8ad50fd348e1d2a6ee16f727eb473ef6d",
+      "python_after": "f414d480296cbab556d17b3040096d2fb281c99ef5dbe36bad99d9f2a6404273"
+    },
+    {
+      "sample_no": 2,
+      "batch": 0,
+      "index": 1502,
+      "image": "C:/Users/user/algolab_data\\traincrop/20160330_165644_1281_1081.jpg",
+      "label": "C:/Users/user/algolab_data\\traincrop/20160330_165644_1281_1081.png",
+      "img": {
+        "shape": [
+          3,
+          400,
+          400
+        ],
+        "dtype": "float32",
+        "sha256": "b306ebefe38634b7758c2ca8fa79546deb4b491746506c40452c58eb654e3207"
+      },
+      "transformed_label": {
+        "shape": [
+          400,
+          400
+        ],
+        "dtype": "uint8",
+        "sha256": "af9444769d7d215e620653a4f5a2009b1ce26997d7878d76cea3670ad8468f7f"
+      },
+      "numpy_before": "54918a13a57efed54bce078f6104aeb8ad50fd348e1d2a6ee16f727eb473ef6d",
+      "python_before": "f414d480296cbab556d17b3040096d2fb281c99ef5dbe36bad99d9f2a6404273",
+      "numpy_after": "1a5da851d1616b2b341953f7a4c8a505779bd7406b95e27bdc223b969c4a6132",
+      "python_after": "21db6fe987a8c77910757f0c30f0aa2fa937305ecbc68fe09f1b32dcf0e173be"
+    },
+    {
+      "sample_no": 3,
+      "batch": 0,
+      "index": 1600,
+      "image": "C:/Users/user/algolab_data\\traincrop/20160330_170922_1281_721.jpg",
+      "label": "C:/Users/user/algolab_data\\traincrop/20160330_170922_1281_721.png",
+      "img": {
+        "shape": [
+          3,
+          400,
+          400
+        ],
+        "dtype": "float32",
+        "sha256": "0a1c769cd6ad009335fb81af11b0d114a0cdeb0a6a6f656a7859ede2ea9ea1b4"
+      },
+      "transformed_label": {
+        "shape": [
+          400,
+          400
+        ],
+        "dtype": "uint8",
+        "sha256": "9854d7781ab6c1e3756ed5cd3fe250cc11a1009d94fd94ac37855fb187189f56"
+      },
+      "numpy_before": "1a5da851d1616b2b341953f7a4c8a505779bd7406b95e27bdc223b969c4a6132",
+      "python_before": "21db6fe987a8c77910757f0c30f0aa2fa937305ecbc68fe09f1b32dcf0e173be",
+      "numpy_after": "35c05a0ca7a8a27bf64e826800c570217f206269013fcac57373c282efa06ead",
+      "python_after": "64ca13d7923cc760c7542d96319467d6b4533bab8fcd4d18381ab2c8dc22744c"
+    },
+    {
+      "sample_no": 4,
+      "batch": 1,
+      "index": 1103,
+      "image": "C:/Users/user/algolab_data\\traincrop/20160328_153533_1_1081.jpg",
+      "label": "C:/Users/user/algolab_data\\traincrop/20160328_153533_1_1081.png",
+      "img": {
+        "shape": [
+          3,
+          400,
+          400
+        ],
+        "dtype": "float32",
+        "sha256": "6800aed11ce6a3138c3a42a4097d8e6223956f8594b576eebe22bc70d455cd8e"
+      },
+      "transformed_label": {
+        "shape": [
+          400,
+          400
+        ],
+        "dtype": "uint8",
+        "sha256": "2c71389741df53e831fa5ad9bc00c781e7b71aa7118f5b78d0c4a901237d9fd4"
+      },
+      "numpy_before": "35c05a0ca7a8a27bf64e826800c570217f206269013fcac57373c282efa06ead",
+      "python_before": "64ca13d7923cc760c7542d96319467d6b4533bab8fcd4d18381ab2c8dc22744c",
+      "numpy_after": "7fb68acde8a86c3b843699a31e9e432ca210a4b29273293be1d7e850eb84e752",
+      "python_after": "4961e0e28d432a76436a98204a37606fa173c6d6d2f192c2f8fe77b4377be47f"
+    },
+    {
+      "sample_no": 5,
+      "batch": 1,
+      "index": 1797,
+      "image": "C:/Users/user/algolab_data\\traincrop/20160405_172908_641_1081.jpg",
+      "label": "C:/Users/user/algolab_data\\traincrop/20160405_172908_641_1081.png",
+      "img": {
+        "shape": [
+          3,
+          400,
+          400
+        ],
+        "dtype": "float32",
+        "sha256": "c53bba2abc24ea063972c2498c8f944bad25204aebaf022cabf41cf0c40a29cc"
+      },
+      "transformed_label": {
+        "shape": [
+          400,
+          400
+        ],
+        "dtype": "uint8",
+        "sha256": "fdee875bdb3dbdfca37c80395dca571db89c4ee417b9ae62c0624bcd200165b5"
+      },
+      "numpy_before": "7fb68acde8a86c3b843699a31e9e432ca210a4b29273293be1d7e850eb84e752",
+      "python_before": "4961e0e28d432a76436a98204a37606fa173c6d6d2f192c2f8fe77b4377be47f",
+      "numpy_after": "2f70a99f5473982879ada38adcc4f9c7b31df48291438ac0988bb84fa027df02",
+      "python_after": "56184cfca3d6ccc7da0b16ca071bd517493262eebed5a2714a16bf9806435643"
+    },
+    {
+      "sample_no": 6,
+      "batch": 1,
+      "index": 748,
+      "image": "C:/Users/user/algolab_data\\traincrop/20160328_150827_1281_1.jpg",
+      "label": "C:/Users/user/algolab_data\\traincrop/20160328_150827_1281_1.png",
+      "img": {
+        "shape": [
+          3,
+          400,
+          400
+        ],
+        "dtype": "float32",
+        "sha256": "bfd8f05f614102941a44e076b3073daa2e9a52ab0db1b6ee86cc9dcbf5aad25c"
+      },
+      "transformed_label": {
+        "shape": [
+          400,
+          400
+        ],
+        "dtype": "uint8",
+        "sha256": "b9ce164d30e4101b009fe4be765a070593cfbdd48f897853de159a8c177fabe8"
+      },
+      "numpy_before": "2f70a99f5473982879ada38adcc4f9c7b31df48291438ac0988bb84fa027df02",
+      "python_before": "56184cfca3d6ccc7da0b16ca071bd517493262eebed5a2714a16bf9806435643",
+      "numpy_after": "f6273956485869bc70dbaaf1c6162a9bf6673051ef12b3e3d41786125c1c7b22",
+      "python_after": "16f31f2cfa1b1be47aad8f74e3a7185b6daf2f582451a73087e1cda9f2a73a4d"
+    },
+    {
+      "sample_no": 7,
+      "batch": 1,
+      "index": 871,
+      "image": "C:/Users/user/algolab_data\\traincrop/20160328_151247_1921_1.jpg",
+      "label": "C:/Users/user/algolab_data\\traincrop/20160328_151247_1921_1.png",
+      "img": {
+        "shape": [
+          3,
+          400,
+          400
+        ],
+        "dtype": "float32",
+        "sha256": "f457b275eec124bab691e0e6fbaa7f06283dc92f0b18e4d70427a90c002edcaf"
+      },
+      "transformed_label": {
+        "shape": [
+          400,
+          400
+        ],
+        "dtype": "uint8",
+        "sha256": "f6110e3bff18bd78930ce05a49b07da4200319007afc7ef140ee9382d1c6333a"
+      },
+      "numpy_before": "f6273956485869bc70dbaaf1c6162a9bf6673051ef12b3e3d41786125c1c7b22",
+      "python_before": "16f31f2cfa1b1be47aad8f74e3a7185b6daf2f582451a73087e1cda9f2a73a4d",
+      "numpy_after": "a4a2ac50399e0c72dfe881ddd63a4a3815eb4c1aee845b9647d59a8f58c07737",
+      "python_after": "1ebdc6ba9100f020dabe89a902ae00029aac1e97b1a6267741268a75f33be960"
+    }
+  ],
+  "actual_indices_path": "D:\\论文复现\\experiments\\segformer_ten_aligned_wave14_20261028\\provenance\\rng\\smoke_T_LSKA_actual_indices.jsonl",
+  "batch_size": 4,
+  "expected_training_samples": 80,
+  "observed_samples": 104,
+  "actual_indices_sha256": "73b12a8156cdee336129198937ddfbe5ff2592c404534e1c1913f0662619710c",
+  "actual_training_indices_sha256": "42f18b929bf11ce9a8459ffec228d344b25ed013cc7e51004fd2ee2abdda5c96",
+  "training_budget_numpy_state_sha256": "9fc63964e0e04e127eb11e19fd2b50ab848d471b74e34d30be1752eef4325534",
+  "training_budget_python_state_sha256": "a897e4f1a3ae9e8cb5acd27307dc2dd7c47d00445b8507aac588537ebc937521",
+  "final_numpy_state_sha256": "a6051b7b9ef3f587f424ce8b95afae5be0ea8e07f0f5f8d4be71eaacd8071367",
+  "final_python_state_sha256": "2cd3e596141c12201add07bea601901f1a2fd0ad1ef05a4e30d85d14e78d0a20"
+}

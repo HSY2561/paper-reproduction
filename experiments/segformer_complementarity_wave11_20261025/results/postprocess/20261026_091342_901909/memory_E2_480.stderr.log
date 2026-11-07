@@ -1,0 +1,12 @@
+WARNING: Logging before InitGoogleLogging() is written to STDERR
+W1026 09:15:20.740681 60732 gpu_resources.cc:116] Please NOTE: device: 0, GPU Compute Capability: 12.0, Driver API Version: 13.2, Runtime API Version: 12.9
+D:\论文复现\experiments\segformer_complementarity_wave11_20261025\postprocess_w11_v4.py:598: VisibleDeprecationWarning: 
+Warning:
+API "paddle.device.cuda.synchronize" is deprecated since 2.5.0, and will be removed in future versions. Please use "paddle.device.synchronize" instead.
+    Reason: synchronize in paddle.device.cuda will be removed in future 
+  cuda.synchronize()
+D:\论文复现\experiments\segformer_complementarity_wave11_20261025\postprocess_w11_v4.py:607: VisibleDeprecationWarning: 
+Warning:
+API "paddle.device.cuda.synchronize" is deprecated since 2.5.0, and will be removed in future versions. Please use "paddle.device.synchronize" instead.
+    Reason: synchronize in paddle.device.cuda will be removed in future 
+  cuda.synchronize()

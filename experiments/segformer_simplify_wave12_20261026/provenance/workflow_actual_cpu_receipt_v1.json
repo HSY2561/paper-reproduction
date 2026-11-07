@@ -1,0 +1,11 @@
+{
+  "at": "2026-10-27T00:34:57.0380420+08:00",
+  "source": "tools.exec_command actual CPU self-test exit",
+  "command": "C:\\venv_bisenet\\Scripts\\python.exe workflow_w12.py --self-test",
+  "exit_code": 0,
+  "chunk_id": "bd7338",
+  "source_sha256": "ec20a4ff19ceb5e59751b967c6a46cb0175ff71820919840f01861e7bff9002d",
+  "CPU_only": true,
+  "GPU_started": false,
+  "formal_training_started": false
+}

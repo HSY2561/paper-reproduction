@@ -1,0 +1,11 @@
+{
+  "task_name": "Codex-SegFormer-W11-postprocess-once-20261025",
+  "task_path": "\\",
+  "registered_at": "2026-10-25T19:12:20.6283983+08:00",
+  "scheduled_start": "2026-10-25T19:12:30.5010152+08:00",
+  "entry": "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\run_postprocess.ps1",
+  "postprocess_release_sha256": "6dfa2fd88f7a7ad40bb12fb57548aa8913cde4c2af036641edadf12d26ef2691",
+  "once_only": true,
+  "waits_for_actual_training_exit": true,
+  "registration_does_not_prove_profile_started": true
+}

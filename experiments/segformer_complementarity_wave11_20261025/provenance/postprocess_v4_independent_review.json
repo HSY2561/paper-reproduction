@@ -1,0 +1,43 @@
+{
+  "at": "2026-10-26T09:11:57.648879+08:00",
+  "reviewer": "/root/w11_v3_independent_review",
+  "passed": true,
+  "scope": "v4 isolated desktop executable identity fallback; CPU-only",
+  "changed_functions": [
+    "classify_processes",
+    "verify_postprocess_release",
+    "report",
+    "self_test"
+  ],
+  "unchanged_quiet_training_checkpoint_and_measurement_guards": true,
+  "tests": {
+    "recorded_specific_PID_allowed": true,
+    "new_PID_same_fullpath_name_hash_allowed": true,
+    "pure_C_new_PID_refused": true,
+    "pure_C_old_PID_refused": true,
+    "new_PID_missing_path_refused": true,
+    "new_PID_relative_path_refused": true,
+    "new_PID_unknown_path_refused": true,
+    "new_PID_changed_basename_refused": true,
+    "new_PID_python_refused": true,
+    "new_PID_changed_hash_refused": true,
+    "new_PID_unreadable_binary_refused": true
+  },
+  "source_sha256": "2a6efc2d0e6a3bc8a98812412a1969b79f8a571f61d5ecc8040b62a8f789f9f7",
+  "baseline_sha256": "c62909df59a28b50ecda4ea41bc182ba685b1dd89a95bf8e4ab9abebd42b0219",
+  "existing_PID_policy_retained": "same PID/name/path as v3; new PID requires full path/name/fresh executable SHA256",
+  "GPU_started": false,
+  "training_started": false,
+  "applications_stopped": false,
+  "wrapper_review": {
+    "source_sha256": "84662dce2f8211285a82d096ec8b16475539890cb72d88deec56ead7c9f636fa",
+    "child_only": "Only launches own Python child, waits it, reads actual ExitCode; no taskkill/StopProcess or application closure",
+    "stderr_exit_probe": "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\provenance\\wrapper_v4_stderr_exit_probe.json",
+    "stderr_exit_probe_sha256": "c6a28b14b24fcd98d84fabdcda6524000ca7dc70f4a78a64bc1ce064381c29b7",
+    "stderr_nonempty_actual_exit_code": 7,
+    "expected_exit_code": 7,
+    "passed": true
+  },
+  "qualitative_v4_only_versioned_dependency_paths_and_version_description": true,
+  "qualitative_v4_sha256": "6ccf98d401c12622330a7720529ad47ecb088bd55dd379959deb680ede26f70f"
+}

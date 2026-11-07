@@ -1,0 +1,11 @@
+{
+  "at": "2026-10-27T00:45:29.2679880+08:00",
+  "task_name": "Codex-SegFormer-W12-once-20261027",
+  "action_pythonw": "C:\\venv_bisenet\\Scripts\\pythonw.exe",
+  "action_launcher": "D:\\论文复现\\experiments\\segformer_simplify_wave12_20261026\\launch_once.py",
+  "working_directory": "D:\\论文复现\\experiments\\segformer_simplify_wave12_20261026",
+  "manual_once": true,
+  "scheduler_running_is_not_training": true,
+  "scientific_receipts": "results/launch_receipt.json; results/workflow_exit.json; results/launch_wrapper_exit.json",
+  "xml_sha256": "2b7a491cdedbad706b7a6d1cd8dade2b2bbc3bc734343073694dc1af2a0314d3"
+}

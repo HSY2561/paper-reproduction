@@ -1,0 +1,20 @@
+{
+  "tag": "W14_T_CAA_official_val",
+  "pid": 53064,
+  "exit_code": 0,
+  "guard_reason": null,
+  "ended_at": "2026-10-28T03:04:22+08:00",
+  "command": [
+    "C:\\venv_bisenet\\Scripts\\python.exe",
+    "D:\\论文复现\\experiments\\segformer_ten_aligned_wave14_20261028\\src\\PaddleSeg-2.10.0\\tools\\val.py",
+    "--config",
+    "D:\\论文复现\\experiments\\segformer_ten_aligned_wave14_20261028\\configs\\T_CAA.yml",
+    "--model_path",
+    "D:\\论文复现\\experiments\\segformer_ten_aligned_wave14_20261028\\checkpoints\\T_CAA\\model.pdparams",
+    "--num_workers",
+    "0"
+  ],
+  "stdout": "D:\\论文复现\\experiments\\segformer_ten_aligned_wave14_20261028\\logs\\W14_T_CAA_official_val.stdout.log",
+  "stderr": "D:\\论文复现\\experiments\\segformer_ten_aligned_wave14_20261028\\logs\\W14_T_CAA_official_val.stderr.log",
+  "test_used": false
+}

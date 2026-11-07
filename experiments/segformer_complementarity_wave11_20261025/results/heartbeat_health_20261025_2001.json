@@ -1,0 +1,28 @@
+{
+  "at": "2026-10-25T20:02:01.792975+08:00",
+  "training_release_verified": true,
+  "post_release_verified": true,
+  "completed": [
+    {
+      "run": "W11_E0_s42",
+      "exit": 0,
+      "selected": "ordinary",
+      "mIoU": 0.8280317774283685,
+      "sha256": "07122e56c57178423f400058b909fcb1530010745a0c6a486e777083816cb7f9"
+    },
+    {
+      "run": "W11_E1_s42",
+      "exit": 0,
+      "selected": "ordinary",
+      "mIoU": 0.824962192176784,
+      "sha256": "2cf446c1fc4a1fe402d300ebdb4b55527e196746b2d873810bde6732a668ded8"
+    }
+  ],
+  "active_tag": "W11_E2_s42_train",
+  "latest_real_iter": 5000,
+  "log_stall_seconds": 4.0,
+  "free_gib": 15.798,
+  "postprocess_status": "waiting",
+  "test_read": false,
+  "notify": false
+}

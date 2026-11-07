@@ -1,0 +1,253 @@
+{
+  "command": [
+    "nvidia-smi",
+    "-q",
+    "-x"
+  ],
+  "exit_code": 0,
+  "stderr": "",
+  "processes": [
+    {
+      "pid": "1404",
+      "type": "C+G",
+      "name": "",
+      "memory": "N/A"
+    },
+    {
+      "pid": "5332",
+      "type": "C+G",
+      "name": "C:\\Users\\user\\AppData\\Roaming\\baidu\\BaiduNetdisk\\module\\BrowserEngine\\BaiduNetdiskUnite.exe",
+      "memory": "N/A"
+    },
+    {
+      "pid": "5616",
+      "type": "C+G",
+      "name": "C:\\Program Files\\LogiOptionsPlus\\logioptionsplus_agent.exe",
+      "memory": "N/A"
+    },
+    {
+      "pid": "7260",
+      "type": "C+G",
+      "name": "C:\\Windows\\SystemApps\\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\\TextInputHost.exe",
+      "memory": "N/A"
+    },
+    {
+      "pid": "9264",
+      "type": "C+G",
+      "name": "C:\\Program Files (x86)\\Microsoft\\EdgeWebView\\Application\\156.0.4314.42\\msedgewebview2.exe",
+      "memory": "N/A"
+    },
+    {
+      "pid": "12408",
+      "type": "C+G",
+      "name": "C:\\Windows\\explorer.exe",
+      "memory": "N/A"
+    },
+    {
+      "pid": "12824",
+      "type": "C+G",
+      "name": "C:\\Program Files\\Tencent\\WeType\\3.0.0.38\\wetype_update.exe",
+      "memory": "N/A"
+    },
+    {
+      "pid": "14292",
+      "type": "C+G",
+      "name": "C:\\Windows\\System32\\ShellHost.exe",
+      "memory": "N/A"
+    },
+    {
+      "pid": "14784",
+      "type": "C+G",
+      "name": "C:\\Windows\\SystemApps\\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\\CrossDeviceResume.exe",
+      "memory": "N/A"
+    },
+    {
+      "pid": "15736",
+      "type": "C+G",
+      "name": "C:\\Windows\\SystemApps\\ShellExperienceHost_cw5n1h2txyewy\\ShellExperienceHost.exe",
+      "memory": "N/A"
+    },
+    {
+      "pid": "17356",
+      "type": "C+G",
+      "name": "C:\\Program Files (x86)\\Microsoft\\Copilot\\Application\\undocked_copilot\\copilotapphost.exe",
+      "memory": "N/A"
+    },
+    {
+      "pid": "17428",
+      "type": "C+G",
+      "name": "C:\\Program Files\\Oray\\AweSun\\flutter\\AweSun.exe",
+      "memory": "N/A"
+    },
+    {
+      "pid": "19080",
+      "type": "C+G",
+      "name": "C:\\Windows\\SystemApps\\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\\SearchHost.exe",
+      "memory": "N/A"
+    },
+    {
+      "pid": "19096",
+      "type": "C+G",
+      "name": "C:\\Windows\\SystemApps\\Microsoft.Windows.StartMenuExperienceHost_cw5n1h2txyewy\\StartMenuExperienceHost.exe",
+      "memory": "N/A"
+    },
+    {
+      "pid": "20520",
+      "type": "C+G",
+      "name": "C:\\Users\\user\\AppData\\Local\\OpenAI\\Codex\\runtimes\\cua_node\\1fb7137c46617d50\\bin\\node_modules\\@oai\\sky\\bin\\windows\\swift\\x64\\codex-computer-use-swift.exe",
+      "memory": "N/A"
+    },
+    {
+      "pid": "20548",
+      "type": "C+G",
+      "name": "C:\\Program Files (x86)\\Microsoft\\EdgeWebView\\Application\\156.0.4314.42\\msedgewebview2.exe",
+      "memory": "N/A"
+    },
+    {
+      "pid": "21012",
+      "type": "C+G",
+      "name": "",
+      "memory": "N/A"
+    },
+    {
+      "pid": "22364",
+      "type": "C+G",
+      "name": "C:\\Program Files (x86)\\Microsoft\\EdgeWebView\\Application\\156.0.4314.42\\msedgewebview2.exe",
+      "memory": "N/A"
+    },
+    {
+      "pid": "23312",
+      "type": "C+G",
+      "name": "C:\\Users\\user\\AppData\\Local\\Mathpix\\Mathpix Snipping Tool\\mathpix-snipping-tool.exe",
+      "memory": "N/A"
+    },
+    {
+      "pid": "24132",
+      "type": "C+G",
+      "name": "",
+      "memory": "N/A"
+    },
+    {
+      "pid": "24308",
+      "type": "C+G",
+      "name": "C:\\Program Files (x86)\\Microsoft\\EdgeWebView\\Application\\156.0.4314.42\\msedgewebview2.exe",
+      "memory": "N/A"
+    },
+    {
+      "pid": "24384",
+      "type": "C+G",
+      "name": "C:\\Program Files (x86)\\Microsoft\\EdgeWebView\\Application\\156.0.4314.42\\msedgewebview2.exe",
+      "memory": "N/A"
+    },
+    {
+      "pid": "26048",
+      "type": "C+G",
+      "name": "C:\\Program Files\\WindowsApps\\Microsoft.YourPhone_1.26082.121.0_x64__8wekyb3d8bbwe\\PhoneExperienceHost.exe",
+      "memory": "N/A"
+    },
+    {
+      "pid": "27332",
+      "type": "C+G",
+      "name": "C:\\Snipaste-2.10.5-x86\\Snipaste.exe",
+      "memory": "N/A"
+    },
+    {
+      "pid": "28064",
+      "type": "C+G",
+      "name": "C:\\Program Files (x86)\\Microsoft\\EdgeWebView\\Application\\156.0.4314.42\\msedgewebview2.exe",
+      "memory": "N/A"
+    },
+    {
+      "pid": "28420",
+      "type": "C+G",
+      "name": "C:\\Users\\user\\AppData\\Local\\Programs\\SakuraCat\\SakuraCat.exe",
+      "memory": "N/A"
+    },
+    {
+      "pid": "28748",
+      "type": "C+G",
+      "name": "C:\\Program Files\\Tencent\\QQNT\\QQ.exe",
+      "memory": "N/A"
+    },
+    {
+      "pid": "30824",
+      "type": "C+G",
+      "name": "C:\\Program Files\\LogiOptionsPlus\\logivoice\\logioptionsplus_logivoice.exe",
+      "memory": "N/A"
+    },
+    {
+      "pid": "35296",
+      "type": "C+G",
+      "name": "C:\\Users\\user\\AppData\\Local\\Feishu\\app\\Feishu.exe",
+      "memory": "N/A"
+    },
+    {
+      "pid": "38768",
+      "type": "C+G",
+      "name": "C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe",
+      "memory": "N/A"
+    },
+    {
+      "pid": "39496",
+      "type": "C+G",
+      "name": "C:\\Program Files\\WindowsApps\\OpenAI.Codex_26.1021.3705.0_x64__2p2nqsd0c76g0\\app\\ChatGPT.exe",
+      "memory": "N/A"
+    },
+    {
+      "pid": "45920",
+      "type": "C+G",
+      "name": "C:\\STEAM\\bin\\cef\\cef.win64\\steamwebhelper.exe",
+      "memory": "N/A"
+    },
+    {
+      "pid": "46676",
+      "type": "C+G",
+      "name": "C:\\Users\\user\\AppData\\Local\\Google\\Chrome\\Application\\chrome.exe",
+      "memory": "N/A"
+    },
+    {
+      "pid": "47976",
+      "type": "C+G",
+      "name": "C:\\Users\\user\\AppData\\Local\\Google\\Chrome\\Application\\chrome.exe",
+      "memory": "N/A"
+    },
+    {
+      "pid": "49716",
+      "type": "C+G",
+      "name": "C:\\Program Files (x86)\\Microsoft\\Copilot\\Application\\copilotapp.exe",
+      "memory": "N/A"
+    },
+    {
+      "pid": "52236",
+      "type": "C+G",
+      "name": "C:\\Program Files\\WindowsApps\\Microsoft.WindowsTerminal_1.24.12741.0_x64__8wekyb3d8bbwe\\WindowsTerminal.exe",
+      "memory": "N/A"
+    },
+    {
+      "pid": "54632",
+      "type": "C",
+      "name": "C:\\python312\\python.exe",
+      "memory": "N/A"
+    },
+    {
+      "pid": "56432",
+      "type": "C+G",
+      "name": "C:\\Users\\user\\AppData\\Local\\Kingsoft\\WPS Office\\12.1.0.28802\\office6\\promecefpluginhost.exe",
+      "memory": "N/A"
+    },
+    {
+      "pid": "56584",
+      "type": "C+G",
+      "name": "C:\\Windows\\SystemApps\\Microsoft.LockApp_cw5n1h2txyewy\\LockApp.exe",
+      "memory": "N/A"
+    },
+    {
+      "pid": "59368",
+      "type": "C+G",
+      "name": "",
+      "memory": "N/A"
+    }
+  ],
+  "raw_xml_path": "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\provenance\\postprocess_wddm_observed_20261025.xml",
+  "raw_xml_sha256": "38e95fef8cc246cf8e22207a1551f0a9080cd8bea6da11ccb612d20e815dc1dc"
+}

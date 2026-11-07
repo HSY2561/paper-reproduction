@@ -1,0 +1,5 @@
+{
+  "at": "2026-10-26T09:10:01+08:00",
+  "reason": "Intentional owned v3 waiter stop for v4 pinned executable identity repair; no GPU profiling or training restarted",
+  "applications_stopped": false
+}

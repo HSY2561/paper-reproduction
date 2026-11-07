@@ -1,0 +1,18 @@
+{
+  "models": [
+    {
+      "id": "R0",
+      "config": "D:\\论文复现\\experiments\\segformer_simplify_wave12_20261026\\provenance\\profile_cpu_assets_1793031570147164400\\cfg.yml",
+      "checkpoint": "D:\\论文复现\\experiments\\segformer_simplify_wave12_20261026\\provenance\\profile_cpu_assets_1793031570147164400\\state.bin",
+      "checkpoint_sha256": "1111862b016cece7a9319381b980a55422527c41052a5c9c52664f8024bcdf7a",
+      "reference": true
+    },
+    {
+      "id": "D00",
+      "config": "D:\\论文复现\\experiments\\segformer_simplify_wave12_20261026\\provenance\\profile_cpu_assets_1793031570147164400\\cfg.yml",
+      "checkpoint": "D:\\论文复现\\experiments\\segformer_simplify_wave12_20261026\\provenance\\profile_cpu_assets_1793031570147164400\\state.bin",
+      "checkpoint_sha256": "1111862b016cece7a9319381b980a55422527c41052a5c9c52664f8024bcdf7a",
+      "reference": true
+    }
+  ]
+}

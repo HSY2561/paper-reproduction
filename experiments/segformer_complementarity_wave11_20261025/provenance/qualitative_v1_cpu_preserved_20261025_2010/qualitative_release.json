@@ -1,0 +1,22 @@
+{
+  "version": "W11-qualitative-v1",
+  "frozen_at": "2026-10-25T20:09:12+08:00",
+  "files": {
+    "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\qualitative_w11.py": "b075f2d34759685ede69111185ef3048dee8cf64acb208b1e40faaa6fbafcead",
+    "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\provenance\\fixed24_val_cases.json": "8ba37712a2a4a15ed2db42f13f65c7150530896f09f1c36ec37134978943c619",
+    "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\postprocess_w11.py": "0c32b46b99cc3cba907cf10158a7aee3697b0a6f2823a1506f3ff0587e1006a2",
+    "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\provenance\\release.json": "f5f2cf5e774111dbbdbf365f6279ee57641d39f5da0400e3f2fe951dc5d664ef",
+    "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\provenance\\postprocess_release.json": "6dfa2fd88f7a7ad40bb12fb57548aa8913cde4c2af036641edadf12d26ef2691",
+    "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\provenance\\evaluation_versions.json": "01e490078fe9ef52ac2f139bf01304c8638938949c4c7d99b31c026a83b35da4",
+    "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\provenance\\postprocess_desktop_baseline.json": "2a217371e62c788e6e4ef92f1e589b7a38893938d4243b752b0b2bb7fd0173f3",
+    "D:\\论文复现\\experiments\\local_structure_20260930\\provenance\\train_val_manifest.json": "55ba5746e33c6bcc082f0129fac18cd75d9671ff1483c10d15455c915f3cc1e4",
+    "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\provenance\\qualitative_self_test.json": "6dc2a47749e8ad4c37b4bd7c84a44a91bd39f6238a8465a387fee00674d1f673",
+    "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\QUALITATIVE_API.md": "9278b1ed2f4801c564da0995c4b7003c8bc5d5ab117921cc20d6e983d1ab5f45"
+  },
+  "independent_of_training_and_postprocess": true,
+  "purpose": "fixed24 val / frozen five models seed42 / official infer.inference / no new threshold",
+  "render_requires": "15 complete + automatic profile/report child/waiter exit0 + all owned PID exited + WDDM guard",
+  "GPU_execution_in_preparation": false,
+  "training_modified": false,
+  "test_read": false
+}

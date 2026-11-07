@@ -1,0 +1,28 @@
+{
+  "version": "W11-postprocess-v3-exact-PID-desktop-refresh",
+  "frozen_at": "2026-10-26T09:07:52.151259+08:00",
+  "files": {
+    "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\postprocess_w11_v3.py": "75c63cec66827d863059d418a8b2a28db5dc6755336ff8670743fffc6be0fb61",
+    "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\run_postprocess_v3.ps1": "e78f1066526701af1011c6a4a1136de5da6b32f7010379dfa6f32c8cf027e39a",
+    "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\provenance\\postprocess_desktop_baseline_v3.json": "1215c2d913bb415d555f3c82a05b3483caa5ea231f5a978a0bdf9fc2627db91f",
+    "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\provenance\\postprocess_self_test_v3.json": "a944e48dda6f7ab7be16cd22b63fbb2ca97b7433027e60c74a8371eadcf758df",
+    "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\provenance\\postprocess_v3_preparation_changes.json": "6003ffa323d2107f7d5f6ac2b5dca7e834b54ff06d5fd2d6b7cf9c0fabfbae12",
+    "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\provenance\\postprocess_v3_identity_readonly_20261026.json": "59c608d5706e171cbd8f851a245bf7c87975d175becd9b395e07df9496a3fa10",
+    "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\provenance\\postprocess_wddm_observed_v3_20261026.xml": "1bf6e7661b46966a0881d9f146d2e1cab1834536995b8dbccc8356c5648b449c",
+    "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\provenance\\postprocess_release.json": "6dfa2fd88f7a7ad40bb12fb57548aa8913cde4c2af036641edadf12d26ef2691",
+    "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\provenance\\postprocess_v2_deferral_preserved_20261026.json": "cbee0a6c2fb546274fc3d63de7305e2b01a33ce46503ee625339e7b926d1de2c",
+    "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\provenance\\postprocess_v2_intentional_stop_20261026.json": "6a056467ee5eb0a787d5690471d6e1a2b8ec1220ee2d48cc361cbbea06c03350",
+    "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\provenance\\postprocess_w11_v3_diff.patch": "d2feb4207501893c3293728e12684d94d6126a61ed0a6c21c3011bcd4ce64f57"
+  },
+  "separate_from_training_release": true,
+  "training_modified": false,
+  "source_or_summary_changed": false,
+  "background_policy_changed": false,
+  "original_waiter_exit": 1,
+  "original_waiter_stop": "intentional STOP_REQUEST after 15 training complete; original receipt preserved",
+  "CPU_selftest_passed": true,
+  "GPU_execution_in_preparation": false,
+  "independent_review": "core AST review approved by separate agent 2026-10-26 09:07; separate JSON retained",
+  "profile_requires": "15 real full18k exit0 and independent val, original workflow wrapper exit0, original PIDs exited; exact-PID C+G desktop baseline and 5-sample low/stable window",
+  "completion_receipt": "results/final_delivery_done.json"
+}

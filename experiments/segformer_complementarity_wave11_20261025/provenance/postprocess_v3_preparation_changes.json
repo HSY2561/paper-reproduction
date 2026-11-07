@@ -1,0 +1,87 @@
+{
+  "at": "2026-10-26T09:03:50.658105+08:00",
+  "changes": {
+    "postprocess_w11_v3.py": {
+      "original": "postprocess_w11.py",
+      "sha256": "75c63cec66827d863059d418a8b2a28db5dc6755336ff8670743fffc6be0fb61",
+      "replacements": [
+        {
+          "before": "'postprocess_desktop_baseline.json'",
+          "after": "'postprocess_desktop_baseline_v3.json'",
+          "count": 1
+        },
+        {
+          "before": "path = ROOT / 'provenance' / 'postprocess_release.json'",
+          "after": "path = ROOT / 'provenance' / 'postprocess_release_v3.json'",
+          "count": 1
+        },
+        {
+          "before": "'postprocess_self_test.json'",
+          "after": "'postprocess_self_test_v3.json'",
+          "count": 1
+        },
+        {
+          "before": "This is a separately versioned postprocessing tool.",
+          "after": "This v3 is a separately versioned postprocessing tool with a refreshed, verified desktop PID baseline.",
+          "count": 1
+        }
+      ]
+    },
+    "run_postprocess_v3.ps1": {
+      "original": "run_postprocess.ps1",
+      "sha256": "e78f1066526701af1011c6a4a1136de5da6b32f7010379dfa6f32c8cf027e39a",
+      "replacements": [
+        {
+          "before": "'postprocess_w11.py'",
+          "after": "'postprocess_w11_v3.py'",
+          "count": 1
+        }
+      ]
+    },
+    "qualitative_w11_v3.py": {
+      "original": "qualitative_w11.py",
+      "sha256": "9874b736e6945bab2dd78e0372a7309c58bba5e5ab5805a546ea532273af3724",
+      "replacements": [
+        {
+          "before": "'provenance/qualitative_release.json'",
+          "after": "'provenance/qualitative_release_v3.json'",
+          "count": 1
+        },
+        {
+          "before": "'postprocess_w11.py'",
+          "after": "'postprocess_w11_v3.py'",
+          "count": 2
+        },
+        {
+          "before": "'provenance/postprocess_release.json'",
+          "after": "'provenance/postprocess_release_v3.json'",
+          "count": 1
+        },
+        {
+          "before": "'provenance/postprocess_desktop_baseline.json'",
+          "after": "'provenance/postprocess_desktop_baseline_v3.json'",
+          "count": 1
+        },
+        {
+          "before": "'provenance/qualitative_self_test.json'",
+          "after": "'provenance/qualitative_self_test_v3.json'",
+          "count": 2
+        },
+        {
+          "before": "'QUALITATIVE_API.md'",
+          "after": "'QUALITATIVE_API_v3.md'",
+          "count": 2
+        },
+        {
+          "before": "version='W11-qualitative-v2'",
+          "after": "version='W11-qualitative-v3-desktop-baseline'",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "original_files_modified": false,
+  "training_modified": false,
+  "GPU_started": false,
+  "release_created": false
+}

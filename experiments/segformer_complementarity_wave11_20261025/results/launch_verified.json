@@ -1,0 +1,37 @@
+{
+  "at": "2026-10-25T19:13:58.221930+08:00",
+  "training_release_verified": true,
+  "training_release_sha256": "f5f2cf5e774111dbbdbf365f6279ee57641d39f5da0400e3f2fe951dc5d664ef",
+  "live_stage": "formal_training",
+  "latest_real_log_iteration": 9100,
+  "heartbeat": {
+    "at": "2026-10-25T19:13:46+08:00",
+    "tag": "W11_E0_s42_train",
+    "pid": 2996,
+    "runner_pid": 61280,
+    "latest_iter": 9000,
+    "total_iters": 18000,
+    "elapsed_seconds": 820.59,
+    "seconds_since_log_progress": 0.0,
+    "stdout_bytes": 33274,
+    "stderr_bytes": 169574,
+    "free_gib": 15.974,
+    "test_used": false
+  },
+  "four_smoke_real_exit0": true,
+  "postprocess_waiter": {
+    "at": "2026-10-25T19:13:31+08:00",
+    "status": "waiting",
+    "completed_runs": 0,
+    "elapsed_seconds": 60.0,
+    "maximum_seconds": 86400,
+    "poll_seconds": 30,
+    "GPU_started": false,
+    "workflow_lock_present": true,
+    "controller_pid": 61280,
+    "training_restarted": false
+  },
+  "automation_id": "segformer-w11",
+  "formal_completed": 0,
+  "test_read": false
+}

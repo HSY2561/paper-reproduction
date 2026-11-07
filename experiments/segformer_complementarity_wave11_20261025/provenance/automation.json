@@ -1,0 +1,7 @@
+{
+  "automation_id": "segformer-w11",
+  "kind": "heartbeat",
+  "interval_minutes": 30,
+  "quiet_on_healthy_unchanged": true,
+  "delete_after_verified_final_delivery": true
+}

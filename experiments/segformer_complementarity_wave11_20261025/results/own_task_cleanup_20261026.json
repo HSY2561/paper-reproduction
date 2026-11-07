@@ -1,0 +1,30 @@
+{
+  "at": "2026-10-26T09:28:18.1557556+08:00",
+  "scope": "Only the two W11 one-time registrations",
+  "training_runs_preserved": true,
+  "other_tasks_untouched": true,
+  "records": [
+    {
+      "task_name": "Codex-SegFormer-W11-fourcell-once-20261025",
+      "state_before": "Ready",
+      "last_task_result": 0,
+      "last_run_time": "2026-10-25T18:58:06.0000000+08:00",
+      "actions": [
+        "-NoLogo -NoProfile -NonInteractive -WindowStyle Hidden -ExecutionPolicy Bypass -File \"D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\run_workflow.ps1\" -Mode run"
+      ],
+      "xml_snapshot": "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\provenance\\cleanup_Codex-SegFormer-W11-fourcell-once-20261025_20261026.xml",
+      "removed_at": "2026-10-26T09:28:16.7136485+08:00"
+    },
+    {
+      "task_name": "Codex-SegFormer-W11-postprocess-once-20261025",
+      "state_before": "Ready",
+      "last_task_result": 1,
+      "last_run_time": "2026-10-26T09:13:36.0000000+08:00",
+      "actions": [
+        "-NoProfile -ExecutionPolicy Bypass -WindowStyle Hidden -File \"D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\run_postprocess_v4.ps1\""
+      ],
+      "xml_snapshot": "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\provenance\\cleanup_Codex-SegFormer-W11-postprocess-once-20261025_20261026.xml",
+      "removed_at": "2026-10-26T09:28:17.5858713+08:00"
+    }
+  ]
+}
