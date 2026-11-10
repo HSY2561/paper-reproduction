@@ -1,79 +1,38 @@
-<!-- A0_MAINLINE_CLEANUP_20261025 -->
-> **当前训练母体：SegFormer-B0＋width128＋Aligned（A0）**。后续源码、配置、权重及公开对照保留位置见[后续训练入口与清理说明](后续训练保留目录与清理说明_20261025.md)。2026-10-25已按清单清理淘汰权重和中间产物8.3053 GiB，原始数据/环境/公开冻结权重及运行工程保留；旧报告中的权重现存声明对应清理前时点。
-<!-- END_A0_MAINLINE_CLEANUP_20261025 -->
 # 道路裂缝视觉分割与移动机器人精细修复
 
-本仓库提供当前代码、训练证据与论文材料，供导师查看项目进展。最新同步日期：2026-10-25。
+本仓库保存论文相关的训练配置、验证与测试结果、审计回执、图表、复现源码和运行环境说明。当前 `main` 的内容按最新结果组织，历史波次的原始证据仍保留在各自的 `experiments/` 目录中。
 
-## 最新训练结果
+## 当前结果入口
 
-2026-10-25 最新回执：[Ubuntu SM120 公共模型补跑](experiments/segformer_public_wave9_20261023/sm120_ubuntu24_formal/README.md)中 PSPNet-ResNet50、DeepLabV3P-ResNet50、Fast-SCNN 均已到达 18,000 步并真实 exit=0，队列于 02:28:21 完成。日志内最佳验证 mIoU 分别为约 81.80%、82.70%、80.19%，仅为训练日志显示值；三项选模权重 SHA256 已保存，权重本体留在本地。本次未发现对应独立验证、边界评估、统一 test 或完整推理测量回执，不能将训练完成等同于通过科学门槛，也不替换既有 Windows 失败证据或旧 test 表。
+- [Crack500 Wave17 四组 Aligned/WTConv 消融报告](Crack500_Aligned_WTConv_消融报告_20261031.md)
+- [Crack500 Wave17 结果表](experiments/segformer_crack500_aligned_wtconv_ablation_wave17_20261030/results/crack500_aligned_wtconv_ablation_table.csv)
+- [VOCdevkit3000 四组审计结果](VOCdevkit3000_四组消融结果表_真实审计_20261106.md)
+- [VOCdevkit3000 Wave15 原始结果](experiments/segformer_vocdevkit3000_aligned_wtconv_ablation_20261031/results/voc_ablation_table.csv)
+- [Wave16 损失函数复核结果](experiments/segformer_vocdevkit3000_aw_loss_wave16_20261106/results/aw_loss_comparison.csv)
+- [Wave18 多数据集汇总](experiments/segformer_priority_wave18_20261107/reports/wave18_report.md)
 
-最新 [Wave8 损失实验](experiments/segformer_loss_wave8_20261019/README.md)的 20 个预登记配方均已有真实验证结果：主队列 15 项完成，原先因共享标签副作用失败的 5 项通过独立 `compat_clone` 恢复队列完成。L20（CE + 0.01 RMI）当前裂缝 IoU 68.0637%、F1 80.9975%、mIoU 82.9217%、边界 F1 45.2611%；这些仍是 seed42 单项验证结果，不代表最终门槛或多 seed结论。L15/L16 的旧中断证据、正式重跑退出回执及 L17/L19/L20 结果均已保存。主队列与兼容恢复队列均声明未访问 test。详见[当前进度表](SegFormer损失函数消融进展_20261019.md)、[恢复证据](experiments/segformer_loss_wave8_20261019/dice_compat_recovery_20261020/README.md)和[预登记计划](SegFormer损失函数优化20方案执行计划_20261019.md)。
+Wave17 的 Crack500 表包含四组模型冻结验证和 1124 张 test 的统一比较。Wave15/Wave16 的 VOCdevkit3000 结果保留训练、官方验证和独立边界评价回执。Wave18 是跨数据集优先级扫描，目前只保留真实扫描结果和缺失状态，不补写不存在的指标。
 
-本次快照补充：主队列已生成 `queue_done.json`，兼容恢复队列也已生成完成回执；L15/L16 的旧 `WinError 5` 中断证据与之后正式重跑结果均保留，不能把旧 partial 日志与重跑混为一次训练。
+## 复现材料
 
-2026-10-23 新增 Wave9 公共模型对照：SegFormer-B0、OCRNet-HRNet-W18、PP-LiteSeg-STDC1 已在冻结验证权重后完成 Crack500 test（1124 张）；Fast-SCNN 与 PSPNet-R18 的 GPU smoke 失败，DeepLabV3P-ResNet50 保留历史 smoke 失败证据，均未伪造 test 数值。Wave9 将公开模型 test 与损失候选分开：损失候选仍因严格三 seed precision 门槛未通过而 `test_unused`。详见 [Wave9 交付索引](experiments/segformer_public_wave9_20261023/DELIVERY_INDEX.md) 与 [Wave8/Wave9 总报告](SegFormer损失函数消融总报告_20261023.md)。
+- `experiments/` 按波次保存配置、源码、provenance、真实退出回执、指标 CSV 和图表。
+- [Wave17 工程](experiments/segformer_crack500_aligned_wtconv_ablation_wave17_20261030/)
+- [VOCdevkit3000 Wave15 工程](experiments/segformer_vocdevkit3000_jointfix_wave15_20261106/)
+- [VOCdevkit3000 Wave16 工程](experiments/segformer_vocdevkit3000_aw_loss_wave16_20261106/)
+- [Wave18 工程](experiments/segformer_priority_wave18_20261107/)
+- [运行环境说明](runtime/ENVIRONMENT.md)
+- [Wave17 依赖清单](runtime/requirements-wave17.txt)
+- [图表与方法章节](SegFormer_Aligned_WTConv_方法与实验章节_20261031.md)
+- [论文段落与表图交付](SegFormer_Aligned_WTConv_表格图示与论文段落交付_20261031.md)
 
-2026-10-23 新增 Dice 兼容恢复候选的 seed43/44：L01/L02 各补齐两个 seed，四项运行均有 `exit_code: 0` 且 `test_used: false`；三 seed 均值与样本标准差见 [three_seed_summary.json](experiments/segformer_loss_wave8_20261019/matched_seeds_20261022/results/three_seed_summary.json)。L01/L02 均值虽改善裂缝 IoU/F1，但仍未通过预登记 precision mean gate，因此不宣称最终 gated model。
+数据集、训练缓存和大部分训练权重保留在本地环境。仓库中的 checkpoint 仅按现有发布清单保留，并与对应 SHA256 和配置关联。使用软件时请按运行环境说明配置 PaddlePaddle、Pillow、NumPy 以及本地 checkpoint 路径。
 
-2026-10-24 新增独立兼容环境复核：在 RTX5060/Windows 上，PSPNet-ResNet50、DeepLabV3P-ResNet50、Fast-SCNN 的 GPU smoke 仍真实 exit=1；同环境 CPU 三步 smoke exit=0，但不作为 GPU 正式结果。冻结的 SegFormer-B0 + Aligned-A0 已完成 1124 张 test，mIoU 77.1658%、裂缝 IoU 57.4171%、F1 72.9490%，checkpoint SHA 已记录。详情见 [六模型最新对照表](实验结果汇总_20261024/六模型对照表_最新状态.md)、[兼容环境诊断](experiments/segformer_public_wave9_20261023/compat_env_20261024/GPU_BACKEND_DIAGNOSIS_20261024.md) 和更新后的 [Wave9 交付索引](experiments/segformer_public_wave9_20261023/DELIVERY_INDEX.md)。
+## 数据与结论边界
 
-2026-10-24 的 [Wave10 轻量多尺度融合快照](experiments/segformer_lightfusion_wave10_20261024/README.md)已有 A0 控制、W64/W80/W96 宽度对照和 F01–F14 融合候选的 train/val/profile 回执。2026-10-25 检查时，F15 状态仍记录为 training，但最后日志停在 10 月 24 日 21:35 的 3600/18000，未见退出回执或队列完成标记；F16/F17 未见运行回执，因此不确认当前存活状态。本次不恢复训练。现有表中 F08 的裂缝 IoU 68.6164%、mIoU 83.2187%，高于 W96 的 mIoU 82.9317%；均为 seed42 验证结果，不能直接当作最终门槛、多 seed 或加速结论。
+结果文件中的 `test_used`、退出码、选择迭代和 SHA256 是审计字段。训练完成不自动等于通过科学结论门槛。多数据集、跨种子、稳定延迟、显存和机器人闭环结果需要分别依据各波次回执判断。
 
-[当前 Wave8/Wave9 总报告](SegFormer损失函数消融总报告_20261023.md)汇总已冻结的损失候选、三 seed 复核、公开模型 test、负结果与局限；最新 Wave10 以其波次目录和结果表为准。旧的 2026-10-20 生成包已从 GitHub 的当前视图移除，本地副本仍保留以便追溯。
+## 仓库清理说明
 
-2026-10-24 清理记录见 [cleanup_manifest_20261024.json](cleanup_manifest_20261024.json) 和 [cleanup_result_20261024.json](cleanup_result_20261024.json)：仅删除本地可重建的旧训练权重/中间 smoke 目录及 GitHub 上的重复报告包；配置、结果、原始日志、失败证据和当前 Wave10 活跃实验均保留。权重本体不进入 GitHub。
+本次整理移除了根目录中被实验目录和最新结果报告替代的旧时间戳报告、旧计划和重复快照。实验目录中的原始日志、指标、失败证据、预登记计划、配置、源码和复现依赖保留，便于导师追踪论文进度。
 
-新增[原始 SegFormer-B0 训练与验证曲线](figures/segformer_training_curve_20261020/绘图说明与图注.md)，附原始 CSV、来源 SHA 和绘图脚本。这是历史 width256、seed42 基线的曲线，不是最新损失候选；蓝线为验证 mIoU，原日志没有记录验证 Loss。
-
-2026-10-20 新增[阶段核验与兼容修复说明](SegFormer损失函数优化阶段核验与兼容修复说明_20261020.md)：Dice 组合损失的独立兼容源码及 CPU 预检证据已保存，恢复流程最近处于等待主队列结束状态，尚未开始 GPU 运行；原失败证据不覆盖。详情见[执行补充](experiments/segformer_loss_wave8_20261019/refine-logs/PLAN_ADDENDUM_20261020.md)。CPU 预检通过不代表 GPU 预检或完整训练完成。
-
-**Wave7 的 22 项筛选训练及后续 9 项归因/多 seed 训练已全部完成。** 后续队列于 2026-10-19 20:19 生成完成回执，B0、A0、A21、A10 的 seed42/43/44 结果均已齐备。下表直接来自已保存的三 seed 汇总，数值为验证集均值 ± 样本标准差（百分数）。
-
-| 模型 | 裂缝 IoU（%） | F1（%） | mIoU（%） | 参数量（M） |
-|---|---:|---:|---:|---:|
-| B0：原始 SegFormer-B0 | 68.039 ± 0.219 | 80.980 ± 0.155 | 82.908 ± 0.106 | 3.715170 |
-| A0：W128 + Aligned | 68.335 ± 0.420 | 81.189 ± 0.297 | 83.063 ± 0.212 | 3.470434 |
-| A21：Aligned + Polarized | 68.526 ± 0.393 | 81.324 ± 0.277 | 83.161 ± 0.200 | 3.503330 |
-| A10：Aligned + AFNB | 68.102 ± 0.151 | 81.025 ± 0.107 | 82.942 ± 0.073 | 3.656994 |
-
-这些是 **Crack500 验证集结果**。三 seed 训练完成不代表最终门槛已经通过，仍需按预登记条件复核模块贡献、精度与速度。已有速度测量稳定性未通过，且候选中位延迟慢于 B0；六个公开模型及本轮统一 test 仍待完成。
-
-Wave7 的 DAPPM 反向 smoke 失败、PSP 兼容性暂缓，保留失败证据并不填性能。此前 Wave6 已完成 15 个完整组（13 种模块、2 个宽度对照），包括重新完成的 SE。
-
-- [最新三 seed 汇总与完成证据](experiments/segformer_aligned_wave7_20261018/followup_20261019/README.md)、[全部 9 项结果](experiments/segformer_aligned_wave7_20261018/followup_20261019/refine-logs/RESULTS.md)、[机器可读均值与标准差](experiments/segformer_aligned_wave7_20261018/followup_20261019/results/three_seed_summary.json)。
-- [Wave7 代码与证据入口](experiments/segformer_aligned_wave7_20261018/README.md)、[seed42 筛选阶段报告](SegFormer_Aligned模块筛选阶段报告_20261019.md)、[22 项核验记录](experiments/segformer_aligned_wave7_20261018/results/audit_complete_20261019.json)。
-- [归因与多 seed 预登记计划](experiments/segformer_aligned_wave7_20261018/followup_20261019/refine-logs/PLAN.md)：候选冻结、9 项预算与判定规则。
-- [Wave6 单模块结果](SegFormer模块消融结果与改进建议_20261017.md)、[Wave6 复现入口](experiments/segformer_balance_wave6_20261016/README.md)：保留母体与独立模块的对照证据。
-
-## 当前论文与机器人方案
-
-- [10 月 19 日修复路线选择](修复实验路线选择与空鼓检测论文借鉴_20261019.md)：先完成单窗口局部闭环，再验证多个独立站点；长裂缝跨窗修复作为扩展。目前仍是方案，尚未实车执行。
-- [场地范围与效率方案（10月17日）](实验范围缩小与效率改进_文献依据及执行建议_20261017.md)：先做 2×1.5 m 先导验证，再做 3×2 m 主验证；目前是数值规划，尚未实车验证。
-- [视觉方法与实验章节](SegFormer_B0_视觉分割方法与实验章节_修订版_20261014.md)：保留论文结构与既有实验说明，最新数字以本页链接的 Wave7 阶段报告为准。
-- [标定与扫描建图路线](标定与弓字形扫描建图_实施路线与资料清单_20261016.md)、[两阶段先检后修方案](两阶段先检后修裂缝地图与定点修复方案_20261015.md)：系统接口与待执行实物实验。
-- [真实分割到轨迹处理](P0_real_segformer_trajectory/README.md)：真实 SegFormer 掩膜、骨架及离线轨迹；毫米坐标仍使用占位映射。
-- [教学仿真](experiments/two_pass_demo_20261016/一条裂缝_两遍作业仿真说明.md)、[10×6.5 m 场地完整方案](10m×6.5m场地_麦克纳姆扫描建图与定点修复完整实验方案_20261016.md)：保留算法演示及完整场地设计，首次实测范围按 10 月 17 日建议缩小。
-- [项目复盘](论文项目完整复盘报告_20261014.md)、[交付索引](MANIFEST.md)。
-
-## Crack500 数据集
-
-当前训练读取 `C:\Users\user\algolab_data` 的 `traincrop/valcrop/testcrop` 与同目录的划分清单，分别为 1,896/348/1,124 对图像和标签。该版本是公开 Crack500 的裁剪分割基准，原始数据集的“500”指高分辨率原图数。3,368 对文件完整性检查通过；跨划分有 6 个疑似同源的文件名前缀，尚需源图级确认，不能据文件齐全断言划分完全独立。核验方法、原作者来源、实际目录及完整结果见 [Crack500 完整性核验](analysis/crack500_integrity_20261019/README.md)。数据本体保留本地。
-
-## 仓库整理与复现说明
-
-当前目录保留最新说明及仍有用的论文、实验材料；被替代的旧草稿和自动生成的时间戳副本已取消跟踪，本地仍保留。此前已发布的版本可从 [Git 历史](https://github.com/HSY2561/paper-reproduction/commits/main) 查看。历史实验的原始代码、配置、失败/中断记录和结果保留，作为对照与可追溯证据，不与本轮结果混用。
-
-最新训练源码在 `experiments/segformer_aligned_wave7_20261018/src/PaddleSeg-2.10.0/`，当前复核入口在该目录的 `followup_20261019/`。复现前阅读波次 README 和运行契约，按自己的机器调整 Python、数据及权重路径；旧波次使用各自的配置和源码版本。
-
-数据集、训练权重、环境缓存和本机进程锁不上传；权重选模记录与 SHA256 保留。`MANIFEST.md` 和 `manifest_paths.json` 中的实验登记可能包含这些本地文件，不代表每个文件都托管在 GitHub。所有日志、heartbeat 和状态文件均是提交快照，查看最新状态时应以时间戳和退出回执为准。
-
-远端仓库：[HSY2561/paper-reproduction](https://github.com/HSY2561/paper-reproduction)。
-
-
-## W15 validation status (2026-10-29)
-
-CA, WTConv and CG were re-trained at seed43/44 under the fixed W14 protocol. All six groups reached 18,000 iterations with exit0, were frozen by validation mIoU, and passed official validation plus independent 348-image boundary/thin-line evaluation. After validation freeze, the same six checkpoints and the Aligned control were evaluated on the 1,124-image test split. The reproducibility record is `provenance/FINAL_RELEASE.json`; the report is `W15_CA_WTConv_CG三种子复核与统一Test报告_20261029.md`.
-
-Test access is intentionally recorded separately in `results/test_manifest.json`; `results/comparison.json` remains validation-only. Latency attempt 1 had background GPU load and is retained; `results/profile.json` is the idle second attempt. No candidate is called accelerated when the measured CV exceeds 5%.
+远端仓库：[HSY2561/paper-reproduction](https://github.com/HSY2561/paper-reproduction)
