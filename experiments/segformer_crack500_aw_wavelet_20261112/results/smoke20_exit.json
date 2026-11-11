@@ -1,0 +1,8 @@
+{
+  "iters": 20,
+  "source": "D:\\论文复现\\experiments\\segformer_crack500_aligned_wtconv_ablation_wave17_20261030\\src\\PaddleSeg-2.10.0",
+  "id": "AW_wavelet_smoke20",
+  "config": "D:\\论文复现\\experiments\\segformer_crack500_aw_wavelet_20261112\\configs\\AW_wavelet.yml",
+  "completed": "2026-11-12T00:53:02.6226344+08:00",
+  "exit_code": 0
+}

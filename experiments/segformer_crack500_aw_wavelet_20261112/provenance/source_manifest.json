@@ -1,0 +1,10 @@
+{
+  "source": "experiments\\segformer_priority_wave18_20261107\\src\\src\\PaddleSeg-2.10.0\\paddleseg\\models\\wtconv_wavelet.py",
+  "source_sha256": "8A6A398BA5BF39F1D160189E09FA1C04569EE5A20ADB4697D47E938F0830B4F6",
+  "config": "experiments\\segformer_crack500_aw_wavelet_20261112\\configs\\AW_wavelet.yml",
+  "config_sha256": "774840A085147BD3460BD85E8C773BA37CFCAF5B93D23195D125C94D895640DC",
+  "candidate": "wtconv_wavelet",
+  "wavelet_levels": 1,
+  "wavelet_kernel": 3,
+  "test_used_before_freeze": false
+}

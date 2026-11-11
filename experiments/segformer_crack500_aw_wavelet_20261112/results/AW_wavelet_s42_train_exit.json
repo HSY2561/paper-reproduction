@@ -1,0 +1,11 @@
+{
+  "completed": "2026-11-12T01:13:56.8806883+08:00",
+  "seed": 42,
+  "source": "D:\\论文复现\\experiments\\segformer_crack500_aligned_wtconv_ablation_wave17_20261030\\src\\PaddleSeg-2.10.0",
+  "log": "D:\\论文复现\\experiments\\segformer_crack500_aw_wavelet_20261112\\logs\\AW_wavelet_s42_train.log",
+  "save_dir": "D:\\论文复现\\experiments\\segformer_crack500_aw_wavelet_20261112\\training\\AW_wavelet_s42",
+  "expected_iters": 18000,
+  "id": "AW_wavelet_s42",
+  "config": "D:\\论文复现\\experiments\\segformer_crack500_aw_wavelet_20261112\\configs\\AW_wavelet.yml",
+  "exit_code": -1
+}

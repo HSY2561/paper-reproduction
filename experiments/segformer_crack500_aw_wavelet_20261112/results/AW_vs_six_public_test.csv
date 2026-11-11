@@ -1,0 +1,8 @@
+﻿Model,Precision (%),Recall (%),F1-score (%),IoU (%),mIoU (%),Params (M),Status
+"SegFormer-B0 + Aligned + Wavelet WTConv (AW, ours)",71.14333127672701,76.2226600857283,73.59545994482258,58.22216505253459,77.5142321637533,3.710818,new AW seed42 test
+SegFormer-B0,72.8905,72.4478,72.6684,57.0702,76.9475,3.71517,historical frozen public comparison
+OCRNet-HRNet-W18,70.3819,75.9782,73.0731,57.571,77.1509,12.109902,historical frozen public comparison
+PP-LiteSeg-STDC1,74.6053,69.787,72.1157,56.3914,76.626,8.039122,historical frozen public comparison
+PSPNet-ResNet50,72.1991,70.671,71.4269,55.5535,76.1313,67.902052,historical frozen public comparison
+DeepLabV3P-ResNet50,72.2276,73.5601,72.8877,57.3412,77.0754,26.789874,historical frozen public comparison
+Fast-SCNN,75.0411,61.4485,67.568,51.0208,73.8029,1.441332,historical frozen public comparison

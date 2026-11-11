@@ -1,0 +1,31 @@
+{
+  "id": "AW_s42",
+  "selected": "ordinary",
+  "selection_metric": "val_mIoU",
+  "ordinary_val_mIoU": 0.8279610579037102,
+  "ema_val_mIoU": 0.8276841373688495,
+  "ordinary_checkpoint": "checkpoints/AW_s42/model.pdparams",
+  "ema_checkpoint": "checkpoints/AW_s42/ema_model.pdparams",
+  "ordinary_sha256": "44f64fd658d16decfd59d5807c2a80fc95d25453f563020b0642ff972e79f2a2",
+  "ema_sha256": "29d01a70f7881855826bf958d91334e6ae69642902d76cb3d28916733fbec853",
+  "freeze_time": "2026-11-12T01:39:15.1122481+08:00",
+  "test_not_used_for_selection": true,
+  "ordinary_val_metrics": {
+    "mIoU": 0.8279610579037102,
+    "crackIoU": 0.6789812541603739,
+    "precision": 0.7945673394148073,
+    "recall": 0.8235548950720352,
+    "f1": 0.80880147110388,
+    "boundary_f1_2px": 0.429652178706651,
+    "hard_cldice": 0.8681743337180888
+  },
+  "ema_val_metrics": {
+    "mIoU": 0.8276841373688495,
+    "crackIoU": 0.6779484364319656,
+    "precision": 0.8125984348745213,
+    "recall": 0.8035883152294819,
+    "f1": 0.8080682596821309,
+    "boundary_f1_2px": 0.44350097903998315,
+    "hard_cldice": 0.862600864545059
+  }
+}
