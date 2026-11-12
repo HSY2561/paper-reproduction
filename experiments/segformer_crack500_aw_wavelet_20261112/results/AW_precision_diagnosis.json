@@ -1,0 +1,55 @@
+{
+  "protocol": {
+    "seed": 42,
+    "iters": 18000,
+    "batch_size": 4,
+    "fp32": true,
+    "structure": "SegFormer-B0 + Aligned + Haar WTConv",
+    "only_training_change": "CrossEntropyLoss weight [background=1.10, crack=1.0]",
+    "test_not_used_for_selection": true,
+    "params_M": 3.710818,
+    "flops_G": 3.7324
+  },
+  "raw_aw_test": {
+    "precision": 0.7114333128,
+    "recall": 0.7622266009,
+    "f1": 0.7359545994,
+    "crackIoU": 0.5822216505,
+    "mIoU": 0.7751423216,
+    "boundary_f1_2px": 0.367946712,
+    "hard_cldice": 0.7987642918
+  },
+  "weighted_ce_test": {
+    "precision": 0.7315893266,
+    "recall": 0.7473434398,
+    "f1": 0.739382474,
+    "crackIoU": 0.5865240319,
+    "mIoU": 0.7778935695,
+    "boundary_f1_2px": 0.3786832074,
+    "hard_cldice": 0.7977065544
+  },
+  "weighted_ce_threshold_0525_test": {
+    "precision": 0.7440113272,
+    "recall": 0.7294381824,
+    "f1": 0.736652687,
+    "crackIoU": 0.5830959384,
+    "mIoU": 0.7763503189,
+    "boundary_f1_2px": 0.3822445097,
+    "hard_cldice": 0.792749249
+  },
+  "test_confusion": {
+    "raw_aw": {
+      "FP": 4475955,
+      "FN": 3442333
+    },
+    "weighted_ce": {
+      "FP": 3969559,
+      "FN": 3657802
+    },
+    "weighted_ce_threshold_0525": {
+      "FP": 3633451,
+      "FN": 3917023
+    }
+  },
+  "checkpoint_sha256": "8b5ed4b1cef32e9e9bdc9dd2f657176a566cc106242e3800fde39692add26a09"
+}

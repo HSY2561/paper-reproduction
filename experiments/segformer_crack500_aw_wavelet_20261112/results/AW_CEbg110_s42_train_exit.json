@@ -1,0 +1,8 @@
+{
+  "completed": "2026-11-12T08:21:30.8666953+08:00",
+  "exit_code": 0,
+  "log": "D:\\论文复现\\experiments\\segformer_crack500_aw_wavelet_20261112\\logs\\AW_CEbg110_s42_train.log",
+  "expected_iters": 18000,
+  "save_dir": "D:\\论文复现\\experiments\\segformer_crack500_aw_wavelet_20261112\\training\\AW_CEbg110_s42",
+  "id": "AW_CEbg110_s42"
+}
