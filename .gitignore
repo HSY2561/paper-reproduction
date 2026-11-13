@@ -1,5 +1,8 @@
 # Local datasets, caches, logs, and training intermediates
 data/
+analysis/
+external/
+tmp/
 **/__pycache__/
 **/.pytest_cache/
 *.py[cod]
