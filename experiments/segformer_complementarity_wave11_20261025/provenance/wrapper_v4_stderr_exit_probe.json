@@ -1,9 +1,0 @@
-{
-  "at": "2026-10-26T09:11:58.1594549+08:00",
-  "child_pid": 39384,
-  "actual_exit_code": 7,
-  "expected_exit_code": 7,
-  "stderr": "intentional stderr probe\r\n",
-  "gpu_started": false,
-  "training_started": false
-}

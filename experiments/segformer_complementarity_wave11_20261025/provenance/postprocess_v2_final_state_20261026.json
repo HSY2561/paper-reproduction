@@ -1,7 +1,0 @@
-{
-  "at": "2026-10-26T09:02:09+08:00",
-  "status": "blocked_wait_or_profile_error",
-  "error": "RuntimeError('STOP_REQUEST present')",
-  "traceback": "Traceback (most recent call last):\n  File \"D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\postprocess_w11.py\", line 407, in wait_and_profile\n    guard_disk()\n  File \"D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\postprocess_w11.py\", line 231, in guard_disk\n    raise RuntimeError('STOP_REQUEST present')\nRuntimeError: STOP_REQUEST present\n",
-  "training_restarted": false
-}

@@ -1,0 +1,9 @@
+﻿{
+    "train":  2345,
+    "iters":  18000,
+    "completed":  "2026-11-12T20:20:36.1464996+08:00",
+    "test":  0,
+    "val":  587,
+    "dataset":  "VOCdevkit3000",
+    "seed":  42
+}

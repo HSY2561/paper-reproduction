@@ -1,5 +1,0 @@
-variant,structure,loss,selected_iter,params_m,flops_g,precision_pct,recall_pct,f1_pct,crack_iou_pct,miou_pct,bf1_1px_pct,bf1_2px_pct,hard_cldice_pct,thin_recall_r_le1_pct,test_used,train_exit,official_val_exit,custom_val_exit
-C0_B0,SegFormer-B0,CrossEntropyLoss,18000,3.715170,4.135183,87.1711,91.6342,89.3469,80.7451,89.7776,53.8799,69.4743,91.0367,85.6530,false,0,0,0
-C4_AW_CE,SegFormer-B0+Aligned+WTConv_full,CrossEntropyLoss,13000,3.923810,5.403440,86.8623,91.6526,89.1931,80.4943,89.6424,52.0623,67.5202,91.0680,85.7613,false,0,0,0
-C6_AW_CE_Dice,SegFormer-B0+Aligned+WTConv_full,MixedLoss(CE+0.25Dice),13000,3.923810,5.403440,85.9124,92.5279,89.0975,80.3386,89.5525,50.9019,66.4126,91.3439,87.9073,false,0,0,0
-C7_AW_BoundaryWeightedCE,SegFormer-B0+Aligned+WTConv_full,BoundaryWeightedCrossEntropyLoss(edge_weight=1.0),13000,3.923810,5.403440,86.7212,92.0231,89.2935,80.6579,89.7280,52.4124,67.9722,91.3014,86.8366,false,0,0,0

@@ -1,0 +1,9 @@
+{
+  "id": "WTConv_bgCE_s42",
+  "selected": "ordinary",
+  "ordinary_val_mIoU": 0.8266522757012174,
+  "ema_val_mIoU": 0.826479652263286,
+  "selected_checkpoint": "D:\\\u8bba\u6587\u590d\u73b0\\experiments\\segformer_crack500_wtconv_bgce_20261112\\checkpoints\\WTConv_bgCE_s42\\model.pdparams",
+  "selected_sha256": "de15b318c3531f328775443378a48c2595075ad3b90cd5c40671d903c05b5398",
+  "test_not_used_for_selection": true
+}

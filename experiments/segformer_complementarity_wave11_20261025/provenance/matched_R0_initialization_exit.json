@@ -1,7 +1,0 @@
-{
-  "exit_code": 0,
-  "completed_utc": "2026-10-25T10:51:54.8192099Z",
-  "python": "C:\\venv_bisenet\\Scripts\\python.exe",
-  "script": "prepare_matched_controls.py",
-  "log": "logs/prepare_matched_controls.log"
-}

@@ -1,0 +1,10 @@
+{
+  "id": "C0_B0",
+  "selected": "ordinary",
+  "selection_metric": "val_mIoU",
+  "ordinary_val_mIoU": 0.8810265257886041,
+  "ema_val_mIoU": 0.8802602442154495,
+  "selected_checkpoint": "D:\\\u8bba\u6587\u590d\u73b0\\experiments\\segformer_deepcrack_aw_bgce_20261112\\checkpoints\\C0_B0_s42\\model.pdparams",
+  "selected_sha256": "3593d48fc40484016067b96ee4c238317997962656ac07ab3b796ba23bf2a929",
+  "test_not_used_for_selection": true
+}

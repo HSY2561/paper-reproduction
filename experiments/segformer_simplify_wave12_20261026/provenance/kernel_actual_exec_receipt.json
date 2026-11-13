@@ -1,8 +1,0 @@
-{
-  "at": "2026-10-27T00:23:38.644847+08:00",
-  "source": "tools.exec_command actual exit",
-  "exit_code": 0,
-  "chunk_id": "2bca69",
-  "kernel_only": true,
-  "formal_training_started": false
-}

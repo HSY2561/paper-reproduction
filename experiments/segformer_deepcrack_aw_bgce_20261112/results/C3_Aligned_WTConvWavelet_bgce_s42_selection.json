@@ -1,0 +1,10 @@
+{
+  "id": "C3_Aligned_WTConvWavelet_bgce",
+  "selected": "ordinary",
+  "selection_metric": "val_mIoU",
+  "ordinary_val_mIoU": 0.882773846198563,
+  "ema_val_mIoU": 0.8800177024740641,
+  "selected_checkpoint": "D:\\\u8bba\u6587\u590d\u73b0\\experiments\\segformer_deepcrack_aw_bgce_20261112\\checkpoints\\C3_Aligned_WTConvWavelet_bgce_s42\\model.pdparams",
+  "selected_sha256": "0d4965680ed255a89264876918b629d519516b2568bf2f83b75911bdb3df33e4",
+  "test_not_used_for_selection": true
+}

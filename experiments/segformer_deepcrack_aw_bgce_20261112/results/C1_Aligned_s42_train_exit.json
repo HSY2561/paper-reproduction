@@ -1,0 +1,11 @@
+﻿{
+    "source":  "D:\\论文复现\\experiments\\segformer_crack500_aw_wavelet_20261112\\src\\PaddleSeg-2.10.0",
+    "seed":  42,
+    "id":  "C1_Aligned",
+    "config":  "D:\\论文复现\\experiments\\segformer_deepcrack_aw_bgce_20261112\\configs\\C1_Aligned.yml",
+    "save_dir":  "D:\\论文复现\\experiments\\segformer_deepcrack_aw_bgce_20261112\\training\\C1_Aligned_s42",
+    "completed":  "2026-11-12T14:05:00.0308899+08:00",
+    "expected_iters":  18000,
+    "exit_code":  0,
+    "log":  "D:\\论文复现\\experiments\\segformer_deepcrack_aw_bgce_20261112\\logs\\C1_Aligned_s42_train.log"
+}

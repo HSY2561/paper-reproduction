@@ -1,0 +1,114 @@
+{
+  "n": 45,
+  "confusion_matrix": [
+    [
+      9116103,
+      33130
+    ],
+    [
+      32468,
+      218619
+    ]
+  ],
+  "mIoU": 0.8810265257886041,
+  "crackIoU": 0.7691974793907472,
+  "precision": 0.868400668920234,
+  "recall": 0.8706902388415171,
+  "f1": 0.869543946734124,
+  "empty_predictions": 0,
+  "empty_gt": 0,
+  "empty_both": 0,
+  "zero_foreground_overlap": 0,
+  "negative_sample_fp": 0,
+  "boundary_f1_1px": 0.836232506157376,
+  "boundary_precision_1px": 0.8620711127716545,
+  "boundary_recall_1px": 0.8118977316944769,
+  "boundary_f1_2px": 0.9196795738469528,
+  "boundary_precision_2px": 0.9366585715175291,
+  "boundary_recall_2px": 0.9033051797935407,
+  "boundary_f1": 0.9196795738469528,
+  "boundary_precision": 0.9366585715175291,
+  "boundary_recall": 0.9033051797935407,
+  "hard_cldice": 0.8709806605334097,
+  "skeleton_precision": 0.9080368906455863,
+  "skeleton_recall": 0.8368303116724384,
+  "global_counts": {
+    "boundary_pred": 80295,
+    "boundary_gt": 87378,
+    "pred_skeleton_count": 30360,
+    "gt_skeleton_count": 34363,
+    "pred_skeleton_in_gt": 27568,
+    "gt_skeleton_in_pred": 28756,
+    "gt_crop_border_skeleton_count": 167,
+    "gt_crop_border_skeleton_in_pred": 65,
+    "boundary_match_pred_1px": 69220,
+    "boundary_match_pred_2px": 75209,
+    "boundary_match_gt_1px": 70942,
+    "boundary_match_gt_2px": 78929,
+    "r_le1_gt": 7206,
+    "r_le1_hit": 3737,
+    "r_le1_border_gt": 167,
+    "r_le1_border_hit": 65,
+    "r_1to2_gt": 7968,
+    "r_1to2_hit": 6428,
+    "r_1to2_border_gt": 0,
+    "r_1to2_border_hit": 0,
+    "r_gt2_gt": 19189,
+    "r_gt2_hit": 18591,
+    "r_gt2_border_gt": 0,
+    "r_gt2_border_hit": 0
+  },
+  "gt_radius_strata": {
+    "r_le1": {
+      "gt": 7206,
+      "hit": 3737,
+      "recall": 0.5185956147654732,
+      "crop_border_gt": 167,
+      "crop_border_hit": 65,
+      "crop_border_recall": 0.38922155688622756
+    },
+    "r_1to2": {
+      "gt": 7968,
+      "hit": 6428,
+      "recall": 0.8067269076305221,
+      "crop_border_gt": 0,
+      "crop_border_hit": 0,
+      "crop_border_recall": null
+    },
+    "r_gt2": {
+      "gt": 19189,
+      "hit": 18591,
+      "recall": 0.9688363124706864,
+      "crop_border_gt": 0,
+      "crop_border_hit": 0,
+      "crop_border_recall": null
+    }
+  },
+  "crop_border_skeleton_recall": 0.38922155688622756,
+  "dataset": "DeepCrack",
+  "split": "val",
+  "test_used": false,
+  "validation_list": "C:\\Users\\user\\Desktop\\segformer_aw_cross_dataset_wave17_20261106\\normalized\\DeepCrack\\val.txt",
+  "config": "D:\\论文复现\\experiments\\segformer_deepcrack_aw_bgce_20261112\\configs\\C0_B0.yml",
+  "config_sha256": "61cb604f89e33f2f147d11230386772b631bd4e206de125fd31bf6fd5ade9762",
+  "model_path": "D:\\论文复现\\experiments\\segformer_deepcrack_aw_bgce_20261112\\checkpoints\\C0_B0_s42\\model.pdparams",
+  "checkpoint_sha256": "3593d48fc40484016067b96ee4c238317997962656ac07ab3b796ba23bf2a929",
+  "versions": {
+    "packages": {
+      "scikit-image": "0.26.0",
+      "opencv-python-headless": "4.11.0.86",
+      "numpy": "2.4.1"
+    },
+    "cv2": "4.11.0",
+    "skimage": "0.26.0",
+    "skeleton_algorithm": "skimage.morphology.skeletonize(method=zhang)",
+    "boundary_distance": "cv2.DIST_L2 / DIST_MASK_PRECISE",
+    "gt_radius_border": "pad1 constant0; exact distanceTransform; crop1",
+    "test_used": false
+  },
+  "fixed24_cases": null,
+  "fixed24_requested": false,
+  "boundary_protocol": "inner3x3 constant0; exact Euclidean<=1/2px; accumulate match counts then harmonic mean",
+  "skeleton_protocol": "hard global counts: skeleton(pred) in GT; skeleton(GT) in pred; Zhang0.26.0; argmax masks",
+  "radius_protocol": "GT pad1 constant0 exact distance then crop; radius<=1,1<r<=2,r>2; crop-border points separately"
+}

@@ -1,0 +1,30 @@
+{
+  "id": "AW_CEbg110_s42",
+  "selected": "ordinary",
+  "selection_metric": "val_mIoU",
+  "ordinary_val_mIoU": 0.8270685972297106,
+  "ema_val_mIoU": 0.8262781789754466,
+  "ordinary_checkpoint": "checkpoints/AW_CEbg110_s42/model.pdparams",
+  "ema_checkpoint": "checkpoints/AW_CEbg110_s42/ema_model.pdparams",
+  "ordinary_sha256": "8b5ed4b1cef32e9e9bdc9dd2f657176a566cc106242e3800fde39692add26a09",
+  "ema_sha256": "6f058ac90f93b60b59c41e206e897b49673772c9ccf6a0ce08611ed71ee8744e",
+  "ordinary_val_metrics": {
+    "mIoU": 0.8270685972297106,
+    "crackIoU": 0.6768622036994506,
+    "precision": 0.8099282367205164,
+    "recall": 0.8046811226898299,
+    "f1": 0.8072961537402112,
+    "boundary_f1_2px": 0.44286364516879123,
+    "hard_cldice": 0.866100116973391
+  },
+  "ema_val_metrics": {
+    "mIoU": 0.8262781789754466,
+    "crackIoU": 0.675037540057253,
+    "precision": 0.822521233433674,
+    "recall": 0.7901234514310569,
+    "f1": 0.8059969092205302,
+    "boundary_f1_2px": 0.4436830954452473,
+    "hard_cldice": 0.8583497941600519
+  },
+  "test_not_used_for_selection": true
+}

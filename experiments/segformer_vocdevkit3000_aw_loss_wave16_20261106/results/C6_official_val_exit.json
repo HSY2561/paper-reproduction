@@ -1,7 +1,0 @@
-{
-  "tag": "C6_AW_CE_Dice_official_val",
-  "exit_code": 0,
-  "model_path": "training/C6_AW_CE_Dice/best_model/model.pdparams",
-  "expected_count": 587,
-  "test_used": false
-}

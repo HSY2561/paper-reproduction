@@ -1,0 +1,7 @@
+﻿{
+    "config":  "D:\\论文复现\\experiments\\segformer_crack500_wtconv_bgce_20261112\\configs\\WTConv_bgCE.yml",
+    "status":  "completed",
+    "completed":  "2026-11-12T21:16:04.8558182+08:00",
+    "id":  "WTConv_bgCE_s42",
+    "exit_code":  0
+}

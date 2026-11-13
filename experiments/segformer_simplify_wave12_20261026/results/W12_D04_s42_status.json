@@ -1,8 +1,0 @@
-{
-  "status": "complete",
-  "updated_at": "2026-10-27T01:44:25+08:00",
-  "test_used": false,
-  "verified": "D:\\论文复现\\experiments\\segformer_simplify_wave12_20261026\\results\\W12_D04_s42_verified.json",
-  "actual18k_exit0": true,
-  "checkpoint_sha256": "2b8b783c3e6b6c3d8d17bb0f090d710e4681fa1626503906fa291602157b7ccb"
-}

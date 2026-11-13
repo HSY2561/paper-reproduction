@@ -1,0 +1,14 @@
+﻿{
+    "source":  "D:\\论文复现\\experiments\\segformer_crack500_aw_wavelet_20261112\\src\\PaddleSeg-2.10.0",
+    "iters":  18000,
+    "completed":  "2026-11-12T14:55:38.8833211+08:00",
+    "groups":  [
+                   "C0_B0",
+                   "C1_Aligned",
+                   "C2_WTConvWavelet",
+                   "C3_Aligned_WTConvWavelet_bgce"
+               ],
+    "dataset":  "C:\\Users\\user\\Desktop\\segformer_aw_cross_dataset_wave17_20261106\\normalized\\DeepCrack",
+    "seed":  42,
+    "loss":  "CrossEntropyLoss weight [1.10,1.0]"
+}

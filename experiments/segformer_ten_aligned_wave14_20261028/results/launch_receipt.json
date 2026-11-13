@@ -1,9 +1,0 @@
-{
-  "at": "2026-10-28T00:24:49+08:00",
-  "pid": 49500,
-  "command": [
-    "C:\\venv_bisenet\\Scripts\\python.exe",
-    "D:\\论文复现\\experiments\\segformer_ten_aligned_wave14_20261028\\wave14_queue.py"
-  ],
-  "test_used": false
-}

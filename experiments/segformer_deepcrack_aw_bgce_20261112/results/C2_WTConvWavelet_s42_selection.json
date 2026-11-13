@@ -1,0 +1,10 @@
+{
+  "id": "C2_WTConvWavelet",
+  "selected": "ordinary",
+  "selection_metric": "val_mIoU",
+  "ordinary_val_mIoU": 0.882568341795176,
+  "ema_val_mIoU": 0.8815724956178738,
+  "selected_checkpoint": "D:\\\u8bba\u6587\u590d\u73b0\\experiments\\segformer_deepcrack_aw_bgce_20261112\\checkpoints\\C2_WTConvWavelet_s42\\model.pdparams",
+  "selected_sha256": "a5d96e82e4b941b8679d76294713c909907a9fd41cec9623eaa9c9d6b684d625",
+  "test_not_used_for_selection": true
+}

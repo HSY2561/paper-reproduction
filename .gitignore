@@ -6,6 +6,10 @@ data/
 experiments/**/training/
 experiments/**/logs/
 experiments/**/iter_*/
+experiments/**/weights/
+experiments/**/checkpoints/
+experiments/**/tmp/
+experiments/**/provenance/*.lock
 *.pdopt
 *.pdstates
 *.pth

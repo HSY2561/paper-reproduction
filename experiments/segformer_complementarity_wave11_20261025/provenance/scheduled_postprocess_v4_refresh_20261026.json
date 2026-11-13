@@ -1,9 +1,0 @@
-{
-  "at": "2026-10-26T09:13:36.0690826+08:00",
-  "task_name": "Codex-SegFormer-W11-postprocess-once-20261025",
-  "action": "run_postprocess_v4.ps1",
-  "original_registration_reused": true,
-  "training_restarted": false,
-  "v3_wrapper_exit": null,
-  "postprocess_release_sha256": "2c9c5ef3405d4a16e98e7132336944ff16e62425ff5b64adcb46419e78d90401"
-}

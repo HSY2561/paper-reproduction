@@ -1,0 +1,11 @@
+﻿{
+    "source":  "D:\\论文复现\\experiments\\segformer_crack500_aw_wavelet_20261112\\src\\PaddleSeg-2.10.0",
+    "seed":  42,
+    "id":  "WTConv_bgCE_s42",
+    "config":  "D:\\论文复现\\experiments\\segformer_crack500_wtconv_bgce_20261112\\configs\\WTConv_bgCE.yml",
+    "save_dir":  "D:\\论文复现\\experiments\\segformer_crack500_wtconv_bgce_20261112\\training\\WTConv_bgCE_s42",
+    "completed":  "2026-11-12T21:16:04.8528244+08:00",
+    "expected_iters":  18000,
+    "exit_code":  0,
+    "log":  "D:\\论文复现\\experiments\\segformer_crack500_wtconv_bgce_20261112\\logs\\WTConv_bgCE_s42_train.log"
+}

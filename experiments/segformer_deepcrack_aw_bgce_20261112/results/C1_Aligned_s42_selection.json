@@ -1,0 +1,10 @@
+{
+  "id": "C1_Aligned",
+  "selected": "ordinary",
+  "selection_metric": "val_mIoU",
+  "ordinary_val_mIoU": 0.8809675492742761,
+  "ema_val_mIoU": 0.8796113931000842,
+  "selected_checkpoint": "D:\\\u8bba\u6587\u590d\u73b0\\experiments\\segformer_deepcrack_aw_bgce_20261112\\checkpoints\\C1_Aligned_s42\\model.pdparams",
+  "selected_sha256": "44cd3922e5f95073a110dc1f565f8e6a2a885181f577952a72aab791df1ab0af",
+  "test_not_used_for_selection": true
+}

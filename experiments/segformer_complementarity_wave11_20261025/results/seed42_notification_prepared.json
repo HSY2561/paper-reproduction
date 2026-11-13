@@ -1,9 +1,0 @@
-{
-  "prepared_at": "2026-10-25T21:07:34.900376+08:00",
-  "phase": "seed42_four_cells_complete",
-  "notification_decision": "NOTIFY",
-  "report": "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\refine-logs\\SEED42_PHASE_REPORT.md",
-  "scope": "single-seed preliminary, not final three-seed conclusion",
-  "repeat_notification_desired": false,
-  "later_progress_should_stay_quiet_if_healthy": true
-}

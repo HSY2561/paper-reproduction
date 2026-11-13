@@ -1,0 +1,9 @@
+﻿Model,Precision (%),Recall (%),F1-score (%),IoU (%),mIoU (%),Params (M),Status
+SegFormer-B0 + Aligned + Wavelet WTConv + bgCE1.10 (AW-CEbg110),73.15893266166863,74.73434397744121,73.9382474012175,58.65240318888886,77.78935695310942,3.711458,"new AW seed42 test; same structure, background-weighted CE"
+SegFormer-B0 + Aligned + Wavelet WTConv + bgCE1.10 + threshold0.525,74.40113272023918,72.94381824099518,73.66526869993838,58.30959384001353,77.63503188548742,3.711458,new AW seed42 test; validation-calibrated inference threshold; not a new model
+SegFormer-B0,72.8905,72.4478,72.6684,57.0702,76.9475,3.71517,historical frozen public comparison
+OCRNet-HRNet-W18,70.3819,75.9782,73.0731,57.571,77.1509,12.109902,historical frozen public comparison
+PP-LiteSeg-STDC1,74.6053,69.787,72.1157,56.3914,76.626,8.039122,historical frozen public comparison
+PSPNet-ResNet50,72.1991,70.671,71.4269,55.5535,76.1313,67.902052,historical frozen public comparison
+DeepLabV3P-ResNet50,72.2276,73.5601,72.8877,57.3412,77.0754,26.789874,historical frozen public comparison
+Fast-SCNN,75.0411,61.4485,67.568,51.0208,73.8029,1.441332,historical frozen public comparison

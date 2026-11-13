@@ -1,8 +1,0 @@
-{
-  "latency": "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\results\\postprocess\\20261026_091342_901909\\interleaved_profile.json",
-  "memory": "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\results\\postprocess\\20261026_091342_901909\\memory_summary.json",
-  "postprocess_release": "D:\\论文复现\\experiments\\segformer_complementarity_wave11_20261025\\results\\postprocess\\20261026_091342_901909\\postprocess_release.json",
-  "summary_sha256": "61358498e3f45b46fe9432b82bf623590c7cd9b74a5967af5afaa43057843329",
-  "status": "complete",
-  "test_read": false
-}

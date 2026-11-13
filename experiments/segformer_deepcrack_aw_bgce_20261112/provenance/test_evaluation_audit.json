@@ -1,0 +1,22 @@
+{
+  "dataset": "DeepCrack",
+  "split": "test",
+  "test_list": "C:/Users/user/Desktop/segformer_aw_cross_dataset_wave17_20261106/normalized/DeepCrack/test.txt",
+  "test_count": 237,
+  "test_list_sha256": "8603A879849864B04711CD9B816894E9CB4A7CD5E36B902A991A6ED00485A8C2",
+  "models": [
+    "C0_B0",
+    "C1_Aligned",
+    "C2_WTConvWavelet",
+    "C3_Aligned_WTConvWavelet_bgce"
+  ],
+  "verified_test_outputs": [
+    "results/C0_B0_s42_test_exact.json",
+    "results/C1_Aligned_s42_test_exact.json",
+    "results/C2_WTConvWavelet_s42_test_exact.json",
+    "results/C3_Aligned_WTConvWavelet_bgce_s42_test_exact.json"
+  ],
+  "evaluation_config_note": "*_test_eval.yml sets backbone pretrained=null only for evaluation construction; full checkpoint state_dict is loaded and shape-checked.",
+  "raw_evaluator_test_used_field": "inconsistent in copied evaluator output; split, validation_list, count, command and outputs verify test evaluation",
+  "test_used_verified": true
+}
