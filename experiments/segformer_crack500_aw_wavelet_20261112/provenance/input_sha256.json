@@ -1,0 +1,9 @@
+{
+  "source_segformer_ten": "04409aa5776e1b436ba60d350f901533ec784c7dd8b928c931d2fdf10bc59a83",
+  "source_wtconv_wavelet": "8a6a398ba5bf39f1d160189e09fa1c04569ee5a20adb4697d47e938f0830b4f6",
+  "config": "3d63426dd3eaebd19403f546bdb7c892489f83ef49bd011f92da447f35678296",
+  "backbone_init": "d2f9d0b8ce3e0d7a7e414e0c34fece27ee9e196d41145d6ca20ddc99c4412f7a",
+  "train_list": "f7362ad5b271d2e86fbb0193139f29440d6fead74a634ee67e8424b8501fb1df",
+  "val_list": "e497ed9275f4d14227e9a7bbc703012cef3d14e54f53a8317560ff080c6ed1f6",
+  "test_list": "5538a75cca6089d4bb9977c3a422a646f3588cebf2b8b800a79ee07ef99d76c6"
+}

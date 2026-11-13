@@ -1,0 +1,11 @@
+{
+  "event": "duplicate_aw_wavelet_run_interrupted",
+  "formal_run": "AW_s42",
+  "formal_save_dir": "training/AW_s42",
+  "interrupted_run": "AW_wavelet_s42",
+  "interrupted_save_dir": "training/AW_wavelet_s42",
+  "interrupted_exit_code": -1,
+  "reason": "second self-owned training process detected during formal run; stopped to prevent GPU contention and non-comparable logs",
+  "used_for_results": false,
+  "evidence": "results/AW_wavelet_s42_train_exit.json"
+}

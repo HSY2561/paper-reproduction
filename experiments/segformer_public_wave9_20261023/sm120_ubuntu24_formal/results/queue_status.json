@@ -1,0 +1,31 @@
+{
+  "all_final_iter_checkpoints_verified": true,
+  "remaining": "report refreshed; unified cross-backend final protocol remains in existing stage6 queue",
+  "state": "training_validation_test_complete",
+  "models": [
+    {
+      "model": "PSPNet_ResNet50",
+      "best_iter": 7000,
+      "config": "linux_pspnet_r50_crack500.yml",
+      "val_mIoU": 0.818031455812831
+    },
+    {
+      "model": "DeepLabV3P_ResNet50",
+      "best_iter": 16000,
+      "config": "linux_deeplabv3p_r50_crack500.yml",
+      "val_mIoU": 0.8270195933057913
+    },
+    {
+      "model": "FastSCNN",
+      "best_iter": 15000,
+      "config": "linux_fastscnn_crack500.yml",
+      "val_mIoU": 0.8018752343295693
+    }
+  ],
+  "updated_at": "2026-10-25T14:52:40+08:00",
+  "all_train_exit_codes": 0,
+  "queue_done_at": "2026-10-25T02:28:21+08:00",
+  "evaluation_session_id": 20589,
+  "evaluation_started_at": "2026-10-25T09:52:28+08:00",
+  "evaluation_done_at": "2026-10-25T09:56:19+08:00"
+}
